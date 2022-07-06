@@ -49,7 +49,7 @@ SET ARITHABORT ON
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## Remarks
-Always set ARITHABORT to ON in your logon sessions. Setting ARITHABORT to OFF can negatively impact query optimization, leading to performance issues.  
+
   
 > [!WARNING]  
 >  The default ARITHABORT setting for [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] is ON. Client applications setting ARITHABORT to OFF might receive different query plans, making it difficult to troubleshoot poorly performing queries. That is, the same query might execute fast in management studio but slow in the application. When troubleshooting queries with [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], always match the client ARITHABORT setting.  
