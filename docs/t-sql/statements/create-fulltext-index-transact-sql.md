@@ -110,7 +110,7 @@ Creates the additional key phrase and document similarity indexes that are part 
 
 #### KEY INDEX *index_name*
 
-The name of the unique key index on *table_name*. The KEY INDEX must be a unique, single-key, non-nullable column. Select the smallest unique key index for the full-text unique key.  For the best performance, we recommend an integer data type for the full-text key.
+The name of the unique key index on *table_name*. The KEY INDEX must be a unique, single-key and non-filtered index on a non-nullable column. For the best performance, we recommend an integer data type for the full-text key.
 
 #### *fulltext_catalog_name*
 
