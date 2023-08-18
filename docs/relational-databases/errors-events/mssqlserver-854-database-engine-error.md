@@ -1,17 +1,15 @@
 ---
-description: "MSSQLSERVER_854"
 title: MSSQLSERVER_854
-ms.custom: ""
-ms.date: 08/20/2020
-ms.prod: sql
-ms.reviewer: ramakoni1, pijocoder, suresh-kandoth, Masha
-ms.technology: supportability
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "854 (Database Engine error)"
-ms.assetid: 
+description: "MSSQLSERVER_854"
 author: suresh-kandoth
-ms.author: ramakoni
+ms.author: sureshka
+ms.reviewer: jopilov, mathoma
+ms.date: 08/20/2020
+ms.service: sql
+ms.subservice: supportability
+ms.topic: "reference"
+helpviewer_keywords:
+  - "854 (Database Engine error)"
 ---
 # MSSQLSERVER_854
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -26,7 +24,6 @@ ms.author: ramakoni
 |Component|SQLEngine|
 |Symbolic Name|HARDWARE_MEMORY_SCRUBBER|
 |Message Text|Machine supports memory error recovery. SQL memory protection is enabled to recover from memory corruption|
-||
 
 ## Explanation
 

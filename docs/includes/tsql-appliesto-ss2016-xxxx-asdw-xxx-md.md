@@ -1,10 +1,10 @@
 ---
 author: MikeRayMSFT
+ms.author: mikeray
+ms.date: 01/13/2020
 ms.service: sql
 ms.topic: include
-ms.date: 01/13/2020
-ms.author: mikeray
 ---
 
-<Token>**APPLIES TO:** :::image type="icon" source="media/yes-icon.png":::SQL Server 2016 and later :::image type="icon" source="media/no-icon.png":::Azure SQL Database :::image type="icon" source="media/yes-icon.png":::Azure Synapse Analytics :::image type="icon" source="media/no-icon.png":::Parallel Data Warehouse </Token>
+[!INCLUDE [applies-md](applies-md.md)] :::image type="icon" source="media/yes-icon.svg"::: SQL Server 2016 and later :::image type="content" source="media/no-icon.svg" alt-text="Not supported" border="false"::: Azure SQL Database :::image type="icon" source="media/yes-icon.svg"::: Azure Synapse Analytics :::image type="content" source="media/no-icon.svg" alt-text="Not supported" border="false"::: Analytics Platform System (PDW)
 

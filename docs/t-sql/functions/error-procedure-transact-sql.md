@@ -1,19 +1,16 @@
 ---
+title: "ERROR_PROCEDURE (Transact-SQL)"
 description: "ERROR_PROCEDURE (Transact-SQL)"
-title: "ERROR_PROCEDURE (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: markingmyname
+ms.author: maghan
 ms.date: "03/16/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "ERROR_PROCEDURE_TSQL"
   - "ERROR_PROCEDURE"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "ERROR_PROCEDURE function"
   - "messages [SQL Server], trigger where occurred"
   - "errors [SQL Server], stored procedure where occurred"
@@ -21,19 +18,18 @@ helpviewer_keywords:
   - "CATCH block"
   - "messages [SQL Server], stored procedure where occurred"
   - "errors [SQL Server], trigger where occurred"
-ms.assetid: b81edbf0-856a-498f-ba87-48ff1426d980
-author: cawrites
-ms.author: chadam
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+dev_langs:
+  - "TSQL"
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-mi-current||=fabric"
 ---
 # ERROR_PROCEDURE (Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]  
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw.md)]  
 
 This function returns the name of the stored procedure or trigger where an error occurs, if that error caused the CATCH block of a TRY...CATCH construct to execute. 
-- SQL Server 2017 thru [current version](../../sql-server/what-s-new-in-sql-server-ver15.md) returns schema_name.stored_procedure_name
-- SQL Server 2016 returns stored_procedure_name
+- SQL Server 2017 thru [current version](../../sql-server/what-s-new-in-sql-server-2019.md) returns `schema_name.stored_procedure_name`
+- SQL Server 2016 returns `stored_procedure_name`
 
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -58,7 +54,7 @@ When called in a CATCH block, `ERROR_PROCEDURE` returns the name of the stored p
   
 `ERROR_PROCEDURE` returns the name of the stored procedure or trigger where an error occurs, regardless of how many times it runs, or where it runs, within the scope of the `CATCH` block. This contrasts with a function like @@ERROR, which only returns an error number in the statement immediately following the one that causes an error.  
    
-## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
+## Examples: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
   
 ### A. Using ERROR_PROCEDURE in a CATCH block  
 This example shows a stored procedure that generates a divide-by-zero error. `ERROR_PROCEDURE` returns the name of the stored procedure where the error occurred.  
@@ -158,5 +154,3 @@ ErrorNumber ErrorSeverity ErrorState  ErrorProcedure   ErrorMessage             
  [RAISERROR &#40;Transact-SQL&#41;](../../t-sql/language-elements/raiserror-transact-sql.md)   
  [@@ERROR &#40;Transact-SQL&#41;](../../t-sql/functions/error-transact-sql.md)  
   
-  
-

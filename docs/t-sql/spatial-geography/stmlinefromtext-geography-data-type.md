@@ -1,26 +1,22 @@
 ---
+title: "STMLineFromText (geography Data Type)"
 description: "STMLineFromText (geography Data Type)"
-title: "STMLineFromText (geography Data Type) | Microsoft Docs"
-ms.custom: ""
+author: MladjoA
+ms.author: mlandzic
 ms.date: "07/30/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "STMLineFromText (geography Data Type)"
   - "STMLineFromText_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "STLineFromText method"
-ms.assetid: 66dfd722-a9bd-45d3-9788-f1946dd23e17
-author: MladjoA
-ms.author: mlandzic 
+dev_langs:
+  - "TSQL"
 ---
 # STMLineFromText (geography Data Type)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 Returns a **geography** instance from an Open Geospatial Consortium (OGC) Well-Known Text (WKT) representation, augmented with any Z (elevation) and M (measure) values carried by the instance.
   
@@ -53,7 +49,7 @@ STMLineFromText ( 'multilinestring_tagged_text' , SRID )
 ## Examples  
  The following example uses `STMLineFromText()` to create a `geography` instance.  
   
-```  
+```sql
 DECLARE @g geography;  
 SET @g = geography::STMLineFromText('MULTILINESTRING ((-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653), (-122.357 47.654, -122.357 47.657, -122.349 47.657, -122.349 47.650, -122.357 47.654))', 4326);  
 SELECT @g.ToString();  

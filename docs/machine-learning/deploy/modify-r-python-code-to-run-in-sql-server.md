@@ -1,14 +1,12 @@
 ---
 title: "Modify R/Python code to run in SQL Server"
 description: Learn how to modify your R or Python code to run as a SQL Server stored procedure to improve performance when accessing SQL data.
-ms.prod: sql
-ms.technology: machine-learning-services
-
-ms.date: 04/05/2021
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.date: 05/24/2022
+ms.service: sql
+ms.subservice: machine-learning-services
 ms.topic: how-to
-author: dphansen
-ms.author: davidph
-ms.custom: seo-lt-2019, contperf-fy21q3 
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current"
 ---
 # Modify R/Python code to run in SQL Server (In-Database) instances
@@ -16,7 +14,7 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-curre
 
 This article provides high-level guidance on how to modify R or Python code to run as a SQL Server stored procedure to improve performance when accessing SQL data.
 
-When you move R/Python code from a local IDE or other environment to SQL Server, the code generally works without further modification. This is especially true for simple code, such as a function that takes some inputs and returns a value. It's also easier to port solutions that use the **RevoScaleR**/**revoscalepy** or **MicrosoftML** packages, which support execution in different execution contexts with minimal changes.
+When you move R/Python code from a local IDE or other environment to SQL Server, the code generally works without further modification. This is especially true for simple code, such as a function that takes some inputs and returns a value. It's also easier to port solutions that use the **RevoScaleR**/**revoscalepy** packages, which support execution in different execution contexts with minimal changes. Note that **MicrosoftML** applies to [!INCLUDE [sssql16-md](../../includes/sssql16-md.md)], [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)], and [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)], and does not appear in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)].
 
 However, your code might require substantial changes if any of the following apply:
 
@@ -58,7 +56,7 @@ Take a look at the data types used in your R/Python code and do the following:
 
 + Make a checklist of possible data type issues.
 
-  All R/Python data types are supported by SQL Server machine Learning Services. However, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supports a greater variety of data types than does R or Python. Therefore, some implicit data type conversions are performed when moving [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data to and from your code. You might need to explicitly cast or convert some data.
+  All R/Python data types are supported by SQL Server Machine Learning Services. However, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supports a greater variety of data types than does R or Python. Therefore, some implicit data type conversions are performed when moving [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data to and from your code. You might need to explicitly cast or convert some data.
 
   NULL values are supported. However, R uses the `na` data construct to represent a missing value, which is similar to a null.
 
@@ -72,12 +70,25 @@ How much you change your code depends on whether you intend to submit the code f
 
 + When running code in a stored procedure, you can pass through multiple **scalar** inputs. For any parameters that you want to use in the output, add the **OUTPUT** keyword.
 
-  For example, the following scalar input `@model_name` contains the model name, which is also output in its own column in the results:
+  For example, the following scalar input `@model_name` contains the model name, which is also later modified by the R script, and output in its own column in the results:
 
   ```sql
-  EXECUTE sp_execute_external_script @model_name = "DefaultModel" OUTPUT
-	,@language = N'R'
-	,@script = N'R code here'
+  -- declare a local scalar variable which will be passed into the R script
+  DECLARE @local_model_name AS NVARCHAR (50) = 'DefaultModel';
+
+  -- The below defines an OUTPUT variable in the scope of the R script, called model_name
+  -- Syntactically, it is defined by using the @model_name name. Be aware that the sequence
+  -- of these parameters is very important. Mandatory parameters to sp_execute_external_script
+  -- must appear first, followed by the additional parameter definitions like @params, etc.
+  EXECUTE sp_execute_external_script @language = N'R', @script = N'
+    model_name <- "Model name from R script"
+    OutputDataSet <- data.frame(InputDataSet$c1, model_name)'
+    , @input_data_1 = N'SELECT 1 AS c1'
+    , @params = N'@model_name nvarchar(50) OUTPUT'
+    , @model_name = @local_model_name OUTPUT;
+
+  -- optionally, examine the new value for the local variable:
+  SELECT @local_model_name;
   ```
 
 + Any variables that you pass in as parameters of the stored procedure [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) must be mapped to variables in the code. By default, variables are mapped by name. All columns in the input dataset must also be mapped to variables in the script.

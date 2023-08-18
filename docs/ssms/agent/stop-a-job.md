@@ -1,20 +1,16 @@
 ---
-description: "Stop a Job"
 title: "Stop a Job"
-ms.custom: seo-lt-2019
+description: "Stop a Job"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
+ms.service: sql
+ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "jobs [SQL Server Agent], stopping"
   - "SQL Server Agent jobs, stopping"
   - "stopping jobs"
-ms.assetid: 4249328a-24d8-4284-9d1d-7d04ed90e3d7
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
 ---
 # Stop a Job
@@ -23,7 +19,7 @@ monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
 > [!IMPORTANT]  
 > On [Azure SQL Managed Instance](/azure/sql-database/sql-database-managed-instance), most, but not all SQL Server Agent features are currently supported. See [Azure SQL Managed Instance T-SQL differences from SQL Server](/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) for details.
 
-This topic describes how to stop a [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent job. A job is a specified series of actions that SQL Server Agent performs.  
+This topic describes how to stop a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent job. A job is a specified series of actions that SQL Server Agent performs.  
   
 -   **Before you begin:**  ,  
   
@@ -54,7 +50,7 @@ For detailed information, see [Implement SQL Server Agent Security](../../ssms/a
   
 #### To stop a job  
   
-1.  In **Object Explorer,** connect to an instance of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)], and then expand that instance.  
+1.  In **Object Explorer,** connect to an instance of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], and then expand that instance.  
   
 2.  Expand **SQL Server Agent**, expand **Jobs**, right-click the job you want to stop, and then click **Stop Job**.  
   
@@ -64,7 +60,7 @@ For detailed information, see [Implement SQL Server Agent Security](../../ssms/a
   
 #### To stop a job  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  On the Standard bar, click **New Query**.  
   

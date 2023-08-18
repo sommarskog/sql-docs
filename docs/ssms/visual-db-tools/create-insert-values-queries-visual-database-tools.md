@@ -1,13 +1,13 @@
 ---
-description: "Create Insert Values Queries (Visual Database Tools)"
 title: Create Insert Values Queries
-ms.custom: seo-lt-2019
+description: "Create Insert Values Queries (Visual Database Tools)"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
+ms.service: sql
+ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "inserting values"
   - "queries [SQL Server], types"
   - "adding values"
@@ -16,14 +16,9 @@ helpviewer_keywords:
   - "Insert Values query"
   - "adding rows"
   - "table values [SQL Server]"
-ms.assetid: 2d4b2f6d-cc09-434b-8a0e-ccce40628064
-author: markingmyname
-ms.author: maghan
-ms.reviewer: 
-
 ---
 # Create Insert Values Queries (Visual Database Tools)
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server](../../includes/applies-to-version/sqlserver.md)]
 You can create a new row in the current table using an Insert Values query. When you create an Insert Values query, you specify:  
   
 -   The database table to add the row to.  

@@ -1,19 +1,19 @@
 ---
-title: "StDev Function (Report Builder) | Microsoft Docs"
-description: The StDev Function in Report Builder returns the standard deviation of all non-null numeric values specified by an expression.
-ms.date: 03/07/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-design
-
-
-ms.topic: conceptual
-ms.assetid: cb51e96e-a828-42f0-b67c-cee3f4d221e7
+title: "StDev function in a paginated report"
+description: The StDev Function in Report Builder returns the standard deviation of all non-null numeric values in a paginated report specified by an expression.
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 03/07/2017
+ms.service: reporting-services
+ms.subservice: report-design
+ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
-# Report Builder Functions - StDev Function
-  Returns the standard deviation of all non-null numeric values specified by the expression, evaluated in the given scope.  
+# Report Builder functions - StDev function in a paginated report (Report Builder)
+
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-ssrs-rb](../../includes/ssrs-appliesto-ssrs-rb.md)] [!INCLUDE [ssrs-appliesto-pbi-rb](../../includes/ssrs-appliesto-pbi-rb.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
+
+  Returns the standard deviation of all non-null numeric values specified by the expression, evaluated in the given scope in a paginated report.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  

@@ -1,23 +1,19 @@
 ---
-description: "MSpublisher_databases (Transact-SQL)"
-title: "MSpublisher_databases (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "MSpublisher_databases (Transact-SQL)"
+description: MSpublisher_databases (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: replication
+ms.service: sql
+ms.subservice: replication
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "MSpublisher_databases"
   - "MSpublisher_databases_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "MSpublisher_databases system table"
-ms.assetid: 59b0166e-a64c-46b8-befc-c222fa1ccce2
-author: cawrites
-ms.author: chadam
+dev_langs:
+  - "TSQL"
 ---
 # MSpublisher_databases (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

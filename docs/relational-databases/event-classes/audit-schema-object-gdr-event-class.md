@@ -1,21 +1,18 @@
 ---
+title: "Audit Schema Object GDR Event Class"
 description: "Audit Schema Object GDR Event Class"
-title: "Audit Schema Object GDR Event Class | Microsoft Docs"
-ms.custom: ""
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: supportability
+ms.service: sql
+ms.subservice: supportability
 ms.topic: reference
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Audit Schema Object GDR event class"
-ms.assetid: a0187811-dc71-4792-a282-3bfe1ca90c21
-author: "stevestein"
-ms.author: "sstein"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Audit Schema Object GDR Event Class
-[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
   The **Audit Schema Object GDR** event class occurs whenever a GRANT, REVOKE, or DENY is issued for a schema object permission by any user in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## Audit Schema Object GDR Event Class Data Columns  

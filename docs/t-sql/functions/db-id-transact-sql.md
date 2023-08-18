@@ -1,36 +1,32 @@
 ---
+title: "DB_ID (Transact-SQL)"
 description: "DB_ID (Transact-SQL)"
-title: "DB_ID (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/13/2019"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
-ms.technology: t-sql
+author: VanMSFT
+ms.author: vanto
+ms.date: "06/19/2023"
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "DB_ID_TSQL"
   - "DB_ID"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "viewing database ID numbers"
   - "IDs [SQL Server], databases"
   - "database IDs [SQL Server]"
   - "identification numbers [SQL Server], databases"
   - "displaying database ID numbers"
   - "DB_ID function"
-ms.assetid: 7b3aef89-a6fd-4144-b468-bf87ebf381b8
-author: VanMSFT
-ms.author: vanto
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+dev_langs:
+  - "TSQL"
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-mi-current"
 ---
 # DB_ID (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 This function returns the database identification (ID) number of a specified database.
   
-![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## Syntax  
   
@@ -51,7 +47,7 @@ The name of the database whose database ID number `DB_ID` will return. If the ca
 `DB_ID` may only be used to return the database identifier of the current database in Azure SQL Database. NULL is returned if the specified database name is other than the current database.
 
 > [!NOTE]
-> When used with Azure SQL Database, `DB_ID` may not return the same result as querying `database_id` from **sys.databases**. If the caller of `DB_ID` is comparing the result to other **sys** views, then **sys.databases** should be queried instead.
+> In Azure SQL Database, `DB_ID` may not return the same value as the `database_id` column in **sys.databases** and **sys.database_service_objectives**. These two views return `database_id` values that are unique within the logical server, while `DB_ID` and the `database_id` column in other system views return values that are unique within a single database or within an elastic pool.
   
 ## Permissions  
 If the caller of `DB_ID` does not own a specific non-**master** or non-**tempdb** database, `ALTER ANY DATABASE` or `VIEW ANY DATABASE` server-level permissions at minimum are required to see the corresponding `DB_ID` row. For the **master** database, `DB_ID` needs `CREATE DATABASE` permission at minimum. The database to which the caller connects will always appear in **sys.databases**.
@@ -83,8 +79,8 @@ This example uses `DB_ID` to return the database ID of the [!INCLUDE[ssSampleDBo
 ```sql
 DECLARE @db_id INT;  
 DECLARE @object_id INT;  
-SET @db_id = DB_ID(N'AdventureWorks2012');  
-SET @object_id = OBJECT_ID(N'AdventureWorks2012.Person.Address');  
+SET @db_id = DB_ID(N'AdventureWorks2022');  
+SET @object_id = OBJECT_ID(N'AdventureWorks2022.Person.Address');  
 IF @db_id IS NULL   
   BEGIN;  
     PRINT N'Invalid database';  
@@ -100,7 +96,7 @@ ELSE
 GO  
 ```  
   
-## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## Examples: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### D. Return the ID of the current database  
 This example returns the database ID of the current database.
@@ -110,7 +106,7 @@ SELECT DB_ID();
 ```  
   
 ### E. Return the ID of a named database.  
-This example returns the database ID of the AdventureWorksDW2012 database.
+This example returns the database ID of the AdventureWorksDW2022 database.
   
 ```sql
 SELECT DB_ID('AdventureWorksPDW2012');  

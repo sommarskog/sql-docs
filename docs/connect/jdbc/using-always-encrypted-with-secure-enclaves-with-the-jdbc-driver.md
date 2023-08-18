@@ -1,16 +1,13 @@
 ---
+title: "Using Always Encrypted with secure enclaves with the JDBC Driver"
 description: "Using Always Encrypted with secure enclaves with the JDBC Driver"
-title: "Using Always Encrypted with secure enclaves with the JDBC Driver | Microsoft Docs"
-ms.custom: ""
-ms.date: 04/21/2021
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: v-daenge
-ms.technology: connectivity
-ms.topic: conceptual
-ms.assetid: 271c0438-8af1-45e5-b96a-4b1cabe32707
 author: DavidEngel
-ms.author: v-daenge
+ms.author: v-davidengel
+ms.reviewer: v-davidengel
+ms.date: 02/15/2023
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: conceptual
 ---
 # Using Always Encrypted with secure enclaves with the JDBC driver
 
@@ -25,14 +22,14 @@ The secure enclaves feature is an addition to the existing [Always Encrypted](..
 - Make sure Microsoft JDBC Driver 8.2 (or higher) for SQL Server is installed on your development machine.
 - Verify environment dependencies such as DLLs, KeyStores, and so on, are in the correct paths. Always Encrypted with secure enclaves is an add-on to the existing [Always Encrypted](using-always-encrypted-with-the-jdbc-driver.md) feature and share similar prerequisites.
 
-> [!Note]
+> [!NOTE]
 > If you are using an older version of JDK 8, you may need to download and install the Java Cryptography Extension (JCE) Unlimited Strength Jurisdiction Policy Files. Be sure to read the Readme included in the zip file for installation instructions and relevant details on possible export/import issues.  
 >
 > The policy files can be downloaded from  [Java Cryptography Extension (JCE) Unlimited Strength Jurisdiction Policy Files 8 Download](https://www.oracle.com/technetwork/java/javase/downloads/jce8-download-2133166.html)
 
 ## Setting up secure enclaves
 
-Follow [Tutorial: Getting started with Always Encrypted with secure enclaves in SQL Server](../../relational-databases/security/tutorial-getting-started-with-always-encrypted-enclaves.md) or [Tutorial: Getting started with Always Encrypted with secure enclaves in Azure SQL Database](/azure/azure-sql/database/always-encrypted-enclaves-getting-started) to get started with secure enclaves. For more in-depth information, refer to [Always encrypted with secure enclaves](../../relational-databases/security/encryption/always-encrypted-enclaves.md).
+Follow [Tutorial: Getting started using Always Encrypted with secure enclaves in SQL Server](../../relational-databases/security/tutorial-getting-started-with-always-encrypted-enclaves.md), [Tutorial: Getting started using Always Encrypted with Intel SGX enclaves in Azure SQL Database](/azure/azure-sql/database/always-encrypted-enclaves-getting-started-sgx), or [Tutorial: Getting started with Always Encrypted with VBS enclaves in Azure SQL Database](/azure/azure-sql/database/always-encrypted-enclaves-getting-started-vbs) to get started with secure enclaves. For more in-depth information, see [Always encrypted with secure enclaves](../../relational-databases/security/encryption/always-encrypted-enclaves.md).
 
 ## Connection String properties
 
@@ -40,22 +37,24 @@ To enable enclave computations for a database connection, you need to set the fo
 
 - **enclaveAttestationProtocol** - specifies an attestation protocol.
   - If you're using [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] and Host Guardian Service (HGS), the value of this keyword should be `HGS`.
-  - If you're using [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and Microsoft Azure Attestation, the value of this keyword should be `AAS`.
+  - If you're using [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and Microsoft Azure Attestation, the value of this keyword should be `AAS`.
+  - If you're using secure enclaves in an environment where attestation services aren't available, the value of this keyword should be `NONE`. Requires JDBC 12.2 or later.
 
 - **enclaveAttestationUrl:** - specifies an attestation URL (an attestation service endpoint). You need to obtain an attestation URL for your environment from your attestation service administrator.
   - If you're using [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] and Host Guardian Service (HGS), see [Determine and share the HGS attestation URL](../../relational-databases/security/encryption/always-encrypted-enclaves-host-guardian-service-deploy.md#step-6-determine-and-share-the-hgs-attestation-url).
-  - If you're using [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and Microsoft Azure Attestation, see [Determine the attestation URL for your attestation policy](../../relational-databases/security/encryption/always-encrypted-enclaves.md#secure-enclave-attestation).
+  - If you're using [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and Microsoft Azure Attestation, see [Determine the attestation URL for your attestation policy](../../relational-databases/security/encryption/always-encrypted-enclaves.md#secure-enclave-attestation).
+  - If you're using `NONE` attestation protocol, this property can be left blank.
 
 Users must enable **columnEncryptionSetting** and correctly set **both** of the above connection string properties to enable Always Encrypted with secure enclaves from the [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)].
 
 ## Working with secure enclaves
 
-When the enclave connection properties are set properly, the feature will work transparently. The driver will determine whether the query requires the use of a secure enclave automatically. The following are examples of queries that trigger enclave computations. You can find the database and table setup in [Tutorial: Getting started with Always Encrypted with secure enclaves in SQL Server](../../relational-databases/security/tutorial-getting-started-with-always-encrypted-enclaves.md) or [Tutorial: Getting started with Always Encrypted with secure enclaves in Azure SQL Database](/azure/azure-sql/database/always-encrypted-enclaves-getting-started).
+When the enclave connection properties are set properly, the feature will work transparently. The driver will determine whether the query requires the use of a secure enclave automatically. The following are examples of queries that trigger enclave computations. You can find the database and table setup in [Tutorial: Getting started using Always Encrypted with secure enclaves in SQL Server](../../relational-databases/security/tutorial-getting-started-with-always-encrypted-enclaves.md) or [Tutorial: Getting started using Always Encrypted with secure enclaves in Azure SQL Database](/azure/azure-sql/database/always-encrypted-enclaves-getting-started).
 
 Rich queries will trigger enclave computations:
 
 ```java
-private static final String URL = "jdbc:sqlserver://<server>:<port>;user=<username>;password=<password>;databaseName=ContosoHR;columnEncryptionSetting=enabled;enclaveAttestationUrl=<attestation-url>;enclaveAttestationProtocol=<attestation-protocol>;";
+private static final String URL = "jdbc:sqlserver://<server>:<port>;encrypt=true;user=<username>;password=<password>;databaseName=ContosoHR;columnEncryptionSetting=enabled;enclaveAttestationUrl=<attestation-url>;enclaveAttestationProtocol=<attestation-protocol>;";
 try (Connection c = DriverManager.getConnection(URL)) {
     try (PreparedStatement p = c.prepareStatement("SELECT * FROM Employees WHERE SSN LIKE ?")) {
         p.setString(1, "%6818");
@@ -80,7 +79,7 @@ try (Connection c = DriverManager.getConnection(URL)) {
 Toggling encryption on a column will also trigger enclave computations:
 
 ```java
-private static final String URL = "jdbc:sqlserver://<server>:<port>;user=<username>;password=<password>;databaseName=ContosoHR;columnEncryptionSetting=enabled;enclaveAttestationUrl=<attestation-url>;enclaveAttestationProtocol=<attestation-protocol>;";
+private static final String URL = "jdbc:sqlserver://<server>:<port>;encrypt=true;user=<username>;password=<password>;databaseName=ContosoHR;columnEncryptionSetting=enabled;enclaveAttestationUrl=<attestation-url>;enclaveAttestationProtocol=<attestation-protocol>;";
 try (Connection c = DriverManager.getConnection(URL);Statement s = c.createStatement()) {
     s.executeUpdate("ALTER TABLE Employees ALTER COLUMN SSN CHAR(11) NULL WITH (ONLINE = ON)");
 }

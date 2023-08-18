@@ -2,18 +2,20 @@
 title: Manage SQL Server big data cluster with controller dashboard
 titleSuffix: Manage SQL Server big data cluster with controller dashboard
 description: Use a notebook from Azure Data Studio to manage and troubleshoot a big data cluster.
-author: yualan
-ms.author: alanyu
-ms.reviewer: mikeray
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.reviewer: erinstellato
 ms.date: 11/04/2019
+ms.service: sql
+ms.subservice: big-data-cluster
 ms.topic: conceptual
-ms.prod: sql
-ms.technology: big-data-cluster
 ---
 
 # Manage big data clusters for SQL Server controller dashboard
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
+
+[!INCLUDE[big-data-clusters-banner-retirement](../includes/bdc-banner-retirement.md)]
 
 In addition to **azdata** and the cluster status notebook, there is another way to view the status of a SQL Server Big Data Cluster. You can now add the SQL Server Big Data Cluster controller through the **Connections** viewlet. This enables you to have a dashboard to view the cluster health.
 
@@ -48,7 +50,7 @@ In addition to above, SQL Server 2019 Big Data Cluster also requires:
 ## Launch controller dashboard
 
 1. When you successfully add your controller, you can view it under SQL Server Big Data Clusters.
-2. To launch the dashboard, right click on the controller and click **Manage**.
+2. To launch the dashboard, right-click on the controller and click **Manage**.
 
 ## Controller Dashboard
 

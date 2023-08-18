@@ -1,21 +1,19 @@
 ---
-title: "Import Flat File to SQL | Microsoft Docs"
+title: "Import Flat File to SQL"
 description: Import Flat File Wizard is a simple way to copy data from a .csv or .txt file to a new database table. This article shows you how and when to use the wizard.
-ms.custom: ""
-ms.date: "09/26/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: data-movement
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.swb.importflatfile.f1"
-author: yualan
-ms.author: alayu
+author: erinstellato-ms
+ms.author: erinstellato
 ms.reviewer: maghan
+ms.date: "07/26/2023"
+ms.service: sql
+ms.subservice: data-movement
+ms.topic: conceptual
+f1_keywords:
+  - "sql13.swb.importflatfile.f1"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Import Flat File to SQL Wizard
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 > For content related to the Import and Export Wizard, see [SQL Server Import and Export Wizard](../../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md).
 
 Import Flat File Wizard is a simple way to copy data from a flat file (.csv, .txt) to a new table in your database.  The Import Flat File Wizard supports both comma-separated and fixed width format files. This overview describes the reasons for using this wizard, how to find this wizard, and a simple example to follow.
@@ -24,10 +22,6 @@ Import Flat File Wizard is a simple way to copy data from a flat file (.csv, .tx
 This wizard was created to improve the current import experience leveraging an intelligent framework known as Program Synthesis using Examples ([PROSE](https://microsoft.github.io/prose/)). For a user without specialized domain knowledge, importing data can often be a complex, error prone, and tedious task. This wizard streamlines the import process as simple as selecting an input file and unique table name, and the PROSE framework handles the rest.
 
 PROSE analyzes data patterns in your input file to infer column names, types, delimiters, and more. This framework learns the structure of the file and does all of the hard work so users don't have to.
-
-To further understand the user experience improvement of the Import Flat File Wizard, check out this video:
-
-> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Introducing-the-new-Import-Flat-File-Wizard-in-SSMS-173/player?WT.mc_id=dataexposed-c9-niner]
 
 ## Prerequisites
 This feature is available on SQL Server Management Studio (SSMS) v17.3 or later. Make sure you are using the latest version. You can find the latest version [here.](../../ssms/download-sql-server-management-studio-ssms.md)
@@ -113,6 +107,7 @@ The given value of type String from the data source cannot be converted to type 
 Failed to convert parameter value from a String to a Double. (System.Data)
 ```
 
+Currently, the importer uses encoding based on the system's active code page.  On most machines this defaults to ANSI.
 
 ## Learn More
 

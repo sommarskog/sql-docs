@@ -1,21 +1,17 @@
 ---
+title: "HelloData Code"
 description: "HelloData Code"
-title: "HelloData Code | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "HelloData sample application [ADO], sample code"
-ms.assetid: 6da136c5-fa93-4fe6-9bf5-90f4d92441fb
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: ado
+ms.topic: conceptual
+helpviewer_keywords:
+  - "HelloData sample application [ADO], sample code"
 ---
 # HelloData Code
-```  
+```vb
 'BeginHelloData  
 Option Explicit  
   
@@ -133,7 +129,7 @@ Private Sub ExamineData()
             m_oRecordset.AbsolutePosition & " using bookmark.", , _  
             "Hello Data"  
   
-    ' Display meta-data about each field. See WalkFields() sub.  
+    ' Display metadata about each field. See WalkFields() sub.  
     Call WalkFields  
   
     ' Apply a filter on the type field.  

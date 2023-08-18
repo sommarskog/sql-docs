@@ -1,19 +1,16 @@
 ---
+title: "Configure Custom or Forms Authentication on the Report Server"
 description: "Configure Custom or Forms Authentication on the Report Server"
-title: "Configure Custom or Forms Authentication on the Report Server | Microsoft Docs"
-ms.date: 04/18/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: security
-
-
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "Forms authentication, configuring"
-  - "custom authentication [Reporting Services]"
-ms.assetid: e8601a8f-e66d-4649-8e4d-a46ca20ec7d0
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 04/18/2017
+ms.service: reporting-services
+ms.subservice: security
+ms.topic: conceptual
+ms.custom: updatefrequency5
+helpviewer_keywords:
+  - "Forms authentication, configuring"
+  - "custom authentication [Reporting Services]"
 ---
 # Configure Custom or Forms Authentication on the Report Server
 
@@ -80,4 +77,4 @@ Additionally, if you want to use Forms authentication or a custom authentication
 [RsReportServer.config Configuration File](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
 [Configure Basic Authentication on the Report Server](../../reporting-services/security/configure-basic-authentication-on-the-report-server.md)   
 [Configure Windows Authentication on the Report Server](../../reporting-services/security/configure-windows-authentication-on-the-report-server.md)  
-More questions? [Try the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)
+More questions? [Try the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user)

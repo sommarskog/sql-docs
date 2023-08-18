@@ -1,30 +1,26 @@
 ---
-description: "GET_FILESTREAM_TRANSACTION_CONTEXT (Transact-SQL)"
 title: GET_FILESTREAM_TRANSACTION_CONTEXT (Transact-SQL)
-ms.custom: ""
+description: "GET_FILESTREAM_TRANSACTION_CONTEXT (Transact-SQL)"
+author: markingmyname
+ms.author: maghan
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "GET_FILESTREAM_TRANSACTION_CONTEXT_TSQL"
   - "GET_FILESTREAM_TRANSACTION_CONTEXT"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "GET_FILESTREAM_TRANSACTION_CONTEXT FILESTREAM [SQL Server]"
-ms.assetid: 459e6b79-4420-41e6-85bf-89d90f43b4f1
-author: cawrites
-ms.author: chadam
+dev_langs:
+  - "TSQL"
 ---
 # GET_FILESTREAM_TRANSACTION_CONTEXT (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns a token that represents the current transaction context of a session. The token is used by an application to bind FILESTREAM file-system streaming operations to the transaction. For a list of FILESTREAM topics, see [Binary Large Object &#40;Blob&#41; Data &#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md).  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

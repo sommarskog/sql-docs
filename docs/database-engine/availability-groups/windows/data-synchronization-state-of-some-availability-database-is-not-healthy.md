@@ -1,19 +1,16 @@
 ---
 title: "Data synchronization state of some availability database is not healthy"
 description: "Identify possible causes for why the data synchronization state of some database in an Always On availability group is not healthy."
-ms.custom: "seodec18"
+author: MashaMSFT
+ms.author: mathoma
 ms.date: "05/17/2016"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: availability-groups
+ms.service: sql
+ms.subservice: availability-groups
 ms.topic: end-user-help
-f1_keywords: 
+f1_keywords:
   - "sql13.swb.agdashboard.drp3datasynchealthy.issues.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Availability Groups [SQL Server], policies"
-ms.assetid: 89f95d15-33c6-4768-bccd-9dbf8c4f49a9
-author: cawrites
-ms.author: chadam
 ---
 # Data synchronization state of some availability database is not healthy
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

@@ -1,14 +1,13 @@
 ---
 title: Restore a database
-titleSuffix: SQL Server big data clusters
+titleSuffix: SQL Server Big Data Clusters
 description: This article shows how to restore a database into the master instance of a SQL Server 2019 big data cluster.
-author: MikeRayMSFT
-ms.author: mikeray
-ms.reviewer: mihaelab 
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: 08/21/2019
+ms.service: sql
+ms.subservice: big-data-cluster
 ms.topic: conceptual
-ms.prod: sql
-ms.technology: big-data-cluster
 ---
 
 # Restore a database into the SQL Server big data cluster master instance
@@ -16,6 +15,8 @@ ms.technology: big-data-cluster
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 This article describes how to restore an existing database into the master instance of a [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]. The recommended method is to use a backup, copy, and restore approach.
+
+[!INCLUDE[big-data-clusters-banner-retirement](../includes/bdc-banner-retirement.md)]
 
 ## Backup your existing database
 
@@ -37,7 +38,7 @@ kubectl cp <path to .bak file> master-0:/var/tmp/<.bak filename> -c mssql-server
 Example:
 
 ```bash
-kubectl cp ~/Downloads/AdventureWorks2016CTP3.bak master-0:/var/tmp/AdventureWorks2016CTP3.bak -c mssql-server -n clustertest
+kubectl cp ~/Downloads/AdventureWorks2022.bak master-0:/var/tmp/AdventureWorks2022.bak -c mssql-server -n clustertest
 ```
 
 Then, verify that the backup file was copied to the pod container.
@@ -69,7 +70,7 @@ RESTORE FILELISTONLY FROM DISK='/tmp/<db file name>.bak'
 Example:
 
 ```sql
-RESTORE FILELISTONLY FROM DISK='/tmp/AdventureWorks2016CTP3.bak'
+RESTORE FILELISTONLY FROM DISK='/tmp/AdventureWorks2022.bak'
 ```
 
 ![Backup file list](media/restore-database/database-restore-file-list.png)
@@ -77,11 +78,11 @@ RESTORE FILELISTONLY FROM DISK='/tmp/AdventureWorks2016CTP3.bak'
 Now, restore the database. The following script is an example. Replace the names/paths as needed depending on your database backup.
 
 ```sql
-RESTORE DATABASE AdventureWorks2016CTP3
-FROM DISK='/tmp/AdventureWorks2016CTP3.bak'
-WITH MOVE 'AdventureWorks2016CTP3_Data' TO '/var/opt/mssql/data/AdventureWorks2016CTP3_Data.mdf',
-        MOVE 'AdventureWorks2016CTP3_Log' TO '/var/opt/mssql/data/AdventureWorks2016CTP3_Log.ldf',
-        MOVE 'AdventureWorks2016CTP3_mod' TO '/var/opt/mssql/data/AdventureWorks2016CTP3_mod'
+RESTORE DATABASE AdventureWorks2022
+FROM DISK='/tmp/AdventureWorks2022.bak'
+WITH MOVE 'AdventureWorks2022_Data' TO '/var/opt/mssql/data/AdventureWorks2022_Data.mdf',
+        MOVE 'AdventureWorks2022_Log' TO '/var/opt/mssql/data/AdventureWorks2022_Log.ldf',
+        MOVE 'AdventureWorks2022_mod' TO '/var/opt/mssql/data/AdventureWorks2022_mod'
 ```
 
 ## Configure data pool and HDFS access
@@ -89,7 +90,7 @@ WITH MOVE 'AdventureWorks2016CTP3_Data' TO '/var/opt/mssql/data/AdventureWorks20
 Now, for the SQL Server master instance to access data pools and HDFS, run the data pool and storage pool stored procedures. Run the following Transact-SQL scripts against your newly restored database:
 
 ```sql
-USE AdventureWorks2016CTP3
+USE AdventureWorks2022;
 GO
 -- Create the SqlDataPool data source:
 IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlDataPool')
@@ -110,4 +111,4 @@ GO
 
 To learn more about the [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], see the following overview:
 
-- [What are [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]?](big-data-cluster-overview.md)
+- [Introducing [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]](big-data-cluster-overview.md)

@@ -1,13 +1,13 @@
 ---
-description: "Monitor Job Activity"
 title: "Monitor Job Activity"
-ms.custom: seo-lt-2019
+description: "Monitor Job Activity"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
+ms.service: sql
+ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "SQL Server Agent, monitoring"
   - "jobs [SQL Server Agent], monitoring"
   - "monitoring [SQL Server], jobs"
@@ -18,10 +18,6 @@ helpviewer_keywords:
   - "SQL Server Agent jobs, monitoring"
   - "performance [SQL Server], jobs"
   - "current activity"
-ms.assetid: 71cb432b-631d-4b8b-9965-e731b3d8266d
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
 ---
 # Monitor Job Activity
@@ -36,7 +32,7 @@ You can monitor the current activity of all defined jobs on an instance of [!INC
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent creates a new session each time the service starts. When a new session is created, the **sysjobactivity** table in the **msdb** database is populated with all the existing defined jobs. This table preserves the last activity for jobs when [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent is restarted. Each session records [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent normal job activity from the start of the job to its finish. Information about these sessions is stored in the **syssessions** table of the **msdb** database.  
   
 ## Job Activity Monitor  
-The Job Activity Monitor allows you to view the **sysjobactivity** table by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. You can view all jobs on the server, or you can define filters to limit the number of jobs displayed. You can also sort the job information by clicking on a column heading in the **Agent Job Activity** grid. For example, when you select the **Last Run** column heading, you can view the jobs in the order that they were last run. Clicking the column heading again toggles the jobs in ascending and descending order based on their last run date.  
+The Job Activity Monitor allows you to view the **sysjobactivity** table by using SQL Server Management Studio. You can view all jobs on the server, or you can define filters to limit the number of jobs displayed. You can also sort the job information by clicking on a column heading in the **Agent Job Activity** grid. For example, when you select the **Last Run** column heading, you can view the jobs in the order that they were last run. Clicking the column heading again toggles the jobs in ascending and descending order based on their last run date.  
   
 Using the Job Activity Monitor you can perform the following tasks:  
   

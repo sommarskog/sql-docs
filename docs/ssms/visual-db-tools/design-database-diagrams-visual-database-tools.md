@@ -1,27 +1,26 @@
 ---
-description: "Design Database Diagrams (Visual Database Tools)"
 title: Design Database Diagrams
-ms.custom: seo-lt-2019
+description: "Design Database Diagrams (Visual Database Tools)"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
+ms.service: sql
+ms.subservice: ssms
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "vdtsql.chm:65536"
   - "vdt.DatabaseDesigner"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Database Diagram Designer"
   - "Visual Database Tools [SQL Server], database diagrams"
   - "database diagrams [SQL Server], designing"
   - "diagrams [SQL Server], designing"
-ms.assetid: 6d2c14e1-3d73-4d10-ae5b-7f2b5d6c4ea8
-author: markingmyname
-ms.author: maghan
-ms.reviewer: 
 ---
+
 # Design Database Diagrams (Visual Database Tools)
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+
+[!INCLUDE[SQL Server Azure SQL Database PDW](../../includes/applies-to-version/sql-asdb-asdbmi-pdw.md)]
+
 The Database Designer is a visual tool that allows you to design and visualize a database to which you are connected. When designing a database, you can use Database Designer to create, edit, or delete tables, columns, keys, indexes, relationships, and constraints. To visualize a database, you can create one or more diagrams illustrating some or all of the tables, columns, keys, and relationships in it.  
   
 ![Database diagram illustrating table relationships](../../ssms/visual-db-tools/media/dv3w7c1.gif "Database diagram illustrating table relationships")  

@@ -1,27 +1,23 @@
 ---
+title: "sp_createstats (Transact-SQL)"
 description: "sp_createstats (Transact-SQL)"
-title: "sp_createstats (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_createstats_TSQL"
-  - "sp_createstats"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_createstats"
-ms.assetid: 8204f6f2-5704-40a7-8d51-43fc832eeb54
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_createstats_TSQL"
+  - "sp_createstats"
+helpviewer_keywords:
+  - "sp_createstats"
+dev_langs:
+  - "TSQL"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_createstats (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Calls the [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) statement to create single-column statistics on columns that are not already the first column in a statistics object. Creating single-column statistics increases the number of histograms, which can improve cardinality estimates, query plans, and query performance. The first column of a statistics object has a histogram; other columns do not have a histogram.  
   
@@ -29,7 +25,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
   
  For more information about statistics, see [Statistics](../../relational-databases/statistics/statistics.md). For more information about generating single-column statistics, see the **AUTO_CREATE_STATISTICS** option in [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md).  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

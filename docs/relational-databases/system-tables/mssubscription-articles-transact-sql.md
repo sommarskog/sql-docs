@@ -1,23 +1,19 @@
 ---
-description: "MSsubscription_articles (Transact-SQL)"
-title: "MSsubscription_articles (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "MSsubscription_articles (Transact-SQL)"
+description: MSsubscription_articles (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "03/03/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: replication
+ms.service: sql
+ms.subservice: replication
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "MSsubscription_articles"
   - "MSsubscription_articles_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "MSsubscription_articles system table"
-ms.assetid: dbc1737f-261e-4017-b9cd-703b9fc4ac78
-author: cawrites
-ms.author: chadam
+dev_langs:
+  - "TSQL"
 ---
 # MSsubscription_articles (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

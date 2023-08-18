@@ -1,23 +1,19 @@
 ---
+title: "WMI Event Watcher Task"
 description: "WMI Event Watcher Task"
-title: "WMI Event Watcher Task | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/01/2017"
-ms.prod: sql
-ms.prod_service: "integration-services"
-ms.reviewer: ""
-ms.technology: integration-services
+ms.service: sql
+ms.subservice: integration-services
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.dts.designer.wmieventwatchertask.f1"
   - "sql13.dts.designer.wmieventwatcher.general.f1"
   - "sql13.dts.designer.wmieventwatcher.wmiquery.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "WQL [Integration Services]"
   - "WMI Event Watcher task [Integration Services]"
-ms.assetid: b5bb52e9-a77e-41e1-93f9-d4c3bc6b2c9a
-author: chugugrace
-ms.author: chugu
 ---
 # WMI Event Watcher Task
 
@@ -38,24 +34,25 @@ ms.author: chugu
   
 -   [WMI Data Reader Task](../../integration-services/control-flow/wmi-data-reader-task.md)  
   
-## WQL Queries  
- WQL is a dialect of SQL with extensions to support WMI event notification and other WMI-specific features. For more information about WQL, see the Windows Management Instrumentation documentation in the [MSDN Library](/documentation/).  
+## WQL Queries
+
+WQL is a dialect of SQL with extensions to support WMI event notification and other WMI-specific features. For more information about WQL, see the [Windows Management Instrumentation documentation](/windows/win32/wmisdk/wmi-start-page).
+
+> [!NOTE]
+> WMI classes vary between versions of Windows.
+
+The following query watches for notification that the CPU use is more than 40 percent.
   
-> [!NOTE]  
->  WMI classes vary between versions of Windows.  
-  
- The following query watches for notification that the CPU use is more than 40 percent.  
-  
-```  
+```sql
 SELECT * from __InstanceModificationEvent WITHIN 2 WHERE TargetInstance ISA 'Win32_Processor' and TargetInstance.LoadPercentage > 40  
-```  
+```
+
+The following query watches for notification that a file has been added to a folder.  
   
- The following query watches for notification that a file has been added to a folder.  
-  
-```  
+```sql
 SELECT * FROM __InstanceCreationEvent WITHIN 10 WHERE TargetInstance ISA "CIM_DirectoryContainsFile" and TargetInstance.GroupComponent= "Win32_Directory.Name=\"c:\\\\WMIFileWatcher\""   
-```  
-  
+```
+
 ## Custom Logging Messages Available on the WMI Event Watcher Task  
  The following table lists the custom log entries for the WMI Event Watcher task. For more information, see [Integration Services &#40;SSIS&#41; Logging](../../integration-services/performance/integration-services-ssis-logging.md).  
   

@@ -1,24 +1,21 @@
 ---
-description: "Save Database Diagrams (Visual Database Tools)"
 title: Save Database Diagrams
-ms.custom: seo-lt-2019
+description: "Save Database Diagrams (Visual Database Tools)"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
+ms.service: sql
+ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "saving database diagrams"
   - "database diagrams [SQL Server], saving"
   - "diagrams [SQL Server], saving"
-ms.assetid: 747357f2-007c-4586-a371-c7fbe6a2c288
-author: markingmyname
-ms.author: maghan
-ms.reviewer: 
-
 ---
 # Save Database Diagrams (Visual Database Tools)
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+
+[!INCLUDE[SQL Server](../../includes/applies-to-version/sqlserver.md)]
+
 By saving a database diagram, you can save all the changes you made to it, including any changes you made to the tables, columns, and other database objects.  
   
 ### To save the database diagram  

@@ -1,21 +1,18 @@
 ---
-title: "Execute Stored Procedure with RPC and Process Output | Microsoft Docs"
+title: "Execute Stored Procedure with RPC and Process Output"
 description: Learn how to run SQL Server stored procedures with RPC, and process return codes and output parameters in this example.
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "06/14/2018"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "RPC syntax"
   - "stored procedures [SQL Server], RPC syntax"
-author: David-Engel
-ms.author: v-daenge
 ---
 # Execute Stored Procedure with RPC and Process Output
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../../includes/driver_oledb_download.md)]
 
@@ -45,7 +42,7 @@ ms.author: v-daenge
 ## Example  
  The example shows processing a rowset, a return code, and an output parameter. Result sets are not processed. This sample is not supported on IA64.  
   
- This sample requires the AdventureWorks sample database, which you can download from the [Microsoft SQL Server Samples and Community Projects](https://go.microsoft.com/fwlink/?LinkID=85384) home page.  
+ [!INCLUDE [article-uses-adventureworks](../../../../includes/article-uses-adventureworks.md)]
   
  Execute the first ( [!INCLUDE[tsql](../../../../includes/tsql-md.md)]) code listing to create the stored procedure used by the application.  
   
@@ -54,7 +51,8 @@ ms.author: v-daenge
  Execute the third ( [!INCLUDE[tsql](../../../../includes/tsql-md.md)]) code listing to delete the stored procedure used by the application.  
   
 ```  
-USE AdventureWorks  
+USE AdventureWorks2022;
+GO
 if exists (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[myProc]'))  
    DROP PROCEDURE myProc  
 GO  
@@ -386,7 +384,8 @@ void InitializeAndEstablishConnection() {
 ```  
   
 ```  
-USE AdventureWorks  
+USE AdventureWorks2022;
+GO
 DROP PROCEDURE myProc  
 GO  
 ```  

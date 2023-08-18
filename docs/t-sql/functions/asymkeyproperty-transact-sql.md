@@ -1,30 +1,26 @@
 ---
+title: "ASYMKEYPROPERTY (Transact-SQL)"
 description: "ASYMKEYPROPERTY (Transact-SQL)"
-title: "ASYMKEYPROPERTY (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/24/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
-ms.topic: reference
-f1_keywords: 
-  - "ASYMKEYPROPERTY_TSQL"
-  - "ASYMKEYPROPERTY"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "ASYMKEYPROPERTY"
-ms.assetid: a30581f2-e1b1-4996-93e6-527ff96b7c42
 author: VanMSFT
 ms.author: vanto
+ms.date: "07/24/2017"
+ms.service: sql
+ms.subservice: t-sql
+ms.topic: reference
+f1_keywords:
+  - "ASYMKEYPROPERTY_TSQL"
+  - "ASYMKEYPROPERTY"
+helpviewer_keywords:
+  - "ASYMKEYPROPERTY"
+dev_langs:
+  - "TSQL"
 ---
 # ASYMKEYPROPERTY (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 This function returns the properties of an asymmetric key.
   
-![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## Syntax  
   

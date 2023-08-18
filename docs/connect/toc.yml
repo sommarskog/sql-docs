@@ -73,6 +73,8 @@
         href: ../connect/ado-net/connection-strings-and-configuration-files.md
       - name: Connection String Syntax
         href: ../connect/ado-net/connection-string-syntax.md
+      - name: Encryption and certificate validation
+        href: ../connect/ado-net/encryption-and-certificate-validation.md
       - name: Protecting Connection Information
         href: ../connect/ado-net/protecting-connection-information.md
     - name: Connection Pooling
@@ -157,6 +159,13 @@
       items:
       - name: Obtain a SqlClientFactory
         href: ../connect/ado-net/obtain-sqlclientfactory.md
+    - name: Diagnostic counters
+      href: ../connect/ado-net/diagnostic-counters.md
+      items:
+      - name: Event counters
+        href: ../connect/ado-net/event-counters.md
+      - name: Performance counters
+        href: ../connect/ado-net/performance-counters.md
     - name: Retrieve identity or autonumber values
       href: ../connect/ado-net/retrieve-identity-or-autonumber-values.md
     - name: Retrieve binary data
@@ -165,8 +174,6 @@
       href: ../connect/ado-net/modify-data-with-stored-procedures.md
     - name: Data tracing in SqlClient
       href: ../connect/ado-net/data-tracing.md
-    - name: Performance counters in SqlClient
-      href: ../connect/ado-net/performance-counters.md
     - name: Asynchronous programming
       href: ../connect/ado-net/asynchronous-programming.md
     - name: SqlClient streaming support
@@ -2693,78 +2700,80 @@
   - name: Improving performance and reliability
     href: ../connect/jdbc/improving-performance-and-reliability-with-the-jdbc-driver.md
     items:
-    - name: Closing Objects when Not In Use
+    - name: Understanding timeout properties
+      href: ../connect/jdbc/understand-timeouts.md
+    - name: Closing objects when not in use
       href: ../connect/jdbc/closing-objects-when-not-in-use.md
-    - name: Managing Transaction Size
+    - name: Managing transaction size
       href: ../connect/jdbc/managing-transaction-size.md
-    - name: Working with Statements and Result Sets
+    - name: Working with statements and result sets
       href: ../connect/jdbc/working-with-statements-and-result-sets.md
-    - name: Using Adaptive Buffering
+    - name: Using adaptive buffering
       href: ../connect/jdbc/using-adaptive-buffering.md
-    - name: Sparse Columns
+    - name: Sparse columns
       href: ../connect/jdbc/sparse-columns.md
-    - name: Prepared Statement Metadata Caching for the JDBC Driver
+    - name: Prepared statement metadata caching
       href: ../connect/jdbc/prepared-statement-metadata-caching-for-the-jdbc-driver.md
   - name: Diagnosing problems
     href: ../connect/jdbc/diagnosing-problems-with-the-jdbc-driver.md
     items:
-    - name: Handling Errors
+    - name: Handling errors
       href: ../connect/jdbc/handling-errors.md
-    - name: Getting the Driver Version
+    - name: Getting the driver version
       href: ../connect/jdbc/getting-the-driver-version.md
-    - name: Tracing Driver Operation
+    - name: Tracing driver operation
       href: ../connect/jdbc/tracing-driver-operation.md
-    - name: Troubleshooting Connectivity
+    - name: Troubleshooting connectivity
       href: ../connect/jdbc/troubleshooting-connectivity.md
-    - name: Accessing Diagnostic Information in the Extended Events Log
+    - name: Accessing diagnostic information in the extended events log
       href: ../connect/jdbc/accessing-diagnostic-information-in-the-extended-events-log.md
   - name: Application code samples
     href: ../connect/jdbc/sample-jdbc-driver-applications.md
     items:
-    - name: Connecting and Retrieving Data
+    - name: Connecting and retrieving data
       href: ../connect/jdbc/connecting-and-retrieving-data.md
       items:
-      - name: Connection URL Sample
+      - name: Connection URL sample
         href: ../connect/jdbc/connection-url-sample.md
-      - name: Data Source Sample
+      - name: Data source sample
         href: ../connect/jdbc/data-source-sample.md
-    - name: Working with Data Types (JDBC)
+    - name: Working with data types (JDBC)
       href: ../connect/jdbc/working-with-data-types-jdbc.md
       items:
-      - name: Basic Data Types Sample
+      - name: Basic data types sample
         href: ../connect/jdbc/basic-data-types-sample.md
-      - name: SQLXML Data Type Sample
+      - name: SQLXML data type sample
         href: ../connect/jdbc/sqlxml-data-type-sample.md
-      - name: Spatial Data Types Sample
+      - name: Spatial data types sample
         href: ../connect/jdbc/spatial-data-types-sample.md
-    - name: Working with Result Sets
+    - name: Working with result sets
       href: ../connect/jdbc/working-with-result-sets.md
       items:
-      - name: Retrieving Result Set Data Sample
+      - name: Retrieving result set data sample
         href: ../connect/jdbc/retrieving-result-set-data-sample.md
-      - name: Modifying Result Set Data Sample
+      - name: Modifying result set data sample
         href: ../connect/jdbc/modifying-result-set-data-sample.md
-      - name: Caching Result Set Data Sample
+      - name: Caching result set data sample
         href: ../connect/jdbc/caching-result-set-data-sample.md
-    - name: Working with Large Data
+    - name: Working with large data
       href: ../connect/jdbc/working-with-large-data.md
       items:
-      - name: Reading Large Data Sample
+      - name: Reading large data sample
         href: ../connect/jdbc/reading-large-data-sample.md
-      - name: Reading Large Data with Stored Procedures Sample
+      - name: Reading large data with stored procedures sample
         href: ../connect/jdbc/reading-large-data-with-stored-procedures-sample.md
-      - name: Updating Large Data Sample
+      - name: Updating large data sample
         href: ../connect/jdbc/updating-large-data-sample.md
-    - name: Data Discovery and Classification Sample
+    - name: Data discovery and classification sample
       href: ../connect/jdbc/data-discovery-classification-sample.md
   - name: Compliance and legal
     href: ../connect/jdbc/compliance-and-legal-for-the-jdbc-sql-driver.md
     items:
-    - name: JDBC 4.1 Compliance for the JDBC Driver
+    - name: JDBC 4.1 compliance
       href: ../connect/jdbc/jdbc-4-1-compliance-for-the-jdbc-driver.md
-    - name: JDBC 4.2 Compliance for the JDBC Driver
+    - name: JDBC 4.2 compliance
       href: ../connect/jdbc/jdbc-4-2-compliance-for-the-jdbc-driver.md
-    - name: JDBC 4.3 Compliance for the JDBC Driver
+    - name: JDBC 4.3 compliance
       href: ../connect/jdbc/jdbc-4-3-compliance-for-the-jdbc-driver.md
   - name: Programming guide
     href: ../connect/jdbc/programming-guide-for-jdbc-sql-driver.md
@@ -2788,126 +2797,142 @@
         href: ../connect/jdbc/using-always-encrypted-with-secure-enclaves-with-the-jdbc-driver.md
     - name: Guide articles
       items:
-      - name: Using Statements with SQL
-        href: ../connect/jdbc/using-statements-with-sql.md
-      - name: Using an SQL Statement to Modify Database Objects
-        href: ../connect/jdbc/using-an-sql-statement-to-modify-database-objects.md
-      - name: Setting the Data Source Properties
-        href: ../connect/jdbc/setting-the-data-source-properties.md
-      - name: Setting the Connection Properties
-        href: ../connect/jdbc/setting-the-connection-properties.md
-      - name: Using a Stored Procedure with No Parameters
-        href: ../connect/jdbc/using-a-stored-procedure-with-no-parameters.md
-      - name: Using Parameter Metadata
-        href: ../connect/jdbc/using-parameter-metadata.md
-      - name: Using Basic Data Types
-        href: ../connect/jdbc/using-basic-data-types.md
-      - name: Using SQL_variant Data Type
-        href: ../connect/jdbc/using-sql-variant-datatype.md
-      - name: Using Spatial Datatypes
-        href: ../connect/jdbc/use-spatial-datatypes.md
-      - name: Understanding Transactions
-        href: ../connect/jdbc/understanding-transactions.md
-      - name: Working with a Connection
-        href: ../connect/jdbc/working-with-a-connection.md
-      - name: International Features of the JDBC Driver
-        href: ../connect/jdbc/international-features-of-the-jdbc-driver.md
-      - name: Using Advanced Data Types
-        href: ../connect/jdbc/using-advanced-data-types.md
-      - name: Understanding Data Type Differences
-        href: ../connect/jdbc/understanding-data-type-differences.md
-      - name: Using Multiple Result Sets
-        href: ../connect/jdbc/using-multiple-result-sets.md
-      - name: Using NTLM Authentication
-        href: ../connect/jdbc/using-ntlm-authentication-to-connect-to-sql-server.md
-      - name: Using Holdability
-        href: ../connect/jdbc/using-holdability.md
-      - name: Connecting using Azure Active Directory Authentication
-        href: ../connect/jdbc/connecting-using-azure-active-directory-authentication.md
-      - name: Understanding Data Type Conversions
-        href: ../connect/jdbc/understanding-data-type-conversions.md
-      - name: Understanding Concurrency Control
-        href: ../connect/jdbc/understanding-concurrency-control.md
-      - name: Using a Stored Procedure with Input Parameters
-        href: ../connect/jdbc/using-a-stored-procedure-with-input-parameters.md
-      - name: Using Database Metadata
-        href: ../connect/jdbc/using-database-metadata.md
-      - name: SQLXML Interface
-        href: ../connect/jdbc/sqlxml-interface.md
-      - name: Handling Complex Statements
-        href: ../connect/jdbc/handling-complex-statements.md
-      - name: Using Connection Pooling
-        href: ../connect/jdbc/using-connection-pooling.md
-      - name: Always Encrypted API Reference for the JDBC Driver
-        href: ../connect/jdbc/always-encrypted-api-reference-for-the-jdbc-driver.md
-      - name: Using Kerberos Integrated Authentication to Connect to SQL Server
-        href: ../connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server.md
-      - name: Using a Stored Procedure with an Update Count
-        href: ../connect/jdbc/using-a-stored-procedure-with-an-update-count.md
-      - name: Understanding Row Locking
-        href: ../connect/jdbc/understanding-row-locking.md
-      - name: JDBC Driver Support for High Availability, Disaster Recovery
-        href: ../connect/jdbc/jdbc-driver-support-for-high-availability-disaster-recovery.md
-      - name: Using Result Set Metadata
-        href: ../connect/jdbc/using-result-set-metadata.md
-      - name: Understanding XA Transactions
-        href: ../connect/jdbc/understanding-xa-transactions.md
-      - name: Using Auto Generated Keys
-        href: ../connect/jdbc/using-auto-generated-keys.md
-      - name: Using Database Mirroring (JDBC)
-        href: ../connect/jdbc/using-database-mirroring-jdbc.md
-      - name: National Character Set Support
-        href: ../connect/jdbc/national-character-set-support.md
-      - name: Understanding Cursor Types
-        href: ../connect/jdbc/understanding-cursor-types.md
-      - name: Programming with SQLXML
-        href: ../connect/jdbc/programming-with-sqlxml.md
-      - name: Using a Stored Procedure with a Return Status
-        href: ../connect/jdbc/using-a-stored-procedure-with-a-return-status.md
-      - name: Using an SQL Statement with No Parameters
-        href: ../connect/jdbc/using-an-sql-statement-with-no-parameters.md
-      - name: Connecting to an Azure SQL database
-        href: ../connect/jdbc/connecting-to-an-azure-sql-database.md
-      - name: Using an SQL Statement to Modify Data
-        href: ../connect/jdbc/using-an-sql-statement-to-modify-data.md
-      - name: Building the Connection URL
-        href: ../connect/jdbc/building-the-connection-url.md
-      - name: Using Savepoints
-        href: ../connect/jdbc/using-savepoints.md
-      - name: Using Table-Valued Parameters
-        href: ../connect/jdbc/using-table-valued-parameters.md
-      - name: Supporting XML Data
-        href: ../connect/jdbc/supporting-xml-data.md
-      - name: Using an SQL Statement with Parameters
-        href: ../connect/jdbc/using-an-sql-statement-with-parameters.md
-      - name: Understanding Isolation Levels
-        href: ../connect/jdbc/understanding-isolation-levels.md
-      - name: Wrappers and Interfaces
-        href: ../connect/jdbc/wrappers-and-interfaces.md
-      - name: Using Bulk Copy with the JDBC Driver
-        href: ../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md
-      - name: Using Bulk Copy API for batch insert operation
-        href: ../connect/jdbc/use-bulk-copy-api-batch-insert-operation.md
-      - name: Using a Stored Procedure with Output Parameters
-        href: ../connect/jdbc/using-a-stored-procedure-with-output-parameters.md
-      - name: Performing Batch Operations
-        href: ../connect/jdbc/performing-batch-operations.md
-      - name: User Defined Types
-        href: ../connect/jdbc/user-defined-types.md
-      - name: Configuring How java.sql.Time Values are Sent to the Server
-        href: ../connect/jdbc/configuring-how-java-sql-time-values-are-sent-to-the-server.md
-      - name: Using SQL Escape Sequences
-        href: ../connect/jdbc/using-sql-escape-sequences.md
-      - name: Using Statements with Stored Procedures
-        href: ../connect/jdbc/using-statements-with-stored-procedures.md
-      - name: Client Certificate Authentication for Loopback Scenarios
-        href: ../connect/jdbc/client-certification-authentication-for-loopback-scenarios.md
-      - name: Azure Key Vault samples, for 7.0 and others
-        href: ../connect/jdbc/azure-key-vault-sample-version-7.0.md
+      - name: Connections
         items:
-        - name: Azure Key Vault sample version 6.2.2
+        - name: Setting the data source properties
+          href: ../connect/jdbc/setting-the-data-source-properties.md
+        - name: Setting the connection properties
+          href: ../connect/jdbc/setting-the-connection-properties.md
+        - name: Working with a connection
+          href: ../connect/jdbc/working-with-a-connection.md
+        - name: Connect to an Azure SQL database
+          href: ../connect/jdbc/connecting-to-an-azure-sql-database.md
+        - name: Connection resiliency
+          href: ../connect/jdbc/connection-resiliency.md
+        - name: Building the Connection URL
+          href: ../connect/jdbc/building-the-connection-url.md
+        - name: Using connection pooling
+          href: ../connect/jdbc/using-connection-pooling.md
+        - name: Authentication
+          items:
+          - name: Using Kerberos integrated authentication
+            href: ../connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server.md
+          - name: Using Azure Active Directory authentication
+            href: ../connect/jdbc/connecting-using-azure-active-directory-authentication.md
+          - name: Using NTLM authentication
+            href: ../connect/jdbc/using-ntlm-authentication-to-connect-to-sql-server.md
+          - name: Client certificate authentication for loopback
+            href: ../connect/jdbc/client-certification-authentication-for-loopback-scenarios.md
+      - name: Data types
+        items:
+        - name: Using basic data types
+          href: ../connect/jdbc/using-basic-data-types.md
+        - name: Understanding data type differences
+          href: ../connect/jdbc/understanding-data-type-differences.md
+        - name: Understanding data type conversions
+          href: ../connect/jdbc/understanding-data-type-conversions.md
+        - name: Using advanced data types
+          href: ../connect/jdbc/using-advanced-data-types.md
+        - name: Using SQL_variant data type
+          href: ../connect/jdbc/using-sql-variant-datatype.md
+        - name: Using spatial data types
+          href: ../connect/jdbc/use-spatial-datatypes.md
+        - name: User defined types
+          href: ../connect/jdbc/user-defined-types.md
+        - name: Configuring how java.sql.Time values are sent
+          href: ../connect/jdbc/configuring-how-java-sql-time-values-are-sent-to-the-server.md
+        - name: Programming with SQLXML
+          href: ../connect/jdbc/programming-with-sqlxml.md
+        - name: Supporting XML data
+          href: ../connect/jdbc/supporting-xml-data.md
+        - name: SQLXML interface
+          href: ../connect/jdbc/sqlxml-interface.md
+      - name: Using statements with SQL
+        href: ../connect/jdbc/using-statements-with-sql.md
+        items:
+        - name: Using an SQL statement with no parameters
+          href: ../connect/jdbc/using-an-sql-statement-with-no-parameters.md
+        - name: Using an SQL statement with parameters
+          href: ../connect/jdbc/using-an-sql-statement-with-parameters.md
+        - name: Using an SQL statement to modify database objects
+          href: ../connect/jdbc/using-an-sql-statement-to-modify-database-objects.md
+        - name: Using an SQL statement to modify data
+          href: ../connect/jdbc/using-an-sql-statement-to-modify-data.md
+      - name: Statements with stored procedures
+        items:
+        - name: Using statements with stored procedures
+          href: ../connect/jdbc/using-statements-with-stored-procedures.md
+        - name: Using a stored procedure with no parameters
+          href: ../connect/jdbc/using-a-stored-procedure-with-no-parameters.md
+        - name: Using a stored procedure with input parameters
+          href: ../connect/jdbc/using-a-stored-procedure-with-input-parameters.md
+        - name: Using a stored procedure with output parameters
+          href: ../connect/jdbc/using-a-stored-procedure-with-output-parameters.md
+        - name: Using a stored procedure with a return status
+          href: ../connect/jdbc/using-a-stored-procedure-with-a-return-status.md
+        - name: Using a stored procedure with an update count
+          href: ../connect/jdbc/using-a-stored-procedure-with-an-update-count.md
+      - name: Using table-valued parameters
+        href: ../connect/jdbc/using-table-valued-parameters.md
+      - name: Handling complex statements
+        href: ../connect/jdbc/handling-complex-statements.md
+      - name: Using multiple result sets
+        href: ../connect/jdbc/using-multiple-result-sets.md
+      - name: Using parameter metadata
+        href: ../connect/jdbc/using-parameter-metadata.md
+      - name: Using result set metadata
+        href: ../connect/jdbc/using-result-set-metadata.md
+      - name: Transactions
+        items:
+        - name: Understanding transactions
+          href: ../connect/jdbc/understanding-transactions.md
+        - name: Understanding XA transactions
+          href: ../connect/jdbc/understanding-xa-transactions.md
+        - name: Using holdability
+          href: ../connect/jdbc/using-holdability.md
+        - name: Using savepoints
+          href: ../connect/jdbc/using-savepoints.md
+      - name: Understanding row locking
+        href: ../connect/jdbc/understanding-row-locking.md
+      - name: Understanding concurrency control
+        href: ../connect/jdbc/understanding-concurrency-control.md
+      - name: International features
+        href: ../connect/jdbc/international-features-of-the-jdbc-driver.md
+      - name: National character set support
+        href: ../connect/jdbc/national-character-set-support.md
+      - name: Using database metadata
+        href: ../connect/jdbc/using-database-metadata.md
+      - name: Always Encrypted API reference
+        href: ../connect/jdbc/always-encrypted-api-reference-for-the-jdbc-driver.md
+      - name: Support for high availability, disaster recovery
+        href: ../connect/jdbc/jdbc-driver-support-for-high-availability-disaster-recovery.md
+      - name: Using auto generated keys
+        href: ../connect/jdbc/using-auto-generated-keys.md
+      - name: Using database mirroring
+        href: ../connect/jdbc/using-database-mirroring-jdbc.md
+      - name: Understanding cursor types
+        href: ../connect/jdbc/understanding-cursor-types.md
+      - name: Understanding isolation levels
+        href: ../connect/jdbc/understanding-isolation-levels.md
+      - name: Wrappers and interfaces
+        href: ../connect/jdbc/wrappers-and-interfaces.md
+      - name: Using bulk copy
+        href: ../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md
+      - name: Using bulk copy API for batch insert operation
+        href: ../connect/jdbc/use-bulk-copy-api-batch-insert-operation.md
+      - name: Performing batch operations
+        href: ../connect/jdbc/performing-batch-operations.md
+      - name: Using SQL escape sequences
+        href: ../connect/jdbc/using-sql-escape-sequences.md
+      - name: Azure Key Vault samples
+        items:
+        - name: Azure Key Vault sample (version 9.2)
+          href: ../connect/jdbc/azure-key-vault-sample-version-9.2.md
+        - name: Azure Key Vault sample (version 7.0, 8.0)
+          href: ../connect/jdbc/azure-key-vault-sample-version-7.0.md
+        - name: Azure Key Vault sample (version 6.2.2)
           href: ../connect/jdbc/azure-key-vault-sample-version-6.2.2.md
-        - name: Azure Key Vault sample version 6.0.0
+        - name: Azure Key Vault sample (version 6.0.0)
           href: ../connect/jdbc/azure-key-vault-sample-version-6.0.0.md
 
 
@@ -2980,8 +3005,6 @@
       href: ../connect/odbc/windows/system-requirements-installation-and-driver-files.md
     - name: Feature guides
       items:
-      - name: Connection resiliency
-        href: ../connect/odbc/windows/connection-resiliency-in-the-windows-odbc-driver.md
       - name: Driver-aware connection pooling
         href: ../connect/odbc/windows/driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server.md
     - name: Asynchronous execution (notification method) sample
@@ -3000,6 +3023,10 @@
         href: ../connect/odbc/windows/sql-server-login-dialog.md
   - name: Feature guides
     items:
+    - name: Connection resiliency
+      href: ../connect/odbc/connection-resiliency.md
+    - name: Connection encryption troubleshooting
+      href: ../connect/odbc/connection-troubleshooting.md
     - name: Custom Keystore Providers
       href: ../connect/odbc/custom-keystore-providers.md
     - name: DSN and Connection String Keywords and Attributes
@@ -3016,7 +3043,7 @@
       href: ../connect/odbc/use-xa-with-dtc.md
     - name: Bug Fixes
       href: ../connect/odbc/bug-fixes.md
-  - name: C++ sample application
+  - name: C / C++ sample application
     href: ../connect/odbc/cpp-code-example-app-connect-access-sql-db.md
   # docs/odbc/
   - name: ODBC advanced
@@ -3822,62 +3849,6 @@
                 href: ../odbc/reference/develop-app/cstring-class.md
               - name: Creating and Terminating Threads
                 href: ../odbc/reference/develop-app/creating-and-terminating-threads.md
-        - name: Installing and Configuring the ODBC Software
-          href: ../odbc/reference/install/installing-and-configuring-the-odbc-software.md
-          items:
-          - name: Installing ODBC Components
-            href: ../odbc/reference/install/installing-odbc-components.md
-            items:
-            - name: Installation Components
-              href: ../odbc/reference/install/installation-components.md
-            - name: Usage Counting
-              href: ../odbc/reference/install/usage-counting.md
-          - name: Configuring Data Sources
-            href: ../odbc/reference/install/configuring-data-sources.md
-            items:
-            - name: Configuration Components
-              href: ../odbc/reference/install/configuration-components.md
-          - name: Installation and Configuration Components Reference
-            href: ../odbc/reference/install/installation-and-configuration-components-reference.md
-            items:
-            - name: Administration Program
-              href: ../odbc/reference/install/administration-program.md
-            - name: Setup Program
-              href: ../odbc/reference/install/setup-program.md
-            - name: Installer DLL
-              href: ../odbc/reference/install/installer-dll.md
-            - name: Driver Setup DLL
-              href: ../odbc/reference/install/driver-setup-dll.md
-            - name: Translator Setup DLLs
-              href: ../odbc/reference/install/translator-setup-dlls.md
-          - name: ODBC Header Files
-            href: ../odbc/reference/install/odbc-header-files.md
-          - name: Registry Entries for ODBC Components
-            href: ../odbc/reference/install/registry-entries-for-odbc-components.md
-            items:
-            - name: ODBC Core Subkey
-              href: ../odbc/reference/install/odbc-core-subkey.md
-            - name: ODBC Drivers Subkey
-              href: ../odbc/reference/install/odbc-drivers-subkey.md
-            - name: Driver Specification Subkeys
-              href: ../odbc/reference/install/driver-specification-subkeys.md
-            - name: Default Driver Subkey
-              href: ../odbc/reference/install/default-driver-subkey.md
-            - name: ODBC Translators Subkey
-              href: ../odbc/reference/install/odbc-translators-subkey.md
-            - name: Translator Specification Subkeys
-              href: ../odbc/reference/install/translator-specification-subkeys.md
-          - name: Registry Entries for Data Sources
-            href: ../odbc/reference/install/registry-entries-for-data-sources.md
-            items:
-            - name: ODBC Data Sources Subkey
-              href: ../odbc/reference/install/odbc-data-sources-subkey.md
-            - name: Data Source Specification Subkeys
-              href: ../odbc/reference/install/data-source-specification-subkeys.md
-            - name: Default Subkey
-              href: ../odbc/reference/install/default-subkey.md
-            - name: ODBC Subkey
-              href: ../odbc/reference/install/odbc-subkey.md
         - name: Developing an ODBC Driver
           href: ../odbc/reference/develop-driver/developing-an-odbc-driver.md
           items:
@@ -3892,6 +3863,62 @@
             items:
             - name: SQLAsyncNotificationCallback Function
               href: ../odbc/reference/develop-driver/sqlasyncnotificationcallback-function.md
+          - name: Installing and Configuring the ODBC Software
+            href: ../odbc/reference/install/installing-and-configuring-the-odbc-software.md
+            items:
+            - name: Installing ODBC Components
+              href: ../odbc/reference/install/installing-odbc-components.md
+              items:
+              - name: Installation Components
+                href: ../odbc/reference/install/installation-components.md
+              - name: Usage Counting
+                href: ../odbc/reference/install/usage-counting.md
+            - name: Configuring Data Sources
+              href: ../odbc/reference/install/configuring-data-sources.md
+              items:
+              - name: Configuration Components
+                href: ../odbc/reference/install/configuration-components.md
+            - name: Installation and Configuration Components Reference
+              href: ../odbc/reference/install/installation-and-configuration-components-reference.md
+              items:
+              - name: Administration Program
+                href: ../odbc/reference/install/administration-program.md
+              - name: Setup Program
+                href: ../odbc/reference/install/setup-program.md
+              - name: Installer DLL
+                href: ../odbc/reference/install/installer-dll.md
+              - name: Driver Setup DLL
+                href: ../odbc/reference/install/driver-setup-dll.md
+              - name: Translator Setup DLLs
+                href: ../odbc/reference/install/translator-setup-dlls.md
+            - name: ODBC Header Files
+              href: ../odbc/reference/install/odbc-header-files.md
+            - name: Registry Entries for ODBC Components
+              href: ../odbc/reference/install/registry-entries-for-odbc-components.md
+              items:
+              - name: ODBC Core Subkey
+                href: ../odbc/reference/install/odbc-core-subkey.md
+              - name: ODBC Drivers Subkey
+                href: ../odbc/reference/install/odbc-drivers-subkey.md
+              - name: Driver Specification Subkeys
+                href: ../odbc/reference/install/driver-specification-subkeys.md
+              - name: Default Driver Subkey
+                href: ../odbc/reference/install/default-driver-subkey.md
+              - name: ODBC Translators Subkey
+                href: ../odbc/reference/install/odbc-translators-subkey.md
+              - name: Translator Specification Subkeys
+                href: ../odbc/reference/install/translator-specification-subkeys.md
+            - name: Registry Entries for Data Sources
+              href: ../odbc/reference/install/registry-entries-for-data-sources.md
+              items:
+              - name: ODBC Data Sources Subkey
+                href: ../odbc/reference/install/odbc-data-sources-subkey.md
+              - name: Data Source Specification Subkeys
+                href: ../odbc/reference/install/data-source-specification-subkeys.md
+              - name: Default Subkey
+                href: ../odbc/reference/install/default-subkey.md
+              - name: ODBC Subkey
+                href: ../odbc/reference/install/odbc-subkey.md
         - name: API Reference
           href: ../odbc/reference/syntax/odbc-reference.md
           items:
@@ -5235,6 +5262,10 @@
     href: ../connect/oledb/download-oledb-driver-for-sql-server.md
   - name: Release notes
     href: ../connect/oledb/release-notes-for-oledb-driver-for-sql-server.md
+  - name: Known issues
+    href: ../connect/oledb/oledb-driver-for-sql-server-known-issues.md
+  - name: MSOLEDBSQL major version differences
+    href: ../connect/oledb/major-version-differences.md
   - name: System requirements
     href: ../connect/oledb/system-requirements-for-oledb-driver-for-sql-server.md
   - name: When to use OLE DB Driver
@@ -5260,6 +5291,8 @@
       href: ../connect/oledb/features/performing-asynchronous-operations.md
     - name: Performing Bulk Copy Operations
       href: ../connect/oledb/features/performing-bulk-copy-operations.md
+    - name: Registry settings
+      href: ../connect/oledb/features/registry-settings.md
     - name: Service Principal Name (SPN) Support in Client Connections
       href: ../connect/oledb/features/service-principal-name-spn-support-in-client-connections.md
     - name: Sparse Columns Support in OLE DB Driver for SQL Server
@@ -5276,8 +5309,10 @@
       href: ../connect/oledb/features/using-data-classification.md
     - name: Using Database Mirroring
       href: ../connect/oledb/features/using-database-mirroring.md
-    - name: Using Encryption Without Validation
-      href: ../connect/oledb/features/using-encryption-without-validation.md
+    - name: Encryption and certificate validation
+      href: ../connect/oledb/features/encryption-and-certificate-validation.md
+    - name: Idle Connection Resiliency
+      href: ../connect/oledb/features/idle-connection-resiliency.md
     - name: Using Large Value Types
       href: ../connect/oledb/features/using-large-value-types.md
     - name: Using Multiple Active Result Sets (MARS)
@@ -5774,6 +5809,8 @@
       href: ../connect/php/using-always-encrypted-php-drivers.md
     - name: Always Encrypted with secure enclaves with the PHP Drivers for SQL Server
       href: ../connect/php/always-encrypted-secure-enclaves.md
+    - name: Use table-valued parameters (PHP)
+      href: ../connect/php/use-table-valued-parameters.md
     - name: Non-System Locale Settings
       href: ../connect/php/non-system-locale-settings.md
     - name: Constants (Microsoft Drivers for PHP for SQL Server)

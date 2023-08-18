@@ -1,24 +1,20 @@
 ---
 title: "Insert Surround-with Transact-SQL snippets"
 description: Learn how to insert a surround-with snippet to serve as a starting point for placing statements in code blocks.
-ms.custom: seo-lt-2019
+author: markingmyname
+ms.author: maghan
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "sql-tools"
-ms.technology: ssms
-ms.reviewer: ""
+ms.service: sql
+ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "snippets [Transact-SQL], surround with"
   - "IntelliSense [SQL Server], surround with snippets"
   - "Transact-SQL snippets, surround with"
-ms.assetid: 5b5a8c6c-968e-4361-a7f5-9e2ac186d927
-author: markingmyname
-ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Insert Surround-with Transact-SQL snippets
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   A surround-with snippet is a template you can use as a starting point when enclosing a set of [!INCLUDE[tsql](../../includes/tsql-md.md)] statements in a BEGIN, IF, or WHILE block.  
   
 ## Inserting Surround-with Snippets  

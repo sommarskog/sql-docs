@@ -1,35 +1,31 @@
 ---
-description: "SET NOEXEC (Transact-SQL)"
-title: "SET NOEXEC (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "SET NOEXEC (Transact-SQL)"
+description: SET NOEXEC (Transact-SQL)
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "06/10/2016"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "NOEXEC_TSQL"
   - "SET_NOEXEC_TSQL"
   - "SET NOEXEC"
   - "NOEXEC"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "queries [SQL Server], compiling"
   - "SET NOEXEC statement"
   - "compiling queries [SQL Server]"
   - "NOEXEC option"
-ms.assetid: ba56fba1-af9b-4459-b6e4-5d7e71a7630b
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+dev_langs:
+  - "TSQL"
 ---
 # SET NOEXEC (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Compiles each query but does not execute it.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -54,7 +50,7 @@ SET NOEXEC { ON | OFF }
  The following example uses `NOEXEC` with a valid query, a query with an object name that is not valid, and a query with incorrect syntax.  
   
 ```sql
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 PRINT 'Valid query';  
 GO  
@@ -78,8 +74,8 @@ GO
 -- SET NOEXEC to ON.  
 SET NOEXEC ON;  
 GO  
--- Function name uses is a reserved keyword.  
-USE AdventureWorks2012;  
+-- Function name used is a reserved keyword.  
+USE AdventureWorks2022;  
 GO  
 CREATE FUNCTION dbo.Values(@BusinessEntityID int)  
 RETURNS TABLE  

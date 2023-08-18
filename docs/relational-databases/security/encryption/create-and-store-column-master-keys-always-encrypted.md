@@ -1,20 +1,17 @@
 ---
 title: "Create & store column master keys for Always Encrypted"
-description: Learn how to select a key store and create column master keys for SQL Server Always Encrypted. 
-ms.custom: seo-lt-2019
-ms.date: "10/31/2019"
-ms.prod: sql
-ms.prod_service: security, sql-database"
-ms.reviewer: vanto
-ms.technology: security
-ms.topic: conceptual
-ms.assetid: 856e8061-c604-4ce4-b89f-a11876dd6c88
+description: Learn how to select a key store and create column master keys for SQL Server Always Encrypted.
 author: jaszymas
 ms.author: jaszymas
+ms.reviewer: vanto
+ms.date: "10/31/2019"
+ms.service: sql
+ms.subservice: security
+ms.topic: conceptual
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Create and store column master keys for Always Encrypted
-[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 *Column Master Keys* are key-protecting keys used in Always Encrypted to encrypt column encryption keys. Column master keys must be stored in a trusted key store, and the keys need to be accessible to applications that need to encrypt or decrypt data, and tools for configuring Always Encrypted and managing Always Encrypted keys.
 
@@ -64,7 +61,7 @@ There are multiple ways to create a certificate that is a valid column master ke
 
 ### Create a self-signed certificate using PowerShell
 
-Use the [New-SelfSignedCertificate](/powershell/module/pkiclient/new-selfsignedcertificate) cmdlet to create a self-signed certificate. The following example shows how to generate a certificate that can be used as a column master key for Always Encrypted.
+Use the [New-SelfSignedCertificate](/powershell/module/pki/new-selfsignedcertificate) cmdlet to create a self-signed certificate. The following example shows how to generate a certificate that can be used as a column master key for Always Encrypted.
 
 ```
 # New-SelfSignedCertificate is a Windows PowerShell cmdlet that creates a self-signed certificate. The below examples show how to generate a certificate that can be used as a column master key for Always Encrypted.
@@ -87,7 +84,7 @@ If your column master key is a certificate stored in the *local machine* certifi
 If your column master key is a certificate stored in the *current user* certificate store location, you need to export the certificate with the private key and import it to the current user certificate store location of all user accounts running applications that are expected to encrypt or decrypt data stored in encrypted columns, or tools for configuring Always Encrypted and managing Always Encrypted keys (on all machines containing those applications/tools). No permission configuration is required - after logging on to a machine, a user can access all certificates in their current user certificate store location.
 
 #### Using PowerShell
-Use the [Import-PfxCertificate](/powershell/module/pkiclient/import-pfxcertificate) and [Export-PfxCertificate](/powershell/module/pkiclient/export-pfxcertificate) cmdlets to import and export a certificate.
+Use the [Import-PfxCertificate](/powershell/module/pki/import-pfxcertificate) and [Export-PfxCertificate](/powershell/module/pki/export-pfxcertificate) cmdlets to import and export a certificate.
 
 #### Using Microsoft Management Console 
 

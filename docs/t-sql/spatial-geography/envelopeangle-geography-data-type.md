@@ -1,26 +1,22 @@
 ---
+title: "EnvelopeAngle (geography Data Type)"
 description: "EnvelopeAngle (geography Data Type)"
-title: "EnvelopeAngle (geography Data Type) | Microsoft Docs"
-ms.custom: ""
+author: MladjoA
+ms.author: mlandzic
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "EnvelopeAngle"
   - "EnvelopeAngle_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "EnvelopeAngle method"
-ms.assetid: 14a7ba15-168c-4b08-ba3d-951d73092ac7
-author: MladjoA
-ms.author: mlandzic 
+dev_langs:
+  - "TSQL"
 ---
 # EnvelopeAngle (geography Data Type)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Returns the maximum angle between the point returned by `EnvelopeCenter()` and a point in the **geography** instance in degrees.  
   
@@ -45,11 +41,11 @@ EnvelopeAngle( )
   
  In [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], this method has been extended to **FullGlobe** instances.  
   
- The hemisphere limitation applied to `EnvelopeAngle()` in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] has been removed. However, for instances with angles greater than 90 degrees, 180 degrees will be returned. `EnvelopeAngle()` is not precise for **geography** instances that span more than one hemisphere.  
+ The hemisphere limitation applied to `EnvelopeAngle()` in [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] has been removed. However, for instances with angles greater than 90 degrees, 180 degrees will be returned. `EnvelopeAngle()` is not precise for **geography** instances that span more than one hemisphere.  
   
 ## Examples  
   
-```  
+```sql
 DECLARE @g geography = 'LINESTRING(-120 45, -120 0, -90 0)';   
 SELECT @g.EnvelopeAngle();  
 ```  

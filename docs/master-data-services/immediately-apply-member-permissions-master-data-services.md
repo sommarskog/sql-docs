@@ -1,22 +1,19 @@
 ---
-title: Immediately Apply Member Permissions
-ms.custom: ""
+title: Immediately apply member permissions
+description: "Explaines how to apply member permissions immediately for Master Data Services"
+author: CordeliaGrey
+ms.author: jiwang6
 ms.date: "03/01/2017"
-ms.prod: sql
-ms.prod_service: "mds"
-ms.reviewer: ""
-ms.technology: master-data-services
+ms.service: sql
+ms.subservice: master-data-services
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "members [Master Data Services], applying permissions immediately"
   - "permissions [Master Data Services], applying member permissions immediately"
-ms.assetid: 5b16de66-5c39-49f5-992f-402a9eb319aa
-author: lrtoyou1223
-ms.author: lle
 ---
-# Immediately Apply Member Permissions (Master Data Services)
+# Immediately apply member permissions (Master Data Services)
 
-[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], instead of waiting for member security to be applied at regular intervals, you can apply member permissions immediately.  
   
@@ -45,7 +42,7 @@ ms.author: lle
   
 4.  Run the query.  
   
-## See Also  
+## See also  
  [Assign Hierarchy Member Permissions &#40;Master Data Services&#41;](../master-data-services/assign-hierarchy-member-permissions-master-data-services.md)   
  [Hierarchy Member Permissions &#40;Master Data Services&#41;](../master-data-services/hierarchy-member-permissions-master-data-services.md)  
   

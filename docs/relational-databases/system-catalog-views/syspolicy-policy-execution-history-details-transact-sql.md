@@ -1,23 +1,19 @@
 ---
-description: "syspolicy_policy_execution_history_details (Transact-SQL)"
-title: "syspolicy_policy_execution_history_details (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/09/2016"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "syspolicy_policy_execution_history_details"
-  - "syspolicy_policy_execution_history_details_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "syspolicy_policy_execution_history_details view"
-ms.assetid: 97ef6573-5e8b-4ba5-8ae0-7901e79a9683
+title: "syspolicy_policy_execution_history_details (Transact-SQL)"
+description: syspolicy_policy_execution_history_details (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
+ms.date: "08/09/2016"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "syspolicy_policy_execution_history_details"
+  - "syspolicy_policy_execution_history_details_TSQL"
+helpviewer_keywords:
+  - "syspolicy_policy_execution_history_details view"
+dev_langs:
+  - "TSQL"
 ---
 # syspolicy_policy_execution_history_details (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

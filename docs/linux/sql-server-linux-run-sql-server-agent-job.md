@@ -1,13 +1,12 @@
 ---
 title: Create and run jobs for SQL Server on Linux
 description: Learn how to create a SQL Server Agent job on Linux using both Transact-SQL and SQL Server Management Studio (SSMS).
-author: VanMSFT 
-ms.author: vanto
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: 02/20/2018
+ms.service: sql
+ms.subservice: linux
 ms.topic: conceptual
-ms.prod: sql
-ms.technology: linux
-ms.assetid: 1d93d95e-9c89-4274-9b3f-fa2608ec2792
 ---
 # Create and run SQL Server Agent jobs on Linux
 
@@ -21,7 +20,7 @@ SQL Server jobs are used to regularly perform the same sequence of commands in y
 > * Schedule and run the job
 > * Perform the same steps in SSMS (optional)
 
-For known issues with SQL Server Agent on Linux, see the [Release Notes](sql-server-linux-release-notes.md).
+For known issues with SQL Server Agent on Linux, see the [Release Notes](sql-server-linux-release-notes-2017.md).
 
 ## Prerequisites
 
@@ -151,7 +150,7 @@ You can also create and manage jobs remotely using SQL Server Management Studio 
 
 1. Verify that you have created a sample database named **SampleDB**.
 
-   <img src="./media/sql-server-linux-run-sql-server-agent-job/ssms-agent-0.png" alt="Create a SampleDB database" style="width: 550px;"/>
+   <img src="./media/sql-server-linux-run-sql-server-agent-job/ssms-agent-0.png" alt="Create a SampleDB database"/>
 
 1. Verify that SQL Agent was [installed](sql-server-linux-setup-sql-agent.md) and configured correctly. Look for the plus sign next to SQL Server Agent in the Object Explorer. If SQL Server Agent is not enabled, try restarting the **mssql-server** service on Linux.
 
@@ -179,7 +178,7 @@ You can also create and manage jobs remotely using SQL Server Management Studio 
 
 1. Start your job.
 
-   <img src="./media/sql-server-linux-run-sql-server-agent-job/ssms-agent-9.png" alt="Start the SQL Server Agent job" style="width: 550px;"/>
+   <img src="./media/sql-server-linux-run-sql-server-agent-job/ssms-agent-9.png" alt="Start the SQL Server Agent job"/>
 
 ## Next Steps
 

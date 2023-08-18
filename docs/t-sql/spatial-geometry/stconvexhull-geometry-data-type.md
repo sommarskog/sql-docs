@@ -1,26 +1,23 @@
 ---
+title: "STConvexHull (geometry Data Type)"
 description: "STConvexHull (geometry Data Type)"
-title: "STConvexHull (geometry Data Type) | Microsoft Docs"
-ms.custom: ""
+author: MladjoA
+ms.author: mlandzic
 ms.date: "08/03/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "STConvexHull (geometry Data Type)"
   - "STConvexHull_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "STConvexHull (geometry Data Type)"
-ms.assetid: 60a520a6-1a7c-486b-8d91-34401edf6233
-author: MladjoA
-ms.author: mlandzic 
+dev_langs:
+  - "TSQL"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=fabric"
 ---
 # STConvexHull (geometry Data Type)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance FabricSE FabricDW](../../includes/applies-to-version/sql-asdb-asdbmi-fabricse-fabricdw.md)]
 
 Returns an object representing the convex hull of a **geometry** instance.
   
@@ -44,7 +41,7 @@ Returns an object representing the convex hull of a **geometry** instance.
 ## Examples  
  The following example uses `STConvexHull()` to find the convex hull of a non-convex `Polygon``geometry` instance.  
   
-```  
+```sql
 DECLARE @g geometry;  
 SET @g = geometry::STGeomFromText('POLYGON((0 0, 0 2, 1 1, 2 2, 2 0, 0 0))', 0);  
 SELECT @g.STConvexHull().ToString();  

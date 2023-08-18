@@ -1,47 +1,43 @@
 ---
-description: "SET ANSI_NULLS (Transact-SQL)"
-title: "SET ANSI_NULLS (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "SET ANSI_NULLS (Transact-SQL)"
+description: SET ANSI_NULLS (Transact-SQL)
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "06/24/2020"
-ms.prod: sql
-ms.prod_service: "synapse-analytics, pdw, sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "SET_ANSI_NULLS_TSQL"
   - "ANSI_NULLS"
   - "SET ANSI_NULLS"
   - "ANSI_NULLS_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "SET ANSI_NULLS statement"
   - "not equal to operator (<>)"
   - "ANSI_NULLS option"
   - "equals operator (=)"
   - "null values [SQL Server], comparison operators"
   - "comparison operators [SQL Server], null values"
-ms.assetid: aae263ef-a3c7-4dae-80c2-cc901e48c755
-author: WilliamDAssafMSFT
-ms.author: wiassaf
-monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current || azuresqldb-current"
+dev_langs:
+  - "TSQL"
+monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||azuresqldb-current"
 ---
 # SET ANSI_NULLS (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Specifies ISO compliant behavior of the Equals (=) and Not Equal To (<>) comparison operators when they are used with null values in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)].  
   
-![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
 
 ## Syntax
 
-### Syntax for [!INCLUDE[ssnoversion-md.md](../../includes/ssnoversion-md.md)] and [!INCLUDE[sssodfull-md.md](../../includes/sssodfull-md.md)]
+### Syntax for [!INCLUDE[ssnoversion-md.md](../../includes/ssnoversion-md.md)], [!INCLUDE[sssodfull-md.md](../../includes/sssodfull-md.md)], [!INCLUDE [fabric](../../includes/fabric.md)]
 ```syntaxsql
 SET ANSI_NULLS { ON | OFF }
 ```
 
-### Syntax for [!INCLUDE[sssdw-md.md](../../includes/sssdw-md.md)] and [!INCLUDE[sspdw-md.md](../../includes/sspdw-md.md)]
+### Syntax for [!INCLUDE[ssazuresynapse-md.md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[sspdw-md.md](../../includes/sspdw-md.md)]
 ```syntaxsql
 SET ANSI_NULLS ON
 ```

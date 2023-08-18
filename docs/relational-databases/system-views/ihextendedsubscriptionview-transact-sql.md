@@ -1,23 +1,19 @@
 ---
+title: "IHextendedSubscriptionView (Transact-SQL)"
 description: "IHextendedSubscriptionView (Transact-SQL)"
-title: "IHextendedSubscriptionView (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "03/03/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: replication
+ms.service: sql
+ms.subservice: replication
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "IHextendedSubscriptionView_TSQL"
   - "IHextendedSubscriptionView"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "IHextendedSubscriptionView view"
-ms.assetid: 124756a4-463a-4a81-bf5b-de7e8ffc7a62
-author: "stevestein"
-ms.author: "sstein"
+dev_langs:
+  - "TSQL"
 ---
 # IHextendedSubscriptionView (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

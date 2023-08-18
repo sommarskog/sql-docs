@@ -1,29 +1,25 @@
 ---
-description: "sys.system_objects (Transact-SQL)"
-title: "sys.system_objects (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.system_objects (Transact-SQL)"
+description: sys.system_objects (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.system_objects"
   - "system_objects"
   - "system_objects_TSQL"
   - "sys.system_objects_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.system_objects catalog view"
-ms.assetid: 069e9045-97f2-4463-8e8f-c73855f3ea0a
-author: WilliamDAssafMSFT
-ms.author: wiassaf
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+dev_langs:
+  - "TSQL"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=fabric"
 ---
 # sys.system_objects (Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw.md)]
 
   Contains one row for all schema-scoped system objects that are included with [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. All system objects are contained in the schemas named sys or INFORMATION_SCHEMA.  
   

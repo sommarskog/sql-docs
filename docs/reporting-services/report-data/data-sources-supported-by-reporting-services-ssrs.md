@@ -1,14 +1,14 @@
 ---
-title: "Data Sources Supported by Reporting Services | Microsoft Docs"
+title: "Data Sources Supported by Reporting Services"
 description: Learn about the various data sources that are supported by Reporting Services, including Microsoft SQL Server, Oracle, and ODBC.
-ms.date: 11/10/2020
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-data
-
-
+author: maggiesMSFT
+ms.author: maggies
+ms.date: 08/15/2023
+ms.service: reporting-services
+ms.subservice: report-data
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "SQL Server data processing extension [Reporting Services]"
   - "XML data processing extension [Reporting Services]"
   - "reports [Reporting Services], data"
@@ -18,20 +18,17 @@ helpviewer_keywords:
   - "data sources [Reporting Services], about data sources"
   - "ODBC data processing extension"
   - "Reporting Services, data sources"
-ms.assetid: 9d11d055-a3be-45aa-99a7-46447a94ed42
-author: maggiesMSFT
-ms.author: maggies
 ---
 # Data Sources Supported by Reporting Services (SSRS)
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] retrieves report data from data sources through a modular and extensible data layer that uses data processing extensions. To retrieve report data from a data source, you must select a data processing extension that supports the type of data source, the version of software running on the data source, and the data source platform (32-bit or 64-bit [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]).  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] retrieves report data from data sources through a modular and extensible data layer that uses data processing extensions. To retrieve report data from a data source, you must select a data processing extension that supports the type of data source, the version of software running on the data source, and the data source platform (32-bit or 64-bit).  
   
  When you deploy [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], a set of data processing extensions are automatically installed and registered on both the report authoring client and on the report server to provide access to a variety of data source types. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] installs the following data source types:  
   
 -   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
--   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] for MDX, DMX, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)], and tabular models  
+-   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] for MDX, DMX, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[power-pivot-md](../../includes/power-pivot-md.md)], and tabular models  
   
--   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]  
+-   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)]  
   
 -   Oracle  
   
@@ -101,10 +98,10 @@ ms.author: maggies
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] relational database|[ODBC](#ODBC)|Built-in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] data processing extension|Extends System.Data.OdbcClient|Y|Y|SQL Server 2012 and later.|Y|Y|  
 |[!INCLUDE[ssSDS](../../includes/sssds-md.md)]|[Microsoft Azure SQL Database](#Azure)|Built-in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] data processing extension|Extends System.Data.SqlClient|N/A|N/A|[!INCLUDE[ssSDS](../../includes/sssds-md.md)]|Y|Y|
 |Azure Synapse Analytics|[Microsoft Azure SQL Database](#Azure)|Built-in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] data processing extension|Extends System.Data.SqlClient|N/A|N/A|Azure Synapse Analytics|Y|Y| 
-|[!INCLUDE[ssDW](../../includes/ssdw-md.md)] appliance|[Microsoft Parallel Data Warehouse](#PWD)|Deprecated [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] data processing extension|N/A|N/A|N/A|[!INCLUDE[ssDWfull](../../includes/ssdwfull-md.md)]|N|N|  
+|[!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] appliance|[Microsoft Parallel Data Warehouse](#PWD)|Deprecated [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] data processing extension|N/A|N/A|N/A|[!INCLUDE[ssDWfull](../../includes/ssdwfull-md.md)]|N|N|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] multidimensional or tabular database|[Microsoft SQL Server Analysis Services](#AnalysisServices)|Built-in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] data processing extension|Uses ADOMD.NET|Y|Y|SQL Server 2012 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] and later|Y|Y|  
 |Power BI Premium dataset (Starting with Reporting Services 2019 and Power BI Report Server January 2020) |[Microsoft SQL Server Analysis Services](#AnalysisServices)|Built-in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] data processing extension|Uses ADOMD.NET|Y|Y|SQL Server 2019 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] and later|Y|Y|
-|Azure Analysis Services |[Microsoft SQL Server Analysis Services](#AnalysisServices)|Built-in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] data processing extension|Uses ADOMD.NET|Y|Y|SQL Server 2017 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] and later|Y|Y| 
+|Azure Analysis Services<br/>(Starting with Reporting Services 2017) |[Microsoft SQL Server Analysis Services](#AnalysisServices)|Built-in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] data processing extension|Uses ADOMD.NET|Y|Y|SQL Server 2017 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] and later|Y|Y| 
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] multidimensional database|OLEDB|Built-in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] data processing extension|Extends System.Data.OledbClient<br /><br /> Version 10.0|Y|Y|SQL Server 2012 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|Y|Y|
 |SharePoint lists|[Microsoft SharePoint List](#SharePointList)|Built-in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] data processing extension|Gets data from Lists.asmx or the SharePoint object model API interfaces.<br /><br /> See [Note](#SharePointList).|N|Y|SharePoint 2013 Products and later|Y|Y|   
 |XML|[XML](#XML)|Built-in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] data processing extension|XML data sources do not have platform dependencies.|N/A|N/A|[!INCLUDE[vstecwebservices](../../includes/vstecwebservices-md.md)] or documents|Y|Y|  
@@ -129,12 +126,12 @@ ms.author: maggies
  The following data processing extensions are automatically installed with [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] and [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)]. For more information and to verify the installation, see [RSReportDesigner Configuration File](../../reporting-services/report-server/rsreportdesigner-configuration-file.md) and [RsReportServer.config Configuration File](../../reporting-services/report-server/rsreportserver-config-configuration-file.md).  
   
 > [!NOTE]
->  The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] data processing extension is not supported at this time.  
+>  The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] data processing extension is not supported at this time.  
   
  For more information about data processing extensions supported by Report Builder, see [Create data connection strings - Report Builder & SSRS](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).
   
 ###  <a name="MicrosoftSQLServer"></a> Microsoft SQL Server Data Processing Extension  
- The data source type **Microsoft SQL Server** wraps and extends the [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Data Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. This data processing extension is natively compiled for and runs on x86 and [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]-based platforms.  
+ The data source type **Microsoft SQL Server** wraps and extends the [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Data Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. This data processing extension is natively compiled for and runs on x86 and x64-based platforms.  
   
  In [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)], the query designer associated with this data extension is the Visual Database Tool Designer. If you use the query designer in graphical mode, the query is analyzed and possibly rewritten. Use the text-based query designer when you want to control the exact [!INCLUDE[tsql](../../includes/tsql-md.md)] syntax that is used for a query. For more information, see [Graphical Query Designer User Interface](../../reporting-services/report-data/graphical-query-designer-user-interface.md).  
   
@@ -167,7 +164,8 @@ This data source has been deprecated. Use the SQL Server data source type to con
   
  This data provider uses the ADOMD.NET object model to create queries using XML for Analysis (XMLA) version 1.1. Results are returned as a flattened rowset. For more information, see [Analysis Services Connection Type for MDX &#40;SSRS&#41;](../../reporting-services/report-data/analysis-services-connection-type-for-mdx-ssrs.md), [Analysis Services Connection Type for DMX &#40;SSRS&#41;](../../reporting-services/report-data/analysis-services-connection-type-for-dmx-ssrs.md), [Analysis Services MDX Query Designer User Interface](../../reporting-services/report-data/analysis-services-mdx-query-designer-user-interface.md), and [Analysis Services DMX Query Designer User Interface](../../reporting-services/report-data/analysis-services-dmx-query-designer-user-interface.md). 
  
- For Azure Analysis Services and Power BI Premium dataset data sources, please note you must have multi-factor authentication disabled for the credentials being used to connect to the data source. If you need multi-factor authentication enabled for your environment, review <a href="/azure/active-directory/conditional-access/overview">Azure Active Directory Conditional Access</a> as an option to disable multi-factor authentication for the credentials used in the data source.
+> [!NOTE]
+> For Azure Analysis Services and Power BI Premium dataset data sources, you must have multi-factor authentication (MFA) disabled for the credentials being used to connect to the data source. If you need multi-factor authentication enabled for your environment, review <a href="/azure/active-directory/conditional-access/overview">Azure Active Directory Conditional Access</a> as an option to disable multi-factor authentication for the credentials used in the data source.
   
  When using a Power BI Premium dataset as a data source, only Import mode and DirectQuery are supported.
   
@@ -212,7 +210,7 @@ This data source has been deprecated. Use the SQL Server data source type to con
  [Return to Data sources table](#DataSourcesTable)  
   
 ###  <a name="ODBC"></a> ODBC Data Processing Extension  
- When you select data source type **ODBC**, you are selecting a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] data processing extension that extends the [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Data Provider for ODBC. This data processing extension is natively compiled for and runs on x86 and [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)] platforms. Use this extension to connect to and retrieve data from any data source that has an ODBC provider.  
+ When you select data source type **ODBC**, you are selecting a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] data processing extension that extends the [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Data Provider for ODBC. This data processing extension is natively compiled for and runs on x86 and x64 platforms. Use this extension to connect to and retrieve data from any data source that has an ODBC provider.  
   
 > [!NOTE]  
 >  Although a data provider may support previewing a report on your report authoring client, not all ODBC data providers are designed to support reports published on a report server.  
@@ -228,13 +226,9 @@ This data source has been deprecated. Use the SQL Server data source type to con
  [Return to Data sources table](#DataSourcesTable)  
   
 ###  <a name="OracleClient"></a> Oracle Data Processing Extension  
- When you select data source type **Oracle**, you are selecting a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] data processing extension that uses the Oracle Data Provider directly and no longer goes through System.Data.OracleClient. To retrieve report data from an Oracle database, your administrator must install Oracle client tools. The client application version must be 11g or later. These tools must be installed on the report authoring client to preview reports and on the report server to view published reports.  
+ When you select data source type **Oracle**, you are selecting a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] data processing extension that uses Oracle's Data Provider directly and no longer uses the Microsoft System.Data.OracleClient provider as it has been deprecated. To retrieve report data from an Oracle database, your administrator must install Oracle client software and the version must be 11g or later. It must be installed on the report authoring client to preview reports and on the report server to view published reports.  
  
-To install the Oracle Client tools you can do the following.
- 
-1.	Go to [Oracle's download site](https://www.oracle.com/technetwork/database/windows/downloads/index-090165.html)
-2.	Download ODAC 12c Release 4 (12.1.0.2.4) for Windows (64bit for server, 32bit for tools)
-3.	Install the Data Provider for .NET 4
+ To install the Oracle client software, see [Oracle Connection Type &#40;SSRS&#41;](../../reporting-services/report-data/oracle-connection-type-ssrs.md).
   
  Named parameters are supported by this extension. For Oracle version 11g or later, multivalue parameters are supported. For unnamed parameters that are position-dependent, use the OLE DB data processing extension with the data provider [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider for Oracle. For more information about configuring Oracle as a data source, see [How to use Reporting Services to configure and to access an Oracle data source](https://www.betaarchive.com/wiki/index.php?title=Microsoft_KB_Archive/834305). For more information about additional permissions configuration, see [How to add permissions for the NETWORK SERVICE security principal](https://mskb.pkisolutions.com/kb/870668) in the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Knowledge Base.  
   
@@ -255,12 +249,12 @@ To install the Oracle Client tools you can do the following.
   
 |[!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)] version|Teradata version|.NET Framework Data Provider for Teradata version|  
 |-----------------------------------|-------------------------------|-------------------------------------------------------|    
-|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|12.00|12.00.01|  
-|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|6.20|12.00.01|  
-|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|13.00|13.0.0.1|  
-|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]|12.00|12.00.01|  
-|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]|6.20|12.00.01|  
-|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]|13.00|13.0.0.1|  
+|[!INCLUDE[sql2008-md](../../includes/sql2008-md.md)]|12.00|12.00.01|  
+|[!INCLUDE[sql2008-md](../../includes/sql2008-md.md)]|6.20|12.00.01|  
+|[!INCLUDE[sql2008-md](../../includes/sql2008-md.md)]|13.00|13.0.0.1|  
+|[!INCLUDE[sql2008r2](../../includes/sql2008r2-md.md)]|12.00|12.00.01|  
+|[!INCLUDE[sql2008r2](../../includes/sql2008r2-md.md)]|6.20|12.00.01|  
+|[!INCLUDE[sql2008r2](../../includes/sql2008r2-md.md)]|13.00|13.0.0.1|  
 |[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|6.20|12.00.01|  
 |[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|12.00|12.00.01|  
 |[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|13.00|13.0.0.1|  
@@ -277,7 +271,9 @@ To install the Oracle Client tools you can do the following.
   
 ###  <a name="SharePointList"></a> SharePoint List Data Extension  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] includes the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint List Data Extension so that you can use SharePoint lists as a source of data in a report. You can retrieve list data from the following:  
-  
+ 
+-   SharePoint Server 2019
+
 -   SharePoint Server 2016  
 
 -   [!INCLUDE[SPS2013](../../includes/sps2013-md.md)]  
@@ -314,5 +310,4 @@ To install the Oracle Client tools you can do the following.
 ## See Also  
  [Create data connection strings - Report Builder & SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
  [Report Datasets &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)  
-More questions? [Try the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)
-  
+More questions? [Try the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user)

@@ -1,21 +1,18 @@
 ---
+title: "QN:Dynamics Event Class"
 description: "QN:Dynamics Event Class"
-title: "QN:Dynamics Event Class | Microsoft Docs"
-ms.custom: ""
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: supportability
+ms.service: sql
+ms.subservice: supportability
 ms.topic: reference
-helpviewer_keywords: 
+helpviewer_keywords:
   - "event classes [SQL Server], QN:Dynamics"
-ms.assetid: 3c1ffa0c-c9e5-40a6-a26b-28339f60ebc3
-author: "stevestein"
-ms.author: "sstein"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # QN:Dynamics Event Class
-[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
   The QN:Dynamics event class reports information about the background activity that the [!INCLUDE[ssDE](../../includes/ssde-md.md)] performs to support query notifications. Within the [!INCLUDE[ssDE](../../includes/ssde-md.md)], a background thread monitors subscription time-outs, pending subscriptions to be fired, and parameter table destruction.  
   
 ## QN:Dynamics Event Class Data Columns  

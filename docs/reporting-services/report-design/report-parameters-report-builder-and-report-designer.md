@@ -1,18 +1,16 @@
 ---
-title: "Report Parameters (Report Builder and Report Designer) | Microsoft Docs"
-description: This topic describes the common uses for Reporting Services report parameters, the properties you can set, and much more.
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-design
-ms.custom: seodec18
-ms.topic: conceptual
+title: "Paginated report parameters"
+description: This topic describes the common uses for Reporting Services paginated report parameters, the properties you can set, and much more.
 author: maggiesMSFT
 ms.author: maggies
-ms.reviewer: ""
 ms.date: 12/06/2018
+ms.service: reporting-services
+ms.subservice: report-design
+ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 
-# Report Parameters (Report Builder and Report Designer)
+# Paginated report parameters (Report Builder)
 
 ::: moniker range="=sql-server-2016"
 
@@ -26,7 +24,9 @@ ms.date: 12/06/2018
 
 ::: moniker-end
 
-This topic describes the common uses for [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report parameters, the properties you can set, and much more. Report parameters enable you to control report data, connect related reports together, and vary report presentation. You can use report parameters in paginated reports you create in [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] and Report Designer,  and also in mobile reports you create in [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)]. Read more about [Report Parameters Concepts](../../reporting-services/report-design/report-parameters-concepts-report-builder-and-ssrs.md).  
+This topic describes the common uses for paginated report parameters, the properties you can set, and much more. Report parameters enable you to control report data, connect related reports together, and vary report presentation. You can use report parameters in paginated reports you create in [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] and Report Designer,  and also in mobile reports you create in [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)]. Read more about [Report Parameters Concepts](../../reporting-services/report-design/report-parameters-concepts-report-builder-and-ssrs.md).  
+
+[!INCLUDE [ssrs-mobile-report-deprecated](../../includes/ssrs-mobile-report-deprecated.md)]
 
 To try adding a parameter to a report yourself, see [Tutorial: Add a Parameter to Your Report &#40;Report Builder&#41;](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md).  
 
@@ -115,8 +115,10 @@ Create a parameter manually from the Report Data pane. You can configure report 
 >  Because parameters are managed independently on the server, republishing a main report with new parameter settings does not overwrite the existing parameters settings on the report.  
   
  **Report part with a parameter**
-  
- Add a report part that contains references to a parameter or to a shared dataset that contains variables.  
+ 
+[!INCLUDE [ssrs-report-parts-deprecated](../../includes/ssrs-report-parts-deprecated.md)]
+ 
+Add a report part that contains references to a parameter or to a shared dataset that contains variables.  
   
  Report parts are stored on the report server and available for others to use in their reports. Report parts that are parameters cannot be managed from the report server. You can search for parameters in the Report Part Gallery and after you add them, configure them in your report. For more information, see [Report Parts &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md).  
   

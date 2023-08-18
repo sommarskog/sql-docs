@@ -1,13 +1,12 @@
 ---
 title: Common R script errors
 description: This article documents several common scripting errors you might encounter when running R scripts in SQL Server Machine Learning Services.
-ms.prod: sql
-ms.technology: machine-learning-services
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: 03/31/2021
+ms.service: sql
+ms.subservice: machine-learning-services
 ms.topic: troubleshooting
-author: dphansen
-ms.author: davidph
-ms.custom: contperf-fy21q3
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
 ---
 # Common R script errors in SQL Server Machine Learning Services
@@ -33,7 +32,7 @@ We also recommend that you review and slightly rewrite the script to correct any
 
 Additionally, you can use the sqlrutils package to bundle your R script in a format that is more easily consumed as a stored procedure. For more information, see:
 * [sqlrutils package](../r/ref-r-sqlrutils.md)
-* [Create a stored procedure by using sqlrutils](/machine-learning-server/r-reference/sqlrutils/how-to-create-a-stored-procedure-from-r)
+* [Create a stored procedure by using sqlrutils](../r/reference/sqlrutils/how-to-create-stored-procedure-from-r.md)
 
 ## Script returns inconsistent results
 
@@ -90,4 +89,4 @@ If there are multiple variables to delete, we suggest that you save the names of
 
 [Install SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md)
 
-[Troubleshoot database engine connections](../../database-engine/configure-windows/troubleshoot-connecting-to-the-sql-server-database-engine.md)
+[Troubleshoot database engine connections](/troubleshoot/sql/connect/network-related-or-instance-specific-error-occurred-while-establishing-connection)

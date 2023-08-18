@@ -1,14 +1,13 @@
 ---
 title: dwloader Command-Line Loader
 description: dwloader is a Parallel Data Warehouse (PDW) command-line tool that loads table rows in bulk into an existing table.
-author: mzaman1 
-ms.prod: sql
-ms.technology: data-warehouse
-ms.topic: conceptual
-ms.date: 04/17/2018
-ms.author: murshedz
+author: charlesfeddersen
+ms.author: charlesf
 ms.reviewer: martinle
-ms.custom: seo-dt-2019
+ms.date: 04/17/2018
+ms.service: sql
+ms.subservice: data-warehouse
+ms.topic: conceptual
 ---
 
 # dwloader Command-Line Loader for Parallel Data Warehouse
@@ -44,11 +43,6 @@ ms.custom: seo-dt-2019
   
     You can check the failed rows file (specified with -R) to see if any rows failed to load. If this file is empty, all rows loaded successfully. **dwloader** is transactional, so if any step fails (other than rejected rows), all steps will roll back to their initial state.  
   
-<!-- 
-![Topic link icon](media/topic-link.gif "Topic_Link")[Syntax Conventions](syntax-conventions-sql-server-pdw.md)  
--->  
-
-
 ## Syntax  
   
 ```  
@@ -142,7 +136,7 @@ Examples:
 **-S** *target_appliance*  
 Specifies the SQL Server PDW appliance that will receive the loaded data.  
   
-*For Infiniband connections*, *target_appliance* is specified as <appliance-name>-SQLCTL01. To configure this named connection, see [Configure InfiniBand Network Adapters](configure-infiniband-network-adapters.md).  
+*For Infiniband connections*, *target_appliance* is specified as \<appliance-name\>-SQLCTL01. To configure this named connection, see [Configure InfiniBand Network Adapters](configure-infiniband-network-adapters.md).  
   
 For Ethernet connections, *target_appliance* is the IP address for the Control node cluster.  
   
@@ -690,7 +684,7 @@ Description of the command-line parameters:
   
 -   *-r \r\n* specifies each row in DimAccount.txt ends with a carriage return and a line feed character.  
   
--   *-U <login_name> -P <password>* specifies the login and password for the login that has permissions to perform the load.  
+-   *-U <login_name> -P \<password\>* specifies the login and password for the login that has permissions to perform the load.  
   
 
 <!-- MISSING LINK

@@ -1,15 +1,13 @@
 ---
-title: "Working with snapshots (web portal) | Microsoft Docs"
+title: "Working with snapshots (web portal)"
 description: Create a cache snapshot to allow for faster loading of specific execution properties. You can also work with history snapshots to capture points in time.
-ms.date: 07/02/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: reporting-services
-
-ms.topic: conceptual
-ms.assetid: 9ae20556-e243-4a60-b076-9fd9e82c7355
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 07/02/2017
+ms.service: reporting-services
+ms.subservice: reporting-services
+ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 
 # Working with snapshots (web portal)
@@ -73,4 +71,4 @@ Selecting this will copy a report snapshot that you generate based on report exe
 [Working with paginated reports](working-with-paginated-reports-web-portal.md)  
 [Work with Shared Datasets](../reporting-services/work-with-shared-datasets-web-portal.md)
 
-More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)
+More questions? [Try asking the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user)

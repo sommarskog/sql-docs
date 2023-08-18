@@ -1,35 +1,31 @@
 ---
-description: "DROP CREDENTIAL (Transact-SQL)"
-title: "DROP CREDENTIAL (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "DROP CREDENTIAL (Transact-SQL)"
+description: DROP CREDENTIAL (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "08/19/2015"
-ms.prod: sql
-ms.prod_service: "sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "DROP CREDENTIAL"
   - "DROP_CREDENTIAL_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "removing credentials"
   - "DROP CREDENTIAL statement"
   - "credentials [SQL Server], DROP CREDENTIAL statement"
   - "authentication [SQL Server], credentials"
   - "deleting credentials"
   - "dropping credentials"
-ms.assetid: df22c826-317d-45a6-b078-186acb65f71e
-author: VanMSFT
-ms.author: vanto
+dev_langs:
+  - "TSQL"
 ---
 # DROP CREDENTIAL (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Removes a credential from the server.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

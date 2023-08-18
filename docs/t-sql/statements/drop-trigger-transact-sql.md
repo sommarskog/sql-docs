@@ -1,19 +1,16 @@
 ---
-description: "DROP TRIGGER (Transact-SQL)"
-title: "DROP TRIGGER (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "DROP TRIGGER (Transact-SQL)"
+description: DROP TRIGGER (Transact-SQL)
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "05/12/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "DROP TRIGGER"
   - "DROP_TRIGGER_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "renaming triggers"
   - "triggers [SQL Server], removing"
   - "DDL triggers, removing"
@@ -22,16 +19,15 @@ helpviewer_keywords:
   - "dropping triggers"
   - "removing triggers"
   - "DML triggers, removing"
-ms.assetid: 092d0d71-9f1e-4e38-a1c4-2487adfa5b4e
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+dev_langs:
+  - "TSQL"
 ---
 # DROP TRIGGER (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Removes one or more DML or DDL triggers from the current database.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -71,7 +67,7 @@ ON ALL SERVER
  Indicates the scope of the DDL trigger applies to the current database. DATABASE must be specified if it was also specified when the trigger was created or modified.  
   
  ALL SERVER  
- **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.  
+ **Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later.  
   
  Indicates the scope of the DDL trigger applies to the current server. ALL SERVER must be specified if it was also specified when the trigger was created or modified. ALL SERVER also applies to logon triggers.  
   

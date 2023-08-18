@@ -1,37 +1,33 @@
 ---
-description: "ALTER CERTIFICATE (Transact-SQL)"
-title: "ALTER CERTIFICATE (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "ALTER CERTIFICATE (Transact-SQL)"
+description: ALTER CERTIFICATE (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "04/22/2019"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "ALTER_CERTIFICATE_TSQL"
   - "ALTER CERTIFICATE"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "ENCRYPTION BY PASSWORD option"
   - "encryption [SQL Server], certificates"
   - "modifying certificates"
   - "private keys [SQL Server]"
   - "ALTER CERTIFICATE statement"
   - "certificates [SQL Server], modifying"
-ms.assetid: da4dc25e-72e0-4036-87ce-22de83160836
-author: VanMSFT
-ms.author: vanto
+dev_langs:
+  - "TSQL"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # ALTER CERTIFICATE (Transact-SQL)
 
-[!INCLUDE [sql-asdb-pdw](../../includes/applies-to-version/sql-asdb-pdw.md)]
+[!INCLUDE [sql-asdb-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-pdw.md)]
 
   Changes the password used to encrypt the private key of a certificate, removes the private key, or imports the private key if none is present. Changes the availability of a certificate to [!INCLUDE[ssSB](../../includes/sssb-md.md)].  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

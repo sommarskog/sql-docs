@@ -1,19 +1,19 @@
 ---
-title: "Publish and Republish Report Parts (Report Builder) | Microsoft Docs"
+title: "Publish and Republish Report Parts (Report Builder)"
 description: Learn how to publish a report part with edited metadata with default settings in a default location in Report Builder.
-ms.date: 03/01/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-design
-
-
-ms.topic: conceptual
-ms.assetid: 92dce484-f39b-403c-9caf-d8772bc3aca3
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 03/01/2017
+ms.service: reporting-services
+ms.subservice: report-design
+ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 # Publish and Republish Report Parts (Report Builder and SSRS)
-  Report parts are paginated report items that have been published separately to a report server and that can be reused in other paginated reports. You can publish a report part with default settings in a default location, or you can edit report part metadata such as name and description, and save it somewhere else on a report server. You can also save it to a SharePoint site that is integrated with a report server if you have the correct permissions.  
+
+[!INCLUDE [ssrs-report-parts-deprecated](../../includes/ssrs-report-parts-deprecated.md)]
+
+Report parts are paginated report items that have been published separately to a report server and that can be reused in other paginated reports. You can publish a report part with default settings in a default location, or you can edit report part metadata such as name and description, and save it somewhere else on a report server. You can also save it to a SharePoint site that is integrated with a report server if you have the correct permissions.  
   
  You can publish just the report part, with the dataset that it depends on embedded in it, or you can publish the dataset separately. If you publish the dataset separately, it becomes a shared dataset, and the report part links to it. For more information, see [Report Parts and Datasets in Report Builder](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md).  
   

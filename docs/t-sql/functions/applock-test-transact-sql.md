@@ -1,34 +1,30 @@
 ---
+title: "APPLOCK_TEST (Transact-SQL)"
 description: "APPLOCK_TEST (Transact-SQL)"
-title: "APPLOCK_TEST (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: markingmyname
+ms.author: maghan
 ms.date: "07/24/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "APPLOCK_TEST_TSQL"
   - "APPLOCK_TEST"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "locking [SQL Server], applications"
   - "APPLOCK_TEST function"
   - "applications [SQL Server], locks"
   - "sessions [SQL Server], application locks"
   - "testing application locks"
-ms.assetid: 4ea33d04-f8e9-46ff-ae61-985bd3eaca2c
-author: cawrites
-ms.author: chadam
+dev_langs:
+  - "TSQL"
 ---
 # APPLOCK_TEST (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 This function returns information as to whether or not a lock can be granted on a particular application resource, for a specified lock owner, without acquisition of the lock. As an application lock function, APPLOCK_TEST operates on the current database. The database is the scope of the application locks.
   
-![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## Syntax  
   
@@ -70,7 +66,7 @@ Two users (**User A** and **User B**), with separate sessions, run the following
 **User A** runs:
   
 ```sql
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 BEGIN TRAN;  
 DECLARE @result INT;  
@@ -86,7 +82,7 @@ GO
 **User B** then runs:
   
 ```sql
-Use AdventureWorks2012;  
+Use AdventureWorks2022;  
 GO  
 BEGIN TRAN;  
 SELECT APPLOCK_MODE('public', 'Form1', 'Transaction');  

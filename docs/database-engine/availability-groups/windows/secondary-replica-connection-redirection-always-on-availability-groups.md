@@ -1,22 +1,19 @@
 ---
 title: "Redirect read/write connections to primary replica"
-description: Learn how to redirect read/write connections to the primary replica of an Always On availability group regardless of the server specified in the connection string. 
-ms.custom: seo-lt-2019
+description: Learn how to redirect read/write connections to the primary replica of an Always On availability group regardless of the server specified in the connection string.
+author: "MikeRayMSFT"
+ms.author: "mikeray"
 ms.date: 01/09/2019
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: availability-groups
+ms.service: sql
+ms.subservice: availability-groups
 ms.topic: "article"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "connection access to availability replicas"
   - "Availability Groups [SQL Server], availability replicas"
   - "Availability Groups [SQL Server], readable secondary replicas"
   - "active secondary replicas [SQL Server], read-only access to"
   - "readable secondary replicas"
   - "Availability Groups [SQL Server], active secondary replicas"
-ms.assetid:
-author: "MikeRayMSFT"
-ms.author: "mikeray"
 monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15"
 ---
 # Secondary to primary replica read/write connection redirection (Always On Availability Groups)
@@ -90,7 +87,7 @@ The following transact-SQL script creates this AG. In this example, Each replica
 CREATE AVAILABILITY GROUP MyAg   
      WITH ( CLUSTER_TYPE =  NONE )  
    FOR   
-     DATABASE  <Database1>   
+     DATABASE  [<Database1>]   
    REPLICA ON   
       'COMPUTER01' WITH   
          (  
@@ -100,8 +97,8 @@ CREATE AVAILABILITY GROUP MyAg
          SECONDARY_ROLE (ALLOW_CONNECTIONS = ALL,   
             READ_ONLY_ROUTING_URL = 'TCP://COMPUTER01.<domain>.<tld>:1433' ),
          PRIMARY_ROLE (ALLOW_CONNECTIONS = READ_WRITE,   
-            READ_ONLY_ROUTING_LIST = (COMPUTER02, COMPUTER03),
-            READ_WRITE_ROUTING_URL = 'TCP://COMPUTER01.<domain>.<tld>:1433' )   
+            READ_ONLY_ROUTING_LIST = ('COMPUTER02', 'COMPUTER03'),
+            READ_WRITE_ROUTING_URL = 'TCP://COMPUTER01.<domain>.<tld>:1433' ),   
          SESSION_TIMEOUT = 10  
          ),   
       'COMPUTER02' WITH   
@@ -112,8 +109,8 @@ CREATE AVAILABILITY GROUP MyAg
          SECONDARY_ROLE (ALLOW_CONNECTIONS = ALL,   
             READ_ONLY_ROUTING_URL = 'TCP://COMPUTER02.<domain>.<tld>:1433' ),  
          PRIMARY_ROLE (ALLOW_CONNECTIONS = READ_WRITE,   
-            READ_ONLY_ROUTING_LIST = (COMPUTER01, COMPUTER03),  
-            READ_WRITE_ROUTING_URL = 'TCP://COMPUTER02.<domain>.<tld>:1433' )   
+            READ_ONLY_ROUTING_LIST = ('COMPUTER01', 'COMPUTER03'),  
+            READ_WRITE_ROUTING_URL = 'TCP://COMPUTER02.<domain>.<tld>:1433' ),
          SESSION_TIMEOUT = 10  
          ),   
       'COMPUTER03' WITH   
@@ -124,8 +121,8 @@ CREATE AVAILABILITY GROUP MyAg
          SECONDARY_ROLE (ALLOW_CONNECTIONS = ALL,   
             READ_ONLY_ROUTING_URL = 'TCP://COMPUTER03.<domain>.<tld>:1433' ),  
          PRIMARY_ROLE (ALLOW_CONNECTIONS = READ_WRITE,   
-            READ_ONLY_ROUTING_LIST = (COMPUTER01, COMPUTER02),  
-            READ_WRITE_ROUTING_URL = 'TCP://COMPUTER03.<domain>.<tld>:1433' )  
+            READ_ONLY_ROUTING_LIST = ('COMPUTER01', 'COMPUTER02'),  
+            READ_WRITE_ROUTING_URL = 'TCP://COMPUTER03.<domain>.<tld>:1433' ),
          SESSION_TIMEOUT = 10  
          );
 GO  

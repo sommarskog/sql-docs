@@ -1,357 +1,466 @@
 ---
 title: Download and install Azure Data Studio
-description: Download and Install Azure Data Studio for Windows, macOS, or Linux. This article provides release dates, version numbers, system requirements, and download links.
-ms.prod: azure-data-studio
-ms.technology: azure-data-studio
+description: Download and install Azure Data Studio for Windows, macOS, or Linux. This article provides release dates, version numbers, system requirements, and download links.
+author: erinstellato-ms
+ms.author: erinstellato
+ms.reviewer: maghan, randolphwest
+ms.date: 08/10/2023
+ms.service: azure-data-studio
 ms.topic: overview
-author: yualan
-ms.author: alayu
-ms.reviewer: maghan
-ms.custom: seodec18, contperf-fy21q4
-ms.date: 05/19/2021
+ms.custom: intro-overview
 ---
-
 # Download and install Azure Data Studio
 
-Azure Data Studio is a cross-platform database tool for data professionals using on-premises and cloud data platforms on Windows, macOS, and Linux.
+Azure Data Studio is a lightweight, cross-platform data management and development tool with connectivity to popular cloud and on-premises databases. Azure Data Studio supports Windows, macOS, and Linux, with immediate capability to connect to Azure SQL and SQL Server.  Browse the extension library for more database support options including MySQL, PostgreSQL, and CosmosDB.
 
-Azure Data Studio offers a modern editor experience with IntelliSense, code snippets, source control integration, and an integrated terminal. It's engineered with the data platform user in mind, with the built-in charting of query result sets and customizable dashboards.
+Azure Data Studio’s familiar interface offers a modern editor experience with IntelliSense, code snippets, source control integration, and an integrated terminal.  Engineered with the data platform user in mind, its extensibility allows users to customize their experience by installing the extensions relevant to their workflow, including database migrations, charting, GitHub Copilot, and more!
 
-Use Azure Data Studio to query, design, and manage your databases and data warehouses, wherever they are - on your local computer or in the cloud.
+Use Azure Data Studio to query, design, and manage your databases and data warehouses wherever they are, on your local computer or in the cloud.
 
-For more information about Azure Data Studio, visit [What is Azure Data Studio](what-is-azure-data-studio.md).
+For more information about Azure Data Studio, visit [What is Azure Data Studio?](what-is-azure-data-studio.md).
 
 ## Download Azure Data Studio
 
-Azure Data Studio 1.29.0 is the latest general availability (GA) version. If you have a previous GA version of Azure Data Studio installed, installing Azure Data Studio 1.28.0 upgrades it to the latest version.
+Azure Data Studio 1.45.1 is the latest general availability (GA) version.
 
-- Release number: 1.29.0
-- Release date: May 19, 2021
+- Release number: 1.45.1
+- Release date: August 07, 2023
 
-| Platform | Download |
-|----------|----------|
-| Windows | [User Installer (recommended)](https://go.microsoft.com/fwlink/?linkid=2163435)<br>[System Installer](https://go.microsoft.com/fwlink/?linkid=2163531)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=2163529) |
-| macOS | [.zip](https://go.microsoft.com/fwlink/?linkid=2163528) |
-| Linux | [.deb](https://go.microsoft.com/fwlink/?linkid=2163436)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=2163437)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=2163530) |
+| Platform | Type | Download |
+| --- | --- | --- |
+| Windows | User Installer | [64-bit](https://go.microsoft.com/fwlink/?linkid=2243234)&emsp;[ARM64](https://go.microsoft.com/fwlink/?linkid=2243236) |
+| | System Installer | [64-bit](https://go.microsoft.com/fwlink/?linkid=2242848)&emsp;[ARM64](https://go.microsoft.com/fwlink/?linkid=2242941) |
+| | .zip | [64 bit](https://go.microsoft.com/fwlink/?linkid=2243235)&emsp;[ARM64](https://go.microsoft.com/fwlink/?linkid=2242849) |
+| Linux | .tar.gz | [64-bit](https://go.microsoft.com/fwlink/?linkid=2242942) |
+| | .deb | [64-bit](https://go.microsoft.com/fwlink/?linkid=2242943) |
+| | .rpm<sup>1</sup> | [64-bit](https://go.microsoft.com/fwlink/?linkid=2242640) |
+| macOS | .zip | [Universal](https://go.microsoft.com/fwlink/?linkid=2242850)&emsp;[Intel Chip](https://go.microsoft.com/fwlink/?linkid=2242553)&emsp;[Apple Silicon](https://go.microsoft.com/fwlink/?linkid=2242554) |
 
-> [!Note]
-> Azure Data Studio currently does not support the ARM architecture.
+<sup>1</sup> There is a known issue with install on RHEL. For more information see the [release notes](release-notes-azure-data-studio.md#known-issues-in-1451).
 
-If you have comments or suggestions or want to report issues, the best way to contact the Azure Data Studio team is to file an issue on the [Azure Data Studio feedback page](https://github.com/microsoft/azuredatastudio/issues/).
+If you have comments or suggestions or want to report a problem with downloading Azure Data Studio, submit an issue to our team on the [Azure Data Studio feedback page](https://github.com/microsoft/azuredatastudio/issues/).
 
 ## Install Azure Data Studio
 
-### Windows install
+### Windows installation
 
 [!INCLUDE [ssms-ads-install](../includes/ssms-azure-data-studio-install.md)]
 
-This release of Azure Data Studio includes a standard Windows Installer experience and a .zip file.
+This release of Azure Data Studio includes a standard Windows installer experience and a .zip file.
 
-We recommend the *user installer* because it doesn't require administrator privileges, simplifying installs and upgrades. The user installer doesn't require Administrator privileges as the location is under your user Local AppData (LOCALAPPDATA) folder. The user installer also provides a smoother background update experience. For more information, see [User setup for Windows](https://code.visualstudio.com/updates/v1_26#_user-setup-for-windows).
+We recommend the *user installer*, which simplifies installations and updates and doesn't require Administrator privileges. (It doesn't require Administrator privileges because the location is under your user Local AppData (LOCALAPPDATA) folder.) The user installer also provides a smoother background update experience. For more information, see [User setup for Windows](https://code.visualstudio.com/updates/v1_26#_user-setup-for-windows).
 
-**User Installer** (recommended)
+**User installer** (recommended)
 
-1. Download and run the [Azure Data Studio *user* installer for Windows](https://go.microsoft.com/fwlink/?linkid=2163435).
+1. Download and run the [Azure Data Studio user installer for Windows](https://azuredatastudio-update.azurewebsites.net/latest/win32-x64-user/stable).
 
-2. Start the Azure Data Studio app.
+1. Start the Azure Data Studio app.
 
-**System Installer**
+**System installer**
 
-1. Download and run the [Azure Data Studio *system* installer for Windows](https://go.microsoft.com/fwlink/?linkid=2163531).
+1. Download and run the [Azure Data Studio system installer for Windows](https://azuredatastudio-update.azurewebsites.net/latest/win32-x64/stable).
 
-2. Start the Azure Data Studio app.
+1. Start the Azure Data Studio app.
 
 **.zip file**
 
-1. Download [Azure Data Studio .zip for Windows](https://go.microsoft.com/fwlink/?linkid=2163529).
+1. Download the [Azure Data Studio .zip file for Windows](https://azuredatastudio-update.azurewebsites.net/latest/win32-x64-archive/stable).
 
-2. Browse to the downloaded file and extract it.
+1. Go to the downloaded file and extract it.
 
-3. Run `\azuredatastudio-windows\azuredatastudio.exe`
+1. Run `\azuredatastudio-windows\azuredatastudio.exe`.
 
-#### Unattended install for Windows
+#### Unattended installation for Windows
 
-You can also install Azure Data Studio using a command prompt script.
+You can also install Azure Data Studio by using a command prompt script.
 
-If you want to install Azure Data Studio in the background with no GUI prompts, and you're on the Windows platform, then follow the steps below.
+For Windows, install Azure Data Studio in the background without prompts using the following steps:
 
-1. Launch the command prompt with elevated permissions.
+1. Open the command prompt window with elevated permissions.
 
-2. Type the command below in the command prompt.
+1. Run the following command:
 
-    ```console
-    <path where the azuredatastudio-windows-user-setup-x.xx.x.exe file is located> /VERYSILENT /MERGETASKS=!runcode>
-    ```
+   ```console
+   <path where the azuredatastudio-windows-user-setup-x.xx.x.exe file is located> /VERYSILENT /MERGETASKS=!runcode>
+   ```
 
-    Example:
+   Example:
 
-    ```console
-    %systemdrive%\azuredatastudio-windows-user-setup-1.24.0.exe /VERYSILENT /MERGETASKS=!runcode
-    ```
+   ```console
+   %systemdrive%\azuredatastudio-windows-user-setup-1.24.0.exe /VERYSILENT /MERGETASKS=!runcode
+   ```
 
-    > [!Note]
-    > The example also works with the system installer file.
-    > 
-    > ```console
-    > <path where the azuredatastudio-windows-setup-x.xx.x.exe file is located> /VERYSILENT /MERGETASKS=!runcode>
-    > ```
+   > [!NOTE]  
+   > The following example also works with the system installer file.
 
-    You can also pass */SILENT* instead of */VERYSILENT* to see the setup UI.
+   > ```console
+   > <path where the azuredatastudio-windows-setup-x.xx.x.exe file is located> /VERYSILENT /MERGETASKS=!runcode>
+   > ```
+   >
+   > In the preceding code, you can also pass */SILENT* instead of */VERYSILENT* to see the setup user interface.
 
-3. If all goes well, you can see Azure Data Studio installed.
+1. If you've run the commands successfully, you can see Azure Data Studio installed.
 
-### macOS install
+### macOS installation
 
-1. Download [Azure Data Studio for macOS](https://go.microsoft.com/fwlink/?linkid=2163528).
+1. Download [Azure Data Studio for macOS](https://azuredatastudio-update.azurewebsites.net/latest/darwin-universal/stable).
 
-2. To expand the contents of the zip, double-select it.
+1. To expand the contents of the .zip file, double-click it.
 
-3. To make Azure Data Studio available in the *Launchpad*, drag *Azure Data Studio.app* to the *Applications* folder.
+1. To make Azure Data Studio available in Launchpad, drag the *Azure Data Studio.app* file to the *Applications* folder.
 
-### Linux install
+> [!NOTE]  
+> For Apple Silicon users, please make sure you have Rosetta 2 installed. Some backend services are yet to be converted to native ARM64 binaries. You can run the following command in a Terminal window to install Rosetta 2.
+>  
+> ```bash
+> /usr/sbin/softwareupdate --install-rosetta --agree-to-license
+> ```
 
-#### .deb Installation
+### Linux installation
 
-1. Download Azure Data Studio for Linux by using the [deb](https://go.microsoft.com/fwlink/?linkid=2163436) file.
+You can install Azure Data Studio on Red Hat Enterprise Linux (RHEL), SUSE Linux Enterprise Server (SLES), Ubuntu, Debian, and Windows Subsystem for Linux (WSL).
 
-2. To extract the file, open a new Terminal window and follow the below commands.
+#### [RHEL](#tab/redhat-install)
+
+#### Install using .rpm file
+
+1. Download Azure Data Studio for Red Hat Enterprise Linux by using the [.rpm](https://azuredatastudio-update.azurewebsites.net/latest/linux-rpm-x64/stable) file.
+
+1. To extract the file, open a new terminal window, and then run the following commands:
+
+   ```bash
+   cd ~
+   sudo yum install ./Downloads/azuredatastudio-linux-<version string>.rpm
+   ```
+
+1. To start Azure Data Studio, run this command:
+
+   ```bash
+   azuredatastudio
+   ```
+
+If you have missing dependencies, install them with following command:
+
+```bash
+yum install libXScrnSaver
+```
+
+#### Install using .tar.gz file
+
+1. Download Azure Data Studio for Red Hat Enterprise Linux by using the [.tar.gz](https://azuredatastudio-update.azurewebsites.net/latest/linux-x64/stable) file.
+
+1. To extract the file, open a new terminal window, and then run the following commands:
+
+   ```bash
+   cd ~
+   cp ~/Downloads/azuredatastudio-linux-<version string>.tar.gz ~
+   tar -xvf ~/azuredatastudio-linux-<version string>.tar.gz
+   echo 'export PATH="$PATH:~/azuredatastudio-linux-x64"' >> ~/.bashrc
+   source ~/.bashrc
+   ```
+
+1. To start Azure Data Studio, run this command:
+
+   ```bash
+   azuredatastudio
+   ```
+
+If you have missing dependencies, install them with the following command:
+
+```bash
+yum install libxss1 libgconf-2-4 libunwind8
+```
+
+#### [SLES](#tab/suse-install)
+
+#### Install using .rpm file
+
+1. Download Azure Data Studio for SUSE Linux Enterprise Server by using the [.rpm](https://azuredatastudio-update.azurewebsites.net/latest/linux-rpm-x64/stable) file.
+
+1. To extract the file, open a new terminal window, and then run the following commands:
+
+   ```bash
+   cd ~
+   sudo zypper install ./Downloads/azuredatastudio-linux-<version string>.rpm
+   ```
+
+1. To start Azure Data Studio, run this command:
+
+   ```bash
+   azuredatastudio
+   ```
+
+If you have missing dependencies, install them with the following command:
+
+```bash
+sudo zypper install libXScrnSaver
+```
+
+#### Install using .tar.gz file
+
+1. Download Azure Data Studio for SUSE Linux Enterprise Server by using the [.tar.gz](https://azuredatastudio-update.azurewebsites.net/latest/linux-x64/stable) file.
+
+1. To extract the file, open a new terminal window, and then run the following commands:
+
+   ```bash
+   cd ~
+   cp ~/Downloads/azuredatastudio-linux-<version string>.tar.gz ~
+   tar -xvf ~/azuredatastudio-linux-<version string>.tar.gz
+   echo 'export PATH="$PATH:~/azuredatastudio-linux-x64"' >> ~/.bashrc
+   source ~/.bashrc
+   ```
+
+1. To start Azure Data Studio, run this command:
+
+   ```bash
+   azuredatastudio
+   ```
+
+If you have missing dependencies, install them with the following command:
+
+```bash
+sudo zypper install libxss1 libgconf-2-4 libunwind8
+```
+
+#### [Ubuntu and Debian](#tab/ubuntu-install)
+
+#### Install using .deb file
+
+1. Download Azure Data Studio for Ubuntu or Debian by using the [.deb](https://azuredatastudio-update.azurewebsites.net/latest/linux-deb-x64/stable) file.
+
+1. To extract the .deb file, open a new terminal window, and then run the following commands:
 
    ```bash
    cd ~
    sudo dpkg -i ./Downloads/azuredatastudio-linux-<version string>.deb
    ```
 
-3. To launch Azure Data Studio
+1. To start Azure Data Studio, run this command:
 
    ```bash
    azuredatastudio
    ```
 
-You may have missing dependencies. Use the following commands to install these dependencies.
-
-   ```bash
-   sudo apt-get install libunwind8
-   ```
-
-#### .rpm Installation
-
-1. Download Azure Data Studio for Linux by using the [rpm](https://go.microsoft.com/fwlink/?linkid=2163437) file.
-
-2. To extract the file, open a new Terminal window and follow the below commands.
-
-   ```bash
-   cd ~
-   yum install ./Downloads/azuredatastudio-linux-<version string>.rpm
-   ```
-
-3. To launch Azure Data Studio
-
-   ```bash
-   azuredatastudio
-   ```
-
-You may have missing dependencies. Use the following commands to install these dependencies.
-
-   ```bash
-   yum install libXScrnSaver
-   ```
-
-#### tar.gz Installation
-
-1. Download Azure Data Studio for Linux by using the [.tar.gz](https://go.microsoft.com/fwlink/?linkid=2163530) file.
-
-2. To extract the file, open a new Terminal window and follow the below commands.
-
-   ```bash
-   cd ~
-   cp ~/Downloads/azuredatastudio-linux-<version string>.tar.gz ~ 
-   tar -xvf ~/azuredatastudio-linux-<version string>.tar.gz 
-   echo 'export PATH="$PATH:~/azuredatastudio-linux-x64"' >> ~/.bashrc
-   source ~/.bashrc
-   ```
-
-3. To launch Azure Data Studio
-
-  ```bash
-   azuredatastudio
-  ```
-
-You may have missing dependencies. Use the following commands to install these dependencies.
-
-   ```bash
-   sudo apt-get install libxss1 libgconf-2-4 libunwind8
-   ```
-
-#### Windows Subsystem for Linux (WSL)
-
-1. Install **Azure Data Studio** for Windows. Then use the `azuredatastudio` command in a WSL terminal just as you would in a standard command prompt. By default, the application is stored in your AppData folder.
-
-2. Start **Azure Data Studio** from the WSL command prompt. When using the default Windows installation, the application can be started using:
+If you have missing dependencies, install them with the following command:
 
 ```bash
-'/mnt/c/Users/<your user name>/AppData/Local/Programs/Azure Data Studio/azuredatastudio.exe'
+sudo apt-get install libunwind8
 ```
 
-## What's new
+#### Install using .tar.gz file
 
-For details about the latest release of Azure Data Studio, see **[Release notes for Azure Data Studio](./release-notes-azure-data-studio.md).**
+1. Download Azure Data Studio for Ubuntu or Debian by using the [.tar.gz](https://azuredatastudio-update.azurewebsites.net/latest/linux-x64/stable) file.
 
-## Download Insiders build of Azure Data Studio
+1. To extract the file, open a new terminal window, and then run the following commands:
 
-It's recommended to [download the GA release of Azure Data Studio](#download-azure-data-studio). However, if you want to try out the beta features and send feedback, you can download the [Insiders build of Azure Data Studio](https://github.com/microsoft/azuredatastudio#try-out-the-latest-insiders-build-from-main).
+    ```bash
+    cd ~
+    cp ~/Downloads/azuredatastudio-linux-<version string>.tar.gz ~
+    tar -xvf ~/azuredatastudio-linux-<version string>.tar.gz
+    echo 'export PATH="$PATH:~/azuredatastudio-linux-x64"' >> ~/.bashrc
+    source ~/.bashrc
+    ```
+
+1. To start Azure Data Studio, run this command:
+
+    ```bash
+    azuredatastudio
+    ```
+
+If you have missing dependencies, install them with the following command:
+
+```bash
+sudo apt-get install libxss1 libgconf-2-4 libunwind8
+```
+
+#### [Windows Subsystem for Linux](#tab/windows-install)
+
+1. Install Azure Data Studio for Windows. Then, use the `azuredatastudio` command in a Windows Subsystem for Linux (WSL) terminal just as you would in a standard command prompt. By default, the application is stored in your *AppData* folder.
+
+1. Start Azure Data Studio from the WSL command prompt. When you're using the default Windows installation, start the application by running the following command. Replace `<your user name>` with your user name:
+
+   ```bash
+   /mnt/c/Users/<your user name>/AppData/Local/Programs/Azure Data Studio/azuredatastudio.exe
+   ```
+
+---
+
+## What's new with Azure Data Studio
+
+For details about the latest release of Azure Data Studio, see [Release notes for Azure Data Studio](./release-notes-azure-data-studio.md).
+
+## Download the GA release of Azure Data Studio
+
+We recommend that you [download the general availability (GA) release of Azure Data Studio](#download-azure-data-studio).
+
+## Download the insiders build of Azure Data Studio
+
+As an alternative, if you want to try out the beta features and send feedback, you can [download the insiders build of Azure Data Studio](https://github.com/microsoft/azuredatastudio#try-out-the-latest-insiders-build-from-main-branch).
 
 ## Supported operating systems
 
-Azure Data Studio runs on Windows, macOS, and Linux and is supported on the following platforms:
+Azure Data Studio runs on Windows, macOS, and Linux. The following versions are supported:
 
-### Windows operating systems
+- Windows: 10 and later versions
+- Windows Server: 2016, 2019, 2022
+- macOS: 10.12+ (Sierra) and later versions
+- Linux: Debian 9+, RHEL 7+, SLES 15, Ubuntu 18.04+
 
-- Windows 10 (64-bit)
-- Windows 8.1 (64-bit)
-- Windows 8 (64-bit)
-- Windows 7 (SP1)
-- Windows Server 2019
-- Windows Server 2016
-- Windows Server 2012 R2 (64-bit)
-- Windows Server 2012 (64-bit)
-- Windows Server 2008 R2 (64-bit)
+> [!NOTE]  
+> Incremental versions within a major operating system release may no longer be in support by the operating system. Consult the documentation for your operating system to ensure you have received applicable updates.
 
-### macOS operating systems
+## Supported SQL Server versions
 
-- macOS 10.15 Catalina
-- macOS 10.14 Mojave
-- macOS 10.13 High Sierra
-- macOS 10.12 Sierra
-- macOS 11.1  Big Sur
+Azure Data Studio supports connecting to the following versions of SQL Server:
 
-### Linux operating systems
+- Azure SQL Database
+- Azure SQL Managed Instance
+- [!INCLUDE [sssql22-md](../includes/sssql22-md.md)]
+- [!INCLUDE [sssql19-md](../includes/sssql19-md.md)]
+- [!INCLUDE [sssql17-md](../includes/sssql17-md.md)]
+- [!INCLUDE [sssql16-md](../includes/sssql16-md.md)]
 
-- Red Hat Enterprise Linux (RHEL) 8.3
-- Red Hat Enterprise Linux (RHEL) 8.2
-- Red Hat Enterprise Linux (RHEL) 8.1
-- Red Hat Enterprise Linux (RHEL) 8.0
-- Red Hat Enterprise Linux (RHEL) 7.4
-- Red Hat Enterprise Linux (RHEL) 7.3
-- SUSE Linux Enterprise Server v12 SP2
-- Ubuntu 20.04
-- Ubuntu 18.04
-- Ubuntu 16.04
+## System requirements
 
-> [!Note]
->
-> The versions of RHEL (7.3 and 7.4) are no longer supported by Red Hat. RHEL 7.3 support ended November 30, 2018, and RHEL 7.4 ended August 31, 2019.
->
-> For details of the RHEL 7 Application Compatibility Guide, see: https://access.redhat.com/articles/rhel-abi-compatibility for more information.
->
-> For details of the RHEL 8 Application Compatibility Guide, see: https://access.redhat.com/articles/rhel8-abi-compatibility.
-
-## Recommended System Requirements
-
-| Recommended/Minimum | CPU Cores | Memory/RAM |
-|---------------------|-----------|------------|
-|     Recommended     |     4     |   8 GB     |
-|     Minimum         |     2     |   4 GB     |
+| Requirement level | CPU cores | RAM memory |
+| --- | :---: | :---: |
+| Recommended | 4 | 8 GB |
+| Minimum | 2 | 4 GB |
 
 ## Check for updates
 
-To check for the latest updates, select the gear icon on the bottom left of the window and select **Check for Updates**.
+To check for the latest updates, on the left pane, select **Manage** (gear icon), and then select **Check for Updates**.
 
-Offline environment updates can be applied by [installing the latest version](#download-and-install-azure-data-studio) directly over a previously installed version. Uninstalling prior versions of Azure Data Studio isn't necessary. Instead, the installer updates a currently installed application if present.
+To apply environment updates offline, [install the latest version](#download-and-install-azure-data-studio) directly over your previously installed version. You don't need to uninstall earlier versions of Azure Data Studio. If an earlier version is present, the installer automatically updates to the latest version.
 
 ## Move user settings
 
-If you're updating SQL Operations Studio to Azure Data Studio and want to keep your settings, keyboard shortcuts, or code snippets, follow the steps below.
+If you're updating SQL Operations Studio to Azure Data Studio and want to keep your settings, keyboard shortcuts, or code snippets, complete the following steps:
 
-*If you already have Azure Data Studio, or you've never installed or customized SQL Operations Studio, then you can ignore this section.*
+> [!NOTE]  
+> If you've already installed Azure Data Studio or you've never installed or customized SQL Operations Studio, you can ignore this section.
 
-1. Open Settings by selecting the gear on the bottom left and selecting **Settings.**
+1. On the left pane, select **Manage** (gear icon) and then select **Settings.**
 
-   ![edit settings in Azure Data Studio](./media/download/open-settings.png)
+   :::image type="content" source="./media/download/open-settings.png" alt-text="Screenshot of the Azure Data Studio Manage icon and Settings command.":::
 
-2. Right-click the **User Settings** tab on top, and select **Reveal in Explorer**
+1. At the top, right-click the **User Settings** tab, and then select **Reveal in Explorer**.
 
-   ![launch explorer, which will take you to your local file system](./media/download/reveal-in-explorer.png)
+   :::image type="content" source="./media/download/reveal-in-explorer.png" alt-text="Screenshot of the Reveal in Explorer command in the User Settings tab.":::
 
-3. Copy all files in this folder and save them in an easy-to-find location on your local drive, like your Documents folder.
+1. Copy all files in this folder and save them in an easy-to-find location on your local drive, such as your *Documents* folder.
 
-   ![use the files and copy over to your location](./media/download/copy-settings.png)
+   :::image type="content" source="./media/download/copy-settings.png" alt-text="Screenshot of the settings.json file in the Windows Explorer folder structure.":::
 
-4. In your new version of Azure Data Studio, follow steps 1-2, then for step 3, paste the contents you saved into the folder. You can also manually copy over the settings, key bindings, or snippets in their respective locations.
+1. In your updated version of Azure Data Studio, follow steps 1 and 2 and then, for step 3, paste the contents you saved into the folder. You can also manually copy over the settings, key bindings, or snippets in their respective locations.
 
-5. If overriding an existing installation, delete the old install directory before installation to avoid errors connecting to your Azure account for the resource explorer.
+1. If you're overriding your current installation, before you do so, delete the old installation directory to avoid errors connecting to your Azure account for the resource explorer.
 
 ## Uninstall Azure Data Studio from Windows
 
-If you installed Azure Data Studio using the Windows Installer, then uninstall the same way you remove any Windows application.
+If you installed Azure Data Studio by using the Windows installer, uninstall it just as you would any Windows application.
 
-If you installed Azure Data Studio with a .zip or other archive, then delete the files.
+If you installed Azure Data Studio with a .zip file or other archive, delete that file.
 
 ## Uninstall Azure Data Studio from macOS
 
-You can [uninstall apps](https://support.apple.com/guide/mac-help/install-and-uninstall-other-apps-mh35835/mac) from the internet or disc on Mac by the below steps.
+You can [uninstall apps](https://support.apple.com/guide/mac-help/install-and-uninstall-other-apps-mh35835/mac) from the Internet or drive on Mac by completing the following steps:
 
-1. Select the **Finder icon** in the Dock, then select Applications in the Finder sidebar.
+1. Select the **Finder icon** in the Dock, and then select **Applications** in the **Finder** sidebar.
 
-2. Then choose from one of te steps below:
+1. Do one of the following steps:
 
-    - If an app is in a folder, open the app's folder to check for an Uninstaller. If you see Uninstall [App] or [App] Uninstaller, double-select it, then follow the onscreen instructions.
+   - If an app is in a folder, open the app's folder to check for an uninstaller. Double-click **Uninstall [App]** or **[App] Uninstaller**, and then follow the onscreen instructions.
 
-    - If an app isn't in a folder or doesn't have an Uninstaller, drag the app from the Applications folder to the Trash (at the end of the Dock).
+   - If an app isn't in a folder or doesn't have an uninstaller, drag the app from the *Applications* folder to the Trash (at the end of the Dock).
 
-To uninstall apps, you downloaded from the App Store, use Launchpad.
+To uninstall apps you've downloaded from the App Store, use Launchpad.
 
 ## Uninstall Azure Data Studio from Linux
 
-### Debian
+### [RHEL](#tab/redhat-uninstall)
 
-You can uninstall Azure Data Studio under Debian or Ubuntu Linux.
+Use the `rpm`, `yum`, or `dnf` command to delete Azure Data Studio under Red Hat Enterprise Linux.
 
-To list installed software type:
+To list installed software, run one of the following commands:
 
 ```bash
-dpkg --list
-dpkg --list | less
-dpkg --list | grep apache
+sudo rpm -qa | less
+sudo yum list | less
+sudo dnf list | less
 ```
 
-To delete the software, enter:
+To get information about the `azuredatastudio` package, run one of the following commands:
+
+```bash
+sudo rpm -qa azuredatastudio
+sudo yum list azuredatastudio
+sudo dnf list azuredatastudio
+```
+
+To delete a package called `azuredatastudio`, run one of the following commands:
+
+```bash
+sudo rpm -e azuredatastudio
+sudo yum remove azuredatastudio
+sudo dnf remove azuredatastudio
+```
+
+### [SLES](#tab/suse-uninstall)
+
+Use the `rpm` or `zypper` command to delete Azure Data Studio under SUSE Linux Enterprise Server.
+
+To list installed software, run one of the following commands:
+
+```bash
+sudo rpm -qa | less
+sudo zypper list | less
+```
+
+To get information about the `azuredatastudio` package, run one of the following commands:
+
+```bash
+sudo rpm -qa azuredatastudio
+sudo zypper list azuredatastudio
+```
+
+To delete a package called `azuredatastudio`, run one of the following commands:
+
+```bash
+sudo rpm -e azuredatastudio
+sudo zypper remove azuredatastudio
+```
+
+### [Ubuntu and Debian](#tab/ubuntu-uninstall)
+
+You can uninstall Azure Data Studio under Ubuntu or Debian.
+
+To list installed software, run the following command:
+
+```bash
+sudo dpkg --list | less
+```
+
+To list installed software that matches `azuredatastudio`, run the following command:
+
+```bash
+sudo dpkg --list | grep azuredatastudio
+```
+
+To delete the software, run the following commands:
 
 ```bash
 sudo apt-get remove azuredatastudio
-sudo apt-get remove apache
 ```
 
-### RedHat
+---
 
-Use rpm or yum command to delete Azure Data Studio.
+## Next steps
 
-To list the installed software type:
-
-```bash
-rpm -qa | less
-rpm -qa azuredatastudio
-yum list | less
-yum list azuredatastudio
-```
-
-To get information about the azuredatastudio package, enter:
-
-```bash
-rpm -qa azuredatastudio
-yum list azuredatastudio
-```
-
-To delete a package called azuredatastudio, enter:
-
-```bash
-rpm -e azuredatastudio
-yum remove azuredatastudio
-```
-
-## Next Steps
+To learn more about Azure Data Studio, see the following resources:
 
 - [Azure Data Studio release notes](release-notes-azure-data-studio.md)
-- [What is Azure Data Studio](what-is-azure-data-studio.md)
+- [What is Azure Data Studio?](what-is-azure-data-studio.md)
 - [SQL tools](../tools/overview-sql-tools.md)
 - [Azure Data Architecture Guide](/azure/architecture/data-guide/)
 - [SQL Server Blog](https://cloudblogs.microsoft.com/sqlserver/)
@@ -360,4 +469,4 @@ yum remove azuredatastudio
 
 [!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]
 
-[Microsoft Privacy Statement](https://go.microsoft.com/fwlink/?LinkId=521839) and [usage data collection](usage-data-collection.md).
+[Microsoft Privacy Statement](https://go.microsoft.com/fwlink/?LinkId=521839) and [Enable or disable usage data collection for Azure Data Studio](usage-data-collection.md).

@@ -1,28 +1,24 @@
 ---
-description: "Disconnect from a Registered Server (SQL Server Management Studio)"
 title: Disconnect from a Registered Server
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
+description: "Disconnect from a Registered Server (SQL Server Management Studio)"
+author: markingmyname
+ms.author: maghan
+ms.date: 03/01/2017
+ms.service: sql
+ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Registered Servers [SQL Server], connections"
   - "connections [SQL Server], registered servers"
   - "Registered Servers [SQL Server], disconnecting"
   - "disconnecting registered servers [SQL Server]"
-ms.assetid: 31eacc9a-f814-4845-b252-b3b998271200
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
-ms.custom: seo-lt-2019
-ms.date: 03/01/2017
 ---
 
 # Disconnect from a Registered Server (SQL Server Management Studio)
 
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-This topic describes how to  disconnect Object Explorer from a server at any time in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]. Disconnecting Object Explorer does not disconnect other [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] components such as SQL Editor.  
+This topic describes how to  disconnect Object Explorer from a server at any time in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]. Disconnecting Object Explorer does not disconnect other SQL Server Management Studio components such as SQL Editor.  
 
 ## <a name="SSMSProcedure"></a>
 

@@ -1,21 +1,18 @@
 ---
+title: "SAVE TRANSACTION (Transact-SQL)"
 description: "SAVE TRANSACTION (Transact-SQL)"
-title: "SAVE TRANSACTION (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "06/10/2016"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "SAVE"
   - "SAVE_TSQL"
   - "SAVE_TRANSACTION_TSQL"
   - "SAVE TRANSACTION"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "rolling back transactions, SAVE TRANSACTION"
   - "SAVE TRANSACTION statement"
   - "transactions [SQL Server], rolling back"
@@ -23,16 +20,15 @@ helpviewer_keywords:
   - "savepoints [SQL Server]"
   - "marked transactions [SQL Server], SAVE TRANSACTION statement"
   - "duplicate savepoints"
-ms.assetid: b953c3f1-f96d-42f1-95a2-30e314292b35
-author: cawrites
-ms.author: chadam
+dev_langs:
+  - "TSQL"
 ---
 # SAVE TRANSACTION (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Sets a savepoint within a transaction.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
 
  ## Syntax  
   
@@ -67,7 +63,7 @@ SAVE { TRAN | TRANSACTION } { savepoint_name | @savepoint_variable }
  The following example shows how to use a transaction savepoint to roll back only the modifications made by a stored procedure if an active transaction is started before the stored procedure is executed.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 IF EXISTS (SELECT name FROM sys.objects  
            WHERE name = N'SaveTranExample')  

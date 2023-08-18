@@ -1,19 +1,16 @@
 ---
-title: "Fetch Columns Using IRow::GetColumns (or IRow::Open) and ISequentialStream | Microsoft Docs"
+title: "Fetch Columns Using IRow::GetColumns (or IRow::Open) and ISequentialStream"
 description: Learn how large data can be bound or retrieved using the ISequentialStream interface in OLE DB Driver for SQL Server.
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "06/14/2018"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Open method"
   - "ISequentialStream interface, samples"
   - "GetColumns method"
-author: David-Engel
-ms.author: v-daenge
 ---
 # Fetch Columns by Using IRow::GetColumns (or IRow::Open) and ISequentialStream
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -42,7 +39,7 @@ ms.author: v-daenge
 ## Example  
  This example shows how to fetch a single row using IRow. In this example one column at a time is retrieved from the row. This example illustrate the use of IRow::Open() as well as IRow::GetColumns(). To read the column data, the example uses ISequentialStream::Read.  
   
- This sample requires the AdventureWorks sample database, which you can download from the [Microsoft SQL Server Samples and Community Projects](https://go.microsoft.com/fwlink/?LinkID=85384) home page.  
+ [!INCLUDE [article-uses-adventureworks](../../../includes/article-uses-adventureworks.md)]
   
  The first ( [!INCLUDE[tsql](../../../includes/tsql-md.md)]) code listing creates a table used by the sample.  
   
@@ -51,7 +48,7 @@ ms.author: v-daenge
  The third ( [!INCLUDE[tsql](../../../includes/tsql-md.md)]) code listing deletes the table used by the sample.  
   
 ```  
-USE AdventureWorks  
+USE AdventureWorks2022;
 GO  
   
 IF EXISTS (SELECT name FROM sysobjects WHERE name = 'MyTable')  
@@ -659,7 +656,7 @@ int InitializeAndEstablishConnection() {
 ```  
   
 ```  
-USE AdventureWorks  
+USE AdventureWorks2022;
 GO  
   
 IF EXISTS (SELECT name FROM sysobjects WHERE name = 'MyTable')  

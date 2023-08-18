@@ -1,23 +1,19 @@
 ---
-description: "MStracer_history (Transact-SQL)"
-title: "MStracer_history (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "MStracer_history (Transact-SQL)"
+description: MStracer_history (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "03/04/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: replication
+ms.service: sql
+ms.subservice: replication
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "MStracer_history"
   - "MStracer_history_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "MStracer_history system table"
-ms.assetid: 97237a0c-d574-4b17-8a94-1a8730b31d98
-author: cawrites
-ms.author: chadam
+dev_langs:
+  - "TSQL"
 ---
 # MStracer_history (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

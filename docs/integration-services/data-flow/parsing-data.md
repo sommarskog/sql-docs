@@ -1,19 +1,15 @@
 ---
+title: "Parsing Data"
 description: "Parsing Data"
-title: "Parsing Data | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: sql
-ms.prod_service: "integration-services"
-ms.reviewer: ""
-ms.technology: integration-services
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "parsing [Integration Services]"
-  - "data parsing [Integration Services]"
-ms.assetid: 8893ea9d-634c-4309-b52c-6337222dcb39
 author: chugugrace
 ms.author: chugu
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+helpviewer_keywords:
+  - "parsing [Integration Services]"
+  - "data parsing [Integration Services]"
 ---
 # Parsing Data
 
@@ -197,6 +193,7 @@ The fast parse property must be set for each column of the source or transformat
 5.  Click **OK**.  
 
 ## Standard Parse
-Standard parse is a locale-sensitive set of parsing routines that support all the data type conversions provided by the Automation data type conversion APIs that are available in Oleaut32.dll and Ole2dsip.dll. Standard parse is equivalent to the OLE DB parsing APIs.  
-  
- Standard parse provides support for data type conversion of international data, and it should be used if the data format is not supported by Fast parse. For more information about the Automation data type conversion API, see "Data Type Conversion APIs" in the [MSDN Library](/documentation/). 
+
+Standard parse is a locale-sensitive set of parsing routines that support all the data type conversions provided by the Automation data type conversion APIs that are available in Oleaut32.dll and Ole2dsip.dll. Standard parse is equivalent to the OLE DB parsing APIs.
+
+Standard parse provides support for data type conversion of international data, and it should be used if the data format is not supported by Fast parse.

@@ -1,18 +1,20 @@
 ---
-title: "Show Row & Column Headers on Multiple Pages (Report Builder) | Microsoft Docs"
+title: "Show row and column headers on multiple pages in a paginated report"
 description: Learn how to control repeating row and column headers on every page of a paginated report for a tablix data region that spans multiple pages in Report Builder.
 author: maggiesMSFT
 ms.author: maggies
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-design
-ms.topic: conceptual
 ms.date: 12/09/2019
+ms.service: reporting-services
+ms.subservice: report-design
+ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 
-# Display Row and Column Headers on Multiple Pages (Report Builder and SSRS)
+# Show row and column headers on multiple pages in a paginated report (Report Builder)
 
-  You can control whether to repeat row and column headers on every page of a [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] paginated report for a tablix data region (a table, matrix, or list) that spans multiple pages.
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-ssrs-rb](../../includes/ssrs-appliesto-ssrs-rb.md)] [!INCLUDE [ssrs-appliesto-pbi-rb](../../includes/ssrs-appliesto-pbi-rb.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
+
+  You can control whether to repeat row and column headers on every page of a paginated report for a tablix data region (a table, matrix, or list) that spans multiple pages.
   
  How you control the rows and columns depends on whether the tablix data region has group headers. When you click in a tablix data region that has group headers, a dotted line shows the tablix areas, as shown in the following figure:  
   
@@ -28,7 +30,7 @@ ms.date: 12/09/2019
   
 2. In **Row Headers**, select **Repeat header rows on each page**.  
   
-3. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+3. Select **OK**.
   
 ## To display column headers on multiple pages  
   
@@ -36,7 +38,7 @@ ms.date: 12/09/2019
   
 2. In **Column Headers**, select **Repeat header columns on each page**.  
   
-3. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+3. Select **OK**.
   
 ## To display a static row or column on multiple pages  
   

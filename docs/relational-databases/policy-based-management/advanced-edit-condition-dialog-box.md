@@ -1,18 +1,14 @@
 ---
+title: "Advanced Edit (Condition) Dialog Box"
 description: "Advanced Edit (Condition) Dialog Box"
-title: "Advanced Edit (Condition) Dialog Box | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/12/2016"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: security
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.swb.dmf.condition.advancededit.f1"
-ms.assetid: a0bbe501-78c5-45ad-9087-965d04855663
 author: VanMSFT
 ms.author: vanto
+ms.date: "08/12/2016"
+ms.service: sql
+ms.subservice: security
+ms.topic: conceptual
+f1_keywords:
+  - "sql13.swb.dmf.condition.advancededit.f1"
 ---
 # Advanced Edit (Condition) Dialog Box
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -55,7 +51,8 @@ ms.author: vanto
 ## Additional function information  
  The following sections provide additional information about the functions you can use to create complex expressions for Policy-Based Management conditions.  
   
-> **IMPORTANT!** The functions that you can use to create Policy-Based Management conditions do not always use [!INCLUDE[tsql](../../includes/tsql-md.md)] syntax. Make sure that you follow the example syntax. For example, when you use the **DateAdd** or **DatePart** functions, you must enclose the *datepart* argument in single quotes.  
+> [!IMPORTANT]  
+> The functions that you can use to create Policy-Based Management conditions do not always use [!INCLUDE[tsql](../../includes/tsql-md.md)] syntax. Make sure that you follow the example syntax. For example, when you use the **DateAdd** or **DatePart** functions, you must enclose the *datepart* argument in single quotes.  
   
 |Function|Signature|Description|Arguments|Return value|Example|  
 |--------------|---------------|-----------------|---------------|------------------|-------------|  

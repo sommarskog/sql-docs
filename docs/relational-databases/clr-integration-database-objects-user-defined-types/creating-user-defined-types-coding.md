@@ -1,16 +1,13 @@
 ---
-title: "Coding User-Defined Types | Microsoft Docs"
-description: This example shows how to implement a UDT to use in a SQL Server database. It implements the UDT as a structure. 
-ms.custom: ""
+title: "Coding User-Defined Types"
+description: This example shows how to implement a UDT to use in a SQL Server database. It implements the UDT as a structure.
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/16/2017"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: clr
+ms.service: sql
+ms.subservice: clr
 ms.topic: "reference"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "validation [CLR integration]"
   - "UDTs [CLR integration], coding"
   - "UserDefined serialization format [CLR integration]"
@@ -28,9 +25,9 @@ helpviewer_keywords:
   - "Currency UDT"
   - "validating UDT values"
   - "exposing UDT properties [CLR integration]"
-ms.assetid: 1e5b43b3-4971-45ee-a591-3f535e2ac722
-author: "rothja"
-ms.author: "jroth"
+dev_langs:
+  - "VB"
+  - "CSharp"
 ---
 # Creating User-Defined Types - Coding
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -615,8 +612,6 @@ public void Rotate(double anglex, double angley, double anglez)
   
  The purpose of the padding is to ensure that the culture is completely separated from the currency value, so that when one UDT is compared against another in [!INCLUDE[tsql](../../includes/tsql-md.md)] code, culture bytes are compared against culture bytes, and currency byte values are compared against currency byte values.  
   
- For the complete code listing for the **Currency** UDT, follow the directions for installing the CLR samples in [SQL Server Database Engine Samples](https://msftengprodsamples.codeplex.com/).  
-  
 ### Currency Attributes  
  The **Currency** UDT is defined with the following attributes.  
   
@@ -739,9 +734,5 @@ public void Read(System.IO.BinaryReader r)
 }  
 ```  
   
- For the complete code listing for the **Currency** UDT, see [SQL Server Database Engine Samples](https://msftengprodsamples.codeplex.com/).  
-  
 ## See Also  
  [Creating a User-Defined Type](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types.md)  
-  
-  

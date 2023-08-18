@@ -1,18 +1,14 @@
 ---
+title: "System Trace Functions"
 description: "System Trace Functions"
-title: "System Trace Functions | Microsoft Docs"
-ms.custom: ""
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
-dev_langs: 
+dev_langs:
   - "TSQL"
-ms.assetid: 166426e1-555d-4ce4-bae3-248dcac56883
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 ---
 # System Trace Functions
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

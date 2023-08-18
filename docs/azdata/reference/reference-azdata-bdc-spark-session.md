@@ -1,19 +1,19 @@
 ---
 title: azdata bdc spark session reference
-titleSuffix: SQL Server big data clusters
+titleSuffix: SQL Server Big Data Clusters
 description: Reference article for azdata bdc spark session commands.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: seanw
-ms.date: 04/29/2021
+ms.date: 10/05/2021
+ms.service: sql
+ms.subservice: big-data-cluster
 ms.topic: reference
-ms.prod: sql
-ms.technology: big-data-cluster
 ---
 
 # azdata bdc spark session
 
-Applies to [!INCLUDE [azure-data-cli-azdata](../../includes/azure-data-cli-azdata.md)]
+[!INCLUDE[azdata](../../includes/applies-to-version/azdata.md)]
 
 The following article provides reference for the **sql** commands in the **azdata** tool. For more information about other **azdata** commands, see [azdata reference](reference-azdata.md)
 
@@ -60,7 +60,7 @@ azdata bdc spark session create [--session-kind -k]
 ### Examples
 Create a session.
 ```bash
-azdata spark session create --session-kind pyspark
+azdata bdc spark session create --session-kind pyspark
 ```
 ### Optional Parameters
 #### `--session-kind -k`

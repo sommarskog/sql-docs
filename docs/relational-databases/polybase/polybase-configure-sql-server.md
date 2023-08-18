@@ -1,14 +1,13 @@
 ---
 title: "Access external data: SQL Server - PolyBase"
 description: Learn how to use PolyBase on a SQL Server instance to query external data in another SQL Server instance. Create external tables to reference external data.
-ms.date: 10/06/2020
-ms.custom: seo-lt-2019
-ms.prod: sql
-ms.technology: polybase
-ms.topic: conceptual
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mikeray
+ms.date: 10/18/2022
+ms.service: sql
+ms.subservice: polybase
+ms.topic: conceptual
 monikerRange: ">= sql-server-linux-ver15 || >= sql-server-ver15"
 ---
 
@@ -35,7 +34,8 @@ For optimal query performance, create statistics on external table columns, espe
 The following Transact-SQL commands are used in this section:
 
 - [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)
-- [CREATE EXTERNAL DATA SOURCE (Transact-SQL)](../../t-sql/statements/create-external-data-source-transact-sql.md) 
+- [CREATE EXTERNAL DATA SOURCE (Transact-SQL)](../../t-sql/statements/create-external-data-source-transact-sql.md)
+- [CREATE EXTERNAL TABLE (Transact-SQL)](../../t-sql/statements/create-external-table-transact-sql.md)
 - [CREATE STATISTICS (Transact-SQL)](../../t-sql/statements/create-statistics-transact-sql.md)
 
 1. Create a database scoped credential for accessing the SQL Server source. The following example creates a credential to the external data source with `IDENTITY = 'username'` and `SECRET = 'password'`.
@@ -62,6 +62,15 @@ The following Transact-SQL commands are used in this section:
         CREDENTIAL = SQLServerCredentials);
     ```
 
+1. Create the external table with [CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md) The statement requires collation and the location requires three-part notation (`<database>.<schema>.<table>`).
+
+    ```sql
+    CREATE EXTERNAL TABLE DatabasesExternal (
+        name VARCHAR(128) COLLATE SQL_Latin1_General_CP1_CI_AS)
+      WITH (LOCATION = 'master.sys.databases',
+      DATA_SOURCE = SQLServerInstance);
+    ```
+
 1. Optionally, create statistics on an external table.
 
   For optimal query performance, create statistics on external table columns, especially the ones used for joins filters and aggregates.
@@ -76,8 +85,11 @@ The following Transact-SQL commands are used in this section:
 
 ## SQL Server connector compatible types
 
-You can make a connection to other data sources that recognizes a SQL Server connection. Use the SQL Server PolyBase connector to create an external table of both Azure Synapse Analytics and Azure SQL Database. To accomplish this task, follow the same steps listed previously. Make sure the database scoped credential, server address, port, and location string correlate to that of the compatible data source you want to connect to.
+You can also utilize the SQL Server (sqlserver://) connector to access Azure SQL Database. To accomplish this task, follow the same steps listed previously. Make sure the database scoped credential, server address, port, and location string correlate to that of the Azure SQL Database data source you want to connect to.
+
 
 ## Next steps
+
+For more tutorials on creating external data sources and external tables to a variety of data sources, see [PolyBase Transact-SQL reference](polybase-t-sql-objects.md).
 
 To learn more about PolyBase, see [Overview of SQL Server PolyBase](polybase-guide.md).

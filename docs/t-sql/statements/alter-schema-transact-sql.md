@@ -1,35 +1,31 @@
 ---
-description: "ALTER SCHEMA (Transact-SQL)"
-title: "ALTER SCHEMA (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "ALTER SCHEMA (Transact-SQL)"
+description: ALTER SCHEMA (Transact-SQL)
+author: markingmyname
+ms.author: maghan
 ms.date: "03/09/2020"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "ALTER SCHEMA"
   - "ALTER_SCHEMA_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "objects [SQL Server], transferring"
   - "transferring objects between schemas"
   - "ALTER SCHEMA statement"
   - "schemas [SQL Server], modifying"
   - "modifying schemas"
-ms.assetid: 0a760138-460e-410a-a3c1-d60af03bf2ed
-author: WilliamDAssafMSFT
-ms.author: wiassaf
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+dev_langs:
+  - "TSQL"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=fabric"
 ---
 # ALTER SCHEMA (Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw.md)]
 
   Transfers a securable between schemas.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -47,7 +43,7 @@ ALTER SCHEMA schema_name
 ```  
   
 ```syntaxsql
--- Syntax for Azure Synapse Analytics and Parallel Data Warehouse  
+-- Syntax for Azure Synapse Analytics and Parallel Data Warehouse and Microsoft Fabric
   
 ALTER SCHEMA schema_name   
    TRANSFER [ OBJECT :: ] securable_name   
@@ -97,10 +93,10 @@ ALTER SCHEMA schema_name
 ## Examples  
   
 ### A. Transferring ownership of a table  
- The following example modifies the schema `HumanResources` by transferring the table `Address` from schema `Person` into the 'HumanResources` schema.  
+ The following example modifies the schema `HumanResources` by transferring the table `Address` from schema `Person` into the `HumanResources` schema.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 ALTER SCHEMA HumanResources TRANSFER Person.Address;  
 GO  
@@ -110,7 +106,7 @@ GO
  The following example creates a type in the `Production` schema, and then transfers the type to the `Person` schema.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
   
 CREATE TYPE Production.TestType FROM [VARCHAR](10) NOT NULL ;  
@@ -135,7 +131,7 @@ SELECT sys.types.name, sys.types.schema_id, sys.schemas.name
 GO  
 ```  
   
-## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## Examples: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### C. Transferring ownership of a table  
  The following example creates a table `Region` in the `dbo` schema, creates a `Sales` schema, and then moves the `Region` table from the `dbo` schema to the `Sales` schema.  

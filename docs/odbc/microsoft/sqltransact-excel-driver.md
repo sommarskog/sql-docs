@@ -1,19 +1,15 @@
 ---
+title: "SQLTransact (Excel Driver)"
 description: "SQLTransact (Excel Driver)"
-title: "SQLTransact (Excel Driver) | Microsoft Docs"
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "SQLTransact function [ODBC], Excel Driver"
   - "Excel driver [ODBC], SQLTransact"
-ms.assetid: 821b4535-cec3-4e59-b681-87faf9d51575
-author: David-Engel
-ms.author: v-daenge
 ---
 # SQLTransact (Excel Driver)
 > [!NOTE]  

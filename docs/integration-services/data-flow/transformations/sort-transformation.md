@@ -1,26 +1,22 @@
 ---
+title: "Sort Transformation"
 description: "Sort Transformation"
-title: "Sort Transformation | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/04/2017"
-ms.prod: sql
-ms.prod_service: "integration-services"
-ms.reviewer: ""
-ms.technology: integration-services
+ms.service: sql
+ms.subservice: integration-services
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.dts.designer.sorttrans.f1"
   - "sql13.dts.designer.sorttransformation.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Sort transformation"
   - "descending sorts"
   - "ascending sorts"
   - "sorting data [Integration Services]"
   - "multiple sorts"
   - "duplicate data [Integration Services]"
-ms.assetid: 728c9351-84a8-4a89-be4d-d50d4adc04e0
-author: chugugrace
-ms.author: chugu
 ---
 # Sort Transformation
 
@@ -52,8 +48,6 @@ ms.author: chugu
 ## Related Tasks  
  For more information about how to set properties of the component, see [Set the Properties of a Data Flow Component](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md).  
   
-## Related Content  
- Sample, [SortDeDuplicateDelimitedString Custom SSIS Component](https://go.microsoft.com/fwlink/?LinkId=220821), on codeplex.com.  
   
 ## Sort Transformation Editor
   Use the **Sort Transformation Editor** dialog box to select the columns to sort, set the sort order, and specify whether duplicates are removed.  
@@ -89,4 +83,3 @@ ms.author: chugu
 ## See Also  
  [Data Flow](../../../integration-services/data-flow/data-flow.md)   
  [Integration Services Transformations](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
-  

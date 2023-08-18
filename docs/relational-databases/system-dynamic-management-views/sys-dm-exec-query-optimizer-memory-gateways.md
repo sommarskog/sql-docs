@@ -1,24 +1,22 @@
 ---
 title: "sys.dm_exec_query_optimizer_memory_gateways (Transact-SQL)"
-description: "Returns the current status of resource semaphores used to throttle concurrent query optimization"
-ms.custom: seo-dt-2019
-ms.date: "04/06/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
+description: Returns the current status of resource semaphores used to throttle concurrent query optimization
+author: MikeRayMSFT
+ms.author: mikeray
 ms.reviewer: wiassaf
-ms.technology: performance
+ms.date: "02/24/2023"
+ms.service: sql
+ms.subservice: performance
 ms.topic: "reference"
 f1_keywords:
   - "dm_exec_query_optimizer_memory_gateways_TSQL"
   - "dm_exec_query_optimizer_memory_gateways"
   - "sys.dm_exec_query_optimizer_memory_gateways_TSQL"
   - "sys.dm_exec_query_optimizer_memory_gateways"
-dev_langs:
-  - "TSQL"
 helpviewer_keywords:
   - "sys.dm_exec_query_optimizer_memory_gateways dynamic management view"
-author: "josack"
-ms.author: "josack"
+dev_langs:
+  - "TSQL"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_exec_query_optimizer_memory_gateways (Transact-SQL)
@@ -44,6 +42,9 @@ SQL Server requires VIEW SERVER STATE permission on the server.
 
 Azure SQL Database requires the VIEW DATABASE STATE permission in the database.
 
+### Permissions for SQL Server 2022 and later
+
+Requires VIEW SERVER PERFORMANCE STATE permission on the server.
 
 ## Remarks  
 SQL Server uses a tiered gateway approach to throttle the number of permitted concurrent compilations.  Three gateways are used, including small, medium and big. Gateways help prevent the exhausting of overall memory resources by larger compilation memory-requiring consumers.

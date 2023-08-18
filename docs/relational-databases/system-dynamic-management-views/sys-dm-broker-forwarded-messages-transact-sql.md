@@ -1,24 +1,21 @@
 ---
-description: "sys.dm_broker_forwarded_messages (Transact-SQL)"
-title: "sys.dm_broker_forwarded_messages (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/10/2016"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: system-objects
+title: "sys.dm_broker_forwarded_messages (Transact-SQL)"
+description: sys.dm_broker_forwarded_messages (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
+ms.date: "02/24/2023"
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.dm_broker_forwarded_messages"
   - "dm_broker_forwarded_messages"
   - "sys.dm_broker_forwarded_messages_TSQL"
   - "dm_broker_forwarded_messages_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.dm_broker_forwarded_messages dynamic management view"
-ms.assetid: 5576376d-6364-417a-8475-aa770e060845
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+dev_langs:
+  - "TSQL"
 ---
 # sys.dm_broker_forwarded_messages (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,9 +42,10 @@ ms.author: wiassaf
 ## Permissions  
  Requires VIEW SERVER STATE permission on the server.  
   
-## See Also  
+### Permissions for SQL Server 2022 and later
+
+Requires VIEW SERVER PERFORMANCE STATE permission on the server.
+
+## See also  
  [Dynamic Management Views and Functions &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Service Broker Related Dynamic Management Views &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/service-broker-related-dynamic-management-views-transact-sql.md)  
-  
-  
-

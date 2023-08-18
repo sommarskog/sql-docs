@@ -1,13 +1,13 @@
 ---
-description: "Create and Attach Schedules to Jobs"
 title: "Create and Attach Schedules to Jobs"
-ms.custom: seo-lt-2019
+description: "Create and Attach Schedules to Jobs"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
+ms.service: sql
+ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "jobs [SQL Server]"
   - "scheduling jobs [SQL Server]"
   - "jobs [SQL Server], scheduling"
@@ -15,10 +15,6 @@ helpviewer_keywords:
   - "automatic job processing"
   - "SQL Server Agent jobs, scheduling"
   - "idle time [SQL Server]"
-ms.assetid: 079c2984-0052-4a37-a2b8-4ece56e6b6b5
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
 ---
 # Create and Attach Schedules to Jobs
@@ -36,7 +32,10 @@ There are two ways to create a schedule:
 -   Create the schedule in Object Explorer.  
   
 After a schedule has been created, you can attach that schedule to multiple jobs, even if the schedule was created for a specific job. You can also detach schedules from jobs.  
-  
+
+> [!WARNING]
+> Updating a schedule will impact all the jobs attached to the schedule. If you want to control the schedule of individual jobs, be sure to create a separate schedule object for each job.
+
 A schedule can be based upon time or an event. For example, you can schedule a job to run at the following times:  
   
 -   Whenever [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent starts.  

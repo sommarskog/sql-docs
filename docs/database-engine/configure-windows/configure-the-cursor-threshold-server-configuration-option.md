@@ -1,20 +1,16 @@
 ---
-title: "Configure the cursor threshold Server Configuration Option | Microsoft Docs"
+title: "Configure the cursor threshold (server configuration option)"
 description: Learn about the cursor threshold option. See how its value affects whether SQL Server generates cursor keysets asynchronously, and find out how to configure it.
-ms.custom: ""
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/02/2017"
-ms.prod: sql
-ms.prod_service: high-availability
-ms.reviewer: ""
-ms.technology: configuration
+ms.service: sql
+ms.subservice: configuration
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "cursor threshold option"
-ms.assetid: 189f2067-c6c4-48bd-9bd9-65f6b2021c12
-author: markingmyname
-ms.author: maghan
 ---
-# Configure the cursor threshold Server Configuration Option
+# Configure the cursor threshold (server configuration option)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   This topic describes how to configure the **cursor threshold** server configuration option in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. The **cursor threshold** option specifies the number of rows in the cursor set at which cursor keysets are generated asynchronously. When cursors generate a keyset for a result set, the query optimizer estimates the number of rows that will be returned for that result set. If the query optimizer estimates that the number of returned rows is greater than this threshold, the cursor is generated asynchronously, allowing the user to fetch rows from the cursor while the cursor continues to be populated. Otherwise, the cursor is generated synchronously, and the query waits until all rows are returned.  
@@ -77,7 +73,7 @@ ms.author: maghan
 3.  Copy and paste the following example into the query window and click **Execute**. This example shows how to use [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) to set the `cursor threshold` option to `0` so that cursor keysets are generated asynchronously.  
   
 ```sql  
-USE AdventureWorks2012 ;  
+USE AdventureWorks2022;  
 GO  
 EXEC sp_configure 'show advanced options', 1 ;  
 GO  

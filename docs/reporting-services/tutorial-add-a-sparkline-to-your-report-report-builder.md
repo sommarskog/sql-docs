@@ -1,15 +1,13 @@
 ---
-title: "Tutorial: Add a Sparkline to Your Report (Report Builder) | Microsoft Docs"
+title: "Tutorial: Add a Sparkline to Your Report (Report Builder)"
 description: Learn how to use the Report Builder to create a basic table with a sparkline chart in a Reporting Services paginated report.
-ms.date: 05/30/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: reporting-services
-
-ms.topic: conceptual
-ms.assetid: 18c90a36-48bf-4805-a960-2d1e8f00c2dc
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 05/30/2017
+ms.service: reporting-services
+ms.subservice: reporting-services
+ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 
 # Tutorial: Add a Sparkline to Your Report (Report Builder)
@@ -56,7 +54,7 @@ For more information about requirements, see [Prerequisites for Tutorials &#40;R
   
 9. Click **Credentials**. Enter the credentials that you need to access the external data source.  
   
-10. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
+10. Select **OK**.
   
     You are back on the **Choose a connection to a data source** page.  
   
@@ -64,7 +62,7 @@ For more information about requirements, see [Prerequisites for Tutorials &#40;R
   
     The message "Connection created successfully" appears.  
   
-12. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
+12. Select **OK**.
   
 13. Click **Next**.  
   
@@ -207,7 +205,7 @@ The **SalesDate** values display in the default date format, and the summary val
   
 7.  Click the plus (+) sign in the Values box, then click **Sales**. 
 
-    ![Screenshot showing how to add values to the report builder sparkline. ](../reporting-services/media/report-builder-sparkline-values.png) 
+    ![Screenshot showing how to add values to the report builder sparkline.](../reporting-services/media/report-builder-sparkline-values.png) 
   
     The values in the **Sales** field are now the values for the sparkline.  
   
@@ -280,10 +278,10 @@ The text can be further enhanced by applying different font styles, sizes, and c
   
 7.  Select **Bold**.  
   
-8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
+8.  Select **OK**.
   
 ## <a name="Save"></a>9. Save the Report  
-Save the report to a report server or your computer. If you do not save the report to the report server, a number of [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] features such as report parts and subreports are not available.  
+Save the report to a report server or your computer. If you do not save the report to the report server, a number of [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] features such as subreports are not available.  
   
 ### To save the report on a report server  
   
@@ -318,4 +316,4 @@ This concludes the tutorial for creating a table report with sparkline charts. F
 [Report Builder Tutorials](../reporting-services/report-builder-tutorials.md) 
 [Report Builder in SQL Server](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
 
-More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)
+More questions? [Try asking the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user)

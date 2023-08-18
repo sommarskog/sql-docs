@@ -1,15 +1,12 @@
 ---
 title: Customize Database Deployments Using Deployment Contributors
 description: Learn how to modify the behavior of database projects. View resources on build and deployment contributors, and see examples of scenarios that use them.
-ms.prod: sql
-ms.technology: ssdt
-ms.topic: conceptual
-ms.assetid: fe2064bb-e01e-4a12-9f12-a99aa9a5203f
 author: markingmyname
 ms.author: maghan
-ms.reviewer: “”
-ms.custom: seo-lt-2019
 ms.date: 02/09/2017
+ms.service: sql
+ms.subservice: ssdt
+ms.topic: conceptual
 ---
 
 # Customize Database Build and Deployment by Using Build and Deployment Contributors
@@ -23,7 +20,7 @@ You can create an extension for the extensibility points, as shown in the follow
 |--------------|------------------------|-------------|  
 |Build|BuildContributor|This type of extension is executed when the SQL project is built after the project model has been completely validated. The build contributor can access the completed model, in addition to all properties of the Build task and any custom arguments.|  
 |Deploy|DeploymentPlanModifier|This type of extension is executed when the SQL project is deployed, as part of the deployment pipeline, after the deployment plan has been generated, but before the deployment plan is executed. You can use a DeploymentPlanModifier to modify the deployment plan by adding or removing steps. Deployment contributors can access the deployment plan, the comparison results, and the source and target models.|  
-|Deploy|DeploymentPlanExecutor|This type of extension is executed when the deployment plan is executed and provides read-only access to the deployment plan. The DeploymentPlanExectutor performs actions based on the deployment plan.|  
+|Deploy|DeploymentPlanExecutor|This type of extension is executed when the deployment plan is executed and provides read-only access to the deployment plan. The DeploymentPlanExecutor performs actions based on the deployment plan.|  
   
 ### Supported Extensibility Scenarios  
 You can implement build or deployment contributors to enable the following example scenarios:  

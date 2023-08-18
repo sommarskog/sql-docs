@@ -1,14 +1,13 @@
 ---
+title: "Using Statement Parameters"
 description: "Using Statement Parameters"
-title: "Using Statement Parameters | Microsoft Docs"
-ms.custom: ""
+author: markingmyname
+ms.author: maghan
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
-ms.technology: native-client
+ms.service: sql
+ms.subservice: native-client
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "SQL Server Native Client ODBC driver, parameters"
   - "parameters [SQL Server Native Client], ODBC"
   - "ODBC, parameters"
@@ -16,13 +15,10 @@ helpviewer_keywords:
   - "parameter markers [ODBC]"
   - "SQL Server Native Client ODBC driver, statements"
   - "ODBC applications, statements"
-ms.assetid: 2427d886-ec6c-49d7-b0b6-0d998b64cdb9
-author: markingmyname
-ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Using Statement Parameters
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   A parameter is a variable in an SQL statement that can enable an ODBC application to:  
   
@@ -38,7 +34,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 INSERT INTO Parts (PartID, Description, Price) VALUES (2100, 'Drive shaft', 50.00)  
 ```  
   
- Although this statement is acceptable for inserting one row with a known set of values, it is awkward when an application is required to insert several rows. ODBC addresses this by letting an application to replace any data value in an SQL statement by a parameter maker. This is denoted by a question mark (?). In the following example, three data values are replaced with parameter markers:  
+ Although this statement is acceptable for inserting one row with a known set of values, it is awkward when an application is required to insert several rows. ODBC addresses this by letting an application to replace any data value in an SQL statement by a parameter marker. This is denoted by a question mark (?). In the following example, three data values are replaced with parameter markers:  
   
 ```  
 INSERT INTO Parts (PartID, Description, Price) VALUES (?, ?, ?)  

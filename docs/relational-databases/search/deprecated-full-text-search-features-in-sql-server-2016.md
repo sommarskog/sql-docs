@@ -1,24 +1,21 @@
 ---
-description: "Deprecated Full-Text Search features in SQL Server 2016"
 title: "Deprecated Full-Text Search features in SQL Server 2016"
+description: "Deprecated Full-Text Search features in SQL Server 2016"
+author: rwestMSFT
+ms.author: randolphwest
+ms.reviewer: mikeray
 ms.date: "08/19/2016"
-ms.prod: sql
-ms.prod_service: "search, sql-database"
-ms.technology: search
+ms.service: sql
+ms.subservice: search
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "deprecated features [full-text search]"
   - "full-text search [SQL Server], deprecated features"
   - "full-text queries [SQL Server], proximity"
-ms.assetid: ab0d799c-ba79-4459-837b-c4862730dafd
-author: pmasl
-ms.author: pelopes
-ms.reviewer: mikeray
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
-ms.custom: "seo-lt-2019"
 ---
 # Deprecated Full-Text Search features in SQL Server 2016
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
   This topic describes the deprecated full-text search features still available in SQL Server. These features are scheduled to be removed in a future release. Do not use deprecated features in new applications.  
   
 Monitor your use of deprecated features by using the **SQL Server:Deprecated Features** object performance counter and trace events. For more information, see [Use SQL Server Objects](../../relational-databases/performance-monitor/use-sql-server-objects.md).  
@@ -45,7 +42,7 @@ Monitor your use of deprecated features by using the **SQL Server:Deprecated Fea
   
 |Deprecated feature|Replacement|Feature name|Feature ID|  
 |------------------------|-----------------|------------------|----------------|  
-|CONTAINS and CONTAINSTABLE generic NEAR operator:<br /><br /> {<simple_term> &#124; <prefix_term>}<br /><br /> {<br /><br /> { { NEAR &#124; ~ }    {<simple_term> &#124; <prefix_term>} } [...*n*]<br /><br /> }|The custom NEAR operator:<br /><br /> NEAR(<br /><br /> {   {<simple_term> &#124; <prefix_term>} [ ,...*n* ]<br /><br /> &#124; ( {<simple_term> &#124; <prefix_term>} [,...*n*] )<br /><br /> [,<distance> [,<order>] ]<br /><br /> }<br /><br /> )<br /><br /> <distance> ::= {*integer* &#124; **MAX**}<br /><br /> <order> ::= {TRUE &#124; **FALSE**}|FULLTEXT_OLD_NEAR_SYNTAX|247|  
+|CONTAINS and CONTAINSTABLE generic NEAR operator:<br /><br /> {\<simple_term\> &#124; \<prefix_term\>}<br /><br /> {<br /><br /> { { NEAR &#124; ~ }    {<simple_term> &#124; \<prefix_term\>} } [...*n*]<br /><br /> }|The custom NEAR operator:<br /><br /> NEAR(<br /><br /> {   {\<simple_term\> &#124; \<prefix_term\>} [ ,...*n* ]<br /><br /> &#124; ( {\<simple_term\> &#124; \<prefix_term\>} [,...*n*] )<br /><br /> [,\<distance\> [,\<order\>] ]<br /><br /> }<br /><br /> )<br /><br /> \<distance\> ::= {*integer* &#124; **MAX**}<br /><br /> \<order\> ::= {TRUE &#124; **FALSE**}|FULLTEXT_OLD_NEAR_SYNTAX|247|  
 |CREATE FULLTEXT CATALOG option:<br /><br /> IN PATH '*rootpath*'<br /><br /> ON FILEGROUP *filegroup*|None.|CREATE FULLTEXT CATLOG IN PATH<br /><br /> None.<sup>*</sup>|237<br /><br /> None.*|  
 |DATABASEPROPERTYEX property: IsFullTextEnabled|None.|DATABASEPROPERTYEX**('IsFullTextEnabled')**|202|  
 |sp_detach_db option:<br /><br /> [ @keepfulltextindexfile = ] '*KeepFulltextIndexFile*'|None.|sp_detach_db @keepfulltextindexfile|226|  

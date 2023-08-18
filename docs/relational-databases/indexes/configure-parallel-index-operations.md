@@ -1,26 +1,22 @@
 ---
-description: "Configure Parallel Index Operations"
-title: "Configure Parallel Index Operations | Microsoft Docs"
-ms.custom: ""
+title: "Configure Parallel Index Operations"
+description: Configure Parallel Index Operations
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "02/17/2017"
-ms.prod: sql
-ms.prod_service: "table-view-index, sql-database"
-ms.reviewer: ""
-ms.technology: table-view-index
+ms.service: sql
+ms.subservice: table-view-index
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "index parallel operations [SQL Server]"
   - "processors [SQL Server], parallel index operations"
   - "max degree of parallelism option"
   - "MAXDOP index option, parallel index operations"
   - "parallel index operations [SQL Server]"
-ms.assetid: 8ec8c71e-5fc1-443a-92da-136ee3fc7f88
-author: MikeRayMSFT
-ms.author: mikeray
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Configure Parallel Index Operations
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 This topic defines max degree of parallelism and explains how to modify this setting in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. 
 
@@ -107,7 +103,7 @@ On multiprocessor systems that are running [!INCLUDE[ssNoVersion](../../includes
 3.  Copy and paste the following example into the query window and click **Execute**.  
   
     ```sql  
-    USE AdventureWorks2012;   
+    USE AdventureWorks2022;   
     GO  
     /*Alters the IX_ProductVendor_VendorID index on the Purchasing.ProductVendor table so that, if the server has eight or more processors, the Database Engine will limit the execution of the index operation to eight or fewer processors.  
     */  
@@ -127,7 +123,7 @@ On multiprocessor systems that are running [!INCLUDE[ssNoVersion](../../includes
 3.  Copy and paste the following example into the query window and click **Execute**.  
   
     ```sql  
-    USE AdventureWorks2012;  
+    USE AdventureWorks2022;  
     GO  
     CREATE INDEX IX_ProductVendor_NewVendorID   
     ON Purchasing.ProductVendor (BusinessEntityID)  

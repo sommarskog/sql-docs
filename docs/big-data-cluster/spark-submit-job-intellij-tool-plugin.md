@@ -1,27 +1,28 @@
 ---
 title: "Run Spark jobs: Azure Toolkit for IntelliJ"
 titleSuffix: SQL Server Big Data Clusters
-description: Learn how to submit Spark jobs on SQL Server big data clusters in Azure Toolkit for IntelliJ by submitting a local Jar or Py file.
+description: Learn how to submit Spark jobs on SQL Server Big Data Clusters in Azure Toolkit for IntelliJ by submitting a local Jar or Py file.
 author: jejiang
 ms.author: jejiang
-ms.reviewer: mikeray
+ms.reviewer: wiassaf
+ms.date: 10/05/2021
+ms.service: sql
+ms.subservice: big-data-cluster
 ms.topic: conceptual
-ms.metadata: seo-lt-2019
-ms.date: 12/13/2019
-ms.prod: sql
-ms.technology: big-data-cluster
 ---
 
 # Submit Spark jobs on [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] in IntelliJ
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
+[!INCLUDE[big-data-clusters-banner-retirement](../includes/bdc-banner-retirement.md)]
+
 One of the key scenarios for [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] is the ability to submit Spark jobs. The Spark job submission feature allows you to submit a local Jar or Py files with references to [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]. It also enables you to execute a Jar or Py files, which are already located in the HDFS file system. 
 
 ## Prerequisites
 
 - SQL Server big data cluster.
-- Oracle Java Development Kit. You can install it from the [Oracle website](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html).
+- Java Development Kit.
 - IntelliJ IDEA. You can install it from the [JetBrains website](https://www.jetbrains.com/idea/download/).
 - Azure Toolkit for IntelliJ extension. For installation instructions, see [Install Azure Toolkit for IntelliJ](/azure/azure-toolkit-for-intellij-installation).
 
@@ -33,13 +34,13 @@ One of the key scenarios for [!INCLUDE[big-data-clusters-2019](../includes/ssbig
     ![link SQL Server big data cluster - disable TLS/SSL](./media/spark-submit-job-intellij-tool-plugin/link-ariscluster-disableSSL.png)
 
 3. Open Azure Explorer from **View** menu, select **Tool Windows**, and then select **Azure Explorer**.
-4. Right click on **SQL Server big data cluster**, select **Link SQL Server big data cluster**. Enter the **Server**, **User Name**, and **Password**, then click **OK**.
+4. Right-click on **SQL Server big data cluster**, select **Link SQL Server big data cluster**. Enter the **Server**, **User Name**, and **Password**, then click **OK**.
 
     ![link Big Data cluster - dialog](./media/spark-submit-job-intellij-tool-plugin/link-ariscluster-dialog.png)
 
 5. When the untrusted server's certificate dialog appears, click **Accept**. You can manage the certificate later, see [Server Certificates](https://www.jetbrains.com/help/idea/settings-tools-server-certificates.html).
 
-6. The linked cluster lists under **SQL Server big data cluster**. You could monitor spark job by opening the spark history UI and Yarn UI, you could also unlink, by right clicking on the cluster.
+6. The linked cluster lists under **SQL Server big data cluster**. You could monitor spark job by opening the spark history UI and Yarn UI, you could also unlink, by right-clicking on the cluster.
 
     ![link Big Data cluster - context menu](./media/spark-submit-job-intellij-tool-plugin/link-ariscluster-contextmenu.png)
 
@@ -191,4 +192,4 @@ For convenience, you can see the script result by sending some code to the Local
    ![Send Selection To Spark Console](./media/spark-submit-job-intellij-tool-plugin/send-selection-to-console.png)
 
 ## Next steps
-For more information on SQL Server big data cluster and related scenarios, see [What are [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]](big-data-cluster-overview.md)?
+For more information on SQL Server big data cluster and related scenarios, see [Introducing [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]](big-data-cluster-overview.md).

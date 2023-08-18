@@ -1,28 +1,24 @@
 ---
+title: "Logical Operators (Transact-SQL)"
 description: "Logical Operators (Transact-SQL)"
-title: "Logical Operators (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/06/2017"
-ms.prod: sql
-ms.prod_service: "sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "operators [Transact-SQL], logical"
   - "testing truth"
   - "truth testing"
   - "TRUE"
   - "FALSE"
   - "logical operators [SQL Server], Transact-SQL"
-ms.assetid: edd92f08-76fb-4fd7-a4b6-8520d6a81df1
-author: cawrites
-ms.author: chadam
+dev_langs:
+  - "TSQL"
 ---
 # Logical Operators (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Logical operators test for the truth of some condition. Logical operators, like comparison operators, return a **Boolean** data type with a value of TRUE, FALSE, or UNKNOWN.  
   

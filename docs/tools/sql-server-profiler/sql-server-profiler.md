@@ -2,15 +2,12 @@
 title: SQL Server Profiler
 titleSuffix: SQL Server Profiler
 description: Explore the features of SQL Server Profiler. Get help troubleshooting problems by using this tool to create traces and analyze and replay trace results.
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: profiler
-ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.reviewer: ""
-ms.custom: seo-lt-2019
-ms.date: 05/01/2020
+ms.date: 06/28/2021
+ms.service: sql
+ms.subservice: profiler
+ms.topic: conceptual
 ---
 
 # SQL Server Profiler
@@ -28,7 +25,7 @@ ms.date: 05/01/2020
 > [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] for Analysis Services workloads are supported.
 
 > [!NOTE]
-> When you try to connect to a Azure SQL Database from SQL server profiler, it incorrectly throws a misleading error message as follows:
+> When you try to connect to a Azure SQL Database from SQL Server profiler, it incorrectly throws a misleading error message as follows:
 >
 > - In order to run a trace against SQL Server, you must be a member of sysadmin fixed server role or have the ALTER TRACE permission.
 >
@@ -36,7 +33,7 @@ ms.date: 05/01/2020
 
 ## Where is the Profiler?
 
-You can start the Profiler in a number of ways from within [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. [Here is a topic that lists the ways to start the Profiler.](start-sql-server-profiler.md)
+You can start the Profiler within [SQL Server Management Studio](start-sql-server-profiler.md) or with the [Azure Data Studio using the SQL Server Profiler extension](../../azure-data-studio/extensions/sql-server-profiler-extension.md). 
 
 ## Capture and replay trace data
 
@@ -44,7 +41,7 @@ The following table shows the features we recommend using in [!INCLUDE[ssnoversi
 
 |**Feature\Target Workload**|**Relational Engine**|**Analysis Services**|  
 |-|-|-|
-|**Trace Capture**|[Extended Events](../../relational-databases/extended-events/extended-events.md) graphical user interface in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]|[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]|  
+|**Trace Capture**|[Extended Events](../../relational-databases/extended-events/extended-events.md) graphical user interface in SQL Server Management Studio|[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]|  
 |**Trace Replay**|[Distributed Replay](../distributed-replay/sql-server-distributed-replay.md)|[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]|
 
 ## Use SQL Server Profiler

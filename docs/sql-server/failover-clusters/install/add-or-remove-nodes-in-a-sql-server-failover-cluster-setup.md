@@ -1,13 +1,13 @@
 ---
 title: "Add, remove nodes Failover Cluster Instance"
 description: This article shows you how to add or remove nodes in an existing SQL Server Always On failover cluster instance.
-ms.custom: "seo-lt-2019"
+author: MashaMSFT
+ms.author: mathoma
 ms.date: "12/13/2019"
-ms.reviewer: ""
-ms.prod: sql
-ms.technology: failover-cluster-instance
+ms.service: sql
+ms.subservice: failover-cluster-instance
 ms.topic: how-to
-helpviewer_keywords: 
+helpviewer_keywords:
   - "adding nodes"
   - "nodes [Faillover Clustering], removing"
   - "nodes [Faillover Clustering], adding"
@@ -15,9 +15,6 @@ helpviewer_keywords:
   - "deleting nodes"
   - "cluster maintenance [SQL Server]"
   - "removing nodes"
-ms.assetid: fe20dca9-a4c1-4d32-813d-42f1782dfdd3
-author: cawrites
-ms.author: chadam
 ---
 
 # Add or remove nodes in a failover cluster instance (Setup)
@@ -49,7 +46,7 @@ ms.author: chadam
   
 2.  The Installation Wizard will launch the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Installation Center. To add a node to an existing failover cluster instance, click **Installation** in the left-hand pane. Then, select **Add node to a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover cluster**.  
   
-3.  The System Configuration Checker will run a discovery operation on your computer. To continue, [!INCLUDE[clickOK](../../../includes/clickok-md.md)].  
+3.  The System Configuration Checker will run a discovery operation on your computer. To continue, select **OK**.
   
 4.  On the Language Selection page, you can specify the language for your instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] if you are installing on a localized operating system and the installation media includes language packs for both English and the language corresponding to the operating system. For more information about cross-language support and installation considerations, see [Local Language Versions in SQL Server](../../../sql-server/install/local-language-versions-in-sql-server.md).  
   
@@ -89,7 +86,7 @@ ms.author: chadam
   
 2.  The Installation Wizard launches the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Installation Center. To remove a node to an existing failover cluster instance, click **Maintenance** in the left-hand pane, and then select **Remove node from a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover cluster**.  
   
-3.  The System Configuration Checker will run a discovery operation on your computer. To continue, [!INCLUDE[clickOK](../../../includes/clickok-md.md)].  
+3.  The System Configuration Checker will run a discovery operation on your computer. To continue, select **OK**.
   
 4.  After you click install on the Setup Support Files page, the System Configuration Checker verifies the system state of your computer before Setup continues. After the check is complete, click **Next** to continue.  
   

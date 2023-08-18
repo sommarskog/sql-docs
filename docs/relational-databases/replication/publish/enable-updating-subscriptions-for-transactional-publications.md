@@ -1,26 +1,24 @@
 ---
 title: "Enable Updatable Subscriptions for Transactional Publications"
 description: Learn how to enable Updatable Subscriptions for a Transactional Publication in SQL Server.
-ms.custom: seo-lt-2019
+author: "MashaMSFT"
+ms.author: "mathoma"
 ms.date: "03/17/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: replication
+ms.service: sql
+ms.subservice: replication
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "transactional replication, updatable subscriptions"
   - "updatable subscriptions, enabling"
   - "subscriptions [SQL Server replication], updatable"
-ms.assetid: 539d5bb0-b808-4d8c-baf4-cb6d32d2c595
-author: "MashaMSFT"
-ms.author: "mathoma"
 ---
 # Enable Updating Subscriptions for Transactional Publications
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   This topic describes how to enable updating subscriptions for transactional publications in [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   
-> **NOTE!!** [!INCLUDE[ssNoteDepFutureAvoid](../../../includes/ssnotedepfutureavoid-md.md)]  
+> [!NOTE]  
+> [!INCLUDE[ssNoteDepFutureAvoid](../../../includes/ssnotedepfutureavoid-md.md)]  
   
 
 ##  <a name="BeforeYouBegin"></a> Before You Begin  
@@ -39,7 +37,8 @@ ms.author: "mathoma"
   
 2.  On the **Agent Security** page, specify security settings for the Queue Reader Agent in addition to the Snapshot Agent and Log Reader Agent. For more information about the permissions required for the account under which the Queue Reader Agent runs, see [Replication Agent Security Model](../../../relational-databases/replication/security/replication-agent-security-model.md).  
 
-    > **NOTE:** The Queue Reader Agent is configured even if you use only immediate updating subscriptions.  
+    > [!NOTE]  
+    > The Queue Reader Agent is configured even if you use only immediate updating subscriptions.  
   
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
  When creating a transactional publication programmatically using replication stored procedures, you can enable either immediate or queued updating subscriptions.  
@@ -104,5 +103,4 @@ ms.author: "mathoma"
  [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md)   
  [Create an Updatable Subscription to a Transactional Publication](create-an-updatable-subscription-to-a-transactional-publication.md)   
  [Updatable Subscriptions for Transactional Replication](../../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)   
- [Use sqlcmd with Scripting Variables](../../../ssms/scripting/sqlcmd-use-with-scripting-variables.md)  
-  
+ [Use sqlcmd with Scripting Variables](../../../tools/sqlcmd/sqlcmd-use-scripting-variables.md)

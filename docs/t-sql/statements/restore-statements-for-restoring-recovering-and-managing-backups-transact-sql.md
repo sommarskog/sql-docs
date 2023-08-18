@@ -1,16 +1,13 @@
 ---
 title: Restoring, recovering, and managing backups
 description: Transact-SQL RESTORE statements for restoring, recovering, and managing backups.
-ms.custom: "seo-lt-2019​"
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "03/30/2018"
-ms.prod: sql
-ms.prod_service: "sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "restoring files [SQL Server], RESTORE statement"
   - "RESTORE statement, about restore operations"
   - "database restores [SQL Server], RESTORE statement"
@@ -19,18 +16,18 @@ helpviewer_keywords:
   - "backing up databases [SQL Server], RESTORE statement"
   - "file restores [SQL Server], RESTORE statement"
   - "transaction log backups [SQL Server], RESTORE statement"
-ms.assetid: fb29a151-f312-4f85-b857-5deeca0de8ce
-author: MikeRayMSFT
-ms.author: mikeray
+dev_langs:
+  - "TSQL"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017"
 ---
 # RESTORE Statements for Restoring, Recovering, and Managing Backups (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdbmi-xxxx-xxx-md.md )]
+
+[!INCLUDE[sql-asdbmi](../../includes/applies-to-version/sql-asdbmi.md)]
 
   This section describes the RESTORE statements for backups. In addition to the main RESTORE {DATABASE | LOG} statement for restoring and recovering backups, a number of auxiliary RESTORE statements help you manage your backups and plan your restore sequences. The auxiliary RESTORE commands include: RESTORE FILELISTONLY, RESTORE HEADERONLY, RESTORE LABELONLY, RESTORE REWINDONLY, and RESTORE VERIFYONLY.  
   
 > [!IMPORTANT]  
->  In previous versions of SQL Server, any user could obtain information about backup sets and backup devices by using the RESTORE FILELISTONLY, RESTORE HEADERONLY, RESTORE LABELONLY, and RESTORE VERIFYONLY Transact-SQL statements. Because they reveal information about the content of the backup files, in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later versions these statements require CREATE DATABASE permission. This requirement secures your backup files and protects your backup information more fully than in previous versions. For information about this permission, see [GRANT Database Permissions &#40;Transact-SQL&#41;](../../t-sql/statements/grant-database-permissions-transact-sql.md).  
+>  In previous versions of SQL Server, any user could obtain information about backup sets and backup devices by using the RESTORE FILELISTONLY, RESTORE HEADERONLY, RESTORE LABELONLY, and RESTORE VERIFYONLY Transact-SQL statements. Because they reveal information about the content of the backup files, in [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later versions these statements require CREATE DATABASE permission. This requirement secures your backup files and protects your backup information more fully than in previous versions. For information about this permission, see [GRANT Database Permissions &#40;Transact-SQL&#41;](../../t-sql/statements/grant-database-permissions-transact-sql.md).  
   
 ## In This Section  
   

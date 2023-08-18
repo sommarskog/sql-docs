@@ -1,21 +1,14 @@
 ---
+title: "User Roles"
 description: "User Roles"
-title: "User Roles | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "integration-services"
-ms.reviewer: ""
-ms.technology: integration-services
-ms.topic: conceptual
-ms.assetid: be0ec384-e03b-4483-96ca-02b289804d6a
 author: chugugrace
 ms.author: chugu
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
 ---
 # User Roles
-
-[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
-
 
   This section describes the user roles for the Change Data Capture Service for Oracle by Attunity. The roles described are [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database roles, Windows roles, or Oracle database roles.  
   
@@ -58,7 +51,7 @@ ms.author: chugu
   
  When creating an Oracle CDC Service on Windows Vista or Windows Server 2008, the default service account is the NETWORK SERVICE account.  
   
- On Windows 7, Windows Server 2008 R2 and later, the default service account is NT Service\\<service-name>.  
+ On Windows 7, Windows Server 2008 R2 and later, the default service account is NT Service\\\\<service-name\>.  
   
  When [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] runs on another machine or is a clustered [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance and there the service needs to connect to the target [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] using Windows authentication, then the service account should be a domain account.  
   

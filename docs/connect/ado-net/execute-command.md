@@ -1,17 +1,15 @@
 ---
 title: "Executing a command"
 description: Describes the Microsoft SqlClient Data Provider for SQL Server `Command` object and how to use it to execute queries and commands against a data source.
-ms.date: "11/25/2020"
-dev_langs: 
-  - "csharp"
-ms.assetid: 40494916-c25a-4cb8-8f7c-fcb8d378464e
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: connectivity
-ms.topic: conceptual
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ms.reviewer: v-chmalh
+ms.date: "11/25/2020"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: conceptual
+dev_langs:
+  - "csharp"
 ---
 # Executing a command
 
@@ -47,9 +45,7 @@ The following code example demonstrates how to create a <xref:Microsoft.Data.Sql
 
 ### Troubleshooting commands
 
-[!INCLUDE[appliesto-netfx-xxxx-xxxx-md](../../includes/appliesto-netfx-xxxx-xxxx-md.md)]
-
-The Microsoft SqlClient Data Provider for SQL Server adds **performance counters** to enable you to detect intermittent problems related to failed command executions. For more information, see [Performance counters in SqlClient](performance-counters.md).
+The Microsoft SqlClient Data Provider for SQL Server adds **diagnostic counters** to enable you to detect intermittent problems related to failed command executions. For more information, see [Diagnostic counters in SqlClient](diagnostic-counters.md).
 
 ## See also
 

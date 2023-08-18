@@ -1,30 +1,26 @@
 ---
+title: "CONNECTIONPROPERTY (Transact-SQL)"
 description: "CONNECTIONPROPERTY (Transact-SQL)"
-title: "CONNECTIONPROPERTY (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: markingmyname
+ms.author: maghan
 ms.date: "07/24/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "CONNECTIONPROPERTY_TSQL"
   - "CONNECTIONPROPERTY"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "CONNECTIONPROPERTY statement"
-ms.assetid: 6bd9ccae-af77-4a05-b97f-f8ab41cfde42
-author: cawrites
-ms.author: chadam
+dev_langs:
+  - "TSQL"
 ---
 # CONNECTIONPROPERTY (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 For a request that comes in to the server, this function returns information about the connection properties of the unique connection which supports that request.
   
-![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## Syntax  
   

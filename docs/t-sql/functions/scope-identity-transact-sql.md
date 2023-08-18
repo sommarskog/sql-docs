@@ -1,33 +1,29 @@
 ---
+title: "SCOPE_IDENTITY (Transact-SQL)"
 description: "SCOPE_IDENTITY (Transact-SQL)"
-title: "SCOPE_IDENTITY (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: VanMSFT
+ms.author: vanto
 ms.date: "07/06/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "SCOPE_IDENTITY"
   - "SCOPE_IDENTITY_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "identity columns [SQL Server], SCOPE_IDENTITY function"
   - "SCOPE_IDENTITY function"
   - "last-inserted identity values"
   - "identity values [SQL Server], last-inserted"
-ms.assetid: eef24670-059b-4f10-91d4-a67bc1ed12ab
-author: VanMSFT
-ms.author: vanto
+dev_langs:
+  - "TSQL"
 ---
 # SCOPE_IDENTITY (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Returns the last identity value inserted into an identity column in the same scope. A scope is a module: a stored procedure, trigger, function, or batch. Therefore, if two statements are in the same stored procedure, function, or batch, they are in the same scope.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -135,7 +131,7 @@ SCOPE_IDENTITY
  The `Person.ContactType` table has a maximum identity value of 20. If you insert a row into the table, `@@IDENTITY` and `SCOPE_IDENTITY()` return the same value.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 INSERT INTO Person.ContactType ([Name]) VALUES ('Assistant to the Manager');  
 GO  

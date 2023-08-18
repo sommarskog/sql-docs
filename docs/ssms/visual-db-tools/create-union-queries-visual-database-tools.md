@@ -1,26 +1,21 @@
 ---
-description: "Create UNION Queries (Visual Database Tools)"
 title: Create UNION Queries
-ms.custom: seo-lt-2019
+description: "Create UNION Queries (Visual Database Tools)"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
+ms.service: sql
+ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "queries [SQL Server], types"
   - "UNION queries"
   - "Select query"
   - "combining query results"
   - "merged SELECT query [SQL Server]"
-ms.assetid: b5aafb1d-e4ed-4922-b790-56abc5ec551a
-author: markingmyname
-ms.author: maghan
-ms.reviewer: 
-
 ---
 # Create UNION Queries (Visual Database Tools)
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server](../../includes/applies-to-version/sqlserver.md)]
 The UNION keyword enables you to include the results of two SELECT statements in one resulting table. All rows returned from either SELECT statement are combined into the result of the UNION expression. For examples, see [SELECT Examples (Transact-SQL)](../../t-sql/queries/select-examples-transact-sql.md).  
   
 > [!NOTE]  

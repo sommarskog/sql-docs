@@ -1,32 +1,31 @@
 ---
 title: "Using connection string keywords"
 description: Some SQL Server Native Client APIs use connection strings to specify connection attributes. Connection strings are keyword/value pairs.
-ms.custom: ""
-ms.date: "03/05/2021"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: native-client
+author: markingmyname
+ms.author: maghan
+ms.date: "02/15/2022"
+ms.service: sql
+ms.subservice: native-client
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sql13.swb.connecttoserver.options.registeredservers.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "data access [SQL Server Native Client], connection string keywords"
   - "SQLNCLI, connection string keywords"
   - "connection strings [SQL Server Native Client]"
   - "SQL Server Native Client, connection string keywords"
-ms.assetid: 16008eec-eddf-4d10-ae99-29db26ed6372
-author: markingmyname
-ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Using Connection String Keywords with SQL Server Native Client
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
+> [!IMPORTANT] 
+> [!INCLUDE[snac-removed-oledb-and-odbc](../../../includes/snac-removed-oledb-and-odbc.md)]
+
   Some [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client APIs use connection strings to specify connection attributes. Connection strings are lists of keyword and associated values; each keyword identifies a particular connection attribute.  
 
-> [!IMPORTANT]
-> The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB (SQLNCLI) remains deprecated and it is not recommended to use it for new development work. Instead, use the new [Microsoft OLE DB Driver for SQL Server](../../../connect/oledb/oledb-driver-for-sql-server.md) (MSOLEDBSQL) which will be updated with the most recent server features.    
-> For information, see [Using Connection String Keywords with OLE DB Driver for SQL Server](../../../connect/oledb/applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md).
+For information, see [Using Connection String Keywords with OLE DB Driver for SQL Server](../../../connect/oledb/applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md).
+
 
 > [!NOTE]
 > [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client allows ambiguity in connection strings to maintain backward compatibility (for example, some keywords may be specified more than once, and conflicting keywords may be allowed with resolution based on position or precedence). It is good practice when modifying applications to use [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client to eliminate any dependency on connection string ambiguity.  
@@ -64,7 +63,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 |**Database**|Name of the default [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] database for the connection. If **Database** is not specified, the default database defined for the login is used. The default database from the ODBC data source overrides the default database defined for the login. The database must be an existing database unless **AttachDBFileName** is also specified. If **AttachDBFileName** is also specified, the primary file it points to is attached and given the database name specified by **Database**.|  
 |**Driver**|Name of the driver as returned by [SQLDrivers](../../../relational-databases/native-client-odbc-api/sqldrivers.md). The keyword value for the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC driver is "{SQL Server Native Client 11.0}". The **Server** keyword is required if **Driver** is specified and **DriverCompletion** is set to SQL_DRIVER_NOPROMPT.<br /><br /> For more information about driver names, see [Using the SQL Server Native Client Header and Library Files](../../../relational-databases/native-client/applications/using-the-sql-server-native-client-header-and-library-files.md).|  
 |**DSN**|Name of an existing ODBC user or system data source. This keyword overrides any values that might be specified in the **Server**, **Network**, and **Address** keywords.|  
-|**Encrypt**|Specifies whether data should be encrypted before sending it over the network. Possible values are "yes" and "no". The default value is "no".|  
+|**Encrypt**|Specifies whether data should be encrypted before sending it over the network. Possible values are "yes"/"mandatory"(18.0+), "no"/"optional"(18.0+), and "strict"(18.0+). The default value is "yes" in version 18.0+ and "no" in previous versions.|  
 |**Fallback**|This keyword is deprecated, and its setting is ignored by the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC driver.|  
 |**Failover_Partner**|Name of the failover partner server to be used if a connection cannot be made to the primary server.|  
 |**FailoverPartnerSPN**|The SPN for the failover partner. The default value is an empty string. An empty string causes [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client to use the default, driver-generated SPN.|  
@@ -79,7 +78,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 |**QueryLogFile**|Full path and file name of a file to use to log data on long-running queries.|  
 |**QueryLogTime**|Digit character string specifying the threshold (in milliseconds) for logging long-running queries. Any query that does not get a response in the time specified is written to the long-running query log file.|  
 |**QuotedId**|When "yes", QUOTED_IDENTIFIERS is set ON for the connection, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] uses the ISO rules regarding the use of quotation marks in SQL statements. When no, QUOTED_IDENTIFIERS is set OFF for the connection. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] then follows the legacy [!INCLUDE[tsql](../../../includes/tsql-md.md)] rules regarding the use of quotation marks in SQL statements. For more information, see [Effects of ISO Options](../../../relational-databases/native-client-odbc-queries/executing-statements/effects-of-iso-options.md).|  
-|**Regional**|When "yes", the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC driver uses client settings when converting currency, date, and time data to character data. The conversion is one way only; the driver does not recognize non-ODBC standard formats for date strings or currency values within; for example, a parameter used in an INSERT or UPDATE statement. When "no", the driver uses ODBC standard strings to represent currency, date, and time data that is converted to character data.|  
+|**Regional**|When "yes", the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC driver uses client settings when converting currency, date, and time data to character data. The conversion is one way only; the driver does not recognize non-ODBC standard formats for date strings or currency values within; for example, a parameter used in an INSERT or UPDATE statement. When "no", the driver uses ODBC standard strings to represent currency, date, and time data that is converted to character data.|
 |**SaveFile**|Name of an ODBC data source file into which the attributes of the current connection are saved if the connection is successful.|  
 |**Server**|The name of a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance. The value must be either the name of a server on the network, an IP address, or the name of a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Configuration Manager alias.<br /><br /> The **Address** keyword overrides the **Server** keyword.<br /><br /> You can connect to the default instance on the local server by specifying one of the following:<br /><br /> **Server=;**<br /><br /> **Server=.;**<br /><br /> **Server=(local);**<br /><br /> **Server=(local);**<br /><br /> **Server=(localhost);**<br /><br /> **Server=(localdb)\\** _instancename_ **;**<br /><br /> For more information about LocalDB support, see [SQL Server Native Client Support for LocalDB](../../../relational-databases/native-client/features/sql-server-native-client-support-for-localdb.md).<br /><br /> To specify a named instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], append **\\**_InstanceName_.<br /><br /> When no server is specified, a connection is made to the default instance on the local computer.<br /><br /> If you specify an IP address, make sure that the TCP/IP or named pipes protocols are enabled in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Configuration Manager.<br /><br /> The complete syntax for the **Server** keyword is as follows:<br /><br /> **Server=**[_protocol_**:**]*Server*[**,**_port_]<br /><br /> *protocol* can be **tcp** (TCP/IP), **lpc** (shared memory), or **np** (named pipes).<br /><br /> The following is an example of specifying a named pipe:<br /><br /> `np:\\.\pipe\MSSQL$MYINST01\sql\query`<br /><br /> This line specifies named pipe protocol, a named pipe on the local machine (`\\.\pipe`), the name of the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance (`MSSQL$MYINST01`), and the default name of the named pipe (`sql/query`).<br /><br /> If neither a *protocol* nor the **Network** keyword is specified, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client will use the protocol order specified in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Configuration Manager.<br /><br /> *port* is the port to connect to, on the specified server. By default, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] uses port 1433.<br /><br /> Spaces are ignored at the beginning of the value passed to **Server** in ODBC connection strings when using [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client.|  
 |**ServerSPN**|The SPN for the server. The default value is an empty string. An empty string causes [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client to use the default, driver-generated SPN.|  
@@ -91,7 +90,8 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 |**UseProcForPrepare**|This keyword is deprecated, and its setting is ignored by the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC Driver.|  
 |**WSID**|The workstation ID. Typically, this is the network name of the computer on which the application resides (optional). If specified, this value is stored in the **master.dbo.sysprocesses** column **hostname** and is returned by [sp_who](../../../relational-databases/system-stored-procedures/sp-who-transact-sql.md) and the [HOST_NAME](../../../t-sql/functions/host-name-transact-sql.md) function.|  
   
-> **NOTE:** Regional conversion settings apply to currency, numeric, date, and time data types. The conversion setting is only applicable to output conversion and is only visible when currency, numeric, date, or time values are converted to character strings.  
+> [!NOTE]  
+> Regional conversion settings apply to currency, numeric, date, and time data types. The conversion setting is only applicable to output conversion and is only visible when currency, numeric, date, or time values are converted to character strings.  
   
  The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC driver uses the locale registry settings for the current user. The driver does not honor the current thread's locale if the application sets it after connection by, for example, calling **SetThreadLocale**.  
   

@@ -1,34 +1,30 @@
 ---
+title: "FILEGROUP_ID (Transact-SQL)"
 description: "FILEGROUP_ID (Transact-SQL)"
-title: "FILEGROUP_ID (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: markingmyname
+ms.author: maghan
 ms.date: "03/03/2017"
-ms.prod: sql
-ms.prod_service: "sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "FILEGROUP_ID_TSQL"
   - "FILEGROUP_ID"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "FILEGROUP_ID function"
   - "identification numbers [SQL Server], filegroups"
   - "filegroups [SQL Server], IDs"
   - "IDs [SQL Server], filegroups"
   - "names [SQL Server], filegroups"
-ms.assetid: 852a76d8-9e61-4a31-84ee-c7edb84a061c
-author: cawrites
-ms.author: chadam
+dev_langs:
+  - "TSQL"
 ---
 # FILEGROUP_ID (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdbmi.md)]
 
 This function returns the filegroup identification (ID) number for a specified filegroup name.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

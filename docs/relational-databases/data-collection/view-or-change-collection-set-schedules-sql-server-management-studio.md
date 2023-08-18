@@ -1,24 +1,21 @@
 ---
-description: "View or Change Collection Set Schedules (SQL Server Management Studio)"
 title: "View or change collection set schedules"
+description: "View or Change Collection Set Schedules (SQL Server Management Studio)"
+author: MashaMSFT
+ms.author: mathoma
 ms.date: 06/03/2020
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: supportability
+ms.service: sql
+ms.subservice: supportability
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.swb.dc.collectionsetprop.uploads.f1"
   - "sql13.swb.dc.collectionsetprop.description.f1"
   - "sql13.swb.dc.collectionsetprop.general.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "collection sets [SQL Server], changing schedules"
   - "schedules [SQL Server], changing collection set"
   - "collection sets [SQL Server], viewing schedules"
   - "schedules [SQL Server], viewing collection set"
-ms.assetid: 26336c98-78c5-414f-8d6a-574fc3af60c4
-author: MashaMSFT
-ms.author: mathoma
-ms.custom: "seo-lt-2019"
 ---
 # View or Change Collection Set Schedules (SQL Server Management Studio)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -109,7 +106,6 @@ ms.custom: "seo-lt-2019"
 | :----- | :---------- |
 |**Non-cached. Collection and data upload on the same schedule.**|When selected, specify one of the following:<br /><br /> **Schedule**. Data is collected and uploaded according to a schedule. Click **Pick** to select from a predefined list of schedules, or click **New** to create a new schedule.<br /><br /> **On-demand**. Data is collected and uploaded on demand.|  
 |**Cached. Collect and cache data at a set of collection frequencies. Upload cached data on a separate schedule.**|Collect and cache data for a specified collection frequency. Upload the collected data on a separate schedule.|  
-|||
   
  **Collection items**  
  Displays the collection items in the collection set. The following information is provided for each collection item:  
@@ -133,7 +129,6 @@ ms.custom: "seo-lt-2019"
 | :----- | :---------- |
 |**Retain data for**|This option is selected by default, and the default retention period is 14 days.|  
 |**Retain data indefinitely**|There is no time limit on the length of time that data is retained.|  
-|||
 
  **Uploads Page**  
   

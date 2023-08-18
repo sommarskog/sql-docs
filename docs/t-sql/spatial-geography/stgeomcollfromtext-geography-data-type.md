@@ -1,26 +1,22 @@
 ---
+title: "STGeomCollFromText (geography Data Type)"
 description: "STGeomCollFromText (geography Data Type)"
-title: "STGeomCollFromText (geography Data Type) | Microsoft Docs"
-ms.custom: ""
+author: MladjoA
+ms.author: mlandzic
 ms.date: "07/30/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "STGeomCollFromText_TSQL"
   - "STGeomCollFromText (geography Data Type)"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "STGeomCollFromText method"
-ms.assetid: a5b3c344-1045-43a4-82fa-47f6206a288e
-author: MladjoA
-ms.author: mlandzic 
+dev_langs:
+  - "TSQL"
 ---
 # STGeomCollFromText (geography Data Type)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 Returns a **geography** instance from an Open Geospatial Consortium (OGC) Well-Known Text (WKT) representation, augmented with any Z (elevation) and M (measure) values carried by the instance.
   
@@ -53,7 +49,7 @@ STGeomCollFromText ( 'geometrycollection_tagged_text' , SRID )
 ## Examples  
  The following example uses `STGeomCollFromText()` to create a `geography` instance.  
   
-```  
+```sql
 DECLARE @g geography;  
 DECLARE @g geography;  
 SET @g = geography::STGeomCollFromText('GEOMETRYCOLLECTION ( POINT(-122.34900 47.65100), LINESTRING(-122.360 47.656, -122.343 47.656) )', 4326);  

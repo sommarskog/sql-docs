@@ -1,19 +1,16 @@
 ---
+title: "@@TOTAL_ERRORS (Transact-SQL)"
 description: "&#x40;&#x40;TOTAL_ERRORS (Transact-SQL)"
-title: "@@TOTAL_ERRORS (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "09/18/2017"
-ms.prod: sql
-ms.prod_service: "sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "@@TOTAL_ERRORS"
   - "@@TOTAL_ERRORS_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "@@TOTAL_ERRORS function"
   - "total errors [SQL Server]"
   - "errors [SQL Server], read/write"
@@ -21,16 +18,15 @@ helpviewer_keywords:
   - "disks [SQL Server], errors"
   - "write errors [SQL Server]"
   - "read/write errors"
-ms.assetid: 09e62428-ee0e-4ef5-b969-da9d255f1199
-author: julieMSFT
-ms.author: jrasnick
+dev_langs:
+  - "TSQL"
 ---
 # &#x40;&#x40;TOTAL_ERRORS (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Returns the number of disk write errors encountered by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] since [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] last started.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

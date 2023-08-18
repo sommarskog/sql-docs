@@ -1,23 +1,20 @@
 ---
+title: "Performance Event Category"
 description: "Performance Event Category"
-title: "Performance Event Category | Microsoft Docs"
-ms.custom: ""
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: supportability
+ms.service: sql
+ms.subservice: supportability
 ms.topic: reference
-helpviewer_keywords: 
+helpviewer_keywords:
   - "SQL Server event classes, Performance event category"
   - "Performance event category [SQL Server]"
   - "event classes [SQL Server], Performance event category"
-ms.assetid: 708f3585-d8be-4980-bbff-672d7c59397e
-author: "stevestein"
-ms.author: "sstein"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Performance Event Category
-[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
   Use the **Performance** event category to monitor **Showplan** event classes and event classes that are produced from the execution of SQL data manipulation language (DML) operators.  
   
 ## In This Section  

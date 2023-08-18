@@ -1,16 +1,13 @@
 ---
+title: "Hints (Transact-SQL)"
 description: "Hints (Transact-SQL)"
-title: "Hints (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: VanMSFT
+ms.author: vanto
 ms.date: "08/09/2017"
-ms.prod: sql
-ms.prod_service: "sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "query optimizer [SQL Server], hints"
   - "hints [SQL Server], about hints"
   - "SELECT statement [SQL Server], hints"
@@ -18,12 +15,11 @@ helpviewer_keywords:
   - "INSERT statement [SQL Server], hints"
   - "UPDATE statement [SQL Server], hints"
   - "DELETE statement [SQL Server], hints"
-ms.assetid: 99412475-b0df-4264-9938-33a0b302b41a
-author: VanMSFT
-ms.author: vanto
+dev_langs:
+  - "TSQL"
 ---
 # Hints (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Hints are options or strategies specified for enforcement by the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] query processor on SELECT, INSERT, UPDATE, or DELETE statements. The hints override any execution plan the query optimizer might select for a query.  
   

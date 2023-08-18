@@ -1,16 +1,13 @@
 ---
 title: "SQL Server Login Dialog Box (ODBC)"
 description: "The SQL Server Login dialog may appear when an application makes an ODBC connection without specifying enough information to connect to the database."
-ms.custom: ""
-ms.date: "01/29/2021"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: v-daenge
-ms.technology: connectivity
-ms.topic: conceptual
-ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
+ms.reviewer: v-davidengel
+ms.date: "08/08/2022"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: conceptual
 ---
 # SQL Server Login Dialog Box (ODBC)
 
@@ -93,11 +90,23 @@ Specifies the national language to use for SQL Server system messages. The compu
 
 ### Use strong encryption for data
 
-When selected, data that is passed through the connection will be encrypted. Logins are encrypted by default, even if the check box is cleared.
+When selected, data that is passed through the connection will be encrypted. Logins are encrypted by default, even if the check box is cleared. This option is available in ODBC Driver 17 and older.
+
+### Connection Encryption
+
+Declares the connection encryption mode to be used. Selecting the **Optional** or **Mandatory** option is equivalent to having **Use strong encryption for data** unselected or selected, respectively. When **Strict** is used, the connection will be encrypted using TDS 8.0. This option is available in ODBC Driver 18 and newer.
+
+### Server certificate (optional)
+
+Specifies the server certificate (PEM, DER, or CER format) to match against the certificate returned by the server during encryption negotiation. When specified, certificate validation is done by checking if the server's certificate is an exact match against the certificate specified. The **Hostname in certificate** option is ignored when a server certificate is specified. This option is applicable only when **Connection Encryption** is set to **Strict** and is available in ODBC Driver 18.1 and newer.
+
+### Hostname in certificate (optional)
+
+Specifies the hostname to be used when validating the server's certificate. When left blank, the server name is used as the hostname for validation. A hostname can only be specified when **Trust server certificate** is unselected. This option is available in ODBC Driver 18 and newer.
 
 ### Trust server certificate
 
-This option is applicable only when **Use strong encryption for data** is enabled. When selected, the server's certificate will not be validated to have the correct hostname of the server and be issued by a trusted certificate authority.
+This option is applicable only when **Use strong encryption for data** is enabled (ODBC Driver 17 and older), or when **Connection Encryption** is set to **Optional** or **Mandatory** (ODBC Driver 18 and newer). When selected, the server's certificate won't be validated to have the correct hostname of the server and be issued by a trusted certificate authority. The server's certificate will always be validated when using the **Strict** encryption mode.
 
 ## See Also
 

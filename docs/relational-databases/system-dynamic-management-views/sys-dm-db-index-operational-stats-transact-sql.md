@@ -1,28 +1,25 @@
 ---
-description: "sys.dm_db_index_operational_stats (Transact-SQL)"
 title: "sys.dm_db_index_operational_stats (Transact-SQL)"
-ms.custom: ""
-ms.date: "06/10/2016"
-ms.prod: sql
-ms.prod_service: "synapse-analytics, database-engine, pdw, sql-database"
-ms.reviewer: ""
-ms.technology: system-objects
+description: sys.dm_db_index_operational_stats (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
+ms.date: "06/19/2023"
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "dm_db_index_operational_stats"
   - "sys.dm_db_index_operational_stats_TSQL"
   - "sys.dm_db_index_operational_stats"
   - "dm_db_index_operational_stats_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.dm_db_index_operational_stats dynamic management function"
-author: WilliamDAssafMSFT
-ms.author: wiassaf
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+dev_langs:
+  - "TSQL"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_db_index_operational_stats (Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Returns current lower-level I/O, locking, latching, and access method activity for each partition of a table or index in the database.    
     
@@ -31,7 +28,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 > [!NOTE]    
 >  **sys.dm_db_index_operational_stats** does not return information about memory-optimized indexes. For information about memory-optimized index use, see [sys.dm_db_xtp_index_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-index-stats-transact-sql.md).    
         
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)    
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)    
     
 ## Syntax    
     
@@ -80,11 +77,11 @@ sys.dm_db_index_operational_stats (
     
 |Column name|Data type|Description|    
 |-----------------|---------------|-----------------|    
-|**database_id**|**smallint**|Database ID.|    
+|**database_id**|**smallint**|Database ID. <br /><br />In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], the values are unique within a single database or an elastic pool, but not within a logical server.|    
 |**object_id**|**int**|ID of the table or view.|    
 |**index_id**|**int**|ID of the index or heap.<br /><br /> 0 = Heap| 
 |**partition_number**|**int**|1-based partition number within the index or heap.| 
-|**hobt_id**|**bigint**|[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> ID of the data heap or B-tree rowset that tracks internal data for a columnstore index.<br /><br /> NULL - this is not an internal columnstore rowset.<br /><br /> For more details, see [sys.internal_partitions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md)|       
+|**hobt_id**|**bigint**|[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)], [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].<br /><br /> ID of the data heap or B-tree rowset that tracks internal data for a columnstore index.<br /><br /> NULL - this is not an internal columnstore rowset.<br /><br /> For more details, see [sys.internal_partitions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md)|       
 |**leaf_insert_count**|**bigint**|Cumulative count of leaf-level inserts.|    
 |**leaf_delete_count**|**bigint**|Cumulative count of leaf-level deletes. leaf_delete_count is only incremented for deleted records that are not marked as ghost first. For deleted records that are ghosted first, **leaf_ghost_count** is incremented instead.|    
 |**leaf_update_count**|**bigint**|Cumulative count of leaf-level updates.|    
@@ -125,7 +122,9 @@ sys.dm_db_index_operational_stats (
 |**tree_page_io_latch_wait_in_ms**|**bigint**|Subset of **page_io_latch_wait_in_ms** that includes only the upper-level B-tree pages. Always 0 for a heap or columnstore index.|    
 |**page_compression_attempt_count**|**bigint**|Number of pages that were evaluated for PAGE level compression for specific partitions of a table, index, or indexed view. Includes pages that were not compressed because significant savings could not be achieved. Always 0 for  columnstore index.|    
 |**page_compression_success_count**|**bigint**|Number of data pages that were compressed by using PAGE compression for specific partitions of a table, index, or indexed view. Always 0 for  columnstore index.|    
-    
+
+[!INCLUDE [sql-b-tree](../../includes/sql-b-tree.md)]
+  
 ## Remarks    
  This dynamic management object does not accept correlated parameters from `CROSS APPLY` and `OUTER APPLY`.    
     
@@ -185,9 +184,10 @@ sys.dm_db_index_operational_stats (
     
 -   `CONTROL` permission on the specified object within the database    
     
--   `VIEW DATABASE STATE` permission to return information about all objects within the specified database, by using the object wildcard @*object_id* = NULL    
+-   `VIEW DATABASE STATE` or `VIEW DATABASE PERFORMANCE STATE` (SQL Server 2022) permission to return information about all objects within the specified database, by using the object wildcard @*object_id* = NULL    
     
--   `VIEW SERVER STATE` permission to return information about all databases, by using the database wildcard @*database_id* = NULL    
+-   `VIEW SERVER STATE` `VIEW SERVER PERFORMANCE STATE` (SQL Server 2022) permission to return information about all databases, by using the database wildcard @*database_id* = NULL    
+
     
  Granting `VIEW DATABASE STATE` allows all objects in the database to be returned, regardless of any CONTROL permissions denied on specific objects.    
     
@@ -206,8 +206,8 @@ sys.dm_db_index_operational_stats (
 ```sql    
 DECLARE @db_id int;    
 DECLARE @object_id int;    
-SET @db_id = DB_ID(N'AdventureWorks2012');    
-SET @object_id = OBJECT_ID(N'AdventureWorks2012.Person.Address');    
+SET @db_id = DB_ID(N'AdventureWorks2022');    
+SET @object_id = OBJECT_ID(N'AdventureWorks2022.Person.Address');    
 IF @db_id IS NULL     
   BEGIN;    
     PRINT N'Invalid database';    

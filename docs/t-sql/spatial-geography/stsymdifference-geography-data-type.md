@@ -1,26 +1,22 @@
 ---
+title: "STSymDifference (geography Data Type)"
 description: "STSymDifference (geography Data Type)"
-title: "STSymDifference (geography Data Type) | Microsoft Docs"
-ms.custom: ""
+author: MladjoA
+ms.author: mlandzic
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "STSymDifference (geography Data Type)"
   - "STSymDifference_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "STSymDifference (geography Data Type)"
-ms.assetid: 82bbfa2c-a61b-4f41-9bf8-6f720f363bae
-author: MladjoA
-ms.author: mlandzic 
+dev_langs:
+  - "TSQL"
 ---
 # STSymDifference (geography Data Type)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Returns an object that represents all points that are either in one **geography** instance or another **geography** instance, but not those points that lie in both instances.  
   
@@ -54,7 +50,7 @@ ms.author: mlandzic
 ### A. Computing the symmetric difference of two polygons  
  The following example uses `STSymDifference()` to compute the symmetric difference of two `Polygon` instances.  
   
-```  
+```sql
 DECLARE @g geography;  
 DECLARE @h geography;  
 SET @g = geography::STGeomFromText('POLYGON((-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653))', 4326);  
@@ -65,10 +61,10 @@ SELECT @g.STSymDifference(@h).ToString();
 ### B. Computing the symmetric difference with FullGlobe  
  The following example compares the symmetric difference of a `Polygon` with `FullGlobe`.  
   
-```
+```sql
  DECLARE @g geography = 'POLYGON((-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653))';  
  SELECT @g.STSymDifference('FULLGLOBE').ToString();
- ```  
+```  
   
 ## See Also  
  [OGC Methods on Geography Instances](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  

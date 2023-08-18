@@ -1,29 +1,25 @@
 ---
-description: "Extended Properties Catalog Views - sys.extended_properties"
-title: "sys.extended_properties (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.extended_properties (Transact-SQL)"
+description: Extended Properties Catalog Views - sys.extended_properties
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/15/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.extended_properties"
   - "sys.extended_properties_TSQL"
   - "extended_properties"
   - "extended_properties_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.extended_properties catalog view"
-ms.assetid: 439b7299-dce3-4d26-b1c7-61be5e0df82a
-author: WilliamDAssafMSFT
-ms.author: wiassaf
-monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+dev_langs:
+  - "TSQL"
+monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=fabric"
 ---
 # Extended Properties Catalog Views - sys.extended_properties
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW Fabric SE Fabric DW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw.md)]
 
   Returns a row for each extended property in the current database.  
   

@@ -1,24 +1,20 @@
 ---
+title: "Compound Operators (Transact-SQL)"
 description: "Compound Operators (Transact-SQL)"
-title: "Compound Operators (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "compound operators"
   - "compound operators, described"
-ms.assetid: 5072fe91-02d3-42a7-831f-756eff714a17
-author: cawrites
-ms.author: chadam
+dev_langs:
+  - "TSQL"
 ---
 # Compound Operators (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Compound operators execute some operation and set an original value to the result of the operation. For example, if a variable @x equals 35, then @x += 2 takes the original value of @x, add 2 and sets @x to that new value (37).  
   

@@ -1,23 +1,20 @@
 ---
-description: "Enable or Disable Profiling Notifications in DQS"
 title: "Enable or Disable Profiling Notifications in DQS"
+description: "Enable or Disable Profiling Notifications in DQS"
+author: swinarko
+ms.author: sawinark
 ms.date: "03/01/2017"
-ms.prod: sql
-ms.prod_service: "data-quality-services"
-ms.reviewer: ""
-ms.technology: data-quality-services
+ms.service: sql
+ms.subservice: data-quality-services
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "enable notifications"
   - "notifications,enable"
   - "notifications,disable"
-ms.assetid: e439bb29-60cc-4afd-a79a-f629b8d843c1
-author: swinarko
-ms.author: sawinark
 ---
 # Enable or Disable Profiling Notifications in DQS
 
-[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI](../includes/applies-to-version/sqlserver.md)]
 
   This topic describes how to enable or disable profiling notifications in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). By default, profiling notifications are enabled in DQS. Profiling notifications tell you important facts about the data source and the effectiveness of the current activity performed on the data. For more information, see [Data Profiling and Notifications in DQS](../data-quality-services/data-profiling-and-notifications-in-dqs.md).  
   

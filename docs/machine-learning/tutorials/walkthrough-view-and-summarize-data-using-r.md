@@ -1,14 +1,12 @@
 ---
 title: "R tutorial: Explore data"
 description: Tutorial showing how to visualize and generate statistical summaries using R functions for in-database analytics on SQL Server.
-ms.prod: sql
-ms.technology: machine-learning-services
-
-ms.date: 11/26/2018  
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.date: 11/26/2018
+ms.service: sql
+ms.subservice: machine-learning-services
 ms.topic: tutorial
-author: dphansen
-ms.author: davidph
-ms.custom: seo-lt-2019
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
 ---
 # View and summarize SQL Server data using R (walkthrough)
@@ -24,7 +22,7 @@ This lesson introduces you to functions in the **RevoScaleR** package and steps 
 
 ## Define a SQL Server compute context
 
-Run the following R statements in an R environment on the client workstation. This section assumes a [data science workstation with Microsoft R Client](../r/set-up-a-data-science-client.md), because it includes all the RevoScaleR packages, as well as a basic, lightweight set of R tools. For example, you can use Rgui.exe to run the R script in this section.
+Run the following R statements in an R environment on the client workstation. This section assumes a [data science workstation with Microsoft R Client](../r/set-up-data-science-client.md), because it includes all the RevoScaleR packages, as well as a basic, lightweight set of R tools. For example, you can use Rgui.exe to run the R script in this section.
 
 1. If the **RevoScaleR** package is  not already loaded, run this line of R code:
 

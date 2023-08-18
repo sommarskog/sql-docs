@@ -1,19 +1,15 @@
 ---
-title: "Start SQL Server with Minimal Configuration | Microsoft Docs"
+title: "Start SQL Server with Minimal Configuration"
 description: Become familiar with the minimal configuration startup option in SQL Server. See when and how to use it, and learn about how it limits functionality.
-ms.custom: ""
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "01/20/2017"
-ms.prod: sql
-ms.prod_service: high-availability
-ms.reviewer: ""
-ms.technology: configuration
+ms.service: sql
+ms.subservice: configuration
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "minimal configuration [SQL Server]"
   - "starting SQL Server, minimal configuration"
-ms.assetid: 4d733c99-28b3-42d8-b7f6-7b943b548173
-author: markingmyname
-ms.author: maghan
 ---
 # Start SQL Server with Minimal Configuration
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,8 +36,7 @@ ms.author: maghan
 ## See Also  
  [Start, Stop, or Pause the SQL Server Agent Service](../../ssms/agent/start-stop-or-pause-the-sql-server-agent-service.md)   
  [Diagnostic Connection for Database Administrators](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md)   
- [sqlcmd Utility](../../tools/sqlcmd-utility.md)   
+ [sqlcmd Utility](../../tools/sqlcmd/sqlcmd-utility.md)   
  [Server Configuration Options &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
- [Database Engine Service Startup Options](../../database-engine/configure-windows/database-engine-service-startup-options.md)  
-  
+ [Database Engine Service Startup Options](../../database-engine/configure-windows/database-engine-service-startup-options.md)

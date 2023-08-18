@@ -1,20 +1,21 @@
 ---
-title: "Manage: Azure Data Studio notebooks"
+title: "Manage SQL Server Big Data Clusters with Azure Data Studio notebooks"
 titleSuffix: SQL Server Big Data Clusters
 description: Use a notebook from Azure Data Studio to manage and troubleshoot SQL Server Big Data Clusters.
-author: yualan
-ms.author: alanyu
-ms.reviewer: mikeray
-ms.metadata: seo-lt-2019
-ms.date: 03/30/2020
-ms.topic: conceptual
-ms.prod: sql
-ms.technology: big-data-cluster
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.reviewer: erinstellato
+ms.date: 07/16/2021
+ms.service: sql
+ms.subservice: big-data-cluster
+ms.topic: how-to
 ---
 
 # Manage SQL Server Big Data Clusters with Azure Data Studio notebooks
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
+
+[!INCLUDE[big-data-clusters-banner-retirement](../includes/bdc-banner-retirement.md)]
 
 [!INCLUDE[sql-server-2019](../includes/sssql19-md.md)] provides an extension for Azure Data Studio that includes notebooks. A notebook provides documentation and code that you can use in Azure Data Studio to manage SQL Server 2019 Big Data Clusters.
 
@@ -93,3 +94,5 @@ To change the SQL Server big data cluster for a notebook:
 ## Next steps
 
 For more information about notebooks in Azure Data Studio, see [How to use notebooks with SQL Server](../azure-data-studio/notebooks/notebooks-guidance.md).
+
+For the location of big data cluster administration notebooks, see [Where to find SQL Server Big Data Clusters administration notebooks](view-cluster-status.md#where-to-find--administration-notebooks).

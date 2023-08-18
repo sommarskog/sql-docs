@@ -1,30 +1,26 @@
 ---
-description: "Logical Functions - IIF (Transact-SQL)"
-title: "IIF (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
+title: "IIF (Transact-SQL)"
+description: "The IIF logical function Returns one of two values, depending on whether the Boolean expression evaluates to true or false. "
+author: markingmyname
+ms.author: maghan
+ms.date: "03/11/2022"
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "IIF_TSQL"
   - "IIF"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "IIF function"
-ms.assetid: e3ccf8ed-1cec-43ac-90b7-d8597c24b050
-author: cawrites
-ms.author: chadam
+dev_langs:
+  - "TSQL"
 ---
 # Logical Functions - IIF (Transact-SQL)
-[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Returns one of two values, depending on whether the Boolean expression evaluates to true or false in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -35,15 +31,16 @@ IIF( boolean_expression, true_value, false_value )
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## Arguments
- *boolean_expression*  
+
+#### *boolean_expression*  
  A valid Boolean expression.  
   
- If this argument is not a Boolean expression then a syntax error is raised.  
+ If this argument is not a boolean expression then a syntax error is raised.  
   
- *true_value*  
+#### *true_value*  
  Value to return if *boolean_expression* evaluates to true.  
   
- *false_value*  
+#### *false_value*  
  Value to return if *boolean_expression* evaluates to false.  
   
 ## Return Types  
@@ -53,7 +50,9 @@ IIF( boolean_expression, true_value, false_value )
  IIF is a shorthand way for writing a CASE expression. It evaluates the Boolean expression passed as the first argument, and then returns either of the other two arguments based on the result of the evaluation. That is, the *true_value* is returned if the Boolean expression is true, and the *false_value* is returned if the Boolean expression is false or unknown. *true_value* and *false_value* can be of any type. The same rules that apply to the CASE expression for Boolean expressions, null handling, and return types also apply to IIF. For more information, see [CASE &#40;Transact-SQL&#41;](../../t-sql/language-elements/case-transact-sql.md).  
   
  The fact that IIF is translated into CASE also has an impact on other aspects of the behavior of this function. Since CASE expressions can be nested only up to the level of 10, IIF statements can also be nested only up to the maximum level of 10. Also, IIF is remoted to other servers as a semantically equivalent CASE expression, with all the behaviors of a remoted CASE expression.  
-  
+
+ IIF is not supported in dedicated SQL pools in Azure Synapse Analytics.
+
 ## Examples  
   
 ### A. Simple IIF example  
@@ -94,8 +93,7 @@ Result
 NULL  
 ```  
   
-## See Also  
- [CASE &#40;Transact-SQL&#41;](../../t-sql/language-elements/case-transact-sql.md)   
- [CHOOSE &#40;Transact-SQL&#41;](../../t-sql/functions/logical-functions-choose-transact-sql.md)  
-  
-  
+## Next steps
+
+- [CASE &#40;Transact-SQL&#41;](../../t-sql/language-elements/case-transact-sql.md)   
+- [CHOOSE &#40;Transact-SQL&#41;](../../t-sql/functions/logical-functions-choose-transact-sql.md)

@@ -1,24 +1,22 @@
 ---
-title: "Insert data into table-valued parameters (OLE DB driver) | Microsoft Docs"
+title: "Insert data into table-valued parameters (OLE DB driver)"
 description: The OLE DB Driver for SQL Server supports a push model and a pull model for consumers to specify data for table-valued parameter rows.
-ms.custom: ""
-ms.date: "06/14/2018"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "table-valued parameters, inserting data into"
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
+ms.date: "06/14/2018"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: "reference"
+helpviewer_keywords:
+  - "table-valued parameters, inserting data into"
 ---
 # Inserting Data into Table-Valued Parameters
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  The OLE DB Driver for SQL Server supports two models for the consumer to specify data for table-valued parameter rows: a push model and a pull model. A sample that demonstrates the pull model is available; see [SQL Server Data Programming Samples](https://msftdpprodsamples.codeplex.com/).  
+  The OLE DB Driver for SQL Server supports two models for the consumer to specify data for table-valued parameter rows: a push model and a pull model.
+
   
 > [!NOTE]  
 >  A table-valued parameter column must have either non-default values in all rows or default values in all rows. It is not possible to have default values in some rows but not others. Therefore, in table-valued parameter bindings, the only status values allowed for table-valued parameter rowset column data are DBSTATUS_S_ISNULL and DBSTATUS_S_OK. DBSTATUS_S_DEFAULT will result in a failure and the bound status value will be set to DBSTATUS_E_BADSTATUS.  

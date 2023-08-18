@@ -1,22 +1,19 @@
 ---
+title: "Deprecation Announcement Event Class"
 description: "Deprecation Announcement Event Class"
-title: "Deprecation Announcement Event Class | Microsoft Docs"
-ms.custom: ""
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: supportability
+ms.service: sql
+ms.subservice: supportability
 ms.topic: reference
-helpviewer_keywords: 
+helpviewer_keywords:
   - "deprecation [SQL Server], events announced stage"
   - "Deprecation Announcement event class"
-ms.assetid: 46fc578f-3c97-477f-879c-8a1b2cfd9d58
-author: "stevestein"
-ms.author: "sstein"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Deprecation Announcement Event Class
-[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
   The **Deprecation Announcement** event class occurs when you use a feature that will be removed from a future version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], but will not be removed from the next major release. For greatest longevity of your applications, avoid using features that cause the **Deprecation Announcement** event class or the **Deprecation Final Support** event class.  
   
 ## Deprecation Announcement Event Class Data Columns  

@@ -1,14 +1,14 @@
 ---
-description: "Pushdown computations in PolyBase"
 title: "Pushdown computations in PolyBase"
-dexcription: Enable pushdown computation to improve performance of queries on your Hadoop cluster. You can select a subset of rows/columns in an external table for pushdown.
-ms.date: 04/19/2021
-ms.prod: sql
-ms.technology: polybase
-ms.topic: conceptual
+titleSuffix: SQL Server
+description: Enable pushdown computation to improve performance of queries on your Hadoop cluster. You can select a subset of rows/columns in an external table for pushdown.
 author: MikeRayMSFT
 ms.author: mikeray
-ms.reviewer: ""
+ms.reviewer: wiassaf, nathansc 
+ms.date: 7/11/2023
+ms.service: sql
+ms.subservice: polybase
+ms.topic: conceptual
 monikerRange: ">= sql-server-2016||>=sql-server-linux-ver15"
 ---
 
@@ -17,6 +17,9 @@ monikerRange: ">= sql-server-2016||>=sql-server-linux-ver15"
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
 Pushdown computation improves the performance of queries on external data sources. Beginning in [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], pushdown computations were available for Hadoop external data sources. [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)] introduced pushdown computations for other types of external data sources.  
+
+> [!NOTE]
+> To determine whether or not PolyBase pushdown computation is benefiting your query, see [How to tell if external pushdown occurred](polybase-how-to-tell-pushdown-computation.md).
 
 ## Enable pushdown computation
 
@@ -37,14 +40,28 @@ This table summarizes pushdown computation support on different external data so
 | **Oracle**       | Yes    | Yes         | Yes          | Yes       | Yes        |
 | **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**   | Yes    | Yes         | Yes          | Yes       | Yes        |
 | **Teradata**     | Yes    | Yes         | Yes          | Yes       | Yes        |  
-| **MongoDB**      | **No** | Yes         | Yes          | Yes       | Yes        |
-| **Hadoop\***     | **No** | Yes         | Some\*\*     | Some\*\*  | Yes        |  
+| **MongoDB\***  | **No** | Yes         | Yes\*\*\*          | Yes\*\*\*       | Yes        |
+| **Hadoop**     | **No** | Yes         | Some\*\*      | Some\*\*  | Yes        |  
 | **Azure Blob Storage** | No | No | No | No | Yes |
-|                  |
 
-\* PolyBase currently supports two Hadoop providers: Hortonworks Data Platform (HDP) and Cloudera Distributed Hadoop (CDH). There are no differences between the two features in terms of pushdown computation.
+\* Azure Cosmos DB pushdown support is enabled via the Azure Cosmos DB API for MongoDB. 
 
-**Hadoop providers support the following:
+\*\* See [Pushdown computation and Hadoop providers](#pushdown-computation-and-hadoop-providers).
+
+\*\*\* Pushdown support for aggregations and filters for the MongoDB ODBC connector for SQL Server 2019 was introduced with SQL Server 2019 CU18.
+
+> [!NOTE]
+> Pushdown computation can be blocked by some T-SQL syntax. For more information, review [Syntax that prevents pushdown](polybase-pushdown-computation.md#syntax-that-prevents-pushdown).
+
+### Pushdown computation and Hadoop providers
+
+PolyBase currently supports two Hadoop providers: Hortonworks Data Platform (HDP) and Cloudera Distributed Hadoop (CDH). There are no differences between the two features in terms of pushdown computation.
+
+To use the computation pushdown functionality with Hadoop, the target Hadoop cluster must have the core components of HDFS, YARN and MapReduce, with the job history server enabled. PolyBase submits the pushdown query via MapReduce and pulls status from the job history server. Without either component, the query fails.
+
+Some aggregation must occur after the data reaches [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. But a portion of the aggregation occurs in Hadoop. This method is common in computing aggregations in massively parallel processing systems.  
+
+Hadoop providers support the following aggregations and filters.
 
 | **Aggregations**                  | **Filters (binary comparison)** | 
 |-----------------------------------|---------------------------------| 
@@ -55,13 +72,6 @@ This table summarizes pushdown computation support on different external data so
 | Min                               | GreaterThan                     | 
 | Approx_Count_Distinct             | Is                              | 
 |                                   | IsNot                           | 
-|                                   |                                 | 
-
-Some aggregation must occur after the data reaches [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. But a portion of the aggregation occurs in Hadoop. This method is common in computing aggregations in massively parallel processing systems.  
-
-
-> [!NOTE]
-> Pushdown computation can be blocked by some T-SQL syntax. For more information, review [Syntax that prevents pushdown](polybase-pushdown-computation.md#syntax-that-prevents-pushdown).
 
 ## Key beneficial scenarios of pushdown computation
 
@@ -71,9 +81,24 @@ With PolyBase pushdown computation, you can delegate computation tasks to extern
 
 ### Pushdown of joins
 
-In many cases, PolyBase can facilitate pushdown of the join operator which will greatly improve performance.  
+In many cases, PolyBase can facilitate pushdown of the join operator for the join of two external tables on same external data source, which will greatly improve performance.  
 
 If the join can be done at the external data source, this reduces the amount of data movement and improves the query's performance. Without join pushdown, the data from the tables to be joined must be brought locally into tempdb, then joined.
+
+Note that in the case of *distributed joins* (joining a local table to an external table), unless there is some filtering criteria on the external table that is applied to the join condition, all of the data in the external table must be brought locally into `tempdb` in order to perform the join operation. For example, the following query has no filtering on the external table join condition, which will result in all of the data from the external table being read.
+
+```sql
+SELECT * FROM LocalTable L
+JOIN ExternalTable E on L.id = E.id
+```
+
+Since the join is on `E.id` column of the external table, if a filter condition is added to that column, the filter can be pushed down thereby reducing the number of rows read from the external table
+
+```sql
+SELECT * FROM LocalTable L
+JOIN ExternalTable E on L.id = E.id
+WHERE E.id = 20000
+```
 
 ### Select a subset of rows
 
@@ -116,8 +141,9 @@ Given this combination of predicates, the map-reduce jobs can perform all of the
 ```sql
 SELECT * FROM customer 
 WHERE customer.account_balance <= 200000 
-    AND customer.zipcode BETWEEN 92656 AND 92677;
+AND customer.zipcode BETWEEN 92656 AND 92677;
 ```
+
 ### Supported functions for pushdown
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] allows the following functions for predicate pushdown.
@@ -149,8 +175,10 @@ Mathematical functions
 - `TAN`
 
 General functions
-- `COALESCE`
+- `COALESCE` \*
 - `NULLIF`
+
+\* Using with `COLLATE` can prevent pushdown in some scenarios. For more information, see [Collation conflict](#collation-conflict).
 
 Date & time functions
 - `DATEADD`
@@ -167,6 +195,7 @@ The following T-SQL functions or syntax will prevent pushdown computation:
 - `RAND`
 - `CHECKSUM`
 - `BINARY_CHECKSUM`
+- `HASHBYTES`
 - `ISJSON`
 - `JSON_VALUE`
 - `JSON_QUERY`
@@ -180,6 +209,71 @@ The following T-SQL functions or syntax will prevent pushdown computation:
 - `PARSE`
 
 Pushdown support for the `FORMAT` and `TRIM` syntax was introduced in [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)] CU10.
+
+### Filter clause with variable
+
+If you are specifying a variable in a filter clause, by default this will prevent pushdown of the filter clause. For example, if you run the following query, the filter clause will not be pushed down:
+
+```sql
+DECLARE @BusinessEntityID INT
+
+SELECT * FROM [Person].[BusinessEntity]  
+WHERE BusinessEntityID = @BusinessEntityID;
+```
+
+To achieve pushdown of the variable, you need to enable query optimizer hotfixes functionality. This can be done in any of the following ways:
+- Instance Level: Enable trace flag 4199 as a startup parameter for the instance
+- Database Level: In the context of the database that has the PolyBase external objects, execute ALTER DATABASE SCOPED CONFIGURATION SET QUERY_OPTIMIZER_HOTFIXES = ON
+- Query level: 
+        Use query hint OPTION (QUERYTRACEON 4199) or OPTION (USE HINT ('ENABLE_QUERY_OPTIMIZER_HOTFIXES'))
+
+This limitation applies to execution of [sp_executesql](../system-stored-procedures/sp-executesql-transact-sql.md).
+
+Note: The ability to pushdown the variable was first introduced in SQL Server 2019 CU5.
+
+### Collation conflict
+
+When working with data with different collation pushdown might not be possible, operators like `COLLATE` can also interfere with the outcome. Equal collations or binary collations are supported. For more information, see [How to tell if pushdown occurred](polybase-how-to-tell-pushdown-computation.md).
+
+## Pushdown for parquet files
+
+Starting in [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)], PolyBase introduced support for parquet files. SQL Server is capable of performing both row and column elimination when performing pushdown with parquet. When working with parquet files, the following operations can be pushed down:
+
+- Binary comparison operators (>, >=, <=, <) for numeric, date, and time values.
+- Combination of comparison operators (> AND <, >= AND <, > AND <=, <= AND >=).
+- In list filter (col1 = val1 OR col1 = val2 OR vol1 = val3).
+- IS NOT NULL over column.
+
+Presence of the following prevents pushdown for parquet files:
+
+- Virtual columns.
+- Column comparison.
+- Parameter type conversion.
+
+### Supported data types
+
+- Bit
+- TinyInt
+- SmallInt
+- BigInt
+- Real
+- Float
+- VARCHAR (Bin2Collation, CodePageConversion, BinCollation)
+- NVARCHAR (Bin2Collation, BinCollation)
+- Binary
+- DateTime2 (default and 7-digit precision)
+- Date
+- Time (default and 7-digit precision)
+- Numeric \*
+
+\* Supported when parameter scale aligns with column scale, or when parameter is explicitly cast to decimal.
+
+### Data types that prevent parquet pushdown
+
+- Money
+- SmallMoney
+- DateTime
+- SmallDateTime
 
 ## Examples
 
@@ -201,4 +295,8 @@ OPTION (DISABLE EXTERNALPUSHDOWN);
 
 ## Next steps
 
-For more information about PolyBase, see [Introducing data virtualization with PolyBase](polybase-guide.md)
+- For more information about PolyBase, see [Introducing data virtualization with PolyBase](polybase-guide.md)
+
+## See also
+
+- [How to tell if external pushdown occurred](polybase-how-to-tell-pushdown-computation.md)  

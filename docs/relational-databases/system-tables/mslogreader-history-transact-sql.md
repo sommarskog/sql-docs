@@ -1,23 +1,19 @@
 ---
-description: "MSlogreader_history (Transact-SQL)"
-title: "MSlogreader_history (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "MSlogreader_history (Transact-SQL)"
+description: MSlogreader_history (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "03/03/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: replication
+ms.service: sql
+ms.subservice: replication
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "MSlogreader_history_TSQL"
   - "MSlogreader_history"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "MSlogreader_history system table"
-ms.assetid: 2e399fa1-3591-4c1c-96b7-7964fe82c7c4
-author: cawrites
-ms.author: chadam
+dev_langs:
+  - "TSQL"
 ---
 # MSlogreader_history (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

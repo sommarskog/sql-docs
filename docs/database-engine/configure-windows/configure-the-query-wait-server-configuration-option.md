@@ -1,22 +1,18 @@
 ---
-title: "Configure the query wait Server Configuration Option | Microsoft Docs"
+title: "Configure the query wait (server configuration option)"
 description: Learn about the query wait option. See how to use it to specify the number of seconds a SQL Server query waits for resources before it times out.
-ms.custom: ""
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/02/2017"
-ms.prod: sql
-ms.prod_service: high-availability
-ms.reviewer: ""
-ms.technology: configuration
+ms.service: sql
+ms.subservice: configuration
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "queries [SQL Server], timing out"
   - "time [SQL Server], query wait time"
   - "query wait option [SQL Server]"
-ms.assetid: 0fc4aa01-65a3-4a33-9ef4-caca41add238
-author: markingmyname
-ms.author: maghan
 ---
-# Configure the query wait Server Configuration Option
+# Configure the query wait (server configuration option)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   This topic describes how to configure the **query wait** server configuration option in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. Memory-intensive queries (such as those involving sorting and hashing) are queued when there is not enough memory available to run the query. The **query wait** option specifies the time, in seconds (from 0 through 2147483647), that a query waits for resources before it times out. The default value for this option is -1. This means the time-out is calculated as 25 times the estimated query cost.  
@@ -72,7 +68,7 @@ ms.author: maghan
 3.  Copy and paste the following example into the query window and click **Execute**. This example shows how to use [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) to set the value of the `query wait` option to `7500` seconds.  
   
 ```sql  
-USE AdventureWorks2012 ;  
+USE AdventureWorks2022;  
 GO  
 EXEC sp_configure 'show advanced options', 1;  
 GO  

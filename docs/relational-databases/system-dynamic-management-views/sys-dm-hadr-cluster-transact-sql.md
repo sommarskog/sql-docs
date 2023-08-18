@@ -1,26 +1,23 @@
 ---
-description: "sys.dm_hadr_cluster (Transact-SQL)"
-title: "sys.dm_hadr_cluster (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/31/2019"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: system-objects
+title: "sys.dm_hadr_cluster (Transact-SQL)"
+description: sys.dm_hadr_cluster (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
+ms.date: "02/27/2023"
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.dm_hadr_cluster"
   - "dm_hadr_cluster_HADR"
   - "sys.dm_hadr_cluster_TSQL"
   - "dm_hadr_cluster"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Availability Groups [SQL Server], monitoring"
   - "sys.dm_hadr_cluster catalog view"
   - "Availability Groups [SQL Server], WSFC clusters"
-ms.assetid: 13ce70e4-9d43-4a80-a826-099e6213bf85
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+dev_langs:
+  - "TSQL"
 ---
 # sys.dm_hadr_cluster (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +37,11 @@ ms.author: wiassaf
 ## Permissions  
  Requires VIEW SERVER STATE permission on the server.  
   
-## See Also  
+### Permissions for SQL Server 2022 and later
+
+Requires VIEW SERVER PERFORMANCE STATE permission on the server.
+
+## See also  
  [Always On Availability Groups Dynamic Management Views and Functions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/always-on-availability-groups-dynamic-management-views-functions.md)   
  [Always On Availability Groups Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/always-on-availability-groups-catalog-views-transact-sql.md)   
  [Monitor Availability Groups &#40;Transact-SQL&#41;](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)   

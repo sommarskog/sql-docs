@@ -1,18 +1,15 @@
 ---
 title: "Availability group wizard: Specify availability group options"
 description: "Describes the options found on the 'Specify Availability Group Name' page of the Availability Group Wizard within SQL Server Management Studio."
-ms.custom: "seo-lt-2019"
+author: MashaMSFT
+ms.author: mathoma
 ms.date: "05/17/2016"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: availability-groups
+ms.service: sql
+ms.subservice: availability-groups
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.swb.newagwizard.specifyagname.f1"
   - "sql13.swb.adddatabasewizard.specifyagname.f1"
-ms.assetid: dcb6374d-becb-4c6c-b88c-5a8273f8aa38
-author: cawrites
-ms.author: chadam
 ---
 # Specify Availability Group Options Page for an Always On Availability Group
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -32,6 +29,9 @@ ms.author: chadam
    * **EXTERNAL**
       
       Use when the availability group is hosted on an instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] that is managed by an external cluster technology for high availability and disaster recovery, for example Pacemaker on Linux. Applies to [!INCLUDE[sssql14](../../../includes/sssql17-md.md)] and later.
+      
+>[!IMPORTANT]
+> Do not choose **cluster type** = `EXTERNAL` on a Windows platform. Doing so will result in the availability group going into a resolving state and will prevent you from removing databases from the availability group. 
 
    * **NONE**
       

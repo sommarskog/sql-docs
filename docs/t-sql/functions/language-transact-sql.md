@@ -1,34 +1,30 @@
 ---
-description: "&#x40;&#x40;LANGUAGE (Transact-SQL)"
-title: "@@LANGUAGE (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "@@LANGUAGE (Transact-SQL)"
+description: "@@LANGUAGE (Transact-SQL)"
+author: markingmyname
+ms.author: maghan
 ms.date: "09/18/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "@@LANGUAGE_TSQL"
   - "@@LANGUAGE"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "languages [SQL Server], current in use"
   - "@@LANGUAGE function"
   - "current language in use"
   - "names [SQL Server], language in use"
-ms.assetid: 3e13b477-7dfa-4da6-9948-da2050d42527
-author: cawrites
-ms.author: chadam
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+dev_langs:
+  - "TSQL"
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-mi-current"
 ---
 # &#x40;&#x40;LANGUAGE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Returns the name of the language currently being used.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

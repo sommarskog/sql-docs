@@ -1,20 +1,16 @@
 ---
+title: "Modify Data Through a View"
 description: "Modify Data Through a View"
-title: "Modify Data Through a View | Microsoft Docs"
-ms.custom: ""
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "10/05/2016"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
-ms.technology: table-view-index
+ms.service: sql
+ms.subservice: table-view-index
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "data modifications [SQL Server], views"
   - "views [SQL Server], modifying data through"
   - "modifying data [SQL Server], views"
-ms.assetid: 410e2812-4ebe-48b2-b95f-c7784f1c4336
-author: stevestein
-ms.author: sstein
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Modify Data Through a View
@@ -44,11 +40,13 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 4.  In the **Results** pane, locate the row to be changed or deleted. To delete the row, right-click the row and select **Delete**. To change data in one or more columns, modify the data in the column.  
   
-    > **IMPORTANT!!** You cannot delete a row if the view references more than one base table. You can only update columns that belong to a single base table.  
+    > [!IMPORTANT]  
+    > You cannot delete a row if the view references more than one base table. You can only update columns that belong to a single base table.  
   
 5.  To insert a row, scroll down to the end of the rows and insert the new values.  
 
-    > **IMPORTANT!** You cannot insert a row if the view references more than one base table.  
+    > [!IMPORTANT]  
+    > You cannot insert a row if the view references more than one base table.  
   
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
   
@@ -61,7 +59,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 3.  Copy and paste the following example into the query window and click **Execute**. This example changes the value in the `StartDate` and `EndDate` columns for a specific employee by referencing columns in the view `HumanResources.vEmployeeDepartmentHistory`. This view returns values from two tables. This statement succeeds because the columns being modified are from only one of the base tables.  
   
     ```  
-    USE AdventureWorks2012 ;   
+    USE AdventureWorks2022;   
     GO  
     UPDATE HumanResources.vEmployeeDepartmentHistory  
     SET StartDate = '20110203', EndDate = GETDATE()   
@@ -80,7 +78,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 3.  Copy and paste the following example into the query window and click **Execute**. The example inserts a new row into the base table `HumanResouces.Department` by specifying the relevant columns from the view `HumanResources.vEmployeeDepartmentHistory`. The statement succeeds because only columns from a single base table are specified and the other columns in the base table have default values.  
   
     ```  
-    USE AdventureWorks2012 ;  
+    USE AdventureWorks2022;  
     GO  
     INSERT INTO HumanResources.vEmployeeDepartmentHistory (Department, GroupName)   
     VALUES ('MyDepartment', 'MyGroup');   

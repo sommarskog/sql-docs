@@ -1,32 +1,28 @@
 ---
+title: "CHANGE_TRACKING_IS_COLUMN_IN_MASK (Transact-SQL)"
 description: "CHANGE_TRACKING_IS_COLUMN_IN_MASK (Transact-SQL)"
-title: "CHANGE_TRACKING_IS_COLUMN_IN_MASK (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "08/08/2016"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "CHANGE_TRACKING_IS_COLUMN_IN_MASK_TSQL"
   - "CHANGE_TRACKING_IS_COLUMN_IN_MASK"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "change tracking [SQL Server], CHANGE_TRACKING_IS_COLUMN_IN_MASK"
   - "CHANGE_TRACKING_IS_COLUMN_IN_MASK"
-ms.assetid: 649b370b-da54-4915-919d-1b597a39d505
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+dev_langs:
+  - "TSQL"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # CHANGE_TRACKING_IS_COLUMN_IN_MASK (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Interprets the SYS_CHANGE_COLUMNS value that is returned by the CHANGETABLE(CHANGES ...) function. This enables an application to determine whether the specified column is included in the values that are returned for SYS_CHANGE_COLUMNS.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

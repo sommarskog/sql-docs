@@ -1,15 +1,12 @@
 ---
+title: "Oracle Connection Manager"
 description: "Oracle Connection Manager"
-title: "Oracle Connection Manager | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/14/2019"
-ms.prod: sql
-ms.prod_service: "integration-services"
-ms.reviewer: ""
-ms.technology: integration-services
-ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
+ms.date: "08/14/2019"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
 ---
 # Oracle Connection Manager
 
@@ -18,6 +15,8 @@ ms.author: chugu
 An Oracle Connection Manager is used to enable a package to extract data from Oracle Databases and load data into Oracle Databases.
 
 The **ConnectionManagerType** property for the Oracle Connection Manager is set to **ORACLE**.
+
+In SSIS execution logs, this connector is referred to as "Oracle Connection Manager."
 
 ## Configuring the Oracle Connection Manager
 
@@ -43,9 +42,18 @@ Input a description of the connection. This input is optional.
 
 Input the name of the Oracle database you work with. The TNS service name could be:
 
-- The connect descriptor name defined in the tnsnames.ora file that located in the admin folder of the Oracle client.
+- The connection name defined in the tnsnames.ora file
 
 - EzConnect format: [//]host[:port][/service_name]
+
+To use a tnsnames.ora file, you may need to add a system environment variable to the machine running the SSIS package. The TNS_Admin environment variable specifies the location of the folder that contains the tnsnames.ora file. This will be required if you have not installed an Oracle client. To add the environment variable in Windows 10, Windows 11 or Windows Server 2022: 
+
+1. Right-click the Start icon and select **System**. 
+2. In the Settings window, select **Advanced System Settings**. 
+3. On the Advanced tab of the System Properties window, select **Environment Variables**.
+4. In the Environment Variables window under System, select **New**. 
+5. In the New System Variable window, enter "TNS_Admin" for the Variable name and the correct path to the folder that contains your tnsnames.ora file for the Variable value. 
+6. Select **OK** in the New System Variable, Environment Variables, and System Properties windows. 
 
 For more information, see the Oracle documentation.
 
@@ -67,6 +75,12 @@ Select one of the below options:
 
 Click **Test Connection** to verify if the information provided is correct. You will receive the message **Test connection succeeded**, if the information entered is able to connect to the Oracle database.
 
+> [!NOTE]
+>
+> To specify **ConnectionString** directly, here is a sample with Oracle Authentication:
+>
+> `SERVER=\<YourOracleServerName or EzConnect format>;USERNAME=\<YourUserName>;PWD=\<YourPassword>;WINAUTH=0`
+
 ### Custom properties
 
 There are following custom connection manager properties in the Oracle connection manager:
@@ -82,6 +96,7 @@ Custom properties are not listed in Oracle Connection Manager Editor. To set the
 1. From the Connection Manager area, right-click the Oracle connection manager you are working with and select **Properties**.
 
 2. In the **Properties** pane, set the **OracleHome** or **OracleHome64** property with the full path to the Oracle home directory.
+
 
 ## Next steps
 

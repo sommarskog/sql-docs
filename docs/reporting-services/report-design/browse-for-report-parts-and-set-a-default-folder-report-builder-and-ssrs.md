@@ -1,18 +1,18 @@
 ---
-title: "Browse for Report Parts and Set a Default Folder (Report Builder) | Microsoft Docs"
+title: "Browse for Report Parts and Set a Default Folder (Report Builder)"
 description: Learn how to add existing report parts, such as tables and charts, to your report from the Report Part Gallery in Report Builder.
-ms.date: 03/01/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-design
-
-
-ms.topic: conceptual
-ms.assetid: 5cf38068-65d1-4fe8-81f3-a404d8fbc663
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 03/01/2017
+ms.service: reporting-services
+ms.subservice: report-design
+ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 # Browse for Report Parts and Set a Default Folder (Report Builder and SSRS)
+
+[!INCLUDE [ssrs-report-parts-deprecated](../../includes/ssrs-report-parts-deprecated.md)]
+
 The easiest way to create a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] paginated report is to add existing report parts, such as tables and charts, to your report from the Report Part Gallery. When you add a report part to your report, you are also adding everything it must have to work. For example, any report part that displays data depends on a dataset, that is, a query and a connection to a data source. After you add the report part to your report, you can modify it as much as you need.  
   
  You can set a default folder to publish report parts to the report server or SharePoint site integrated with a report server.  

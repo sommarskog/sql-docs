@@ -1,19 +1,16 @@
 ---
 title: "Modify snapshot initialization options"
-description: Modify various Replication snapshot initialization options such as the snapshot format, and the snapshot folder location in SQL Server Management Studio. 
-ms.custom: seo-lt-2019
-ms.date: "11/20/2018"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: replication
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "snapshot replication [SQL Server], options"
-  - "snapshots [SQL Server replication], options"
-ms.assetid: 759fab42-66c7-4541-a7a3-bb6fb868493c
+description: Modify various Replication snapshot initialization options such as the snapshot format, and the snapshot folder location in SQL Server Management Studio.
 author: "MashaMSFT"
 ms.author: "mathoma"
+ms.date: "11/20/2018"
+ms.service: sql
+ms.subservice: replication
+ms.topic: conceptual
+ms.custom: updatefrequency5
+helpviewer_keywords:
+  - "snapshot replication [SQL Server], options"
+  - "snapshots [SQL Server replication], options"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # Modify Snapshot Initialization Options for SQL Replication 
@@ -47,7 +44,7 @@ Specify the default snapshot location on the **Snapshot Folder** page of the Con
   
     > [!NOTE]  
     >  The Snapshot Agent must have write permissions for the directory you specify, and the Distribution Agent or Merge Agent must have read permissions. If pull subscriptions are used, you must specify a shared directory as a universal naming convention (UNC) path, such as \\\computername\snapshot. For more information, see [Secure the Snapshot Folder](../../relational-databases/replication/security/secure-the-snapshot-folder.md).    
-3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+3.  Select **OK**.
  
 
 ### Alternate snapshot locations
@@ -129,7 +126,7 @@ You can specify scripts to execute at the Subscriber before or after the snapsho
         >  The Distribution Agent or Merge Agent must have read permissions for the directory you specify. If pull subscriptions are used, you must specify a shared directory as a universal naming convention (UNC) path, such as \\\computername\scripts\myscript.sql.  
   
     -   To specify a script to execute after the snapshot is applied, click **Browse** to navigate to the script, or enter a UNC path to the script in the **After applying the snapshot, execute this script** text box.   
-2.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+2.  Select **OK**.
   
 
 

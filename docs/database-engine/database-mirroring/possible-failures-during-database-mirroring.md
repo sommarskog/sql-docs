@@ -1,14 +1,13 @@
 ---
-title: "Possible Failures During Database Mirroring | Microsoft Docs"
+title: "Possible Failures During Database Mirroring"
 description: Learn about failures in database mirroring sessions caused by physical, operating system, or SQL Server problems, and how to respond to errors.
-ms.custom: ""
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: high-availability
-ms.reviewer: ""
-ms.technology: database-mirroring
+ms.service: sql
+ms.subservice: database-mirroring
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "time-out period [SQL Server database mirroring]"
   - "soft errors [SQL Server]"
   - "database mirroring [SQL Server], troubleshooting"
@@ -16,9 +15,6 @@ helpviewer_keywords:
   - "troubleshooting [SQL Server], database mirroring"
   - "hard errors"
   - "failed database mirroring sessions [SQL Server]"
-ms.assetid: d7031f58-5f49-4e6d-9a62-9b420f2bb17e
-author: MikeRayMSFT
-ms.author: mikeray
 ---
 # Possible Failures During Database Mirroring
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -65,7 +61,7 @@ ms.author: mikeray
   
 -   A Windows-based server is renamed.  
   
--   A Windows-based server is rebooted.  
+-   A Windows-based server is restarted.  
   
 > [!NOTE]  
 >  Mirroring does not protect against problems specific to client accessing the servers. For example, consider a case in which a public network adapter handles client connections to the principal server instance, while a private network interface card handles all mirroring traffic among server instances. In this case, failure of the public network adapter would prevent clients from accessing the database, though the database would continue to be mirrored.  

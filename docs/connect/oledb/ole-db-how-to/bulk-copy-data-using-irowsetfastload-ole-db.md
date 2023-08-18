@@ -1,20 +1,17 @@
 ---
-title: "Bulk copy data using IRowsetFastLoad (OLE DB driver) | Microsoft Docs"
+title: "Bulk copy data using IRowsetFastLoad (OLE DB driver)"
 description: "Bulk copy data into a SQL Server table Using IRowsetFastLoad interface of OLE DB Driver for SQL Server"
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "06/14/2018"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "bulk copy [OLE DB], text data"
   - "bulk copy [OLE DB]"
   - "bulk copy [OLE DB], data files"
   - "bulk copy [OLE DB], about bulk copy"
-author: David-Engel
-ms.author: v-daenge
 ---
 # Bulk Copy Data Using IRowsetFastLoad (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -27,7 +24,7 @@ ms.author: v-daenge
   
  A complete sample is available that illustrates the use of **IRowsetFastLoad** for bulk copying of the records into a table. In this sample, 10 records are added to the table **IRFLTable**. You need to create the table **IRFLTable** in the database.  
   
- This sample requires the AdventureWorks sample database, which you can download from the [Microsoft SQL Server Samples and Community Projects](https://go.microsoft.com/fwlink/?LinkID=85384) home page.  
+ [!INCLUDE [article-uses-adventureworks](../../../includes/article-uses-adventureworks.md)]
   
 > [!IMPORTANT]  
 >  When possible, use Windows Authentication. If Windows Authentication is not available, prompt users to enter their credentials at run time. Avoid storing credentials in a file. If you must persist credentials, you should encrypt them with the [Win32 crypto API](/windows/win32/seccrypto/cryptography-reference).  
@@ -58,7 +55,7 @@ ms.author: v-daenge
  Execute the third ( [!INCLUDE[tsql](../../../includes/tsql-md.md)]) code listing to delete the table used by the application.  
   
 ```  
-USE AdventureWorks  
+USE AdventureWorks2022;
 GO  
   
 IF EXISTS (SELECT name FROM sysobjects WHERE name = 'IRFLTable')  
@@ -419,7 +416,7 @@ void SetupOption (DBPROPID PropID, WCHAR *wszVal, DBPROP * pDBProp ) {
 ```  
   
 ```  
-USE AdventureWorks  
+USE AdventureWorks2022;
 GO  
   
 IF EXISTS (SELECT name FROM sysobjects WHERE name = 'IRFLTable')  

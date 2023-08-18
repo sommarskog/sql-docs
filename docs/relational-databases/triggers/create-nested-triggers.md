@@ -1,13 +1,12 @@
 ---
+title: "Create Nested Triggers"
 description: "Create Nested Triggers"
-title: "Create Nested Triggers | Microsoft Docs"
-ms.custom: ""
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology:
+ms.service: sql
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "recursive DML triggers [SQL Server]"
   - "DML triggers, nested"
   - "triggers [SQL Server], nested"
@@ -17,13 +16,10 @@ helpviewer_keywords:
   - "RECURSIVE_TRIGGERS option"
   - "indirect recursion [SQL Server]"
   - "nested DML triggers"
-ms.assetid: cd522dda-b4ab-41b8-82b0-02445bdba7af
-author: "rothja"
-ms.author: "jroth"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Create Nested Triggers
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
   Both DML and DDL triggers are nested when a trigger performs an action that initiates another trigger. These actions can initiate other triggers, and so on. DML and DDL triggers can be nested up to 32 levels. You can control whether AFTER triggers can be nested through the **nested triggers** server configuration option. INSTEAD OF triggers (only DML triggers can be INSTEAD OF triggers) can be nested regardless of this setting.  
   
 > [!NOTE]  
@@ -38,7 +34,7 @@ CREATE TRIGGER Purchasing.savedel
    ON Purchasing.PurchaseOrderDetail  
 FOR DELETE  
 AS  
-   INSERT del_save;  
+   INSERT del_save
    SELECT * FROM deleted;  
 ```  
   
@@ -76,10 +72,10 @@ AS
  A recursive UPDATE trigger can be used to keep the `NoOfReports` column up-to-date as new employee records are inserted. The INSERT trigger updates the `NoOfReports` column of the manager record, which recursively updates the `NoOfReports` column of other records up the management hierarchy.  
   
 ```  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 -- Turn recursive triggers ON in the database.  
-ALTER DATABASE AdventureWorks2012  
+ALTER DATABASE AdventureWorks2022  
    SET RECURSIVE_TRIGGERS ON;  
 GO  
 CREATE TABLE dbo.emp_mgr (  

@@ -1,21 +1,19 @@
 ---
+title: "Audit App Role Change Password Event Class"
 description: "Audit App Role Change Password Event Class"
-title: "Audit App Role Change Password Event Class | Microsoft Docs"
-ms.custom: ""
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: supportability
+ms.service: sql
+ms.subservice: supportability
 ms.topic: reference
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Audit App Role Change Password event class"
-ms.assetid: 28a76c12-e997-48bb-bb0e-9624237a188e
-author: "stevestein"
-ms.author: "sstein"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Audit App Role Change Password Event Class
-[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
+
   The **Audit App Role Change Password** event class occurs whenever a password is changed for an application role.  
   
 ## Audit App Role Change Password Event Class Data Columns  

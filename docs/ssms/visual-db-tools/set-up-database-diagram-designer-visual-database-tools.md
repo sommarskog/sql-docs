@@ -1,26 +1,23 @@
 ---
-description: "Set Up Database Diagram Designer (Visual Database Tools)"
 title: Set Up Database Diagram Designer
-ms.custom: seo-lt-2019
+description: "Set Up Database Diagram Designer (Visual Database Tools)"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
+ms.service: sql
+ms.subservice: ssms
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "vdt.diagnostic.InstallSqlDiagramSupport"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Database Diagram Designer"
   - "database diagrams [SQL Server], Database Diagram Designer"
   - "diagrams [SQL Server], Database Diagram Designer"
-ms.assetid: 927321ee-b459-4f5b-9719-4a7a95639143
-author: markingmyname
-ms.author: maghan
-ms.reviewer: 
-
 ---
 # Set Up Database Diagram Designer (Visual Database Tools)
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+
+[!INCLUDE[SQL Server Azure SQL Database PDW](../../includes/applies-to-version/sql-asdb-asdbmi-pdw.md)]
+
 To use Database Diagram Designer, it must first be set up by a member of the **db_owner** role to control access to diagrams.  
   
 ### To set up database diagramming  

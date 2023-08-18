@@ -1,14 +1,13 @@
 ---
-title: "Identify Bottlenecks | Microsoft Docs"
+title: "Identify Bottlenecks"
 description: Learn about the causes of bottlenecks, such as insufficient resources and malfunctioning/incorrectly configured resources in SQL Server.
-ms.custom: ""
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: performance
+ms.service: sql
+ms.subservice: performance
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "resource bottlenecks [SQL Server]"
   - "database monitoring [SQL Server], bottlenecks"
   - "performance [SQL Server], bottlenecks"
@@ -19,13 +18,10 @@ helpviewer_keywords:
   - "server performance [SQL Server], bottlenecks"
   - "bottlenecks [SQL Server]"
   - "identifying bottlenecks [SQL Server]"
-ms.assetid: db079e65-ee80-4105-aec9-f8230d0d6635
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Identify Bottlenecks
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
   Simultaneous access to shared resources causes bottlenecks. In general, bottlenecks are present in every software system and are inevitable. However, excessive demands on shared resources cause poor response time and must be identified and tuned.  
   
  Causes of bottlenecks include:  

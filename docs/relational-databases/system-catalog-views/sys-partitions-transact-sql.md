@@ -1,29 +1,25 @@
 ---
-description: "sys.partitions (Transact-SQL)"
-title: "sys.partitions (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
-ms.technology: system-objects
+title: "sys.partitions (Transact-SQL)"
+description: sys.partitions (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
+ms.date: "09/01/2021"
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "partitions"
   - "partitions_TSQL"
   - "sys.partitions_TSQL"
   - "sys.partitions"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.partitions catalog view"
-ms.assetid: 1c19e1b1-c925-4dad-a652-581692f4ab5e
-author: WilliamDAssafMSFT
-ms.author: wiassaf
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+dev_langs:
+  - "TSQL"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=fabric"
 ---
 # sys.partitions (Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw.md)]
 
   Contains a row for each partition of all the tables and most types of indexes in the database. Special index types such as Full-Text, Spatial, and XML are not included in this view. All tables and indexes in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contain at least one partition, whether or not they are explicitly partitioned.  
   
@@ -41,7 +37,27 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Permissions  
  Requires membership in the **public** role. For more information, see [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
-  
+
+## Examples
+
+### Determine space used by object and show related partition information 
+ The following query returns all the object in a database, the amount of space used in each object, and partition information related to each object.
+
+
+```sql
+SELECT object_name(object_id) AS ObjectName,
+total_pages / 128. AS SpaceUsed_MB,
+p.partition_id,
+p.object_id,
+p.index_id,
+p.partition_number,
+p.rows,
+p.data_compression_desc
+FROM sys.partitions AS p
+JOIN sys.allocation_units AS au ON p.partition_id = au.container_id
+ORDER BY SpaceUsed_MB DESC;
+```  
+
 ## See Also  
  [Object Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   

@@ -1,16 +1,12 @@
 ---
 title: "Understanding data type conversions"
 description: "Learn the specifics of how the JDBC Driver for SQL Server handles data type conversions between JDBC and database data types."
-ms.custom: ""
-ms.date: "08/12/2019"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: conceptual
-ms.assetid: 98fa7488-aac3-45b4-8aa4-83ed6ab638b4
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
+ms.date: "08/12/2019"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: conceptual
 ---
 
 # Understanding data type conversions
@@ -18,6 +14,9 @@ ms.author: v-daenge
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
 To facilitate the conversion of Java programming language data types to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data types, the [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] provides data type conversions as required by the JDBC specification. For added flexibility, all types are convertible to and from **Object**, **String**, and **byte[]** data types.
+
+> [!NOTE]
+> When using Always Encrypted, special considerations need to be made around data type conversions. For more information, see [Unsupported data type conversion errors](using-always-encrypted-with-the-jdbc-driver.md#unsupported-data-type-conversion-errors).
 
 ## Getter method conversions
 

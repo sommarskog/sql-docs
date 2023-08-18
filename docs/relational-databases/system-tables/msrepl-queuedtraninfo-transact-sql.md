@@ -1,23 +1,19 @@
 ---
-description: "MSrepl_queuedtraninfo (Transact-SQL)"
-title: "MSrepl_queuedtraninfo (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "MSrepl_queuedtraninfo (Transact-SQL)"
+description: MSrepl_queuedtraninfo (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "03/04/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: replication
+ms.service: sql
+ms.subservice: replication
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "MSrepl_queuedtraninfo_TSQL"
   - "MSrepl_queuedtraninfo"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "MSrepl_queuedtraninfo system table"
-ms.assetid: af7a5baf-32ea-475f-b6b9-68c557b4980c
-author: cawrites
-ms.author: chadam
+dev_langs:
+  - "TSQL"
 ---
 # MSrepl_queuedtraninfo (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

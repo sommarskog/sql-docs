@@ -1,24 +1,20 @@
 ---
 title: "Protocols for MSSQLSERVER Properties (Certificate Tab)"
 description: Select a certificate for SQL Server, or view certificate properties by using the Certificate tab on the Protocols for MSSQLSERVER Properties dialog box.
-ms.custom: seo-lt-2019
-ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.reviewer: ""
-ms.technology: tools-other
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.swb.computermgr.cert.general.f1"
-helpviewer_keywords: 
-  - "MSSQLSERVER property protocols"
-ms.assetid: 776addd6-25f3-4875-9a71-064035787090
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: tools-other
+ms.topic: conceptual
+f1_keywords:
+  - "sql13.swb.computermgr.cert.general.f1"
+helpviewer_keywords:
+  - "MSSQLSERVER property protocols"
 monikerRange: ">=sql-server-2016"
 ---
 # Protocols for MSSQLSERVER Properties (Certificate Tab)
-[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
   Use the **Certificate** tab on the **Protocols for MSSQLSERVER Properties** dialog box to select a certificate for [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], or to view the properties of a certificate. All fields are blank until a certificate is selected.  
   
  Certificates are stored locally for the users on the computer. To load a certificate for use by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], you must be running [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager under the same user account as the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service.  

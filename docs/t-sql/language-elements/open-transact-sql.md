@@ -1,34 +1,30 @@
 ---
+title: "OPEN (Transact-SQL)"
 description: "OPEN (Transact-SQL)"
-title: "OPEN (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "OPEN_TSQL"
   - "OPEN"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "opening cursors"
   - "cursors [SQL Server], opening"
   - "populating cursors [SQL Server]"
   - "OPEN statement"
   - "Transact-SQL cursors, opening"
-ms.assetid: fd1c5e3b-6045-4a42-b646-3fca76e874c1
-author: cawrites
-ms.author: chadam
+dev_langs:
+  - "TSQL"
 ---
 # OPEN (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Opens a [!INCLUDE[tsql](../../includes/tsql-md.md)] server cursor and populates the cursor by executing the [!INCLUDE[tsql](../../includes/tsql-md.md)] statement specified on the DECLARE CURSOR or SET *cursor_variable* statement.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -62,7 +58,7 @@ OPEN { { [ GLOBAL ] cursor_name } | cursor_variable_name }
 ```sql  
 DECLARE Employee_Cursor CURSOR FOR  
 SELECT LastName, FirstName  
-FROM AdventureWorks2012.HumanResources.vEmployee  
+FROM AdventureWorks2022.HumanResources.vEmployee  
 WHERE LastName like 'B%';  
   
 OPEN Employee_Cursor;  

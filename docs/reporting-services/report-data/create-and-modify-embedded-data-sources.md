@@ -1,16 +1,13 @@
 ---
-title: "Create and Modify Embedded Data Sources | Microsoft Docs"
+title: "Create and Modify Embedded Data Sources"
 description: Learn how to create and modify embedded data sources that are defined in a report definition and only used by that report.
-ms.date: 03/01/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-data
-
-
-ms.topic: conceptual
-ms.assetid: 1c38c2e8-7a29-4f79-a4a3-85ed2b13723b
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 03/01/2017
+ms.service: reporting-services
+ms.subservice: report-data
+ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 # Create and Modify Embedded Data Sources
   An embedded data source is defined in a report definition and used only by that report.  
@@ -32,7 +29,7 @@ ms.author: maggies
   
         -   Type the connection string directly in the **Connection string** text box. For a list of example connection strings, see [Create data connection strings - Report Builder & SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
   
-        -   Click the expression (**fx)** button to create an expression that evaluates to a connection string. In the **Expression** dialog box, type the expression in the Expression pane. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+        -   Click the expression (**fx**) button to create an expression that evaluates to a connection string. In the **Expression** dialog box, type the expression in the Expression pane. Select **OK**.
   
         -   Click **Edit** to open the **Connection Properties** dialog box for the data source type you chose in step 2.  
   
@@ -58,7 +55,7 @@ ms.author: maggies
   
         -   Type the connection string directly in the **Connection string** text box. For a list of example connection strings, see [Create data connection strings - Report Builder & SSRS](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
   
-        -   Click the expression (**fx)** button to create an expression that evaluates to a connection string. In the **Expression** dialog box, type the expression in the Expression pane. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+        -   Click the expression (**fx**) button to create an expression that evaluates to a connection string. In the **Expression** dialog box, type the expression in the Expression pane. Select **OK**.
   
         -   Click **Build** to open the **Connection Properties** dialog box for the data source type that you chose in step 2.  
   
@@ -68,7 +65,7 @@ ms.author: maggies
   
      Specify the credentials to use for this data source. The owner of the data source chooses the type of credentials that are supported. For more information, see [Specify Credential and Connection Information for Report Data Sources](specify-credential-and-connection-information-for-report-data-sources.md).  
   
-5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+5.  Select **OK**.
   
      The data source appears in the Report Data pane.  
   

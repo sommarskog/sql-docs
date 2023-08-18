@@ -1,19 +1,21 @@
 ---
 title: Troubleshoot Kubernetes
-titleSuffix: SQL Server big data clusters
+titleSuffix: SQL Server Big Data Clusters
 description: This article provides useful commands for monitoring and troubleshooting a SQL Server 2019 big data cluster.
-author: mihaelablendea 
-ms.author: mihaelab
-ms.reviewer: mikeray
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.reviewer: hudequei
 ms.date: 06/22/2020
-ms.topic: conceptual
-ms.prod: sql
-ms.technology: big-data-cluster
+ms.service: sql
+ms.subservice: big-data-cluster
+ms.topic: troubleshooting
 ---
 
 # Troubleshoot [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] Kubernetes
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
+
+[!INCLUDE[big-data-clusters-banner-retirement](../includes/bdc-banner-retirement.md)]
 
 This article describes several useful Kubernetes commands that you can use to monitor and troubleshoot a [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]. It shows how to view in-depth details of a pod or other Kubernetes artifacts that are located in the big data cluster. This article also covers common tasks, such as copying files to or from a container running one of the SQL Server big data cluster services.
 
@@ -159,10 +161,10 @@ kubectl cp master-0:/var/opt/mssql/log -c mssql-server -n mssql-cluster ~/tmp/sq
 
 ### <a id="copyinto"></a> Copy files into container
 
-The following example copies the **AdventureWorks2016CTP3.bak** file from the local machine to the SQL Server master instance container (`mssql-server`) in the `master-0` pod. The file is copied to the `/tmp` directory in the container. 
+The following example copies the [!INCLUDE [sssampledbobject-md](../includes/sssampledbobject-md.md)] file from the local machine to the SQL Server master instance container (`mssql-server`) in the `master-0` pod. The file is copied to the `/tmp` directory in the container. 
 
 ```bash
-kubectl cp ~/Downloads/AdventureWorks2016CTP3.bak master-0:/tmp -c mssql-server -n mssql-cluster
+kubectl cp ~/Downloads/AdventureWorks2022.bak master-0:/tmp -c mssql-server -n mssql-cluster
 ```
 
 ## <a id="forcedelete"></a> Force delete a pod
@@ -201,7 +203,7 @@ You can launch the Kubernetes dashboard for additional information about the clu
 
 To launch the Kubernetes dashboard run:
 
-```bash
+```azurecli
 az aks browse --resource-group <azure_resource_group> --name <aks_cluster_name>
 ```
 

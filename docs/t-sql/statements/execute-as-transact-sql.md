@@ -1,29 +1,25 @@
 ---
-description: "EXECUTE AS (Transact-SQL)"
-title: "EXECUTE AS (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "EXECUTE AS (Transact-SQL)"
+description: EXECUTE AS (Transact-SQL)
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "08/27/2019"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics"
-ms.reviewer: ""
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "EXECUTE AS"
   - "EXECUTE_AS_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "REVERT statement"
   - "WITH NO REVERT clause"
   - "sessions [SQL Server], execution context"
   - "EXECUTE AS"
   - "execution context [SQL Server]"
   - "switching execution context"
-ms.assetid: 613b8271-7f7d-4378-b7a2-5a7698551dbd
-author: WilliamDAssafMSFT
-ms.author: wiassaf
-monikerRange: "= azuresqldb-current || >= sql-server-2016 || >= sql-server-linux-2017||=azure-sqldw-latest"
+dev_langs:
+  - "TSQL"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest"
 ---
 # EXECUTE AS (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -34,7 +30,7 @@ monikerRange: "= azuresqldb-current || >= sql-server-2016 || >= sql-server-linux
   
 
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -52,12 +48,12 @@ monikerRange: "= azuresqldb-current || >= sql-server-2016 || >= sql-server-linux
 
 ## Arguments
  LOGIN  
- **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.  
+ **Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later.  
   
  Specifies the execution context to be impersonated is a login. The scope of impersonation is at the server level.  
   
 > [!NOTE]  
->  This option is not available in a contained database, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], or [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)].  
+>  This option is not available in a contained database, [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], or [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)].  
   
  USER  
  Specifies the context to be impersonated is a user in the current database. The scope of impersonation is restricted to the current database. A context switch to a database user does not inherit the server-level permissions of that user.  
@@ -91,7 +87,7 @@ monikerRange: "= azuresqldb-current || >= sql-server-2016 || >= sql-server-linux
  When used inside a module, specifies the statements inside the module are executed in the context of the caller of the module.
  When used outside a module, the statement has no action.
  > [!NOTE]  
->  This option is not available in [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)].  
+>  This option is not available in [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)].  
   
 ## Remarks  
  The change in execution context remains in effect until one of the following occurs:  
@@ -143,7 +139,7 @@ If the user is orphaned (the associated login no longer exists), and the user wa
   
 
 ```sql
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 --Create two temporary principals  
 CREATE LOGIN login1 WITH PASSWORD = 'J345#$)thb';  

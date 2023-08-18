@@ -1,14 +1,15 @@
 ---
 title: Deploy Azure SQL Edge with Azure Data Studio
 description: How to deploy Azure SQL Edge instances in Azure Data Studio
-ms.prod: azure-data-studio
-ms.technology: azure-data-studio
-ms.topic: how-to
 author: dzsquared
 ms.author: drskwier
 ms.reviewer: maghan
-ms.custom: 
 ms.date: 09/22/2020
+ms.service: azure-data-studio
+ms.topic: how-to
+ms.custom:
+  - intro-deployment
+  - updatefrequency5
 ---
 
 # Deploy Azure SQL Edge with Azure Data Studio (Preview)

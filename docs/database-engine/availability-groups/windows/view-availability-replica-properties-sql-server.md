@@ -1,17 +1,14 @@
 ---
 title: "View availability replica properties"
 description: "Instructions for viewing the properties for an availability group replica SQL Server Management Studio (SSMS), Transact-SQL (T-SQL), or SQL PowerShell."
-ms.custom: "seo-lt-2019"
+author: MashaMSFT
+ms.author: mathoma
 ms.date: "05/17/2016"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: availability-groups
+ms.service: sql
+ms.subservice: availability-groups
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - ", policies"
-ms.assetid: 14fed3c4-8ecc-4e1c-931d-a7ec1e9f9e90
-author: cawrites
-ms.author: chadam
 ---
 # View Availability Replica Properties (SQL Server)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

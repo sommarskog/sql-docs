@@ -1,18 +1,15 @@
 ---
 title: Create a Snapshot of a Project
 description: Become familiar with data-tier application files, or snapshots, and see how to use them. Find out how to create or import snapshots and how to compare them.
-ms.prod: sql
-ms.technology: ssdt
-ms.topic: conceptual
-f1_keywords: 
-  - "sql.data.tools.SqlProjectImportSnapshotSummaryDialog.dialog"
-  - "sql.data.tools.SqlProjectImportSnapshotDialog.dialog"
-ms.assetid: bed670a3-13bd-4d88-91a1-58d5b9524a97
 author: markingmyname
 ms.author: maghan
-ms.reviewer: “”
-ms.custom: seo-lt-2019
 ms.date: 02/09/2017
+ms.service: sql
+ms.subservice: ssdt
+ms.topic: conceptual
+f1_keywords:
+  - "sql.data.tools.SqlProjectImportSnapshotSummaryDialog.dialog"
+  - "sql.data.tools.SqlProjectImportSnapshotDialog.dialog"
 ---
 
 # How to: Create a Snapshot of a Project
@@ -28,7 +25,7 @@ In the event of a user error on a source database project, you can revert the so
   
 1.  Right-click the **TradeDev** project in **Solution Explorer**, and select **Data-tier Application (\*.dacpac)...**.  
   
-2.  SSDT will attempt to build the project first. If there is no build error, a **Snapshot** folder is created in **Solution Explorer**. Inside this folder, SSDT creates a .dacpac file using the name format of "<Project Name>_YYYYMMDD_HH-MM-SS.dacpac".  
+2.  SSDT will attempt to build the project first. If there is no build error, a **Snapshot** folder is created in **Solution Explorer**. Inside this folder, SSDT creates a .dacpac file using the name format of "\<Project Name\>_YYYYMMDD_HH-MM-SS.dacpac".  
   
 3.  Right-click the .dacpac file and select **Rename**. Change the default file name to "TradeDev1.dacpac".  
   

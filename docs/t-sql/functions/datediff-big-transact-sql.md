@@ -1,26 +1,24 @@
 ---
 title: DATEDIFF_BIG (Transact-SQL)
 description: "DATEDIFF_BIG (Transact-SQL)"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: t-sql
+author: markingmyname
+ms.author: maghan
+ms.date: "01/12/2021"
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "DATEDIFF_BIG"
   - "DATEDIFF_BIG_TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "DATEDIFF_BIG function [SQL Server]"
   - "dates [SQL Server]. functions"
   - "date and time [SQL Server], DATEDIFF_BIG"
   - "functions [SQL Server], time"
   - "functions [SQL Server], date and time"
   - "time [SQL Server], functions"
-ms.assetid: 19ac1693-3cfa-400d-bf83-20a9cb46599a
-author: cawrites
-ms.author: chadam
-ms.reviewer: ""
-ms.custom: ""
-ms.date: "01/12/2021"
+dev_langs:
+  - "TSQL"
 ---
 
 # DATEDIFF_BIG (Transact-SQL)
@@ -31,7 +29,7 @@ This function returns the count (as a signed big integer value) of the specified
   
 See [Date and Time Data Types and Functions &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md) for an overview of all [!INCLUDE[tsql](../../includes/tsql-md.md)] date and time data types and functions.
   
-![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## Syntax  
   
@@ -100,7 +98,7 @@ If only a time value is assigned to a date data type variable, `DATEDIFF_BIG` se
 If *startdate* and *enddate* have different date data types, and one has more time parts or fractional seconds precision than the other, `DATEDIFF_BIG` sets the missing parts of the other to 0.
   
 ## datepart boundaries
-The following statements have the same *startdate* and the same *enddate* values. Those dates are adjacent and they differ in time by one microsecond (.0000001 second). The difference between the *startdate* and *enddate* in each statement crosses one calendar or time boundary of its *datepart*. Each statement returns 1. If *startdate* and *enddate* have different year values but they have the same calendar week values, `DATEDIFF_BIG` will return 0 for *datepart* **week**.
+The following statements have the same *startdate* and the same *enddate* values. Those dates are adjacent and they differ in time by one hundred nanoseconds (.0000001 second). The difference between the *startdate* and *enddate* in each statement crosses one calendar or time boundary of its *datepart*. Each statement returns 1. If *startdate* and *enddate* have different year values but they have the same calendar week values, `DATEDIFF_BIG` will return 0 for *datepart* **week**.
 
 ```sql
 SELECT DATEDIFF_BIG(year,        '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00.0000000');

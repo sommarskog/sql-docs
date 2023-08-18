@@ -1,20 +1,17 @@
 ---
-title: "Configure usage and diagnostic data collection for SQL Server tools (CEIP) | Microsoft Docs"
+title: "Configure usage and diagnostic data collection for SQL Server tools (CEIP)"
 description: "Learn about the information that CEIP collects from users to improve products. See how to opt in or out of the program in SQL Server Data Tools (SSDT)."
-ms.custom: ""
+author: "MikeRayMSFT"
+ms.author: "mikeray"
 ms.date: "10/21/2016"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: ssdt
+ms.service: sql
+ms.subservice: ssdt
 ms.topic: conceptual
-ms.assetid: baf3a205-a6bb-4564-8b64-3a0475bb9273
-author: "stevestein"
-ms.author: "sstein"
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016"
 ---
 # Configure usage and diagnostic data collection for SQL Server tools (CEIP)
 
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Learn how the Customer Experience Improvement Program (CEIP) helps Microsoft identify ways to make our software better.  You can configure tools to opt in or out at any time.  
   
@@ -27,7 +24,7 @@ Learn how the Customer Experience Improvement Program (CEIP) helps Microsoft ide
 
 ### Choice and Control over  CEIP and SQL Server Data Tools for Visual Studio 2017
 
- SSDT for Visual Studio 2017 is the data modeling tool that ships with SQL Server 2017. It uses the CEIP options  that are built into Visual Studio 2017. You can learn more about how to submit feedback through  CEIP in Visual Studio 2017 from this [help document from Visual Studio](https://www.visualstudio.com/docs/work/connect/give-feedback).  
+ SSDT for Visual Studio 2017 is the data modeling tool that ships with SQL Server 2017. It uses the CEIP options  that are built into Visual Studio 2017. You can learn more about how to submit feedback through  CEIP in Visual Studio 2017 from this [help document from Visual Studio](/visualstudio/ide/visual-studio-experience-improvement-program?view=vs-2017&preserve-view=true).  
   
  For preview versions of SQL Server 2017, CEIP is turned on by default. You can turn it off, or back on again, by following the instructions below.  
   

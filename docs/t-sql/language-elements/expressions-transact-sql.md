@@ -1,16 +1,13 @@
 ---
+title: "Expressions (Transact-SQL)"
 description: "Expressions (Transact-SQL)"
-title: "Expressions (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/15/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Boolean expressions"
   - "expressions [SQL Server], about expressions"
   - "combining expressions"
@@ -18,17 +15,16 @@ helpviewer_keywords:
   - "expressions [SQL Server], combining"
   - "simple expressions [SQL Server]"
   - "complex expressions [SQL Server]"
-ms.assetid: ee53c5c8-e36c-40f9-8cd1-d933791b98fa
-author: cawrites
-ms.author: chadam
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+dev_langs:
+  - "TSQL"
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-mi-current||=fabric"
 ---
 # Expressions (Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw.md)]
 
   Is a combination of symbols and operators that the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] evaluates to obtain a single data value. Simple expressions can be a single constant, variable, column, or scalar function. Operators can be used to join two or more simple expressions into a complex expression.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -117,7 +113,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
  In a programming language such as C or [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)], an expression always evaluates to a single result. Expressions in a [!INCLUDE[tsql](../../includes/tsql-md.md)] select list follow a variation on this rule: The expression is evaluated individually for each row in the result set. A single expression may have a different value in each row of the result set, but each row has only one value for the expression. For example, in the following `SELECT` statement both the reference to `ProductID` and the term `1+2` in the select list are expressions:  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 SELECT ProductID, 1+2  
 FROM Production.Product;  
@@ -126,16 +122,15 @@ GO
   
  The expression `1+2` evaluates to `3` in each row in the result set. Although the expression `ProductID` generates a unique value in each result set row, each row only has one value for `ProductID`.  
  
-- [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] allocates a fixed maximum amount of memory to each thread so no thread can use up all the memory.  Some of this memory is used for storing queries’ expressions.  If a query has too many expressions and its required memory exceeds the internal limit, the engine will not execute it.  To avoid this problem, users can change the query into multiple queries with smaller number of expressions in each. For example, you have a query with a long list of expressions in the WHERE clause: 
+- [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] allocates a fixed maximum amount of memory to each thread so no thread can use up all the memory.  Some of this memory is used for storing queries' expressions.  If a query has too many expressions and its required memory exceeds the internal limit, the engine will not execute it.  To avoid this problem, users can change the query into multiple queries with smaller number of expressions in each. For example, you have a query with a long list of expressions in the WHERE clause: 
 
 ```sql
 DELETE FROM dbo.MyTable 
 WHERE
 (c1 = '0000001' AND c2 = 'A000001') or
 (c1 = '0000002' AND c2 = 'A000002') or
-(c1 = '0000003' AND c2 = 'A000003') or
-...
-
+(c1 = '0000003' AND c2 = 'A000003') 
+/* ... additional, similar expressions omitted for simplicity */
 ```
 Change this query to:
 
@@ -143,7 +138,7 @@ Change this query to:
 DELETE FROM dbo.MyTable WHERE (c1 = '0000001' AND c2 = 'A000001');
 DELETE FROM dbo.MyTable WHERE (c1 = '0000002' AND c2 = 'A000002');
 DELETE FROM dbo.MyTable WHERE (c1 = '0000003' AND c2 = 'A000003');
-...
+/* ... refactored, individual DELETE statements omitted for simplicity  */
 ```
 
 ## See Also  

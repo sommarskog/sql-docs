@@ -1,39 +1,12 @@
 ---
 title: "Inserting Data Using XML Updategrams (SQLXML)"
 description: Learn how to insert data using XML updategrams in SQLXML 4.0.
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "03/17/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: xml
+ms.service: sql
+ms.subservice: xml
 ms.topic: "reference"
-helpviewer_keywords: 
-  - "xsi:nil attribute"
-  - "unique values"
-  - "<after> block"
-  - "id attribute"
-  - "data insertions [SQLXML]"
-  - "nil attribute"
-  - "<before> block"
-  - "updg:guid attribute"
-  - "multiple record insertions"
-  - "returnid attribute"
-  - "updategrams [SQLXML], inserting data"
-  - "updg:at-identity attribute"
-  - "invalid characters [SQLXML]"
-  - "updg:returnid attribute"
-  - "updg:id attribute"
-  - "namespaces [SQLXML], updategrams"
-  - "IDENTITY-type column"
-  - "guid attribute"
-  - "record insertion [SQLXML]"
-  - "null values [SQLXML]"
-  - "at-identity attribute"
-  - "xml data type [SQL Server], SQLXML"
-ms.assetid: 4dc48762-bc12-43fb-b356-ea1b9c1e287e
-author: rothja
-ms.author: jroth
-ms.custom: "seo-lt-2019"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Inserting Data Using XML Updategrams (SQLXML 4.0)
@@ -683,7 +656,7 @@ CustOrder(OrderID, EmployeeID, OrderType)
 <?xml version="1.0" encoding="utf-8" ?>  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
            xmlns:sql="urn:schemas-microsoft-com:mapping-schema"  
-           xmlns="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription">   
+           xmlns="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription">   
   <xsd:element name="ProductModel"  sql:relation="Production.ProductModel" >  
      <xsd:complexType>  
        <xsd:sequence>  

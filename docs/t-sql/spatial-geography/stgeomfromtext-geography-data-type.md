@@ -1,27 +1,23 @@
 ---
+title: "STGeomFromText (geography Data Type)"
 description: "STGeomFromText (geography Data Type)"
-title: "STGeomFromText (geography Data Type) | Microsoft Docs"
-ms.custom: ""
+author: MladjoA
+ms.author: mlandzic
 ms.date: "07/30/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "STGeomFromText (geography Data Type)"
   - "STGeomFromText_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "full globe"
   - "STGeomFromText method"
-ms.assetid: 3717987b-77d8-4ccf-a1db-5a8016ac1083
-author: MladjoA
-ms.author: mlandzic 
+dev_langs:
+  - "TSQL"
 ---
 # STGeomFromText (geography Data Type)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 Returns a **geography** instance from an Open Geospatial Consortium (OGC)Well-Known Text (WKT) representation augmented with any Z (elevation) and M (measure) values carried by the instance.
   
@@ -52,11 +48,14 @@ STGeomFromText ( 'geography_tagged_text' , SRID )
  The OGC type of the **geography** instance returned by STGeomFromText() is set to the corresponding WKT input.  
   
  This method will throw an **ArgumentException** if the input contains an antipodal edge.  
+
+> [!Note]
+> The order in which the points are listed matters for geography polygons. It determines if the polygon area is to the inside or outside of the given ring. See [Polygon](../../relational-databases/spatial/polygon.md#orientation-of-spatial-data) for more information.
   
 ## Examples  
  The following example uses `STGeomFromText()` to create a `geography` instance.  
   
-```  
+```sql
 DECLARE @g geography;  
 SET @g = geography::STGeomFromText('LINESTRING(-122.360 47.656, -122.343 47.656)', 4326);  
 SELECT @g.ToString();  

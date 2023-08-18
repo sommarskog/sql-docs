@@ -1,20 +1,21 @@
 ---
-title: Run applications with azdata 
+title: Run applications with azdata
 titleSuffix: SQL Server Big Data Clusters
 description: Running applications with azdata on SQL Server 2019 big data clusters.
-author: cloudmelon
-ms.author: melqin
-ms.reviewer: mikeray
-ms.metadata: seo-lt-2019
+author: HugoMSFT
+ms.author: hudequei
+ms.reviewer: wiassaf
 ms.date: 08/16/2020
+ms.service: sql
+ms.subservice: big-data-cluster
 ms.topic: conceptual
-ms.prod: sql
-ms.technology: big-data-cluster
 ---
 
 # Run apps with azdata - SQL Server Big Data Clusters
 
 This article describes how to run an application inside a SQL Server Big Data Clusters.
+
+[!INCLUDE[big-data-clusters-banner-retirement](../includes/bdc-banner-retirement.md)]
 
 ## Prerequisites
 
@@ -98,4 +99,4 @@ The describe command provides detailed information about the app including the e
 
 Explore how to integrate apps deployed on [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] in your own applications at [Consume applications on big data clusters](app-consume.md) for more information. You can also check out additional samples at [App Deploy Samples](https://aka.ms/sql-app-deploy).
 
-For more information about [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], see [What are [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]?](big-data-cluster-overview.md).
+For more information about [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], see [Introducing [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]](big-data-cluster-overview.md).

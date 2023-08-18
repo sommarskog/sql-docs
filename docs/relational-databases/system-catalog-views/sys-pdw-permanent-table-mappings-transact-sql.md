@@ -1,17 +1,15 @@
 ---
 title: "sys.pdw_permanent_table_mappings (Transact-SQL)"
-description: Ties permanent user tables to internal object names by **object_id**. 
-ms.custom: ""
-ms.date: "07/24/2020"
-ms.prod: sql
-ms.technology: data-warehouse
-ms.reviewer: ""
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
+description: Ties permanent user tables to internal object names by **object_id**.
 author: mstehrani
 ms.author: emtehran
-monikerRange: "= azure-sqldw-latest"
+ms.date: "07/24/2020"
+ms.service: sql
+ms.subservice: data-warehouse
+ms.topic: "reference"
+dev_langs:
+  - "TSQL"
+monikerRange: "=azure-sqldw-latest"
 ---
 # sys.pdw_permanent_table_mappings (Transact-SQL)
 [!INCLUDE [applies-to-version/asa](../../includes/applies-to-version/asa.md)]

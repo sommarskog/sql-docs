@@ -1,14 +1,13 @@
 ---
-title: "Monitor and Tune for Performance | Microsoft Docs"
+title: "Monitor and Tune for Performance"
 description: Learn about monitoring databases to assess server performance, using periodic snapshots and gathering data continuously to track performance trends.
-ms.custom: ""
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "07/18/2016"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: performance
+ms.service: sql
+ms.subservice: performance
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "instances of SQL Server, monitoring performance"
   - "monitoring server performance [SQL Server]"
   - "Database Engine [SQL Server], performance"
@@ -26,13 +25,10 @@ helpviewer_keywords:
   - "monitoring [SQL Server], server performance"
   - "database monitoring [SQL Server]"
   - "monitoring server performance [SQL Server], about monitoring server performance"
-ms.assetid: 87f23f03-0f19-4b2e-bfae-efa378f7a0d4
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Monitor and Tune for Performance
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
   The goal of monitoring databases is to assess how a server is performing. Effective monitoring involves taking periodic snapshots of current performance to isolate processes that are causing problems, and gathering data continuously over time to track performance trends.  
   
  Ongoing evaluation of the database performance helps you minimize response times and maximize throughput, yielding optimal performance. Efficient network traffic, disk I/O, and CPU usage are key to peak performance. You need to thoroughly analyze the application requirements, understand the logical and physical structure of the data, assess database usage, and negotiate tradeoffs between conflicting uses such as online transaction processing (OLTP) versus decision support.  

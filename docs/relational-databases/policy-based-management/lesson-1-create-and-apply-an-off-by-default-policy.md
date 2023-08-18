@@ -1,16 +1,12 @@
 ---
 title: "Lesson 1: Create & Apply an off-by-default policy"
-description: Tutorial that teaches you to create and apply an off-by-default policy for Policy-Based Management in SQL Server. 
-ms.custom: seo-lt-2019
-ms.date: "03/14/2017"
-ms.prod: sql
-ms.technology: security
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.topic: conceptual
-ms.assetid: d31367db-b7db-44c4-8df2-f1240474cf78
+description: Tutorial that teaches you to create and apply an off-by-default policy for Policy-Based Management in SQL Server.
 author: VanMSFT
 ms.author: vanto
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: security
+ms.topic: conceptual
 ---
 # Lesson 1: Create and Apply an Off By Default Policy
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -52,7 +48,7 @@ To complete this tutorial, you need SQL Server Management Studio, and access to 
 9. On the description page, you can provide a hyperlink to a Web page for your policies in the **Additional help hyperlink** area. In the **Text to display** box, type the text that will appear for the hyperlink.
     1. In the **Address** box, type a hyperlink to a Help page, such as the home page for the IT department of your company.
     1. To confirm the address by opening the Web page, click **Test Link**.
-    1. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+    1. Select **OK**.
 
     ![Off-by-default policy web link](Media/lesson-1-create-and-apply-an-off-by-default-policy/off-by-default-policy-web-link.png)
 

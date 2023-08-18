@@ -1,17 +1,14 @@
 ---
-title: "SQL Server connection pooling"
+title: SQL Server connection pooling
 description: Learn how Microsoft SqlClient Data Provider for SQL Server minimizes the cost of opening connections by using SQL Server connection pooling, which reduces overhead for new connections.
-ms.date: "11/13/2020"
-dev_langs: 
-  - "csharp"
-ms.assetid: 7e51d44e-7c4e-4040-9332-f0190fe36f07
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: connectivity
-ms.topic: conceptual
 author: David-Engel
-ms.author: v-daenge
-ms.reviewer: v-chmalh
+ms.author: v-davidengel
+ms.date: 03/07/2023
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: conceptual
+dev_langs:
+  - "csharp"
 ---
 # SQL Server connection pooling (ADO.NET)
 
@@ -71,7 +68,9 @@ For more info about the events associated with opening and closing connections, 
 
 ## Remove connections
 
-The connection pooler removes a connection from the pool after it has been idle for approximately **4-8** minutes, or if the pooler detects that the connection with the server has been severed.
+If [LoadBalanceTimeout](/dotnet/api/microsoft.data.sqlclient.sqlconnectionstringbuilder.loadbalancetimeout) (or `Connection Lifetime`) is set, when a connection is returned to the pool, its creation time is compared with the current time and the connection is destroyed if that time span (in seconds) exceeds the value specified by `LoadBalanceTimeout`. This is useful in clustered configurations to force load balancing between a running server and a server just brought online.
+
+If LoadBalanceTimeout (or Connection Lifetime) isn't set (default value = 0), the connection pooler removes a connection from the pool after it has been idle for approximately **4-8** minutes (in a random two-pass fashion), or if the pooler detects that the connection with the server has been severed.
 
 > [!NOTE]
 > A severed connection can be detected only after attempting to communicate with the server. If a connection is found that is no longer connected to the server, it is marked as invalid. Invalid connections are removed from the connection pool only when they are closed or reclaimed.
@@ -125,5 +124,5 @@ We recommend that you take advantage of security mechanisms that you can use ins
 
 - [Connection pooling](connection-pooling.md)
 - [SQL Server and ADO.NET](./sql/index.md)
-- [performance counters in SqlClient](performance-counters.md)
+- [Diagnostic counters in SqlClient](diagnostic-counters.md)
 - [Microsoft ADO.NET for SQL Server](microsoft-ado-net-sql-server.md)

@@ -1,26 +1,22 @@
 ---
+title: "STGeomCollFromText (geometry Data Type)"
 description: "STGeomCollFromText (geometry Data Type)"
-title: "STGeomCollFromText (geometry Data Type) | Microsoft Docs"
-ms.custom: ""
+author: MladjoA
+ms.author: mlandzic
 ms.date: "08/03/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "STGeomCollFromText_TSQL"
   - "STGeomCollFromText (geometry Data Type)"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "STGeomCollFromText (geometry Data Type)"
-ms.assetid: 19e757b3-cb2e-4852-87b9-40a815ab707e
-author: MladjoA
-ms.author: mlandzic 
+dev_langs:
+  - "TSQL"
 ---
 # STGeomCollFromText (geometry Data Type)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 Returns a **geometry** instance from an Open Geospatial Consortium (OGC) Well-Known Text (WKT) representation augmented with any Z (elevation) and M (measure) values carried by the instance.
   
@@ -53,7 +49,7 @@ STGeomCollFromText ( 'geometrycollection_tagged_text' , SRID )
 ## Examples  
  The following example uses `STGeomCollFromText()` to create a geometry instance.  
   
-```  
+```sql
 DECLARE @g geometry;  
 SET @g = geometry::STGeomCollFromText('GEOMETRYCOLLECTION ( POLYGON((5 5, 10 5, 10 10, 5 5)), POINT(10 10) )', 0);  
 SELECT @g.ToString();  

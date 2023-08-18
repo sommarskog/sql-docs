@@ -1,29 +1,25 @@
 ---
+title: "SUSER_ID (Transact-SQL)"
 description: "SUSER_ID (Transact-SQL)"
-title: "SUSER_ID (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: VanMSFT
+ms.author: vanto
 ms.date: "09/07/2018"
-ms.prod: sql
-ms.prod_service: "sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "SUSER_ID_TSQL"
   - "SUSER_ID"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "users [SQL Server], IDs"
   - "logins [SQL Server], IDs"
   - "SUSER_ID function"
   - "IDs [SQL Server], logins"
   - "identification numbers [SQL Server], logins"
   - "user IDs [SQL Server]"
-ms.assetid: 348911ab-b0b6-4867-aee7-e6f42e053a4a
-author: VanMSFT
-ms.author: vanto
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017"
+dev_langs:
+  - "TSQL"
+monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017"
 ---
 # SUSER_ID (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -33,7 +29,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-201
 > [!NOTE]  
 >  Starting with [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], SUSER_ID returns the value listed as **principal_id** in the **sys.server_principals** catalog view.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

@@ -1,27 +1,26 @@
 ---
+title: "OPENJSON (Transact-SQL)"
 description: "OPENJSON (Transact-SQL)"
-title: "OPENJSON (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: 06/03/2020
-ms.prod: sql
-ms.technology: t-sql
+author: "jovanpop-msft"
+ms.author: "jovanpop"
+ms.date: 04/13/2022
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "OPENJSON"
   - "OPENJSON_TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "OPENJSON rowset function"
   - "JSON, importing"
   - "JSON, converting from"
-ms.assetid: 233d0877-046b-4dcc-b5da-adeb22f78531
-author: "jovanpop-msft"
-ms.author: "jovanpop"
-ms.reviewer: chadam
-monikerRange: "= azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017"
+dev_langs:
+  - "TSQL"
+monikerRange: "= azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 ||=fabric" 
 ---
 # OPENJSON (Transact-SQL)
 
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa-fabricse-fabricdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-fabricse-fabricdw.md)]
 
 **OPENJSON** is a table-valued function that parses JSON text and returns objects and properties from the JSON input as rows and columns. In other words, **OPENJSON** provides a rowset view over a JSON document. You can explicitly specify the columns in the rowset and the JSON property paths used to populate the columns. Since **OPENJSON** returns a set of rows, you can use **OPENJSON** in the `FROM` clause of a [!INCLUDE[tsql](../../includes/tsql-md.md)] statement just as you can use any other table, view, or table-valued function.  
   
@@ -33,10 +32,8 @@ Use **OPENJSON** to import JSON data into [!INCLUDE[ssNoVersion](../../includes/
 > You can check compatibility level in the `sys.databases` view or in database properties. You can change the compatibility level of a database with the following command:  
 > 
 > `ALTER DATABASE DatabaseName SET COMPATIBILITY_LEVEL = 130`
->
-> Compatibility level 120 may be the default even in a new Azure SQL Database.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon")[Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false":::[Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -95,7 +92,6 @@ SELECT * FROM OpenJson(@json);
 | Null_value                         | NULL                  | 0 |
 | Array_value                        | ["a","r","r","a","y"] | 4 |
 | Object_value                       | {"obj":"ect"}         | 5 |
-| &nbsp; | &nbsp; | &nbsp; |
 
 - The DoublePrecisionFloatingPoint_value conforms to IEEE-754.
 
@@ -103,7 +99,7 @@ SELECT * FROM OpenJson(@json);
 
 Is an optional JSON path expression that references an object or an array within *jsonExpression*. **OPENJSON** seeks into the JSON text at the specified position and parses only the referenced fragment. For more info, see [JSON Path Expressions &#40;SQL Server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md).
 
-In [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] and in [!INCLUDE[ssSDSfull_md](../../includes/sssdsfull-md.md)], you can provide a variable as the value of *path*.
+In [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] and in [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], you can provide a variable as the value of *path*.
   
 The following example returns a nested object by specifying the *path*:  
 
@@ -133,6 +129,35 @@ FROM OPENJSON(@json,'$.path.to."sub-object"')
 When **OPENJSON** parses a JSON array, the function returns the indexes of the elements in the JSON text as keys.
 
 The comparison used to match path steps with the properties of the JSON expression is case-sensitive and collation-unaware (that is, a BIN2 comparison). 
+
+#### Array element identity
+
+the `OPENROWSET` function in the serverless SQL pool in Azure Synapse Analytics can automatically  generate the identity of each row that is returned as a result. The identity column is specified using the expression `$.sql:identity()` in the JSON path after the column definition. The column with this value in the JSON path expression will generate a unique 0-based number for each element in the JSON array that the function parses. The identity value represents the position/index of the array element.
+
+```sql
+DECLARE @array VARCHAR(MAX);
+SET @array = '[{"month":"Jan", "temp":10},{"month":"Feb", "temp":12},{"month":"Mar", "temp":15},
+               {"month":"Apr", "temp":17},{"month":"May", "temp":23},{"month":"Jun", "temp":27}
+              ]';
+
+SELECT * FROM OPENJSON(@array)
+        WITH (  month VARCHAR(3),
+                temp int,
+                month_id tinyint '$.sql:identity()') as months
+```
+
+**Results**
+
+| month    | temp    | month_id |
+| --- | --- | --- |
+| Jan    | 10    | 0 |
+| Feb    | 12    | 1 |
+| Mar    | 15    | 2 |
+| Apr    | 17    | 3 |
+| May    | 23    | 4 |
+| Jun    | 27    | 5 |
+
+The identity is available only in the serverless SQL pool in Synapse Analytics.
 
 ### *with_clause*
 

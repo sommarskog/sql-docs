@@ -1,13 +1,13 @@
 ---
-description: "Manage Events"
 title: "Manage Events"
-ms.custom: seo-lt-2019
+description: "Manage Events"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
+ms.service: sql
+ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "event forwarding servers [SQL Server]"
   - "events [SQL Server], forwarding"
   - "event-triggered jobs [SQL Server]"
@@ -15,10 +15,6 @@ helpviewer_keywords:
   - "alerts [SQL Server], forwarded events"
   - "alerts [SQL Server], management servers"
   - "SQL Server Agent alerts, management servers"
-ms.assetid: 8f4ee7f5-80df-49fd-b2b8-d020e04b6e1b
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
 ---
 # Manage Events
@@ -58,7 +54,7 @@ When configuring an alerts management server, follow these guidelines:
   
 -   Carefully plan for the network traffic involved in configuring many servers to share the same alerts management server. If congestion results, reduce the number of servers that use a particular alerts management server.  
   
-    The servers that are registered within [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] constitute the list of servers available to be chosen by that server as the alerts-forwarding server.  
+    The servers that are registered within SQL Server Management Studio constitute the list of servers available to be chosen by that server as the alerts-forwarding server.  
   
 -   Define alerts on the local instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that require a server-specific response, instead of forwarding the alerts to the alerts management server.  
   

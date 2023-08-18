@@ -1,25 +1,21 @@
 ---
-description: "dbo.sysproxysubsystem (Transact-SQL)"
-title: "dbo.sysproxysubsystem (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "dbo.sysproxysubsystem (Transact-SQL)"
+description: dbo.sysproxysubsystem (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "dbo.sysproxysubsystem_TSQL"
   - "dbo.sysproxysubsystem"
   - "sysproxysubsystem_TSQL"
   - "sysproxysubsystem"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sysproxysubsystem system table"
-ms.assetid: 6d7713f5-1253-4a19-b1fb-635c377c95c1
-author: cawrites
-ms.author: chadam
+dev_langs:
+  - "TSQL"
 ---
 # dbo.sysproxysubsystem (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

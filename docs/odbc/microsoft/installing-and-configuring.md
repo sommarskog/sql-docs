@@ -1,23 +1,20 @@
 ---
+title: "Installing and Configuring"
 description: "Installing and Configuring"
-title: "Installing and Configuring | Microsoft Docs"
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: intro-installation
+helpviewer_keywords:
   - "FoxPro ODBC driver [ODBC], configuring"
   - "Visual FoxPro ODBC driver [ODBC], configuring"
   - "configuring Visual FoxPro ODBC driver [ODBC]"
   - "installing Visual FoxPro ODBC driver [ODBC]"
   - "Visual FoxPro ODBC driver [ODBC], installing"
   - "FoxPro ODBC driver [ODBC], installing"
-ms.assetid: 4202165e-b89c-47a5-ae59-0c98988caad5
-author: David-Engel
-ms.author: v-daenge
 ---
 # Installing and Configuring
 To download the Visual FoxPro ODBC Driver, see [the Visual FoxPro ODBC Driver download site](/previous-versions/visualstudio/foxpro/mt490121(v=msdn.10)).  

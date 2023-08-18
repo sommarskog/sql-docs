@@ -1,22 +1,19 @@
 ---
-description: "Configure Advanced Settings for DQS Log Files"
 title: "Configure Advanced Settings for DQS Log Files"
-ms.date: "03/01/2017"
-ms.prod: sql
-ms.prod_service: "data-quality-services"
-ms.reviewer: ""
-ms.technology: data-quality-services
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "log files,advanced settings"
-  - "dqs log files,advanced settings"
-ms.assetid: 1d565748-9759-425c-ae38-4d2032a86868
+description: "Configure Advanced Settings for DQS Log Files"
 author: swinarko
 ms.author: sawinark
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: data-quality-services
+ms.topic: conceptual
+helpviewer_keywords:
+  - "log files,advanced settings"
+  - "dqs log files,advanced settings"
 ---
 # Configure Advanced Settings for DQS Log Files
 
-[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI](../includes/applies-to-version/sqlserver.md)]
 
   This topic describes how to configure advanced settings for [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] and [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] log files, such as set the rolling file size limit of the log files, set the time stamp pattern of the events, and so on.  
   

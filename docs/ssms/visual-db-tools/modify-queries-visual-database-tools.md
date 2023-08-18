@@ -1,23 +1,18 @@
 ---
-description: "Modify Queries (Visual Database Tools)"
 title: Modify Queries
-ms.custom: seo-lt-2019
-ms.date: 01/19/2017
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "modifying queries"
-  - "queries [SQL Server], modifying"
-ms.assetid: e2618a89-90fb-43d8-ac4e-cabd2aa3f1dc
+description: "Modify Queries (Visual Database Tools)"
 author: markingmyname
 ms.author: maghan
-ms.reviewer: 
-
+ms.date: 01/19/2017
+ms.service: sql
+ms.subservice: ssms
+ms.topic: conceptual
+helpviewer_keywords:
+  - "modifying queries"
+  - "queries [SQL Server], modifying"
 ---
 # Modify Queries (Visual Database Tools)
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server](../../includes/applies-to-version/sqlserver.md)]
 Open a query to modify it in Query and View Designer.  
   
 ### To open a query  

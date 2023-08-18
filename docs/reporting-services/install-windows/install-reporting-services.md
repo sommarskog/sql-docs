@@ -1,28 +1,34 @@
 ---
+title: "Install SQL Server Reporting Services"
 description: "Install SQL Server Reporting Services"
-title: "Install SQL Server Reporting Services | Microsoft Docs"
-ms.date: 12/11/2020
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-
-ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 09/16/2022
+ms.service: reporting-services
+ms.topic: conceptual
+ms.custom:
+  - intro-installation
+  - updatefrequency5
 monikerRange: ">= sql-server-2016"
 ---
 # Install SQL Server Reporting Services
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2017-and-later](../../includes/ssrs-appliesto-2017-and-later.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)]
 
-SQL Server Reporting Services installation involves server components for storing report items, rendering reports, and processing of subscription and other report services. 
+SQL Server Reporting Services installation involves server components for storing report items, rendering reports, and processing of subscription and other report services.
 
-::: moniker range=">=sql-server-ver15"
-Download [SQL Server 2019 Reporting Services](https://www.microsoft.com/download/details.aspx?id=100122) from the Microsoft Download Center.
+::: moniker range="=sql-server-ver16"
+Download [**SQL Server 2022 Reporting Services**](https://www.microsoft.com/download/details.aspx?id=104502) from the Microsoft Download Center.
+
+::: moniker-end
+
+::: moniker range="<=sql-server-ver15"
+Download [**SQL Server 2019 Reporting Services**](https://www.microsoft.com/download/details.aspx?id=100122) from the Microsoft Download Center.
 
 ::: moniker-end
 
 ::: moniker range="=sql-server-2017"
-Download [SQL Server 2017 Reporting Services](https://www.microsoft.com/download/details.aspx?id=55252) from the Microsoft Download Center.
+Download [**SQL Server 2017 Reporting Services**](https://www.microsoft.com/download/details.aspx?id=55252) from the Microsoft Download Center.
 
 ::: moniker-end
 
@@ -40,7 +46,7 @@ Before you install Reporting Services, review the [Hardware and software require
 Installing a report server is straightforward. There are only a few steps to install the files.
 
 > [!NOTE]
-> You do not need a SQL Server Database Engine server available at the time of install. You will need one to configure Reporting Services after install.
+> You don't need a SQL Server Database Engine server available at the time of install. You do need one to configure Reporting Services after install.
 
 1. Find the location of SQLServerReportingServices.exe and launch the installer.
 
@@ -48,7 +54,7 @@ Installing a report server is straightforward. There are only a few steps to ins
 
 3. Choose an edition to install and then select **Next**.
 
-    For a free edition, choose either Evaluation or Developer from the drop down.
+    For a free edition, choose either Evaluation or Developer from the drop-down.
 
     ![Evaluation or developer editions](media/install-reporting-services/report-server-install-edition-select.png)
 
@@ -67,13 +73,13 @@ Installing a report server is straightforward. There are only a few steps to ins
 
 ## Configure your report server
 
-After you select **Configure Report Server** in the setup, you will be presented with **Report Server Configuration Manager**. For more information, see [Report Server Configuration Manager](reporting-services-configuration-manager-native-mode.md).
+After you select **Configure Report Server** in the setup, you're' presented with **Report Server Configuration Manager**. For more information, see [Report Server Configuration Manager](reporting-services-configuration-manager-native-mode.md).
 
 You need to [create a report server database](ssrs-report-server-create-a-report-server-database.md) to complete the initial configuration of Reporting Services. A SQL Server Database server is required to complete this step.
 
 ### Creating a database on a different server
 
-If you are creating the report server database on a database server on a different machine, you need to change the service account for the report server to a credential that is recognized on the database server.
+If you're creating the report server database on a database server on a different machine, you need to change the service account for the report server to a credential that is recognized on the database server.
 
 By default, the report server uses the virtual service account. If you try to create a database on a different server, you may receive the following error on the Applying connection rights step.
 
@@ -85,7 +91,7 @@ For more information, see [Configure the report server service account](configur
 
 ## Windows Service
 
-A windows service is created as part of the installation. It is displayed as **SQL Server Reporting Services**. The service name is **SQLServerReportingServices**.
+A Windows service is created as part of the installation. It's displayed as **SQL Server Reporting Services**. The service name is **SQLServerReportingServices**.
 
 ## Default URL reservations
 
@@ -106,9 +112,9 @@ An example of the complete URL string might be as follows:
 
 ## Firewall
 
-If you are accessing the report server from a remote machine, you want to make sure you have configured any firewall rules if there is a firewall present.
+If you're accessing the report server from a remote machine, you want to make sure you've configured any firewall rules if there's a firewall present.
 
-You need to open up the TCP port that you have configured for your Web Service URL and Web Portal URL. By default, these are configured on TCP port 80.
+You need to open up the TCP port that you've configured for your Web Service URL and Web Portal URL. By default, these are configured on TCP port 80.
 
 ## Additional configuration
 
@@ -134,4 +140,4 @@ With your report server installed, begin to create reports and deploy those to y
 
 To create reports using SQL Server Data Tools, [download SQL Server Data Tools](../../ssdt/download-sql-server-data-tools-ssdt.md).
 
-More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)
+More questions? [Try asking the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user)

@@ -1,17 +1,15 @@
 ---
-description: "MSSQLSERVER_18482"
 title: MSSQLSERVER_18482
-ms.custom: ""
-ms.date: 12/25/2020
-ms.prod: sql
-ms.reviewer: ramakoni1, pijocoder, suresh-kandoth, vencher, tejasaks, docast
-ms.technology: supportability
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "18482 (Database Engine error)"
-ms.assetid: 
+description: "MSSQLSERVER_18482"
 author: suresh-kandoth
-ms.author: ramakoni
+ms.author: sureshka
+ms.reviewer: vencher, tejasaks, docast
+ms.date: 12/25/2020
+ms.service: sql
+ms.subservice: supportability
+ms.topic: "reference"
+helpviewer_keywords:
+  - "18482 (Database Engine error)"
 ---
 # MSSQLSERVER_18482
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -26,7 +24,6 @@ ms.author: ramakoni
 |Component|SQLEngine|
 |Symbolic Name|REMLOGIN_INVALID_SITE|
 |Message Text|Could not connect to server '%.ls' because '%.ls' is not defined as a remote server. Verify that you have specified the correct server name. %.*ls|
-||
 
 ## Explanation
 
@@ -48,7 +45,6 @@ For example, suppose your local server was named SERV_LOCAL, the remote server w
 |---|---|---|---|
 |1|2|SERV_LOCAL|SERV_LOCAL|
 |2|1|SERV_REMOTE|SERV_REMOTE|
-||||
 
 In the preceding output, SERV_LOCAL is the local server, but it has a srvid of 1; it should be 0. To correct this, follow these steps:
 
@@ -62,7 +58,6 @@ After running those steps, the sysservers table should look like the following:
 |---|---|---|---|
 |0|0|SERV_LOCAL|SERV_LOCAL|
 |2|1|SERV_REMOTE|SERV_REMOTE|
-||||
 
 > [!NOTE]
 > Server ID (srvid) should be 0 for the local server.

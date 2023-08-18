@@ -1,17 +1,18 @@
 ---
-title: "Add visualizations to Reporting Services mobile reports | Microsoft Docs"
+title: "Add visualizations to Reporting Services mobile reports"
 description: "Learn about the three basic chart types you can use in Reporting Services mobile reports: time, category, and totals, and their corresponding comparison charts."
-ms.date: 09/26/2016
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: mobile-reports
-
-ms.topic: conceptual
-ms.assetid: 3b220b74-9ecd-4084-93fb-545208d5d7a2
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 07/21/2022
+ms.service: reporting-services
+ms.subservice: mobile-reports
+ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 # Add visualizations to Reporting Services mobile reports
+
+[!INCLUDE [ssrs-mobile-report-deprecated](../../includes/ssrs-mobile-report-deprecated.md)]
+
 Charts are an essential part of data visualization. Learn about the charts you can use in [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] mobile reports to cover a range of scenarios. 
 
 [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-long.md)] has three basic chart types: time, category, and totals. These three chart types have corresponding comparison charts, which are useful for comparing two distinct sets of series.  

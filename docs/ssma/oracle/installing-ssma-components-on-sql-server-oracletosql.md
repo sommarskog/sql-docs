@@ -1,18 +1,16 @@
 ---
-title: "Installing SSMA components on SQL Server (OracleToSQL) | Microsoft Docs"
+title: "Installing SSMA components on SQL Server (OracleToSQL)"
 description: Learn how to install the SSMA extension pack and Oracle providers on the computer that runs SQL Server to support Oracle database conversion.
-ms.prod: sql
-ms.custom: ""
+author: cpichuka
+ms.author: cpichuka
 ms.date: "04/29/2021"
-ms.reviewer: ""
-ms.technology: ssma
+ms.service: sql
+ms.subservice: ssma
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: intro-installation
+helpviewer_keywords:
   - "Installing the extension pack"
   - "SQL Server Database Objects"
-ms.assetid: 33070e5f-4e39-4b70-ae81-b8af6e4983c5
-author: "nahk-ivanov"
-ms.author: "alexiva"
 ---
 
 # Installing SSMA components on SQL Server (OracleToSQL)
@@ -30,8 +28,8 @@ Also, when you migrate data to [!INCLUDE[ssNoVersion](../../includes/ssnoversion
 Before you install the SSMA for Oracle server components on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], make sure that the system meets the following requirements:
 
 - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance is installed.
-- [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows Installer 3.1 or a later version.
-- The [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort_md.md)] version 4.7.2 or a later version. You can obtain it from the [.NET Framework Developer Center](https://go.microsoft.com/fwlink/?LinkId=48882).
+- [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows Installer 3.1 or a later version.
+- The [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] version 4.7.2 or a later version. You can obtain it from the [.NET Framework Developer Center](https://go.microsoft.com/fwlink/?LinkId=48882).
 - The OLE DB provider for Oracle (if using OLE DB), and connectivity to the Oracle database that you want to migrate. You can install providers from the Oracle product media or Oracle Web site.
 - The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser service must be running during installation. This is used to populate a list of the instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in the Setup wizard. You can disable the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser service after installation.
 
@@ -60,7 +58,7 @@ To install the extension pack:
 8. Select the desired installation type and, click **Next**.
 
    > [!IMPORTANT]
-   > Remote option should only be used when installing extension pack on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] running on Linux or when targeting [!INCLUDE[ssAzureMi](../../includes/ssazuremi_md.md)]. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installations running on Windows should always have extension pack installed locally. [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] and Azure Synapse Analytics do not support extension pack.
+   > Remote option should only be used when installing extension pack on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] running on Linux or when targeting [!INCLUDE[ssAzureMi](../../includes/ssazuremi_md.md)]. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installations running on Windows should always have extension pack installed locally. [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and Azure Synapse Analytics do not support extension pack.
 
    If you are installing the extension pack on a local [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance, then next page will allow you to choose a local instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to which you'll be migrating Oracle schemas. Choose an instance in the drop-down, and then select **Next**.
 

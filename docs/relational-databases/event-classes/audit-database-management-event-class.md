@@ -1,21 +1,18 @@
 ---
+title: "Audit Database Management Event Class"
 description: "Audit Database Management Event Class"
-title: "Audit Database Management Event Class | Microsoft Docs"
-ms.custom: ""
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: supportability
+ms.service: sql
+ms.subservice: supportability
 ms.topic: reference
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Audit Database Management event class"
-ms.assetid: 3e3de528-c3f8-413f-a6b9-d324ca95ad8e
-author: "stevestein"
-ms.author: "sstein"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Audit Database Management Event Class
-[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
   The **Audit Database Management** event class occurs when a database is created, altered, or dropped.  
   
 ## Audit Database Management Event Class Data Columns  

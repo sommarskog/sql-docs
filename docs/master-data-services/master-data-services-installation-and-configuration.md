@@ -1,23 +1,23 @@
 ---
 title: Installation and Configuration
 description: Learn how to install Master Data Services on a Windows Server 2012 R2 computer, configure the MDS database and website, and deploy the sample models and data.
+author: CordeliaGrey
+ms.author: jiwang6
 ms.date: 03/24/2021
-ms.prod: sql
-ms.prod_service: "mds"
-ms.technology: master-data-services
+ms.service: sql
+ms.subservice: master-data-services
 ms.topic: quickstart
-author: lrtoyou1223
-ms.author: lle
+ms.custom: intro-quickstart
 ---
 # Master Data Services Installation and Configuration
 
-[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   This article covers how to install [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] on a Windows Server 2012 R2 machine, set up the MDS database and website, and deploy the sample models and data. [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] (MDS) enables your organization to manage a trusted version of data.   
   
 > [!NOTE] 
 > You can install [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] on a Windows 10 machine when you use the Developer edition that now supports [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]. 
->>For more information on operating system support for different editions, [SQL Server 2019: Hardware and software requirements](../sql-server/install/hardware-and-software-requirements-for-installing-sql-server-ver15.md).
+>>For more information on operating system support for different editions, [SQL Server 2019: Hardware and software requirements](../sql-server/install/hardware-and-software-requirements-for-installing-sql-server-2019.md).
 
 For an overview of how you organize data in [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)], see [Master Data Services Overview (MDS)](../master-data-services/master-data-services-overview-mds.md).     
   
@@ -62,7 +62,7 @@ If you're interested in making changes to the installation of [!INCLUDE[ssnovers
 
 ## <a name="InstallIIS"></a> Installing and Configuring IIS
   
-1.  In [!INCLUDE[winblue_server_2](../includes/winblue-server-2-md.md)], click the **Server Manager** icon on the taskbar on the **Desktop**.  
+1.  In [!INCLUDE[winserver2012r2](../includes/winserver2012r2-md.md)], click the **Server Manager** icon on the taskbar on the **Desktop**.  
   
      ![Icon for the Server Manager in Windows Server 2012 taskbar](../master-data-services/media/mds-windowsservertaskbar-servermanagericon.png "Icon for the Server Manager in Windows Server 2012 taskbar")  
   
@@ -80,14 +80,14 @@ If you're interested in making changes to the installation of [!INCLUDE[ssnovers
 
    ![mds_AddRolesFeaturesWizard_ServerRolesPage](../master-data-services/media/mds-addrolesfeatureswizard-serverrolespage.png)
    
-9. On the **Features** page, confirm that the following features are selected, and then click **Next**. These features are required for [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] on [!INCLUDE[winblue_server_2_md](../includes/winblue-server-2-md.md)].
+9. On the **Features** page, confirm that the following features are selected, and then click **Next**. These features are required for [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] on [!INCLUDE[winserver2012r2_md](../includes/winserver2012r2-md.md)].
   
     |Features|Features|  
     |--------------|--------------|  
     |![mds_AddRolesFeaturesWizard_FeaturesPage](../master-data-services/media/mds-addrolesfeatureswizard-featurespage.png)|![mds_AddRolesFeaturesWizard_FeaturesPage_WindowsProcActive](../master-data-services/media/mds-addrolesfeatureswizard-featurespage-windowsprocactive.png)|  
 
 10. In the left-hand pane, click **Web Server Role (IIS)** and then click **Role Services**.
-11. On the **Role Services** page, confirm that the following services are selected, and then click **Next**. These services are required for [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] on [!INCLUDE[winblue_server_2](../includes/winblue-server-2-md.md)].
+11. On the **Role Services** page, confirm that the following services are selected, and then click **Next**. These services are required for [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] on [!INCLUDE[winserver2012r2](../includes/winserver2012r2-md.md)].
 
     > [!WARNING]  
     >  Do not install the WebDAV Publishing role service. WebDAV Publishing is not compatible with [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)].  
@@ -96,7 +96,6 @@ If you're interested in making changes to the installation of [!INCLUDE[ssnovers
     |-----------------------------|-----------------------------|  
     |![mds_AddRolesFeaturesWizard_RoleServicesPage](../master-data-services/media/mds-addrolesfeatureswizard-roleservicespage.png)|![mds_AddRolesFeaturesWizard_RoleServicesPage_PerformSecurity](../master-data-services/media/mds-addrolesfeatureswizard-roleservicespage-performsecurity.png)|  
     |![mds_AddRolesFeaturesWizard_RoleServicesPage_AppDevsection](../master-data-services/media/mds-addrolesfeatureswizard-roleservicespage-appdevsection.png)|![mds_AddRolesFeaturesWizard_RoleServicesPage_ManageToolssection](../master-data-services/media/mds-addrolesfeatureswizard-roleservicespage-managetoolssection.png)|  
-    |||  
   
      For a list of the required features and roles services on other operating systems, see [Web Application Requirements &#40;Master Data Services&#41;](../master-data-services/install-windows/web-application-requirements-master-data-services.md) .   
   
@@ -114,7 +113,7 @@ If you're interested in making changes to the installation of [!INCLUDE[ssnovers
 >  You must [install IIS](#InstallIIS) before launching the [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] Configuration Manager. Otherwise, the Configuration Manager will display an Internet Information Services error and you will not be able to create the [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] web application.  
 > 
 > **Browser Requirement**
-> >The [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] web application works only in Internet Explorer (IE) 9 or later. IE 8 and earlier versions, Microsoft Edge and Chrome are not supported.    
+> The [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] web application works only in Internet Explorer (IE) 9 or later. IE 8 and earlier versions, Microsoft Edge and Chrome are not supported.    
 > Starting in [!INCLUDE[sqlv15](../includes/sssql19-md.md)], HTML controls replace all former Silverlight components, therefore the Silverlight dependency removed. More browsers, including Chrome and Edge, now work for the Master Data Services web app.
   
 1.  Launch the [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)], and click **Database Configuration** in the left pane.  
@@ -182,15 +181,18 @@ If you're interested in making changes to the installation of [!INCLUDE[ssnovers
   
     -   Enter a different user name, enter the password, and then click OK.  
   
-         You don't have to use the same account when you create the database and the web application.  
+         You don't have to use the same account when you create the database and the web application.
+         
+        > [!NOTE] 
+        >  Your MDS Application Pool identity must be a part of the Windows Authorization Access Group.
 
         ![mds_2016ConfigManager_WebConfig_CreateWebApplication](../master-data-services/media/mds-2016configmanager-webconfig-createwebapplication.png)   
   
      For more information about the **Create Web Application** dialog box, see [Create Web Application Dialog Box &#40;Master Data Services Configuration Manager&#41;](../master-data-services/create-web-application-dialog-box-master-data-services-configuration-manager.md).  
 
     > [!NOTE] 
-    >  If your domain implement [2020 LDAP channel binding and LDAP signing requirements for Windows](https://support.microsoft.com/en-us/help/4520412/2020-ldap-channel-binding-and-ldap-signing-requirements-for-windows). You will see issue "The credentials could not be verified in Active Directory." when you using domain account to create Application Pool. For workaround, instead of domain user, use a **local machine user**. This can bypass the credential checking with Active Directory. After creating the web application, you can change the identity to domain user in **Internet Information Services (IIS) Manager**.
-  
+    >  If your domain implemented [2020 LDAP channel binding and LDAP signing requirements for Windows](https://support.microsoft.com/help/4520412/2020-ldap-channel-binding-and-ldap-signing-requirements-for-windows), you'll see the error message "The credentials could not be verified in Active Directory" when you use the domain account to create an Application Pool. For a resolution, instead of the domain user, use a *local machine user*. This bypasses the credential checking with Active Directory. After you create the web application, you can change the identity to the domain user in Internet Information Services (IIS) Manager.
+   
 12. On the **Web Configuration** page in the **Web application** box, click the application you've created, and then click **Select** in the  **Associate Application with Database** section.  
   
 13. Click **Connect**, select the [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] database that you want to associate with the Web application, and then click **OK**.  
@@ -220,7 +222,7 @@ For more information about the settings on the Web Configuration page, see [Web 
   
  For information about prerequisites for running this tool, see [Deploy a Model Deployment Package by Using MDSModelDeploy](../master-data-services/deploy-a-model-deployment-package-by-using-mdsmodeldeploy.md).  
   
- For information about updates made to the data to support new features in [!INCLUDE[ssnoversion](../includes/ssnoversion-md.md)][!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], see [SQL Server Samples: Model Deployment Packages (MDS)](../master-data-services/sql-server-samples-model-deployment-packages-mds.md).  
+ For information about updates made to the data to support new features in [!INCLUDE[ssnoversion](../includes/ssnoversion-md.md)] [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], see [SQL Server Samples: Model Deployment Packages (MDS)](../master-data-services/sql-server-samples-model-deployment-packages-mds.md).  
   
  **To deploy the sample models**  
   
@@ -290,4 +292,3 @@ For more information about the settings on the Web Configuration page, see [Web 
  [Master Data Manager Web Application](../master-data-services/master-data-manager-web-application.md)   
  [Database Configuration Page &#40;Master Data Services Configuration Manager&#41;](../master-data-services/database-configuration-page-master-data-services-configuration-manager.md)   
  [What's New in Master Data Services &#40;MDS&#41;](../master-data-services/what-s-new-in-master-data-services-mds.md)  
-  

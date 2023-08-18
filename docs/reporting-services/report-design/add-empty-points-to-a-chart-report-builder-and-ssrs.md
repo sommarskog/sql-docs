@@ -1,19 +1,19 @@
 ---
-title: "Add Empty Points to a Chart (Report Builder) | Microsoft Docs"
-description: Specify empty points on a chart. These points are calculated in Report Builder by taking the average of the previous and next data points that contain a value. 
-ms.date: 03/07/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-design
-
-
-ms.topic: conceptual
-ms.assetid: 2b056119-439f-494f-83cf-ee0c05dc6487
+title: "Add empty points to a chart in a paginated report"
+description: Specify empty points on a chart in a paginated report. These points are calculated in Report Builder by taking the average of the previous and next data points that contain a value.
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 03/07/2017
+ms.service: reporting-services
+ms.subservice: report-design
+ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
-# Add Empty Points to a Chart (Report Builder and SSRS)
-Null values are shown on the chart as empty spaces or gaps between data points in a series. In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] paginated reports, empty points are data points that can be inserted in the empty space created by null values.  
+# Add empty points to a chart in a paginated report (Report Builder)
+
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-ssrs-rb](../../includes/ssrs-appliesto-ssrs-rb.md)] [!INCLUDE [ssrs-appliesto-pbi-rb](../../includes/ssrs-appliesto-pbi-rb.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
+
+Null values are shown on the chart as empty spaces or gaps between data points in a series. In paginated reports, empty points are data points that can be inserted in the empty space created by null values.  
   
  By default, empty points are calculated by taking the average of the previous and next data points that contain a value. You can change this so that all empty points are inserted at zero.  
   

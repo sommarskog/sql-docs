@@ -1,34 +1,32 @@
 ---
+title: sp_cursorprepare (Transact-SQL)
 description: "sp_cursorprepare (Transact-SQL)"
-title: "sp_cursorprepare (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_cursor_prepare_TSQL"
-  - "sp_cursor_prepare"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_cursor_prepare"
-ms.assetid: 6207e110-f4bf-4139-b3ec-b799c9cb3ad7
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_cursor_prepare_TSQL"
+  - "sp_cursor_prepare"
+helpviewer_keywords:
+  - "sp_cursor_prepare"
+dev_langs:
+  - "TSQL"
 ---
+
 # sp_cursorprepare (Transact-SQL)
+
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  Compiles the cursor statement or batch into an execution plan, but does not create the cursor. The compiled statement can later be used by sp_cursorexecute. This procedure, coupled with sp_cursorexecute, has the same function as sp_cursoropen, but is split into two phases. sp_cursorprepare is invoked by specifying ID = 3 in a tabular data stream (TDS) packet.  
+Compiles the cursor statement or batch into an execution plan, but does not create the cursor. The compiled statement can later be used by sp_cursorexecute. This procedure, coupled with sp_cursorexecute, has the same function as sp_cursoropen, but is split into two phases. sp_cursorprepare is invoked by specifying ID = 3 in a tabular data stream (TDS) packet.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
-```  
+```sql
   
 sp_cursorprepare prepared_handle OUTPUT, params , stmt , options  
     [ , scrollopt[ , ccopt]]  

@@ -1,19 +1,20 @@
 ---
 title: Mount S3 for HDFS tiering
-titleSuffix: SQL Server big data clusters
+titleSuffix: SQL Server Big Data Clusters
 description: This article explains how to configure HDFS tiering to mount an external S3 file system into HDFS on a SQL Server 2019 big data cluster.
-author: MikeRayMSFT
-ms.author: mikeray
-ms.reviewer: mikeray
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: 08/21/2019
+ms.service: sql
+ms.subservice: big-data-cluster
 ms.topic: conceptual
-ms.prod: sql
-ms.technology: big-data-cluster
 ---
 
 # How to mount S3 for HDFS tiering in a big data cluster
 
 The following sections provide an example of how to configure HDFS tiering with an S3 Storage data source.
+
+[!INCLUDE[big-data-clusters-banner-retirement](../includes/bdc-banner-retirement.md)]
 
 ## Prerequisites
 
@@ -99,4 +100,4 @@ azdata bdc hdfs mount delete --mount-path <mount-path-in-hdfs>
 
 ## Next steps
 
-For more information about [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)], see [What are [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]?](big-data-cluster-overview.md).
+For more information about [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)], see [Introducing [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]](big-data-cluster-overview.md).

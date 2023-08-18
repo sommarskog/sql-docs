@@ -1,15 +1,12 @@
 ---
+title: "Native to SharePoint Migration"
 description: "Native to SharePoint Migration (SSRS)"
-title: "Native to SharePoint Migration | Microsoft Docs"
-ms.date: 08/17/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-
-
-ms.topic: conceptual
-ms.assetid: c5b15bec-6fde-4174-bcde-d043307244dd
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 08/17/2017
+ms.service: reporting-services
+ms.topic: conceptual
+ms.custom: updatefrequency5
 monikerRange: "= sql-server-2016"
 ---
 # Native to SharePoint Migration (SSRS)
@@ -32,7 +29,7 @@ monikerRange: "= sql-server-2016"
   
     -   [Sample Reporting Services rs.exe Script to Copy Content between Report Servers](../../reporting-services/tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md). The topics explains how to use the sample script you can download from CodePlex.  
   
-    -   The sample rss script on CodePlex, [Reporting Services RS.exe script that migrates content from one report server to another](https://azuresql.codeplex.com/releases/view/115207)  
+    -   The sample rss script on CodePlex, [Reporting Services RS.exe script that migrates content from one report server to another](../tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md)  
   
     -   [Scripting and PowerShell with Reporting Services](../../reporting-services/tools/scripting-and-powershell-with-reporting-services.md)  
   
@@ -48,5 +45,7 @@ monikerRange: "= sql-server-2016"
 |Schedules|Yes|See the ListSchedules method [Subscription and Delivery Methods](../../reporting-services/report-server-web-service/methods/subscription-and-delivery-methods.md)|  
 |Subscriptions|yes|See the List Subscriptions method [Subscription and Delivery Methods](../../reporting-services/report-server-web-service/methods/subscription-and-delivery-methods.md) and the <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A> method.|  
 |Snapshots|||
+
+[!INCLUDE [ssrs-report-parts-deprecated](../../includes/ssrs-report-parts-deprecated.md)] 
 
 More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

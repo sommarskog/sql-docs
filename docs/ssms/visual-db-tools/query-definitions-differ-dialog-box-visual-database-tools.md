@@ -1,24 +1,19 @@
 ---
-description: "Query Definitions Differ Dialog Box (Visual Database Tools)"
 title: Query Definitions Differ Dialog Box
-ms.custom: seo-lt-2019
+description: "Query Definitions Differ Dialog Box (Visual Database Tools)"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
+ms.service: sql
+ms.subservice: ssms
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "vdtsql.chm:69639"
   - "vdtsql.chm:69640"
   - "vdt.dlgbox.querydefinitionsdiffer"
-ms.assetid: 90383473-2922-40e5-9682-3850849aa856
-author: markingmyname
-ms.author: maghan
-ms.reviewer: 
-
 ---
 # Query Definitions Differ Dialog Box (Visual Database Tools)
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server](../../includes/applies-to-version/sqlserver.md)]
 This dialog box notifies you that your query cannot be represented graphically in the Diagram and Criteria panes, and that you can edit your query only in the SQL pane.  
   
 This dialog box may appear when you enter or edit an SQL statement in the SQL pane; you then move to another pane, verify the query, or attempt to execute the query; and one of the following conditions applies:  

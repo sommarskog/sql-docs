@@ -1,33 +1,29 @@
 ---
-description: "&#x40;&#x40;SERVICENAME (Transact-SQL)"
-title: "@@SERVICENAME (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "@@SERVICENAME (Transact-SQL)"
+description: "@@SERVICENAME (Transact-SQL)"
+author: VanMSFT
+ms.author: vanto
 ms.date: "09/18/2017"
-ms.prod: sql
-ms.prod_service: "sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "@@SERVICENAME_TSQL"
   - "@@SERVICENAME"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "@@SERVICENAME function"
   - "names [SQL Server], registry keys"
   - "registry keys [SQL Server]"
-ms.assetid: 5b0b35be-50ae-411d-a607-bf7464b73624
-author: VanMSFT
-ms.author: vanto
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017"
+dev_langs:
+  - "TSQL"
+monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017"
 ---
 # &#x40;&#x40;SERVICENAME (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Returns the name of the registry key under which [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is running. @@SERVICENAME returns 'MSSQLSERVER' if the current instance is the default instance; this function returns the instance name if the current instance is a named instance.  
 
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

@@ -1,22 +1,19 @@
 ---
-description: "Create a Domain Rule"
 title: "Create a Domain Rule"
-ms.date: "11/08/2011"
-ms.prod: sql
-ms.prod_service: "data-quality-services"
-ms.reviewer: ""
-ms.technology: data-quality-services
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.dqs.dm.testdomainrule.f1"
-  - "sql13.dqs.dm.rules.f1"
-ms.assetid: 339fa10d-e22c-4468-b366-080c33f1a23f
+description: "Create a Domain Rule"
 author: swinarko
 ms.author: sawinark
+ms.date: "11/08/2011"
+ms.service: sql
+ms.subservice: data-quality-services
+ms.topic: conceptual
+f1_keywords:
+  - "sql13.dqs.dm.testdomainrule.f1"
+  - "sql13.dqs.dm.rules.f1"
 ---
 # Create a Domain Rule
 
-[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI](../includes/applies-to-version/sqlserver.md)]
 
   This topic describes how to create a domain rule in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). A domain rule is a condition that is used to validate, correct, and standardize domain values. A domain rule must hold true across a domain in order for domain values to be considered accurate and conformant to business requirements. Domain rules can include validation rules that are used to validate domain values, but are not used to correct data in a data quality projects. Rules also include standardization rules that are applied against valid data and are used in data correction.  
   

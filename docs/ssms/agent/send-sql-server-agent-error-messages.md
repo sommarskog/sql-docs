@@ -1,21 +1,17 @@
 ---
-description: "Send SQL Server Agent Error Messages"
 title: "Send SQL Server Agent Error Messages"
-ms.custom: seo-lt-2019
+description: "Send SQL Server Agent Error Messages"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
+ms.service: sql
+ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "messages [SQL Server], SQL Server Agent"
   - "sending messages"
   - "SQL Server Agent, errors"
   - "errors [SQL Server Agent]"
-ms.assetid: 2597d0d7-951a-48cf-989f-abb67b9fdb36
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
 ---
 # Send SQL Server Agent Error Messages
@@ -24,7 +20,7 @@ monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
 > [!IMPORTANT]  
 > On [Azure SQL Managed Instance](/azure/sql-database/sql-database-managed-instance), most, but not all SQL Server Agent features are currently supported. See [Azure SQL Managed Instance T-SQL differences from SQL Server](/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) for details.
 
-This topic describes how to how to configure [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent to send its error messages by way of net send in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+This topic describes how to how to configure [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent to send its error messages by way of net send in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] by using SQL Server Management Studio.  
   
 ## <a name="BeforeYouBegin"></a>Before You Begin  
   
@@ -32,7 +28,7 @@ This topic describes how to how to configure [!INCLUDE[msCoName](../../includes/
   
 -   Object Explorer only displays the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent node if you have permission to use it.  
   
--   The [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows Messenger service must be running to receive net send events.  
+-   The [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows Messenger service must be running to receive net send events.  
   
 ### <a name="Security"></a>Security  
   

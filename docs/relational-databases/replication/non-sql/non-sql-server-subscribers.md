@@ -1,14 +1,14 @@
 ---
+title: "Non-SQL Server Subscribers"
 description: "Non-SQL Server Subscribers"
-title: "Non-SQL Server Subscribers | Microsoft Docs"
-ms.custom: ""
+author: "MashaMSFT"
+ms.author: "mathoma"
 ms.date: "08/29/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: replication
+ms.service: sql
+ms.subservice: replication
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "subscriptions [SQL Server replication], non-SQL Server Subscribers"
   - "heterogeneous data sources, non-SQL Server Subscribers"
   - "heterogeneous data sources"
@@ -18,9 +18,6 @@ helpviewer_keywords:
   - "heterogeneous Subscribers, about heterogeneous Subscribers"
   - "Subscribers [SQL Server replication], non-SQL Server Subscribers"
   - "non-SQL Server Subscribers"
-ms.assetid: 831e7586-2949-4b9b-a2f3-7b0b699b23ff
-author: "MashaMSFT"
-ms.author: "mathoma"
 ---
 # Non-SQL Server Subscribers  
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -48,7 +45,6 @@ Oracle version information:
   |:-----------|:---------------|:-------------|
   |Replication from Oracle |Only support Oracle 10g or earlier |Only support Oracle 10g or earlier |
   |Replication to Oracle |Up to Oracle 12c |Not supported |
-  | &nbsp; | &nbsp; | &nbsp; |
 
 
  Heterogeneous replication to non-SQL Server subscribers is deprecated. Oracle Publishing is deprecated. To move data, create solutions using change data capture and [!INCLUDE[ssIS](../../../includes/ssis-md.md)].  

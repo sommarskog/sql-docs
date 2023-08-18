@@ -1,21 +1,18 @@
 ---
-title: "Enable and Disable Client-Side Printing for Reporting Services | Microsoft Docs"
+title: "Enable and Disable Client-Side Printing for Reporting Services"
 description: Learn how to enable or disable client-side printing for Reporting Services reports viewed in a browser. Client-side printing uses PDF and is enabled by default.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 05/30/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-server
-
-
+ms.service: reporting-services
+ms.subservice: report-server
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "pdf"
   - "viewer"
   - "reportviewer"
   - "toolbar"
-ms.assetid: 0e709c96-7517-4547-8ef6-5632f8118524
-author: maggiesMSFT
-ms.author: maggies
 ---
 
 # Enable and Disable Client-Side Printing for Reporting Services
@@ -33,7 +30,7 @@ ms.author: maggies
 |-|-|  
 |The first dialog is the same for all browsers and allows you change basic layout properties such as orientation. When you click **Print**, the experience will be slightly different depending on the browser you are using.|![ssrs_pdfprint_chrome1](../../reporting-services/report-server/media/ssrs-pdfprint-chrome1.png "ssrs_pdfprint_chrome1")|  
 |In Chrome, a detailed browser print dialog opens.   You can change the print configuration,  print, and open the operating systems print dialog.|![ssrs_pdfprint_chrome2](../../reporting-services/report-server/media/ssrs-pdfprint-chrome2.png "ssrs_pdfprint_chrome2") ![ssrs_pdfprint_chrome3.png](../../reporting-services/report-server/media/ssrs-pdfprint-chrome3-png.png "ssrs_pdfprint_chrome3.png")|  
-|If you have a PDF reader application installed, the print button will open a preview windows of the PDF file and you can save or print.||  
+|If you have a PDF reader application installed, the print button will open a preview window of the PDF file and you can save or print.| |  
 |If you do not have a PDF reader application installed, there are two user experiences:<br /><br /> The report will automatically render and use your browsers  download process to download the PDF file.   **Note:** The more complicated the report is, the longer the delay between the time you click **Print** and when you see your browsers download notification. You can also force the download again by clicking **Click here to view the PDF of your report.**.<br /><br /> Force the PDF download by clicking **Click here to view the PDF of your report.**.|![ssrs_pdfprint_firefox2](../../reporting-services/report-server/media/ssrs-pdfprint-firefox2.png "ssrs_pdfprint_firefox2")|  
   
 ##  <a name="bkmk_troubleshoot_clientsideprinting"></a> Troubleshoot Client-Side Printing  

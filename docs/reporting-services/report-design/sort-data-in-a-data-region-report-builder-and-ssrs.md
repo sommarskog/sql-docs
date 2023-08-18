@@ -1,19 +1,19 @@
 ---
-title: "Sort Data in a Data Region (Report Builder) | Microsoft Docs"
-description: Learn how to change the sort order of data in a data region when a report first runs in Report Builder.
-ms.date: 08/17/2018
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-design
-
-
-ms.topic: conceptual
-ms.assetid: 2fcb9be2-1daa-4c92-ad00-5f63cdf39f70
+title: "Sort data in a data region in a paginated report"
+description: Learn how to change the sort order of data in a data region in a paginated report when a report first runs in Report Builder.
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 08/17/2018
+ms.service: reporting-services
+ms.subservice: report-design
+ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
-# Sort Data in a Data Region (Report Builder and SSRS)
-  To change the sort order of data in a data region when a report first runs, you must set the sort expression on the data region or group. By default, the sort expression for a group is automatically set to the same value as the group expression.  
+# Sort data in a data region in a paginated report (Report Builder)
+
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-ssrs-rb](../../includes/ssrs-appliesto-ssrs-rb.md)] [!INCLUDE [ssrs-appliesto-pbi-rb](../../includes/ssrs-appliesto-pbi-rb.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
+
+  To change the sort order of data in a data region when a paginated report first runs, you must set the sort expression on the data region or group. By default, the sort expression for a group is automatically set to the same value as the group expression.  
   
 -   In a tablix data region, set the sort expression for the data region or for each group, including the details group. If you have only one details group in a tablix data region, you can define a sort expression in the query, on the data region, or on the details group and they all have the same effect.  
   
@@ -42,7 +42,7 @@ ms.author: maggies
   
     3.  From the **Order** column drop-down list, choose the sort direction for each expression. **A-Z** sorts the expression in ascending order. **Z-A** sorts the expression in descending order.  
   
-4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+4.  Select **OK**.
   
 ### To sort values in a group, including the details group, for a Tablix  
   
@@ -60,7 +60,7 @@ ms.author: maggies
   
     3.  From the **Order** column drop-down list, choose the sort direction for each expression. **A-Z** sorts the expression in ascending order. **Z-A** sorts the expression in descending order.  
   
-5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+5.  Select **OK**.
   
 ### To sort x-axis labels in alphabetical order on a chart  
   
@@ -76,7 +76,7 @@ ms.author: maggies
   
     3.  From the **Order** column drop-down list, choose the sort direction for each expression. **A-Z** sorts the expression in ascending alphabetical order. **Z-A** sorts the expression in descending alphabetical order.  
   
-4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+4.  Select **OK**.
   
 ### To sort the data points in ascending or descending order on a chart  
   
@@ -92,7 +92,7 @@ ms.author: maggies
   
     3.  From the **Order** column drop-down list, choose the sort direction for each expression. **A-Z** sorts the expression in ascending order. **Z-A** sorts the expression in descending order.  
   
-4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+4.  Select **OK**.
   
 ### To sort data in ascending or descending order for display on a gauge  
   
@@ -116,7 +116,7 @@ ms.author: maggies
   
     3.  From the **Order** column drop-down list, choose the sort direction for each expression. **A-Z** sorts the expression in ascending order. **Z-A** sorts the expression in descending order.  
   
-8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+8.  Select **OK**.
   
  For more information about how data is grouped in a gauge, see [Gauges &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md).  
   

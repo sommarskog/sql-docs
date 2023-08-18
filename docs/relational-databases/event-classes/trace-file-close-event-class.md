@@ -1,21 +1,18 @@
 ---
+title: "Trace File Close Event Class"
 description: "Trace File Close Event Class"
-title: "Trace File Close Event Class | Microsoft Docs"
-ms.custom: ""
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: supportability
+ms.service: sql
+ms.subservice: supportability
 ms.topic: reference
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Trace File Close event class"
-ms.assetid: 128b7bac-cb64-43e7-ae9b-87b7d2ebb4ef
-author: "stevestein"
-ms.author: "sstein"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Trace File Close Event Class
-[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
   The **Trace File Close** event class indicates that a trace file has been closed during a trace file rollover.  
   
 ## Trace File Close Event Class Data Columns  

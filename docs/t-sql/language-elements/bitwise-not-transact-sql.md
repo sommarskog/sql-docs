@@ -1,36 +1,31 @@
 ---
+title: "~ (Bitwise NOT) (Transact-SQL)"
 description: "~ (Bitwise NOT) (Transact-SQL)"
-title: "~ (Bitwise NOT) (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "01/10/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "~_TSQL"
-  - "bitwise"
-  - "NOT"
   - "~"
-  - "Bitwise NOT"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "NOT keyword"
   - "bitwise NOT (~)"
   - "~ (bitwise NOT)"
-ms.assetid: 02da8016-f6c0-41ae-8d59-33eaa02bfc95
-author: cawrites
-ms.author: chadam
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+dev_langs:
+  - "TSQL"
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-mi-current||=fabric"
 ---
-# ~ (Bitwise NOT) (Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  Performs a bitwise logical NOT operation on an integer value.  
+# ~ (Bitwise NOT) (Transact-SQL)
+
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw.md)]
+
+Performs a bitwise logical NOT operation on an integer value.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -90,17 +85,17 @@ FROM bitwise;
 (1 row(s) affected)  
 ```  
   
- The binary representation of 170 (`a_int_value` or `A`) is `0000 0000 1010 1010`. Performing the bitwise NOT operation on this value produces the binary result `1111 1111 0101 0101`, which is decimal -171. The binary representation for 75 is `0000 0000 0100 1011`. Performing the bitwise NOT operation produces `1111 1111 1011 0100`, which is decimal -76.  
+ The binary representation of 170 (`a_int_value` or `A`) is `0000 0000 0000 0000 0000 0000 1010 1010`. Performing the bitwise NOT operation on this value produces the binary result `1111 1111 1111 1111 1111 1111 0101 0101`, which is decimal -171. The binary representation for 75 is `0000 0000 0000 0000 0000 0000 0100 1011`. Performing the bitwise NOT operation produces `1111 1111 1111 1111 1111 1111 1011 0100`, which is decimal -76.  
   
 ```  
  (~A)     
-         0000 0000 1010 1010  
-         -------------------  
-         1111 1111 0101 0101  
+         0000 0000 0000 0000 0000 0000 1010 1010  
+         ---------------------------------------  
+         1111 1111 1111 1111 1111 1111 0101 0101  
 (~B)     
-         0000 0000 0100 1011  
-         -------------------  
-         1111 1111 1011 0100  
+         0000 0000 0000 0000 0000 0000 0100 1011  
+         ---------------------------------------  
+         1111 1111 1111 1111 1111 1111 1011 0100  
 ```  
   
  

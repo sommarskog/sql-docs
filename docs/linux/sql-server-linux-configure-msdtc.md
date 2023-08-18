@@ -1,12 +1,12 @@
 ---
 title: How to configure MSDTC on Linux
 description: In this article, learn how to configure the Microsoft Distributed Transaction Coordinator (MSDTC) on Linux.
-author: VanMSFT 
-ms.author: vanto
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: 08/12/2020
+ms.service: sql
+ms.subservice: linux
 ms.topic: conceptual
-ms.prod: sql
-ms.technology: linux
 ---
 # How to configure the Microsoft Distributed Transaction Coordinator (MSDTC) on Linux
 
@@ -83,6 +83,7 @@ The following example shows how to create these rules on **Ubuntu**.
 ```bash
 sudo ufw allow from any to any port 51999 proto tcp
 sudo ufw allow from any to any port 135 proto tcp
+sudo ufw allow from any to any port 13500 proto tcp
 ```
 
 The following example shows how this could be done on **Red Hat Enterprise Linux (RHEL)**:
@@ -101,7 +102,7 @@ Configure the Linux server routing table so that RPC communication on port 135 i
 
 ### Port routing in Ubuntu and SLES
 
-Ubuntu and SLES do not use the **firewalld** service, so **iptable** rules are an efficient mechanism to achieve port routing. The **iptable** rules may not persist during reboots, so the following commands also provide instructions for restoring the rules after a reboot.
+Ubuntu and SLES do not use the **firewalld** service, so **iptable** rules are an efficient mechanism to achieve port routing. The **iptable** rules may not persist during restarts, so the following commands also provide instructions for restoring the rules after a restart.
 
 1. Create routing rules for port 135. In the following example, port 135 is directed to the RPC port, 13500, defined in the previous section. Replace `<ipaddress>` with the IP address of your server.
 
@@ -126,7 +127,7 @@ Ubuntu and SLES do not use the **firewalld** service, so **iptable** rules are a
    sudo iptables-save > /etc/iptables.conf
    ```
 
-4. To reload the rules after a reboot, add the following command to `/etc/rc.local` (for Ubuntu) or to `/etc/init.d/after.local` (for SLES):
+4. To reload the rules after a restart, add the following command to `/etc/rc.local` (for Ubuntu) or to `/etc/init.d/after.local` (for SLES):
 
    ```bash
    iptables-restore < /etc/iptables.conf
@@ -178,7 +179,7 @@ However, after a restart, SQL Server does not start listening on the **servertcp
 
 ## Configure authentication on RPC communication for MSDTC
 
-MSDTC for SQL Server on Linux does not use authentication on RPC communication by default. However, when the host machine is joined to an Active Directory (AD) domain, it is possible to configure MSDTC to use authenticated RPC communication using following **mssql-conf** settings:
+MSDTC for SQL Server on Linux does not use authentication on RPC communication by default. However, when the host machine is joined to an Active Directory domain, it is possible to configure MSDTC to use authenticated RPC communication using following **mssql-conf** settings:
 
 | Setting | Description |
 |---|---|
@@ -190,7 +191,7 @@ MSDTC for SQL Server on Linux does not use authentication on RPC communication b
 
 ### Active directory
 
-Microsoft recommends using MSDTC with RPC enabled if SQL Server is enrolled into an Active Directory (AD) configuration. If SQL Server is configured to use AD authentication, MSDTC uses mutual authentication RPC security by default.
+Microsoft recommends using MSDTC with RPC enabled if SQL Server is enrolled into an Active Directory configuration. If SQL Server is configured to use Active Directory authentication, MSDTC uses mutual authentication RPC security by default.
 
 ### Windows and Linux
 

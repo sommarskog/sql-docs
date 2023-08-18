@@ -1,24 +1,21 @@
 ---
-description: "sys.dm_cryptographic_provider_sessions (Transact-SQL)"
-title: "sys.dm_cryptographic_provider_sessions (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.dm_cryptographic_provider_sessions (Transact-SQL)"
+description: sys.dm_cryptographic_provider_sessions (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "06/10/2016"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.dm_cryptographic_provider_sessions"
   - "dm_cryptographic_provider_sessions_TSQL"
   - "sys.dm_cryptographic_provider_sessions_TSQL"
   - "dm_cryptographic_provider_sessions"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.dm_cryptographic_provider_sessions dynamic management function"
-ms.assetid: 9a4de02b-1a07-4850-979a-0861fddb7f9d
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+dev_langs:
+  - "TSQL"
 ---
 # sys.dm_cryptographic_provider_sessions (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,21 +1,18 @@
 ---
-description: "Add a Root Node to JSON Output with the ROOT Option (SQL Server)"
 title: "Add a Root Node to JSON Output with the ROOT Option"
-ms.date: 06/03/2020
-ms.prod: sql
-ms.technology: 
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "ROOT (FOR JSON)"
-ms.assetid: b9afa74a-f59f-483e-a178-42be2e9882c9
+description: "Add a Root Node to JSON Output with the ROOT Option (SQL Server)"
 author: jovanpop-msft
 ms.author: jovanpop
 ms.reviewer: jroth
-ms.custom: seo-dt-2019
+ms.date: 06/03/2020
+ms.service: sql
+ms.topic: conceptual
+helpviewer_keywords:
+  - "ROOT (FOR JSON)"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Add a Root Node to JSON Output with the ROOT Option (SQL Server)
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sqlserver2016-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
   To add a single, top-level element to the JSON output of the **FOR JSON** clause, specify the **ROOT** option.  
   
@@ -150,13 +147,12 @@ SELECT TOP 5
   
 ### Microsoft videos
 
+> [!NOTE]
+> Some of the video links in this section may not work at this time. Microsoft is migrating content formerly on Channel 9 to a new platform. We will update the links as the videos are migrated to the new platform.
+
 For a visual introduction to the built-in JSON support in SQL Server and Azure SQL Database, see the following videos:
 
--   [SQL Server 2016 and JSON Support](https://channel9.msdn.com/Shows/Data-Exposed/SQL-Server-2016-and-JSON-Support)
-
--   [Using JSON in SQL Server 2016 and Azure SQL Database](https://channel9.msdn.com/Shows/Data-Exposed/Using-JSON-in-SQL-Server-2016-and-Azure-SQL-Database)
-
--   [JSON as a bridge between NoSQL and relational worlds](https://channel9.msdn.com/events/DataDriven/SQLServer2016/JSON-as-a-bridge-betwen-NoSQL-and-relational-worlds)
+-   [JSON as a bridge between NoSQL and relational worlds](https://channel9.msdn.com/events/DataDriven-SQLServer2016/JSON-as-bridge-betwen-NoSQL-relational-worlds)
  
 ## See Also  
  [FOR Clause &#40;Transact-SQL&#41;](../../t-sql/queries/select-for-clause-transact-sql.md)  

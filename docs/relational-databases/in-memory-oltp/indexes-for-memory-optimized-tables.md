@@ -1,21 +1,17 @@
 ---
-title: "Indexes for Memory-Optimized Tables | Microsoft Docs"
+title: "Indexes for Memory-Optimized Tables"
 description: Learn how an index on a memory-optimized table differs from a traditional index on a disk-based table in SQL Server and Azure SQL Database.
-ms.custom: ""
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "09/16/2019"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: in-memory-oltp
+ms.service: sql
+ms.subservice: in-memory-oltp
 ms.topic: conceptual
-ms.assetid: eecc5821-152b-4ed5-888f-7c0e6beffed9
-author: rothja
-ms.author: jroth
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Indexes on Memory-Optimized Tables
 
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 All memory-optimized tables must have at least one index, because it is the indexes that connect the rows together. On a memory-optimized table, every index is also memory-optimized. There are several ways in which an index on a memory-optimized table differs from a traditional index on a disk-base table:  
 
@@ -57,7 +53,7 @@ To be declared with the default DURABILITY = SCHEMA\_AND_DATA, the memory-optimi
 
 > [!NOTE]  
 > [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] have a limit of 8 indexes per memory-optimized table or table type. 
-> Starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] and in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], there is no longer a limit on the number of indexes specific to memory-optimized tables and table types.
+> Starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] and in [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], there is no longer a limit on the number of indexes specific to memory-optimized tables and table types.
   
 ### Code sample for syntax  
   
@@ -218,7 +214,6 @@ The following table lists all operations that are supported by the different ind
 | Index seek on inequality and range predicates <br/> (>, <, <=, >=, `BETWEEN`). | No <br/> (Results in an index scan.) | Yes <sup>1</sup> | Yes |  
 | Retrieve rows in a sort order that matches the index definition. | No | Yes | Yes |  
 | Retrieve rows in a sort-order that matches the reverse of the index definition. | No | No | Yes |  
-| &nbsp; | &nbsp; | &nbsp; | &nbsp; |
 
 <sup>1</sup> For a memory-optimized Nonclustered index, the full key is not required to perform an index seek.  
 

@@ -1,25 +1,22 @@
 ---
-description: "sys.dm_resource_governor_external_resource_pools (Transact-SQL)"
-title: "sys.dm_resource_governor_external_resource_pools (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/06/2020"
-ms.prod: sql
-ms.technology: machine-learning-services
-ms.reviewer: ""
+title: "sys.dm_resource_governor_external_resource_pools (Transact-SQL)"
+description: sys.dm_resource_governor_external_resource_pools (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
+ms.date: "02/27/2023"
+ms.service: sql
+ms.subservice: machine-learning-services
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.dm_resource_governor_external_resource_pools_TSQL"
   - "sys.dm_resource_governor_external_resource_pools"
   - "dm_resource_governor_external_resource_pools"
   - "dm_resource_governor_external_resource_pools_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "dm_resource_governor_external_resource_pools"
   - "sys.dm_resource_governor_external_resource_pools"
-author: dphansen
-ms.author: davidph
-manager: cgronlun
+dev_langs:
+  - "TSQL"
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
 ---
 # sys.dm_resource_governor_external_resource_pools (Transact-SQL)
@@ -27,7 +24,7 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
 
 Returns information about the current external resource pool state, the current configuration of resource pools, and resource pool statistics. 
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 |Column name      |Data type      |Description|  
 |----------------|---------------|-----------------| 
@@ -49,6 +46,10 @@ Returns information about the current external resource pool state, the current 
 ## Permissions
 
 Requires `VIEW SERVER STATE` permission.
+
+### Permissions for SQL Server 2022 and later
+
+Requires VIEW SERVER PERFORMANCE STATE permission on the server.
 
 ## See Also  
  [sys.dm_resource_governor_external_resource_pool_affinity &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pool-affinity-transact-sql.md)  

@@ -1,21 +1,21 @@
 ---
-title: SSMS Query Editor 
+title: SSMS Query Editor
 description: SQL Server Management Studio (SSMS) Query Editor
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
-ms.topic: conceptual
-f1_keywords: 
-  - sql13.swb.query.advanced.f1
-  - sql13.swb.query.ansi.f1
-  - sql13.swb.query.general.f1
-  - sql13.swb.query.grid.f1
-  - sql13.swb.sqleditors.multiserverresultssettings
-  - sql13.swb.tsqlquery.f1
-  - sql13.swb.tsqlresults.f1
-dev_langs: 
-  - TSQL
-helpviewer_keywords: 
+author: markingmyname
+ms.author: maghan
+ms.date: 08/28/2020
+ms.service: sql
+ms.subservice: ssms
+ms.topic: ui-reference
+f1_keywords:
+  - "sql13.swb.query.advanced.f1"
+  - "sql13.swb.query.ansi.f1"
+  - "sql13.swb.query.general.f1"
+  - "sql13.swb.query.grid.f1"
+  - "sql13.swb.sqleditors.multiserverresultssettings"
+  - "sql13.swb.tsqlquery.f1"
+  - "sql13.swb.tsqlresults.f1"
+helpviewer_keywords:
   - "SQL Server Management Studio [SQL Server], editor"
   - "SQL Server Management Studio [SQL Server], Database Engine Query Editor"
   - "SQL Server Management Studio [SQL Server], templates"
@@ -37,17 +37,13 @@ helpviewer_keywords:
   - "writing queries"
   - "scripts [SQL Server], SQL Server Management Studio"
   - "queries [SQL Server], SQL Server Management Studio"
-ms.assetid: 05cfae9b-96d5-4a35-a098-0bc3a548bcfc
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
-ms.custom: seo-lt-2019, contperf-fy21q1
-ms.date: 08/28/2020
+dev_langs:
+  - TSQL
 ---
 
 # SQL Server Management Studio (SSMS) Query Editor
 
-[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
 This article explains the query editor's features and functions in SQL Server Management Studio (SSMS).
 
@@ -303,7 +299,7 @@ If the help search engine doesn't find a topic with an F1 help keyword that exac
 | View and use the basic features in the MDX Query Editor. | [Create Analysis Services Scripts](/analysis-services/instances/create-analysis-services-scripts-in-management-studio) |
 | View and use the basic features in the DMX Query Editor. | [Create a DMX Query](/analysis-services/data-mining/create-a-dmx-query-in-sql-server-management-studio) |
 | View and use the basic features in the XML/A Editor. | [XML Editor](../scripting/xml-editor-sql-server-management-studio.md) |
-| How to use the sqlcmd features in the Database Engine Query Editor.| [Edit SQLCMD Scripts](../scripting/edit-sqlcmd-scripts-with-query-editor.md) |
+| How to use the sqlcmd features in the Database Engine Query Editor.| [Edit SQLCMD Scripts](../../tools/sqlcmd/edit-sqlcmd-scripts-query-editor.md) |
 | How to use code snippets in the Database Engine Query Editor. Snippets are templates for commonly used statements or blocks, and can be customized or extended to include site-specific snippets.| [T-SQL Code Snippets](../scripting/add-transact-sql-snippets.md) |
 | How to use the Transact\-SQL debugger to step through code and view debugging information such as the values in variables and parameters.| [T-SQL Debugger](../scripting/transact-sql-debugger.md) |
 

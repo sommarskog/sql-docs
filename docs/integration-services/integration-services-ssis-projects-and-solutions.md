@@ -1,24 +1,21 @@
 ---
+title: "Integration Services (SSIS) Projects and Solutions"
 description: "Integration Services (SSIS) Projects and Solutions"
-title: "Integration Services (SSIS) Projects and Solutions | Microsoft Docs"
-ms.custom: ""
-ms.date: "09/20/2019"
-ms.prod: sql
-ms.prod_service: "integration-services"
+author: chugugrace
+ms.author: chugu
 ms.reviewer: "vanto"
-ms.technology: integration-services
+ms.date: "09/20/2019"
+ms.service: sql
+ms.subservice: integration-services
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.ssis.importprojectwizard.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "projects [Integration Services], creating"
   - "folders [Integration Services], projects"
   - "files [Integration Services], projects"
   - "folders [Integration Services]"
   - "projects [Integration Services], about projects"
-ms.assetid: 28ea8120-0a79-4029-93f0-07d521b32bee
-author: chugugrace
-ms.author: chugu
 ---
 # Integration Services (SSIS) Projects and Solutions
 
@@ -110,7 +107,8 @@ ms.author: chugu
   
 7.  If the source control software is [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual SourceSafe, the **Visual SourceSafe Login** dialog box opens. In **Visual SourceSafe Login**, provide a user name, a password, and the name of the [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual SourceSafe database. Click **Browse** to locate the database.  
   
-    > **NOTE:** To view and change the selected source control plug-in and to configure the source control environment, click **Options** on the **Tools** menu, and then expand the **Source Control** node.  
+    > [!NOTE]  
+    > To view and change the selected source control plug-in and to configure the source control environment, click **Options** on the **Tools** menu, and then expand the **Source Control** node.  
   
 8.  Click **OK** to add the solution to **Solution Explorer** and add the project to the solution.  
 

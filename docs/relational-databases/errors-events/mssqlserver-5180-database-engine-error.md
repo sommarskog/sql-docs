@@ -1,17 +1,15 @@
 ---
-description: "MSSQLSERVER_5180"
 title: MSSQLSERVER_5180
-ms.custom: ""
+description: "MSSQLSERVER_5180"
+author: suresh-kandoth
+ms.author: sureshka
+ms.reviewer: jopilov, mathoma
 ms.date: 08/20/2020
-ms.prod: sql
-ms.reviewer: ramakoni1, pijocoder, suresh-kandoth, Masha
-ms.technology: supportability
+ms.service: sql
+ms.subservice: supportability
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "5180 (Database Engine error)"
-ms.assetid: 
-author: rgward
-ms.author: ramakoni
 ---
 # MSSQLSERVER_5180
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -26,11 +24,10 @@ ms.author: ramakoni
 |Component|SQLEngine|
 |Symbolic Name|DSK_BAD_FCB_FILEID|
 |Message Text|Could not open File Control Bank (FCB) for invalid file ID %d in database '%.*ls'. Verify the file location. Execute DBCC CHECKDB.|
-||
 
 ## Explanation
 
-A query or operation may fail with an error 5180 when an invalid file ID is referenced by the [!INCLUDE[ssDENoVersion](../../includes/ssdenoversion_md.md)]. This is an example:
+A query or operation may fail with an error 5180 when an invalid file ID is referenced by the [!INCLUDE[ssDENoVersion](../../includes/ssdenoversion-md.md)]. This is an example:
 
 > Msg 5180, Level 22, State 1, Line 1  
 Could not open File Control Bank (FCB) for invalid file ID %d in database '%.*ls'. Verify the file location. Execute DBCC CHECKDB.

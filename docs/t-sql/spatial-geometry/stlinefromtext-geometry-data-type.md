@@ -1,26 +1,22 @@
 ---
+title: "STLineFromText (geometry Data Type)"
 description: "STLineFromText (geometry Data Type)"
-title: "STLineFromText (geometry Data Type) | Microsoft Docs"
-ms.custom: ""
+author: MladjoA
+ms.author: mlandzic
 ms.date: "10/11/2019"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "STLineFromText (geometry Data Type)"
   - "STLineFromText_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "STLineFromText (geometry Data Type)"
-ms.assetid: 430508ad-207b-4dee-a4d1-4ddf25e6b4a9
-author: MladjoA
-ms.author: mlandzic 
+dev_langs:
+  - "TSQL"
 ---
 # STLineFromText (geometry Data Type)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 Returns a **geometry** instance from an Open Geospatial Consortium (OGC) Well-Known Text (WKT) representation augmented with any Z (elevation) and M (measure) values carried by the instance.
   
@@ -54,28 +50,28 @@ This method throws a **FormatException** if the input isn't well-formatted. Thre
  The following examples use `STLineFromText()` to create a `geometry` instance.
 
 ### Example 1: Two-dimension geometry WKT
-```  
+```sql
 DECLARE @g geometry;  
 SET @g = geometry::STLineFromText('LINESTRING (100 100, 200 200)', 0);  
 SELECT @g.ToString();  
 ```  
   
 ### Example 2: Three-dimension geometry WKT
-```  
+```sql
 DECLARE @g geometry;  
 SET @g = geometry::STLineFromText('LINESTRING (100 100 100, 200 200 200)', 0);  
 SELECT @g.ToString();  
 ``` 
 
 ### Example 3: Two-dimension measured geometry WKT
-```  
+```sql
 DECLARE @g geometry;  
 SET @g = geometry::STLineFromText('LINESTRING (100 100 NULL 100, 200 200 NULL 200)', 0);  
 SELECT @g.ToString();  
 ``` 
 
 ### Example 4: Three-dimension measured geometry WKT
-```  
+```sql
 DECLARE @g geometry;  
 SET @g = geometry::STLineFromText('LINESTRING (100 100 100 100, 200 200 200 200)', 0);  
 SELECT @g.ToString();  

@@ -1,11 +1,13 @@
 ---
-description: "CREATE CRYPTOGRAPHIC PROVIDER (Transact-SQL)"
-title: "CREATE CRYPTOGRAPHIC PROVIDER (Transact-SQL) | Microsoft Docs"
+title: "CREATE CRYPTOGRAPHIC PROVIDER (Transact-SQL)"
+description: CREATE CRYPTOGRAPHIC PROVIDER (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "CREATE_CRYPTOGRAPHIC_TSQL"
   - "CRYPTOGRAPHIC PROVIDER"
   - "PROVIDER_TSQL"
@@ -14,22 +16,19 @@ f1_keywords:
   - "CRYPTOGRAPHIC_PROVIDER_TSQL"
   - "CREATE_CRYPTOGRAPHIC_PROVIDER_TSQL"
   - "PROVIDER"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "33085 (Database Engine error)"
   - "CREATE CRYPTOGRAPHIC PROVIDER statement"
   - "33032 (Database Engine error)"
-ms.assetid: 059a39a6-9d32-4d3f-965b-0a1ce75229c7
-author: VanMSFT
-ms.author: vanto
+dev_langs:
+  - "TSQL"
 ---
 # CREATE CRYPTOGRAPHIC PROVIDER (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [sql-asdbmi](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Creates a cryptographic provider within [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] from an Extensible Key Management (EKM) provider.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -45,7 +44,7 @@ CREATE CRYPTOGRAPHIC PROVIDER provider_name
  Is the name of the Extensible Key Management provider.  
   
  *path_of_DLL*  
- Is the path of the .dll file that implements the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Extensible Key Management interface. When using the **SQL Server Connector for Microsoft Azure Key Vault** the default location is **'C:\Program Files\Microsoft SQL Server Connector for Microsoft Azure Key Vault\Microsoft.AzureKeyVaultService.EKM.dll'**.  
+ Is the path of the .dll file that implements the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Extensible Key Management interface. When using the **SQL Server Connector for Microsoft Azure Key Vault** the default location is **'C:\Program Files\SQL Server Connector for Microsoft Azure Key Vault\Microsoft.AzureKeyVaultService.EKM.dll'**.  
   
 ## Remarks  
  All keys created by a provider will reference the provider by its GUID. The GUID is retained across all versions of the DLL.  

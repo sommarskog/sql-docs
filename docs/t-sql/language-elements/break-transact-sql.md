@@ -1,36 +1,36 @@
 ---
+title: "BREAK (Transact-SQL)"
 description: "BREAK (Transact-SQL)"
-title: "BREAK (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "11/19/2018"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "BREAK"
   - "BREAK_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "exiting innermost loop [SQL Server]"
   - "END keyword"
   - "ignored statements"
   - "BREAK keyword"
-ms.assetid: 67c30b8d-3f15-41ad-b9a9-a4ced3b2af9f
-author: cawrites
-ms.author: chadam
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+dev_langs:
+  - "TSQL"
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-mi-current||=fabric"
 ---
 # BREAK (Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw.md)]
 
 BREAK exits the current WHILE loop. If the current WHILE loop is nested inside another, BREAK exits only the current loop, and control is given to the next statement in the outer loop.
 
 BREAK is usually inside an IF statement.
 
 ## Examples
+
+### Example for SQL Server
+
+Imagine a table where a value is expected when another antecedent process is completed:
 
 ```sql
 WHILE (1=1)
@@ -42,6 +42,27 @@ BEGIN
 
    PRINT N'The other process is not yet done.';  -- Re-confirm the non-done status to the console.
    WAITFOR DELAY '00:01:30';  -- Sleep for 90 seconds.
+END
+```
+
+### Example for Azure Synapse dedicated SQL pool
+
+```sql
+DECLARE @sleeptimesec int = 1;
+DECLARE @startingtime datetime2(2) = getdate();
+
+PRINT N'Sleeping for ' + CAST(@sleeptimesec as varchar(5)) + ' seconds'
+WHILE (1=1)
+BEGIN
+  
+    PRINT N'Sleeping.';  
+    PRINT datediff(s, getdate(),  @startingtime)
+
+    IF datediff(s, getdate(),  @startingtime) < -@sleeptimesec
+        BEGIN
+            PRINT 'We have finished waiting.';
+            BREAK;
+        END
 END
 ```
 

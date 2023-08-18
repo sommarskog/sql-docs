@@ -1,26 +1,21 @@
 ---
-description: "Types of Queries (Visual Database Tools)"
 title: Types of Queries
-ms.custom: seo-lt-2019
+description: "Types of Queries (Visual Database Tools)"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
+ms.service: sql
+ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "queries [Visual Database Tools]"
   - "Query Designer [SQL Server], query creation"
   - "queries [SQL Server], creating"
   - "View Designer, query creation"
   - "Visual Database Tools [SQL Server], queries"
-ms.assetid: 76b6fc0e-c324-4d66-b6ed-496fa25fea1e
-author: markingmyname
-ms.author: maghan
-ms.reviewer: 
-
 ---
 # Types of Queries (Visual Database Tools)
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server](../../includes/applies-to-version/sqlserver.md)]
 The Query and View Designer provides built-in features for some query types--Select, Insert Results, Insert Values, Update, Delete, and Make Table--and also supports UNION, Full-text search, and CASE expression queries.  
   
 ## In This Section  

@@ -1,19 +1,16 @@
 ---
 title: "Enable remote Publisher at Distributor (SSMS)"
 description: Learn how to enable a remote Publisher at the Distributor using SQL Server Management Studio (SSMS).
-ms.custom: seo-lt-2019
-ms.date: "03/01/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: replication
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "remote Distributors [SQL Server replication]"
-  - "Publishers [SQL Server replication]"
-ms.assetid: 6f8e2831-5c45-4e39-8e51-d37e2813cf3d
 author: "MashaMSFT"
 ms.author: "mathoma"
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: conceptual
+ms.custom: updatefrequency5
+helpviewer_keywords:
+  - "remote Distributors [SQL Server replication]"
+  - "Publishers [SQL Server replication]"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # Enable a Remote Publisher at a Distributor (SQL Server Management Studio)
@@ -32,7 +29,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
   
 5.  To view and modify settings for a Publisher, click the properties button (**...**).  
   
-6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+6.  Select **OK**.
 
 ### To enable a Publisher in the Distributor Properties dialog box  
   
@@ -46,7 +43,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
   
 5.  To view and modify settings for a Publisher, click the properties button (**...**).  
   
-6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+6.  Select **OK**.
   
 ## See Also  
  [Configure Publishing and Distribution](../../relational-databases/replication/configure-publishing-and-distribution.md)   

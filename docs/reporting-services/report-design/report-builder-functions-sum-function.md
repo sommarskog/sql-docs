@@ -1,19 +1,19 @@
 ---
-title: "Sum Function (Report Builder) | Microsoft Docs"
-description: The Sum function in Report Builder returns the sum of all the non-null numeric values specified by the expression.
-ms.date: 03/07/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-design
-
-
-ms.topic: conceptual
-ms.assetid: 2b45a024-398d-43b8-9948-b8b23fb674c9
+title: "Sum function in a paginated report"
+description: The Sum function in Report Builder returns the sum of all the non-null numeric values in a paginated report specified by the expression.
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 03/07/2017
+ms.service: reporting-services
+ms.subservice: report-design
+ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
-# Report Builder Functions - Sum Function
-  Returns the sum of all the non-null numeric values specified by the expression, evaluated in the given scope.  
+# Report Builder functions - Sum function in a paginated report (Report Builder)
+
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-ssrs-rb](../../includes/ssrs-appliesto-ssrs-rb.md)] [!INCLUDE [ssrs-appliesto-pbi-rb](../../includes/ssrs-appliesto-pbi-rb.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
+
+  Returns the sum of all the non-null numeric values specified by the expression, evaluated in the given scope in a paginated report.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -41,7 +41,7 @@ Sum(expression, scope, recursive)
 ## Remarks  
  The set of data specified in the expression must have the same data type. To convert data that has multiple numeric data types to the same data type, use conversion functions like **CInt**, **CDbl** or **CDec**. For more information, see [Type Conversion Functions](/dotnet/visual-basic/language-reference/functions/type-conversion-functions).  
   
- The value of *scope* must be a string constant andcannot be an expression. For outer aggregates or aggregates that do not specify other aggregates, *scope* must refer to the current scope or a containing scope. For aggregates of aggregates, nested aggregates can specify a child scope.  
+ The value of *scope* must be a string constant and can't be an expression. For outer aggregates or aggregates that do not specify other aggregates, *scope* must refer to the current scope or a containing scope. For aggregates of aggregates, nested aggregates can specify a child scope.  
   
  *Expression* can contain calls to nested aggregate functions with the following exceptions and conditions:  
   

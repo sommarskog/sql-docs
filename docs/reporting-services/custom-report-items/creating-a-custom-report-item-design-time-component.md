@@ -1,18 +1,15 @@
 ---
-title: "Creating a Custom Report Item Design-Time Component | Microsoft Docs"
+title: "Creating a Custom Report Item Design-Time Component"
 description: Learn how to create a custom report item design-time component. This component provides an activated design surface that can accept drag-and-drop operations.
-ms.date: 03/14/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: custom-report-items
-
-
-ms.topic: reference
-helpviewer_keywords: 
-  - "custom report items, creating"
-ms.assetid: 323fd58a-a462-4c48-b188-77ebc0b4212e
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 03/14/2017
+ms.service: reporting-services
+ms.subservice: custom-report-items
+ms.topic: reference
+ms.custom: updatefrequency5
+helpviewer_keywords:
+  - "custom report items, creating"
 ---
 # Creating a Custom Report Item Design-Time Component
   A custom report item design-time component is a control that can be used in the Visual Studio Report Designer environment. The custom report item design-time component provides an activated design surface that can accept drag-and-drop operations, integration with the [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] property browser, and the ability to provide custom property editors.  
@@ -22,7 +19,7 @@ ms.author: maggies
  The properties that are set using the design-time component in the development environment are serialized and deserialized by the host design environment and then stored as elements in the Report Definition Language (RDL) file. When the report is executed by the report processor, the properties that are set using the design-time component are passed by the report processor to a custom report item run-time component, which renders the custom report item and passes it back to the report processor.  
   
 > [!NOTE]
->  The custom report item design-time component is implemented as a [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] component. This document will describe implementation details specific to the custom report item design-time component. For more information about developing components using the [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], see [Components in Visual Studio](https://go.microsoft.com/fwlink/?LinkId=116576) in the MSDN library.  
+>  The custom report item design-time component is implemented as a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] component. This document will describe implementation details specific to the custom report item design-time component.   
   
  For a sample of a fully implemented custom report item, see [SQL Server Reporting Services Product Samples](https://go.microsoft.com/fwlink/?LinkId=177889).  
   
@@ -194,4 +191,3 @@ private void OnProportionalScaling(object sender, EventArgs e)
  [Creating a Custom Report Item Run-Time Component](../../reporting-services/custom-report-items/creating-a-custom-report-item-run-time-component.md)   
  [Custom Report Item Class Libraries](../../reporting-services/custom-report-items/custom-report-item-class-libraries.md)   
  [How to: Deploy a Custom Report Item](../../reporting-services/custom-report-items/how-to-deploy-a-custom-report-item.md)  
-  

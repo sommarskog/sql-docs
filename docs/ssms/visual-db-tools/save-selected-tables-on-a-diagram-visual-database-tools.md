@@ -1,22 +1,19 @@
 ---
-description: "Save Selected Tables on a Diagram (Visual Database Tools)"
 title: Save Selected Tables on a Diagram
-ms.custom: seo-lt-2019
-ms.date: 01/19/2017
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "saving tables"
-ms.assetid: 86943b49-48f3-432c-8021-928c13edfbcf
+description: "Save Selected Tables on a Diagram (Visual Database Tools)"
 author: markingmyname
 ms.author: maghan
-ms.reviewer: 
-
+ms.date: 01/19/2017
+ms.service: sql
+ms.subservice: ssms
+ms.topic: conceptual
+helpviewer_keywords:
+  - "saving tables"
 ---
 # Save Selected Tables on a Diagram (Visual Database Tools)
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+
+[!INCLUDE[SQL Server Azure SQL Database PDW](../../includes/applies-to-version/sql-asdb-asdbmi-pdw.md)]
+
 You can save a specific table or a set of tables if you do not want to save all the changes you made in a database diagram.  
   
 ### To save selected tables  

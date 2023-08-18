@@ -1,15 +1,13 @@
 ---
-title: "Scale Out Master | Microsoft Docs"
+title: "Scale Out Master"
 description: "Learn about the Scale Out Master component of SQL Server Integration Services (SSIS) Scale Out Master Service."
-ms.custom: performance
-ms.date: 01/19/2019
-ms.prod: sql
-ms.prod_service: "integration-services"
-ms.reviewer: ""
-ms.technology: integration-services
-ms.topic: conceptual
 author: "haoqian"
 ms.author: "haoqian"
+ms.date: 01/19/2019
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+ms.custom: performance
 ---
 # Integration Services (SSIS) Scale Out Master
 
@@ -55,7 +53,6 @@ You configure the Scale Out Master service by using the `<drive>:\Program Files\
 |DealWithExpiredTasksIntervalInMs|The interval for dealing with expired execution jobs, in milliseconds.|300000|
 |MasterHeartbeatIntervalInMs|The interval for the Scale Out Master heartbeat, in milliseconds. This property specifies the interval at which Scale Out Master updates its online status in the SSISDB catalog.|30000|
 |SqlConnectionTimeoutInSecs|The SQL connection timeout in seconds when connecting to SSISDB.|15|
-||||    
 
 ## View the Scale Out Master service log
 

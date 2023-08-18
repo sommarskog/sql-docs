@@ -1,32 +1,28 @@
 ---
+title: "Parse (Database Engine)"
 description: "Parse (Database Engine)"
-title: "Parse (Database Engine) | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/22/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
-ms.topic: "reference"
-f1_keywords: 
-  - "Parse"
-  - "Parse_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "Parse [Database Engine]"
-ms.assetid: b37e28b6-6e2e-470a-945b-ce5252da743a
 author: MikeRayMSFT
 ms.author: mikeray
+ms.date: "07/22/2017"
+ms.service: sql
+ms.subservice: t-sql
+ms.topic: "reference"
+f1_keywords:
+  - "Parse"
+  - "Parse_TSQL"
+helpviewer_keywords:
+  - "Parse [Database Engine]"
+dev_langs:
+  - "TSQL"
 ---
 # Parse (Database Engine)
-[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 Parse converts the canonical string representation of a **hierarchyid** to a **hierarchyid** value. Parse is called implicitly when a conversion from a string type to **hierarchyid** occurs. Acts as the opposite of [ToString](../../t-sql/data-types/tostring-database-engine.md). Parse() is a static method.
   
 ## Syntax  
   
-```sql
+```syntaxsql
 -- Transact-SQL syntax  
 hierarchyid::Parse ( input )  
 -- This is functionally equivalent to the following syntax   
@@ -72,7 +68,7 @@ GO
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-```
+```txt
 hierarchyidRepresentation    StringRepresentation
 -------------------------    -----------------------
 0x5ADE                       /1/1/3/

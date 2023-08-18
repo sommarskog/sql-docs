@@ -1,19 +1,19 @@
 ---
-title: "Include Indicators and Gauges in a Gauge Panel (Report Builder) | Microsoft Docs"
-description: Find out about using gauges and indicators in the gauge panel, a top-level container, in your reports in Report Builder. 
-ms.date: 03/01/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-design
-
-
-ms.topic: conceptual
-ms.assetid: 4dff9b67-b483-4c51-a822-6dbe706a6840
+title: "Include indicators and gauges in a gauge panel in paginated report"
+description: Find out about using gauges and indicators in the gauge panel, a top-level container, in your paginated reports in Report Builder.
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 03/01/2017
+ms.service: reporting-services
+ms.subservice: report-design
+ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
-# Include Indicators and Gauges in a Gauge Panel (Report Builder and SSRS)
-  The gauge panel is the top-level container that holds one or more gauges and indicators. Indicators can be embedded in gauges or placed next to them in the gauge panel.  
+# Include indicators and gauges in a gauge panel in paginated report (Report Builder)
+
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-ssrs-rb](../../includes/ssrs-appliesto-ssrs-rb.md)] [!INCLUDE [ssrs-appliesto-pbi-rb](../../includes/ssrs-appliesto-pbi-rb.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
+
+  The gauge panel is the top-level container that holds one or more gauges and indicators in a paginated report. Indicators can be embedded in gauges or placed next to them in the gauge panel.  
   
  If the indicator and gauge are adjacent in the gauge panel and show data from different fields, you might want to add labels to make it clear what data the gauge and indicator convey.  
   
@@ -32,7 +32,7 @@ ms.author: maggies
   
 4.  Click **Radial**. The first radial gauge is selected.  
   
-5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+5.  Select **OK**.
   
 6.  Click the gauge. The **Gauge Data** pane opens.  
   
@@ -42,7 +42,7 @@ ms.author: maggies
   
 9. In the **Select Indicator Style** dialog box, in the left pane, click the indicator type you want, and then click the indicator set.  
   
-10. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+10. Select **OK**.
   
 11. Click the indicator. The **Gauge Data** pane opens.  
   
@@ -50,7 +50,7 @@ ms.author: maggies
   
      The field can be the same or a different field from the one you use in the gauge.  
   
-13. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+13. Select **OK**.
   
 ### To show an indicator and gauge side by side  
   
@@ -62,7 +62,7 @@ ms.author: maggies
   
 4.  Click **Radial**. The first radial gauge is selected.  
   
-5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+5.  Select **OK**.
   
 6.  Click the gauge. The **Gauge Data** pane opens.  
   
@@ -72,7 +72,7 @@ ms.author: maggies
   
 9. In the **Select Indicator Style** dialog box, in the left pane, click the indicator type you want, and then click the indicator set.  
   
-10. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+10. Select **OK**.
   
 11. Click the indicator. The **Gauge Data** pane opens.  
   
@@ -80,7 +80,7 @@ ms.author: maggies
   
      The field can be the same or a different field from the one you use in the gauge.  
   
-13. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+13. Select **OK**.
   
 14. Right-click the gauge panel and click **Add Label**. A label is added to the gauge panel. Repeat one more time.  
   
@@ -92,7 +92,7 @@ ms.author: maggies
   
 17. Right-click the label near the indicator, click **Label Properties**,and type the text you want in the **Text** box.  
   
-18. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+18. Select **OK**.
   
 ## See Also  
  [Indicators &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md)  

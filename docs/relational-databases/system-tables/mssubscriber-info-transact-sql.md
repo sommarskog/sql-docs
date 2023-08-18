@@ -1,23 +1,19 @@
 ---
-description: "MSsubscriber_info (Transact-SQL)"
-title: "MSsubscriber_info (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "MSsubscriber_info (Transact-SQL)"
+description: MSsubscriber_info (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: replication
+ms.service: sql
+ms.subservice: replication
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "MSsubscriber_info_TSQL"
   - "MSsubscriber_info"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "MSsubscriber_info system table"
-ms.assetid: 5ca22f41-6020-4f72-8110-e69baf3447cb
-author: cawrites
-ms.author: chadam
+dev_langs:
+  - "TSQL"
 ---
 # MSsubscriber_info (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

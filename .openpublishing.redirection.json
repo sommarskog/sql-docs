@@ -6,6 +6,16 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "docs/relational-databases/errors-events/mssqlserver-233-database-engine-error.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/connect/network-related-or-instance-specific-error-occurred-while-establishing-connection",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/relational-databases/errors-events/mssqlserver-10060-database-engine-error.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/connect/network-related-or-instance-specific-error-occurred-while-establishing-connection",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "docs/2014/2014-toc/case-study-building-an-enterprise-ecosystem.md",
       "redirect_url": "/previous-versions/sql/2014/2014-toc/case-study-building-an-enterprise-ecosystem",
       "redirect_document_id": false
@@ -3656,8 +3666,8 @@
       "redirect_document_id": false
     },
     {
-      "source_path": "docs/2014/analysis-services/instances/disconnect-users-and-sessions-on-analysis-services-server.md",
-      "redirect_url": "/previous-versions/sql/2014/analysis-services/instances/disconnect-users-and-sessions-on-analysis-services-server",
+      "source_path": "docs/database-engine/configure-windows/troubleshoot-connecting-to-the-sql-server-database-engine.md",
+      "redirect_url": "/troubleshoot/sql/connect/network-related-or-instance-specific-error-occurred-while-establishing-connection",
       "redirect_document_id": false
     },
     {
@@ -20932,7 +20942,7 @@
     },
     {
       "source_path": "docs/2014/relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md",
-      "redirect_url": "/previous-versions/sql/2014/relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization",
+      "redirect_url": "/previous-versions/sql/2014/relational-databases/in-memory-oltp/overview-and-usage-scenarios",
       "redirect_document_id": false
     },
     {
@@ -41281,6 +41291,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "docs/relational-databases/integrated-acceleration/intel-quickassist.md",
+      "redirect_url": "/sql/relational-databases/integrated-acceleration/use-integrated-acceleration-and-offloading",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "docs/relational-databases/system-catalog-views/sys-sql-feature-restrictions.md",
       "redirect_url": "/sql/sql-server/what-s-new-in-sql-server-ver15",
       "redirect_document_id": false
@@ -41296,8 +41311,123 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "docs/dma/dma-consolidatereports.md",
+      "redirect_url": "/azure/migrate/tutorial-assess-sql",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "docs/dma/dma-powerbiassesreport.md",
       "redirect_url": "/sql/dma/dma-consolidatereports",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/sql-server/azure-arc/billing.md",
+      "redirect_url": "/sql/sql-server/azure-arc/manage-license-type",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/sql-server/azure-arc/connect-at-scale.md",
+      "redirect_url": "/sql/sql-server/azure-arc/connect-at-scale-script",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azdata/reference/reference-azdata-arc.md",
+      "redirect_url": "/azure/azure-arc/data/reference/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azdata/reference/reference-azdata-arc-dc.md",
+      "redirect_url": "/azure/azure-arc/data/reference/reference-az-arcdata-dc",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azdata/reference/reference-azdata-arc-dc-config.md",
+      "redirect_url": "/azure/azure-arc/data/reference/reference-az-arcdata-dc-config",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azdata/reference/reference-azdata-arc-dc-debug.md",
+      "redirect_url": "/azure/azure-arc/data/reference/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azdata/reference/reference-azdata-arc-dc-endpoint.md",
+      "redirect_url": "/azure/azure-arc/data/reference/reference-az-arcdata-dc-endpoint",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azdata/reference/reference-azdata-arc-dc-status.md",
+      "redirect_url": "/azure/azure-arc/data/reference/reference-az-arcdata-dc-status",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azdata/reference/reference-azdata-arc-postgres.md",
+      "redirect_url": "/azure/azure-arc/data/reference/reference-az-postgres-arc-server",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azdata/reference/reference-azdata-arc-postgres-backup.md",
+      "redirect_url": "/azure/azure-arc/data/reference/reference-az-postgres-arc-server",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azdata/reference/reference-azdata-arc-postgres-endpoint.md",
+      "redirect_url": "/azure/azure-arc/data/reference/reference-az-postgres-arc-server-endpoint",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azdata/reference/reference-azdata-arc-postgres-server.md",
+      "redirect_url": "/azure/azure-arc/data/reference/reference-az-postgres-arc-server",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azdata/reference/reference-azdata-arc-postgres-server-backup.md",
+      "redirect_url": "/azure/azure-arc/data/reference/reference-az-postgres-arc-server",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azdata/reference/reference-azdata-arc-postgres-server-config.md",
+      "redirect_url": "/azure/azure-arc/data/reference/reference-az-postgres-arc-server",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azdata/reference/reference-azdata-arc-resource.md",
+      "redirect_url": "/azure/azure-arc/data/reference/reference-az-arcdata-resource-kind",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azdata/reference/reference-azdata-arc-resource-kind.md",
+      "redirect_url": "/azure/azure-arc/data/reference/reference-az-arcdata-resource-kind",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azdata/reference/reference-azdata-arc-sql.md",
+      "redirect_url": "/azure/azure-arc/data/reference/reference-az-sql-mi-arc",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azdata/reference/reference-azdata-arc-sql-endpoint.md",
+      "redirect_url": "/azure/azure-arc/data/reference/reference-az-sql-mi-arc-endpoint",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azdata/reference/reference-azdata-arc-sql-mi-config.md",
+      "redirect_url": "/azure/azure-arc/data/reference/reference-az-sql-mi-arc-config",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azdata/reference/reference-azdata-arc-sql-mi.md",
+      "redirect_url": "/azure/azure-arc/data/reference/reference-az-sql-mi-arc",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssms/download-sql-server-management-studio-ssms-19.md",
+      "redirect_url": "/sql/ssms/download-sql-server-management-studio-ssms",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssms/release-notes-ssms-19.md",
+      "redirect_url": "/sql/ssms/release-notes-ssms",
       "redirect_document_id": false
     },
     {
@@ -41496,7 +41626,7 @@
       "redirect_document_id": false
     },
     {
-      "source_path": "    docs/big-data-cluster/reference-azdata-bdc-spark-session.md",
+      "source_path": "docs/big-data-cluster/reference-azdata-bdc-spark-session.md",
       "redirect_url": "/sql/azdata/reference/reference-azdata-bdc-spark-session",
       "redirect_document_id": false
     },
@@ -42191,6 +42321,11 @@
       "redirect_document_id": true
     },
     {
+      "source_path": "docs/azure-data-studio/table-designer-azure-data-studio.md",
+      "redirect_url": "/sql/azure-data-studio/overview-of-the-table-designer-in-azure-data-studio",
+      "redirect_document_id": true
+    },
+    {
       "source_path": "docs/advanced-analytics/install/sql-machine-learning-azure-data-studio.md",
       "redirect_url": "/sql/machine-learning/install/sql-machine-learning-azure-data-studio",
       "redirect_document_id": true
@@ -42391,6 +42526,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "docs/machine-learning-server/r-reference/sqlrutils/how-to-create-a-stored-procedure-from-r.md",
+      "redirect_url": "/sql/machine-learning/r/reference/sqlrutils/how-to-create-stored-procedure-from-r",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "docs/advanced-analytics/r/how-to-create-mdx-queries-using-olapr.md",
       "redirect_url": "/sql/machine-learning/r/how-to-create-mdx-queries-using-olapr",
       "redirect_document_id": true
@@ -42462,7 +42602,12 @@
     },
     {
       "source_path": "docs/advanced-analytics/r/set-up-a-data-science-client.md",
-      "redirect_url": "/sql/machine-learning/r/set-up-a-data-science-client",
+      "redirect_url": "/sql/machine-learning/r/set-up-data-science-client",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/sql/machine-learning/r/set-up-a-data-science-client.md",
+      "redirect_url": "/sql/machine-learning/r/set-up-data-science-client",
       "redirect_document_id": true
     },
     {
@@ -42485,7 +42630,7 @@
       "redirect_url": "/sql/relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database",
       "redirect_document_id": false
     },
-        {
+    {
       "source_path": "docs/advanced-analytics/r/sql-server-r-services.md",
       "redirect_url": "/sql/machine-learning/r/sql-server-r-services",
       "redirect_document_id": true
@@ -42946,6 +43091,21 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "docs/machine-learning/r/save-and-load-r-objects-from-sql-server-using-odbc.md",
+      "redirect_url": "/sql/machine-learning/data-exploration/save-and-load-r-objects-from-sql-server-using-odbc",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/machine-learning/r/creating-multiple-models-using-rxexecby.md",
+      "redirect_url": "/sql/machine-learning/data-exploration/creating-multiple-models-using-rxexecby",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/machine-learning/r/data-exploration-and-predictive-modeling-with-r.md",
+      "redirect_url": "/sql/machine-learning/tutorials/r-tutorials",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "docs/linux/sql-server-linux-develop-use-ssms.md",
       "redirect_url": "/sql/linux/sql-server-linux-manage-ssms",
       "redirect_document_id": false
@@ -42966,14 +43126,14 @@
       "redirect_document_id": true
     },
     {
-        "source_path": "docs/database-engine/install-windows/are-you-upgrading-from-sql-server-2005.md",
-        "redirect_url": "/sql/sql-server/end-of-support/sql-server-end-of-life-overview",
-        "redirect_document_id": true
+      "source_path": "docs/database-engine/install-windows/are-you-upgrading-from-sql-server-2005.md",
+      "redirect_url": "/sql/sql-server/end-of-support/sql-server-end-of-support-overview",
+      "redirect_document_id": false
     },
     {
-        "source_path": "docs/lp/sql-server/load-move-data.md",
-        "redirect_url": "/sql/sql-server/migrate/",
-        "redirect_document_id": true
+      "source_path": "docs/lp/sql-server/load-move-data.md",
+      "redirect_url": "/sql/sql-server/migrate/",
+      "redirect_document_id": true
     },
     {
       "source_path": "docs/2014/2014-toc/books-online-for-sql-server-2014.md",
@@ -43377,7 +43537,7 @@
     },
     {
       "source_path": "docs/advanced-analytics/r/setup-or-configure-r-tools.md",
-      "redirect_url": "/sql/advanced-analytics/r/set-up-a-data-science-client",
+      "redirect_url": "/sql/advanced-analytics/r/set-up-data-science-client",
       "redirect_document_id": false
     },
     {
@@ -43507,7 +43667,7 @@
     },
     {
       "source_path": "docs/linux/sql-server-linux-azure-virtual-machine.md",
-      "redirect_url": "/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine",
+      "redirect_url": "/azure/azure-sql/virtual-machines/linux/sql-vm-create-portal-quickstart",
       "redirect_document_id": false
     },
     {
@@ -43553,6 +43713,21 @@
     {
       "source_path": "docs/relational-databases/relational-databases-new-updated-sql-docs-pr.md",
       "redirect_url": "/sql/relational-databases/new-updated-relational-databases",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/reporting-services/deprecated-features-sql-server-2017-reporting-services-ssrs.md",
+      "redirect_url": "/sql/reporting-services/deprecated-features-in-sql-server-reporting-services-ssrs",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/reporting-services/deprecated-features-sql-server-2019-reporting-services-ssrs.md",
+      "redirect_url": "/sql/reporting-services/deprecated-features-in-sql-server-reporting-services-ssrs",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/reporting-services/discontinued-functionality-sql-server-reporting-services-2019.md",
+      "redirect_url": "/sql/reporting-services/discontinued-functionality-to-sql-server-reporting-services-in-sql-server",
       "redirect_document_id": false
     },
     {
@@ -43639,12 +43814,12 @@
       "source_path": "docs/linux/sql-server-linux-shared-disk-cluster-red-hat-7-troubleshoot.md",
       "redirect_url": "/sql/linux/sql-server-linux-shared-disk-cluster-red-hat-7-operate",
       "redirect_document_id": true
-    },    
+    },
     {
       "source_path": "docs/lp/sql-server/install-sql-and-services.md",
       "redirect_url": "/sql/sql-server/",
       "redirect_document_id": false
-    },    
+    },
     {
       "source_path": "docs/lp/sql-server/business-continuity.md",
       "redirect_url": "/sql/sql-server/",
@@ -44457,7 +44632,7 @@
     },
     {
       "source_path": "docs/advanced-analytics/r-services/set-up-a-data-science-client.md",
-      "redirect_url": "/sql/advanced-analytics/r/set-up-a-data-science-client",
+      "redirect_url": "/sql/advanced-analytics/r/set-up-data-science-client",
       "redirect_document_id": false
     },
     {
@@ -45044,6 +45219,11 @@
       "source_path": "docs/connect/odbc/windows/release-notes.md",
       "redirect_url": "/sql/connect/odbc/windows/release-notes-odbc-sql-server-windows",
       "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/connect/odbc/windows/connection-resiliency-in-the-windows-odbc-driver.md",
+      "redirect_url": "/sql/connect/odbc/connection-resiliency",
+      "redirect_document_id": false
     },
     {
       "source_path": "docs/connect/odbc/windows/using-transparent-network-ip-resolution.md",
@@ -47787,7 +47967,7 @@
     },
     {
       "source_path": "docs/relational-databases/databases/deploy-a-sql-server-database-to-a-microsoft-azure-virtual-machine.md",
-      "redirect_url": "/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-server-provision",
+      "redirect_url": "/azure/azure-sql/virtual-machines/windows/create-sql-vm-portal",
       "redirect_document_id": false
     },
     {
@@ -49828,6 +50008,11 @@
     {
       "source_path": "docs/2014/analysis-services/scripting/datasourceimpersonationinfo-element-assl.md",
       "redirect_url": "/bi-reference/assl/properties/datasourceimpersonationinfo-element-assl",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssms/scripting/search-text-with-wildcards.md",
+      "redirect_url": "/sql/ssms/scripting/search-text-with-regular-expressions",
       "redirect_document_id": false
     },
     {
@@ -51988,42 +52173,42 @@
     {
       "source_path": "docs/relational-databases/scripting/configure-intellisense-sql-server-management-studio.md",
       "redirect_url": "/sql/ssms/scripting/configure-intellisense-sql-server-management-studio",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "docs/relational-databases/scripting/database-engine-query-editor-sql-server-management-studio.md",
       "redirect_url": "/sql/ssms/scripting/database-engine-query-editor-sql-server-management-studio",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "docs/relational-databases/scripting/database-engine-scripting.md",
       "redirect_url": "/sql/ssms/scripting/database-engine-scripting",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "docs/relational-databases/scripting/drag-and-drop-text.md",
       "redirect_url": "/sql/ssms/scripting/drag-and-drop-text",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "docs/relational-databases/scripting/edit-a-breakpoint-location.md",
       "redirect_url": "/sql/ssms/scripting/edit-a-breakpoint-location",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "docs/relational-databases/scripting/edit-sqlcmd-scripts-with-query-editor.md",
       "redirect_url": "/sql/ssms/scripting/edit-sqlcmd-scripts-with-query-editor",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "docs/relational-databases/scripting/enable-disable-and-delete-breakpoints.md",
       "redirect_url": "/sql/ssms/scripting/enable-disable-and-delete-breakpoints",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "docs/relational-databases/scripting/find-and-replace.md",
       "redirect_url": "/sql/ssms/scripting/find-and-replace",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "docs/relational-databases/scripting/find-in-files.md",
@@ -52152,8 +52337,8 @@
     },
     {
       "source_path": "docs/relational-databases/scripting/search-text-with-wildcards.md",
-      "redirect_url": "/sql/ssms/scripting/search-text-with-wildcards",
-      "redirect_document_id": true
+      "redirect_url": "/sql/ssms/scripting/search-text-with-regular-expressions",
+      "redirect_document_id": false
     },
     {
       "source_path": "docs/relational-databases/scripting/spatial-results-window.md",
@@ -56732,7 +56917,7 @@
     },
     {
       "source_path": "docs/2014/relational-databases/in-memory-oltp/index.md",
-      "redirect_url": "/sql/relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization?view=sql-server-2014",
+      "redirect_url": "/previous-versions/sql/2014/relational-databases/in-memory-oltp/overview-and-usage-scenarios",
       "redirect_document_id": false
     },
     {
@@ -57186,11 +57371,6 @@
       "redirect_document_id": false
     },
     {
-      "source_path": "docs/big-data-cluster/index.md",
-      "redirect_url": "/sql/big-data-cluster/big-data-cluster-overview",
-      "redirect_document_id": false
-    },
-    {
       "source_path": "docs/connect/ado-net/index.md",
       "redirect_url": "/sql/connect/ado-net/microsoft-ado-net-sql-server",
       "redirect_document_id": false
@@ -57328,6 +57508,11 @@
     {
       "source_path": "docs/connect/oledb/features/index.md",
       "redirect_url": "/sql/connect/oledb/features/oledb-driver-for-sql-server-features",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/connect/oledb/features/using-encryption-without-validation.md",
+      "redirect_url": "/sql/connect/oledb/features/encryption-and-certificate-validation",
       "redirect_document_id": false
     },
     {
@@ -57907,7 +58092,7 @@
     },
     {
       "source_path": "docs/relational-databases/in-memory-oltp/index.md",
-      "redirect_url": "/sql/relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization",
+      "redirect_url": "/sql/relational-databases/in-memory-oltp/overview-and-usage-scenarios",
       "redirect_document_id": false
     },
     {
@@ -58691,6 +58876,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "docs/sql-server/stretch-database/stretch-database-databases-and-tables-stretch-database-advisor.md",
+      "redirect_url": "/sql/sql-server/stretch-database/stretch-database",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "docs/sql-server/stretch-database/index.md",
       "redirect_url": "/sql/sql-server/stretch-database/stretch-database",
       "redirect_document_id": false
@@ -58736,6 +58926,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "docs/ssms/agent/autostart-sql-server-agent-sql-server-management-studio.md",
+      "redirect_url": "/sql/ssms/agent/autorestart-sql-server-agent-sql-server-management-studio",
+      "redirect_document_id": true
+    },
+    {
       "source_path": "docs/ssms/f1-help/index.md",
       "redirect_url": "/sql/ssms/f1-help/f1-help-for-server-connections-sql-server-management-studio",
       "redirect_document_id": false
@@ -58749,6 +58944,11 @@
       "source_path": "docs/ssms/menu-help/index.md",
       "redirect_url": "/sql/ssms/menu-help/sql-server-management-studio-menu-help",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssms/output-window.md",
+      "redirect_url": "/sql/ssms/menu-help/options-output-window-page",
+      "redirect_document_id": true
     },
     {
       "source_path": "docs/ssms/object/index.md",
@@ -58881,6 +59081,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "docs/relational-databases/system-catalog-views/sys-plan-forcing-locations.md",
+      "redirect_url": "/sql/relational-databases/system-catalog-views/sys-query-store-plan-forcing-locations-transact-sql",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "docs/azure-data-studio/download.md",
       "redirect_url": "/sql/azure-data-studio/download-azure-data-studio",
       "redirect_document_id": true
@@ -58892,8 +59097,13 @@
     },
     {
       "source_path": "docs/kb-support/end-support-sql-server-2008.md",
-      "redirect_url": "/sql/sql-server/end-of-support/sql-server-end-of-life-overview",
+      "redirect_url": "/sql/sql-server/end-of-support/sql-server-end-of-support-overview",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/sql-server/end-of-support/sql-server-end-of-life-overview.md",
+      "redirect_url": "/sql/sql-server/end-of-support/sql-server-end-of-support-overview",
+      "redirect_document_id": true
     },
     {
       "source_path": "docs/kb-support/resource-monitor-nonyielding-condition.md",
@@ -58951,11 +59161,6 @@
       "redirect_document_id": false
     },
     {
-      "source_path": "docs/database-engine/deprecated-database-engine-features-in-sql-server-2019.md",
-      "redirect_url": "/sql/database-engine/deprecated-database-engine-features-in-sql-server-version-15",
-      "redirect_document_id": true
-    },
-    {
       "source_path": "docs/integration-services/lift-shift/ssis-azure-connect-with-windows-auth.md",
       "redirect_url": "/azure/data-factory/ssis-azure-connect-with-windows-auth",
       "redirect_document_id": false
@@ -58991,14 +59196,14 @@
       "redirect_document_id": false
     },
     {
-    "source_path": "docs/azure-data-studio/tutorial-create-extension.md",
-    "redirect_url": "/sql/azure-data-studio/extensions/keymap-extension",
-    "redirect_document_id": false
+      "source_path": "docs/azure-data-studio/tutorial-create-extension.md",
+      "redirect_url": "/sql/azure-data-studio/extensions/keymap-extension",
+      "redirect_document_id": false
     },
     {
-    "source_path": "docs/linux/sql-server-linux-configure-docker.md",
-    "redirect_url": "/sql/linux/sql-server-linux-docker-container-deployment",
-    "redirect_document_id": true
+      "source_path": "docs/linux/sql-server-linux-configure-docker.md",
+      "redirect_url": "/sql/linux/sql-server-linux-docker-container-deployment",
+      "redirect_document_id": true
     },
     {
       "source_path": "docs/azure-data-studio/azure-sql-managed-instance-extension.md",
@@ -59126,6 +59331,11 @@
       "redirect_document_id": true
     },
     {
+      "source_path": "docs/azure-data-studio/notebooks/notebooks-parameterization.md",
+      "redirect_url": "/sql/azure-data-studio/notebooks/parameterize-papermill",
+      "redirect_document_id": true
+    },
+    {
       "source_path": "docs/ssms/tutorials/connect-query-sql-server.md",
       "redirect_url": "/sql/ssms/quickstarts/ssms-connect-query-sql-server",
       "redirect_document_id": false
@@ -59174,6 +59384,471 @@
       "source_path": "docs/relational-databases/security/encryption/always-encrypted-enclaves-query-columns-ssms.md",
       "redirect_url": "/sql/relational-databases/security/encryption/always-encrypted-enclaves-query-columns",
       "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md",
+      "redirect_url": "/sql/relational-databases/in-memory-oltp/overview-and-usage-scenarios",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/relational-databases/system-stored-procedures/sp-batch-params-transact-sql.md",
+      "redirect_url": "/sql/relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/tools/synapse-pathway/data-type-mappings-teradata-vantage.md",
+      "redirect_url": "/tools/synapse-pathway/azure-synapse-pathway-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/sql-server/install/hardware-and-software-requirements-for-installing-sql-server-ver15.md",
+      "redirect_url": "/sql/sql-server/install/hardware-and-software-requirements-for-installing-sql-server-2019",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/database-engine/install-windows/supported-version-and-edition-upgrades-version-15.md",
+      "redirect_url": "/sql/database-engine/install-windows/supported-version-and-edition-upgrades-2019",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/database-engine/install-windows/latest-updates-for-microsoft-sql-server.md",
+      "redirect_url": "/troubleshoot/sql/releases/download-and-install-latest-updates?toc=/sql/toc.json&bc=/sql/breadcrumb/toc.json",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/sql-server/what-s-new-in-sql-server-ver15.md",
+      "redirect_url": "/sql/sql-server/what-s-new-in-sql-server-2019",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/sql-server/editions-and-components-of-sql-server-version-15.md",
+      "redirect_url": "/sql/sql-server/editions-and-components-of-sql-server-2019",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/sql-server/sql-server-version-15-release-notes.md",
+      "redirect_url": "/sql/sql-server/sql-server-2019-release-notes",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/database-engine/deprecated-database-engine-features-in-sql-server-version-15.md",
+      "redirect_url": "/sql/database-engine/deprecated-database-engine-features-in-sql-server-2019",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/database-engine/breaking-changes-to-database-engine-features-in-sql-server-version-15.md",
+      "redirect_url": "/sql/database-engine/breaking-changes-to-database-engine-features-in-sql-server-2019",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/database-engine/availability-groups/windows/use-the-add-azure-replica-wizard-sql-server.md",
+      "redirect_url": "/azure/azure-sql/virtual-machines/windows/availability-group-manually-configure-multiple-regions",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "azure-sql/database/ledger-append-only-ledger-tables.md",
+      "redirect_url": "/sql/relational-databases/security/ledger/ledger-append-only-ledger-tables",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "azure-sql/database/ledger-audit.md",
+      "redirect_url": "/sql/relational-databases/security/ledger/ledger-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "azure-sql/database/ledger-database-ledger.md",
+      "redirect_url": "/sql/relational-databases/security/ledger/ledger-database-ledger",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "azure-sql/database/ledger-database-digest-management-and-database-verification.md",
+      "redirect_url": "/sql/relational-databases/security/ledger/ledger-digest-management",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "azure-sql/database/ledger-how-to-access-acl-digest.md",
+      "redirect_url": "/sql/relational-databases/security/ledger/ledger-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "azure-sql/database/ledger-how-to-append-only-ledger-tables.md",
+      "redirect_url": "/sql/relational-databases/security/ledger/ledger-how-to-append-only-ledger-tables",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "azure-sql/database/ledger-how-to-updatable-ledger-tables.md",
+      "redirect_url": "/sql/relational-databases/security/ledger/ledger-how-to-updatable-ledger-tables",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "azure-sql/database/ledger-limits.md",
+      "redirect_url": "/sql/relational-databases/security/ledger/ledger-limits",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "azure-sql/database/ledger-overview.md",
+      "redirect_url": "/sql/relational-databases/security/ledger/ledger-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "azure-sql/database/ledger-updatable-ledger-tables.md",
+      "redirect_url": "/sql/relational-databases/security/ledger/ledger-updatable-ledger-tables",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "azure-sql/database/ledger-verify-database.md",
+      "redirect_url": "/sql/relational-databases/security/ledger/ledger-verify-database",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/linux/tutorial-sql-server-containers-kubernetes.md",
+      "redirect_url": "/sql/linux/quickstart-sql-server-containers-kubernetes",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/tools/distributed-replay/install-distributed-replay-overview.md",
+      "redirect_url": "/sql/tools/distributed-replay/install-distributed-replay",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/tools/distributed-replay/distributed-replay-requirements.md",
+      "redirect_url": "/sql/tools/distributed-replay/sql-server-distributed-replay",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/tools/sqlcmd-utility.md",
+      "redirect_url": "/sql/tools/sqlcmd/sqlcmd-utility",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/ssms/scripting/edit-sqlcmd-scripts-with-query-editor.md",
+      "redirect_url": "/sql/tools/sqlcmd/edit-sqlcmd-scripts-query-editor",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/ssms/scripting/sqlcmd-start-the-utility.md",
+      "redirect_url": "/sql/tools/sqlcmd/sqlcmd-start-utility",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/ssms/scripting/sqlcmd-connect-to-the-database-engine.md",
+      "redirect_url": "/sql/tools/sqlcmd/sqlcmd-connect-database-engine",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/ssms/scripting/sqlcmd-run-transact-sql-script-files.md",
+      "redirect_url": "/sql/tools/sqlcmd/sqlcmd-run-transact-sql-script-files",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/ssms/scripting/sqlcmd-use-the-utility.md",
+      "redirect_url": "/sql/tools/sqlcmd/sqlcmd-use-utility",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/ssms/scripting/sqlcmd-use-with-scripting-variables.md",
+      "redirect_url": "/sql/tools/sqlcmd/sqlcmd-use-scripting-variables",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/tools/go-sqlcmd-utility.md",
+      "redirect_url": "/sql/tools/sqlcmd/go-sqlcmd-utility",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/ssms/scripting/transact-sql-debugger-quickwatch-dialog-box.md",
+      "redirect_url": "/sql/ssms/scripting/transact-sql-debugger-information",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/tools/sqlpackage/troubleshooting-import-export-sqlpackage.md",
+      "redirect_url": "/sql/tools/sqlpackage/troubleshooting-issues-and-performance-with-sqlpackage",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/sql-server/partner-big-data-cluster.md",
+      "redirect_url": "/sql/big-data-cluster/partner-big-data-cluster",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "azure-sql/database/ledger-digest-management-and-database-verification.md",
+      "redirect_url": "/sql/relational-databases/security/ledger/ledger-digest-management",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/linux/sql-server-linux-release-notes.md",
+      "redirect_url": "/sql/linux/sql-server-linux-release-notes-2017",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/linux/sql-server-linux-setup-2022.md",
+      "redirect_url": "/sql/linux/sql-server-linux-setup",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/linux/sql-server-linux-availability-group-cluster-rhel.md",
+      "redirect_url": "/sql/linux/sql-server-linux-availability-group-cluster-pacemaker",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/linux/sql-server-linux-availability-group-cluster-sles.md",
+      "redirect_url": "/sql/linux/sql-server-linux-availability-group-cluster-pacemaker",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/linux/sql-server-linux-availability-group-cluster-ubuntu.md",
+      "redirect_url": "/sql/linux/sql-server-linux-availability-group-cluster-pacemaker",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/relational-databases/system-tables/cdc-change-feed-tables-transact-sql.md",
+      "redirect_url": "/sql/relational-databases/system-tables/changefeed-change-feed-tables-transact-sql",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/relational-databases/system-tables/cdc-change-feed-table-groups-transact-sql.md",
+      "redirect_url": "/sql/relational-databases/system-tables/changefeed-change-feed-table-groups-transact-sql",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/relational-databases/system-tables/cdc-change-feed-settings.md",
+      "redirect_url": "/sql/relational-databases/system-tables/changefeed-change-feed-settings",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/relational-databases/errors-events/mssqlserver-neg2-database-engine-error.md",
+      "redirect_url": "/troubleshoot/sql/connect/timeout-expired-error",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/relational-databases/errors-events/mssqlserver-1-database-engine-error.md",
+      "redirect_url": "/troubleshoot/sql/connect/network-related-or-instance-specific-error-occurred-while-establishing-connection",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/relational-databases/errors-events/mssqlserver--1-database-engine-error.md",
+      "redirect_url": "/troubleshoot/sql/connect/network-related-or-instance-specific-error-occurred-while-establishing-connection",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/relational-databases/errors-events/mssqlserver--2146893019-database-engine-error.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/connect/resolve-connectivity-errors-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/relational-databases/errors-events/mssqlserver-2-database-engine-error.md",
+      "redirect_url": "/troubleshoot/sql/connect/network-related-or-instance-specific-error-occurred-while-establishing-connection",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/relational-databases/errors-events/mssqlserver-53-database-engine-error.md",
+      "redirect_url": "/troubleshoot/sql/connect/network-related-or-instance-specific-error-occurred-while-establishing-connection",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "azure-sql/database/sql-vulnerability-assessment.md",
+      "redirect_url": "/azure/defender-for-cloud/sql-azure-vulnerability-assessment-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md",
+      "redirect_url": "/sql/database-engine/configure-windows/configure-sql-server-encryption",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/relational-databases/performance/parameter-sensitivity-plan-optimization.md",
+      "redirect_url": "/sql/relational-databases/performance/parameter-sensitive-plan-optimization",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssma/db2/working-with-ssma-for-oracle-console-db2tosql.md",
+      "redirect_url": "/sql/ssma/db2/working-with-ssma-for-db2-console-db2tosql",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "azure-sql/database/sql-azure-vulnerability-assessment-storage.md",
+      "redirect_url": "azure-sql/database/sql-database-vulnerability-assessment-storage",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/linux/sql-server-linux-release-history-2017.md",
+      "redirect_url": "/troubleshoot/sql/linux/release-history-2017?toc=/sql/toc.json&bc=/sql/breadcrumb/toc.json",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/linux/sql-server-linux-release-history-2019.md",
+      "redirect_url": "/troubleshoot/sql/linux/release-history-2019?toc=/sql/toc.json&bc=/sql/breadcrumb/toc.json",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/linux/sql-server-linux-release-history-2022.md",
+      "redirect_url": "/troubleshoot/sql/linux/release-history-2022?toc=/sql/toc.json&bc=/sql/breadcrumb/toc.json",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/relational-databases/system-stored-procedures/sp-change-feed-table.md",
+      "redirect_url": "/sql/relational-databases/system-stored-procedures/sp-help-change-feed-table",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/linux/quickstart-sql-server-containers-kubernetes.md",
+      "redirect_url": "/sql/linux/quickstart-sql-server-containers-azure",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/linux/tutorial-sql-server-dh2i-sidecar.md",
+      "redirect_url": "/sql/linux/tutorial-sql-server-containers-kubernetes-dh2i",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azure-data-studio/azure-resource-explorer.md",
+      "redirect_url": "/sql/azure-data-studio/azure-view",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/relational-databases/system-tables/msrepl-agent-jobs.md",
+      "redirect_url": "/sql/relational-databases/system-tables/msrepl-agent-jobs-transact-sql",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/relational-databases/security/networking/tds-8-and-tls-1-3.md",
+      "redirect_url": "/sql/relational-databases/security/networking/tds-8",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssms/object/filter-settings-object-explorer-and-utility-explorer.md",
+      "redirect_url": "/sql/ssms/release-notes-ssms",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/relational-databases/manage/use-utility-explorer-to-manage-the-sql-server-utility.md",
+      "redirect_url": "/sql/ssms/release-notes-ssms",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/relational-databases/manage/utility-explorer-f1-help.md",
+      "redirect_url": "/sql/ssms/release-notes-ssms",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/relational-databases/data-tier-applications/monitor-data-tier-applications.md",
+      "redirect_url": "/sql/ssms/release-notes-ssms",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/relational-databases/manage/change-proxy-account-for-utility-collection-on-managed-sql-server.md",
+      "redirect_url": "/sql/ssms/release-notes-ssms",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/relational-databases/manage/run-utility-and-non-utility-collection-sets-on-same-sql-instance.md",
+      "redirect_url": "/sql/ssms/release-notes-ssms",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/relational-databases/manage/create-a-sql-server-utility-control-point-sql-server-utility.md",
+      "redirect_url": "/sql/ssms/release-notes-ssms",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/relational-databases/manage/connect-to-a-sql-server-utility.md",
+      "redirect_url": "/sql/ssms/release-notes-ssms",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/relational-databases/manage/enroll-an-instance-of-sql-server-sql-server-utility.md",
+      "redirect_url": "/sql/ssms/release-notes-ssms",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/relational-databases/manage/monitor-instances-of-sql-server-in-the-sql-server-utility.md",
+      "redirect_url": "/sql/ssms/release-notes-ssms",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/relational-databases/manage/view-resource-health-policy-results-sql-server-utility.md",
+      "redirect_url": "/sql/ssms/release-notes-ssms",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/relational-databases/manage/troubleshoot-sql-server-resource-health-sql-server-utility.md",
+      "redirect_url": "/sql/ssms/release-notes-ssms",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/relational-databases/manage/modify-a-resource-health-policy-definition-sql-server-utility.md",
+      "redirect_url": "/sql/ssms/release-notes-ssms",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/relational-databases/manage/remove-a-utility-control-point-sql-server-utility.md",
+      "redirect_url": "/sql/ssms/release-notes-ssms",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/relational-databases/manage/configure-your-utility-control-point-data-warehouse-sql-server-utility.md",
+      "redirect_url": "/sql/ssms/release-notes-ssms",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/relational-databases/manage/configure-health-policies-sql-server-utility.md",
+      "redirect_url": "/sql/ssms/release-notes-ssms",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/relational-databases/manage/reduce-noise-in-cpu-utilization-policies-sql-server-utility.md",
+      "redirect_url": "/sql/ssms/release-notes-ssms",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/relational-databases/manage/remove-an-instance-of-sql-server-from-the-sql-server-utility.md",
+      "redirect_url": "/sql/ssms/release-notes-ssms",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/relational-databases/manage/move-a-ucp-from-one-instance-of-sql-server-to-another-sql-server-utility.md",
+      "redirect_url": "/sql/ssms/release-notes-ssms",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/relational-databases/manage/sql-server-utility-features-and-tasks.md",
+      "redirect_url": "/sql/ssms/release-notes-ssms",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/relational-databases/system-stored-procedures/sp-query-store-remove-plan-transct-sql.md",
+      "redirect_url": "/sql/relational-databases/system-stored-procedures/sp-query-store-remove-plan-transact-sql",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssms/object/options-sql-server-object-explorer-commands.md",
+      "redirect_url": "/sql/ssms/menu-help/options-sql-server-object-explorer-commands",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/ssms/object/options-sql-server-object-explorer-scripting-page.md",
+      "redirect_url": "/sql/ssms/menu-help/options-sql-server-object-explorer-scripting",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/relational-databases/system-stored-procedures/active-geo-replication-sp-wait-for-database-copy-sync.md",
+      "redirect_url": "/sql/relational-databases/system-stored-procedures/sp-wait-for-database-copy-sync-transact-sql",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssdt/release-notes-integration-services-2022.md",
+      "redirect_url": "/sql/ssdt/ssis-vs2022-troubleshooting-guide",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssdt/release-notes-ssdt-2019.md",
+      "redirect_url": "/sql/ssdt/ssis-vs2019-troubleshooting-guide",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssdt/release-notes-ssdt.md",
+      "redirect_url": "/sql/ssdt/previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi",
+      "redirect_document_id": false
     }
   ]
 }

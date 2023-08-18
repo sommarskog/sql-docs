@@ -1,33 +1,29 @@
 ---
-description: "&#x40;&#x40;CURSOR_ROWS (Transact-SQL)"
-title: "@@CURSOR_ROWS (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "@@CURSOR_ROWS (Transact-SQL)"
+description: "@@CURSOR_ROWS (Transact-SQL)"
+author: markingmyname
+ms.author: maghan
 ms.date: "08/18/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "@@CURSOR_ROWS"
   - "@@CURSOR_ROWS_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "@@CURSOR_ROWS function"
   - "cursors [SQL Server], last-opened"
   - "last-opened cursor"
   - "asynchronous cursors [SQL Server]"
-ms.assetid: 31bd7a97-7f28-42a8-ba24-24d16d22973d
-author: cawrites
-ms.author: chadam
+dev_langs:
+  - "TSQL"
 ---
 # &#x40;&#x40;CURSOR_ROWS (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 This returns the number of qualifying rows currently in the last cursor opened on the connection. To improve performance, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] can populate large keyset and static cursors asynchronously. `@@CURSOR_ROWS` can be called to determine that the number of the rows that qualify for a cursor are retrieved at the time of the @@CURSOR_ROWS call.
   
-![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## Syntax  
   
@@ -56,7 +52,7 @@ This returns the number of qualifying rows currently in the last cursor opened o
 This example first declares a cursor, and then uses `SELECT` to display the value of `@@CURSOR_ROWS`. The setting has a value of `0` before the cursor opens and then has a value of `-1`, to indicate that the cursor keyset populates asynchronously.
   
 ```sql
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 SELECT @@CURSOR_ROWS;  
 DECLARE Name_Cursor CURSOR FOR  

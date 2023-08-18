@@ -1,31 +1,27 @@
 ---
+title: "sp_describe_first_result_set (Transact-SQL)"
 description: "sp_describe_first_result_set (Transact-SQL)"
-title: "sp_describe_first_result_set (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/17/2018"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_describe_first_result_set"
-  - "sp_describe_first_result_set_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_describe_first_result_set"
-ms.assetid: f2355a75-3a8e-43e6-96ad-4f41038f6d22
 author: markingmyname
 ms.author: maghan
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+ms.date: "03/17/2018"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_describe_first_result_set"
+  - "sp_describe_first_result_set_TSQL"
+helpviewer_keywords:
+  - "sp_describe_first_result_set"
+dev_langs:
+  - "TSQL"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=fabric"
 ---
 # sp_describe_first_result_set (Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw.md)]
 
   Returns the metadata for the first possible result set of the [!INCLUDE[tsql](../../includes/tsql-md.md)] batch. Returns an empty result set if the batch returns no results. Raises an error if the [!INCLUDE[ssDE](../../includes/ssde-md.md)] cannot determine the metadata for the first query that will be executed by performing a static analysis. The dynamic management view [sys.dm_exec_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md) returns the same information.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -37,15 +33,15 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
 ```  
   
 ## Arguments  
-`[ \@tsql = ] 'Transact-SQL_batch'`
+`[ @tsql = ] 'Transact-SQL_batch'`
  One or more [!INCLUDE[tsql](../../includes/tsql-md.md)] statements. *Transact-SQL_batch* may be **nvarchar(***n***)** or **nvarchar(max)**.  
   
-`[ \@params = ] N'parameters'`
+`[ @params = ] N'parameters'`
  \@params provides a declaration string for parameters for the [!INCLUDE[tsql](../../includes/tsql-md.md)] batch, which is similar to sp_executesql. Parameters may be **nvarchar(n)** or **nvarchar(max)**.  
   
  Is one string that contains the definitions of all parameters that have been embedded in the [!INCLUDE[tsql](../../includes/tsql-md.md)]*_batch*. The string must be either a Unicode constant or a Unicode variable. Each parameter definition consists of a parameter name and a data type. *n* is a placeholder that indicates additional parameter definitions. Every parameter specified in the statement must be defined in \@params. If the [!INCLUDE[tsql](../../includes/tsql-md.md)] statement or batch in the statement does not contain parameters, \@params is not required. NULL is the default value for this parameter.  
   
-`[ \@browse_information_mode = ] tinyint`
+`[ @browse_information_mode = ] tinyint`
  Specifies if additional key columns and source table information are returned. If set to 1, each query is analyzed as if it includes a FOR BROWSE option on the query. Additional key columns and source table information are returned.  
   
 -   If set to 0, no information is returned.  

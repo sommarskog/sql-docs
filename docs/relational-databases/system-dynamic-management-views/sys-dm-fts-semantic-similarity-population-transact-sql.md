@@ -1,24 +1,22 @@
 ---
-description: "sys.dm_fts_semantic_similarity_population (Transact-SQL)"
-title: "sys.dm_fts_semantic_similarity_population (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/10/2016"
-ms.prod: sql
-ms.technology: system-objects
+title: "sys.dm_fts_semantic_similarity_population (Transact-SQL)"
+description: sys.dm_fts_semantic_similarity_population (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
+ms.reviewer: mikeray
+ms.date: "02/27/2023"
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "dm_fts_semantic_similarity_population_TSQL"
   - "sys.dm_fts_semantic_similarity_population"
   - "dm_fts_semantic_similarity_population"
   - "sys.dm_fts_semantic_similarity_population_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.dm_fts_semantic_similarity_population dynamic management view"
-ms.assetid: 33666f28-c370-47e2-a932-190316ed5f69
-author: pmasl 
-ms.author: pelopes
-ms.reviewer: mikeray
+dev_langs:
+  - "TSQL"
 ---
 # sys.dm_fts_semantic_similarity_population (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -50,8 +48,12 @@ ms.reviewer: mikeray
   
 ## Security  
   
-### Permissions  
+## Permissions  
  Requires VIEW SERVER STATE permission on the server.  
+  
+### Permissions for SQL Server 2022 and later
+
+Requires VIEW SERVER PERFORMANCE STATE permission on the server.  
   
 ## Examples  
  The following example shows how to query the status of document similarity index populations for all tables that have an associated semantic index:  
@@ -60,8 +62,8 @@ ms.reviewer: mikeray
 SELECT * FROM sys.dm_fts_semantic_similarity_population;  
 GO  
 ```  
-  
-## See Also  
+
+## See also  
  [Manage and Monitor Semantic Search](../../relational-databases/search/manage-and-monitor-semantic-search.md)  
   
   

@@ -1,21 +1,17 @@
 ---
-description: "View Job Step Information"
 title: "View Job Step Information"
-ms.custom: seo-lt-2019
+description: "View Job Step Information"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
+ms.service: sql
+ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "displaying job step information"
   - "jobs [SQL Server Agent], viewing"
   - "SQL Server Agent jobs, viewing"
   - "viewing job step information"
-ms.assetid: e3f06492-dc86-4e06-b186-ea58aff6d591
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
 ---
 # View Job Step Information
@@ -50,7 +46,7 @@ You can view only those jobs that you own, unless you are a member of the **sysa
   
 #### To view job step information  
   
-1.  In **Object Explorer,** connect to an instance of the [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)], and then expand that instance.  
+1.  In **Object Explorer,** connect to an instance of the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], and then expand that instance.  
   
 2.  Expand **SQL Server Agent**, expand **Jobs**, right-click the job that contains the job step to be viewed, and click **Properties**.  
   

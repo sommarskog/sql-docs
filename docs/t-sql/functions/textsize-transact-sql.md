@@ -1,34 +1,30 @@
 ---
-description: "&#x40;&#x40;TEXTSIZE (Transact-SQL)"
-title: "@@TEXTSIZE (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "@@TEXTSIZE (Transact-SQL)"
+description: "@@TEXTSIZE (Transact-SQL)"
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "09/18/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "@@TEXTSIZE"
   - "@@TEXTSIZE_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "SET statement, TEXTSIZE option"
   - "SELECT statement [SQL Server], text size returned"
   - "TEXTSIZE option"
   - "@@TEXTSIZE function"
   - "text size returned [SQL Server]"
-ms.assetid: 4308a7b9-8e8f-49e9-8246-8224e32f4953
-author: julieMSFT
-ms.author: jrasnick
+dev_langs:
+  - "TSQL"
 ---
 # &#x40;&#x40;TEXTSIZE (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Returns the current value of the [TEXTSIZE](../../t-sql/statements/set-textsize-transact-sql.md) option.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

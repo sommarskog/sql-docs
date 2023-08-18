@@ -1,35 +1,31 @@
 ---
-description: "COLUMNS_UPDATED (Transact-SQL)"
 title: COLUMNS_UPDATED (Transact-SQL)
-ms.custom: ""
+description: "COLUMNS_UPDATED (Transact-SQL)"
+author: markingmyname
+ms.author: maghan
 ms.date: "07/25/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "COLUMNS_UPDATED_TSQL"
   - "COLUMNS_UPDATED"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "COLUMNS_UPDATED function"
   - "testing columns"
   - "column testing [SQL Server]"
   - "updated columns"
-ms.assetid: 765fde44-1f95-4015-80a4-45388f18a42c
-author: cawrites
-ms.author: chadam
+dev_langs:
+  - "TSQL"
 ---
 
 # COLUMNS_UPDATED (Transact-SQL)
 
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 This function returns a **varbinary** bit pattern indicating the inserted or updated columns of a table or view. Use `COLUMNS_UPDATED` anywhere inside the body of a [!INCLUDE[tsql](../../includes/tsql-md.md)] INSERT or UPDATE trigger to test whether the trigger should execute certain actions.
   
-![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## Syntax  
   
@@ -57,7 +53,7 @@ The ORDINAL_POSITION column of the INFORMATION_SCHEMA.COLUMNS view is not compat
 SELECT TABLE_NAME, COLUMN_NAME,  
     COLUMNPROPERTY(OBJECT_ID(TABLE_SCHEMA + '.' + TABLE_NAME),  
     COLUMN_NAME, 'ColumnID') AS COLUMN_ID  
-FROM AdventureWorks2012.INFORMATION_SCHEMA.COLUMNS  
+FROM AdventureWorks2022.INFORMATION_SCHEMA.COLUMNS  
 WHERE TABLE_NAME = 'Person';  
 ```  
 
@@ -79,7 +75,7 @@ This example creates two tables: `employeeData` and `auditEmployeeData`. The `em
 With the `COLUMNS_UPDATED()` function, we can quickly test for any changes made to columns containing sensitive employee information. Using `COLUMNS_UPDATED()` this way works only when trying to detect changes to the first eight columns in the table.
   
 ```sql
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 IF EXISTS(SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES  
    WHERE TABLE_NAME = 'employeeData')  
@@ -183,10 +179,10 @@ GO
 ```  
   
 ### B. Using COLUMNS_UPDATED to test more than eight columns  
-To test for updates that affect columns other than the first eight table columns, use the `SUBSTRING` function to test the correct bit returned by `COLUMNS_UPDATED`. This example tests for updates affecting columns `3`, `5`, and `9` in the `AdventureWorks2012.Person.Person` table.
+To test for updates that affect columns other than the first eight table columns, use the `SUBSTRING` function to test the correct bit returned by `COLUMNS_UPDATED`. This example tests for updates affecting columns `3`, `5`, and `9` in the `AdventureWorks2022.Person.Person` table.
   
 ```sql
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 IF OBJECT_ID (N'Person.uContact2', N'TR') IS NOT NULL  
     DROP TRIGGER Person.uContact2;  

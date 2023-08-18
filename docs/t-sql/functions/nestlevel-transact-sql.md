@@ -1,32 +1,28 @@
 ---
-description: "&#x40;&#x40;NESTLEVEL (Transact-SQL)"
-title: "@@NESTLEVEL (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "@@NESTLEVEL (Transact-SQL)"
+description: "@@NESTLEVEL (Transact-SQL)"
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "09/17/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "@@NESTLEVEL"
   - "@@NESTLEVEL_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "@@NESTLEVEL function"
   - "nesting stored procedures"
   - "stored procedure nesting levels [SQL Server]"
-ms.assetid: 8c0b2134-8616-44f6-addc-6583c432fb62
-author: julieMSFT
-ms.author: jrasnick
+dev_langs:
+  - "TSQL"
 ---
 # &#x40;&#x40;NESTLEVEL (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Returns the nesting level of the current stored procedure execution (initially 0) on the local server.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -50,7 +46,7 @@ ms.author: jrasnick
  The following example creates two procedures: one that calls the other, and one that displays the `@@NESTLEVEL` setting of each.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 IF OBJECT_ID (N'usp_OuterProc', N'P')IS NOT NULL  
     DROP PROCEDURE usp_OuterProc;  

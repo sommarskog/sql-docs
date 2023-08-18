@@ -1,24 +1,20 @@
 ---
-description: "sysopentapes (Transact-SQL)"
-title: "sysopentapes (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sysopentapes (Transact-SQL)"
+description: sysopentapes (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "06/10/2016"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sysopentapes"
   - "sysopentapes_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "backup media [SQL Server], sysopentapes system table"
   - "sysopentapes system table"
-ms.assetid: c066ca9b-9cfd-46b1-90a3-5c8dc9e7b6ae
-author: cawrites
-ms.author: chadam
+dev_langs:
+  - "TSQL"
 ---
 # sysopentapes (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

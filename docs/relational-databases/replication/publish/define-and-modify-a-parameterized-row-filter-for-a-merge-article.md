@@ -1,14 +1,14 @@
 ---
 title: "Define & modify a parameterized row filter (Merge)"
-description: Learn how to define and modify a parameterized row filter for a Merge Publication article for SQL Server. 
-ms.custom: seo-lt-2019
+description: Learn how to define and modify a parameterized row filter for a Merge Publication article for SQL Server.
+author: "MashaMSFT"
+ms.author: "mathoma"
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: replication
+ms.service: sql
+ms.subservice: replication
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "parameterized filters [SQL Server replication], defining"
   - "parameterized filters [SQL Server replication], modifying"
   - "merge replication [SQL Server replication], dynamic filters"
@@ -16,9 +16,6 @@ helpviewer_keywords:
   - "filters [SQL Server replication], parameterized"
   - "modifying filters, parameterized row"
   - "dynamic filters [SQL Server replication]"
-ms.assetid: de0482a2-3cc8-4030-8a4a-14364549ac9f
-author: "MashaMSFT"
-ms.author: "mathoma"
 ---
 # Define and Modify a Parameterized Row Filter for a Merge Article
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -81,7 +78,7 @@ ms.author: "mathoma"
   
      If you select **A row from this table will go to only one subscription**, merge replication can optimize performance by storing and processing less metadata. However, you must ensure that the data is partitioned in such a way that a row cannot be replicated to more than one Subscriber. For more information, see the section "Setting 'partition options'" in the topic [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
-5.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+5.  Select **OK**.
   
 6.  If you are in the **Publication Properties - \<Publication>** dialog box, click **OK** to save and close the dialog box.  
   
@@ -91,7 +88,7 @@ ms.author: "mathoma"
   
 2.  In the **Edit Filter** dialog box, modify the filter.  
   
-3.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+3.  Select **OK**.
   
 #### To delete a parameterized row filter  
   

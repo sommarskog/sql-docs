@@ -1,19 +1,19 @@
 ---
 title: azdata bdc hdfs settings reference
-titleSuffix: SQL Server big data clusters
+titleSuffix: SQL Server Big Data Clusters
 description: Reference article for azdata bdc hdfs settings commands.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: seanw
-ms.date: 04/29/2021
+ms.date: 10/05/2021
+ms.service: sql
+ms.subservice: big-data-cluster
 ms.topic: reference
-ms.prod: sql
-ms.technology: big-data-cluster
 ---
 
 # azdata bdc hdfs settings
 
-Applies to [!INCLUDE [azure-data-cli-azdata](../../includes/azure-data-cli-azdata.md)]
+[!INCLUDE[azdata](../../includes/applies-to-version/azdata.md)]
 
 The following article provides reference for the **sql** commands in the **azdata** tool. For more information about other **azdata** commands, see [azdata reference](reference-azdata.md)
 
@@ -55,7 +55,7 @@ JMESPath query string. See [http://jmespath.org/](http://jmespath.org) for more 
 #### `--verbose`
 Increase logging verbosity. Use --debug for full debug logs.
 ## azdata bdc hdfs settings show
-Shows the BDC's hdfs service-scope (optionally resource-scope) settings. By default, this command shows user-configured service-scope settings. Filters are available to show all settings (system-managed and configurable), configurable settings, or pending settings. To see a specific service-scope or resource-scope setting, you can provide the setting name. Use “recursive” to show settings for all resources as part of the service.
+Shows the BDC's hdfs service-scope (optionally resource-scope) settings. By default, this command shows user-configured service-scope settings. Filters are available to show all settings (system-managed and configurable), configurable settings, or pending settings. To see a specific service-scope or resource-scope setting, you can provide the setting name. Use "recursive" to show settings for all resources as part of the service.
 ```bash
 azdata bdc hdfs settings show [--resources -r] 
                               [--settings -s]  

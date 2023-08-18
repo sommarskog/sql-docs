@@ -1,13 +1,13 @@
 ---
-title: "Data Access from CLR Database Objects | Microsoft Docs"
+title: "Data Access from CLR Database Objects"
 description: CLR routines can access data from within a CLR database object by using the .NET Framework Data Provider for SQL Server, also referred to as SqlClient.
-ms.custom: ""
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: clr
+ms.service: sql
+ms.subservice: clr
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "common language runtime [SQL Server], data access"
   - "routines [CLR integration]"
   - "data access [CLR integration]"
@@ -20,9 +20,6 @@ helpviewer_keywords:
   - "managed code [SQL Server], data access"
   - "SqlClient provider"
   - "in-process data access providers [CLR integration]"
-ms.assetid: 9a0f4dee-71c1-42e9-a85e-52382807010f
-author: "rothja"
-ms.author: "jroth"
 ---
 # Data Access from CLR Database Objects
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

@@ -1,27 +1,23 @@
 ---
-description: "CLOSE MASTER KEY (Transact-SQL)"
-title: "CLOSE MASTER KEY (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "CLOSE MASTER KEY (Transact-SQL)"
+description: CLOSE MASTER KEY (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "05/15/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "CLOSE MASTER KEY"
   - "CLOSE_MASTER_KEY_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "encryption [SQL Server], Database Master Key"
   - "CLOSE MASTER KEY statement"
   - "database master key [SQL Server], closing"
   - "cryptography [SQL Server], Database Master Key"
   - "closing Database Master Keys"
-ms.assetid: bb04ef7a-9f3a-437e-a6f9-ba0204082cb9
-author: VanMSFT
-ms.author: vanto
+dev_langs:
+  - "TSQL"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # CLOSE MASTER KEY (Transact-SQL)
@@ -29,7 +25,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
   Closes the master key of the current database.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -37,7 +33,8 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 CLOSE MASTER KEY  
 ```  
 
-[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
+> [!NOTE]
+> [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
   
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
@@ -53,12 +50,12 @@ CLOSE MASTER KEY
 ## Examples  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 CLOSE MASTER KEY;  
 GO  
 ```  
   
-## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## Examples: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ```sql  
 USE master;  

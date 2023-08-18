@@ -1,16 +1,12 @@
 ---
-description: "Change Steps of a SQL Server Agent Master Job"
 title: "Change Steps of a SQL Server Agent Master Job"
-ms.custom: seo-lt-2019
-ms.date: 01/19/2017
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
-ms.topic: conceptual
-ms.assetid: 8f1a0ee6-49ff-4080-94ca-d661daeff2a6
+description: "Change Steps of a SQL Server Agent Master Job"
 author: markingmyname
 ms.author: maghan
-ms.reviewer: ""
+ms.date: 01/19/2017
+ms.service: sql
+ms.subservice: ssms
+ms.topic: conceptual
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
 ---
 # Change Steps of a SQL Server Agent Master Job
@@ -19,7 +15,7 @@ monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
 > [!IMPORTANT]  
 > On [Azure SQL Managed Instance](/azure/sql-database/sql-database-managed-instance), most, but not all SQL Server Agent features are currently supported. See [Azure SQL Managed Instance T-SQL differences from SQL Server](/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) for details.
 
-This topic describes how to make changes to the steps of a SQL Server Agent master job in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+This topic describes how to make changes to the steps of a SQL Server Agent master job in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] by using SQL Server Management Studio or [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
 ## <a name="BeforeYouBegin"></a>Before You Begin  
   
@@ -55,7 +51,7 @@ Unless you are a member of the **sysadmin** fixed server role, you can only modi
   
 #### To make changes to the steps of a SQL Server Agent master job  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  On the Standard bar, click **New Query**.  
   

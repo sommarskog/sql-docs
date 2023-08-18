@@ -1,17 +1,14 @@
 ---
+title: "MSSQLSERVER_5243"
 description: "MSSQLSERVER_5243"
-title: "MSSQLSERVER_5243 | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/04/2017"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: supportability
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "5243 (Database Engine error)"
-ms.assetid: e04a1934-e57d-420e-ac79-97071745824e
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "04/04/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: "reference"
+helpviewer_keywords:
+  - "5243 (Database Engine error)"
 ---
 # MSSQLSERVER_5243
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,10 +37,6 @@ Finally, you might find it useful to switch to a new hardware system. This switc
 Restore from BackupIf the problem is not hardware related and a known clean backup is available, restore the database from the backup.
 
 Run DBCC CHECKDBIf no clean backup is available, run DBCC CHECKDB without a REPAIR clause to determine the extent of the corruption. DBCC CHECKDB will recommend a REPAIR clause to use. Then, run DBCC CHECKDB with the appropriate REPAIR clause to repair the corruption.
-
-> **alert tag is not supported!!!!**
-> **tr tag is not supported!!!!**
-> **tr tag is not supported!!!!**
 
 If running DBCC CHECKDB with one of the REPAIR clauses does not correct the problem, contact your primary support provider.
   

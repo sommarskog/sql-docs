@@ -1,64 +1,60 @@
 ---
-title: "Embed an Image in a Report (Report Builder) | Microsoft Docs"
-description: Make an image readily available to a report. Use an image that's embedded in the report and listed in the Report Data pane of Report Builder.
-ms.date: 03/01/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-design
-
-
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.rtp.rptdesigner.embeddedimages.f1"
-  - "10060"
-ms.assetid: aed77345-5eeb-41f0-96c9-db6b4a11ec6f
+title: "Embed an image in a paginated report"
+description: Make an image readily available to a paginated report. Use an image that's embedded in the report and listed in the Report Data pane of Report Builder.
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 03/01/2017
+ms.service: reporting-services
+ms.subservice: report-design
+ms.topic: conceptual
+ms.custom: updatefrequency5
+f1_keywords:
+  - "sql13.rtp.rptdesigner.embeddedimages.f1"
 ---
-# Embed an Image in a Report (Report Builder and SSRS)
-  A report can include an embedded image. Embedding an image ensures that the image is always available to a report, but can affect the size of the report definition, the file that defines the report. The images embedded in a report are listed in the Report Data pane.  
+# Embed an image in a paginated report (Report Builder)
+
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-ssrs-rb](../../includes/ssrs-appliesto-ssrs-rb.md)] [!INCLUDE [ssrs-appliesto-pbi-rb](../../includes/ssrs-appliesto-pbi-rb.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
+
+A paginated report can include an embedded image. Embedding an image ensures that the image is always available to a report, but can affect the size of the report definition, the file that defines the report. The images embedded in a report are listed in the Report Data pane.  
   
- You might want to embed an image in the report definition before adding the image to the design surface. For more information, see [Add a Background Image &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/add-a-background-image-report-builder-and-ssrs.md).  
+You might want to embed an image in the report definition before adding the image to the design surface. For more information, see [Add a Background Image &#40;Report Builder&#41;](../../reporting-services/report-design/add-a-background-image-report-builder-and-ssrs.md).  
+
+## To embed an image in a report  
   
-> [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
+1. In report design view, on the **Insert** tab, click **Image**.  
   
-### To embed an image in a report  
+2. On the design surface, click and then drag a box to the desired size of the image.  
   
-1.  In report design view, on the **Insert** tab, click **Image**.  
+3. In the **General** page of the **Image Properties** dialog box, type a name in the **Name** text box or accept the default.  
   
-2.  On the design surface, click and then drag a box to the desired size of the image.  
+4. (Optional) In the **ToolTip** text box, type the text that you want to appear when the user hovers over the image in the rendered report.  
   
-3.  In the **General** page of the **Image Properties** dialog box, type a name in the **Name** text box or accept the default.  
+5. In **Select the image source**, select **Embedded**.  
   
-4.  (Optional) In the **ToolTip** text box, type the text that you want to appear when the user hovers over the image in the rendered report.  
+6. Click the **Import** button next to the **Use this image** text box  
   
-5.  In **Select the image source**, select **Embedded**.  
+7. In **Files of type**, select the image file type, navigate to the file, and then click **Open**.  
   
-6.  Click the **Import** button next to the **Use this image** text box  
-  
-7.  In **Files of type**, select the image file type, navigate to the file, and then click **Open**.  
-  
-8.  In the **Image Properties** dialog box, click **OK**.  
+8. In the **Image Properties** dialog box, click **OK**.  
   
      The image is displayed in the box you drew on the design surface, and the file is displayed under the Images folder in the Report Data pane.  
   
     > [!NOTE]  
     >  The MIME type (for example, bmp) is derived automatically when the image is imported. To change the MIME type, see the next procedure.  
   
-### (optional) To change the MIME type of an imported image  
+## (optional) To change the MIME type of an imported image  
   
-1.  Open the report in Design view.  
+1. Open the report in Design view.  
   
-2.  Select the image on the design surface. The **Properties** pane displays the image properties.  
+2. Select the image on the design surface. The **Properties** pane displays the image properties.  
   
     > [!NOTE]  
     >  If the Properties pane is not visible, on the **View** tab, click **Properties**.  
   
-3.  Click in the text box next to the **MIMEType** property and select a new MIME type from the drop-down list.  
+3. Click in the text box next to the **MIMEType** property and select a new MIME type from the drop-down list.  
   
-## See Also  
- [Images &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/images-report-builder-and-ssrs.md)   
- [Add a Data-Bound Image &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/add-a-data-bound-image-report-builder-and-ssrs.md)   
- [Image Properties Dialog Box, General &#40;Report Builder and SSRS&#41;](./images-report-builder-and-ssrs.md)  
-  
+## See Also
+
+- [Images &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/images-report-builder-and-ssrs.md)
+- [Add a Data-Bound Image &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/add-a-data-bound-image-report-builder-and-ssrs.md)
+- [Image Properties Dialog Box, General &#40;Report Builder and SSRS&#41;](./images-report-builder-and-ssrs.md)

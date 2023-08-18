@@ -1,23 +1,21 @@
 ---
+title: "Logon Triggers"
 description: "Logon Triggers"
-title: "Logon Triggers | Microsoft Docs"
-ms.custom: ""
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "03/19/2018"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology:
+ms.service: sql
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "logon triggers"
   - "login triggers"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "triggers [SQL Server], logon"
-ms.assetid: 2f0ebb2f-de10-482d-9806-1a5de5b312b8
-author: "rothja"
-ms.author: "jroth"
 ---
 # Logon Triggers
-[!INCLUDE[tsql-appliesto-ss2008-appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+
+[!INCLUDE[sql-asdbmi](../../includes/applies-to-version/sql-asdbmi.md)]
+
   Logon triggers fire stored procedures in response to a LOGON event. This event is raised when a user session is established with an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Logon triggers fire after the authentication phase of logging in finishes, but before the user session is actually established. Therefore, all messages originating inside the trigger that would typically reach the user, such as error messages and messages from the PRINT statement, are diverted to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error log. Logon triggers do not fire if authentication fails.  
   
  You can use logon triggers to audit and control server sessions, such as by tracking login activity, restricting logins to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], or limiting the number of sessions for a specific login. For example, in the following code, the logon trigger denies log in attempts to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] initiated by login *login_test* if there are already three user sessions created by that login.  
@@ -25,20 +23,20 @@ ms.author: "jroth"
 ```  
 USE master;  
 GO  
-CREATE LOGIN login_test WITH PASSWORD = '3KHJ6dhx(0xVYsdf' MUST_CHANGE,  
+CREATE LOGIN login_test WITH PASSWORD = N'3KHJ6dhx(0xVYsdf' MUST_CHANGE,  
     CHECK_EXPIRATION = ON;  
 GO  
 GRANT VIEW SERVER STATE TO login_test;  
 GO  
 CREATE TRIGGER connection_limit_trigger  
-ON ALL SERVER WITH EXECUTE AS 'login_test'  
+ON ALL SERVER WITH EXECUTE AS N'login_test'  
 FOR LOGON  
 AS  
 BEGIN  
-IF ORIGINAL_LOGIN()= 'login_test' AND  
+IF ORIGINAL_LOGIN()= N'login_test' AND  
     (SELECT COUNT(*) FROM sys.dm_exec_sessions  
             WHERE is_user_process = 1 AND  
-                original_login_name = 'login_test') > 3  
+                original_login_name = N'login_test') > 3  
     ROLLBACK;  
 END;  
 ```  

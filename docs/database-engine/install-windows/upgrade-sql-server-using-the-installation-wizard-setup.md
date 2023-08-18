@@ -1,18 +1,16 @@
 ---
 title: "Upgrade: Installation Wizard (Setup)"
 description: The SQL Server Installation Wizard provides a single feature tree for an in-place upgrade of SQL Server components to the latest version of SQL Server.
-ms.custom: "seo-lt-2019"
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "12/13/2019"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: install
+ms.service: sql
+ms.subservice: install
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: intro-installation
+helpviewer_keywords:
   - "upgrading Database Engine"
   - "Database Engine [SQL Server], upgrading"
-ms.assetid: cef118a5-a7ce-4bfa-8b9d-c81996284cfc
-author: cawrites
-ms.author: chadam
 monikerRange: ">=sql-server-2016"
 ---
 # Upgrade SQL Server Using the Installation Wizard (Setup)

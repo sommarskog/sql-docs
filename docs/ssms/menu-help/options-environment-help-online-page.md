@@ -1,22 +1,18 @@
 ---
-description: "Options (Environment - Help - Online Page)"
 title: "Options (Environment - Help - Online Page)"
-ms.custom: seo-lt-2019
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: "sql-tools"
-ms.reviewer: ""
-ms.technology: ssms
-ms.topic: conceptual
-f1_keywords: 
-  - "VS.ToolsOptionsPages.Environment.Help.Online"
-ms.assetid: 24933338-3a47-44c0-87fc-c3dca8faf4de
+description: "Options (Environment - Help - Online Page)"
 author: "markingmyname"
 ms.author: "maghan"
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: ssms
+ms.topic: ui-reference
+f1_keywords:
+  - "VS.ToolsOptionsPages.Environment.Help.Online"
 ---
 # Options (Environment - Help - Online Page)
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-The **Options** dialog box lets you specify the Help sources to use for [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] searches, including F1 Help. On the **Tools** menu, click **Options**, expand the **Environment** folder, select **Help**, and then click **Online**. If the **Online** page does not appear in the list, select the **Show all settings** check box in the **Options** dialog box.  
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+The **Options** dialog box lets you specify the Help sources to use for [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] searches, including F1 Help. On the **Tools** menu, click **Options**, expand the **Environment** folder, select **Help**, and then click **Online**. If the **Online** page does not appear in the list, select the **Show all settings** check box in the **Options** dialog box.  
   
 **When loading Help content**  
 Sets the order in which Help sources are used for F1 Help, and specifies which Help sources are used.  
@@ -43,5 +39,5 @@ Lists the possible Codezone Community Web sites that can be included in Help sea
 Displays a brief description for each provider selected in the **Codezone Community** list if available.  
   
 **Read the privacy statement**  
-Displays the [!INCLUDE[msCoName](../../includes/msconame_md.md)] privacy policy for online use.  
+Displays the [!INCLUDE[msCoName](../../includes/msconame-md.md)] privacy policy for online use.  
   

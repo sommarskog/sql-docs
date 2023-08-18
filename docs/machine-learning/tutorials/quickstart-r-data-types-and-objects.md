@@ -1,15 +1,14 @@
 ---
 title: "Quickstart: R data structures, data types, and objects"
 titleSuffix: SQL machine learning
-description: In this quickstart, you'll learn how to use data structures, data types, and objects when using R with SQL machine learning. 
-ms.prod: sql
-ms.technology: machine-learning
-ms.date: 05/21/2020  
+description: In this quickstart, you'll learn how to use data structures, data types, and objects when using R with SQL machine learning.
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.date: 05/21/2020
+ms.service: sql
+ms.subservice: machine-learning
 ms.topic: quickstart
-author: garyericson
-ms.author: garye
-
-ms.custom: seo-lt-2019
+ms.custom: intro-quickstart
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current"
 ---
 

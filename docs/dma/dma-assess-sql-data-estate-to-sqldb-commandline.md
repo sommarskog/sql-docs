@@ -2,23 +2,18 @@
 title: "DMACMD: Assess SQL Server readiness to migrate to Azure SQL"
 titleSuffix: Data Migration Assistant
 description: "Learn how to use Data Migration Assistant command line tool (DMACMD) to assess a SQL Server data estate for migration to Azure SQL"
+author: ajithkr-ms
+ms.author: ajithkr
 ms.date: "10/02/2020"
-ms.prod: sql
-ms.prod_service: "dma"
-ms.reviewer: ""
-ms.technology: dma
+ms.service: sql
+ms.subservice: dma
 ms.topic: conceptual
-keywords: ""
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Data Migration Assistant, on-premises SQL Server"
-ms.assetid: ""
-author: rajeshsetlem
-ms.author: rajpo
-ms.custom: 
 ---
 # DMACMD: Assess readiness of a SQL Server data estate migrating to Azure SQL 
 
-With many organizations trying to migrate to Azure, it is critical to assess existing on-premise SQL Server instances and identify the right Azure SQL target - Azure SQL Database, Azure SQL Managed Instance, or SQL Server on Azure VMs. 
+With many organizations trying to migrate to Azure, it is critical to assess existing on-premises SQL Server instances and identify the right Azure SQL target - Azure SQL Database, Azure SQL Managed Instance, or SQL Server on Azure VMs. 
 
 [Data Migration Assistant (DMA)](dma-overview.md) helps assess a SQL Server instance for a specific Azure SQL target, and gauges the readiness of SQL Server databases migrating to Azure SQL. Upload DMA assessment results to Azure Migrate hub for a centralized readiness view of the entire data estate. 
 
@@ -57,7 +52,7 @@ The contents of sample `Assess-for-AzureSQLMI.xml` define the elements to assess
    <AssessmentTargetPlatform>ManagedSqlServer</AssessmentTargetPlatform>
    <AssessmentDatabases>
       <AssessmentDatabase>Server=ServerName\SQL2017;Integrated Security=true</AssessmentDatabase>
-      <AssessmentDatabase>Server=ServerName\SQL2016;Integrated Security=true;Initial Catalog=AdventureWorks2016</AssessmentDatabase>
+      <AssessmentDatabase>Server=ServerName\SQL2016;Integrated Security=true;Initial Catalog=AdventureWorks2022</AssessmentDatabase>
       <AssessmentDatabase>Server=ServerName\SQL2016;Integrated Security=true;Initial Catalog=TestDB</AssessmentDatabase>
    </AssessmentDatabases>
    <AssessmentResultDma>C:\Demo\ScaleAssessment\AssessmentConfiguration\Scale-Assessment-for-AzureSQLManagedInstance.dma</AssessmentResultDma>
@@ -99,7 +94,6 @@ The XML elements that are passed to DMACMD are defined in the following table:
 |`AzureAuthenticationInteractiveAuthentication`|Set to `true` to pop up the authentication window.|
 |`AzureAuthenticationTenantId`|Azure Active Directory tenant ID. </br></br>Obtain this from the **Overview** blade of Azure Active Directory in the [Azure portal](https://portal.azure.com). |
 |`EnableAssessmentUploadToAzureMigrate`| Set to `true` to upload and publish assessment results to Azure Migrate hub.|
-|   |   |
 
 
 ## Results 

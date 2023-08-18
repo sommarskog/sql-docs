@@ -1,24 +1,23 @@
 ---
-description: "ALTER DATABASE ENCRYPTION KEY (Transact-SQL)"
-title: "ALTER DATABASE ENCRYPTION KEY (Transact-SQL) | Microsoft Docs"
+title: "ALTER DATABASE ENCRYPTION KEY (Transact-SQL)"
+description: ALTER DATABASE ENCRYPTION KEY (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "04/16/2018"
-ms.prod: sql
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "ALTER_DATABASE_ENCRYPTION_KEY_TSQL"
   - "ALTER DATABASE ENCRYPTION"
   - "ALTER_DATABASE_ENCRYPTION_TSQL"
   - "ALTER DATABASE ENCRYPTION KEY"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "database encryption key, alter"
   - "ALTER DATABASE ENCRYPTION KEY"
-ms.assetid: f88dac4b-efe0-47ed-9808-972a4381377e
-author: VanMSFT
-ms.author: vanto
-monikerRange: "= azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017"
+dev_langs:
+  - "TSQL"
+monikerRange: "=azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017"
 ---
 # ALTER DATABASE ENCRYPTION KEY (Transact-SQL)
 
@@ -26,7 +25,7 @@ monikerRange: "= azuresqldb-current || = azuresqldb-mi-current || >= sql-server-
 
   Alters an encryption key and certificate that is used for transparently encrypting a database. For more information about transparent database encryption, see [Transparent Data Encryption &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md).  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

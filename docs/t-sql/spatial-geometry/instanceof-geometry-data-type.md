@@ -1,26 +1,22 @@
 ---
+title: "InstanceOf (geometry Data Type)"
 description: "InstanceOf (geometry Data Type)"
-title: "InstanceOf (geometry Data Type) | Microsoft Docs"
-ms.custom: ""
+author: MladjoA
+ms.author: mlandzic
 ms.date: "08/03/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "InstanceOf"
   - "InstanceOf_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "InstanceOf (geometry Data Type)"
-ms.assetid: fdea1248-29a4-4bab-a60d-a1b359b5e109
-author: MladjoA
-ms.author: mlandzic 
+dev_langs:
+  - "TSQL"
 ---
 # InstanceOf (geometry Data Type)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 A method that tests if the **geometry** instance is the same as the specified type. Returns 1 if the type of a **geometry** instance is the same as the specified type. This method also returns 1 if the specified type is an ancestor of the instance type. Otherwise, this method returns 0.
   
@@ -48,7 +44,7 @@ A method that tests if the **geometry** instance is the same as the specified ty
 ## Examples  
  The following example creates a `MultiPoint` instance and uses `InstanceOf()` to see if the instance is a `GeometryCollection`.  
   
-```  
+```sql
 DECLARE @g geometry;  
 SET @g = geometry::STGeomFromText('MULTIPOINT(0 0, 13.5 2, 7 19)', 0);  
 SELECT @g.InstanceOf('GEOMETRYCOLLECTION');  

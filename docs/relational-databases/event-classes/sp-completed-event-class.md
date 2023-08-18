@@ -1,21 +1,18 @@
 ---
+title: "SP:Completed Event Class"
 description: "SP:Completed Event Class"
-title: "SP:Completed Event Class | Microsoft Docs"
-ms.custom: ""
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: supportability
+ms.service: sql
+ms.subservice: supportability
 ms.topic: reference
-helpviewer_keywords: 
+helpviewer_keywords:
   - "SP:Completed event class"
-ms.assetid: 7636a433-5d32-4562-8f5a-694f8e2beeca
-author: "stevestein"
-ms.author: "sstein"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SP:Completed Event Class
-[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
   The SP:Completed event class indicates that the stored procedure has completed executing.  
   
 ## SP:Completed Event Class Data Columns  

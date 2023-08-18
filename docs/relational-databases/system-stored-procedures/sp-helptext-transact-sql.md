@@ -1,36 +1,31 @@
 ---
+title: "sp_helptext (Transact-SQL)"
 description: "sp_helptext (Transact-SQL)"
-title: "sp_helptext (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_helptext"
-  - "sp_helptext_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_helptext"
-ms.assetid: 24135456-05f0-427c-884b-93cf38dd47a8
 author: markingmyname
 ms.author: maghan
+ms.date: "08/19/2021"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_helptext"
+  - "sp_helptext_TSQL"
+helpviewer_keywords:
+  - "sp_helptext"
+dev_langs:
+  - "TSQL"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_helptext (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Displays the definition of a user-defined rule, default, unencrypted [!INCLUDE[tsql](../../includes/tsql-md.md)] stored procedure, user-defined [!INCLUDE[tsql](../../includes/tsql-md.md)] function, trigger, computed column, CHECK constraint, view, or system object such as a system stored procedure.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
-```  
-  
+```syntaxsql  
 sp_helptext [ @objname = ] 'name' [ , [ @columnname = ] computed_column_name ]  
 ```  
   
@@ -51,18 +46,21 @@ sp_helptext [ @objname = ] 'name' [ , [ @columnname = ] computed_column_name ]
 |**Text**|**nvarchar(255)**|Object definition|  
   
 ## Remarks  
- sp_helptext displays the definition that is used to create an object in multiple rows. Each row contains 255 characters of the [!INCLUDE[tsql](../../includes/tsql-md.md)] definition. The definition resides in the **definition** column in the [sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) catalog view.  
+ sp_helptext displays the definition that is used to create an object in multiple rows. Each row contains 255 characters of the [!INCLUDE[tsql](../../includes/tsql-md.md)] definition. The definition resides in the `definition` column in the [sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) catalog view.  
+
+> [!NOTE]
+> The system stored procedure `sp_helptext` is not supported in Azure Synapse Analytics. Instead, use `OBJECT_DEFINITION` system function or `sys.sql_modules` object catalog view for equivalent results.
   
 ## Permissions  
- Requires membership in the **public** role. System object definitions are publicly visible. The definition of user objects is visible to the object owner or grantees that have any one of the following permissions: ALTER, CONTROL, TAKE OWNERSHIP, or VIEW DEFINITION.  
+ Requires membership in the **public** role. System object definitions are publicly visible. The definition of user objects is visible to the object owner or grantees that have any one of the following permissions: **ALTER**, **CONTROL**, **TAKE OWNERSHIP**, or **VIEW DEFINITION**.  
   
 ## Examples  
   
 ### A. Displaying the definition of a trigger  
  The following example displays the definition of the trigger `dEmployee` in the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]database.  
   
-```  
-USE AdventureWorks2012;  
+```sql  
+USE AdventureWorks2022;  
 GO  
 EXEC sp_helptext 'HumanResources.dEmployee';  
 GO  
@@ -71,10 +69,10 @@ GO
 ### B. Displaying the definition of a computed column  
  The following example displays the definition of the computed column `TotalDue` on the `SalesOrderHeader` table in the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database.  
   
-```  
-USE AdventureWorks2012;  
+```sql  
+USE AdventureWorks2022;  
 GO  
-sp_helptext @objname = N'AdventureWorks2012.Sales.SalesOrderHeader', @columnname = TotalDue ;  
+sp_helptext @objname = N'AdventureWorks2022.Sales.SalesOrderHeader', @columnname = TotalDue ;  
 GO  
 ```  
   

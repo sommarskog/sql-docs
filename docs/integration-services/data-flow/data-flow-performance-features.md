@@ -1,14 +1,13 @@
 ---
+title: "Data Flow Performance Features"
 description: "Data Flow Performance Features"
-title: "Data Flow Performance Features | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "integration-services"
-ms.reviewer: ""
-ms.technology: integration-services
+ms.service: sql
+ms.subservice: integration-services
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Aggregate transformation [Integration Services]"
   - "Integration Services packages, performance"
   - "performance [Integration Services]"
@@ -21,9 +20,6 @@ helpviewer_keywords:
   - "queries [Integration Services], troubleshooting"
   - "sorting data [Integration Services]"
   - "aggregations [Integration Services]"
-ms.assetid: c4bbefa6-172b-4547-99a1-a0b38e3e2b05
-author: chugugrace
-ms.author: chugu
 ---
 # Data Flow Performance Features
 
@@ -192,8 +188,6 @@ ms.author: chugu
 -   Video, [Tuning Your SSIS Package Data Flow in the Enterprise (SQL Server Video)](/previous-versions/ff686901(v=msdn.10)), on technet.microsoft.com  
   
 -   Video, [Understanding SSIS Data Flow Buffers (SQL Server Video)](/previous-versions/ff686905(v=msdn.10)), on technet.microsoft.com  
-  
--   Video, [Microsoft SQL Server Integration Services Performance Design Patterns](https://go.microsoft.com/fwlink/?LinkID=233698&clcid=0x409), on channel9.msdn.com.  
   
 -   Presentation, [How Microsoft IT Leverages SQL Server 2008 SSIS Dataflow Engine Enhancements](https://channel9.msdn.com/Shows/TechNet+Radio/TechNet-Radio-How-Microsoft-IT-Leverages-SQL-Server-2008-SSIS-Dataflow-Engine-Enhancements), on sqlcat.com.  
   

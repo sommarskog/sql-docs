@@ -1,31 +1,27 @@
 ---
+title: "sp_updateextendedproperty (Transact-SQL)"
 description: "sp_updateextendedproperty (Transact-SQL)"
-title: "sp_updateextendedproperty (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/12/2016"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_updateextendedproperty_TSQL"
-  - "sp_updateextendedproperty"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_updateextendedproperty"
-ms.assetid: 7f02360f-cb9e-48b4-b75f-29b4bc9ea304
 author: markingmyname
 ms.author: maghan
+ms.date: "04/12/2016"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_updateextendedproperty_TSQL"
+  - "sp_updateextendedproperty"
+helpviewer_keywords:
+  - "sp_updateextendedproperty"
+dev_langs:
+  - "TSQL"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_updateextendedproperty (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Updates the value of an existing extended property.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -93,7 +89,7 @@ sp_updateextendedproperty
  The following example updates the value of property `Caption` on column `ID` in table `T1`.  
   
 ```  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 CREATE TABLE T1 (id int , name char (20));  
 GO  
@@ -118,15 +114,15 @@ GO
  The following example first creates an extended property on the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] sample database and then updates the value of that property.  
   
 ```  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 EXEC sp_addextendedproperty   
-@name = N'NewCaption', @value = 'AdventureWorks2012 Sample OLTP Database';  
+@name = N'NewCaption', @value = 'AdventureWorks Sample OLTP Database';  
 GO  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 EXEC sp_updateextendedproperty   
-@name = N'NewCaption', @value = 'AdventureWorks2012 Sample Database';  
+@name = N'NewCaption', @value = 'AdventureWorks Sample Database';  
 GO  
 ```  
   

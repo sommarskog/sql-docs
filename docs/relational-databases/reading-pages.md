@@ -1,18 +1,13 @@
 ---
+title: "Reading Pages"
 description: "Reading Pages"
-title: "Reading Pages | Microsoft Docs"
-ms.custom: ""
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/01/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
-ms.technology: 
+ms.service: sql
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "pages"
-ms.assetid: f8da760e-aacb-4661-9f3a-2578d8c11e4e
-author: "pmasl"
-ms.author: "pelopes"
 ---
 # Reading Pages
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]

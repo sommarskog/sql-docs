@@ -1,20 +1,16 @@
 ---
-title: "Configure the default language Server Configuration Option | Microsoft Docs"
+title: "Configure the default language (server configuration option)"
 description: Find out about the default language option. See how to configure it to specify the default language that SQL Server uses for all newly created logins.
-ms.custom: ""
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/02/2017"
-ms.prod: sql
-ms.prod_service: high-availability
-ms.reviewer: ""
-ms.technology: configuration
+ms.service: sql
+ms.subservice: configuration
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "default language option"
-ms.assetid: c08c26d8-5a62-487e-a4ee-4c529e4f9287
-author: markingmyname
-ms.author: maghan
 ---
-# Configure the default language Server Configuration Option
+# Configure the default language (server configuration option)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   This topic describes how to configure the **default language** server configuration option in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. The **default language** option specifies the default language for all newly created logins. To set default language, specify the **langid** value of the language you want. The **langid** value can be obtained by querying the **sys.syslanguages** compatibility view.  
@@ -69,7 +65,7 @@ ms.author: maghan
 3.  Copy and paste the following example into the query window and click **Execute**. This example shows how to use [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) to configure the `default language` option to French (`2`).  
   
 ```sql  
-USE AdventureWorks2012 ;  
+USE AdventureWorks2022;  
 GO  
 EXEC sp_configure 'default language', 2 ;  
 GO  

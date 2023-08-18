@@ -1,34 +1,30 @@
 ---
 title: "KILL QUERY NOTIFICATION SUBSCRIPTION"
-description: Remove query notification subscriptions from an instance. This statement can remove a specific subscription or all subscriptions.
 titleSuffix: SQL Server (Transact-SQL)
-ms.custom: "seo-lt-2019"
+description: Remove query notification subscriptions from an instance. This statement can remove a specific subscription or all subscriptions.
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "07/27/2017"
-ms.prod: sql
-ms.prod_service: "sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "KILL QUERY NOTIFICATION SUBSCRIPTION"
   - "KILL_QUERY_NOTIFICATION_SUBSCRIPTION_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "KILL QUERY NOTIFICATION SUBSCRIPTION statement"
   - "removing subscriptions"
   - "subscriptions [SQL Server query notifications], stopping"
   - "query notifications [SQL Server], subscriptions"
-ms.assetid: 8aeadf51-286c-4748-bef2-d25858b250bf
-author: cawrites
-ms.author: chadam
+dev_langs:
+  - "TSQL"
 ---
 # KILL QUERY NOTIFICATION SUBSCRIPTION (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Removes query notification subscriptions from the instance. This statement can remove a specific subscription or all subscriptions.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

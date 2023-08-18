@@ -1,15 +1,14 @@
 ---
 title: Virtualize external data
 description: This page details the steps for using the Create External Table wizard for ODBC Data sources
-author: MikeRayMSFT
-ms.author: mikeray
-ms.reviewer: mikeray
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.reviewer: hudequei
 ms.date: 12/13/2019
+ms.service: sql
+ms.subservice: polybase
 ms.topic: conceptual
-ms.prod: sql
-ms.technology: polybase
 monikerRange: ">= sql-server-ver15"
-ms.metadata: seo-lt-2019
 ---
 
 # Use the External Table Wizard with ODBC data sources
@@ -86,4 +85,4 @@ If you select **Generate script**, you see the T-SQL query that's generated to c
 
 ## Next steps
 
-For more information on SQL Server big data clusters and related scenarios, see [What are SQL Server big data clusters?](../../big-data-cluster/big-data-cluster-overview.md).
+For more information on SQL Server Big Data Clusters and related scenarios, see [Introducing [!INCLUDE[big-data-clusters-2019](../../includes/ssbigdataclusters-ss-nover.md)]](../../big-data-cluster/big-data-cluster-overview.md).

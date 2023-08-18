@@ -1,12 +1,14 @@
 ---
+title: "Limit Search Results with RANK"
 description: "Limit Search Results with RANK"
-title: "Limit Search Results with RANK | Microsoft Docs"
+author: rwestMSFT
+ms.author: randolphwest
+ms.reviewer: mikeray
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "search, sql-database"
-ms.technology: search
+ms.service: sql
+ms.subservice: search
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "row ranking [full-text search]"
   - "relevance ranking values [full-text search]"
   - "full-text search [SQL Server], rankings"
@@ -14,14 +16,10 @@ helpviewer_keywords:
   - "ranked results [full-text search]"
   - "rankings [full-text search]"
   - "per-row rank values [full-text search]"
-ms.assetid: 06a776e6-296c-4ec7-9fa5-0794709ccb17
-author: pmasl
-ms.author: pelopes
-ms.reviewer: mikeray
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Limit Search Results with RANK
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
   The [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) and [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) functions return a column named RANK that contains ordinal values from 0 through 1000 (rank values). These values are used to rank the rows returned according to how well they match the selection criteria. The rank values indicate only a relative order of relevance of the rows in the result set, with a lower value indicating lower relevance. The actual values are unimportant and typically differ each time the query is run.  
   
 > [!NOTE]  
@@ -37,7 +35,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
  The following example uses CONTAINSTABLE to return only the top three matches.  
   
 ```  
-USE AdventureWorks2012  
+USE AdventureWorks2022  
 GO  
   
 SELECT K.RANK, AddressLine1, City  
@@ -68,7 +66,7 @@ RANK        Address                          City
  The following example uses CONTAINSTABLE to return the description of the top 5 products where the `Description` column contains the word "aluminum" near either the word "light" or the word "lightweight".  
   
 ```  
-USE AdventureWorks2012  
+USE AdventureWorks2022  
 GO  
   
 SELECT FT_TBL.ProductDescriptionID,  

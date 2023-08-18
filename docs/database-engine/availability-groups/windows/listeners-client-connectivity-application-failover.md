@@ -1,22 +1,20 @@
 ---
 title: "Connect to an availability group listener"
-description: "Contains information about connecting to an Always On availability group listener, such as how to connect to the primary replica, a read-only secondary replica, use TLS/SSL, and Kerberos." 
-ms.custom: contperf-fy21q1
+description: "Contains information about connecting to an Always On availability group listener, such as how to connect to the primary replica, a read-only secondary replica, use TLS/SSL, and Kerberos."
+author: MashaMSFT
+ms.author: mathoma
 ms.date: "02/27/2020"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: availability-groups
+ms.service: sql
+ms.subservice: availability-groups
 ms.topic: how-to
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Availability Groups [SQL Server], listeners"
   - "read-only routing"
   - "read-intent connections [AlwaysOn Availability Groups]"
+  - "read-intent connections [Always On Availability Groups]"
   - "Availability Groups [SQL Server], configuring"
   - "Availability Groups [SQL Server], read-only routing"
   - "Availability Groups [SQL Server], client connectivity"
-ms.assetid: 76fb3eca-6b08-4610-8d79-64019dd56c44
-author: cawrites
-ms.author: chadam
 ---
 # Connect to an Always On availability group listener 
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -127,7 +125,7 @@ Server=tcp:AGListener,1433;Database=AdventureWorks;Integrated Security=SSPI; Mul
   
 ##  <a name="SSLcertificates"></a> Listeners & TLS/SSL certificates  
 
-When connecting to an availability group listener, if the participating instances of SQL Server use TLS/SSL certificates in conjunction with session encryption, the connecting client driver will need to support the Subject Alternate Name in the TLS/SSL certificate in order to force encryption.  SQL Server driver support for certificate Subject Alternative Name is planned for ADO.NET (SqlClient), Microsoft JDBC, and SQL Native Client (SNAC).  
+When connecting to an availability group listener, if the participating instances of SQL Server use TLS/SSL certificates in conjunction with session encryption, the connecting client driver will need to support the Subject Alternate Name in the TLS/SSL certificate in order to force encryption. 
   
 An X.509 certificate must be configured for each participating server node in the failover cluster with a list of all availability group listeners set in the Subject Alternate Name of the certificate. 
 
@@ -178,7 +176,7 @@ SAN: Win2019.contoso.com,Listener1.contoso.com,Listener2.contoso.com,Listener3.c
 
 A domain administrator must configure a Service Principal Name (SPN) in Active Directory for each availability group listener to enable Kerberos for client connections to the listener. When registering the SPN, you must use the service account of the server instance that hosts the availability replica. For the SPN to work across all replicas, the same service account must be used for all instances in the WSFC cluster that hosts the availability group.  
   
- Use the **setspn** Windows command line tool to configure the SPN.  For example to configure an SPN for an availability group named `AG1listener.Adventure-Works.com` hosted on a set of instances of SQL Server all configured to run under the domain account `corp\svclogin2`:  
+ Use the **setspn** Windows command line tool to configure the SPN.  For example to configure an SPN for an availability group listener named `AG1listener.Adventure-Works.com` hosted on a set of instances of SQL Server all configured to run under the domain account `corp\svclogin2`:  
   
 ```  
 setspn -A MSSQLSvc/AG1listener.Adventure-Works.com:1433 corp\svclogin2  

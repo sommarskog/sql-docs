@@ -1,23 +1,18 @@
 ---
-description: "Reorder Output Columns (Visual Database Tools)"
 title: Reorder Output Columns
-ms.custom: seo-lt-2019
-ms.date: 01/19/2017
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "reordering output columns [SQL Server]"
-  - "output columns [SQL Server]"
-ms.assetid: 76462885-de4a-4290-a26b-90696d3671f4
+description: "Reorder Output Columns (Visual Database Tools)"
 author: markingmyname
 ms.author: maghan
-ms.reviewer: 
-
+ms.date: 01/19/2017
+ms.service: sql
+ms.subservice: ssms
+ms.topic: conceptual
+helpviewer_keywords:
+  - "reordering output columns [SQL Server]"
+  - "output columns [SQL Server]"
 ---
 # Reorder Output Columns (Visual Database Tools)
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server](../../includes/applies-to-version/sqlserver.md)]
 The order in which you add data columns to a Select query determines the order in which they appear in the results. The first column you add to the query appears leftmost in the results, the second column next, and so on.  
   
 If you are creating Update or Insert queries, the order in which you add columns affects the order in which data is processed.  

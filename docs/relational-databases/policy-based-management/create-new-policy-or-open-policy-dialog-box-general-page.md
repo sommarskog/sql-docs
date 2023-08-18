@@ -1,25 +1,20 @@
 ---
-description: "Create New Policy or Open Policy Dialog Box, General Page"
 title: "'Create New Policy' or 'Open Policy' dialog box, General Page"
-descripton: Describes the 'General Page' of the 'Create New Policy' and 'Open Policy' dialog boxes for Policy-Based Management in SQL Server Management Studio (SSMS).
-ms.custom: seo-lt-2019
+description: "Create New Policy or Open Policy Dialog Box, General Page"
+author: VanMSFT
+ms.author: vanto
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: security
+ms.service: sql
+ms.subservice: security
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.swb.dmf.policy.f1"
   - "sql13.swb.dmf.policy.filter.f1"
   - "sql13.swb.dmf.newgroup.f1"
-ms.assetid: c00bebd0-d04b-4c64-840e-8b7a2c603436
-author: VanMSFT
-ms.author: vanto
 ---
 # Create New Policy or Open Policy Dialog Box, General Page
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  Use this dialog box to create a new Policy-Based Management policy or modify an existing policy. Use the **Against targets** and **Server restriction** areas as a filter to limit policies to a subset of all possible targets. For conditions to be used as target filters, they must be defined on a physical facet, must not contain functions, and must not contain the LIKE operator. When the system computes the object set for a policy, by default the system objects are excluded.  For example, if the object set of the policy refers to all tables, the policy will not apply to system tables. If users want to evaluate a policy against system objects, they can explicitly add system objects to the object set. However, though all policies are supported for **check on schedule** evaluation mode, for performance reason, not all policies with arbitrary object sets are supported for **check on change** evaluation mode. For more information, see [https://docs.microsoft.com/archive/blogs/sqlpbm/policy-evaluation-modes](/archive/blogs/sqlpbm/policy-evaluation-modes)  
+  Use this dialog box to create a new Policy-Based Management policy or modify an existing policy. Use the **Against targets** and **Server restriction** areas as a filter to limit policies to a subset of all possible targets. For conditions to be used as target filters, they must be defined on a physical facet, must not contain functions, and must not contain the LIKE operator. When the system computes the object set for a policy, by default the system objects are excluded.  For example, if the object set of the policy refers to all tables, the policy will not apply to system tables. If users want to evaluate a policy against system objects, they can explicitly add system objects to the object set. However, though all policies are supported for **check on schedule** evaluation mode, for performance reason, not all policies with arbitrary object sets are supported for **check on change** evaluation mode. For more information, see [Policy Evaluation Modes](/archive/blogs/sqlpbm/policy-evaluation-modes)  
   
 ## Options  
  **Name**  

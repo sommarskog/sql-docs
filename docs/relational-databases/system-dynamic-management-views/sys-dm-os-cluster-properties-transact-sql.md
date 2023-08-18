@@ -1,25 +1,22 @@
 ---
-description: "sys.dm_os_cluster_properties (Transact-SQL)"
-title: "sys.dm_os_cluster_properties (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/09/2016"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: system-objects
+title: "sys.dm_os_cluster_properties (Transact-SQL)"
+description: sys.dm_os_cluster_properties (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
+ms.date: "02/27/2023"
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.dm_os_cluster_properties_TSQL"
   - "sys.dm_os_cluster_properties"
   - "dm_os_cluster_properties_TSQL"
   - "dm_os_cluster_properties"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "dm_os_cluster_properties"
   - "sys.dm_os_cluster_properties"
-ms.assetid: 6d82e770-fba7-49e0-9a0c-3b34b393e4a7
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+dev_langs:
+  - "TSQL"
 ---
 # sys.dm_os_cluster_properties (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,6 +38,10 @@ ms.author: wiassaf
 ## Permissions  
  Requires VIEW SERVER STATE permissions on the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] failover cluster instance.  
   
+### Permissions for SQL Server 2022 and later
+
+Requires VIEW SERVER PERFORMANCE STATE permission on the server.
+
 ## Examples  
  The following example uses sys.dm_os_cluster_properties to return the property settings for the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] failover cluster resource.  
   

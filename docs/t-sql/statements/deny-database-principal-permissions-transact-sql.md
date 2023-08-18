@@ -1,17 +1,14 @@
 ---
 title: "DENY Database Principal Permissions"
-description: Deny permissions on a database user, database role, or application role.
 titleSuffix: SQL Server (Transact-SQL)
-ms.custom: "seo-lt-2019"
+description: Deny permissions on a database user, database role, or application role.
+author: VanMSFT
+ms.author: vanto
 ms.date: "05/15/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "database roles [SQL Server], permissions"
   - "denying permissions [SQL Server], database roles"
   - "denying permissions [SQL Server], database users"
@@ -25,17 +22,16 @@ helpviewer_keywords:
   - "DENY statement, database users"
   - "denying permissions [SQL Server], application roles"
   - "application roles [SQL Server], permissions"
-ms.assetid: e2429a5d-e9be-4c05-be20-414d1038a63a
-author: VanMSFT
-ms.author: vanto
+dev_langs:
+  - "TSQL"
 ---
 # DENY Database Principal Permissions (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Denies permissions granted on a database user, database role, or application role in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
 
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -74,7 +70,7 @@ DENY permission [ ,...n ]
  Specifies the class and name of the role on which the permission is being denied. The scope qualifier (**::**) is required.  
   
  APPLICATION ROLE ::*application_role*  
- **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+ **Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
  Specifies the class and name of the application role on which the permission is being denied. The scope qualifier (**::**) is required.  
   
@@ -91,7 +87,7 @@ DENY permission [ ,...n ]
  Specifies a database role.  
   
  *Application_role*  
- **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+ **Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
  Specifies an application role.  
   
@@ -152,7 +148,7 @@ DENY permission [ ,...n ]
  The following example denies `CONTROL` permission on the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] user `Wanida` to user `RolandX`.  
   
 ```sql 
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 DENY CONTROL ON USER::Wanida TO RolandX;  
 GO  
 ```  
@@ -161,7 +157,7 @@ GO
  The following example denies `VIEW DEFINITION` permission on the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] role `SammamishParking` to database user `JinghaoLiu`. The `CASCADE` option is specified because user `JinghaoLiu` was granted VIEW DEFINITION permission WITH GRANT OPTION.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 DENY VIEW DEFINITION ON ROLE::SammamishParking   
     TO JinghaoLiu CASCADE;  
 GO  
@@ -170,10 +166,10 @@ GO
 ### C. Denying IMPERSONATE permission on a user to an application role  
  The following example denies `IMPERSONATE` permission on user `HamithaL` to the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] application role `AccountsPayable17`.  
   
-**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+**Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 DENY IMPERSONATE ON USER::HamithaL TO AccountsPayable17;  
 GO    
 ```  

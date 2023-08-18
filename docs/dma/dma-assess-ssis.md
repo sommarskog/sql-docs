@@ -1,19 +1,14 @@
 ---
 title: "Create an SSIS migration assessment with the Data Migration Assistant"
 description: Learn how to use Data Migration Assistant to assess an on-premises SQL Server Integration Service (SSIS) before migrating to Azure SQL Database or Azure SQL Managed Instance
-ms.date: "08/23/2019"
-ms.prod: sql
-ms.prod_service: "dma"
-ms.reviewer: ""
-ms.technology: dma
-ms.topic: conceptual
-keywords: ""
-helpviewer_keywords: 
-  - "Data Migration Assistant, Assess"
-ms.assetid: ""
 author: chugugrace
 ms.author: chugu
-ms.custom: "seo-lt-2019"
+ms.date: "09/16/2022"
+ms.service: sql
+ms.subservice: dma
+ms.topic: conceptual
+helpviewer_keywords:
+  - "Data Migration Assistant, Assess"
 ---
 
 # Perform a SQL Server Integration Service migration assessment with Data Migration Assistant
@@ -26,6 +21,9 @@ To assess SQL Server Integration Service(SSIS) packages, below components need t
 - Azure Feature Pack or other third party components if SSIS packages to assess have these components.  
 
 DMA needs to run with **administrator** access to assess SSIS packages in Package Store.
+
+> [!NOTE]
+> Source to SQL Server version 2019 and above are not supported.
 
 ## Performance assessments
 
@@ -48,10 +46,10 @@ The following step-by-step instructions help you perform your first assessment f
 ## Connect to a server
 
 1. Follow the default option, and click **Next** towards **Select sources**.
-1. Enter the SQL server instance name, choose the Authentication type, set the correct connection properties.
+1. Enter the SQL Server instance name, choose the Authentication type, set the correct connection properties.
 1. (Optional) Enter a folder path that contains SSIS packages.
 1. (Optional) Enter package encryption password if applicable.
-1. Click **Connect** to the source SQL server.
+1. Click **Connect** to the source SQL Server.
   ![Screenshot showing the Connect to a server pane with the Enter a folder path that contains SSIS packages option and Enter package encryption password if applicable option called out.](media/dma-assess-ssis/dma-assess-ssis-addsource.png)
 
 ## Add sources to assess

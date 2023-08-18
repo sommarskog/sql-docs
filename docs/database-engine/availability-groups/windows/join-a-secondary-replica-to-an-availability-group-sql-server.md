@@ -1,21 +1,18 @@
 ---
 title: "Join a secondary replica to an availability group"
 description: "Steps to join a secondary replica to an Always On availability group using either Transact-SQL (T-SQL), PowerShell, or SQL Server Management Studio."
-ms.custom: "seodec18"
+author: MashaMSFT
+ms.author: mathoma
 ms.date: "05/17/2016"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: availability-groups
+ms.service: sql
+ms.subservice: availability-groups
 ms.topic: how-to
-f1_keywords: 
+f1_keywords:
   - "sql13.swb.availabilitygroup.joinreplica.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Availability Groups [SQL Server], availability replicas"
   - "Availability Groups [SQL Server], joining"
   - "Availability Groups [SQL Server], configuring"
-ms.assetid: e5bd2489-097a-490e-8ea1-34fe48378ad1
-author: cawrites
-ms.author: chadam
 ---
 # Join a secondary replica to an Always On availability group
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

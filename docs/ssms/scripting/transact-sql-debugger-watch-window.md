@@ -1,18 +1,15 @@
 ---
 title: Watch Window
-description: Learn about Watch windows (as many as four at once), which display information about expressions you select. The information displays only in debug mode.
 titleSuffix: T-SQL Debugger
-ms.prod: sql
-ms.technology: ssms
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "Watch Window [Transact-SQL]"
-ms.assetid: 23f3baa4-14c2-4262-92f7-3f43fcfa0436
+description: Learn about Watch windows (as many as four at once), which display information about expressions you select. The information displays only in debug mode.
 author: markingmyname
 ms.author: maghan
-ms.custom: seo-lt-2019
-ms.reviewer: ""
 ms.date: 12/04/2019
+ms.service: sql
+ms.subservice: ssms
+ms.topic: conceptual
+helpviewer_keywords:
+  - "Watch Window [Transact-SQL]"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 
@@ -63,5 +60,5 @@ The **Watch** window displays information about the expressions that you have se
  [Transact-SQL Debugger Information](./transact-sql-debugger-information.md)   
  [Locals Window](./transact-sql-debugger-locals-window.md)   
  [Call Stack Window](./transact-sql-debugger-call-stack-window.md)   
- [QuickWatch Dialog Box](./transact-sql-debugger-quickwatch-dialog-box.md)   
+ [QuickWatch Dialog Box](./transact-sql-debugger-information.md)   
  [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)

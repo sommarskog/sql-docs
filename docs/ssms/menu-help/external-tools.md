@@ -1,21 +1,20 @@
 ---
-description: "External Tools"
 title: "External Tools"
-ms.custom: seo-lt-2019
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: "sql-tools"
-ms.reviewer: ""
-ms.technology: ssms
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "External Tools dialog box"
-ms.assetid: d7dae88f-0781-4162-96cd-d3a3a4d82035
+description: "External Tools"
 author: "markingmyname"
 ms.author: "maghan"
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: ssms
+ms.topic: ui-reference
+helpviewer_keywords:
+  - "External Tools dialog box"
 ---
+
 # External Tools
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+
 Use this dialog box to add external tools, such as SQL Server Configuration Manager or Notepad, to the **Tools** menu. Adding external tools allows you to easily launch other applications while working in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. You can specify arguments and a working directory when launching the tool. In addition, the outputs from some tools can be displayed in the Output window. The **External Tools** dialog box is available on the **Tools** menu.  
   
 ## Options  
@@ -66,9 +65,9 @@ Close the window opened by the tool when the tool is closed.
   
 2.  In the **Title** box, type **SQL Server Configuration Manager**.  
   
-3.  In the **Command** box, type the path to the [!INCLUDE[msCoName](../../includes/msconame_md.md)] Management Console executable, such as **C:\WINNT\system32\mmc.exe**  
+3.  In the **Command** box, type the path to the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console executable, such as **C:\WINNT\system32\mmc.exe**  
   
 4.  In the **Arguments** box, type the path to the .msc file, such as **"C:\WINNT\system32\SQLServerManager.msc"**  
   
 > [!NOTE]  
-> View the properties of the [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] shortcut on the **Start** menu to confirm the location of the files on your computer.  
+> View the properties of the SQL Server Management Studio shortcut on the **Start** menu to confirm the location of the files on your computer.  

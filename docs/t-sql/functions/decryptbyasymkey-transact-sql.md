@@ -1,32 +1,28 @@
 ---
+title: "DECRYPTBYASYMKEY (Transact-SQL)"
 description: "DECRYPTBYASYMKEY (Transact-SQL)"
-title: "DECRYPTBYASYMKEY (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: VanMSFT
+ms.author: vanto
 ms.date: "03/06/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "DECRYPTBYASYMKEY"
   - "DECRYPTBYASYMKEY_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "asymmetric keys [SQL Server], DECRYPTBYASYMKEY function"
   - "DECRYPTBYASYMKEY function"
   - "decryption [SQL Server], asymmetric keys"
-ms.assetid: d9ebcd30-f01c-4cfe-b95e-ffe6ea13788b
-author: VanMSFT
-ms.author: vanto
+dev_langs:
+  - "TSQL"
 ---
 # DECRYPTBYASYMKEY (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 This function uses an asymmetric key to decrypt encrypted data.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -60,14 +56,14 @@ Compared to symmetric encryption / decryption, asymmetric key encryption / decry
 `DECRYPTBYASYMKEY` requires CONTROL permission on the asymmetric key.  
   
 ## Examples  
-This example decrypts ciphertext originally encrypted with asymmetric key `JanainaAsymKey02`. `AdventureWorks2012.ProtectedData04` stored this asymmetric key. The example decrypted the returned data with asymmetric key `JanainaAsymKey02`. The example used password `pGFD4bb925DGvbd2439587y` to decrypt this asymmetric key. The example converted the returned plaintext to type **nvarchar**.  
+This example decrypts ciphertext originally encrypted with asymmetric key `JanainaAsymKey02`. `AdventureWorks2022.ProtectedData04` stored this asymmetric key. The example decrypted the returned data with asymmetric key `JanainaAsymKey02`. The example used password `pGFD4bb925DGvbd2439587y` to decrypt this asymmetric key. The example converted the returned plaintext to type **nvarchar**.  
   
 ```sql
 SELECT CONVERT(NVARCHAR(max),  
     DecryptByAsymKey( AsymKey_Id('JanainaAsymKey02'),   
     ProtectedData, N'pGFD4bb925DGvbd2439587y' ))   
 AS DecryptedData   
-FROM [AdventureWorks2012].[Sales].[ProtectedData04]   
+FROM [AdventureWorks2022].[Sales].[ProtectedData04]   
 WHERE Description = N'encrypted by asym key''JanainaAsymKey02''';  
 GO  
 ```  

@@ -1,17 +1,14 @@
 ---
-title: "Enable and configure FILESTREAM | Microsoft Docs"
+title: "Enable and configure FILESTREAM"
 description: To use FILESTREAM, first enable it on the SQL Server Database Engine instance. Learn how to enable FILESTREAM by using SQL Server Configuration Manager.
-ms.custom: ""
-ms.date: "08/23/2017"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: filestream
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "FILESTREAM [SQL Server], enabling"
-ms.assetid: 78737e19-c65b-48d9-8fa9-aa6f1e1bce73
 author: MikeRayMSFT
 ms.author: mikeray
+ms.date: "08/23/2017"
+ms.service: sql
+ms.subservice: filestream
+ms.topic: conceptual
+helpviewer_keywords:
+  - "FILESTREAM [SQL Server], enabling"
 ---
 # Enable and configure FILESTREAM
 
@@ -75,7 +72,6 @@ ms.author: mikeray
 |RAID 5|Normal|Normal|Excellent|Performance is better than one disk or JBOD; and less than RAID 0 or RAID 5 with striping.|  
 |RAID 0|Excellent|Excellent|None||  
 |RAID 5 + striping|Excellent|Excellent|Excellent|Most expensive option.|  
-| &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
   
   
 ###  <a name="database"></a> Physical database design  

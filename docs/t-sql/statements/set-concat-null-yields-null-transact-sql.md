@@ -1,50 +1,46 @@
 ---
-description: "SET CONCAT_NULL_YIELDS_NULL (Transact-SQL)"
-title: "SET CONCAT_NULL_YIELDS_NULL (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "SET CONCAT_NULL_YIELDS_NULL (Transact-SQL)"
+description: SET CONCAT_NULL_YIELDS_NULL (Transact-SQL)
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "synapse-analytics, pdw, sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "CONCAT_NULL_YIELDS_NULL_TSQL"
   - "SET CONCAT_NULL_YIELDS_NULL"
   - "CONCAT_NULL_YIELDS_NULL"
   - "SET_CONCAT_NULL_YIELDS_NULL_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "CONCAT_NULL_YIELDS_NULL option"
   - "null values [SQL Server], concatenation results"
   - "concatenation [SQL Server]"
   - "SET CONCAT_NULL_YIELDS_NULL statement"
-ms.assetid: 3091b71c-6518-4eb4-88ab-acae49102bc5
-author: WilliamDAssafMSFT
-ms.author: wiassaf
-monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+dev_langs:
+  - "TSQL"
+monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=fabric"
 ---
 # SET CONCAT_NULL_YIELDS_NULL (Transact-SQL)
-[!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
+[!INCLUDE [sql-asdbmi-asa-pdw-fabricse-fabricdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw-fabricse-fabricdw.md)]
 
   Controls whether concatenation results are treated as null or empty string values.  
   
 > [!IMPORTANT]  
 >  In a future version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CONCAT_NULL_YIELDS_NULL will always be ON and any applications that explicitly set the option to OFF will generate an error. Avoid using this feature in new development work, and plan to modify applications that currently use this feature.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax
 
-### Syntax for [!INCLUDE[ssnoversion-md.md](../../includes/ssnoversion-md.md)] and [!INCLUDE[sssodfull-md.md](../../includes/sssodfull-md.md)]
+### Syntax for [!INCLUDE[ssnoversion-md.md](../../includes/ssnoversion-md.md)], [!INCLUDE[sssodfull-md.md](../../includes/sssodfull-md.md)], [!INCLUDE [fabric](../../includes/fabric.md)]
 
 ```syntaxsql
     
 SET CONCAT_NULL_YIELDS_NULL { ON | OFF }   
 ```  
 
-### Syntax for [!INCLUDE[sssdw-md.md](../../includes/sssdw-md.md)] and [!INCLUDE[sspdw-md.md](../../includes/sspdw-md.md)]
+### Syntax for [!INCLUDE[ssazuresynapse-md.md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[sspdw-md.md](../../includes/sspdw-md.md)]
 
 ```syntaxsql
   

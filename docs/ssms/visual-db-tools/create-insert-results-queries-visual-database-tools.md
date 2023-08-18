@@ -1,26 +1,21 @@
 ---
-description: "Create Insert Results Queries (Visual Database Tools)"
 title: Create Insert Results Queries
-ms.custom: seo-lt-2019
+description: "Create Insert Results Queries (Visual Database Tools)"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
+ms.service: sql
+ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "queries [SQL Server], types"
   - "result sets [SQL Server], queries"
   - "results [SQL Server], query"
   - "Insert Results query"
   - "queries [SQL Server], results"
-ms.assetid: 8770d630-09cc-47ec-a0e9-e9de2d7bbc89
-author: markingmyname
-ms.author: maghan
-ms.reviewer: 
-
 ---
 # Create Insert Results Queries (Visual Database Tools)
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server](../../includes/applies-to-version/sqlserver.md)]
 You can copy rows from one table to another or within a table using an Insert Results query. For example, in a `titles` table, you can use an Insert Results query to copy information about all the titles for one publisher to a second table that you can make available to that publisher. An Insert Results query is similar to Make Table Queries, but copies rows into an existing table.  
   
 > [!TIP]  

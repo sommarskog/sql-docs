@@ -1,28 +1,24 @@
 ---
-description: "sys.server_audits (Transact-SQL)"
-title: "sys.server_audits (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/05/2016"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: system-objects
+title: "sys.server_audits (Transact-SQL)"
+description: sys.server_audits (Transact-SQL)
+author: sravanisaluru
+ms.author: srsaluru
+ms.date: "03/23/2022"
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "server_audits_TSQL"
   - "sys.server_audits_TSQL"
   - "sys.server_audits"
   - "server_audits"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.server_audits catalog view"
-ms.assetid: c2c4a000-1127-46a8-b1e9-947fd1136e1e
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+dev_langs:
+  - "TSQL"
 ---
 # sys.server_audits (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Contains one row for each [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] audit in a server instance. For more information, see [SQL Server Audit &#40;Database Engine&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
   

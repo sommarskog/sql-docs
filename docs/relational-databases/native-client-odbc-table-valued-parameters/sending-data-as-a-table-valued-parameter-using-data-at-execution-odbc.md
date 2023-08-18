@@ -1,22 +1,18 @@
 ---
-description: "Sending Data as a Table-Valued Parameter Using Data-At-Execution (ODBC)"
 title: "Table-Valued Parameter, Data-At-Execution (ODBC)"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
-ms.technology: native-client
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "table-valued parameters (ODBC), sending data to a stored procedure one row at a time"
-ms.assetid: 361e6442-34de-4cac-bdbd-e05f04a21ce4
+description: "Sending Data as a Table-Valued Parameter Using Data-At-Execution (ODBC)"
 author: markingmyname
 ms.author: maghan
+ms.date: "06/30/2023"
+ms.service: sql
+ms.subservice: native-client
+ms.topic: "reference"
+helpviewer_keywords:
+  - "table-valued parameters (ODBC), sending data to a stored procedure one row at a time"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Sending Data as a Table-Valued Parameter Using Data-At-Execution (ODBC)
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   This is similar to the [All in Memory](../../relational-databases/native-client-odbc-table-valued-parameters/sending-data-as-a-table-valued-parameter-with-all-values-in-memory-odbc.md) procedure, but uses data-at-execution for the table-valued parameter.  
   
@@ -32,16 +28,24 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
  This procedure assumes that the following [!INCLUDE[tsql](../../includes/tsql-md.md)] has been executed on the server:  
   
 ```sql
-create type TVParam as table(ProdCode integer, Qty integer)  
-create procedure TVPOrderEntry(@CustCode varchar(5), @Items TVPParam,   
-            @OrdNo integer output, @OrdDate datetime output)  
-         as   
-         set @OrdDate = GETDATE();  
-         insert into TVPOrd (OrdDate, CustCode) values (@OrdDate, @CustCode) output OrdNo);   
-         select @OrdNo = SCOPE_IDENTITY();   
-         insert into TVPItem (OrdNo, ProdCode, Qty)  
-select @OrdNo, @Items.ProdCode, @Items.Qty   
-from @Items  
+CREATE TYPE TVParam AS TABLE (
+    ProdCode INT,
+    Qty      INT);
+GO
+
+CREATE PROCEDURE TVPOrderEntry
+@CustCode VARCHAR (5), @Items TVPParam, @OrdNo INT OUTPUT, @OrdDate DATETIME OUTPUT
+AS
+SET @OrdDate = GETDATE();
+INSERT  INTO TVPOrd (OrdDate, CustCode)
+OUTPUT  inserted.OrdNo
+VALUES             (@OrdDate, @CustCode);
+SELECT @OrdNo = SCOPE_IDENTITY();
+INSERT INTO TVPItem (OrdNo, ProdCode, Qty)
+SELECT @OrdNo,
+       @Items.ProdCode,
+       @Items.Qty
+FROM   @Items; 
 ```  
   
 ## To Send the Data  
@@ -53,7 +57,6 @@ from @Items
   
     // Variables for SQL parameters:  
     SQLCHAR CustCode[6];  
-    SQLCHAR *TVP = (SQLCHAR *) "TVPInParam";  
     SQLINTEGER ProdCode, Qty;  
     SQLINTEGER OrdNo;  
     char *OrdDate[23];  
@@ -67,7 +70,7 @@ from @Items
   
 2.  Bind the parameters. *ColumnSize* is 1, meaning that at most one row is passed at a time.  
   
-    ```sql
+    ```cpp
     // Bind parameters for call to TVPOrderEntryByRow.  
     r = SQLBindParameter(hstmt, 1, SQL_C_CHAR, SQL_PARAM_INPUT,SQL_VARCHAR, 5, 0, CustCode, sizeof(CustCode), &cbCustCode);  
   
@@ -160,7 +163,7 @@ from @Items
   
         default:  
           // Passing 0 in StrLenOrIndPtr indicates that no more table-valued parameter rows are available.  
-          r = SQLPutData(hstmt, (SQLPOINTER) 1, 0);  
+          r = SQLPutData(hstmt, 0, 0);  
           break;  
            }  
         }  

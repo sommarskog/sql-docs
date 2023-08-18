@@ -1,16 +1,16 @@
 ---
+title: "Install Reporting Services 2016 at the Command Prompt - SSRS"
 description: "Install Reporting Services 2016 at the Command Prompt - SSRS"
-title: "Install Reporting Services 2016 at the Command Prompt - SSRS | Microsoft Docs"
-ms.date: 01/09/2018
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "command line"
-ms.assetid: 048169b3-512c-41e4-895a-0416eff41268
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 01/09/2018
+ms.service: reporting-services
+ms.topic: conceptual
+ms.custom:
+  - intro-installation
+  - updatefrequency5
+helpviewer_keywords:
+  - "command line"
 monikerRange: "= sql-server-2016"
 ---
 # Install Reporting Services 2016 at the Command Prompt
@@ -38,9 +38,11 @@ monikerRange: "= sql-server-2016"
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
-```  
+```console
 Setup.exe /q /IACCEPTSQLSERVERLICENSETERMS /ACTION="install" /ERRORREPORTING=1 /UPDATEENABLED="False" /INSTANCENAME="MSSQLSERVER" /FEATURES="SQLEngine,Adv_SSMS,RS" /RSINSTALLMODE="DefaultNativeMode" /SQLSVCACCOUNT="[DOMAIN\ACCOUNT]" /SQLSVCPASSWORD="[PASSWORD]" /AGTSVCACCOUNT="[DOMAIN\ACCOUNT]" /AGTSVCPASSWORD="[PASSWORD]" /SQLSYSADMINACCOUNTS="[DOMAIN\ACCOUNT]"  
 ```  
+
+[!INCLUDE [sql-eula-link](../../includes/sql-eula-link.md)]
   
 ##  <a name="bkmk_sharepoint_mode"></a> SharePoint mode Reporting Services  
   
@@ -70,9 +72,9 @@ Setup.exe /q /ACTION="Upgrade" /INSTANCENAME="MSSQLSERVER" /PID="[PID value]" /F
   
  The following example can be used to upgrade a SharePoint Mode installation that is based on the SharePoint shared service architecture. The example uses switch ALLOWUPGRADEFORSSRSSHAREPOINTMODE. The switch is not needed for upgrading older versions that are not based on the shared service architecture:  
   
--   [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]  
+-   [!INCLUDE[sql2008r2](../../includes/sql2008r2-md.md)]  
   
--   [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]  
+-   [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)]  
   
 ```  
 Setup.exe /q /ACTION="Upgrade" /INSTANCENAME="MSSQLSERVER" /PID="[Your PID Value]" /FTSVCACCOUNT="[ACCOUNT Name]" /FTSVCPASSWORD="[PASSWORD]" /UPDATEENABLED="False" /IACCEPTSQLSERVERLICENSETERMS /ALLOWUPGRADEFORSSRSSHAREPOINTMODE="True"  
@@ -84,4 +86,4 @@ Setup.exe /q /ACTION="Upgrade" /INSTANCENAME="MSSQLSERVER" /PID="[Your PID Value
 [SysPrep Parameters](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#SysPrep)   
 [Install Power Pivot from the Command Prompt](/analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013#bkmk_install)  
 
-More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)
+More questions? [Try asking the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user)

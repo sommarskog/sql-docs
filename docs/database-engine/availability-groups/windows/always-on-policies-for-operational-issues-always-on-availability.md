@@ -1,18 +1,15 @@
 ---
 title: "Policy based management: Availability groups"
-description: "The Always On availability groups health model evaluates a set of predefined policy based management (PBM) policies. You can use these for viewing the health of an availability group and as well as replicas and databases in SQL Server." 
-ms.custom: seo-lt-2019
+description: "The Always On availability groups health model evaluates a set of predefined policy based management (PBM) policies. You can use these for viewing the health of an availability group and as well as replicas and databases in SQL Server."
+author: MashaMSFT
+ms.author: mathoma
 ms.date: "05/17/2016"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: availability-groups
+ms.service: sql
+ms.subservice: availability-groups
 ms.topic: reference
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Availability Groups [SQL Server], troubleshooting"
   - "Availability Groups [SQL Server], policies"
-ms.assetid: afa5289c-641a-4c03-8749-44862384ec5f
-author: cawrites
-ms.author: chadam
 ---
 # Policy based management for operational issues with Always On availability groups
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

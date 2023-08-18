@@ -1,19 +1,18 @@
 ---
-title: "SQL Server 2014 Release Notes | Microsoft Docs"
+title: "SQL Server 2014 Release Notes"
 description: This Release Notes document describes known issues that you should read about before you install or troubleshoot Microsoft SQL Server 2014 (12.x) releases.
-ms.custom: ""
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: 07/22/2020
-ms.prod: sql
-ms.technology: release-landing
-ms.reviewer: ""
+ms.service: sql
+ms.subservice: release-landing
 ms.topic: conceptual
-ms.assetid: bf4c4922-80b3-4be3-bf71-228247f97004
-author: rothja
-ms.author: jroth
 monikerRange: "= sql-server-2016"
 ---
 # SQL Server 2014 Release Notes
-[!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
+
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
+
 This article describes known issues with [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] releases, including related service packs.
 
 ## SQL Server 2014 Service Pack 2 (SP2)
@@ -35,7 +34,7 @@ SQL Server 2014 SP2 contains rollups of released hotfixes for SQL Server 2014 SP
 
 |Feature|Description|For more information|
 |---|---|---|
-|AlwaysON timeout logging|Added new logging capability for Lease Timeout messages so that the current time and the expected renewal times are logged. |[Improved AlwaysOn Availability Group Lease Timeout Diagnostics](/archive/blogs/alwaysonpro/improved-alwayson-availability-group-lease-timeout-diagnostics)
+|AlwaysON timeout logging|Added new logging capability for Lease Timeout messages so that the current time and the expected renewal times are logged. |[Improved Always On Availability Group Lease Timeout Diagnostics](/archive/blogs/alwaysonpro/improved-alwayson-availability-group-lease-timeout-diagnostics)
 |AlwaysON XEvents and performance counters|New AlwaysON XEvents and performance counters to improve diagnostics when troubleshooting latency issues with AlwaysON. |[KB 3107172](https://support.microsoft.com/help/3107172/improve-tempdb-spill-diagnostics-by-using-extended-events-in-sql-serve) and [KB 3107400](https://support.microsoft.com/help/3107400/improved-tempdb-spill-diagnostics-in-showplan-xml-schema-in-sql-server)
 |Change tracking cleanup|A new stored procedure sp_flush_CT_internal_table_on_demand cleans up change tracking internal tables on demand.|[KB 3173157](https://support.microsoft.com/help/3173157/adds-a-stored-procedure-for-the-manual-cleanup-of-the-change-tracking)
 |Database cloning|Use the new DBCC command to troubleshoot existing production databases by cloning the schema, metadata, and statistics but without the data. Cloned databases are not meant to be used in production environments.|[KB 3177838](https://support.microsoft.com/help/3177838/how-to-use-dbcc-clonedatabase-to-generate-a-schema-and-statistics-only)
@@ -261,7 +260,7 @@ DATEPART(weekday, @d)
   
 **Workaround:** None.  
   
-#### Register through SSMS adds DAC meta-data with mismatched instance IDs  
+#### Register through SSMS adds DAC metadata with mismatched instance IDs  
 **Issue:** When registering or deleting a Data-Tier Application package (.dacpac) through SQL Server Management Studio, the sysdac* tables are not updated correctly to allow a user to query dacpac history for the database.  The instance_id for sysdac_history_internal and sysdac_instances_internal do not match to allow for a join.  
   
 **Workaround:** This issue is fixed with the feature pack redistribution of the [Data-Tier Application Framework](https://www.microsoft.com/download/details.aspx?id=100297).  After the update is applied, all new history entries will use the value listed for the instance_id in the sysdac_instances_internal table.  
@@ -342,7 +341,7 @@ This issue is because Availability Group Listeners require assigning one IP addr
   
     This workaround will allow the Wizard to complete adding the replica in Azure.  
   
-2.  After the Wizard completes, you will need to finish the configuration of the Listener in Azure as described in [Listener Configuration for AlwaysOn Availability Groups in Azure](/previous-versions/azure/dn376546(v=azure.100))  
+2.  After the Wizard completes, you will need to finish the configuration of the Listener in Azure as described in [Listener Configuration for Always On Availability Groups in Azure](/previous-versions/azure/dn376546(v=azure.100))  
   
 ### <a name="SSAS"></a>Analysis Services (RTM)
   
@@ -359,7 +358,7 @@ This issue is because Availability Group Listeners require assigning one IP addr
   
 **More Information:**  
   
--   [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] includes MSOLAP.6. [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] and [!INCLUDE[ssSQL14](../includes/sssql14-md.md)][!INCLUDE[ssGemini](../includes/ssgemini-md.md)] workbooks use MSOLAP.5. If MSOLAP.5 is not installed on the computer running Excel Services, Excel Services cannot load the data models.  
+-   [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] includes MSOLAP.6. [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] and [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[power-pivot-md](../includes/power-pivot-md.md)] workbooks use MSOLAP.5. If MSOLAP.5 is not installed on the computer running Excel Services, Excel Services cannot load the data models.  
   
 #### MSOLAP.5 must be downloaded, installed and registered for a SharePoint 2013 new farm configured with SQL Server 2014  
 **Issue:**  

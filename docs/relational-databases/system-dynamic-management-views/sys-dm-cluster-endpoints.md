@@ -1,24 +1,20 @@
 ---
-description: "sys.dm_cluster_endpoints (Transact-SQL)"
-title: "sys.dm_cluster_endpoints (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: 11/04/2019
-ms.prod: sql
-ms.prod_service: "database-engine, big-data-clusters"
-ms.reviewer: ""
-ms.technology: system-objects
+title: "sys.dm_cluster_endpoints (Transact-SQL)"
+description: sys.dm_cluster_endpoints (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
+ms.date: "02/24/2023"
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.dm_cluster_endpoints"
   - "dm_cluster_endpoints_TSQL"
   - "dm_cluster_endpoints"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.dm_cluster_endpoints dynamic management view"
-ms.assetid: 
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+dev_langs:
+  - "TSQL"
 monikerRange: ">=sql-server-ver15||>=sql-server-linux-2017"
 ---
 # sys.dm_cluster_endpoints (Transact-SQL)
@@ -35,6 +31,10 @@ monikerRange: ">=sql-server-ver15||>=sql-server-linux-2017"
 
 On [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requires `VIEW SERVER STATE` permission.
 
-## See Also
+### Permissions for SQL Server 2022 and later
+
+Requires VIEW SERVER SECURITY STATE permission on the server.
+
+## See also
 
 [What are [!INCLUDE[big-data-clusters-2019](../../includes/ssbigdataclusters-ss-nover.md)]](../../big-data-cluster/big-data-cluster-overview.md)?

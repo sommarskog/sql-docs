@@ -1,23 +1,23 @@
 ---
-title: "Specify an Axis Interval (Report Builder) | Microsoft Docs"
-description: Find out how to change the number of labels and tick marks on the category (x) axis in a chart by setting the axis interval in Report Builder.
-ms.date: 09/02/2016
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-design
-
-
-ms.topic: conceptual
-ms.assetid: ae46712d-a5bf-44c0-9929-e30ccc1e7e33
+title: "Specify an axis interval in a paginated report"
+description: Find out how to change the number of labels and tick marks on the category (x) axis in a chart in a paginated report by setting the axis interval in Report Builder.
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 09/02/2016
+ms.service: reporting-services
+ms.subservice: report-design
+ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
-# Specify an Axis Interval (Report Builder and SSRS)
-Learn to change the number of labels and tick marks on the category (x) axis in a chart by setting the axis interval in a [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] paginated report.
+# Specify an axis interval in a paginated report (Report Builder)
+
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-ssrs-rb](../../includes/ssrs-appliesto-ssrs-rb.md)] [!INCLUDE [ssrs-appliesto-pbi-rb](../../includes/ssrs-appliesto-pbi-rb.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
+
+Learn to change the number of labels and tick marks on the category (x) axis in a chart by setting the axis interval in a paginated report.
  
 On the value axis (usually the y axis), axis intervals provide a consistent measure of the data points on the chart. 
 
-But on the category axis (usually the x axis), sometimes an automatic axis interval results in categories without axis labels. You can specify the number of intervals you want in the axis Interval property. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] calculates the number of intervals at run time, based on the data in the result set. For more information about how axis intervals are calculated, see [Formatting Axis Labels on a Chart](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md).  
+But on the category axis (usually the x axis), sometimes an automatic axis interval results in categories without axis labels. You can specify the number of intervals you want in the axis Interval property. Report Builder calculates the number of intervals at run time, based on the data in the result set. For more information about how axis intervals are calculated, see [Formatting Axis Labels on a Chart](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md).  
 
 To try setting the axis interval with sample data, see [Tutorial: Add a Column Chart to Your Report (Report Builder)](../tutorial-add-a-column-chart-to-your-report-report-builder.md).
   
@@ -42,7 +42,7 @@ In this column chart, the horizontal label interval is set to Auto.
 
      ![Screenshot of a report builder column chart showing how to set the x-axis interval to one.](../../reporting-services/report-design/media/report-builder-column-chart-x-axis-interval-one.png)
   
-3. [!INCLUDE[clickOK](../../includes/clickok-md.md)]
+3.  Select **OK**.
      
      Now the column chart displays all its horizontal axis labels.
      
@@ -77,7 +77,7 @@ By default, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sets t
   
 2.  In the **Horizontal Axis Properties** dialog box > **Axis Options** tab, set **Interval** to **Auto**. The chart will display the optimal number of category labels that can fit along the axis.  
   
-3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+3.  Select **OK**.
   
 ## See Also  
  [Formatting a Chart &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   

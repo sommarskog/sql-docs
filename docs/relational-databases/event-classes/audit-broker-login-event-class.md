@@ -1,21 +1,18 @@
 ---
+title: "Audit Broker Login Event Class"
 description: "Audit Broker Login Event Class"
-title: "Audit Broker Login Event Class | Microsoft Docs"
-ms.custom: ""
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: supportability
+ms.service: sql
+ms.subservice: supportability
 ms.topic: reference
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Audit Broker Login event class"
-ms.assetid: af9b1153-2791-40ef-a95c-50923cd0cc97
-author: "stevestein"
-ms.author: "sstein"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Audit Broker Login Event Class
-[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] creates an **Audit Broker Login** event to report audit messages related to Service Broker transport security.  
   
 ## Audit Broker Login Event Class Data Columns  

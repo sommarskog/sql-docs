@@ -1,21 +1,18 @@
 ---
+title: "Audit Server Object Take Ownership Event Class"
 description: "Audit Server Object Take Ownership Event Class"
-title: "Audit Server Object Take Ownership Event Class | Microsoft Docs"
-ms.custom: ""
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: supportability
+ms.service: sql
+ms.subservice: supportability
 ms.topic: reference
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Audit Server Object Take Ownership event class"
-ms.assetid: 780fde57-3970-4063-a634-04879b6ef141
-author: "stevestein"
-ms.author: "sstein"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Audit Server Object Take Ownership Event Class
-[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
   The **Audit Server Object Take Ownership** event class occurs when the owner is changed for objects in server scope.  
   
 ## Audit Server Object Take Ownership Event Class Data Columns  

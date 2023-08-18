@@ -1,21 +1,18 @@
 ---
+title: "SQL:StmtCompleted Event Class"
 description: "SQL:StmtCompleted Event Class"
-title: "SQL:StmtCompleted Event Class | Microsoft Docs"
-ms.custom: ""
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: supportability
+ms.service: sql
+ms.subservice: supportability
 ms.topic: reference
-helpviewer_keywords: 
+helpviewer_keywords:
   - "SQL:StmtCompleted event class"
-ms.assetid: a55f005d-e020-423c-8940-c24ea1b20104
-author: "stevestein"
-ms.author: "sstein"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SQL:StmtCompleted Event Class
-[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
   The SQL:StmtCompleted event class indicates that a [!INCLUDE[tsql](../../includes/tsql-md.md)] statement has completed.  
   
 ## SQL:StmtCompleted Event Class Data Columns  

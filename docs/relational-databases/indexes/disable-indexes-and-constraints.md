@@ -1,16 +1,15 @@
 ---
-description: "Disable Indexes and Constraints"
-title: "Disable Indexes and Constraints | Microsoft Docs"
-ms.custom: ""
+title: "Disable Indexes and Constraints"
+description: Disable Indexes and Constraints
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "02/17/2017"
-ms.prod: sql
-ms.prod_service: "table-view-index, sql-database"
-ms.reviewer: ""
-ms.technology: table-view-index
+ms.service: sql
+ms.subservice: table-view-index
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.swb.disableindexes.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "disabled indexes [SQL Server], index operations"
   - "nonclustered indexes [SQL Server], disabling"
   - "disabled indexes [SQL Server], guidelines"
@@ -21,15 +20,12 @@ helpviewer_keywords:
   - "statistical information [SQL Server], indexes"
   - "index disabling [SQL Server]"
   - "indexed views [SQL Server], disabled indexes"
-ms.assetid: 2198f1af-fa44-47e9-92df-f4fde322ba18
-author: MikeRayMSFT
-ms.author: mikeray
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Disable Indexes and Constraints
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
-  This topic describes how to disable an index or constraints in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. Disabling an index prevents user access to the index, and for clustered indexes to the underlying table data. The index definition remains in metadata, and index statistics are kept on nonclustered indexes. Disabling a nonclustered or clustered index on a view physically deletes the index data. Disabling a clustered index on a table prevents access to the data; the data still remains in the table, but is unavailable for data manipulation language (DML) operations until the index is dropped or rebuilt.  
+  This topic describes how to disable an index or constraints in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. Disabling an index prevents user access to the index, and for clustered indexes to the underlying table data. The index definition remains in metadata, and index statistics are kept on nonclustered indexes. Disabling a clustered index on a view or a nonclustered index physically deletes the index data. Disabling a clustered index on a table prevents access to the data; the data still remains in the table, but is unavailable for data manipulation language (DML) operations until the index is dropped or rebuilt.  
   
  **In This Topic**  
   
@@ -91,7 +87,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 ##  <a name="SSMSProcedure"></a> Using SQL Server Management Studio  
   
 #### To disable an index  
-  
+
 1.  In Object Explorer, click the plus sign to expand the database that contains the table on which you want to disable an index.  
   
 2.  Click the plus sign to expand the **Tables** folder.  
@@ -101,7 +97,10 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 4.  Click the plus sign to expand the **Indexes** folder.  
   
 5.  Right-click the index you want to disable and select **Disable**.  
-  
+
+   > [!NOTE]
+   > If the table is open in **Design** mode, the **Disable** control is not available. To proceed, close the table designer and start over.
+
 6.  In the **Disable Indexes** dialog box, verify that the correct index is in the **Indexes to disable** grid and click **OK**.  
   
 #### To disable all indexes on a table  
@@ -168,7 +167,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 3.  Copy and paste the following example into the query window and click **Execute**.  
   
     ```  
-    USE AdventureWorks2012;  
+    USE AdventureWorks2022;  
     GO  
     -- disables the IX_Employee_OrganizationLevel_OrganizationNode index  
     -- on the HumanResources.Employee table  
@@ -185,7 +184,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 3.  Copy and paste the following example into the query window and click **Execute**.  
   
     ```  
-    USE AdventureWorks2012;  
+    USE AdventureWorks2022;  
     GO  
     -- Disables all indexes on the HumanResources.Employee table.  
     ALTER INDEX ALL ON HumanResources.Employee  

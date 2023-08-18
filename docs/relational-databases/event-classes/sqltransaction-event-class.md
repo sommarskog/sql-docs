@@ -1,21 +1,18 @@
 ---
+title: "SQLTransaction Event Class"
 description: "SQLTransaction Event Class"
-title: "SQLTransaction Event Class | Microsoft Docs"
-ms.custom: ""
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: supportability
+ms.service: sql
+ms.subservice: supportability
 ms.topic: reference
-helpviewer_keywords: 
+helpviewer_keywords:
   - "SQLTransaction event class"
-ms.assetid: 4e175aa3-4f3d-4b23-a423-4a7a1bd4e84e
-author: "stevestein"
-ms.author: "sstein"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SQLTransaction Event Class
-[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
   Use the SQLTransaction event class to monitor when transactions begin and are completed, especially when you test applications, triggers, or stored procedures.  
   
 ## SQLTransaction Event Class Data Columns  

@@ -1,26 +1,22 @@
 ---
+title: "STPointFromWKB (geometry Data Type)"
 description: "STPointFromWKB (geometry Data Type)"
-title: "STPointFromWKB (geometry Data Type) | Microsoft Docs"
-ms.custom: ""
+author: MladjoA
+ms.author: mlandzic
 ms.date: "08/03/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "STPointFromWKB (geometry Data Type)"
   - "STPointFromWKB_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "STPointFromWKB (geometry Data Type)"
-ms.assetid: 1157c172-2dc7-4393-bae6-b85406171a34
-author: MladjoA
-ms.author: mlandzic 
+dev_langs:
+  - "TSQL"
 ---
 # STPointFromWKB (geometry Data Type)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 Returns a **geometryPoint** instance from an Open Geospatial Consortium (OGC) Well-Known Binary (WKB) representation.
   
@@ -53,7 +49,7 @@ STPointFromWKB ( 'WKB_point' , SRID )
 ## Examples  
  The following example uses `STPointFromWKB()` to create a `geometry` instance.  
   
-```  
+```sql
 DECLARE @g geometry;   
 SET @g = geometry::STPointFromWKB(0x010100000000000000000059400000000000005940, 0);  
 SELECT @g.STAsText();  

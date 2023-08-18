@@ -1,15 +1,12 @@
 ---
 title: Custom Test Conditions for SQL Server Unit Tests
 description: Find out how to install custom test conditions for SQL Server unit tests. View the risks involved with installing test conditions that you did not create.
-ms.prod: sql
-ms.technology: ssdt
-ms.topic: conceptual
-ms.assetid: 32a15d61-e908-4ae1-a238-4fd0f988d8c8
 author: markingmyname
 ms.author: maghan
-ms.reviewer: “”
-ms.custom: seo-lt-2019
 ms.date: 02/09/2017
+ms.service: sql
+ms.subservice: ssdt
+ms.topic: conceptual
 ---
 
 # Custom Test Conditions for SQL Server Unit Tests
@@ -24,7 +21,7 @@ Before you install a test condition that you did not create, you should understa
   
 To minimize risk, you should install a custom test condition only if it is from a known source. If you obtain a test condition from an untrusted source, you should inspect the source code for that test condition and its installation program (if it has one) before you install and it.  
   
-To install a custom test condition, copy the signed assembly (.dll) to the %Program Files%\Microsoft Visual Studio <Version>\Common7\IDE\Extensions\Microsoft\SQLDB\TestConditions folder. If this folder does not exist, create it. You need administrative privileges on your machine to copy to this directory.  
+To install a custom test condition, copy the signed assembly (.dll) to the %Program Files%\Microsoft Visual Studio \<Version\>\Common7\IDE\Extensions\Microsoft\SQLDB\TestConditions folder. If this folder does not exist, create it. You need administrative privileges on your machine to copy to this directory.  
   
 > [!NOTE]  
 > You need to install Visual Studio 2010 and Visual Studio 2012 versions of the test condition if,  

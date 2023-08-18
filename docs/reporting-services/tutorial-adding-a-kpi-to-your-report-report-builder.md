@@ -1,15 +1,13 @@
 ---
-title: "Tutorial: Adding a KPI to Your Report (Report Builder) | Microsoft Docs"
+title: "Tutorial: Adding a KPI to Your Report (Report Builder)"
 description: Learn how to add a key performance indicator (KPI) to a Reporting Services paginated report in Report Builder.
-ms.date: 06/15/2016
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: reporting-services
-
-ms.topic: conceptual
-ms.assetid: 1bf77859-0b33-4f40-abaf-ebeeb6ebb1f8
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 06/15/2016
+ms.service: reporting-services
+ms.subservice: reporting-services
+ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 # Tutorial: Adding a KPI to Your Report (Report Builder)
 In this [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)] tutorial, you add a key performance indicator (KPI) to a [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] paginated report.  
@@ -186,7 +184,7 @@ Background colors can be set to an expression that is evaluated when you run the
   
      This changes the background color to "Lime" green for each cell with an aggregated sum for `[Sum(Sales)]` greater than or equal to 5000. Values of `[Sum(Sales)]` between 2500 and 5000 are "Yellow". Values less than 2500 are "Red".  
   
-1.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
+1.  Select **OK**.
   
 2.  Click **Run** to preview the report.  
   
@@ -211,7 +209,7 @@ A gauge depicts a single value in a dataset. This tutorial uses a horizontal lin
   
 5.  In the **Select Gauge Type** dialog box, select the first linear gauge type, **Horizontal**.  
   
-6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
+6.  Select **OK**.
   
     A gauge is added to the design surface.  
   
@@ -266,7 +264,7 @@ Indicators are small simple gauges that communicate data values at a glance. Bec
   
 6.  In the **Select Indicator Type** dialog box, under **Shapes**, select the first shape type, **3 Traffic Lights (Unrimmed)**.  
   
-7.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
+7.  Select **OK**.
   
     The indicator is added to the cell in the new Stoplight KPI column.  
   
@@ -300,7 +298,7 @@ You can further enhance the text by applying different font styles, sizes, and c
 4.  Click **Run** to preview the report.  
   
 ## <a name="Save"></a>7. Save the Report  
-Save the report to a report server or your computer. If you do not save the report to the report server, a number of [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] features such as report parts and subreports are not available.  
+Save the report to a report server or your computer. If you do not save the report to the report server, a number of [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] features such as subreports are not available.  
   
 ### To save the report on a report server  
   

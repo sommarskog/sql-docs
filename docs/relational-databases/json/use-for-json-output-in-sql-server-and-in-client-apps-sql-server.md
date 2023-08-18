@@ -1,22 +1,19 @@
 ---
-description: "Use FOR JSON output in SQL Server and in client apps (SQL Server)"
 title: "Use FOR JSON output in SQL Server and in client apps"
-ms.date: 06/03/2020
-ms.prod: sql
-ms.technology: 
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "FOR JSON, using in client apps"
-  - "FOR JSON, using in SQL Server"
-ms.assetid: 302e5397-b499-4ea3-9a7f-c24ccad698eb
+description: "Use FOR JSON output in SQL Server and in client apps (SQL Server)"
 author: jovanpop-msft
 ms.author: jovanpop
 ms.reviewer: jroth
-ms.custom: seo-dt-2019
+ms.date: 06/03/2020
+ms.service: sql
+ms.topic: conceptual
+helpviewer_keywords:
+  - "FOR JSON, using in client apps"
+  - "FOR JSON, using in SQL Server"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Use FOR JSON output in SQL Server and in client apps (SQL Server)
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sqlserver2016-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
 The following examples demonstrate some of the ways to use the **FOR JSON** clause and its JSON output in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or in client apps.  
   
@@ -113,13 +110,12 @@ using(var conn = new SqlConnection("<connection string>"))
   
 ### Microsoft videos
 
+> [!NOTE]
+> Some of the video links in this section may not work at this time. Microsoft is migrating content formerly on Channel 9 to a new platform. We will update the links as the videos are migrated to the new platform.
+
 For a visual introduction to the built-in JSON support in SQL Server and Azure SQL Database, see the following videos:
 
--   [SQL Server 2016 and JSON Support](https://channel9.msdn.com/Shows/Data-Exposed/SQL-Server-2016-and-JSON-Support)
-
--   [Using JSON in SQL Server 2016 and Azure SQL Database](https://channel9.msdn.com/Shows/Data-Exposed/Using-JSON-in-SQL-Server-2016-and-Azure-SQL-Database)
-
--   [JSON as a bridge between NoSQL and relational worlds](https://channel9.msdn.com/events/DataDriven/SQLServer2016/JSON-as-a-bridge-betwen-NoSQL-and-relational-worlds)
+-   [JSON as a bridge between NoSQL and relational worlds](https://channel9.msdn.com/events/DataDriven-SQLServer2016/JSON-as-bridge-betwen-NoSQL-relational-worlds)
  
 ## See Also  
  [Format Query Results as JSON with FOR JSON &#40;SQL Server&#41;](../../relational-databases/json/format-query-results-as-json-with-for-json-sql-server.md)  

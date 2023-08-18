@@ -1,21 +1,17 @@
 ---
+title: "BufferWithCurves (geometry Data Type)"
 description: "BufferWithCurves (geometry Data Type)"
-title: "BufferWithCurves (geometry Data Type) | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/10/2016"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
-ms.topic: reference
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "BufferWithCurves method (geometry)"
-ms.assetid: 8ffaba3f-d2dd-4e57-9f41-3ced9f14b600
 author: MladjoA
-ms.author: mlandzic 
-monikerRange: "=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+ms.author: mlandzic
+ms.date: "06/10/2016"
+ms.service: sql
+ms.subservice: t-sql
+ms.topic: reference
+helpviewer_keywords:
+  - "BufferWithCurves method (geometry)"
+dev_langs:
+  - "TSQL"
+monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # BufferWithCurves (geometry Data Type)
 [!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -74,7 +70,7 @@ SQL Server return type: **geometry**
 ### A. Calling BufferWithCurves() with a parameter value < 0 on one dimensional geometry instance  
  The following example returns an empty `GeometryCollection` instance:  
   
-```
+```sql
  DECLARE @g geometry= 'LINESTRING(3 4, 8 11)'; 
  SELECT @g.BufferWithCurves(-1).ToString(); 
  ```
@@ -82,7 +78,7 @@ SQL Server return type: **geometry**
 ### B. Calling BufferWithCurves() with a parameter value < 0 on a two dimensional geometry instance  
  The following example returns a `CurvePolygon` instance with a negative buffer:  
   
-```
+```sql
  DECLARE @g geometry = 'CURVEPOLYGON(COMPOUNDCURVE(CIRCULARSTRING(0 4, 4 0, 8 4), (8 4, 0 4)))'; 
  SELECT @g.BufferWithCurves(-1).ToString()
  ```  
@@ -90,7 +86,7 @@ SQL Server return type: **geometry**
 ### C. Calling BufferWithCurves() with a parameter value < 0 that returns an empty GeometryCollection  
  The following example shows what occurs when the *distance* parameter equals -2:  
   
-```
+```sql
  DECLARE @g geometry = 'CURVEPOLYGON(COMPOUNDCURVE(CIRCULARSTRING(0 4, 4 0, 8 4), (8 4, 0 4)))'; 
  SELECT @g.BufferWithCurves(-2).ToString();
  ```  
@@ -100,7 +96,7 @@ SQL Server return type: **geometry**
 ### D. Calling BufferWithCurves() with a parameter value = 0  
  The following example returns a copy of the calling **geometry** instance:  
   
-```
+```sql
  DECLARE @g geometry = 'LINESTRING(3 4, 8 11)'; 
  SELECT @g.BufferWithCurves(0).ToString();
  ```  
@@ -108,7 +104,7 @@ SQL Server return type: **geometry**
 ### E. Calling BufferWithCurves() with a non-zero parameter value that is extremely small  
  The following example also returns a copy of the calling **geometry** instance:  
   
-```
+```sql
  DECLARE @g geometry = 'LINESTRING(3 4, 8 11)'; 
  DECLARE @distance float = 1e-20; 
  SELECT @g.BufferWithCurves(@distance).ToString();
@@ -117,7 +113,7 @@ SQL Server return type: **geometry**
 ### F. Calling BufferWithCurves() with a parameter value > 0  
  The following example returns a `CurvePolygon` instance:  
   
-```
+```sql
  DECLARE @g geometry= 'LINESTRING(3 4, 8 11)'; 
  SELECT @g.BufferWithCurves(2).ToString();
  ```  
@@ -125,7 +121,7 @@ SQL Server return type: **geometry**
 ### G. Passing a valid string parameter  
  The following example returns the same `CurvePolygon` instance as mentioned earlier, but a string parameter is passed to the method:  
   
-```
+```sql
  DECLARE @g geometry= 'LINESTRING(3 4, 8 11)'; 
  SELECT @g.BufferWithCurves('2').ToString();
  ```  
@@ -133,7 +129,7 @@ SQL Server return type: **geometry**
 ### H. Passing an invalid string parameter  
  The following example will throw an error:  
   
-```
+```sql
  DECLARE @g geometry = 'LINESTRING(3 4, 8 11)' 
  SELECT @g.BufferWithCurves('a').ToString();
  ```  
@@ -143,7 +139,7 @@ SQL Server return type: **geometry**
 ### I. Calling BufferWithCurves() on MultiPoint instance  
  The following example returns two `GeometryCollection` instances and one `CurvePolygon` instance:  
   
-```
+```sql
  DECLARE @g geometry = 'MULTIPOINT((1 1),(1 4))'; 
  SELECT @g.BufferWithCurves(1).ToString(); 
  SELECT @g.BufferWithCurves(1.5).ToString(); 

@@ -1,26 +1,22 @@
 ---
+title: "STSrid (geography Data Type)"
 description: "STSrid (geography Data Type)"
-title: "STSrid (geography Data Type) | Microsoft Docs"
-ms.custom: ""
+author: MladjoA
+ms.author: mlandzic
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "STSrid (geography Data Type)"
   - "STSrid_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "STSrid method"
-ms.assetid: 6b04f5a7-2e69-4d34-901e-b61ba6ca9c14
-author: MladjoA
-ms.author: mlandzic 
+dev_langs:
+  - "TSQL"
 ---
 # STSrid (geography Data Type)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   **STSrid** is an integer representing the spatial reference identifier (SRID) of the instance.  
   
@@ -44,7 +40,7 @@ ms.author: mlandzic
 ## Examples  
  The first example creates a `geography` instance with the SRID value 4326 (WGS84) and uses `STSrid` to confirm the SRID.  
   
-```  
+```sql
 DECLARE @g geography;  
 SET @g = geography::STGeomFromText('LINESTRING(-122.360 47.656, -122.343 47.656)', 4326);  
 SELECT @g.STSrid;  
@@ -52,7 +48,7 @@ SELECT @g.STSrid;
   
  The second example uses `STSrid` to change the SRID value of the instance to 4267 (NAD27) and then confirms the modified SRID value.  
   
-```  
+```sql
 SET @g.STSrid = 4267;  
 SELECT @g.STSrid;  
 ```  

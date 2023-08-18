@@ -1,17 +1,18 @@
 ---
-title: "Add drillthrough from a mobile report to other mobile reports or URLs | Microsoft Docs"
+title: "Add drillthrough from a mobile report to other mobile reports or URLs"
 description: You can add drillthrough from any gauge, chart, or data grid in a Reporting Services mobile report to another mobile report or custom URL.
-ms.date: 09/20/2016
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: mobile-reports
-
-ms.topic: conceptual
-ms.assetid: 30d0a3fd-5588-417e-b25d-cc5b7624cdb1
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 07/21/2022
+ms.service: reporting-services
+ms.subservice: mobile-reports
+ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 # Add drillthrough from a mobile report to other mobile reports or URLs
+
+[!INCLUDE [ssrs-mobile-report-deprecated](../../includes/ssrs-mobile-report-deprecated.md)]
+
 You can add drillthrough from any gauge, chart, or data grid in a [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] mobile report to another mobile report or custom URL. 
 
 A *drillthrough*  is a link from a source report that opens another target report or URL. The target drillthrough report often contains details about some item in the summary report. Depending on the source mobile report, one or more parameters can be passed to the target mobile report or integrated into a custom URL.  
@@ -22,7 +23,8 @@ Report items with drillthrough, either to a URL or another mobile report, have t
 
 ![Screenshot of a mobile report gauge with a drillthrough.](../../reporting-services/mobile-reports/media/mobile-report-gauge-drill-through.png)
 
->**Tip**: Create the target report and save it to a [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] web portal first. If you plan to pass parameters from the source report, add the parameters to the target report, too. Then you can set up drillthrough from the source report to the target report. [Add parameters to a mobile report](../../reporting-services/mobile-reports/add-parameters-to-a-mobile-report-reporting-services.md).
+> [!TIP]  
+> Create the target report and save it to a [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] web portal first. If you plan to pass parameters from the source report, add the parameters to the target report, too. Then you can set up drillthrough from the source report to the target report. [Add parameters to a mobile report](../../reporting-services/mobile-reports/add-parameters-to-a-mobile-report-reporting-services.md).
  
 ## Set up drillthrough to a mobile report  
 

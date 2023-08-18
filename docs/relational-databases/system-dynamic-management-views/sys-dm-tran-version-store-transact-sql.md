@@ -1,29 +1,25 @@
 ---
-description: "sys.dm_tran_version_store (Transact-SQL)"
-title: "sys.dm_tran_version_store (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: system-objects
+title: "sys.dm_tran_version_store (Transact-SQL)"
+description: sys.dm_tran_version_store (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
+ms.date: "06/19/2023"
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.dm_tran_version_store_TSQL"
   - "sys.dm_tran_version_store"
   - "dm_tran_version_store"
   - "dm_tran_version_store_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.dm_tran_version_store dynamic management view"
-ms.assetid: 7ab44517-0351-4f91-bdd9-7cf940f03c51
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+dev_langs:
+  - "TSQL"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_tran_version_store (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Returns a virtual table that displays all version records in the version store. **sys.dm_tran_version_store** is inefficient to run because it queries the entire version store, and the version store can be very large.  
   
@@ -44,7 +40,7 @@ sys.dm_tran_version_store
 |-----------------|---------------|-----------------|  
 |**transaction_sequence_num**|**bigint**|Sequence number of the transaction that generates the record version.|  
 |**version_sequence_num**|**bigint**|Version record sequence number. This value is unique within the version-generating transaction.|  
-|**database_id**|**int**|Database ID of the versioned record.|  
+|**database_id**|**int**|Database ID of the versioned record. <br /><br />In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], the values are unique within a single database or an elastic pool, but not within a logical server.|  
 |**rowset_id**|**bigint**|Rowset ID of the record.|  
 |**status**|**tinyint**|Indicates whether a versioned record has been split across two records. If the value is 0, the record is stored in one page. If the value is 1, the record is split into two records that are stored on two different pages.|  
 |**min_length_in_bytes**|**smallint**|Minimum length of the record in bytes.|  
@@ -55,9 +51,14 @@ sys.dm_tran_version_store
   
 ## Permissions
 
-On [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requires `VIEW SERVER STATE` permission.   
-On SQL Database Basic, S0, and S1 service objectives, and for databases in elastic pools, the [server admin](/azure/azure-sql/database/logins-create-manage#existing-logins-and-user-accounts-after-creating-a-new-database) account or the [Azure Active Directory admin](/azure/azure-sql/database/authentication-aad-overview#administrator-structure) account is required. On all other SQL Database service objectives, the `VIEW DATABASE STATE` permission is required in the database.   
+On [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] and SQL Managed Instance, requires `VIEW SERVER STATE` permission.
+
+On SQL Database **Basic**, **S0**, and **S1** service objectives, and for databases in **elastic pools**, the [server admin](/azure/azure-sql/database/logins-create-manage#existing-logins-and-user-accounts-after-creating-a-new-database) account, the [Azure Active Directory admin](/azure/azure-sql/database/authentication-aad-overview#administrator-structure) account, or membership in the `##MS_ServerStateReader##` [server role](/azure/azure-sql/database/security-server-roles) is required. On all other SQL Database service objectives, either the `VIEW DATABASE STATE` permission on the database, or membership in the `##MS_ServerStateReader##` server role is required.   
   
+### Permissions for SQL Server 2022 and later
+
+Requires VIEW SERVER PERFORMANCE STATE permission on the server.
+
 ## Examples  
  The following example uses a test scenario in which four concurrent transactions, each identified by a transaction sequence number (XSN), are running in a database that has the ALLOW_SNAPSHOT_ISOLATION and READ_COMMITTED_SNAPSHOT options set to ON. The following transactions are running:  
   

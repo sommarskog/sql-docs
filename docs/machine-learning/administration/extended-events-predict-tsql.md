@@ -1,13 +1,12 @@
 ---
 title: Monitor T-SQL with extended events
 description: Learn how to use extended events to monitor and troubleshooting PREDICT T-SQL statements in SQL Server Machine Learning Services.
-ms.prod: sql
-ms.technology: machine-learning-services
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: 09/24/2019
+ms.service: sql
+ms.subservice: machine-learning-services
 ms.topic: how-to
-author: dphansen
-ms.author: davidph
-ms.custom: seo-lt-2019
 monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current"
 ---
 # Monitor PREDICT T-SQL statements with extended events in SQL Server Machine Learning Services

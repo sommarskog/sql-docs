@@ -1,14 +1,14 @@
 ---
-title: "Formatting Numbers and Dates (Report Builder) | Microsoft Docs"
-description: Learn how to format numbers and dates in Report Builder data regions by selecting a format from the Number page of the data region's Properties dialog box.
+title: "Formatting numbers and dates in paginated reports"
+description: Learn how to format numbers and dates in Report Builder data regions in a paginated report by selecting a format from the Number page of the data region's Properties dialog box.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 03/01/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-design
-
-
+ms.service: reporting-services
+ms.subservice: report-design
 ms.topic: conceptual
-f1_keywords: 
+ms.custom: updatefrequency5
+f1_keywords:
   - "sql13.rtp.rptdesigner.placeholderproperties.number.f1"
   - "10127"
   - "sql13.rtp.rptdesigner.textboxproperties.number.f1"
@@ -17,12 +17,13 @@ f1_keywords:
   - "sql13.rtp.rptdesigner.serieslabelproperties.number.f1"
   - "10285"
   - "sql13.rtp.rptdesigner.axisproperties.number.f1"
-ms.assetid: 6de1a725-9f06-4708-be26-2d55e442e344
-author: maggiesMSFT
-ms.author: maggies
 ---
-# Formatting Numbers and Dates (Report Builder and SSRS)
-  You can format numbers and dates in data regions by selecting a format from the **Number** page of the corresponding data region's **Properties** dialog box.  
+# Formatting numbers and dates in paginated reports (Report Builder)
+
+
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-ssrs-rb](../../includes/ssrs-appliesto-ssrs-rb.md)] [!INCLUDE [ssrs-appliesto-pbi-rb](../../includes/ssrs-appliesto-pbi-rb.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
+
+  You can format numbers and dates in data regions in a paginated report by selecting a format from the **Number** page of the corresponding data region's **Properties** dialog box.  
   
  To specify format strings within a text box report item, you need to select the item that you want to format, right-click, select **Text Box Properties**, and then click **Number**. You can format individual cells in a table or matrix data region in the same manner, because cells in a table or matrix are individual text boxes.  
   

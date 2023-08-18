@@ -1,22 +1,18 @@
 ---
-description: "Defect a Target Server from a Master Server"
 title: "Defect a Target Server from a Master Server"
-ms.custom: seo-lt-2019
+description: "Defect a Target Server from a Master Server"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
+ms.service: sql
+ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "SQL Server Agent jobs, target servers"
   - "target servers [SQL Server], defecting"
   - "SQL Server Agent jobs, master servers"
   - "master servers [SQL Server], defecting target servers"
   - "defecting target servers"
-ms.assetid: a6da262b-7b38-4ce4-bfd6-6a557c6e8a84
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
 ---
 # Defect a Target Server from a Master Server
@@ -25,7 +21,7 @@ monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
 > [!IMPORTANT]  
 > On [Azure SQL Managed Instance](/azure/sql-database/sql-database-managed-instance), most, but not all SQL Server Agent features are currently supported. See [Azure SQL Managed Instance T-SQL differences from SQL Server](/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) for details.
 
-This topic describes how to defect a target server from a master server in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)], or SQL Server Management Objects (SMO). Run this procedure from the target server.  
+This topic describes how to defect a target server from a master server in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] by using SQL Server Management Studio, [!INCLUDE[tsql](../../includes/tsql-md.md)], or SQL Server Management Objects (SMO). Run this procedure from the target server.  
   
 ## <a name="BeforeYouBegin"></a>Before You Begin  
   
@@ -48,7 +44,7 @@ To execute this stored procedure, a user must be a member of the **sysadmin** fi
   
 #### To defect a target server from a master server  
   
-1.  Connect to the [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
+1.  Connect to the [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  From the Standard bar, click **New Query**.  
   

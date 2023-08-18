@@ -1,19 +1,15 @@
 ---
+title: "OData Connection Manager"
 description: "OData Connection Manager"
-title: "OData Connection Manager | Microsoft Docs"
-ms.date: "03/01/2017"
-ms.prod: sql
-ms.prod_service: "integration-services"
-ms.reviewer: ""
-ms.custom: ""
-ms.technology: integration-services
-ms.topic: conceptual
-ms.assetid: 3caa4372-aff3-4c0f-9ecd-97870948b8d0
-f1_keywords: 
-  - "sql13.dts.designer.odatasource.connectionmanager.f1"
-  - "sql13.dts.designer.odataconnectionmanager.f1"
 author: chugugrace
 ms.author: chugu
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+f1_keywords:
+  - "sql13.dts.designer.odatasource.connectionmanager.f1"
+  - "sql13.dts.designer.odataconnectionmanager.f1"
 ---
 # OData Connection Manager
 
@@ -30,7 +26,9 @@ ms.author: chugu
 -   Right-click the **Connection Managers** folder in **Solution Explorer**, and then click **New Connection Manager**. Select **ODATA** for **Connection manager type**.  
   
 -   Right-click in the **Connection Managers** pane at the bottom of the package designer, and then select **New Connection**. Select **ODATA** for **Connection manager type**.  
-  
+> [!NOTE]
+> Make sure that the international settings language in your Visual Studio / SQL Server Data Tools (SSDT) is aligned to the default language of the target SQL Server instance where the SSIS packages are deployed.
+>   
 ## Connection Manager Authentication  
  The OData connection manager supports five modes of authentication.  
   
@@ -58,7 +56,7 @@ To connect to Microsoft Dynamics AX Online or Microsoft Dynamics CRM online, you
   
 |Property|Default Value|Description|  
 |-|-|-|
-|Keep Alive|False|Value of the “Keep-Alive” header when sending web request.|
+|Keep Alive|False|Value of the "Keep-Alive" header when sending web request.|
 |Max Received Message Size|4TB|The max received message size in byte when sending web request.|
 |Retry Count|5|Retry count when sending web request.|
 |Retry Sleep|100|Sleep time in millisecond for retry when sending web request.|

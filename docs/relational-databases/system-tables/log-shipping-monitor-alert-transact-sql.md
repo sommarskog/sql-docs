@@ -1,23 +1,19 @@
 ---
-description: "log_shipping_monitor_alert (Transact-SQL)"
-title: "log_shipping_monitor_alert (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "log_shipping_monitor_alert (Transact-SQL)"
+description: log_shipping_monitor_alert (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "06/10/2016"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "log_shipping_monitor_alert"
   - "log_shipping_monitor_alert_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "log_shipping_monitor_alert system table"
-ms.assetid: 1c775e48-9898-4149-b9d1-04d465f23438
-author: cawrites
-ms.author: chadam
+dev_langs:
+  - "TSQL"
 ---
 # log_shipping_monitor_alert (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,26 +1,26 @@
 ---
-title: "Formatting Text and Placeholders (Report Builder) | Microsoft Docs"
-description: Improve readability of your reports with format choices for fonts, styles, colors, and alignment within text or a data region in Report Builder.
+title: "Format text and placeholders in paginated reports"
+description: Improve readability of your paginated reports with format choices for fonts, styles, colors, and alignment within text or a data region in Report Builder.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 03/01/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-design
-
-
+ms.service: reporting-services
+ms.subservice: report-design
 ms.topic: conceptual
-f1_keywords: 
+ms.custom: updatefrequency5
+f1_keywords:
   - "sql11.rtp.rptdesigner.placeholderproperties.font.f1"
   - "10118"
   - "10135"
   - "sql11.rtp.rptdesigner.textboxproperties.font.f1"
   - "10132"
   - "sql11.rtp.rptdesigner.textproperties.font.f1"
-ms.assetid: 26a4baf2-7bc5-4634-b136-552687ffa477
-author: maggiesMSFT
-ms.author: maggies
 ---
-# Formatting Text and Placeholders (Report Builder and SSRS)
-  A text box can be a report item or an individual cell within a data region that contains text, a calculated field, a pointer to a field in a database, or a combination of all three items. You can mix fonts and colors, add bold and italic styles, and use paragraph styles such as alignment and hanging indents. You can format an entire text box or you can format specific text, numbers, expressions, or fields within the text box.  
+# Format text and placeholders in paginated reports (Report Builder)
+
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-ssrs-rb](../../includes/ssrs-appliesto-ssrs-rb.md)] [!INCLUDE [ssrs-appliesto-pbi-rb](../../includes/ssrs-appliesto-pbi-rb.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
+
+A text box can be a paginated report item. It can also be an individual cell within a data region that contains text, a calculated field, and a pointer to a field in a database, or a combination of all three items. You can mix fonts and colors, add bold and italic styles, and use paragraph styles such as alignment and hanging indents. You can format an entire text box or you can format specific text, numbers, expressions, or fields within the text box.  
   
  Font, size, color, and effects all contribute to the readability of a report. Font, font style, font size, and underline effects can be applied to text within a text box or data region. By default, the report font that is used is Arial, 10 points, and black. By using the **Text Box** and **Text Properties** dialog boxes, you can specify how the text appears when the report is rendered.  
   

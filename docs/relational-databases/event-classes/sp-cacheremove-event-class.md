@@ -1,21 +1,18 @@
 ---
+title: "SP:CacheRemove Event Class"
 description: "SP:CacheRemove Event Class"
-title: "SP:CacheRemove Event Class | Microsoft Docs"
-ms.custom: ""
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: supportability
+ms.service: sql
+ms.subservice: supportability
 ms.topic: reference
-helpviewer_keywords: 
+helpviewer_keywords:
   - "SP:CacheRemove event class"
-ms.assetid: aaa3c5c4-2d3a-4832-a473-ce9bd4fb1c17
-author: "stevestein"
-ms.author: "sstein"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SP:CacheRemove Event Class
-[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
   The SP:CacheRemove event class indicates that the stored procedure has been removed from the plan cache.  
   
 ## SP:CacheRemove Event Class Data Columns  

@@ -1,27 +1,26 @@
 ---
 title: System databases
-description: System databases in Parallel Data Warehouse (PDW).
-author: mzaman1 
-ms.prod: sql
-ms.technology: data-warehouse
-ms.topic: conceptual
-ms.date: 04/17/2018
-ms.author: murshedz
+description: Learn about system databases, which are databases that SQL Server PDW uses to manage users, databases, and temporary data.
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.reviewer: martinle
-ms.custom: seo-dt-2019
+ms.date: 05/06/2022
+ms.service: sql
+ms.subservice: data-warehouse
+ms.topic: conceptual
+ms.custom: kr2b-contr-experiment
 ---
 
-# System databases in Parallel Data Warehouse (PDW)
-System databases are databases that SQL Server PDW uses to manage users, databases, and temporary data. SQL Server PDW includes the following system databases: master, and tempdb.  
+# System databases in Parallel Data Warehouse
+
+System databases are databases that SQL Server Parallel Data Warehouse (PDW) uses to manage users, databases, and temporary data. SQL Server PDW includes the following system databases: `master` and `tempdb`.  
   
-## System Database Topics  
+## System databases  
   
--   [master Database](master-database.md)  
+- [master Database](master-database.md)  
+- [tempdb Database](tempdb-database.md)  
   
--   [tempdb Database](tempdb-database.md)  
-  
-<!-- MISSING LINKS 
-## See Also  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
--->
-  
+## Next steps
+
+[Reserved database names in Parallel Data Warehouse](reserved-database-names.md)
+<!-- MISSING LINKS [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  -->

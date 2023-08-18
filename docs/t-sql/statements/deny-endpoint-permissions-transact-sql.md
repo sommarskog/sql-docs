@@ -1,31 +1,27 @@
 ---
-description: "DENY Endpoint Permissions (Transact-SQL)"
-title: "DENY Endpoint Permissions (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "DENY Endpoint Permissions (Transact-SQL)"
+description: DENY Endpoint Permissions (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "05/15/2017"
-ms.prod: sql
-ms.prod_service: "sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "endpoints [SQL Server], permissions"
   - "DENY statement, endpoints"
   - "denying permissions [SQL Server], endpoints"
   - "permissions [SQL Server], endpoints"
-ms.assetid: 3ac40457-7529-4eda-95a4-5247345cc8cf
-author: VanMSFT
-ms.author: vanto
+dev_langs:
+  - "TSQL"
 ---
 # DENY Endpoint Permissions (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [sql-asdbmi](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Denies permissions on an endpoint.  
 
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

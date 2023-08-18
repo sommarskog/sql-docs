@@ -1,21 +1,18 @@
 ---
+title: "FT:Crawl Started Event Class"
 description: "FT:Crawl Started Event Class"
-title: "FT:Crawl Started Event Class | Microsoft Docs"
-ms.custom: ""
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: supportability
+ms.service: sql
+ms.subservice: supportability
 ms.topic: reference
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Crawl Started event class"
-ms.assetid: 2535b856-97e8-4fb2-8ba0-5d5446355fa6
-author: "stevestein"
-ms.author: "sstein"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # FT:Crawl Started Event Class
-[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
   The **FT:Crawl Started** event class indicates that a full-text crawl (population) has started. Use this event class to check if a crawl request is actually being picked up by worker tasks.  
   
 ## FT: Crawl Started Event Class Data Columns  

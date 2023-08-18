@@ -1,14 +1,14 @@
 ---
+title: "Subscription Expiration and Deactivation"
 description: "Subscription Expiration and Deactivation"
-title: "Subscription Expiration and Deactivation | Microsoft Docs"
-ms.custom: ""
+author: "MashaMSFT"
+ms.author: "mathoma"
 ms.date: "03/07/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: replication
+ms.service: sql
+ms.subservice: replication
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "Distributors [SQL Server replication], distribution retention period"
   - "subscriptions [SQL Server replication], expiration"
   - "publications [SQL Server replication], publication retention periods"
@@ -18,9 +18,6 @@ helpviewer_keywords:
   - "distribution retention period"
   - "subscriptions [SQL Server replication], deactivation"
   - "deactivating subscriptions"
-ms.assetid: 4d03f5ab-e721-4f56-aebc-60f6a56c1e07
-author: "MashaMSFT"
-ms.author: "mathoma"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # Subscription Expiration and Deactivation
@@ -32,9 +29,9 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ## Transactional Replication  
  Transactional replication uses the maximum distribution retention period (the `@max_distretention` parameter of [sp_adddistributiondb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql.md)) and the publication retention period (the `@retention` parameter of [sp_addpublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)):  
   
--   If a subscription is not synchronized within the maximum distribution retention period (default of 72 hours) and there are changes in the distribution database that have not been delivered to the Subscriber, the subscription will be marked deactivated by the **Distribution clean up** job that runs on the Distributor. The subscription must be reinitialized.  
+-   If a subscription is not synchronized within the maximum distribution retention period (default of 72 hours) and there are changes in the distribution database that have not been delivered to the Subscriber, the subscription will be marked deactivated by the **Expired Subscription clean up** job that runs on the Distributor. The subscription must be reinitialized.  
   
--   If a subscription is not synchronized within the publication retention period (default of 336 hours), the subscription will expire and be dropped by the **Expired subscription clean up** job that runs on the Publisher. The subscription must be recreated and synchronized.  
+-   If a subscription is not synchronized within the publication retention period (default of 336 hours), the subscription will expire and be dropped by the **Expired subscription clean up** job that runs on the Publisher. (Prior to the fix in [KB4014798](https://support.microsoft.com/topic/kb4014798-update-reduces-the-execution-frequency-of-the-sp-mssubscription-cleanup-stored-procedure-in-sql-server-82f6de06-6ce0-3620-bc79-e954df38a536), the job was named **Distribution cleanup**.) The subscription must be recreated and synchronized.  
   
      If a push subscription expires, it is completely removed, but pull subscriptions are not. You must clean up pull subscriptions at the Subscriber. For more information, see [Delete a Pull Subscription](../../relational-databases/replication/delete-a-pull-subscription.md).  
   

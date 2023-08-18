@@ -1,23 +1,19 @@
 ---
-description: "MSdbms_datatype_mapping (Transact-SQL)"
-title: "MSdbms_datatype_mapping (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "MSdbms_datatype_mapping (Transact-SQL)"
+description: MSdbms_datatype_mapping (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "03/04/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: replication
+ms.service: sql
+ms.subservice: replication
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "MSdbms_datatype_mapping_TSQL"
   - "MSdbms_datatype_mapping"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "MSdbms_datatype_mapping system table"
-ms.assetid: 13289a0b-dfb0-4771-ad80-4c5f83cded99
-author: cawrites
-ms.author: chadam
+dev_langs:
+  - "TSQL"
 ---
 # MSdbms_datatype_mapping (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

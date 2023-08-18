@@ -1,16 +1,12 @@
 ---
+title: "Repair a Failed SQL Server Installation"
 description: "Repair a Failed SQL Server Installation"
-title: "Repair a Failed SQL Server Installation | Microsoft Docs"
-deescription: This article describes the scenarios where you can try a repair operation to fix failed SQL Server installation.
-ms.custom: ""
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "09/08/2017"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: install
+ms.service: sql
+ms.subservice: install
 ms.topic: conceptual
-ms.assetid: 90c11b28-892b-44d6-978e-0eee48c75b7d
-author: cawrites
-ms.author: chadam
 monikerRange: ">=sql-server-2016"
 ---
 # Repair a Failed SQL Server Installation

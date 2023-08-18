@@ -1,37 +1,33 @@
 ---
+title: "INDEXKEY_PROPERTY (Transact-SQL)"
 description: "INDEXKEY_PROPERTY (Transact-SQL)"
-title: "INDEXKEY_PROPERTY (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: markingmyname
+ms.author: maghan
 ms.date: "03/06/2017"
-ms.prod: sql
-ms.prod_service: "sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "INDEXKEY_PROPERTY_TSQL"
   - "INDEXKEY_PROPERTY"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "index keys [SQL Server]"
   - "INDEXKEY_PROPERTY function"
   - "viewing index keys"
   - "displaying index keys"
   - "keys [SQL Server], index"
-ms.assetid: 87c0c385-6b2d-4716-ac8c-a3ce6e8d89e9
-author: cawrites
-ms.author: chadam
+dev_langs:
+  - "TSQL"
 ---
 # INDEXKEY_PROPERTY (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Returns information about the index key. Returns NULL for XML indexes.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Instead, use [sys.index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md).  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -71,7 +67,7 @@ INDEXKEY_PROPERTY ( object_ID ,index_ID ,key_ID ,property )
  In the following example, both properties are returned for index ID `1`, key column `1` in the `Production.Location` table.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 SELECT   
     INDEXKEY_PROPERTY(OBJECT_ID('Production.Location', 'U'),  

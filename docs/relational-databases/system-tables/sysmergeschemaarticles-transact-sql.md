@@ -1,23 +1,19 @@
 ---
-description: "sysmergeschemaarticles (Transact-SQL)"
-title: "sysmergeschemaarticles (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sysmergeschemaarticles (Transact-SQL)"
+description: sysmergeschemaarticles (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "03/04/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: replication
+ms.service: sql
+ms.subservice: replication
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sysmergeschemaarticles_TSQL"
   - "sysmergeschemaarticles"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sysmergeschemaarticles system table"
-ms.assetid: b5085979-2f76-48e1-bf3b-765a84003dd9
-author: cawrites
-ms.author: chadam
+dev_langs:
+  - "TSQL"
 ---
 # sysmergeschemaarticles (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

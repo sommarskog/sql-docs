@@ -1,27 +1,23 @@
 ---
+title: "Security Functions (Transact-SQL)"
 description: "Security Functions (Transact-SQL)"
-title: "Security Functions (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: VanMSFT
+ms.author: vanto
 ms.date: "03/15/2017"
-ms.prod: sql
-ms.prod_service: "sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "functions [SQL Server], security"
   - "security functions"
   - "roles [SQL Server], functions"
   - "users [SQL Server], security functions"
   - "security [SQL Server], functions"
-ms.assetid: 7773a87d-2f1b-4951-a225-baf159a7291b
-author: VanMSFT
-ms.author: vanto
+dev_langs:
+  - "TSQL"
 ---
 # Security Functions (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdbmi.md)]
 
   The following functions return information that is useful in managing security. Additional functions are listed under [Cryptographic Functions &#40;Transact-SQL&#41;](../../t-sql/functions/cryptographic-functions-transact-sql.md).  
   

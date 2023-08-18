@@ -1,27 +1,23 @@
 ---
-description: "CREATE EXTERNAL RESOURCE POOL (Transact-SQL)"
-title: "CREATE EXTERNAL RESOURCE POOL (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "CREATE EXTERNAL RESOURCE POOL (Transact-SQL)"
+description: CREATE EXTERNAL RESOURCE POOL (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "08/06/2020"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: machine-learning-services
+ms.service: sql
+ms.subservice: machine-learning-services
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "CREATE EXTERNAL RESOURCE POOL"
   - "CREATE EXTERNAL_RESOURCE_POOL_TSQL"
   - "EXTERNAL RESOURCE POOL"
   - "EXTERNAL_RESOURCE_POOL_TSQL"
   - "EXTERNAL RESOURCE"
   - "EXTERNAL_RESOURCE_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "CREATE EXTERNAL RESOURCE POOL statement"
-ms.assetid: 8cc798ad-c395-461c-b7ff-8c561c098808
-author: dphansen
-ms.author: davidph
-manager: cgronlund
+dev_langs:
+  - "TSQL"
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
 ---
 # CREATE EXTERNAL RESOURCE POOL (Transact-SQL)
@@ -37,7 +33,7 @@ For [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)] in [!
 For [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)], the external pool governs `rterm.exe`, `python.exe`, `BxlServer.exe`, and other processes spawned by them.
 ::: moniker-end
   
-![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
  
 
 ## Syntax  

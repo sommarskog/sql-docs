@@ -1,23 +1,19 @@
 ---
+title: "DDL Event Groups"
 description: "DDL Event Groups"
-title: "DDL Event Groups | Microsoft Docs"
-ms.custom: ""
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "03/28/2018"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: 
+ms.service: sql
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "event groups"
   - "DDL event groups"
   - "DDL triggers, event groups"
-ms.assetid: 12b45cc3-2f91-4609-bb8a-3e82e28bf642
-author: "rothja"
-ms.author: "jroth"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # DDL Event Groups
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
   The following tables list the DDL event groups that can be used to run a DDL trigger or an event notification, and also the [!INCLUDE[tsql](../../includes/tsql-md.md)] statements they cover. Note the inclusive nature of the event groups. For example, a DDL trigger or event notification that specifies FOR DDL_TABLE_EVENTS (10018) covers the CREATE TABLE, ALTER TABLE and DROP TABLE [!INCLUDE[tsql](../../includes/tsql-md.md)] statements. A DDL trigger or event notification that specifies FOR DDL_TABLE_VIEW_EVENTS (10017) covers all [!INCLUDE[tsql](../../includes/tsql-md.md)] statements under the types DDL_TABLE_EVENTS, DDL_VIEW_EVENTS, DDL_INDEX_EVENTS, and DDL_STATISTICS_EVENTS.  
   
 > [!NOTE]  

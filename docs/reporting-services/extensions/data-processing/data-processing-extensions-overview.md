@@ -1,18 +1,15 @@
 ---
-title: "Data Processing Extensions Overview | Microsoft Docs"
+title: "Data Processing Extensions Overview"
 description: See which data processing extensions are included with Reporting Services, and learn how to add custom data processing to your report server.
-ms.date: 03/14/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: extensions
-
-
-ms.topic: reference
-helpviewer_keywords: 
-  - "data processing extensions [Reporting Services], about extensions"
-ms.assetid: 1d652605-9313-4c75-98b4-ba4dcbbb222d
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 03/14/2017
+ms.service: reporting-services
+ms.subservice: extensions
+ms.topic: reference
+ms.custom: updatefrequency5
+helpviewer_keywords:
+  - "data processing extensions [Reporting Services], about extensions"
 ---
 # Data Processing Extensions Overview
   Data processing extensions in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] enable you to connect to a data source and retrieve data. They also serve as a bridge between a data source and a dataset. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] data processing extensions are modeled after a subset of the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] data provider interfaces.  
@@ -65,7 +62,7 @@ The step-by-step process flow of a data extension that is called by the report s
   
 -   A deployment computer with Report Designer or a report server installed.  
   
--   A development computer with [!INCLUDE[vsprvsext](../../../includes/vsprvsext-md.md)] or above, or the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Software Development Kit (SDK) installed.  
+-   A development computer with [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs2005](../../../includes/vsprvs2005-md.md)] or above, or the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Software Development Kit (SDK) installed.  
   
 -   An in-depth understanding of [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] features and capabilities.  
   

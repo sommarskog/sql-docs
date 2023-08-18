@@ -1,19 +1,16 @@
 ---
 title: "Availability group is not ready for automatic failover"
 description: "Learn how to identify possible reasons why an Always On availability group is not ready for failover."
-ms.custom: "seodec18"
+author: MashaMSFT
+ms.author: mathoma
 ms.date: "05/17/2016"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: availability-groups
+ms.service: sql
+ms.subservice: availability-groups
 ms.topic: end-user-help
-f1_keywords: 
+f1_keywords:
   - "sql13.swb.agdashboard.agp3autofailover.issues.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Availability Groups [SQL Server], policies"
-ms.assetid: 28261014-342c-442a-bd89-6d04b8d4e8b7
-author: cawrites
-ms.author: chadam
 ---
 # Always On availability group is not ready for automatic failover
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

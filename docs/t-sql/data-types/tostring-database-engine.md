@@ -1,30 +1,26 @@
 ---
-description: "ToString (Database Engine)"
 title: ToString (Database Engine)
-ms.custom: ""
-ms.date: "07/23/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
-ms.topic: "reference"
-f1_keywords: 
-  - "ToString"
-  - "ToString_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "ToString [Database Engine]"
-ms.assetid: 5fc11ca5-c26d-4518-9512-67aa0270f110
+description: "ToString (Database Engine)"
 author: MikeRayMSFT
 ms.author: mikeray
+ms.date: 10/05/2021
+ms.service: sql
+ms.subservice: t-sql
+ms.topic: "reference"
+f1_keywords:
+  - "ToString"
+  - "ToString_TSQL"
+helpviewer_keywords:
+  - "ToString [Database Engine]"
+dev_langs:
+  - "TSQL"
 ---
 
 # ToString (Database Engine)
 
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
-Returns a string with the logical representation of *this*. ToString is called implicitly when a conversion from **hierarchyid** to a string type occurs. Acts as the opposite of [Parse &#40;Database Engine&#41;](../../t-sql/data-types/parse-database-engine.md).
+Returns a string with the logical representation of *this*. ToString is called implicitly when a conversion from **hierarchyid** to a string type occurs. Acts as the opposite of [Parse \(Database Engine\)](../../t-sql/data-types/parse-database-engine.md).
   
 ## Syntax  
 

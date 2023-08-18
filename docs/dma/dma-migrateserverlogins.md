@@ -1,19 +1,15 @@
 ---
 title: "Migrate SQL Server logins with Data Migration Assistant"
 description: Migrate SQL Server logins with Data Migration Assistant, including SQL Server upgrades to later versions of the on-premises product or to SQL Server on Azure VMs.
+author: ajithkr-ms
+ms.author: ajithkr
 ms.date: "10/22/2019"
-ms.prod: sql
-ms.prod_service: "dma"
-ms.reviewer: ""
-ms.technology: dma
+ms.service: sql
+ms.subservice: dma
 ms.topic: conceptual
-keywords: ""
-helpviewer_keywords: 
+ms.custom: intro-migration
+helpviewer_keywords:
   - "Data Migration Assistant, login migration"
-ms.assetid: ""
-author: rajeshsetlem
-ms.author: rajpo
-ms.custom: "seo-lt-2019"
 ---
 
 # Migrate SQL Server logins with Data Migration Assistant

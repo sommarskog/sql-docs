@@ -1,24 +1,21 @@
 ---
+title: "New GUI Features in SSMA For Sybase (SybaseToSQL)"
 description: "New GUI Features in SSMA For Sybase (SybaseToSQL)"
-title: "New GUI Features in SSMA For Sybase (SybaseToSQL) | Microsoft Docs"
-ms.custom: ""
+author: cpichuka
+ms.author: cpichuka
 ms.date: "01/19/2017"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: ssma
+ms.service: sql
+ms.subservice: ssma
 ms.topic: conceptual
-ms.assetid: d3c60e8c-f0a7-4590-8ece-c68ceaeaea4a
-author: "nahk-ivanov"
-ms.author: "alexiva"
 ---
 # New GUI Features in SSMA For Sybase (SybaseToSQL)
 This chapter describes new features of SSMA User Interface.  
   
 ## Layouts  
-This feature allows you to choose one of two predefined windows lay-out or create your own layout. To access layout submenu, on the View menu point to Layouts. There you can choose one of the existing layouts, add new layout or manage layouts.  
+This feature allows you to choose one of two predefined windows layout or create your own layout. To access layout submenu, on the View menu point to Layouts. There you can choose one of the existing layouts, add new layout or manage layouts.  
   
 ### Add Current Layout  
-To save current windows layout, on the View menu point to Layouts, then click Add Current Layout.  
+To save the current layout, on the View menu point to Layouts, then click Add Current Layout.  
   
 ### Choose predefined layout  
 To choose one of the predefined layouts, on the View menu point to Layouts, then click Default Layout or Without Explorers. You can also use shortcuts Ctrl+Alt+1 or Ctrl+Alt+2 for predefined layouts.  
@@ -47,7 +44,7 @@ You can set/remove a bookmark in the following ways:
   
 -   Use button Toggle Bookmark on top of source or target SQL window  
   
--   Click on the grey area on the left of the SQL window  
+-   Select the grey area on the left of the SQL window  
   
 -   Use Ctrl+Shift+&lt;0..9&gt; to set numbered bookmark  
   

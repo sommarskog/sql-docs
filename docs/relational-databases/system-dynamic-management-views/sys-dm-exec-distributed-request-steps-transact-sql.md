@@ -1,31 +1,27 @@
 ---
-description: "sys.dm_exec_distributed_request_steps (Transact-SQL)"
-title: "sys.dm_exec_distributed_request_steps (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.dm_exec_distributed_request_steps (Transact-SQL)"
+description: sys.dm_exec_distributed_request_steps (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/15/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "SYS.DM_EXEC_DISTRIBUTED_REQUEST_STEPS_TSQL"
   - "DM_EXEC_DISTRIBUTED_REQUEST_STEPS_TSQL"
   - "DM_EXEC_DISTRIBUTED_REQUEST_STEPS"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "PolyBase,views"
   - "PolyBase"
   - "dm_exec_distributed_request_steps"
   - "sys.dm_exec_distributed_request_steps management view"
-ms.assetid: 1954541d-b716-4e03-8fcc-7022f428e01d
-author: WilliamDAssafMSFT
-ms.author: wiassaf
-monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+dev_langs:
+  - "TSQL"
+monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_exec_distributed_request_steps (Transact-SQL)
-[!INCLUDE [sqlserver2016-asa-pdw](../../includes/applies-to-version/sqlserver2016-asa-pdw.md)]
+[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   Holds information about all steps that compose a given PolyBase request or query. It lists one row per query step.  
   

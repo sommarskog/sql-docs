@@ -1,23 +1,19 @@
 ---
-title: "Restore Files to a New Location (SQL Server) | Microsoft Docs"
+title: "Restore Files to a New Location (SQL Server)"
 description: This article shows you how to restore files to a new location in SQL Server by using SQL Server Management Studio or Transact-SQL.
-ms.custom: ""
+author: MashaMSFT
+ms.author: mathoma
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: backup-restore
-ms.reviewer: ""
-ms.technology: backup-restore
+ms.service: sql
+ms.subservice: backup-restore
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "restoring files [SQL Server], how-to topics"
   - "restoring databases [SQL Server], moving"
   - "restoring files [SQL Server], steps"
   - "file restores [SQL Server], how-to topics"
   - "filegroups [SQL Server], restoring"
   - "restoring filegroups [SQL Server]"
-ms.assetid: b4f4791d-646e-4632-9980-baae9cb1aade
-author: cawrites
-ms.author: chadam
 ---
 # Restore Files to a New Location (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -105,7 +101,7 @@ ms.author: chadam
     |**File Type**|Specifies the type of data in the backup: **Data**, **Log**, or **Filestream Data**. Data that is contained in tables is in **Data** files. Transaction log data is in **Log** files. Binary large object (BLOB) data that is stored on the file system is in **Filestream Data** files.|  
     |**Restore As**|The full path of the database file to be restored. To specify a new restore file, click the text box and edit the suggested path and file name. Changing the path or file name in the **Restore As** column is equivalent to using the MOVE option in a [!INCLUDE[tsql](../../includes/tsql-md.md)] RESTORE statement.|  
   
-8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+8.  Select **OK**.
   
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
   

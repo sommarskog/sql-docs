@@ -1,18 +1,15 @@
 ---
 title: Using XA with Microsoft ODBC Driver
 description: The Microsoft ODBC Driver for SQL Server provides support for XA transactions with the Distributed Transaction Coordinator (DTC) on Windows, Linux, and macOS.
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
+ms.reviewer: v-davidengel
 ms.date: 04/20/2021
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: v-daenge
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "driver"
-author: "karinazhou"
-ms.author: "v-jizho2"
-manager: kenvh
 ---
 # Using XA Transactions
 

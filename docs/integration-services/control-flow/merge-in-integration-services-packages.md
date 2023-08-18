@@ -1,25 +1,21 @@
 ---
+title: "MERGE in Integration Services Packages"
 description: "MERGE in Integration Services Packages"
-title: "MERGE in Integration Services Packages | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "integration-services"
-ms.reviewer: ""
-ms.technology: integration-services
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "MERGE statement [SQL Server]"
-ms.assetid: 7e44a5c2-e6d6-4fe2-a079-4f95ccdb147b
 author: chugugrace
 ms.author: chugu
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+helpviewer_keywords:
+  - "MERGE statement [SQL Server]"
 ---
 # MERGE in Integration Services Packages
 
 [!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
-  In the current release of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], the SQL statement in an Execute SQL task can contain a MERGE statement. This MERGE statement enables you to accomplish multiple INSERT, UPDATE, and DELETE operations in a single statement.  
+  In the current release of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], the SQL statement in an Execute SQL task can contain a MERGE statement. This MERGE statement enables you to accomplish multiple INSERT, UPDATE, and DELETE operations in a single statement.  
   
  To use the MERGE statement in a package, follow these steps:  
   
@@ -32,13 +28,12 @@ ms.author: chugu
     > [!NOTE]  
     >  Although a MERGE statement typically requires a staging table in this scenario, the performance of the MERGE statement usually exceeds that of the row-by-row lookup performed by the Lookup transformation. MERGE is also useful when the large size of a lookup table would test the memory that is available to the Lookup transformation for caching its reference table.  
   
- For a sample destination component that supports the use of the MERGE statement, see the CodePlex community sample, [MERGE Destination](https://go.microsoft.com/fwlink/?LinkId=141215).  
   
 ## Using MERGE  
- Typically, you use the MERGE statement when you want to apply changes that include inserts, updates, and deletions from one table to another table. Prior to [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], this process required both a Lookup transformation and multiple OLE DB Command transformations. The Lookup transformation performed a row-by-row lookup to determine whether each row was new or changed. The OLE DB Command transformations then performed the necessary INSERT, UPDATE, and DELETE operations. Beginning in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], a single MERGE statement can replace both the Lookup transformation and the corresponding OLE DB Command transformations.  
+ Typically, you use the MERGE statement when you want to apply changes that include inserts, updates, and deletions from one table to another table. Prior to [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)], this process required both a Lookup transformation and multiple OLE DB Command transformations. The Lookup transformation performed a row-by-row lookup to determine whether each row was new or changed. The OLE DB Command transformations then performed the necessary INSERT, UPDATE, and DELETE operations. Beginning in [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)], a single MERGE statement can replace both the Lookup transformation and the corresponding OLE DB Command transformations.  
   
 ### MERGE with Incremental Loads  
- The change data capture functionality that is new in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] makes it easier to perform incremental loads reliably to a data warehouse. As an alternative to using parameterized OLE DB Command transformations to perform the inserts and the updates, you can use the MERGE statement to combine both operations.  
+ The change data capture functionality that is new in [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] makes it easier to perform incremental loads reliably to a data warehouse. As an alternative to using parameterized OLE DB Command transformations to perform the inserts and the updates, you can use the MERGE statement to combine both operations.  
   
  For more information, see [Apply the Changes to the Destination](../../integration-services/change-data-capture/apply-the-changes-to-the-destination.md).  
   
@@ -66,5 +61,3 @@ ms.author: chugu
   
 ### Track Inventory  
  The Inventory database has a ProductsInventory table that has ProductID and StockOnHand columns. A Shipments table with ProductID, CustomerID, and Quantity columns tracks shipments of products to customers. The ProductInventory table has to be updated daily based on information in the Shipments table. A single MERGE statement can reduce the inventory in the ProductInventory table based on the shipments made. If the inventory for a product has been reduced to 0, that MERGE statement can also delete that product row from the ProductInventory table.  
-  
-  

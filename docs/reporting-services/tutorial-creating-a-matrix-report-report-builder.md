@@ -1,15 +1,13 @@
 ---
-title: "Tutorial: Creating a Matrix Report (Report Builder) | Microsoft Docs"
+title: "Tutorial: Creating a Matrix Report (Report Builder)"
 description: Learn how to create a Reporting Services paginated report with a matrix of sample sales data in nested row and column groups.
-ms.date: 06/23/2016
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: reporting-services
-
-ms.topic: conceptual
-ms.assetid: 9ee19c2e-2a8c-4bb0-9274-04a5812c2e96
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 06/23/2016
+ms.service: reporting-services
+ms.subservice: reporting-services
+ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 # Tutorial: Creating a Matrix Report (Report Builder)
 This tutorial teaches you to create a [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] paginated report with a matrix of sample sales data in nested row and column groups. 
@@ -258,7 +256,7 @@ The corner area is in the upper left corner of the matrix. Depending on the numb
   
 6.  On the **Border** tab > **Presets** > **None**.
   
-9. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
+9. Select **OK**.
   
 10. Click **Run** to preview your report.  
   
@@ -331,9 +329,10 @@ A text box can also display text as horizontal, vertical (top to bottom). For mo
   
 2.  Select the cell that contains `[Territory].` 
 
-    >**Note**: Select the cell, not the text. The WritingMode property is only available for the cell.
-    
-     ![Screenshot showing the Territory cell in the report builder matrix report.](../reporting-services/media/report-builder-select-territory-cell.png)
+    > [!NOTE]  
+    > Select the cell, not the text. The WritingMode property is only available for the cell.
+
+    ![Screenshot showing the Territory cell in the report builder matrix report.](../reporting-services/media/report-builder-select-territory-cell.png)
   
 3.  In the Properties pane, locate the WritingMode property and change it from **Default** to **Rotate270**.  
   

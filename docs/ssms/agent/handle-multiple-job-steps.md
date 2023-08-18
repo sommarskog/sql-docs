@@ -1,22 +1,18 @@
 ---
-description: "Handle Multiple Job Steps"
 title: "Handle Multiple Job Steps"
-ms.custom: seo-lt-2019
+description: "Handle Multiple Job Steps"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
+ms.service: sql
+ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "job steps [SQL Server Agent]"
   - "ordering job steps [SQL Server]"
   - "multiple job steps"
   - "SQL Server Agent jobs, job steps"
   - "control of flow for jobs [SQL Server]"
-ms.assetid: 7aba19ff-72b3-45f6-8e54-23f4988d63a8
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
 ---
 # Handle Multiple Job Steps
@@ -39,7 +35,7 @@ You define a control-of-flow action for the success and failure of each job step
 Job steps must be self-contained. That is, a job cannot pass Boolean values, data, or numeric values between job steps. You can, however, pass values from one [!INCLUDE[tsql](../../includes/tsql-md.md)] job step to another by using permanent tables or global temporary tables. You can pass values from job steps that run executable programs from one job step to another job step by using files. For example, the executable run by one job step writes a file, and the executable run by a subsequent job step reads the file.  
   
 > [!NOTE]  
-> If you create looping job steps (job step 1 is followed by job step 2, then job step 2 returns to job step 1), a warning message appears when the job is created using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+> If you create looping job steps (job step 1 is followed by job step 2, then job step 2 returns to job step 1), a warning message appears when the job is created using SQL Server Management Studio.  
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent records job and job step information in the job history.  
   

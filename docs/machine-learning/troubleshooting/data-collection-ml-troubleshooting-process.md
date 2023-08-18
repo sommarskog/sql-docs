@@ -1,18 +1,19 @@
 ---
 title: Collect data for troubleshooting Python and R
 description: Learn how to collect the data you need when attempting to resolve problems in SQL Server Machine Learning Services on your own or with the help of Microsoft customer support.
-ms.prod: sql
-ms.technology: machine-learning-services
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: 03/31/2021
+ms.service: sql
+ms.subservice: machine-learning-services
 ms.topic: troubleshooting
-author: dphansen
-ms.author: davidph
-ms.custom: contperf-fy21q3
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
 ---
 # Collect data to troubleshoot Python and R scripts with SQL Server Machine Learning Services
 
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
+
+[!INCLUDE [ML Server retirement banner](~/includes/machine-learning-server-retirement.md)]
 
 This article describes how to collect the data you need when you're attempting to resolve problems in [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md). This data can be useful whether you're resolving problems on your own or with the help of Microsoft customer support.
 
@@ -228,7 +229,7 @@ For example, the following log messages are related to the extensibility framewo
 
 For example, the following messages are common system errors that are related to the SQL Server extensibility framework:
 
-* *The SQL Server Launchpad (MSSQLSERVER) service failed to start due to the following error:  <text>*
+* *The SQL Server Launchpad (MSSQLSERVER) service failed to start due to the following error:  \<text\>*
 
 * *The service did not respond to the start or control request in a timely fashion.*
 
@@ -293,7 +294,7 @@ Because it might not be possible to exclude all folders that are needed by the S
 
 1. To determine whether SQL Server supports remote connections, see [Configure remote server connections](../../database-engine/configure-windows/view-or-configure-remote-server-connection-options-sql-server.md).
 
-2. Determine whether a firewall rule has been created for SQL Server. For security reasons, in a default installation, it might not be possible for remote R or Python client to connect to the instance. For more information, see [Troubleshooting connecting to SQL Server](../../database-engine/configure-windows/troubleshoot-connecting-to-the-sql-server-database-engine.md).
+2. Determine whether a firewall rule has been created for SQL Server. For security reasons, in a default installation, it might not be possible for remote R or Python client to connect to the instance. For more information, see [Troubleshooting connecting to SQL Server](/troubleshoot/sql/connect/network-related-or-instance-specific-error-occurred-while-establishing-connection).
 
 ## See also
 

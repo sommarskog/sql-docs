@@ -1,22 +1,18 @@
 ---
 title: "Find and Replace"
 description: Learn how to use the Find and Replace dialog box to find and replace text.
-ms.custom: seo-lt-2019
-ms.date: "03/01/2017"
-ms.prod: sql
-ms.prod_service: "sql-tools"
-ms.technology: ssms
-ms.reviewer: ""
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "Find and Replace dialog box"
-ms.assetid: 09297893-d80b-4c88-86b4-52bfb639e521
 author: markingmyname
 ms.author: maghan
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: ssms
+ms.topic: conceptual
+helpviewer_keywords:
+  - "Find and Replace dialog box"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Find and Replace
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   Use the **Find and Replace** dialog box to locate text within a file and optionally replace it. Versions of the **Find and Replace** dialog box with slightly different options can appear, depending on how the dialog box was opened. On the **Edit** menu, point to **Find and Replace**, and then click **Quick Find** to open the dialog box with find options, but without replace options. On the **Edit** menu, point to **Find and Replace**, and then click **Quick Replace** to open the dialog box with both find options and replace options.  
   
  Toolbar buttons and shortcut keys are also available to open the **Find and Replace** dialog box.  
@@ -64,7 +60,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Look In  
  **Look in**  
- Select the location to look for the text specified in **Find what**. Options are **Current Document**, which searches the document window that had focus when the dialog box was opened, and **All Open Documents**, which searches all document windows that are currently open in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+ Select the location to look for the text specified in **Find what**. Options are **Current Document**, which searches the document window that had focus when the dialog box was opened, and **All Open Documents**, which searches all document windows that are currently open in SQL Server Management Studio.  
   
 ## Find Options  
  You can expand or collapse the **Find Options** section. The following options can be selected or cleared.  
@@ -88,7 +84,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
  Special notations define patterns of text to match. For a list, see [Search Text with Regular Expressions](./search-text-with-regular-expressions.md).  
   
  **Wildcards**  
- Special characters such as asterisks (`*`) and question marks (`?`) represent one or more characters. For a list, see [Search Text with Wildcards](./search-text-with-wildcards.md).  
+ Special characters such as asterisks (`*`) and question marks (`?`) represent one or more characters. For a list, see [Search text with regular expressions](./search-text-with-regular-expressions.md).  
   
  **Find Next**  
  Begins searching for the text in the **Find what** box.  

@@ -1,34 +1,30 @@
 ---
+title: "GOTO (Transact-SQL)"
 description: "GOTO (Transact-SQL)"
-title: "GOTO (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/15/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "GOTO"
   - "GOTO_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "skipping statements"
   - "Transact-SQL statements, skipping"
   - "labels [SQL Server]"
   - "statements [SQL Server], skipping"
   - "GOTO statement"
-ms.assetid: 589b6f8e-dc80-416f-9e74-48bed5337f58
-author: cawrites
-ms.author: chadam
+dev_langs:
+  - "TSQL"
 ---
 # GOTO (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Alters the flow of execution to a label. The [!INCLUDE[tsql](../../includes/tsql-md.md)] statement or statements that follow GOTO are skipped and processing continues at the label. GOTO statements and labels can be used anywhere within a procedure, batch, or statement block. GOTO statements can be nested.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

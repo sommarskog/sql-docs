@@ -1,22 +1,17 @@
 ---
+title: "sqlsrv_field_metadata"
 description: "sqlsrv_field_metadata"
-title: "sqlsrv_field_metadata | Microsoft Docs"
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "01/29/2021"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: reference
-apiname: 
-  - "sqlsrv_field_metadata"
-apitype: "NA"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "API Reference, sqlsrv_field_metadata"
   - "sqlsrv_field_metadata"
-ms.assetid: c02f6942-0484-4567-a78e-fe8aa2053536
-author: David-Engel
-ms.author: v-daenge
+apiname: "sqlsrv_field_metadata"
+apitype: "NA"
 ---
 # sqlsrv_field_metadata
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

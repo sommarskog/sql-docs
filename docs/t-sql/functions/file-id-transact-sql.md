@@ -1,38 +1,34 @@
 ---
+title: "FILE_ID (Transact-SQL)"
 description: "FILE_ID (Transact-SQL)"
-title: "FILE_ID (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: markingmyname
+ms.author: maghan
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "FILE_ID"
   - "FILE_ID_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "IDs [SQL Server], files"
   - "file IDs [SQL Server]"
   - "FILE_ID function"
   - "names [SQL Server], files"
   - "identification numbers [SQL Server], files"
   - "file names [SQL Server], FILE_ID"
-ms.assetid: 6a7382cf-a360-4d62-b9d2-5d747f56f076
-author: cawrites
-ms.author: chadam
+dev_langs:
+  - "TSQL"
 ---
 # FILE_ID (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdbmi.md)]
 
 For the given logical name for a component file of the current database, this function returns the file identification (ID) number.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use [FILE_IDEX](../../t-sql/functions/file-idex-transact-sql.md) instead.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -57,12 +53,12 @@ An expression of type **sysname**, representing the logical name of the file who
 In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], the file identification number assigned to full-text catalogs exceeds 32767. Because the `FILE_ID` function has a **smallint** return type, `FILE_ID` will not support full-text files. Use [FILE_IDEX](../../t-sql/functions/file-idex-transact-sql.md) instead.  
   
 ## Examples  
-This example returns the file ID value for the `AdventureWorks_Data` file, a component file of the `ADVENTUREWORKS2012` database.  
+This example returns the file ID value for the `AdventureWorks2022_Data` file, a component file of the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database.  
 
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
-SELECT FILE_ID('AdventureWorks2012_Data')AS 'File ID';  
+SELECT FILE_ID('AdventureWorks2022_Data')AS 'File ID';  
 GO  
 ```  
   

@@ -1,32 +1,28 @@
 ---
-description: "sys.dm_exec_compute_nodes (Transact-SQL)"
-title: "sys.dm_exec_compute_nodes (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.dm_exec_compute_nodes (Transact-SQL)"
+description: sys.dm_exec_compute_nodes (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/15/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "DM_EXEC_COMPUTE_NODES_TSQL"
   - "DM_EXEC_COMPUTE_NODES"
   - "SYS.DM_EXEC_COMPUTE_NODES_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.dm_exec_compute_nodes management view"
   - "PolyBase, views"
   - "PolyBase management views"
   - "dm_exec_compute_nodes management view"
-ms.assetid: 0de4b7a4-401f-4e2d-9ab0-c54587e05154
-author: WilliamDAssafMSFT
-ms.author: wiassaf
-monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+dev_langs:
+  - "TSQL"
+monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_exec_compute_nodes (Transact-SQL)
 
-[!INCLUDE [sqlserver2016-asa-pdw](../../includes/applies-to-version/sqlserver2016-asa-pdw.md)]
+[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   Holds information about nodes used with PolyBase data management. It lists one row per node.  
   

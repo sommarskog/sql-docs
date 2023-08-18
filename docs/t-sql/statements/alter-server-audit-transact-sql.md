@@ -1,25 +1,21 @@
 ---
-description: "ALTER SERVER AUDIT  (Transact-SQL)"
-title: "ALTER SERVER AUDIT  (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "09/07/2018"
-ms.prod: sql
-ms.prod_service: "sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
+title: "ALTER SERVER AUDIT  (Transact-SQL)"
+description: ALTER SERVER AUDIT  (Transact-SQL)
+author: sravanisaluru
+ms.author: srsaluru
+ms.date: "03/23/2022"
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "ALTER_SERVER_AUDIT_TSQL"
   - "ALTER SERVER AUDIT"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "server audit [SQL Server]"
   - "audits [SQL Server], specification"
   - "ALTER SERVER AUDIT statement"
-ms.assetid: 63426d31-7a5c-4378-aa9e-afcf4f64ceb3
-author: VanMSFT
-ms.author: vanto
+dev_langs:
+  - "TSQL"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017"
 ---
 # ALTER SERVER AUDIT  (Transact-SQL)
@@ -27,7 +23,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-201
 
   Alters a server audit object using the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit feature. For more information, see [SQL Server Audit &#40;Database Engine&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
 
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -76,7 +72,7 @@ ALTER SERVER AUDIT audit_name
  Determines the location of the audit target. The options are a binary file, the Windows application log, or the Windows security log.  
 
 > [!IMPORTANT]
-> In Azure SQL Managed Instance, SQL Audit works at the server level and stores `.xel` files in Azure blob storage.
+> In Azure SQL Managed Instance, SQL Audit works at the server level and stores `.xel` files in Azure Blob Storage.
   
  FILEPATH **= '**_os\_file\_path_**'**  
  The path of the audit trail. The file name is generated based on the audit name and audit GUID.  

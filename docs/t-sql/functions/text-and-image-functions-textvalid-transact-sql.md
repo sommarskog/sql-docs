@@ -1,38 +1,34 @@
 ---
+title: "TEXTVALID (Transact-SQL)"
 description: "Text and Image Functions - TEXTVALID (Transact-SQL)"
-title: "TEXTVALID (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "03/06/2017"
-ms.prod: sql
-ms.prod_service: "sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "TEXTVALID_TSQL"
   - "TEXTVALID"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "invalid text pointers [SQL Server]"
   - "valid text pointers [SQL Server]"
   - "TEXTVALID function"
   - "checking text pointers"
   - "text-pointer values"
   - "verifying text pointers"
-ms.assetid: 9411c349-b59b-4740-a270-92f91d81ad23
-author: julieMSFT
-ms.author: jrasnick
+dev_langs:
+  - "TSQL"
 ---
 # Text and Image Functions - TEXTVALID (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdbmi.md)]
 
   A **text**, **ntext**, or **image** function that checks whether a specific text pointer is valid.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Alternative functionality is not available.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -62,8 +58,8 @@ TEXTVALID ( 'table.column' ,text_ ptr )
   
 |Function or statement|Description|  
 |---------------------------|-----------------|  
-|PATINDEX**(**'_%pattern%_'**,** _expression_**)**|Returns the character position of a specified character string in **text** and **ntext** columns.|  
-|DATALENGTH**(**_expression_**)**|Returns the length of data in **text**, **ntext**, and **image** columns.|  
+|PATINDEX ( *'_%pattern%_'*, *_expression_* )|Returns the character position of a specified character string in **text** and **ntext** columns.|  
+|DATALENGTH ( *_expression_* )|Returns the length of data in **text**, **ntext**, and **image** columns.| 
 |SET TEXTSIZE|Returns the limit, in bytes, of the **text**, **ntext**, or **image** data to be returned with a SELECT statement.|  
   
 ## Examples  

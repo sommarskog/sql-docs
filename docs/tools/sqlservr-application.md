@@ -1,14 +1,13 @@
 ---
 title: "sqlservr Application"
 description: The sqlservr application starts, stops, pauses, and continues an instance of SQL Server from a command prompt.
-ms.custom: seo-lt-2019
-ms.date: 07/22/2020
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.reviewer: ""
-ms.technology: tools-other
+author: markingmyname
+ms.author: maghan
+ms.date: 10/07/2021
+ms.service: sql
+ms.subservice: tools-other
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "command prompt utilities [SQL Server], sqlservr"
   - "command prompt [SQL Server], pausing/resuming instance of SQL Server"
   - "starting instance of SQL Server"
@@ -20,16 +19,13 @@ helpviewer_keywords:
   - "command prompt [SQL Server], stopping instance of SQL Server"
   - "command prompt [SQL Server], starting instance of SQL Server"
   - "continuing instance of SQL Server"
-ms.assetid: 60e8ef0a-0851-41cf-a6d8-cca1e04cbcdb
-author: markingmyname
-ms.author: maghan
 ---
 
 # sqlservr Application
 
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
-The **sqlservr** application starts, stops, pauses, and continues an instance of [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] from a command prompt.
+The **sqlservr** application starts, stops, pauses, and continues an instance of [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] from a command prompt. Use this procedure to start [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] only for troubleshooting purposes. 
 
 ## Syntax
 
@@ -84,7 +80,7 @@ Displays the server version number.
 Disables the keeping of CPU time and cache-hit ratio statistics. Allows maximum performance.
 
 ## Remarks
-In most cases, the sqlservr.exe program is only used for troubleshooting or major maintenance. When [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] is started from the command prompt with sqlservr.exe, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] does not start as a service, so you cannot stop [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] using **net** commands. Users can connect to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], but [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tools show the status of the service, so [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager correctly indicates that the service is stopped. [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] can connect to the server, but it also indicates that the service is stopped.
+It is recommended to use the methods described in [Database Engine Service Startup Options](../database-engine/configure-windows/database-engine-service-startup-options.md) instead of using the sqlservr.exe program to start [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. In most cases, the sqlservr.exe program is only used for advanced troubleshooting or major maintenance. When [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] is started from the command prompt with sqlservr.exe, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] does not start as a service, so you cannot stop [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] using **net** commands. Users can connect to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], but [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tools show the status of the service, so [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager correctly indicates that the service is stopped. [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] can connect to the server, but it also indicates that the service is stopped.
 
 ## Compatibility Support
 The following parameters are obsolete and not supported in [!INCLUDE[sssql19-md](../includes/sssql19-md.md)].
@@ -93,7 +89,6 @@ The following parameters are obsolete and not supported in [!INCLUDE[sssql19-md]
 |:-----|:-----|
 |**-h** | In earlier versions of 32-bit instances of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] to reserve virtual memory address space for Hot Add memory metadata when AWE is enabled. Supported through [!INCLUDE[sssql14](../includes/sssql14-md.md)]. For more information, see [Discontinued SQL Server Features in SQL Server 2016](../database-engine/discontinued-database-engine-functionality-in-sql-server.md).|
 |**-g** | *memory_to_reserve*<br/><br>Applies to earlier versions of 32-bit instances of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Supported through [!INCLUDE[sssql14](../includes/sssql14-md.md)]. Specifies an integer number of megabytes (MB) of memory that [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] leaves available for memory allocations within the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] process, but outside the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] memory pool. For more information, see [the SQL Server 2014 documentation on Server Memory Configuration Options](/previous-versions/sql/2014/database-engine/configure-windows/server-memory-server-configuration-options?view=sql-server-2014&preserve-view=true).|
-| &nbsp; | &nbsp; |
 
 ## See Also
  [Database Engine Service Startup Options](../database-engine/configure-windows/database-engine-service-startup-options.md)

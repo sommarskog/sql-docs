@@ -1,34 +1,30 @@
 ---
-description: "&#x40;&#x40;TRANCOUNT (Transact-SQL)"
-title: "@@TRANCOUNT (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "@@TRANCOUNT (Transact-SQL)"
+description: "@@TRANCOUNT (Transact-SQL)"
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "08/29/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "@@TRANCOUNT_TSQL"
   - "@@TRANCOUNT"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "@@TRANCOUNT function"
   - "number of active transactions"
   - "connections [SQL Server], active transactions"
   - "active transactions"
-ms.assetid: b2638410-e410-4bd0-9b54-90096182b2b6
-author: julieMSFT
-ms.author: jrasnick
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+dev_langs:
+  - "TSQL"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=fabric"
 ---
 # &#x40;&#x40;TRANCOUNT (Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricdw.md)]
 
   Returns the number of BEGIN TRANSACTION statements that have occurred on the current connection.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -37,7 +33,8 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 @@TRANCOUNT  
 ```  
 
-[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
+> [!NOTE]
+> [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
 
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
@@ -98,9 +95,9 @@ PRINT @@TRANCOUNT
 ```  
   
 ## See Also  
- [BEGIN TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-transaction-transact-sql.md)   
- [COMMIT TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/commit-transaction-transact-sql.md)   
- [ROLLBACK TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/rollback-transaction-transact-sql.md)   
- [System Functions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-category-transact-sql.md)  
+ [BEGIN TRANSACTION \(Transact-SQL\)](../../t-sql/language-elements/begin-transaction-transact-sql.md)   
+ [COMMIT TRANSACTION \(Transact-SQL\)](../../t-sql/language-elements/commit-transaction-transact-sql.md)   
+ [ROLLBACK TRANSACTION \(Transact-SQL\)](../../t-sql/language-elements/rollback-transaction-transact-sql.md)   
+ [System Functions \(Transact-SQL\)](../../relational-databases/system-functions/system-functions-category-transact-sql.md)  
   
   

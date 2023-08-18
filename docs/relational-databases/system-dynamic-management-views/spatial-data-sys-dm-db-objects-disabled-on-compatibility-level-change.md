@@ -1,33 +1,29 @@
 ---
-description: "sys.dm_db_objects_disabled_on_compatibility_level_change (Transact-SQL)"
-title: "sys.dm_db_objects_disabled_on_compatibility_level_change (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/10/2016"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: system-objects
+title: "sys.dm_db_objects_disabled_on_compatibility_level_change (Transact-SQL)"
+description: sys.dm_db_objects_disabled_on_compatibility_level_change (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
+ms.date: "02/27/2023"
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "dm_db_objects_disabled_on_compatibility_level_change"
   - "dm_db_objects_disabled_on_compatibility_level_change_TSQL"
   - "sys.dm_db_objects_disabled_on_compatibility_level_change"
   - "sys.dm_db_objects_disabled_on_compatibility_level_change_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.dm_db_objects_disabled_on_compatibility_level_change catalog view"
-ms.assetid: a5d70064-0330-48b9-b853-01eba50755d0
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+dev_langs:
+  - "TSQL"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Spatial Data - sys.dm_db_objects_disabled_on_compatibility_level_change
-[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Lists the indexes and constraints that will be disabled as a result of changing compatibility level in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Indexes and constraints that contain persisted computed columns whose expressions use spatial UDTs will be disabled after upgrading or changing compatibility level. Use this dynamic management function to determine the impact of a change in compatibility level.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -140,6 +136,10 @@ sys.dm_db_objects_disabled_on_compatibility_level_change ( compatibility_level )
 ### Permissions  
  Requires the VIEW DATABASE STATE permission.  
   
+### Permissions for SQL Server 2022 and later
+
+Requires VIEW DATABASE PERFORMANCE STATE permission on the database.
+
 ## Example  
  The following example shows a query on **sys.dm_db_objects_disabled_on_compatibility_level_change** to find the objects impacted by changing the compatibility level to 120.  
   

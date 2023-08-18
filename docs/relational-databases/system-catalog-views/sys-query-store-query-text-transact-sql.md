@@ -1,27 +1,23 @@
 ---
-description: "sys.query_store_query_text (Transact-SQL)"
-title: "sys.query_store_query_text (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.query_store_query_text (Transact-SQL)"
+description: sys.query_store_query_text (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "01/23/2019"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "SYS.QUERY_STORE_QUERY_TEXT"
   - "QUERY_STORE_QUERY_TEXT"
   - "SYS.QUERY_STORE_QUERY_TEXT_TSQL"
   - "QUERY_STORE_QUERY_TEXT_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.query_store_query_text catalog view"
   - "query_store_query_text catalog view"
-ms.assetid: f7032fa0-7c16-4492-bb82-685806c63a8c
-author: WilliamDAssafMSFT
-ms.author: wiassaf
-monikerRange: "=azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current"
+dev_langs:
+  - "TSQL"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.query_store_query_text (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -32,7 +28,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||>=s
 |-----------------|---------------|-----------------|  
 |**query_text_id**|**bigint**|Primary key.|  
 |**query_sql_text**|**nvarchar(max)**|SQL text of the query, as provided by the user. Includes whitespaces, hints and comments. Comments and spaces before and after the query text are ignored. Comments and spaces inside text are not ignored.|  
-|**statement_sql_handle**|**vabinary(64)**|SQL handle of the individual query.|  
+|**statement_sql_handle**|**varbinary(64)**|SQL handle of the individual query.|  
 |**is_part_of_encrypted_module**|**bit**|Query text is a part of an encrypted module.<br/>**Note:** Azure Synapse Analytics will always return zero (0).|
 |**has_restricted_text**|**bit**|Query text contains a password or other unmentionable words.<br/>**Note:** Azure Synapse Analytics will always return zero (0).|
   

@@ -1,19 +1,19 @@
 ---
-title: "Aggregate Functions Reference (Report Builder) | Microsoft Docs"
-description: Use built-in aggregate functions in expressions in Report Builder to include aggregated values in your report. 
-ms.date: 03/07/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-design
-
-
-ms.topic: conceptual
-ms.assetid: db6542ee-02d0-4073-90e6-cba8f9510fbb
+title: "Aggregate functions reference for paginated reports"
+description: Use built-in aggregate functions in expressions in Report Builder to include aggregated values in your paginated report.
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 03/07/2017
+ms.service: reporting-services
+ms.subservice: report-design
+ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
-# Report Builder Functions - Aggregate Functions Reference
-  To include aggregated values in your report, you can use built-in aggregate functions in expressions. The default aggregate function for numeric fields is SUM. You can edit the expression and use a different built-in aggregate function or specify a different scope. Scope identifies which set of data to use for the calculation.  
+# Report Builder functions - aggregate functions reference in paginated reports (Report Builder)
+
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-ssrs-rb](../../includes/ssrs-appliesto-ssrs-rb.md)] [!INCLUDE [ssrs-appliesto-pbi-rb](../../includes/ssrs-appliesto-pbi-rb.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
+
+  To include aggregated values in your paginated report, you can use built-in aggregate functions in expressions. The default aggregate function for numeric fields is SUM. You can edit the expression and use a different built-in aggregate function or specify a different scope. Scope identifies which set of data to use for the calculation.  
   
  As the report processor combines report data and the report layout, the expressions for each report item are evaluated. As you view each page of the report, you see the results for each expression in the rendered report items.  
   
@@ -69,7 +69,7 @@ ms.author: maggies
 |Location in Report|Fields|Parameters|ReportItems|PageNumber<br /><br /> TotalPages|DataSource<br /><br /> DataSet|Variables|RenderFormat|  
 |------------------------|------------|----------------|-----------------|-------------------------------|----------------------------|---------------|------------------|  
 |Page Header<br /><br /> Page Footer|Yes|Yes|At most one<br /><br /> Note 1|Yes|Yes|Yes|Yes|  
-|Body|Yes<br /><br /> Note 2|Yes|Only items in the currnet scope or a containing scope<br /><br /> Note 3|No|Yes|Yes|Yes|  
+|Body|Yes<br /><br /> Note 2|Yes|Only items in the current scope or a containing scope<br /><br /> Note 3|No|Yes|Yes|Yes|  
 |Report Parameter|No|Only parameters earlier in the list<br /><br /> Note 4|No|No|No|No|No|  
 |Field|Yes|Yes|No|No|No|No|No|  
 |Query Parameter|No|Yes|No|No|No|No|No|  

@@ -1,21 +1,19 @@
 ---
 title: "Availability groups: a high-availability and disaster-recovery solution"
 description: "Always On availability groups are a SQL Server high-availability and disaster-recovery solution that provide an enterprise-level alternative to database mirroring, with greater functionality. Learn about the basics and functionality of this feature."
-ms.custom: "seodec18"
+author: MashaMSFT
+ms.author: mathoma
 ms.date: 04/23/2019
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: availability-groups
+ms.service: sql
+ms.subservice: availability-groups
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Availability Groups [SQL Server], about"
   - "secondary replicas, see Availability Groups [SQL Server]"
   - "availability [SQL Server]"
   - "AlwaysOn [SQL Server], see Availability Groups [SQL Server]"
+  - "Always On [SQL Server], see Availability Groups [SQL Server]"
   - "Availability Groups [SQL Server]"
-ms.assetid: aa427606-8422-4656-b205-c9e665ddc8c1
-author: cawrites
-ms.author: chadam
 ---
 # Always On availability groups: a high-availability and disaster-recovery solution
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -53,7 +51,7 @@ ms.author: chadam
   
     -   Performing backup operations on its databases when it is running as a secondary replica. For more information, see [Active Secondaries: Backup on Secondary Replicas &#40;Always On Availability Groups&#41;](../../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md).  
   
-     Using active secondary capabilities improves your IT efficiency and reduce cost through better resource utilization of secondary hardware. In addition, offloading read-intent applications and backup jobs to secondary replicas helps to improve performance on the primary replica.  
+     Using active secondary capabilities improves your IT efficiency and reduces cost through better resource utilization of secondary hardware. In addition, offloading read-intent applications and backup jobs to secondary replicas helps to improve performance on the primary replica.  
   
 -   Supports an availability group listener for each availability group. An *availability group listener* is a server name to which clients can connect in order to access a database in a primary or secondary replica of an Always On availability group. Availability group listeners direct incoming connections to the primary replica or to a read-only secondary replica. The listener provides fast application failover after an availability group fails over. For more information, see [Availability Group Listeners, Client Connectivity, and Application Failover &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md).  
   
@@ -154,12 +152,6 @@ ms.author: chadam
      [SQL Server Always On Team Blogs: The official SQL Server Always On Team Blog](/archive/blogs/sqlalwayson/)  
   
      [CSS SQL Server Engineers Blogs](/archive/blogs/psssql/)  
-  
--   **Videos:**  
-  
-     [Microsoft SQL Server Code-Named "Denali" Always On Series,Part 1: Introducing the Next Generation High Availability Solution](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
-  
-     [Microsoft SQL Server Code-Named "Denali" Always On Series,Part 2: Building a Mission-Critical High Availability Solution Using Always On](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)  
   
 -   **Whitepapers:**  
   

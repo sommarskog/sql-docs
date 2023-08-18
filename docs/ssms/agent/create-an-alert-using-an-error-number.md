@@ -1,20 +1,16 @@
 ---
-description: "Create an Alert Using an Error Number"
 title: "Create an Alert Using an Error Number"
-ms.custom: seo-lt-2019
+description: "Create an Alert Using an Error Number"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
+ms.service: sql
+ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "alerts [SQL Server], creating"
   - "SQL Server Agent, alerts"
   - "alerts [SQL Server], error numbers"
-ms.assetid: 03dd7fac-5073-4f86-babd-37e45a86023c
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
 ---
 # Create an Alert Using an Error Number
@@ -23,13 +19,13 @@ monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
 > [!IMPORTANT]  
 > On [Azure SQL Managed Instance](/azure/azure-sql/managed-instance/sql-managed-instance-paas-overview), most, but not all SQL Server Agent features are currently supported. See [Azure SQL Managed Instance from SQL Server](/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) for details.
 
-This topic describes how to create a [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent alert occurs in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] that will be raised when an error of a specific number occurs by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+This topic describes how to create a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent alert occurs in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] that will be raised when an error of a specific number occurs by using SQL Server Management Studio or [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
 ## <a name="BeforeYouBegin"></a>Before You Begin  
   
 ### <a name="Restrictions"></a>Limitations and Restrictions  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] provides an easy, graphical way to manage the entire alerting system and is the recommended way to configure an alert infrastructure.  
+-   SQL Server Management Studio provides an easy, graphical way to manage the entire alerting system and is the recommended way to configure an alert infrastructure.  
   
 -   Events generated with **xp_logevent** occur in the master database. Therefore, **xp_logevent** does not trigger an alert unless the **\@database_name** for the alert is **'master'** or NULL.  
   
@@ -66,7 +62,7 @@ By default, only members of the **sysadmin** fixed server role can execute **sp_
   
 #### To create an alert using an error number  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  On the Standard bar, click **New Query**.  
   
@@ -74,9 +70,9 @@ By default, only members of the **sysadmin** fixed server role can execute **sp_
   
     ```  
     -- adds an alert (Test Alert) that runs the Back up
-    -- the AdventureWorks2012 Database job when fired   
+    -- the AdventureWorks2022 Database job when fired   
     -- assumes that the message 55001 and the Back up
-    -- the AdventureWorks2012 Database job already exist.  
+    -- the AdventureWorks2022 Database job already exist.  
     USE msdb ;  
     GO  
   
@@ -85,7 +81,7 @@ By default, only members of the **sysadmin** fixed server role can execute **sp_
         @message_id = 55001,   
        @severity = 0,   
        @notification_message = N'Error 55001 has occurred. The DB will be backed up...',   
-       @job_name = N'Back up the AdventureWorks2012 Database' ;  
+       @job_name = N'Back up the AdventureWorks2022 Database' ;  
     GO  
     ```  
   

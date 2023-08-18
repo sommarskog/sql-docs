@@ -1,14 +1,16 @@
 ---
 title: SQL Server Management Studio keyboard shortcuts
 description: SQL Server Management Studio keyboard shortcuts
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
+author: markingmyname
+ms.author: maghan
+ms.date: 02/08/2021
+ms.service: sql
+ms.subservice: ssms
 ms.topic: conceptual
-f1_keywords: 
-  - VS.ToolsOptionsPages.Environment.Keyboard
-  - VS.ToolsOptionsPages.Environment.Keyboard.Query_Shortcuts
-helpviewer_keywords: 
+f1_keywords:
+  - "VS.ToolsOptionsPages.Environment.Keyboard"
+  - "VS.ToolsOptionsPages.Environment.Keyboard.Query_Shortcuts"
+helpviewer_keywords:
   - "SQL Server Management Studio [SQL Server], shortcuts"
   - "keyboard shortcuts [SQL Server Management Studio]"
   - "menu shortcuts [SQL Server Management Studio]"
@@ -18,18 +20,13 @@ helpviewer_keywords:
   - "keyboard shortcuts [SQL Server Management Studio], list of shortcuts"
   - "shortcuts [SQL Server Management Studio]"
   - "accelerator keys"
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
-ms.custom: seo-lt-2019
-ms.date: 02/08/2021
 ---
 
 # SQL Server Management Studio keyboard shortcuts
 
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-SQL Server Management Studio (SSMS) offers keyboard shortcuts. By default, it uses the [!INCLUDE[ssnoversion](../includes/ssnoversion-md.md)] scheme, with keyboard shortcuts based on Visual Studio. To change the keyboard scheme or add more keyboard shortcuts, on the **Tools** menu, select **Options**. Select the desired keyboard scheme on the **Environment**, **Keyboard** page.
+SQL Server Management Studio (SSMS) offers keyboard shortcuts. By default, it uses the SQL Server scheme, with keyboard shortcuts based on Visual Studio. To change the keyboard scheme or add more keyboard shortcuts, on the **Tools** menu, select **Options**. Select the desired keyboard scheme on the **Environment**, **Keyboard** page.
 
 > [!NOTE]
 > To show only the headings, select **Collapse All** at the top of this page.

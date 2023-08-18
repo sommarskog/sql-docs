@@ -6,12 +6,14 @@ author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: mikeray
 ms.date: 08/04/2020
+ms.service: sql
+ms.subservice: big-data-cluster
 ms.topic: conceptual
-ms.prod: sql
-ms.technology: big-data-cluster
 ---
 
 # Configure Apache Spark and Apache Hadoop in Big Data Clusters
+
+[!INCLUDE[big-data-clusters-banner-retirement](../includes/bdc-banner-retirement.md)]
 
 In order to configure Apache Spark and Apache Hadoop in Big Data Clusters, you need to modify the cluster profile at deployment time.
 
@@ -151,4 +153,4 @@ Configurations can only be specified at category level. To specify multiple conf
 
 - [Apache Spark & Apache Hadoop (HDFS) configuration properties.](reference-config-spark-hadoop.md)
 - [[!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] reference](../azdata/reference/reference-azdata.md)
-- [What are [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]?](big-data-cluster-overview.md)
+- [Introducing [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]](big-data-cluster-overview.md)

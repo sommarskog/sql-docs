@@ -1,19 +1,19 @@
 ---
-title: "Rendering Data (Report Builder) | Microsoft Docs"
-description: Find out how to use data renderers to import data into a database or Excel, to XSLT transformations, or data exchange/EDI in Report Builder.
-ms.date: 03/07/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-design
-
-
-ms.topic: conceptual
-ms.assetid: a458fdf9-fb2a-4fee-9fbd-b38f36e91753
+title: "Rendering data in a paginated report"
+description: Find out how to use data renderers in a paginated report to import data into a database or Excel, to XSLT transformations, or data exchange/EDI in Report Builder.
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 03/07/2017
+ms.service: reporting-services
+ms.subservice: report-design
+ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
-# Rendering Data (Report Builder and SSRS)
-  When using layout renderers, such as HTML, MHTML, Word, Excel, PDF or Image, the data and its organization remains unchanged. When exporting using a data renderer format, such as Comma-Separated Value (CSV) or XML, no visual layout elements are rendered. CSV and XML apply certain rules to the report body and its contents when rendering the report. These rules determine how the data is rendered in these formats.  
+# Rendering data in a paginated report (Report Builder)
+
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-ssrs-rb](../../includes/ssrs-appliesto-ssrs-rb.md)] [!INCLUDE [ssrs-appliesto-pbi-rb](../../includes/ssrs-appliesto-pbi-rb.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
+
+  When using layout renderers, such as HTML, MHTML, Word, Excel, PDF or Image, the data and its organization remains unchanged. When exporting using a data renderer format, such as Comma-Separated Value (CSV) or XML, no visual layout elements are rendered. CSV and XML apply certain rules to the report body and its contents when rendering the paginated report. These rules determine how the data is rendered in these formats.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  

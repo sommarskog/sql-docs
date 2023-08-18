@@ -1,23 +1,19 @@
 ---
+title: "sp_addlogin (Transact-SQL)"
 description: "sp_addlogin (Transact-SQL)"
-title: "sp_addlogin (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_addlogin"
-  - "sp_addlogin_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_addlogin"
-ms.assetid: 030f19c3-a5e3-4b53-bfc4-de4bfca0fddc
 author: VanMSFT
 ms.author: vanto
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_addlogin"
+  - "sp_addlogin_TSQL"
+helpviewer_keywords:
+  - "sp_addlogin"
+dev_langs:
+  - "TSQL"
 ---
 # sp_addlogin (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +26,7 @@ ms.author: vanto
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -120,17 +116,17 @@ GO
 ```  
   
 ### C. Creating a SQL Server login that has a different default language  
- The following example creates a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login for the user `TzTodorov`, with a password of `709hLKH7chjfwv`, a default database of `AdventureWorks2012`, and a default language of `Bulgarian`.  
+ The following example creates a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login for the user `TzTodorov`, with a password of `709hLKH7chjfwv`, a default database of [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)], and a default language of `Bulgarian`.  
   
 ```  
-EXEC sp_addlogin 'TzTodorov', '709hLKH7chjfwv', 'AdventureWorks2012', N'български'  
+EXEC sp_addlogin 'TzTodorov', '709hLKH7chjfwv', 'AdventureWorks2022', N'български'  
 ```  
   
 ### D. Creating a SQL Server login that has a specific SID  
- The following example creates a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login for the user `Michael`, with a password of `B548bmM%f6`, a default database of `AdventureWorks2012`, a default language of `us_english`, and a SID of `0x0123456789ABCDEF0123456789ABCDEF`.  
+ The following example creates a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login for the user `Michael`, with a password of `B548bmM%f6`, a default database of [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)], a default language of `us_english`, and a SID of `0x0123456789ABCDEF0123456789ABCDEF`.  
   
 ```  
-EXEC sp_addlogin 'Michael', 'B548bmM%f6', 'AdventureWorks2012', 'us_english', 0x0123456789ABCDEF0123456789ABCDEF  
+EXEC sp_addlogin 'Michael', 'B548bmM%f6', 'AdventureWorks2022', 'us_english', 0x0123456789ABCDEF0123456789ABCDEF  
 ```  
   
 ## See Also  

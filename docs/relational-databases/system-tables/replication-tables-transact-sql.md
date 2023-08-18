@@ -1,21 +1,17 @@
 ---
-title: "Replication Tables (Transact-SQL) | Microsoft Docs"
+title: "Replication Tables (Transact-SQL)"
 description: Replication system tables support a replication topology. Replication adds system tables to a database configured as a Publisher or a Subscriber.
-ms.custom: ""
+author: VanMSFT
+ms.author: vanto
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: replication
+ms.service: sql
+ms.subservice: replication
 ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "system tables [SQL Server], replication"
   - "replication [SQL Server], system tables"
-ms.assetid: 5696ee73-5d7c-4f26-b7ee-6831c9c3edf7
-author: cawrites
-ms.author: chadam
+dev_langs:
+  - "TSQL"
 ---
 # Replication Tables (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -312,6 +308,8 @@ ms.author: chadam
         [MSmerge_tombstone](msmerge-tombstone-transact-sql.md)
 
         [MSpeer_lsns](mspeer-lsns-transact-sql.md)
+
+        [MSredirected_publishers](msredirected-publishers.md)
 
         [MSrepl_identity_range](msrepl-identity-range-transact-sql.md)
 

@@ -1,34 +1,30 @@
 ---
-description: "DROP CONTRACT (Transact-SQL)"
-title: "DROP CONTRACT (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "DROP CONTRACT (Transact-SQL)"
+description: DROP CONTRACT (Transact-SQL)
+author: markingmyname
+ms.author: maghan
 ms.date: "03/06/2017"
-ms.prod: sql
-ms.prod_service: "sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "DROP_CONTRACT_TSQL"
   - "DROP CONTRACT"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "dropping contracts"
   - "removing contracts"
   - "deleting contracts"
   - "contracts [Service Broker], dropping"
   - "DROP CONTRACT statement"
-ms.assetid: fdd0f81e-3c22-4cdf-9416-b4977a6ac3b6
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+dev_langs:
+  - "TSQL"
 ---
 # DROP CONTRACT (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Drops an existing contract from a database.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

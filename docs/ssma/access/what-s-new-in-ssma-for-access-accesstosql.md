@@ -1,20 +1,74 @@
 ---
-title: "What's New in SSMA for Access (AccessToSQL) | Microsoft Docs"
+title: "What's New in SSMA for Access (AccessToSQL)"
 description: Find out about changes to SQL Server Migration Assistant (SSMA) for Access (AccessToSQL) for each release.
-author: nahk-ivanov
-
-ms.prod: sql
-ms.custom: ""
+author: cpichuka
+ms.author: cpichuka
 ms.date: "04/29/2021"
-ms.reviewer: ""
-ms.technology: ssma
+ms.service: sql
+ms.subservice: ssma
 ms.topic: conceptual
-ms.assetid: a24d3fc0-6911-4bfa-828a-197abf222e02
-ms.author: alexiva
+ms.custom: intro-whats-new
 ---
 # What's New in SSMA for Access (AccessToSQL)
 
 This article lists SQL Server Migration Assistant (SSMA) for Access changes in each release.
+
+## SSMA v9.4
+
+The v9.4 release of SSMA for Access contains minor performance improvements, bug fixes, and an enhanced help experience.
+
+## SSMA v9.3
+
+The v9.2 release of SSMA for Access contains the following changes:
+
+* Added support for SQL Server 2022 target
+
+## SSMA v9.2
+
+The v9.2 release of SSMA for Access contains the following changes:
+
+* Added support for DECIMAL type for Office 365 version 2209 and above.
+
+## SSMA v9.1
+
+The v9.1 release of SSMA for Access contains minor performance improvements,bug fixes and enhanced get help experience.
+
+## SSMA v9.0
+
+The v9.0 release of SSMA for Access contains minor performance improvements, bug fixes and online help viewer support.
+
+## SSMA v8.24
+
+The v8.24 release of SSMA for Access contains minor performance improvements and bug fixes.
+
+## SSMA v8.23
+
+The v8.23 release of SSMA for Access contains the following changes:
+
+* Enhanced conversion for tables without primary key
+* Enhanced XML output when running in console mode
+* New "Feedback" link in reports to send feedback
+* In reports, improved visualization experience
+
+## SSMA v8.22
+
+The v8.22 release of SSMA for Access contains the following changes:
+
+* Allow to specify additional connection string options for target database connection
+* Introduce summary charts in assessment reports
+* Improve messages navigation in assessment reports
+
+## SSMA v8.21
+
+The v8.21 release of SSMA for Access contains the following changes:
+
+* Use `COUNT_BIG` in row count queries for the target database
+
+## SSMA v8.20
+
+The v8.20 release of SSMA for Access contains the following changes:
+
+* Minor performance improvements and bug fixes
 
 ## SSMA v8.19
 
@@ -117,7 +171,7 @@ To leverage this setting, in SSMA for Access, navigate to **Tools** > **Project 
 
 ## SSMA v8.5
 
-The v8.5 release of SSMA for Access is enhanced with support for Azure Active Directory authentication and basic support for JSON features in SQL server, together with a targeted set of fixes designed to improve usability and performance.
+The v8.5 release of SSMA for Access is enhanced with support for Azure Active Directory authentication and basic support for JSON features in SQL Server, together with a targeted set of fixes designed to improve usability and performance.
 
 In addition, SSMA for Access now supports conversion of multiple standard functions (`ISNULL`, `IIF`, etc.).
 

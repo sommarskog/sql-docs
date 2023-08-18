@@ -1,19 +1,15 @@
 ---
 title: "Default SQL Server data types"
 description: "This topic lists all the default SQL Server Data types based on PHP Data Types when using the Microsoft SQLSRV Driver for PHP for SQL Server"
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "08/10/2020"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "default data types"
   - "converting data types"
-ms.assetid: 65c7c211-96d3-4e65-a1de-1fe8d21348e7
-author: David-Engel
-ms.author: v-daenge
 ---
 # Default SQL Server Data Types
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -26,7 +22,7 @@ When sending data to the server, the [!INCLUDE[ssDriverPHP](../../includes/ssdri
 |Boolean|bit|bit|  
 |Integer|int|int|  
 |Float|float(24)|not supported|  
-|String (length less than 8000 bytes)|varchar(<string length>)|varchar(<string length>)|  
+|String (length less than 8000 bytes)|varchar(\<string length\>)|varchar(\<string length\>)|  
 |String (length greater than 8000 bytes)|varchar(max)|varchar(max)|  
 |Resource|Not supported.|Not supported.|  
 |Stream (encoding: not binary)|varchar(max)|varchar(max)|  

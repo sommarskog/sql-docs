@@ -1,22 +1,18 @@
 ---
-description: "Write the Job Status to the Windows Application Log"
 title: Write the Job Status to the Windows Application Log
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
+description: "Write the Job Status to the Windows Application Log"
+author: markingmyname
+ms.author: maghan
+ms.date: 01/19/2017
+ms.service: sql
+ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "status information [SQL Server], jobs"
   - "SQL Server Agent jobs, status"
   - "writing job status to log"
   - "jobs [SQL Server Agent], status"
   - "logs [SQL Server], jobs"
-ms.assetid: 3b813702-8f61-40ec-bf3b-ce9deb7e68be
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
-ms.custom: seo-lt-2019
-ms.date: 01/19/2017
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
 ---
 
@@ -27,7 +23,7 @@ monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
 > [!IMPORTANT]  
 > On [Azure SQL Managed Instance](/azure/sql-database/sql-database-managed-instance), most, but not all SQL Server Agent features are currently supported. See [Azure SQL Managed Instance T-SQL differences from SQL Server](/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) for details.
 
-This topic describes how to configure [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] to write job status to the Windows application event log by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)], or SQL Server Management Objects.  
+This topic describes how to configure [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] to write job status to the Windows application event log by using SQL Server Management Studio, [!INCLUDE[tsql](../../includes/tsql-md.md)], or SQL Server Management Objects.  
   
 Job responses ensure that database administrators know when jobs complete and how frequently they run. Typical job responses include:  
   
@@ -46,7 +42,7 @@ For detailed information, see [Implement SQL Server Agent Security](../../ssms/a
   
 #### To write job status to the Windows application log  
   
-1.  In **Object Explorer,** connect to an instance of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)], and then expand that instance.  
+1.  In **Object Explorer,** connect to an instance of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], and then expand that instance.  
   
 2.  Expand **SQL Server Agent**, expand **Jobs**, right-click the job you want to edit, and then click **Properties**.  
   

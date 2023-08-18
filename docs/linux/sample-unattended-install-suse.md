@@ -1,19 +1,20 @@
 ---
 title: Unattended install for SQL Server on SUSE Linux Enterprise Server
 titleSuffix: SQL Server
-description: Use a sample Bash script to install SQL Server 2017 on SUSE Linux Enterprise Server (SLES) v12 SP2 without interactive input.
-author: VanMSFT 
-ms.author: vanto
-ms.date: 11/04/2019
+description: Use a sample bash script to install SQL Server on SUSE Linux Enterprise Server (SLES) without interactive input.
+author: rwestMSFT
+ms.author: randolphwest
+ms.reviewer: randolphwest
+ms.date: 05/20/2022
+ms.service: sql
+ms.subservice: linux
 ms.topic: conceptual
-ms.prod: sql
-ms.technology: linux
 ---
 # Sample: Unattended SQL Server installation script for SUSE Linux Enterprise Server
 
 [!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
-This sample Bash script installs SQL Server 2017 on SUSE Linux Enterprise Server (SLES) v12 SP2 without interactive input. It provides examples of installing the database engine, the SQL Server command-line tools, SQL Server Agent, and performs post-install steps. You can optionally install full-text search and create an administrative user.
+This sample bash script installs [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] on SUSE Linux Enterprise Server (SLES) without interactive input. It provides examples of installing the [!INCLUDE [ssde-md](../includes/ssde-md.md)], the SQL Server command-line tools, SQL Server Agent, and performs post-install steps. You can optionally install full-text search and create an administrative user.
 
 > [!TIP]
 > If you do not need an unattended installation script, the fastest way to install SQL Server is to follow the [quickstart for SLES](quickstart-install-connect-suse.md). For other setup information, see [Installation guidance for SQL Server on Linux](sql-server-linux-setup.md).
@@ -25,9 +26,16 @@ This sample Bash script installs SQL Server 2017 on SUSE Linux Enterprise Server
 - For other system requirements, see [System requirements for SQL Server on Linux](sql-server-linux-setup.md#system).
 
 > [!IMPORTANT]
-> SQL Server 2017 requires libsss_nss_idmap0, which is not provided by the default SLES repositories. You can install it from the SLES v12 SP2 SDK.
+> [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] requires `libsss_nss_idmap0`, which is not provided by the default SLES repositories. You can install it from the SLES SDK.
 
 ## Sample script
+
+This example installs [!INCLUDE [sssql19-md](../includes/sssql19-md.md)] on SLES v15 SP3. If you want to install a different version of [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] or SLES, change the Microsoft repository paths accordingly.
+
+Save the sample script to a file and then to customize it. You'll need to replace the variable values in the script. You can also set any of the scripting variables as environment variables, as long as you remove them from the script file.
+
+> [!IMPORTANT]  
+> The `SA_PASSWORD` environment variable is deprecated. Use `MSSQL_SA_PASSWORD` instead.
 
 ```bash
 #!/bin/bash -e
@@ -42,8 +50,8 @@ MSSQL_SA_PASSWORD='<YourStrong!Passw0rd>'
 # Defaults to developer
 MSSQL_PID='evaluation'
 
-# Install SQL Server Agent (recommended)
-SQL_INSTALL_AGENT='y'
+# Enable SQL Server Agent (recommended)
+SQL_ENABLE_AGENT='y'
 
 # Install SQL Server Full Text Search (optional)
 # SQL_INSTALL_FULLTEXT='y'
@@ -59,12 +67,12 @@ then
 fi
 
 echo Adding Microsoft repositories...
-sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-2017.repo
-sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/prod.repo 
+sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/15/mssql-server-2019.repo
+sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/15/prod.repo 
 sudo zypper --gpg-auto-import-keys refresh
 
-#Add the SLES v12 SP2 SDK to obtain libsss_nss_idmap0
-sudo SUSEConnect -p sle-sdk/12.2/x86_64
+#Add the SLES v15 SP3 SDK to obtain libsss_nss_idmap0
+sudo SUSEConnect -p sle-sdk/15.3/x86_64
 
 echo Installing SQL Server...
 sudo zypper install -y mssql-server
@@ -83,11 +91,11 @@ echo PATH="$PATH:/opt/mssql-tools/bin" >> ~/.bash_profile
 echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bashrc
 source ~/.bashrc
 
-# Optional SQL Server Agent installation:
-if [ ! -z $SQL_INSTALL_AGENT ]
+# Optional Enable SQL Server Agent:
+if [ ! -z $SQL_ENABLE_AGENT ]
 then
-  echo Installing SQL Server Agent...
-  sudo zypper install -y mssql-server-agent
+  echo Enable SQL Server Agent...
+  sudo /opt/mssql/bin/mssql-conf set sqlagent.enabled true
 fi
 
 # Optional SQL Server Full Text Search installation:
@@ -149,9 +157,9 @@ fi
 echo Done!
 ```
 
-### Running the script
+## Run the script
 
-To run the script
+To run the script:
 
 1. Paste the sample into your favorite text editor and save it with a memorable name, like `install_sql.sh`.
 
@@ -169,52 +177,53 @@ To run the script
    ./install_sql.sh
    ```
 
-### Understanding the script
-The first thing the Bash script does is set a few variables. These can be either scripting variables, like the sample, or environment variables. The variable `MSSQL_SA_PASSWORD` is **required** by SQL Server installation, the others are custom variables created for the script. The sample script performs the following steps:
+## Understand the script
+
+The first thing the bash script does is set a few variables. These variables can be either scripting variables, like the sample, or environment variables. The variable `MSSQL_SA_PASSWORD` is **required** by SQL Server installation, the others are custom variables created for the script. The sample script performs the following steps:
 
 1. Import the public Microsoft GPG keys.
 
 1. Register the Microsoft repositories for SQL Server and the command-line tools.
 
-1. Update the local repositories
+1. Update the local repositories.
 
-1. Install SQL Server
+1. Install SQL Server.
 
-1. Configure SQL Server with the ```MSSQL_SA_PASSWORD``` and automatically accept the End-User License Agreement.
+1. Configure SQL Server with the `MSSQL_SA_PASSWORD` and automatically accept the End-User License Agreement.
 
-1. Automatically accept the End-User License Agreement for the SQL Server command-line tools, install them, and install the unixodbc-dev package.
+1. Automatically accept the End-User License Agreement for the SQL Server command-line tools, install them, and install the `unixodbc-dev` package.
 
 1. Add the SQL Server command-line tools to the path for ease of use.
 
-1. Install the SQL Server Agent if the scripting variable ```SQL_INSTALL_AGENT``` is set, on by default.
+1. Enable the SQL Server Agent if the scripting variable `SQL_ENABLE_AGENT` is set, on by default.
 
-1. Optionally install SQL Server Full-Text search, if the variable ```SQL_INSTALL_FULLTEXT``` is set.
+1. Optionally install SQL Server Full-Text search, if the variable `SQL_INSTALL_FULLTEXT` is set.
 
 1. Unblock port 1433 for TCP on the system firewall, necessary to connect to SQL Server from another system.
 
-1. Optionally set trace flags for deadlock tracing. (requires uncommenting the lines)
+1. Optionally set trace flags for deadlock tracing (requires uncommenting the lines).
 
 1. SQL Server is now installed, to make it operational, restart the process.
 
 1. Verify that SQL Server is installed correctly, while hiding any error messages.
 
-1. Create a new server administrator user if ```SQL_INSTALL_USER``` and ```SQL_INSTALL_USER_PASSWORD``` are both set.
+1. Create a new server administrator user if `SQL_INSTALL_USER` and `SQL_INSTALL_USER_PASSWORD` are both set.
 
 ## Next steps
 
-Simplify multiple unattended installs and create a stand-alone Bash script that sets the proper environment variables. You can remove any of the variables the sample script uses and put them in their own Bash script.
+Simplify multiple unattended installs and create a stand-alone bash script that sets the proper environment variables. You can remove any of the variables the sample script uses and put them in their own bash script.
 
 ```bash
 #!/bin/bash
 export MSSQL_SA_PASSWORD='<YourStrong!Passw0rd>'
 export MSSQL_PID='evaluation'
-export SQL_INSTALL_AGENT='y'
+export SQL_ENABLE_AGENT='y'
 export SQL_INSTALL_USER='<Username>'
 export SQL_INSTALL_USER_PASSWORD='<YourStrong!Passw0rd>'
-export SQL_INSTALL_AGENT='y'
 ```
 
-Then run the Bash script as follows:
+Then run the bash script as follows:
+
 ```bash
 . ./my_script_name.sh
 ```

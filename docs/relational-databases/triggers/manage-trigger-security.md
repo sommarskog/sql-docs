@@ -1,22 +1,18 @@
 ---
+title: "Manage Trigger Security"
 description: "Manage Trigger Security"
-title: "Manage Trigger Security | Microsoft Docs"
-ms.custom: ""
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "06/22/2020"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology:
+ms.service: sql
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "triggers [SQL Server], security"
-ms.assetid: e94720a8-a3a2-4364-b0a3-bbe86e3ce4d5
-author: "rothja"
-ms.author: "jroth"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Manage Trigger Security
 
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 By default, both DML and DDL triggers execute under the context of the user that calls the trigger. The caller of a trigger is the user that executes the statement that causes the trigger to run. For example, if user **Mary** executes a DELETE statement that causes DML trigger **DML_trigMary** to run, the code inside **DML_trigMary** executes in the context of the user privileges for **Mary**. This default behavior can be exploited by users who want to introduce malicious code in the database or server instance. For example, the following DDL trigger is created by user **JohnDoe**:  
 
@@ -55,7 +51,7 @@ What this trigger means is that as soon as a user that has permission to execute
     ```  
 
    > [!NOTE]
-   > Only **sys.triggers** is available for [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] unless you are using [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)].
+   > Only **sys.triggers** is available for [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] unless you are using [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)].
 
 ::: moniker-end
 

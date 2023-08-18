@@ -1,18 +1,18 @@
 ---
-description: "ISDATE (Transact-SQL)"
 title: ISDATE (Transact-SQL)
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.technology: t-sql
+description: "ISDATE (Transact-SQL)"
+author: markingmyname
+ms.author: maghan
+ms.date: 03/14/2017
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "ISDATETIME"
   - "ISDATE_TSQL"
   - "ISDATE"
   - "ISDATETIME_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "dates [SQL Server], functions"
   - "date and time [SQL Server], ISDATE"
   - "validate dates times [SQL Server]"
@@ -25,26 +25,22 @@ helpviewer_keywords:
   - "time [SQL Server], functions"
   - "time [SQL Server], validate"
   - "ISDATE function [SQL Server]"
-ms.assetid: 8e2c9ee7-388a-432f-b2c9-7b398f26bf85
-author: cawrites
-ms.author: chadam
-ms.reviewer: ""
-ms.custom: ""
-ms.date: 03/14/2017
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+dev_langs:
+  - "TSQL"
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-mi-current"
 ---
 
 # ISDATE (Transact-SQL)
 
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  Returns 1 if the *expression* is a valid **date**, **time**, or **datetime** value; otherwise, 0.  
+  Returns 1 if the *expression* is a valid **datetime** value; otherwise, 0.  
   
  ISDATE returns 0 if the *expression* is a **datetime2** value.  
   
  For an overview of all [!INCLUDE[tsql](../../includes/tsql-md.md)] date and time data types and functions, see [Date and Time Data Types and Functions &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md). Note that the range for datetime data is 1753-01-01 through 9999-12-31, while the range for date data is 0001-01-01 through 9999-12-31.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -139,7 +135,7 @@ SET LANGUAGE us_english;
 SET DATEFORMAT mdy;  
 ```  
   
-## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## Examples: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### C. Using ISDATE to test for a valid datetime expression  
  The following example shows you how to use `ISDATE` to test whether a character string is a valid **datetime**.  

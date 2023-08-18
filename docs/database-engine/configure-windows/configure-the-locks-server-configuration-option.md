@@ -1,26 +1,22 @@
 ---
-title: "Configure the locks Server Configuration Option | Microsoft Docs"
+title: "Configure the locks (server configuration option)"
 description: Learn about the locks option. See how to use it to limit the amount of memory that the SQL Server Database Engine uses for locks.
-ms.custom: ""
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/02/2017"
-ms.prod: sql
-ms.prod_service: high-availability
-ms.reviewer: ""
-ms.technology: configuration
+ms.service: sql
+ms.subservice: configuration
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "locks option [SQL Server]"
-ms.assetid: b0cf0f86-7652-4574-a9fb-908e10d03973
-author: markingmyname
-ms.author: maghan
 ---
-# Configure the locks Server Configuration Option
+# Configure the locks (server configuration option)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   This topic describes how to configure the **locks** server configuration option in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. The **locks** option sets the maximum number of available locks, thereby limiting the amount of memory the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] uses for them. The default setting is 0, which allows the [!INCLUDE[ssDE](../../includes/ssde-md.md)] to allocate and deallocate lock structures dynamically, based on changing system requirements.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
  **In This Topic**  
   
@@ -80,7 +76,7 @@ ms.author: maghan
 3.  Copy and paste the following example into the query window and click **Execute**. This example shows how to use [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) to set the value of the `locks` option to set the number of locks available for all users to `20000`.  
   
 ```sql  
-Use AdventureWorks2012 ;  
+USE AdventureWorks2022;  
 GO  
 sp_configure 'show advanced options', 1;  
 GO  

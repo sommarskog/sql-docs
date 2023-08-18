@@ -1,26 +1,22 @@
 ---
-description: "ALTER EXTERNAL RESOURCE POOL (Transact-SQL)"
-title: "ALTER EXTERNAL RESOURCE POOL (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "ALTER EXTERNAL RESOURCE POOL (Transact-SQL)"
+description: ALTER EXTERNAL RESOURCE POOL (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "08/06/2020"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: machine-learning-services
+ms.service: sql
+ms.subservice: machine-learning-services
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "ALTER_EXTERNAL_RESOURCE_POOL_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "ALTER EXTERNAL RESOURCE POOL statement"
-ms.assetid: 634c327d-971b-49ba-b8a2-e243a04040db
-author: dphansen
-ms.author: davidph
-manager: cgronlund
+dev_langs:
+  - "TSQL"
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
 ---
 # ALTER EXTERNAL RESOURCE POOL (Transact-SQL)
-[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
 
 Changes a Resource Governor external pool that specifies resources that can be used by external processes. 
 
@@ -32,7 +28,7 @@ For [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)] in [!
 For [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)], the external pool governs `rterm.exe`, `python.exe`, `BxlServer.exe`, and other processes spawned by them.
 ::: moniker-end
 
-![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## Syntax
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"

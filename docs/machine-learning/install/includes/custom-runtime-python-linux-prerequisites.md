@@ -1,10 +1,10 @@
 ---
-ms.prod: sql
-ms.technology: machine-learning-services
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: 02/08/2021
+ms.service: sql
+ms.subservice: machine-learning-services
 ms.topic: include
-author: dphansen
-ms.author: davidph
 ---
 ## Prerequisites
 

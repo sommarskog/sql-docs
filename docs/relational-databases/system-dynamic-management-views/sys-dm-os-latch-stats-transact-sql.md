@@ -1,32 +1,30 @@
 ---
-description: "sys.dm_os_latch_stats (Transact-SQL)"
-title: "sys.dm_os_latch_stats (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/18/2017"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: system-objects
+title: "sys.dm_os_latch_stats (Transact-SQL)"
+description: sys.dm_os_latch_stats (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
+ms.date: "02/27/2023"
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.dm_os_latch_stats_TSQL"
   - "dm_os_latch_stats_TSQL"
   - "dm_os_latch_stats"
   - "sys.dm_os_latch_stats"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.dm_os_latch_stats dynamic management view"
-ms.assetid: 2085d9fc-828c-453e-82ec-b54ed8347ae5
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+dev_langs:
+  - "TSQL"
+monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||>=aps-pdw-2016||=azure-sqldw-latest"
 ---
 # sys.dm_os_latch_stats (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [sql-asdb-asa-asdbmi-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Returns information about all latch waits organized by class. 
   
 > [!NOTE]  
-> To call this from [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] or [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use the name **sys.dm_pdw_nodes_os_latch_stats**.  
+> To call this from [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] or [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use the name **sys.dm_pdw_nodes_os_latch_stats**. [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)] 
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
@@ -34,12 +32,17 @@ Returns information about all latch waits organized by class.
 |waiting_requests_count|**bigint**|Number of waits on latches in this class. This counter is incremented at the start of a latch wait.|  
 |wait_time_ms|**bigint**|Total wait time, in milliseconds, on latches in this class.<br /><br /> **Note:** This column is updated every five minutes during a latch wait and at the end of a latch wait.|  
 |max_wait_time_ms|**bigint**|Maximum time a memory object has waited on this latch. If this value is unusually high, it might indicate an internal deadlock.|  
-|pdw_node_id|**int**|**Applies to**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> The identifier for the node that this distribution is on.|  
+|pdw_node_id|**int**|**Applies to**: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> The identifier for the node that this distribution is on.|  
   
 ## Permissions  
-On [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requires `VIEW SERVER STATE` permission.   
-On SQL Database Basic, S0, and S1 service objectives, and for databases in elastic pools, the [server admin](/azure/azure-sql/database/logins-create-manage#existing-logins-and-user-accounts-after-creating-a-new-database) account or the [Azure Active Directory admin](/azure/azure-sql/database/authentication-aad-overview#administrator-structure) account is required. On all other SQL Database service objectives, the `VIEW DATABASE STATE` permission is required in the database.   
+On [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] and SQL Managed Instance, requires `VIEW SERVER STATE` permission.
+
+On SQL Database **Basic**, **S0**, and **S1** service objectives, and for databases in **elastic pools**, the [server admin](/azure/azure-sql/database/logins-create-manage#existing-logins-and-user-accounts-after-creating-a-new-database) account, the [Azure Active Directory admin](/azure/azure-sql/database/authentication-aad-overview#administrator-structure) account, or membership in the `##MS_ServerStateReader##` [server role](/azure/azure-sql/database/security-server-roles) is required. On all other SQL Database service objectives, either the `VIEW DATABASE STATE` permission on the database, or membership in the `##MS_ServerStateReader##` server role is required.   
   
+### Permissions for SQL Server 2022 and later
+
+Requires VIEW SERVER PERFORMANCE STATE permission on the server.
+
 ## Remarks  
  sys.dm_os_latch_stats can be used to identify the source of latch contention by examining the relative wait numbers and wait times for the different latch classes. In some situations, you may be able to resolve or reduce latch contention. However, there might be situations that will require that you to contact [!INCLUDE[msCoName](../../includes/msconame-md.md)] Customer Support Services.  
   
@@ -70,7 +73,7 @@ GO
 |Latch class|Description|  
 |-----------------|-----------------|  
 |ALLOC_CREATE_RINGBUF|Used internally by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to initialize the synchronization of the creation of an allocation ring buffer.|  
-|ALLOC_CREATE_FREESPACE_CACHE|Used to initialize the synchronization of internal freespace caches for heaps.|  
+|ALLOC_CREATE_FREESPACE_CACHE|Used to initialize the synchronization of internal free space caches for heaps.|  
 |ALLOC_CACHE_MANAGER|Used to synchronize internal coherency tests.|  
 |ALLOC_FREESPACE_CACHE|Used to synchronize the access to a cache of pages with available space for heaps and binary large objects (BLOBs). Contention on latches of this class can occur when multiple connections try to insert rows into a heap or BLOB at the same time. You can reduce this contention by partitioning the object. Each partition has its own latch. Partitioning will distribute the inserts across multiple latches.|  
 |ALLOC_EXTENT_CACHE|Used to synchronize the access to a cache of extents that contains pages that are not allocated. Contention on latches of this class can occur when multiple connections try to allocate data pages in the same allocation unit at the same time. This contention can be reduced by partitioning the object of which this allocation unit is a part.|  
@@ -159,7 +162,7 @@ GO
 |SERVICE_BROKER_MAP_MANAGER|Internal use only.|  
 |SERVICE_BROKER_HOST_NAME|Internal use only.|  
 |SERVICE_BROKER_READ_CACHE|Internal use only.|  
-|SERVICE_BROKER_WAITFOR_MANAGER| Used to synchronize an instance level map of waiter queues. One queue exists per database ID, Database Version, and Queue ID tuple. Contention on latches of this class can occur when many connections are: In a WAITFOR(RECEIVE) wait state; calling WAITFOR(RECEIVE); exceeding the WAITFOR timeout; receiving a message; committing or rolling back the transaction that contains the WAITFOR(RECEIVE); You can reduce the contention by reducing the number of threads in a WAITFOR(RECEIVE) wait state. |  
+|SERVICE_BROKER_WAITFOR_MANAGER| Used to synchronize an instance level map of wait queues. One queue exists per database ID, Database Version, and Queue ID tuple. Contention on latches of this class can occur when many connections are: In a WAITFOR(RECEIVE) wait state; calling WAITFOR(RECEIVE); exceeding the WAITFOR timeout; receiving a message; committing or rolling back the transaction that contains the WAITFOR(RECEIVE); You can reduce the contention by reducing the number of threads in a WAITFOR(RECEIVE) wait state. |  
 |SERVICE_BROKER_WAITFOR_TRANSACTION_DATA|Internal use only.|  
 |SERVICE_BROKER_TRANSMISSION_TRANSACTION_DATA|Internal use only.|  
 |SERVICE_BROKER_TRANSPORT|Internal use only.|  
@@ -187,6 +190,8 @@ GO
 |VERSIONING_STATE|Internal use only.|  
 |VERSIONING_STATE_CHANGE|Internal use only.|  
 |KTM_VIRTUAL_CLOCK|Internal use only.|  
+
+[!INCLUDE [sql-b-tree](../../includes/sql-b-tree.md)]
   
 ## See Also  
 [DBCC SQLPERF &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-sqlperf-transact-sql.md)       

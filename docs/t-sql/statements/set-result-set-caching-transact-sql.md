@@ -1,19 +1,15 @@
 ---
-description: "SET RESULT_SET_CACHING (Transact-SQL)"
-title: "SET RESULT_SET_CACHING (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "SET RESULT_SET_CACHING (Transact-SQL)"
+description: SET RESULT_SET_CACHING (Transact-SQL)
+author: mstehrani
+ms.author: emtehran
+ms.reviewer: wiassaf
 ms.date: 04/16/2020
-ms.prod: sql
-ms.prod_service: "synapse-analytics"
-ms.reviewer: "jrasnick"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
 dev_langs:
   - "TSQL"
-helpviewer_keywords: 
-author: XiaoyuMSFT
-ms.author: xiaoyul
 monikerRange: "=azure-sqldw-latest"
 ---
 # SET RESULT SET CACHING (Transact-SQL) 
@@ -22,9 +18,9 @@ monikerRange: "=azure-sqldw-latest"
 
 Controls the result set caching behavior for the current client session.  
 
-Applies to [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]  
+Applies to [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax
 
@@ -32,7 +28,8 @@ Applies to [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]
 SET RESULT_SET_CACHING { ON | OFF };
 ```  
 
-[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
+> [!NOTE]
+> [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
 
 ## Remarks  
 
@@ -44,9 +41,12 @@ Enables result set caching for the current client session.  Result set caching c
 **OFF**   
 Disable result set caching for the current client session.
 
+> [!NOTE]
+> Result set caching should not be used in conjunction with [DECRYPTBYKEY](../functions/decryptbykey-transact-sql.md). If this cryptographic function must be used, ensure you have result set caching disabled (either at [session-level]() or [database-level](./alter-database-transact-sql-set-options.md)) at the time of execution.
+
 ## Examples
 
-Query the result_cache_hit column in [sys.dm_pdw_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md) with a query’s request_id to see if this query was executed with a result cache hit or miss.
+Query the result_cache_hit column in [sys.dm_pdw_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md) with a query's request_id to see if this query was executed with a result cache hit or miss.
 
 ```sql
 SELECT result_cache_hit

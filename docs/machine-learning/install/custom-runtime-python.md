@@ -1,15 +1,15 @@
 ---
 title: Install Python custom runtime
 description: Learn how to install a Python custom runtime for SQL Server using Language Extensions. The Python custom runtime can run machine learning scripts.
-ms.prod: sql
-ms.technology: machine-learning-services
-ms.date: 02/08/2021
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.date: 11/09/2022
+ms.service: sql
+ms.subservice: machine-learning-services
 ms.topic: how-to
-author: dphansen
-ms.author: davidph
-ms.custom: contperf-fy21q3
+ms.custom: intro-installation
 zone_pivot_groups: sqlml-platforms
-monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15"
+monikerRange: "=sql-server-ver15||=sql-server-linux-ver15"
 ---
 # Install a Python custom runtime for SQL Server
 [!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
@@ -23,7 +23,9 @@ Learn how to install a Python custom runtime for running external Python scripts
 
 The custom runtime can run machine learning scripts and uses the [SQL Server Language Extensions](../../language-extensions/language-extensions-overview.md).
 
-Use your own version of the Python runtime with SQL Server, instead of the default runtime version installed with [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md).
+Use your own version of the Python runtime with SQL Server, instead of the default runtime version installed with [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md). 
+
+Beginning with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], runtimes for R, Python, and Java, are no longer installed with SQL Setup. Instead, install your desired Python custom runtime(s) and packages. For more information, see [Install SQL Server 2022 Machine Learning Services (Python and R) on Windows](sql-machine-learning-services-windows-install-sql-2022.md) or [Install SQL Server Machine Learning Services (Python and R) on Linux](../../linux/sql-server-linux-setup-machine-learning.md).
 
 ::: zone pivot="platform-windows"
 [!INCLUDE [Python custom runtime - Windows](includes/custom-runtime-python-windows.md)]
@@ -53,9 +55,9 @@ Use your own version of the Python runtime with SQL Server, instead of the defau
 [!INCLUDE [Python custom runtime on Linux - Common steps](includes/custom-runtime-python-linux-common.md)]
 ::: zone-end
 
-## Enable external script
+## Enable external scripts
 
-You can execute a Python external script with the stored procedure [sp_execute_external script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
+You can execute a Python external scripts with the stored procedure [sp_execute_external script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
 
 To enable external scripts, use [Azure Data Studio](../../azure-data-studio/what-is-azure-data-studio.md) to execute the statement below.
 
@@ -66,7 +68,7 @@ RECONFIGURE WITH OVERRIDE;
 
 ## Verify installation
 
-Use the following SQL script to verify the installation and functionality of the Python custom runtime.
+Use the following SQL script to verify the installation and functionality of the Python custom runtime. In the below sample script, `myPython` is used as the language name because the default language name `Python` cannot be provided for a custom runtime.
 
 ```sql
 EXEC sp_execute_external_script

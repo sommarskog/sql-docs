@@ -5,16 +5,17 @@ description: This tutorial demonstrates how to ingest data into the data pool of
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: mikeray
-ms.metadata: seo-lt-2019
 ms.date: 12/13/2019
+ms.service: sql
+ms.subservice: big-data-cluster
 ms.topic: tutorial
-ms.prod: sql
-ms.technology: big-data-cluster
 ---
 
 # Tutorial: Ingest data into a SQL Server data pool with Spark jobs
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
+
+[!INCLUDE[big-data-clusters-banner-retirement](../includes/bdc-banner-retirement.md)]
 
 This tutorial demonstrates how to use Spark jobs to load data into the [data pool](concept-data-pool.md) of a [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]. 
 

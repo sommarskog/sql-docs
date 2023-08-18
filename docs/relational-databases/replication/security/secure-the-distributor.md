@@ -1,19 +1,16 @@
 ---
+title: "Secure the Distributor"
 description: "Secure the Distributor"
-title: "Secure the Distributor | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: replication
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "security [SQL Server replication], Distributors"
-  - "Distributors [SQL Server replication], security"
-ms.assetid: 76d78229-0ff2-4aa4-9b4e-ad97534c5296
 author: "MashaMSFT"
 ms.author: "mathoma"
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: conceptual
+ms.custom: updatefrequency5
+helpviewer_keywords:
+  - "security [SQL Server replication], Distributors"
+  - "Distributors [SQL Server replication], security"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # Secure the Distributor
@@ -36,15 +33,27 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
  The password configured for the **repl_distributor** remote server entry during setup is associated with a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] login, **distributor_admin**, which is added to the **sysadmin** fixed server role at the Distributor. The **distributor_admin** login is used by replication stored procedures when connecting to the Distributor.  
   
 > [!NOTE]  
->  Do not change the password for the **distributor_admin** manually. Always use the **sp_changedistributor_password** stored procedure, or the **Distributor Properties** or **Update Replication Passwords** dialog boxes in [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], because password changes are then applied to local publications automatically.  
+>  Do not change the password for the **distributor_admin** manually. Always use the **sp_changedistributor_password** stored procedure, or the **Distributor Properties** or **Update Replication Passwords** dialog boxes in [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], because password changes are then applied to local publications automatically.
+
+## Disabling the distributor_admin login
+
+ If the **distributor_admin** login is disabled at a remote Distributor, you may no longer be able to do the following:
+ 
+ - Create or delete publications.
+ - Change the articles of an existing publication. 
+ - See the agent status using SQL Server Management Studio (SSMS) or Replication Monitor on the Publisher.
+ - Create or delete subscriptions. 
+ - Post tracer tokens by using Replication Monitor or by executing **sys.sp_posttracertoken**.
+ - Configure a remote Publisher at the Distributor. 
+
+As such, disabling the **distributor_admin** login at a remote Distributor is not recommended. While disabling the **distributor_admin** login on a local distributor may not impose the same limitations, it is still not a recommended practice. 
+
   
 ## Snapshot Folder Security  
  Ensure that the snapshot share has read access granted to the account under which the Merge Agent (for merge replication) or Distribution Agent (for snapshot or transactional replication) runs and write access granted to the account under which the Snapshot Agent runs. For more information about the snapshot folder, see [Secure the Snapshot Folder](../../../relational-databases/replication/security/secure-the-snapshot-folder.md).  
   
 ## See Also  
  [View and Modify Replication Security Settings](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)   
- [Enable Encrypted Connections to the Database Engine &#40;SQL Server Configuration Manager&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)   
+ [Enable Encrypted Connections to the Database Engine &#40;SQL Server Configuration Manager&#41;](../../../database-engine/configure-windows/configure-sql-server-encryption.md)   
  [Replication Security Best Practices](../../../relational-databases/replication/security/replication-security-best-practices.md)   
  [View and modify replication security settings](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)  
-  
-  

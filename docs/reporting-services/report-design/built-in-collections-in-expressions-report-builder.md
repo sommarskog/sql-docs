@@ -1,19 +1,19 @@
 ---
-title: "Built-in Collections in Expressions (Report Builder) | Microsoft Docs"
-description: Discover built-in collections in expressions to reference collections such as parameters, fields, datasets in your reports in Report Builder. 
-ms.date: 3/14/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-design
-
-
-ms.topic: conceptual
-ms.assetid: 78d5e3b8-9320-4e4b-a025-e2de3cf7afa7
+title: "Built-in collections in expressions in a paginated report"
+description: Discover built-in collections in expressions to reference collections in a paginated report such as parameters, fields, datasets in your reports in Report Builder.
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 3/14/2017
+ms.service: reporting-services
+ms.subservice: report-design
+ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
-# Built-in Collections in Expressions (Report Builder)
-  In an expression in a report, you can include references to the following built-in collections: ReportItems, Parameters, Fields, DataSets, DataSources, Variables, and built-in fields for global information such as the report name. Not all collections appear in the **Expression** dialog box. The DataSets and DataSources collections are available only at run-time for published reports on a report server. The ReportItems collection is a collection of text boxes in a report region, for example, the text boxes on a page or in a page header.  
+# Built-in collections in expressions in a paginated report (Report Builder)
+
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-ssrs-rb](../../includes/ssrs-appliesto-ssrs-rb.md)] [!INCLUDE [ssrs-appliesto-pbi-rb](../../includes/ssrs-appliesto-pbi-rb.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
+
+  In an expression in a paginated report, you can include references to the following built-in collections: ReportItems, Parameters, Fields, DataSets, DataSources, Variables, and built-in fields for global information such as the report name. Not all collections appear in the **Expression** dialog box. The DataSets and DataSources collections are available only at run-time for published reports on a report server. The ReportItems collection is a collection of text boxes in a report region, for example, the text boxes on a page or in a page header.  
   
  For more information, see [Expressions &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md).  
   
@@ -30,7 +30,7 @@ ms.author: maggies
 |**Parameters**|Parameters|`=Parameters("ReportMonth").Value`<br /><br /> - or -<br /><br /> `=Parameters!ReportYear.Value`|Represents the collection of report parameters, each of which can be single-value or multivalue. Not available until processing initialization is complete. For more information, see [Parameters Collection References &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/built-in-collections-parameters-collection-references-report-builder.md).|  
 |**Fields(** *\<Dataset>* **)**|Fields|`=Fields!Sales.Value`|Represents the collection of fields of the dataset that are available to the report. Available after data is retrieved from a data source into a dataset. For more information, see [Dataset Fields Collection References &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/built-in-collections-dataset-fields-collection-references-report-builder.md).|  
 |**DataSets**|Not Displayed|`=DataSets("TopEmployees").CommandText`|Represents the collection of datasets referenced from the body of a report definition. Does not include data sources used only in page headers or page footers. Not available in local preview. For more information, see [DataSources and DataSets Collection References &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/built-in-collections-datasources-and-datasets-references-report-builder.md).|  
-|**DataSources**|Not Displayed|`=DataSources("AdventureWorks2012").Type`|Represents the collection of data sources referenced from within the body of a report. Does not include data sources used only in page headers or page footers. Not available in local preview. For more information, see [DataSources and DataSets Collection References &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/built-in-collections-datasources-and-datasets-references-report-builder.md).|  
+|**DataSources**|Not Displayed|`=DataSources("AdventureWorks2022").Type`|Represents the collection of data sources referenced from within the body of a report. Does not include data sources used only in page headers or page footers. Not available in local preview. For more information, see [DataSources and DataSets Collection References &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/built-in-collections-datasources-and-datasets-references-report-builder.md).|  
 |**Variables**|`Variables`|`=Variables!CustomTimeStamp.Value`|Represents the collection of report variables and group variables. For more information, see [Report and Group Variables Collections References &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/built-in-collections-report-and-group-variables-references-report-builder.md).|  
 |**ReportItems**|Not Displayed|`=ReportItems("Textbox1").Value`|Represents the collection of text boxes for a report item. This collection can be used to summarize items on the page for including in a page header or page footer. For more information, see [ReportItems Collection References &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/built-in-collections-reportitems-collection-references-report-builder.md).|  
   

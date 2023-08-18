@@ -1,26 +1,22 @@
 ---
+title: "STNumCurves (geography Data Type)"
 description: "STNumCurves (geography Data Type)"
-title: "STNumCurves (geography Data Type) | Microsoft Docs"
-ms.custom: ""
+author: MladjoA
+ms.author: mlandzic
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "STNumCurves"
   - "STNumCurves_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "STNumCurves method (geography)"
-ms.assetid: e98a56c2-8496-4dfd-9b37-7f3c4ca9b2b5
-author: MladjoA
-ms.author: mlandzic 
+dev_langs:
+  - "TSQL"
 ---
 # STNumCurves (geography Data Type)
-[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Returns the number of curves in a one-dimensional **geography** instance.  
   
@@ -50,20 +46,20 @@ ms.author: mlandzic
 ### A. Using STNumCurves() on a CircularString instance  
  The following example shows how to get the number of curves in a `CircularString` instance:  
   
-```
+```sql
  DECLARE @g geography; 
  SET @g = geography::Parse('CIRCULARSTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653)');  
  SELECT @g.STNumCurves();
- ```  
+```  
   
 ### B. Using STNumCurves() on a CompoundCurve instance  
  The following example uses `STNumCurves()` to return the number of curves in a `CompoundCurve` instance.  
   
-```
+```sql
  DECLARE @g geography;  
  SET @g = geography::Parse('COMPOUNDCURVE(CIRCULARSTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653))');  
  SELECT @g.STNumCurves();
- ```  
+```  
   
 ## See Also  
  [Spatial Data Types Overview](../../relational-databases/spatial/spatial-data-types-overview.md)   

@@ -1,26 +1,22 @@
 ---
+title: "CERTENCODED (Transact-SQL)"
 description: "CERTENCODED (Transact-SQL)"
-title: "CERTENCODED (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/24/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
-ms.topic: reference
-f1_keywords: 
-  - "CERTENCODED"
-  - "CERTENCODED_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "CERTENCODED"
-ms.assetid: 677a0719-7b9a-4f0b-bc61-41634563f924
 author: VanMSFT
 ms.author: vanto
+ms.date: "07/24/2017"
+ms.service: sql
+ms.subservice: t-sql
+ms.topic: reference
+f1_keywords:
+  - "CERTENCODED"
+  - "CERTENCODED_TSQL"
+helpviewer_keywords:
+  - "CERTENCODED"
+dev_langs:
+  - "TSQL"
 ---
 # CERTENCODED (Transact-SQL)
-[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 This function returns the public portion of a certificate in binary format. This function takes a certificate ID as an argument, and returns the encoded certificate. To create a new certificate, pass the binary result to **CREATE CERTIFICATE ... WITH BINARY**.
   

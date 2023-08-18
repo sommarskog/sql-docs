@@ -1,26 +1,22 @@
 ---
+title: "STGeomFromWKB (geography Data Type)"
 description: "STGeomFromWKB (geography Data Type)"
-title: "STGeomFromWKB (geography Data Type) | Microsoft Docs"
-ms.custom: ""
+author: MladjoA
+ms.author: mlandzic
 ms.date: "07/30/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "STGeomFromWKB_TSQL"
   - "STGeomFromWKB (geography Data Type)"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "STGeomFromWKB method"
-ms.assetid: 79d39d88-5440-49a7-9247-190eafce3f4f
-author: MladjoA
-ms.author: mlandzic 
+dev_langs:
+  - "TSQL"
 ---
 # STGeomFromWKB (geography Data Type)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 Returns a **geography** instance from an Open Geospatial Consortium (OGC) Well-Known Binary (WKB) representation.
   
@@ -57,7 +53,7 @@ STGeomFromWKB ( 'WKB_geography' , SRID )
 ## Examples  
  The following example uses `STGeomFromWKB()` to create a `geography` instance.  
   
-```  
+```sql
 DECLARE @g geography;  
 SET @g = geography::STGeomFromWKB(0x010200000002000000D7A3703D0A975EC08716D9CEF7D34740CBA145B6F3955EC08716D9CEF7D34740, 4326);  
 SELECT @g.ToString();  

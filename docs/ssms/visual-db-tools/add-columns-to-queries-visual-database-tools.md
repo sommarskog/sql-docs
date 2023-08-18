@@ -1,26 +1,23 @@
 ---
-description: "Add Columns to Queries (Visual Database Tools)"
 title: Add Columns to Queries
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
+description: "Add Columns to Queries (Visual Database Tools)"
+author: markingmyname
+ms.author: maghan
+ms.date: 01/19/2017
+ms.service: sql
+ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "inserting columns"
   - "columns [SQL Server], adding"
   - "queries [SQL Server], columns"
   - "adding columns"
-ms.assetid: 82f3ba72-3d72-4fb1-8179-2a953a782787
-author: markingmyname
-ms.author: maghan
-ms.reviewer: 
-ms.custom: seo-lt-2019
-ms.date: 01/19/2017
 ---
 
 # Add Columns to Queries (Visual Database Tools)
 
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server](../../includes/applies-to-version/sqlserver.md)]
+
 To use a column in a query, you must add it to the query. You might add a column to display it in query output, to use it for sorting, to search the contents of the column, or to summarize its contents. You can decide which of the columns you use in the query are included in the results pane when the query is run. For more information see [Remove Columns from Query Results &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/remove-columns-from-query-results-visual-database-tools.md).  
   
 > [!NOTE]  

@@ -1,25 +1,20 @@
 ---
-description: "Remove Columns from Queries (Visual Database Tools)"
 title: Remove Columns from Queries
-ms.custom: seo-lt-2019
+description: "Remove Columns from Queries (Visual Database Tools)"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
+ms.service: sql
+ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "removing columns"
   - "queries [SQL Server], columns"
   - "deleting columns"
   - "dropping columns"
-ms.assetid: 6d9819b8-ee2f-4838-9713-c5e3ad37ab46
-author: markingmyname
-ms.author: maghan
-ms.reviewer: 
-
 ---
 # Remove Columns from Queries (Visual Database Tools)
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server](../../includes/applies-to-version/sqlserver.md)]
 If you no longer want to use a column in a query, you can remove it. If you do, the Query and View Designer removes references to the column in the select list, the sort specification, the search criteria, **SQL Pane**, and any grouping specifications.  
   
 > [!NOTE]  

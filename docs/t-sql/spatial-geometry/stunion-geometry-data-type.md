@@ -1,26 +1,23 @@
 ---
+title: "STUnion (geometry Data Type)"
 description: "STUnion (geometry Data Type)"
-title: "STUnion (geometry Data Type) | Microsoft Docs"
-ms.custom: ""
+author: MladjoA
+ms.author: mlandzic
 ms.date: "08/03/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "STUnion (geometry Data Type)"
   - "STUnion_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "STUnion (geometry Data Type)"
-ms.assetid: 5b168118-137d-402f-9173-fee3f365a89c
-author: MladjoA
-ms.author: mlandzic 
+dev_langs:
+  - "TSQL"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=fabric"
 ---
 # STUnion (geometry Data Type)
-[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance FabricSE FabricDW](../../includes/applies-to-version/sql-asdb-asdbmi-fabricse-fabricdw.md)]
 
 Returns an object that represents the union of a **geometry** instance with another **geometry** instance.
   
@@ -50,7 +47,7 @@ Returns an object that represents the union of a **geometry** instance with anot
 ### A. Computing the union of two Polygon instances  
  The following example uses `STUnion()` to compute the union of two `Polygon` instances.  
   
-```  
+```sql
 DECLARE @g geometry;  
 DECLARE @h geometry;  
 SET @g = geometry::STGeomFromText('POLYGON((0 0, 0 2, 2 2, 2 0, 0 0))', 0);  
@@ -61,7 +58,7 @@ SELECT @g.STUnion(@h).ToString();
 ### B. Computing the union of a Polygon instance with a CurvePolygon instance  
  The following example returns a `GeometryCollection` instance that contains a circular arc segment.  
   
-```
+```sql
  DECLARE @g geometry = 'CURVEPOLYGON(CIRCULARSTRING(0 -4, 4 0, 0 4, -4 0, 0 -4))';  
  DECLARE @h geometry = 'POLYGON((5 -1, 5 -3, 7 -3, 7 -1, 5 -1))';  
  SELECT @g.STUnion(@h).ToString();

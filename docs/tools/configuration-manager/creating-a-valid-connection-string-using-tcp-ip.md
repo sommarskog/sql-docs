@@ -1,26 +1,22 @@
 ---
 title: "Creating a Valid Connection String Using TCP IP"
 description: Learn how to create a valid connection string when using TCP/IP to connect to an instance of SQL Server. View examples of valid strings.
-ms.custom: seo-lt-2019
+author: markingmyname
+ms.author: maghan
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.reviewer: ""
-ms.technology: tools-other
+ms.service: sql
+ms.subservice: tools-other
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "connection strings [Database Engine]"
   - "ports [SQL Server], connecting to"
   - "TCP/IP [SQL Server], connection strings"
   - "connection strings [Database Engine], TCP/IP"
   - "aliases [SQL Server], TCP/IP"
-ms.assetid: ee5dbc2c-1fc6-42bd-bdf5-efa792557934
-author: markingmyname
-ms.author: maghan
 monikerRange: ">=sql-server-2016"
 ---
 # Creating a Valid Connection String Using TCP IP
-[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
   To create a valid connection string using TCP/IP, you must:  
   
 -   Specify an **Alias Name**.  
@@ -34,7 +30,7 @@ monikerRange: ">=sql-server-2016"
  At the time of connection, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client component reads the server, protocol, and port values from the registry for the specified alias name, and creates a connection string in the format `tcp:<servername>[\<instancename>],<port>` or `tcp:<IPAddress>[\<instancename>],<port>`.  
   
 > [!NOTE]
->  The [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows Firewall closes port 1433 by default. Because [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] communicates over port 1433, you must reopen the port if [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is configured to listen for incoming client connections using TCP/IP. For information on configuring a firewall, see "How to: Configure a Firewall for SQL Server Access" in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online or review your firewall documentation.  
+>  The [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows Firewall closes port 1433 by default. Because [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] communicates over port 1433, you must reopen the port if [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is configured to listen for incoming client connections using TCP/IP. For information on configuring a firewall, see "How to: Configure a Firewall for SQL Server Access" in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online or review your firewall documentation.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client fully support both Internet Protocol version 4 (IPv4) and Internet Protocol version 6 (IPv6). [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager accepts both IPv4 and IPv6 formats for IP addresses. For information on IPv6, see "Connecting Using IPv6" in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online.  
   

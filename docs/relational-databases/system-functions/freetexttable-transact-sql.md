@@ -1,31 +1,27 @@
 ---
+title: "FREETEXTTABLE (Transact-SQL)"
 description: "FREETEXTTABLE (Transact-SQL)"
-title: "FREETEXTTABLE (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/10/2016"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: system-objects
+author: MikeRayMSFT
+ms.author: mikeray
+ms.date: "10/05/2021"
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "FREETEXTTABLE_TSQL"
   - "FREETEXTTABLE"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "search conditions [SQL Server], meaning matches"
   - "meaning matches [full-text search]"
   - "FREETEXTTABLE function (Transact-SQL)"
   - "ranked results [full-text search]"
   - "column searches [full-text search]"
-ms.assetid: 4523ae15-4260-40a7-a53c-8df15e1fee79
-author: MikeRayMSFT
-ms.author: mikeray
+dev_langs:
+  - "TSQL"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # FREETEXTTABLE (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Is a function used in the [FROM clause](../../t-sql/queries/from-transact-sql.md) of a [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT statement to perform a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] full-text search on full-text indexed columns containing character-based data types. This function returns a table of zero, one, or more rows for those columns containing values that match the meaning and not just the exact wording, of the text in the specified *freetext_string*. FREETEXTTABLE is referenced as if it were a regular table name.  
   
@@ -36,14 +32,11 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 > [!NOTE]  
 >  For information about the forms of full-text searches that are supported by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Query with Full-Text Search](../../relational-databases/search/query-with-full-text-search.md).  
   
-(https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)).|  
-  
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 FREETEXTTABLE (table , { column_name | (column_list) | * }   
           , 'freetext_string'   
      [ , LANGUAGE language_term ]   
@@ -101,7 +94,7 @@ FREETEXTTABLE (table , { column_name | (column_list) | * }
 ### A. Simple Example  
  The following example creates and populates a simple table of two columns, listing 3 counties and the colors in their flags. The it creates and populates a full-text catalog and index on the table. Then the **FREETEXTTABLE** syntax is demonstrated.  
   
-```  
+```sql
 CREATE TABLE Flags (Country nvarchar(30) NOT NULL, FlagColors varchar(200));  
 CREATE UNIQUE CLUSTERED INDEX FlagKey ON Flags(Country);  
 INSERT Flags VALUES ('France', 'Blue and White and Red');  
@@ -122,8 +115,8 @@ SELECT * FROM FREETEXTTABLE (Flags, FlagColors, 'Yellow');
 ### B. Using FREETEXT in an INNER JOIN  
  The following example returns the description and rank of any products with a description that matches the meaning of `high level of performance`.  
   
-```  
-USE AdventureWorks2012;  
+```sql
+USE AdventureWorks2022;  
 GO  
   
 SELECT FT_TBL.Description  
@@ -140,8 +133,8 @@ GO
 ### C. Specifying Language and Highest Ranked Matches  
  The following example is identical and shows the use of the `LANGUAGE`*language_term* and *top_n_by_rank* parameters.  
   
-```  
-USE AdventureWorks2012;  
+```sql
+USE AdventureWorks2022;  
 GO  
   
 SELECT FT_TBL.Description  
@@ -173,4 +166,5 @@ GO
  [Rowset Functions &#40;Transact-SQL&#41;](../../t-sql/functions/opendatasource-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)   
- [precompute rank Server Configuration Option](/docs/database-engine/discontinued-database-engine-functionality-in-sql-server)  
+ [precompute rank Server Configuration Option](../../database-engine/discontinued-database-engine-functionality-in-sql-server.md)  
+ [Compare features in Azure SQL Database and Azure SQL Managed Instance](/azure/azure-sql/database/features-comparison?WT.mc_id=TSQL_GetItTag)

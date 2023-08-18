@@ -1,21 +1,19 @@
 ---
 title: "SQL Server Multi-Subnet Clustering"
 description: Learn about configuring a SQL Server failover cluster instance in a multi-subnet environment, which provides disaster recovery in addition to high availability.
-ms.custom: seo-lt-2019
+author: MashaMSFT
+ms.author: mathoma
 ms.date: "09/01/2016"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: failover-cluster-instance
+ms.service: sql
+ms.subservice: failover-cluster-instance
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "stretch cluster"
   - "Availability Groups [SQL Server], WSFC clusters"
   - "failover clustering [SQL Server], AlwaysOn Availability Groups"
+  - "failover clustering [SQL Server], Always On Availability Groups"
   - "multi-site failover cluster"
   - "failover clustering [SQL Server]"
-ms.assetid: cd909612-99cc-4962-a8fb-e9a5b918e221
-author: cawrites
-ms.author: chadam
 ---
 # SQL Server Multi-Subnet Clustering (SQL Server)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +37,8 @@ ms.author: chadam
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] FCI SQLCLUST1 includes Node1 and Node2. Node1 is connected to Subnet1 and Subnet2. Node2 is also connected to Subnet1 and Subnet2. The IP address resource dependency is set to **AND** by [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Setup.  
   
-    > **NOTE:** This configuration is not considered as a multi-subnet failover cluster configuration because the clustered nodes are on the same set of subnets.  
+    > [!NOTE]  
+    > This configuration is not considered as a multi-subnet failover cluster configuration because the clustered nodes are on the same set of subnets.  
   
 ##  <a name="ComponentsAndConcepts"></a> IP Address Resource Considerations  
  In a multi-subnet failover cluster configuration, the IP addresses are not owned by all the nodes in the failover cluster, and may not be all online during [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] startup. Beginning in [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], you can set the IP address resource dependency to **OR**. This enables [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] to be online when there is at least one valid IP address that it can bind to.  

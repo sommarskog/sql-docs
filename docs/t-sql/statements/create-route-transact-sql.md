@@ -1,21 +1,18 @@
 ---
-description: "CREATE ROUTE (Transact-SQL)"
-title: "CREATE ROUTE (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "CREATE ROUTE (Transact-SQL)"
+description: CREATE ROUTE (Transact-SQL)
+author: markingmyname
+ms.author: maghan
 ms.date: "03/30/2018"
-ms.prod: sql
-ms.prod_service: "sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "CREATE_ROUTE_TSQL"
   - "ROUTE"
   - "CREATE ROUTE"
   - "ROUTE_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "lifetimes [Service Broker]"
   - "routes [Service Broker], creating"
   - "forwarding brokers [SQL Server]"
@@ -24,17 +21,17 @@ helpviewer_keywords:
   - "expired routes [SQL Server]"
   - "activating routes"
   - "CREATE ROUTE statement"
-ms.assetid: 7e695364-1a98-4cfd-8ebd-137ac5a425b3
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+dev_langs:
+  - "TSQL"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017"
 ---
 # CREATE ROUTE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
+
+[!INCLUDE[sql-asdbmi](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Adds a new route to the routing table for the current database. For outgoing messages, [!INCLUDE[ssSB](../../includes/sssb-md.md)] determines routing by checking the routing table in the local database. For messages on conversations that originate in another instance, including messages to be forwarded, [!INCLUDE[ssSB](../../includes/sssb-md.md)] checks the routes in **msdb**.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

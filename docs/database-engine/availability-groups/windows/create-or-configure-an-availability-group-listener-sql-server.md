@@ -1,21 +1,17 @@
 ---
 title: "Configure availability group listener"
 description: "Describes the steps to take when configuring a listener for an Always On availability group using PowerShell or SQL Server Management Studio. "
-ms.custom: "seo-lt-2019"
+author: MashaMSFT
+ms.author: mathoma
 ms.date: "05/17/2016"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: availability-groups
+ms.service: sql
+ms.subservice: availability-groups
 ms.topic: how-to
-f1_keywords: 
+f1_keywords:
   - "sql13.swb.availabilitygroup.newaglistener.general.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Availability Groups [SQL Server], listeners"
   - "Availability Groups [SQL Server], client connectivity"
-ms.assetid: 2bc294f6-2312-4b6b-9478-2fb8a656e645
-author: cawrites
-ms.author: chadam
-manager: erikre
 ---
 # Configure a listener for an Always On availability group
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -62,8 +58,8 @@ manager: erikre
   
 |Permissions|Link|  
 |-----------------|----------|  
-|The cluster name object (CNO) of WSFC cluster that is hosting the availability group must have **Create Computer objects** permission.<br /><br /> In Active Directory, a CNO by default does not have **Create Computer objects** permission explicitly and can create 10 virtual computer objects (VCOs). After 10 VCOs are created, the creation of additional VCOs will fail. You can avoid this by granting the permission explicitly to the WSFC cluster's CNO. Note that VCOs for availability groups that you have deleted are not automatically deleted in Active Directory and count against your 10 VCO default limit unless they are manually deleted.<br /><br /> Note: In some organizations, the security policy prohibits granting **Create Computer objects** permission to individual user accounts.|*Steps for configuring the account for the person who installs the cluster* in [Failover Cluster Step-by-Step Guide: Configuring Accounts in Active Directory](https://technet.microsoft.com/library/cc731002\(WS.10\).aspx#BKMK_steps_installer)<br /><br /> *Steps for prestaging the cluster name account* in [Failover Cluster Step-by-Step Guide: Configuring Accounts in Active Directory](https://technet.microsoft.com/library/cc731002\(WS.10\).aspx#BKMK_steps_precreating)|  
-|If your organization requires that you prestage the computer account for a listener virtual network name, you will need membership in the **Account Operator** group or your domain administrator's assistance.|*Steps for prestaging an account for a clustered service or application* in [Failover Cluster Step-by-Step Guide: Configuring Accounts in Active Directory](https://technet.microsoft.com/library/cc731002\(WS.10\).aspx#BKMK_steps_precreating2).|  
+|The cluster name object (CNO) of WSFC cluster that is hosting the availability group must have **Create Computer objects** permission.<br /><br /> In Active Directory, a CNO by default does not have **Create Computer objects** permission explicitly and can create 10 virtual computer objects (VCOs). After 10 VCOs are created, the creation of additional VCOs will fail. You can avoid this by granting the permission explicitly to the WSFC cluster's CNO. Note that VCOs for availability groups that you have deleted are not automatically deleted in Active Directory and count against your 10 VCO default limit unless they are manually deleted.<br /><br /> Note: In some organizations, the security policy prohibits granting **Create Computer objects** permission to individual user accounts.|*Steps for configuring the account for the person who installs the cluster* in [Failover Cluster Step-by-Step Guide: Configuring Accounts in Active Directory](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731002(v=ws.10)#BKMK_steps_installer)<br /><br /> *Steps for prestaging the cluster name account* in [Failover Cluster Step-by-Step Guide: Configuring Accounts in Active Directory](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731002(v=ws.10)#BKMK_steps_precreating)|  
+|If your organization requires that you prestage the computer account for a listener virtual network name, you will need membership in the **Account Operator** group or your domain administrator's assistance.|*Steps for prestaging an account for a clustered service or application* in [Failover Cluster Step-by-Step Guide: Configuring Accounts in Active Directory](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731002(v=ws.10)#BKMK_steps_precreating2).|  
   
 > [!TIP]  
 >  Generally, it is simplest not to prestage the computer account for a listener virtual network name. If you can, let the account to be created and configured automatically when you run the WSFC High Availability wizard.  
@@ -141,7 +137,7 @@ manager: erikre
   
      The following example adds an availability group listener to an existing availability group named `MyAg2`. A unique DNS name, `MyAg2ListenerIvP6`, is specified for this listener. The two replicas are on different subnets, so , as recommended, the listener uses static IP addresses. For each of the two availability replicas, the WITH IP clause specifies a static IP address, `2001:4898:f0:f00f::cf3c and 2001:4898:e0:f213::4ce2`, which use the IPv6 format. This example also specifies uses the optional PORT argument to specify port `60173` as the listener port.  
   
-    ```  
+    ```sql  
     ALTER AVAILABILITY GROUP MyAg2   
           ADD LISTENER 'MyAg2ListenerIvP6' ( WITH IP ( ('2001:db88:f0:f00f::cf3c'),('2001:4898:e0:f213::4ce2') ) , PORT = 60173 );   
     GO  
@@ -160,7 +156,7 @@ manager: erikre
   
      For example, the following **New-SqlAvailabilityGroupListener** command creates an availability group listener named `MyListener` for the availability group `MyAg`. This listener will use the IPv4 address passed to the **-StaticIp** parameter as its virtual IP address.  
   
-    ```  
+    ```powershell  
     New-SqlAvailabilityGroupListener -Name MyListener `   
     -StaticIp '192.168.3.1/255.255.252.0' `   
     -Path SQLSERVER:\Sql\Computer\Instance\AvailabilityGroups\MyAg  
@@ -172,7 +168,7 @@ manager: erikre
   
      For example, the following **Set-SqlAvailabilityGroupListener** command sets the port number for the availability group listener named `MyListener` to `1535`. This port is used to listen for connections to the listener.  
   
-    ```  
+    ```powershell  
     Set-SqlAvailabilityGroupListener -Port 1535 `   
     -Path SQLSERVER:\Sql\PrimaryServer\InstanceName\AvailabilityGroups\MyAg\AGListeners\MyListener  
   
@@ -183,7 +179,7 @@ manager: erikre
   
      For example, the following **Add-SqlAGListenerstaticIp** command adds a static IPv4 address to the availability group listener `MyListener` on the availability group `MyAg`. This IPv6 address serves as the virtual IP address of the listener on the subnet `255.255.252.0`. If the availability group spans multiple subnets, you should add a static IP address for each subnet to the listener.  
   
-    ```  
+    ```powershell
     $path = "SQLSERVER:\SQL\PrimaryServer\InstanceName\AvailabilityGroups\MyAg\AGListeners\ MyListener" `   
     Add-SqlAGListenerstaticIp -Path $path `   
     -StaticIp "2001:0db8:85a3:0000:0000:8a2e:0370:7334"  
@@ -267,7 +263,7 @@ manager: erikre
 ###  <a name="SampleScript"></a> Sample PowerShell Script to Disable RegisterAllProvidersIP and Reduce TTL  
  The following PowerShell example demonstrates how to configure both the **RegisterAllProvidersIP** and **HostRecordTTL** cluster parameters for the listener resource.  The DNS record will be cached for 5 minutes rather than the default 20 minutes.  Modifying both cluster parameters may reduce the time to connect to the correct IP address after a failover for legacy clients that cannot use the **MultiSubnetFailover** parameter.  Replace `yourListenerName` with the name of the listener that you are changing.  
   
-```  
+```powershell  
 Import-Module FailoverClusters  
 Get-ClusterResource yourListenerName | Set-ClusterParameter RegisterAllProvidersIP 0   
 Get-ClusterResource yourListenerName | Set-ClusterParameter HostRecordTTL 300  

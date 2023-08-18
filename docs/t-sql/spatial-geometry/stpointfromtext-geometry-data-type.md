@@ -1,26 +1,22 @@
 ---
+title: "STPointFromText (geometry Data Type)"
 description: "STPointFromText (geometry Data Type)"
-title: "STPointFromText (geometry Data Type) | Microsoft Docs"
-ms.custom: ""
+author: MladjoA
+ms.author: mlandzic
 ms.date: "08/03/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "STPointFromText_TSQL"
   - "STPointFromText (geometry Data Type)"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "STPointFromText (geometry Data Type)"
-ms.assetid: 1d71dfd8-9d80-44c3-b6e1-64e99cde1fa0
-author: MladjoA
-ms.author: mlandzic 
+dev_langs:
+  - "TSQL"
 ---
 # STPointFromText (geometry Data Type)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 Returns a **geometry** instance from an Open Geospatial Consortium (OGC) Well-Known Text (WKT) representation augmented with any Z (elevation) and M (measure) values carried by the instance.
   
@@ -53,7 +49,7 @@ STPointFromText ( 'point_tagged_text' , SRID )
 ## Examples  
  The following example uses `STPointFromText()` to create a `geometry` instance.  
   
-```  
+```sql
 DECLARE @g geometry;  
 SET @g = geometry::STPointFromText('POINT (100 100)', 0);  
 SELECT @g.ToString();  

@@ -1,21 +1,21 @@
 ---
-title: "Expression Uses in Reports (Report Builder) | Microsoft Docs"
-description: Specify or calculate values with expressions for parameters, queries, filters, and text box properties in Report Builder.
-ms.date: 03/14/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-design
-
-
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "expressions [Reporting Services], about expressions"
-ms.assetid: 76b9ed31-5aec-40fc-bb88-a1c1b0ab3fc3
+title: "Expression uses in paginated reports"
+description: Specify or calculate values with paginated report expressions for parameters, queries, filters, and text box properties in Report Builder.
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 03/14/2017
+ms.service: reporting-services
+ms.subservice: report-design
+ms.topic: conceptual
+ms.custom: updatefrequency5
+helpviewer_keywords:
+  - "expressions [Reporting Services], about expressions"
 ---
-# Expression Uses in Reports (Report Builder and SSRS)
-In [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] paginated reports, expressions are used throughout the report definition to specify or calculate values for parameters, queries, filters, report item properties, group and sort definitions, text box properties, bookmarks, document maps, dynamic page header and footer content, images, and dynamic data source definitions. This topic provides examples of the many places you can use expressions to vary the content or appearance of a report. This list is not comprehensive. You can set an expression for any property in a dialog box that displays the expression (**fx**) button or in a drop-down list that displays **\<Expression...>**.  
+# Expression uses in paginated reports (Report Builder)
+
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-ssrs-rb](../../includes/ssrs-appliesto-ssrs-rb.md)] [!INCLUDE [ssrs-appliesto-pbi-rb](../../includes/ssrs-appliesto-pbi-rb.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
+
+In paginated reports, expressions are used throughout the report definition to specify or calculate values for parameters, queries, filters, report item properties, group and sort definitions, text box properties, bookmarks, document maps, dynamic page header and footer content, images, and dynamic data source definitions. This topic provides examples of the many places you can use expressions to vary the content or appearance of a report. This list is not comprehensive. You can set an expression for any property in a dialog box that displays the expression (**fx**) button or in a drop-down list that displays **\<Expression...>**.  
   
  Expressions can be simple or complex. *Simple expressions* contain a reference to a single dataset field, parameter, or built-in field. Complex expressions can contain multiple built-in references, operators, and function calls. For example, a complex expression might include the Sum function applied to the Sales field.  
   
@@ -56,7 +56,7 @@ In [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] paginated re
 |Include specific values for more than one field from a dataset.|Filter equation for a group in a tablix. Use **Tablix Properties Dialog Box, Filters**.|For data type, select **Boolean**.<br /><br /> `=IIF(InStr(Fields!Subcat.Value,"Shorts")=0 AND (Fields!Size.Value="M" OR Fields!Size.Value="S"),TRUE, FALSE)`<br /><br /> `=`<br /><br /> `TRUE`|  
 |Hide a text box on the design surface, that can be toggled by the user using a Boolean parameter named *Show*.|Hiddenproperty on a text box. Use **Text Box Properties Dialog Box, Visibility**.|`=Not Parameters!` *Show\<boolean parameter>* `.Value`|  
 |Specify dynamic page header or footer content.|Value for a placeholder inside of a text box that is placed in the page header or footer.|`="Page " & Globals!PageNumber & " of "  & Globals!TotalPages`|  
-|Specify a data source dynamically by using a parameter.|Connection string on the Data source. Use **Data Source Properties Dialog Box, General**.|`="Data Source=" & Parameters!ServerName.Value & ";initial catalog=AdventureWorks2012"`|  
+|Specify a data source dynamically by using a parameter.|Connection string on the Data source. Use **Data Source Properties Dialog Box, General**.|`="Data Source=" & Parameters!ServerName.Value & ";initial catalog=AdventureWorks2022"`|  
 |Identify all the values for a multivalue parameter chosen by the user.|Value for a placeholder inside of a text box. Use **Tablix Properties Dialog Box, Filters**.|`=Join(Parameters!MyMultivalueParameter.Value,", ")`|  
 |Specify page breaks for every 20 rows in a tablix with no other groups.|Group expression for a group in a tablix. Use **Group Properties Dialog Box, Page Breaks**. Select the option **Between each instance of a group**.|`=Ceiling(RowNumber(Nothing)/20)`|  
 |Specify conditional visibility based on a parameter.|Hidden property for a tablix. Use **Tablix Properties Dialog Box, Visibility**.|`=Not Parameters!<` *boolean parameter* `>.Value`|  

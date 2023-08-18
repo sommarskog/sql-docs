@@ -1,24 +1,19 @@
 ---
-description: "How the Query and View Designer Represents Joins (Visual Database Tools)"
 title: How the Query and View Designer Represents Joins
-ms.custom: seo-lt-2019
+description: "How the Query and View Designer Represents Joins (Visual Database Tools)"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
+ms.service: sql
+ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "SQL pane [Visual Database Tools]"
   - "joins [SQL Server], Query and View Designer"
   - "Diagram pane [Visual Database Tools]"
-ms.assetid: 20a99dcb-83bd-4aa6-9139-92e2e5ba4887
-author: markingmyname
-ms.author: maghan
-ms.reviewer: 
-
 ---
 # How the Query and View Designer Represents Joins (Visual Database Tools)
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server](../../includes/applies-to-version/sqlserver.md)]
 If tables are joined, the [Query and View Designer](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md) represents the join graphically in the [Diagram pane](../../ssms/visual-db-tools/diagram-pane-visual-database-tools.md) and by using SQL syntax in the [SQL pane](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md).  
   
 ## Diagram Pane  

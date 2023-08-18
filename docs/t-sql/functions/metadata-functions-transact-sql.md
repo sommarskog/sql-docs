@@ -1,24 +1,20 @@
 ---
+title: "Metadata Functions (Transact-SQL)"
 description: "Metadata Functions (Transact-SQL)"
-title: "Metadata Functions (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: markingmyname
+ms.author: maghan
 ms.date: "06/10/2016"
-ms.prod: sql
-ms.prod_service: "sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "metadata [SQL Server], functions"
   - "functions [SQL Server], metadata"
-ms.assetid: a18c12a9-59ad-4711-a862-39d8f28476b0
-author: cawrites
-ms.author: chadam
+dev_langs:
+  - "TSQL"
 ---
 # Metadata Functions (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdbmi.md)]
 
 The following scalar functions return information about the database and database objects:  
   

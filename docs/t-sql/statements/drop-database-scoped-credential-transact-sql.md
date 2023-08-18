@@ -1,30 +1,28 @@
 ---
-description: "DROP DATABASE SCOPED CREDENTIAL (Transact-SQL)"
-title: "DROP DATABASE SCOPED CREDENTIAL (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "02/27/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: t-sql
-ms.topic: reference
-f1_keywords: 
-  - "DROP DATABASE SCOPED CREDENTIAL"
-  - "DROP_DATABASE_SCOPED_CREDENTIAL_TSQL"
-helpviewer_keywords: 
-  - "DROP DATABASE SCOPED CREDENTIAL statement"
-  - "credential [SQL Server], DROP DATABASE SCOPED CREDENTIAL statement"
-ms.assetid: 319d59f4-fa82-47ca-869b-3a9cd52900b0
+title: "DROP DATABASE SCOPED CREDENTIAL (Transact-SQL)"
+description: DROP DATABASE SCOPED CREDENTIAL (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
-monikerRange: "= azuresqldb-current"
+ms.date: "02/27/2017"
+ms.service: sql
+ms.subservice: t-sql
+ms.topic: reference
+f1_keywords:
+  - "DROP DATABASE SCOPED CREDENTIAL"
+  - "DROP_DATABASE_SCOPED_CREDENTIAL_TSQL"
+helpviewer_keywords:
+  - "DROP DATABASE SCOPED CREDENTIAL statement"
+  - "credential [SQL Server], DROP DATABASE SCOPED CREDENTIAL statement"
+dev_langs:
+  - "TSQL"
+monikerRange: "=azuresqldb-current||=azure-sqldw-latest"
 ---
 # DROP DATABASE SCOPED CREDENTIAL (Transact-SQL)
 [!INCLUDE [asdb-asdbmi-asa](../../includes/applies-to-version/asdb-asdbmi-asa.md)]
 
   Removes a database scoped credential from the server.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

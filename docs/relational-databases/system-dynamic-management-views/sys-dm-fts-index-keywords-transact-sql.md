@@ -1,26 +1,23 @@
 ---
-description: "sys.dm_fts_index_keywords (Transact-SQL)"
-title: "sys.dm_fts_index_keywords (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.dm_fts_index_keywords (Transact-SQL)"
+description: sys.dm_fts_index_keywords (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "dm_fts_index_keywords"
   - "sys.dm_fts_index_keywords"
   - "sys.dm_fts_index_keywords_TSQL"
   - "dm_fts_index_keywords_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.dm_fts_index_keywords dynamic management function"
   - "full-text search [SQL Server], viewing keywords"
   - "troubleshooting [SQL Server], full-text search"
-ms.assetid: fce7b2a1-7e74-4769-86a8-c77c7628decd
-author: pmasl 
-ms.author: pelopes
+dev_langs:
+  - "TSQL"
 ---
 # sys.dm_fts_index_keywords (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -80,7 +77,7 @@ sys.dm_fts_index_keywords( DB_ID('database_name'), OBJECT_ID('table_name') )
  The following example displays information about the high-level content of the full-text index in the `HumanResources.JobCandidate` table.  
   
 ```  
-SELECT * FROM sys.dm_fts_index_keywords(db_id('AdventureWorks2012'), object_id('HumanResources.JobCandidate'))  
+SELECT * FROM sys.dm_fts_index_keywords(db_id('AdventureWorks2022'), object_id('HumanResources.JobCandidate'))  
 GO  
 ```  
   

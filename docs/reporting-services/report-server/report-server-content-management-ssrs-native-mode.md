@@ -1,21 +1,18 @@
 ---
-title: "Report Server Content Management (Native Mode) | Microsoft Docs"
+title: "Report Server Content Management (Native Mode)"
 description: Learn about the web portal and the new web portal experience for Reporting Services content management. Manage items through properties and security settings.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 06/14/2019
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-server
-
-
+ms.service: reporting-services
+ms.subservice: report-server
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "administering Reporting Services"
   - "published reports [Reporting Services], managing"
   - "report servers [Reporting Services], content management"
   - "content management [Reporting Services]"
-ms.assetid: 641961ac-53a5-4997-9d42-cf4ecce1f892
-author: maggiesMSFT
-ms.author: maggies
 ---
 # Report Server Content Management (SSRS Native Mode)
 In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], content management refers to the management of report server items. All items can be managed independently of each other through properties and security settings. Any item can be moved to a different location in the report server folder namespace. To manage items effectively, you need to know which tasks a content manager performs. Starting in SQL Server 2016 Reporting Services or later (SSRS) CTP 3.2, the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] web portal is available. This article will look at the web portal and the new web portal experience.  
@@ -44,7 +41,7 @@ In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], content manage
 Tools for managing report server content include [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], and the web portal. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] allows you to set defaults and enable features. The web portal is used to grant user access to report server items and operations, view and use reports and other content types, and view and use all shared items and report distribution features. The web portal is a updated site that allows for much of the functionality of the deprecated Report Manager. For more information, see [Reporting Services Tools](../../reporting-services/tools/reporting-services-tools.md).  
   
 ##  <a name="bkmk_ReportServerItems"></a> Report Server items  
- Report server items include reports, shared data sources, shared datasets, report parts, resources (items that are stored on but not processed by a report server), and folders. Items can depend on other items, for example, a report can depend on the shared data sources it references. If you move a dependent item, the report server updates the reference information automatically.  
+ Report server items include reports, shared data sources, shared datasets, resources (items that are stored on but not processed by a report server), and folders. Items can depend on other items, for example, a report can depend on the shared data sources it references. If you move a dependent item, the report server updates the reference information automatically.  
   
  You can move report server items to different folder locations in the report server folder hierarchy. When you move an item, all properties (including security settings) move with the item to the new location. When you move a folder, all the items in the folder move with it.  
   
@@ -74,7 +71,9 @@ Tools for managing report server content include [!INCLUDE[ssManStudio](../../in
   
 -   Shared datasets  
   
--   Report Parts  
+-   Report Parts
+
+    [!INCLUDE [ssrs-report-parts-deprecated](../../includes/ssrs-report-parts-deprecated.md)]
   
 -   KPIs  
   

@@ -1,19 +1,17 @@
 ---
-title: "Breaking changes in SQL Server Reporting Services in SQL Server 2016 | Microsoft Docs"
+title: "Breaking changes in SQL Server Reporting Services in SQL Server 2016"
 description: Learn about changes in Reporting Services that might break applications, scripts, or functionalities based on earlier versions of SQL Server.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 07/02/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: reporting-services
-
+ms.service: reporting-services
+ms.subservice: reporting-services
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "Me.Value references"
   - "Reporting Services, backward compatibility"
   - "breaking changes [Reporting Services]"
-ms.assetid: 39c7aafd-dcb9-4317-b8f7-d15828eb4f9a
-author: maggiesMSFT
-ms.author: maggies
 ---
 # Breaking changes in SQL Server Reporting Services in SQL Server 2016
 
@@ -38,4 +36,4 @@ The [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)] application name cha
 [Deprecated features in SQL Server Reporting Services in SQL Server 2016](../reporting-services/deprecated-features-in-sql-server-reporting-services-ssrs.md)    
 [Discontinued functionality to SQL Server Reporting Services in SQL Server 2016](../reporting-services/discontinued-functionality-to-sql-server-reporting-services-in-sql-server.md)  
 
-More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)
+More questions? [Try asking the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user)

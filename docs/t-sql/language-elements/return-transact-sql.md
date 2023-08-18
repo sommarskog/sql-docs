@@ -1,19 +1,16 @@
 ---
+title: "RETURN (Transact-SQL)"
 description: "RETURN (Transact-SQL)"
-title: "RETURN (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/16/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "RETURN_TSQL"
   - "RETURN"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "unconditionally exiting program"
   - "stored procedures [SQL Server], exiting"
   - "batches [SQL Server], exiting"
@@ -22,16 +19,15 @@ helpviewer_keywords:
   - "exiting queries [SQL Server]"
   - "exiting procedures [SQL Server]"
   - "RETURN statement"
-ms.assetid: 1d9c8247-fd89-4544-be9c-01c95b745db0
-author: cawrites
-ms.author: chadam
+dev_langs:
+  - "TSQL"
 ---
 # RETURN (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Exits unconditionally from a query or procedure. RETURN is immediate and complete and can be used at any point to exit from a procedure, batch, or statement block. Statements that follow RETURN are not executed.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -82,7 +78,7 @@ ELSE
  The following example checks the state for the ID of a specified contact. If the state is Washington (`WA`), a status of `1` is returned. Otherwise, `2` is returned for any other condition (a value other than `WA` for `StateProvince` or `ContactID` that did not match a row).  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 CREATE PROCEDURE checkstate @param VARCHAR(11)  
 AS  

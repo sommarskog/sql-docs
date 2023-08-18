@@ -1,24 +1,20 @@
 ---
-description: "syscollector_config_store (Transact-SQL)"
-title: "syscollector_config_store (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "syscollector_config_store (Transact-SQL)"
+description: syscollector_config_store (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "syscollector_config_store_TSQL"
   - "syscollector_config_store"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "data collector view"
   - "syscollector_config_store view"
-ms.assetid: f15f6b05-6808-4b76-b6a8-48dec844cf63
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+dev_langs:
+  - "TSQL"
 ---
 # syscollector_config_store (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

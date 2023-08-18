@@ -1,14 +1,13 @@
 ---
 title: Use Insight widgets to monitor servers and databases
 description: Learn how to use Azure Data Studio insight widgets to turn queries that monitor servers and databases into insightful visualizations.
-ms.prod: azure-data-studio
-ms.technology: azure-data-studio
-ms.topic: how-to
 author: markingmyname
 ms.author: maghan
-ms.reviewer: alayu, sstein
-ms.custom: seodec18, sqlfreshmay19, seo-lt-2019
+ms.reviewer: alayu
 ms.date: 05/14/2019
+ms.service: azure-data-studio
+ms.topic: how-to
+ms.custom: updatefrequency5
 ---
 
 # Manage servers and databases with Insight widgets in Azure Data Studio
@@ -33,8 +32,9 @@ To jump in and start creating different types of insight widgets, check out the 
 Azure Data Studio tries to avoid introducing yet another language or heavy user interface so it tries to use T-SQL as much as possible with minimal JSON configuration. Configuring insight widgets with T-SQL leverages the countless number of existing sources of useful T-SQL queries that can be turned into insightful widgets.
 
 Insight widgets are composed of one or two T-SQL queries:
-* *Insight widget query* is mandatory, and is the query that returns the data that appears in the widget.
-* *Insight details query* is only required if you are creating an insight details page.
+
+- *Insight widget query* is mandatory, and is the query that returns the data that appears in the widget.*
+- *Insight details query* is only required if you are creating an insight details page.*
 
 An insight widget query defines a dataset that renders a count, chart, or graph. Insight details query is used to list relevant insight detail information in a tabular format in the insight details panel. 
 

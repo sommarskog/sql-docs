@@ -1,33 +1,29 @@
 ---
-description: "&#x40;&#x40;LOCK_TIMEOUT (Transact-SQL)"
-title: "@@LOCK_TIMEOUT (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "@@LOCK_TIMEOUT (Transact-SQL)"
+description: "@@LOCK_TIMEOUT (Transact-SQL)"
+author: markingmyname
+ms.author: maghan
 ms.date: "09/19/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "@@LOCK_TIMEOUT"
   - "@@LOCK_TIMEOUT_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "timeout options [SQL Server], locks"
   - "@@LOCK_TIMEOUT function"
   - "current lock time-out setting"
   - "locking [SQL Server], time-outs"
-ms.assetid: 6bf8bf97-60b8-40c1-b89d-8f5a00bcae2e
-author: cawrites
-ms.author: chadam
+dev_langs:
+  - "TSQL"
 ---
 # &#x40;&#x40;LOCK_TIMEOUT (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Returns the current lock time-out setting in milliseconds for the current session.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

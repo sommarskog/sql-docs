@@ -1,15 +1,12 @@
 ---
 title: "Use read-scale with availability groups"
 description: "Learn details about how to achieve read-scale when using Always On availability groups, and about using distributed availability groups for geographic read-scale."
-ms.custom: "seodec18"
+author: MashaMSFT
+ms.author: mathoma
 ms.date: "10/24/2017"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: availability-groups
+ms.service: sql
+ms.subservice: availability-groups
 ms.topic: conceptual
-ms.assetid:
-author: cawrites
-ms.author: chadam
 ---
 # Use read-scale with Always On availability groups
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -50,4 +47,4 @@ A single distributed availability group can have up to 17 readable secondary rep
 
 ## See also
 
- [Overview of AlwaysOn availability groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)
+ [Overview of Always On availability groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)

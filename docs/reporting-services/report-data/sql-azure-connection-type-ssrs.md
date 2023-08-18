@@ -1,19 +1,19 @@
 ---
-title: "Azure SQL Connection Type | Microsoft Docs"
+title: "Azure SQL Connection Type"
 description: The Azure SQL Connection data extension supports multivalued parameters, server aggregates, and credentials managed separately from the connection string.
 author: maggiesMSFT
 ms.author: maggies
-ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.technology: report-data
-ms.topic: conceptual
 ms.date: 02/15/2019
+ms.service: reporting-services
+ms.subservice: report-data
+ms.topic: conceptual
+ms.custom: updatefrequency5
 monikerRange: ">= sql-server-2016"
 ---
 
 # Azure SQL Connection Type (SSRS)
 
-[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] is a cloud-based, hosted relational database built on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] technologies. To include data from [!INCLUDE[ssSDS](../../includes/sssds-md.md)] in your report, you must have a dataset that is based on a report data source of type [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. This built-in data source type is based on the [!INCLUDE[ssSDS](../../includes/sssds-md.md)] data extension. Use this data source type to connect to and retrieve data from [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
+[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] is a cloud-based, hosted relational database built on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] technologies. To include data from [!INCLUDE[ssSDS](../../includes/sssds-md.md)] in your report, you must have a dataset that is based on a report data source of type [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. This built-in data source type is based on the [!INCLUDE[ssSDS](../../includes/sssds-md.md)] data extension. Use this data source type to connect to and retrieve data from [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
 This data extension supports multivalued parameters, server aggregates, and credentials managed separately from the connection string.  
   
@@ -22,7 +22,7 @@ This data extension supports multivalued parameters, server aggregates, and cred
 > [!NOTE]  
 > When opening a connection to a [!INCLUDE[ssSDS](../../includes/sssds-md.md)], set the connection timeout to 30 seconds.
   
-For more information, see [Microsoft Azure SQL Database on docs.microsoft.com](/azure/sql-database/).  
+For more information, see [Microsoft Azure SQL Database](/azure/sql-database/).  
   
 Use the information in this topic to build a data source. For step-by-step instructions, see [Add and Verify a Data Connection &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md).  
   
@@ -155,7 +155,7 @@ You can use the Azure SQL database with Azure Active Directory (AAD).
 
 This scenario is supported when you set up the following items properly:
 
-- [Active Directory Authentication Library for SQL Server (ADALSQL)](https://www.microsoft.com/download/details.aspx?id=48742) is installed on the report server.
+- Active Directory Authentication Library for SQL Server (ADALSQL) is installed on the report server.
 - [Active Directory Federation Services (ADFS)](/windows-server/identity/active-directory-federation-services) is configured to federate across on-premises Active Directory (AD) and AAD.
 - [Kerberos Constrained Delegation (KCD)](/windows-server/security/kerberos/kerberos-constrained-delegation-overview) is configured from the report server to the ADFS server.
 - Configure the report/data source to authenticate to [Azure SQL Database](/azure/sql-database/sql-database-technical-overview) as the user viewing the report.
@@ -193,7 +193,7 @@ Provides in-depth information about platform and version support for each data e
   
 ## See Also
 
-[Microsoft Azure SQL Database on docs.microsoft.com](/azure/sql-database/)  
+[Microsoft Azure SQL Database](/azure/sql-database/)  
 [Report Parameters &#40;Report Builder and Report Designer&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
 [Filter, Group, and Sort Data &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
 [Expressions &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)

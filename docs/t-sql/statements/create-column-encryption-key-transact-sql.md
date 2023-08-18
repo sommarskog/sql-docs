@@ -1,14 +1,13 @@
 ---
-description: "CREATE COLUMN ENCRYPTION KEY (Transact-SQL)"
-title: "CREATE COLUMN ENCRYPTION KEY (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "CREATE COLUMN ENCRYPTION KEY (Transact-SQL)"
+description: CREATE COLUMN ENCRYPTION KEY (Transact-SQL)
+author: jaszymas
+ms.author: jaszymas
 ms.date: "10/15/2019"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "CREATE_COLUMN_ENCRYPTION_KEY_TSQL"
   - "SQL13.SWB.NEWCOLUMNENCRYPTIONKEY.GENERAL.F1"
   - "ENCRYPTION_KEY_TSQL"
@@ -19,16 +18,13 @@ f1_keywords:
   - "SQL13.SWB.COLUMNENCRYPTIONKEY.GENERAL.F1"
   - "COLUMN_ENCRYPTION_KEY_TSQL"
   - "CREATE COLUMN ENCRYPTION"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Always Encrypted, create column encryption key"
   - "column encryption key, create"
   - "column encryption key"
   - "CREATE COLUMN ENCRYPTION KEY statement"
-ms.assetid: 517fe745-d79b-4aae-99a7-72be45ea6acb
-author: jaszymas
-ms.author: jaszymas
+dev_langs:
+  - "TSQL"
 ---
 # CREATE COLUMN ENCRYPTION KEY (Transact-SQL)
 
@@ -36,7 +32,7 @@ ms.author: jaszymas
 
 Creates a column encryption key metadata object for [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md) or [Always Encrypted with secure enclaves](../../relational-databases/security/encryption/always-encrypted-enclaves.md). A column encryption key metadata object contains one or two encrypted values of a column encryption key that is used to encrypt data in a column. Each value is encrypted using a column master key. 
   
-![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

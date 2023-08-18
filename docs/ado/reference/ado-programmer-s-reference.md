@@ -1,20 +1,16 @@
 ---
-description: "ADO Programmer&#39;s Reference"
-title: "ADO Programmer&#39;s Reference | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.topic: reference
-helpviewer_keywords: 
-  - "ADO, reference"
-ms.assetid: 6dc27c85-84e1-472a-b057-d1854b8c98a3
+title: "ADO Programmer's Reference"
+description: "ADO Programmer's Reference"
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: ado
+ms.topic: reference
+helpviewer_keywords:
+  - "ADO, reference"
 ---
-# ADO Programmer&#39;s Reference
+# ADO Programmer's Reference
 This section contains the following topics.  
   
 -   [ADO API Reference](./ado-api/ado-api-reference.md)  

@@ -1,19 +1,16 @@
 ---
+title: "HAS_DBACCESS (Transact-SQL)"
 description: "HAS_DBACCESS (Transact-SQL)"
-title: "HAS_DBACCESS (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: VanMSFT
+ms.author: vanto
 ms.date: "10/23/2017"
-ms.prod: sql
-ms.prod_service: "synapse-analytics, pdw, sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "HAS_DBACCESS_TSQL"
   - "HAS_DBACCESS"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "permissions [SQL Server], verifying"
   - "permissions [SQL Server], user access status"
   - "HAS_DBACCESS"
@@ -22,17 +19,16 @@ helpviewer_keywords:
   - "users [SQL Server], access rights status"
   - "testing permissions"
   - "status information [SQL Server], user access"
-ms.assetid: 99b43a72-0722-4a7b-a493-bdee1c74c7b9
-author: VanMSFT
-ms.author: vanto
-monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+dev_langs:
+  - "TSQL"
+monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-mi-current"
 ---
 # HAS_DBACCESS (Transact-SQL)
 [!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
 
   Returns information about whether the user has access to the specified database.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -60,14 +56,14 @@ HAS_DBACCESS ( 'database_name' )
  Requires membership in the public role.  
   
 ## Examples  
- The following example tests whether current user has access to the `AdventureWorks2012` database.  
+ The following example tests whether current user has access to the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database.  
   
 ```sql  
-SELECT HAS_DBACCESS('AdventureWorks2012');  
+SELECT HAS_DBACCESS('AdventureWorks2022');  
 GO  
 ```  
   
-## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## Examples: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  The following example tests whether current user has access to the `AdventureWorksPDW2012` database.  
   
 ```sql  

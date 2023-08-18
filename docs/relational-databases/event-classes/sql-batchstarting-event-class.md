@@ -1,21 +1,18 @@
 ---
+title: "SQL:BatchStarting Event Class"
 description: "SQL:BatchStarting Event Class"
-title: "SQL:BatchStarting Event Class | Microsoft Docs"
-ms.custom: ""
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: supportability
+ms.service: sql
+ms.subservice: supportability
 ms.topic: reference
-helpviewer_keywords: 
+helpviewer_keywords:
   - "SQL:BatchStarting event class"
-ms.assetid: b99c2b73-5f77-45c1-a0f4-cfef7921dc84
-author: "stevestein"
-ms.author: "sstein"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SQL:BatchStarting Event Class
-[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
   The SQL:BatchStarting event class indicates that a [!INCLUDE[tsql](../../includes/tsql-md.md)] batch is starting.  
   
 ## SQL:BatchStarting Event Class Data Columns  

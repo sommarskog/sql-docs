@@ -1,28 +1,24 @@
 ---
-description: "DROP ROLE (Transact-SQL)"
-title: "DROP ROLE (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "DROP ROLE (Transact-SQL)"
+description: DROP ROLE (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "05/11/2017"
-ms.prod: sql
-ms.prod_service: "synapse-analytics, pdw, sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "DROP ROLE"
   - "DROP_ROLE_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "deleting roles"
   - "database roles [SQL Server], removing"
   - "removing roles"
   - "DROP ROLE statement"
   - "roles [SQL Server], removing"
   - "dropping roles"
-ms.assetid: 1f6f13ae-56a2-4ef1-93f5-8e6151b83e1d
-author: VanMSFT
-ms.author: vanto
+dev_langs:
+  - "TSQL"
 monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # DROP ROLE (Transact-SQL)
@@ -30,7 +26,7 @@ monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-ser
 
   Removes a role from the database.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -76,7 +72,7 @@ DROP ROLE role_name
  Requires **ALTER ANY ROLE** permission on the database, or **CONTROL** permission on the role, or membership in the **db_securityadmin**.  
   
 ## Examples  
- The following example drops the database role `purchasing` from the `AdventureWorks2012` database.  
+ The following example drops the database role `purchasing` from the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database.  
   
 ```sql  
 DROP ROLE purchasing;  

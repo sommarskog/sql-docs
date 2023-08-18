@@ -1,13 +1,13 @@
 ---
 title: "Configure backups on secondary replicas of an availability group"
 description: "Describes how to configure backups on secondary replicas of an Always On availability group using either Transact-SQL (T-SQL), PowerShell, or SQL Server Management Studio."
-ms.custom: "seodec18"
+author: MashaMSFT
+ms.author: mathoma
 ms.date: "05/17/2016"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: availability-groups
+ms.service: sql
+ms.subservice: availability-groups
 ms.topic: how-to
-helpviewer_keywords: 
+helpviewer_keywords:
   - "backup priority"
   - "backup on secondary replicas"
   - "Availability Groups [SQL Server], availability replicas"
@@ -15,9 +15,6 @@ helpviewer_keywords:
   - "active secondary replicas [SQL Server], backup on"
   - "automated backup preference"
   - "Availability Groups [SQL Server], active secondary replicas"
-ms.assetid: 74bc40bb-9f57-44e4-8988-1d69c0585eb6
-author: cawrites
-ms.author: chadam
 ---
 # Configure backups on secondary replicas of an Always On availability group
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -27,7 +24,7 @@ ms.author: chadam
 >  For an introduction to backup on secondary replicas, see [Active Secondaries: Backup on Secondary Replicas &#40;Always On Availability Groups&#41;](../../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md).  
   
 ##  <a name="Prerequisites"></a> Prerequisites  
- You must be connected to the server instance that hosts the primary replica.  
+ You must be connected to the server instance that hosts the primary replica in SSMS. The secondary replica must be healthy, which includes being connected to the current primary replica and in the secondary role.
  
    > [!NOTE]
    > The secondary replica does not need to be readable to offload backups to it. Backups will still succeed on the secondary replica even if `Readable Secondary` is set to `no`. 
@@ -69,7 +66,7 @@ ms.author: chadam
      Specifies that you prefer that backup jobs ignore the role of the availability replicas when choosing the replica to perform backups. Note backup jobs might evaluate other factors such as backup priority of each availability replica in combination with its operational state and connected state.  
   
     > [!IMPORTANT]  
-    >  There is no enforcement of the automated backup preference setting. The interpretation of this preference depends on the logic, if any, that you script into backup jobs for the databases in a given availability group. The automated backup preference setting has no impact on ad-hoc backups. For more information, see [Follow Up: After Configuring Backup on Secondary Replicas](#FollowUp) later in this topic.  
+    >  There is no enforcement of the automated backup preference setting. The interpretation of this preference depends on the logic, if any, that you script into backup jobs for the databases in a given availability group. The automated backup preference setting has no impact on ad hoc backups. For more information, see [Follow Up: After Configuring Backup on Secondary Replicas](#FollowUp) later in this topic.  
   
 6.  Use the **Replica backup priorities** grid to change the backup priority of the availability replicas. This grid displays the current backup priority of each server instance that hosts a replica for the availability group. The grid columns are as follows:  
   
@@ -137,7 +134,7 @@ ms.author: chadam
      Specifies that you prefer that backup jobs ignore the role of the availability replicas when choosing the replica to perform backups. Note backup jobs might evaluate other factors such as backup priority of each availability replica in combination with its operational state and  connected state.  
   
     > [!IMPORTANT]  
-    >  There is no enforcement of **AutomatedBackupPreference**. The interpretation of this preference depends on the logic, if any, that you script into backup jobs for the databases in a given availability group. The automated backup preference setting has no impact on ad-hoc backups. For more information, see [Follow Up: After Configuring Backup on Secondary Replicas](#FollowUp) later in this topic.  
+    >  There is no enforcement of **AutomatedBackupPreference**. The interpretation of this preference depends on the logic, if any, that you script into backup jobs for the databases in a given availability group. The automated backup preference setting has no impact on ad hoc backups. For more information, see [Follow Up: After Configuring Backup on Secondary Replicas](#FollowUp) later in this topic.  
   
      For example, the following command sets the **AutomatedBackupPreference** property on the availability group `MyAg` to **SecondaryOnly**. Automated backups of databases in this availability group will never occur on the primary replica, but will be redirected to the secondary replica with the highest backup priority setting.  
   
@@ -160,12 +157,12 @@ ms.author: chadam
  To take the automated backup preference into account for a given availability group, on each server instance that hosts an availability replica whose backup priority is greater than zero (>0), you need to script backup jobs for the databases in the availability group. To determine whether the current replica is the preferred backup replica, use the [sys.fn_hadr_backup_is_preferred_replica](../../../relational-databases/system-functions/sys-fn-hadr-backup-is-preferred-replica-transact-sql.md) function in your backup script. If the availability replica that is hosted by the current server instance is the preferred replica for backups, this function returns 1. If not, the function returns 0. By running a simple script on each availability replica that queries this function, you can determine which replica should run a given backup job. For example, a typical snippet of a backup-job script would look like:  
   
 ```sql  
-IF (NOT sys.fn_hadr_backup_is_preferred_replica(@DBNAME))  
+IF (sys.fn_hadr_backup_is_preferred_replica(@DBNAME) != 1)  
 BEGIN  
       Select 'This is not the preferred replica, exiting with success';  
       RETURN 0 -- This is a normal, expected condition, so the script returns success  
 END  
-BACKUP DATABASE @DBNAME TO DISK=<disk>  
+BACKUP DATABASE @DBNAME TO DISK = '<path to backup file>'  
    WITH COPY_ONLY;  
 ```  
   

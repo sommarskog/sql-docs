@@ -1,16 +1,12 @@
 ---
-title: "Requirements for Using Memory-Optimized Tables | Microsoft Docs"
+title: "Requirements for Using Memory-Optimized Tables"
 description: Learn about the requirements for using In-Memory OLTP, including SQL Database version, memory & storage considerations, and installation.
-ms.custom: ""
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "11/24/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: in-memory-oltp
+ms.service: sql
+ms.subservice: in-memory-oltp
 ms.topic: conceptual
-ms.assetid: 47d9a7e8-c597-4b95-a58a-dcf66df8e572
-author: markingmyname
-ms.author: maghan
 ---
 # Requirements for Using Memory-Optimized Tables
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,7 +34,7 @@ ms.author: maghan
   
      To install report generation ([Determining if a Table or Stored Procedure Should Be Ported to In-Memory OLTP](../../relational-databases/in-memory-oltp/determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)) and [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (to manage In-Memory OLTP via [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Object Explorer), [download SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md).   
   
-## Important Notes on using [!INCLUDE[hek_2](../../includes/hek-2-md.md)]  
+## Important Notes on using [!INCLUDE[inmemory](../../includes/inmemory-md.md)]  
   
 -   Starting [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], there is no limit on the size of memory-optimized tables, other than available memory. 
 
@@ -50,6 +46,6 @@ ms.author: maghan
 -   If you create one or more databases with memory-optimized tables, you should enable Instant File Initialization (IFI) by granting the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service startup account the *SE_MANAGE_VOLUME_NAME* user right. Without IFI, memory-optimized storage files (data and delta files) will be initialized upon creation, which can have negative impact on the performance of your workload. For more information about IFI, including how to enable it, see [Database Instant File Initialization](../../relational-databases/databases/database-instant-file-initialization.md).
   
 ## See Also  
- [In-Memory OLTP &#40;In-Memory Optimization&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
+ [In-Memory OLTP &#40;In-Memory Optimization&#41;](./overview-and-usage-scenarios.md)  
  [Database Instant File Initialization](../../relational-databases/databases/database-instant-file-initialization.md)  
  [Memory Architecture guide](../../relational-databases/memory-management-architecture-guide.md)

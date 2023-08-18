@@ -1,26 +1,22 @@
 ---
+title: "Microsoft OLE DB Provider for SQL Server"
 description: "Microsoft OLE DB Provider for SQL Server Overview"
-title: "Microsoft OLE DB Provider for SQL Server | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
+author: rothja
+ms.author: jroth
 ms.date: "01/19/2017"
-ms.reviewer: ""
+ms.service: sql
+ms.subservice: ado
 ms.topic: conceptual
 helpviewer_keywords:
   - "providers [ADO], OLE DB provider for SQL Server"
   - "OLE DB provider for SQL Server [ADO]"
   - "SQLOLEDB [ADO]"
-ms.assetid: 99bc40c4-9181-4ca1-a06f-9a1a914a0b7b
-author: rothja
-ms.author: jroth
 ---
 # Microsoft OLE DB Provider for SQL Server Overview
 The Microsoft OLE DB Provider for SQL Server, SQLOLEDB, allows ADO to access Microsoft SQL Server.
 
 > [!IMPORTANT]
-> The Microsoft OLE DB Provider for SQL Server (SQLOLEDB) remains deprecated and it is not recommended to use it for new development work. Instead, use the new [Microsoft OLE DB Driver for SQL Server](../../../connect/oledb/oledb-driver-for-sql-server.md) (MSOLEDBSQL) which will be updated with the most recent server features.
+> [!INCLUDE[snac-removed-oledb-only](../../../includes/snac-removed-oledb-only.md)]
 
 ## Connection String Parameters
  To connect to this provider, set the *Provider* argument to the [ConnectionString](../../reference/ado-api/connectionstring-property-ado.md) property to:

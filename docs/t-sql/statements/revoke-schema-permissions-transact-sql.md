@@ -1,29 +1,25 @@
 ---
-description: "REVOKE Schema Permissions (Transact-SQL)"
-title: "REVOKE Schema Permissions (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "REVOKE Schema Permissions (Transact-SQL)"
+description: REVOKE Schema Permissions (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "06/10/2016"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "REVOKE statement, schema"
   - "schemas [SQL Server], permissions"
   - "permissions [SQL Server], schemas"
-ms.assetid: a1fabf35-1f42-48db-b0b8-7181f413ba3a
-author: VanMSFT
-ms.author: vanto
+dev_langs:
+  - "TSQL"
 ---
 # REVOKE Schema Permissions (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Revokes permissions on a schema.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

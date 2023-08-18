@@ -1,28 +1,22 @@
 ---
+title: "Installing SMO"
 description: "Installing SMO"
-title: "Installing SMO | Microsoft Docs"
-ms.custom: ""
+author: "markingmyname"
+ms.author: "maghan"
 ms.date: "08/06/2017"
-ms.prod: sql
-ms.reviewer: ""
-ms.prod_service: "database-engine"
-ms.technology: 
-
+ms.service: sql
 ms.topic: "reference"
-helpviewer_keywords: 
+ms.custom: intro-installation
+helpviewer_keywords:
   - "installing SMO"
   - "SMO [SQL Server], installing"
   - "SQL Server Management Objects, installing"
-ms.assetid: 140e9971-4940-4866-89b9-5cec938e2a16
-author: "markingmyname"
-ms.author: "maghan"
-
 monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 
 # Installing SMO
 
-[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
 This page provides information on how to install SMO for use by applications and the system requirements to use SMO.
 
@@ -41,5 +35,8 @@ See [NuGet Quick Start - Use a Package](/nuget/quickstart/use-a-package) for ins
   
 ## System Requirements
   
- SMO requires [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.0 or .NET Core 2.0 to run, so any applications using it must ensure that client machines have that version or higher installed. Some native binaries installed with the NetFx SMO libraries also require the VC 2013 runtime to be installed; that runtime is not included in the package. You can download the redist appropriate to your 
-target architecture from https://www.microsoft.com/download/details.aspx?id=40784
+ SMO requires [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.0 or .NET Core 2.0 to run, so any applications using it must ensure that client machines have that version or higher installed. Some native binaries installed with the NetFx SMO libraries also require the VC 2013 runtime to be installed; that runtime is not included in the package. You can download the redist appropriate to your target architecture from https://www.microsoft.com/download/details.aspx?id=40784
+
+## Programming Guide
+
+The [SMO Programming Guide](sql-server-management-objects-smo-programming-guide.md) includes additional links to get started with SQL Server Management Objects.

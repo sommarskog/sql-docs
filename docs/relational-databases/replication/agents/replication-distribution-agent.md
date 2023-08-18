@@ -1,21 +1,18 @@
 ---
-title: "Replication Distribution Agent | Microsoft Docs"
+title: "Replication Distribution Agent"
 description: Move a snapshot and the transactions held in the distribution database tables to the Subscribers destination tables by using the Replication Distribution Agent.
-ms.custom: ""
+author: "MashaMSFT"
+ms.author: "mathoma"
 ms.date: "10/29/2018"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: replication
+ms.service: sql
+ms.subservice: replication
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "Distribution Agent, executables"
   - "agents [SQL Server replication], Distribution Agent"
   - "Distribution Agent, parameter reference"
   - "command prompt [SQL Server replication]"
-ms.assetid: 7b4fd480-9eaf-40dd-9a07-77301e44e2ac
-author: "MashaMSFT"
-ms.author: "mathoma"
 monikerRange: "=azuresqldb-current||>=sql-server-2016"
 ---
 # Replication Distribution Agent
@@ -89,13 +86,13 @@ distrib [-?]
  Prints all available parameters.  
   
  **-Publisher** _server_name_[**\\**_instance_name_]  
- Is the name of the Publisher. Specify *server_name* for the default instance of [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on that server. Specify _server_name_**\\**_instance_name_ for a named instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on that server.  
-  
+ Is the name of the Publisher. Specify *server_name* for the default instance of [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on that server. Specify _server_name_**\\**_instance_name_ for a named instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on that server. If your publisher database is in an Always On Availability Group, this will still reflect the original primary publisher server name due to [sp_redirect_publisher](../../system-stored-procedures/sp-redirect-publisher-transact-sql.md). It will not reflect the AG listener name.  
+ 
  **-PublisherDB** _publisher_database_  
  Is the name of the Publisher database.  
   
  **-Subscriber** _server_name_[**\\**_instance_name_]  
- Is the name of the Subscriber. Specify *server_name* for the default instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on that server. Specify _server_name_**\\**_instance_name_ for a named instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on that server.  
+ Is the name of the Subscriber. Specify *server_name* for the default instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on that server. Specify _server_name_**\\**_instance_name_ for a named instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on that server. If your subscriber database is in an Always On Availability Group, this should reflect the AG listener name.  
   
  **-SubscriberDB** _subscriber_database_  
  Is the name of the Subscriber database.  
@@ -107,10 +104,10 @@ distrib [-?]
  Is the number of rows to send in a bulk copy operation. When performing a **bcp in** operation, the batch size is the number of rows to send to the server as one transaction, and also the number of rows that must be sent before the Distribution Agent logs a **bcp** progress message. When performing a **bcp out** operation, a fixed batch size of **1000** is used.  
   
  **-CommitBatchSize** _commit_batch_size_  
- Is the number of transactions to be issued to the Subscriber before a COMMIT statement is issued. The default is 100 and the max is 10000.
+ Is the number of transactions to be issued to the Subscriber before a COMMIT statement is issued. The default is 100 and the max is 10000. This parameter is ignored when the snapshot is being applied on the subscriber by the Distribution Agent.
   
  **-CommitBatchThreshold**  _commit_batch_threshold_  
- Is the number of replication commands to be issued to the Subscriber before a COMMIT statement is issued. The default is 1000 and the max is 10000. 
+ Is the number of replication commands to be issued to the Subscriber before a COMMIT statement is issued. The default is 1000 and the max is 10000. This parameter is ignored when the snapshot is being applied on the subscriber by the Distribution Agent.
   
  **-Continuous**  
  Specifies whether the agent attempts to poll replicated transactions continually. If specified, the agent polls replicated transactions from the source at polling intervals, even if there are no transactions pending.  
@@ -119,7 +116,7 @@ distrib [-?]
  Is the path of the agent definition file. An agent definition file contains command prompt arguments for the agent. The content of the file is parsed as an executable file. Use double quotation marks (") to specify argument values containing arbitrary characters.  
   
  **-Distributor** _distributor_  
- Is the Distributor name. For Distributor (push) distribution, the name defaults to the name of the local Distributor.  
+ Is the Distributor name. For Distributor (push) distribution, the name defaults to the name of the local Distributor. If your distributor database is in an Always On Availability Group, this should reflect the AG listener name.  
   
  **-DistributorLogin** _distributor_login_  
  Is the Distributor login name.  
@@ -140,7 +137,7 @@ distrib [-?]
 |**2**|Specifies that TLS is used, and that the certificate is verified.|  
  
  > [!NOTE]  
- >  A valid TLS/SSL certificate is defined with a fully qualified domain name of the SQL Server. In order for the agent to connect successfully when setting -EncryptionLevel to 2, create an alias on the local SQL Server. The ‘Alias Name’ parameter should be the server name and the ‘Server’ parameter should be set to the fully qualified name of the SQL Server.
+ >  A valid TLS/SSL certificate is defined with a fully qualified domain name of the SQL Server. In order for the agent to connect successfully when setting -EncryptionLevel to 2, create an alias on the local SQL Server. The 'Alias Name' parameter should be the server name and the 'Server' parameter should be set to the fully qualified name of the SQL Server.
 
  For more information, see [View and modify replication security settings](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md).  
   
@@ -203,7 +200,7 @@ distrib [-?]
  If there is no replicated transaction available at the source, the agent reports a no-transaction message to the Distributor. This option specifies how long the agent waits before reporting another no-transaction message. Agents always report a no-transaction message when they detect that there are no transactions available at the source after previously processing replicated transactions. The default is 60 seconds.  
 
 **-MultiSubnetFailover**
- Specifies whether the MultiSubnetFailover property is enabled or not. If your application is connecting to an AlwaysOn availability group (AG) on different subnets, setting MultiSubnetFailover=true provides faster detection of and connection to the (currently) active server.   
+ Specifies whether the MultiSubnetFailover property is enabled or not. If your application is connecting to an Always On availability group (AG) on different subnets, setting MultiSubnetFailover=true provides faster detection of and connection to the (currently) active server.   
   **Applies to**: [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE [sssql19-md](../../../includes/sssql19-md.md)]).  
 
   
@@ -235,7 +232,7 @@ distrib [-?]
  Specifies the quoted identifier character to use. The first character of the value indicates the value the Distribution Agent uses. If **QuotedIdentifier** is used with no value, the Distribution Agent uses a space. If **QuotedIdentifier** is not used, the Distribution Agent uses whatever quoted identifier the Subscriber supports.  
   
  **-SkipErrors** _native_error_id_ [**:**_...n_]  
- Is a colon-separated list that specifies the error numbers to be skipped by this agent.  
+ Is a colon-separated list that specifies the error numbers to be skipped by this agent. This parameter is ignored when the snapshot is being applied on the subscriber by the Distribution Agent.  
   
  **-SubscriberDatabasePath** _subscriber_database_path_  
  Is the path to the Jet database (.mdb file) if **SubscriberType** is **2** (allows a connection to a Jet database without an ODBC Data Source Name (DSN)).  
@@ -259,7 +256,7 @@ distrib [-?]
 |**3**|OLE DB data source|  
   
  **-SubscriptionStreams** [**0**\|**1**\|**2**\|...**64**]  
- Is the number of connections allowed per Distribution Agent to apply batches of changes in parallel to a Subscriber, while maintaining many of the transactional characteristics present when using a single thread. For a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Publisher, a range of values from 1 to 64 is supported. This parameter is only supported when the Publisher and Distributor are running on [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] or later versions. This parameter is not supported or must be 0 for non- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Subscribers or peer-to-peer subscriptions.  
+ Is the number of connections allowed per Distribution Agent to apply batches of changes in parallel to a Subscriber, while maintaining many of the transactional characteristics present when using a single thread. For a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Publisher, a range of values from 1 to 64 is supported. This parameter is only supported when the Publisher and Distributor are running on [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] or later versions. This parameter is not supported or must be 0 for non- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Subscribers or peer-to-peer subscriptions. This parameter is ignored when the snapshot is being applied on the subscriber by the Distribution Agent.  
   
 > [!NOTE]  
 >  If one of the connections fails to execute or commit, all connections will abort the current batch, and the agent will use a single stream to retry the failed batches. Before this retry phase completes, there can be temporary transactional inconsistencies at the Subscriber. After the failed batches are successfully committed, the Subscriber is brought back to a state of transactional consistency.  
@@ -286,7 +283,13 @@ distrib [-?]
  Improves the performance of the initial snapshot by causing the Distribution Agent to use the BULK INSERT command when applying snapshot files to the Subscriber. This parameter is deprecated because it is not compatible with the XML data type. If you are not replicating XML data, this parameter can be used. This parameter cannot be used with character mode snapshots or non- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Subscribers. If you use this parameter, the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] service account at the Subscriber must have read permissions on the directory where the snapshot .bcp data files are located. When this parameter is not used, the agent (for non- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Subscribers) or the ODBC driver loaded by the agent (for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Subscribers) reads from the files, so the security context of the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] service account is not used.  
   
  **-UseOledbStreaming**  
- When specified, enables the binding of binary large object data as a stream. Use **-OledbStreamThreshold** to specify the size, in bytes, above which a stream will be used. **UseOledbStreaming** is enabled by default. **UseOledbStreaming** writes to the **C:\Program Files\Microsoft SQL Server\\<version\>\COM** folder.  
+ When specified, enables the binding of binary large object data as a stream. Use **-OledbStreamThreshold** to specify the size, in bytes, above which a stream will be used. **UseOledbStreaming** is enabled by default. 
+ 
+> [!Note]
+>   Starting with SQL 2017 CU22 and later versions (including SQL 2019 RTM), **UseOledbStreaming** writes to the **c:\Users\\<DistributionAgentAccount\>\AppData\Temp** folder. 
+> 
+>   Prior to SQL 2017 CU22, **UseOledbStreaming** writes to the **C:\Program Files\Microsoft SQL Server\\<version\>\COM** folder. 
+
   
 ## Remarks  
   

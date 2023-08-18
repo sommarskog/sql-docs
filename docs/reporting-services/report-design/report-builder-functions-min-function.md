@@ -1,19 +1,19 @@
 ---
-title: "Min Function (Report Builder) | Microsoft Docs"
-description: Learn about the Min function, which returns the minimum value of all non-null numeric values specified by an expression in Report Builder.
-ms.date: 03/07/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-design
-
-
-ms.topic: conceptual
-ms.assetid: aa1ee96f-9fc4-4775-b9d4-c6187dc37e27
+title: "Min function in a paginated report"
+description: Learn about the Min function in a paginated report, which returns the minimum value of all non-null numeric values specified by an expression in Report Builder.
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 03/07/2017
+ms.service: reporting-services
+ms.subservice: report-design
+ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
-# Report Builder Functions - Min Function
-  Returns the minimum value of all non-null numeric values specified by the expression, in the context of the given scope.  
+# Report Builder functions - Min function in a paginated report (Report Builder)
+
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-ssrs-rb](../../includes/ssrs-appliesto-ssrs-rb.md)] [!INCLUDE [ssrs-appliesto-pbi-rb](../../includes/ssrs-appliesto-pbi-rb.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
+
+  Returns the minimum value of all non-null numeric values specified by the expression, in the context of the given scope in a paginated report.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  

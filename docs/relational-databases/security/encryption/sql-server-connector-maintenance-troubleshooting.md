@@ -1,17 +1,15 @@
 ---
 title: "SQL Server Connector maintenance & troubleshooting"
-description: Learn about maintenance instructions and common troubleshooting steps for the SQL Server Connector. 
-ms.custom: seo-lt-2019
-ms.date: "10/08/2019"
-ms.prod: sql
+description: Learn about maintenance instructions and common troubleshooting steps for the SQL Server Connector.
+author: Rupp29
+ms.author: arupp
 ms.reviewer: vanto
-ms.technology: security
+ms.date: "04/12/2022"
+ms.service: sql
+ms.subservice: security
 ms.topic: conceptual
-helpviewer_keywords: 
-  - "SQL Server Connector, appendix"
-ms.assetid: 7f5b73fc-e699-49ac-a22d-f4adcfae62b1
-author: jaszymas
-ms.author: jaszymas
+helpviewer_keywords:
+  - "SQL Server Connector, appendix, EKM"
 ---
 # SQL Server Connector Maintenance & Troubleshooting
 
@@ -24,10 +22,11 @@ ms.author: jaszymas
 ### Key Rollover  
   
 > [!IMPORTANT]  
-> The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Connector requires the key name to only use the characters "a-z", "A-Z", "0-9", and "-", with a 26-character limit.
-> Different key versions under the same key name in Azure Key Vault will not work with [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Connector. To rotate an Azure Key Vault key that's being used by [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], a new key with a new key name must be created.  
-  
- Typically, server asymmetric keys for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] encryption need to be versioned every 1-2 years. It's important to note that although the Key Vault allows keys to be versioned, customers should not use that feature to implement versioning. The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Connector cannot deal with changes in Key Vault key version. To implement key versioning, create a new key in the Key Vault and then re-encrypt the data encryption key in [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)].  
+> - The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Connector requires the key name to only use the characters "a-z", "A-Z", "0-9", and "-", with a 26-character limit. Different key versions under the same key name in Azure Key Vault will not work with [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Connector. To rotate an Azure Key Vault key that's being used by [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], a new key with a new key name must be created.  
+> -  When rotating versions of the key, do not disable the version originally used to encrypt the database. SQL Server will be unable to recover the database as it may get stuck in a 'recovery pending' state and generate a **Crypto Exception** memory dump until the original version is enabled.
+
+
+Typically, server asymmetric keys for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] encryption need to be versioned every 1-2 years. It's important to note that although the Key Vault allows keys to be versioned, customers should not use that feature to implement versioning. The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Connector cannot deal with changes in Key Vault key version. To implement key versioning, create a new key in the Key Vault and then re-encrypt the data encryption key in [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)].  
   
  For TDE, this is how this would be achieved:  
   
@@ -95,12 +94,12 @@ Versions 1.0.0.440 and older have been replaced and are no longer supported in p
 ### Upgrade
 
 1. Stop SQL Server service using SQL Server Configuration Manager
-1. Uninstall the old version using Control Panel\Programs\Programs and Features
+1. Uninstall the old version using **Control Panel\Programs\Programs and Features**
     1. Application name: SQL Server Connector for Microsoft Azure Key Vault
     1. Version: 15.0.300.96 (or older)
     1. DLL file date: 01/30/2018 3:00 PM (or older)
 1. Install (upgrade) new SQL Server Connector for Microsoft Azure Key Vault
-    1. Version: 15.0.2000.367
+    1. Version: 15.0.2000.440
     1. DLL file date: 09/11/2020 ‏‎5:17 AM
 1. Start SQL Server service
 1. Test encrypted DB(s) is/are accessible
@@ -109,9 +108,9 @@ Versions 1.0.0.440 and older have been replaced and are no longer supported in p
 
 1. Stop SQL Server service using SQL Server Configuration Manager
 
-1. Uninstall the new version using Control Panel\Programs\Programs and Features
+1. Uninstall the new version using **Control Panel\Programs\Programs and Features**
     1. Application name: SQL Server Connector for Microsoft Azure Key Vault
-    1. Version: 15.0.2000.367
+    1. Version: 15.0.2000.440
     1. DLL file date: 09/11/2020 ‏‎5:17 AM
 
 1. Install old version of SQL Server Connector for Microsoft Azure Key Vault
@@ -127,9 +126,9 @@ Versions 1.0.0.440 and older have been replaced and are no longer supported in p
   
 Deep links to older versions of the SQL Server Connector
 
-- Current: [1.0.5.0 (version 15.0.2000.367) – File date September 11, 2020](https://download.microsoft.com/download/8/0/9/809494F2-BAC9-4388-AD07-7EAF9745D77B/1033_15.0.2000.367/SQLServerConnectorforMicrosoftAzureKeyVault.msi)
-- [1.0.5.0 (version 15.0.300.96) – File date January 30, 2018](https://download.microsoft.com/download/8/0/9/809494F2-BAC9-4388-AD07-7EAF9745D77B/ENU/SQLServerConnectorforMicrosoftAzureKeyVault.msi)
-- [1.0.4.0: (version 13.0.811.168)](https://download.microsoft.com/download/8/0/9/809494F2-BAC9-4388-AD07-7EAF9745D77B/SQLServerConnectorforMicrosoftAzureKeyVault.msi)
+- Current: [1.0.5.0 (version 15.0.2000.440) – File date September 11, 2020](https://download.microsoft.com/download/8/0/9/809494f2-bac9-4388-ad07-7eaf9745d77b/1033_15.0.2000.440/SQLServerConnectorforMicrosoftAzureKeyVault.msi)
+- [1.0.5.0 (version 15.0.300.96) – File date January 30, 2018](https://download.microsoft.com/download/8/0/9/809494f2-bac9-4388-ad07-7eaf9745d77b/SQL%20Server%20Connector%20for%20Microsoft%20Azure%20Key%20Vault%201.0.5.0.msi)
+- [1.0.4.0: (version 13.0.811.168)](https://download.microsoft.com/download/8/0/9/809494f2-bac9-4388-ad07-7eaf9745d77b/SQL%20Server%20Connector%20for%20Microsoft%20Azure%20Key%20Vault%201.0.4.0.msi)
 
 ### Rolling the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Service Principal
 
@@ -168,6 +167,13 @@ Key backups can be restored across Azure regions, as long as they remain in the 
 - login.microsoftonline.com/*:443
 - *.vault.azure.net/*:443
 
+Additionally, checking the certificate revocation list might create HTTP traffic on port 80. 
+
+
+ > [!NOTE]
+ > Using the SQL Server Connector for Azure Key Vault behind a firewall or proxy server can affect performance if traffic is delayed or blocked. Familiarize yourself with [Access Azure Key Vault behind a firewall](/azure/key-vault/general/access-behind-firewall) to ensure the correct rules are in place. 
+
+
 **How do I connect to Azure Key Vault through an HTTP(S) Proxy Server?**
   The Connector uses Internet Explorer's Proxy configuration settings. These settings can be controlled via [Group Policy](/archive/blogs/askie/how-to-configure-proxy-settings-for-ie10-and-ie11-as-iem-is-not-available) or via the Registry, but it's important to note that they aren't system-wide settings and will need to be targeted to the service account running the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance. If a Database Administrator views or edits the settings in Internet Explorer, they'll only affect the Database Administrator's account rather than the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] engine. Logging on to the server interactively using the service account isn't recommended and is blocked in many secure environments. Changes to the configured proxy settings may require restarting the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance to take effect as they're cached when the Connector first attempts to connect to a key vault.
 
@@ -192,17 +198,15 @@ Key backups can be restored across Azure regions, as long as they remain in the 
 
 **How do I change my default Active Directory so my key vault is created in the same subscription and Active Directory as the service principal I created for the [!INCLUDE[ssNoVersion_md](../../../includes/ssnoversion-md.md)] Connector?**
 
-![aad change default directory helpsteps](../../../relational-databases/security/encryption/media/aad-change-default-directory-helpsteps.png)
+![Azure AD change default directory helpsteps](../../../relational-databases/security/encryption/media/azure-ad-change-default-directory-helpsteps.png)
 
-1. Go to the Azure classic portal: [https://manage.windowsazure.com](https://manage.windowsazure.com)  
-2. On the left-hand menu, select **Settings**.
-3. Select the Azure subscription you are currently using, and click **Edit Directory** from the commands at the bottom of the screen.
-4. In the pop-up window, use the **Directory** dropdown to select the Active Directory you'd like to use. This will make it the default Directory.
-5. Make sure you are the global admin of the newly selected Active Directory. If you aren't the global admin, so might lose management permissions because you switched directories.
-6. Once the pop-up window closes, if you don't see any of your subscriptions, you may need to update the **Filter by Directory** filter in the **Subscriptions** filter in the top-right hand menu of the screen to see subscriptions using your newly updated Active Directory.
+1. Go to the [Azure portal](https://portal.azure.com/).
+2. On the upper-right corner of the page, select the settings icon, or your user profile.
+3. On the **Directories + subscriptions** page, select **All Directories** to see all the Azure Active Directories that you belong to.
+4. You can change your **Startup directory**, or switch to a different directory if you have multiple directories.
 
     > [!NOTE] 
-    > You may not have permissions to actually change the default directory on your Azure subscription. In this case, create the AAD service principal within your default directory so that it is in the same directory as the Azure Key Vault used later.
+    > You may not have permissions to actually change the default directory on your Azure subscription. In this case, create the Azure AD service principal within your default directory so that it is in the same directory as the Azure Key Vault used later.
 
 To learn more about Active Directory, read [How Azure subscription are related to Azure Active Directory](/azure/active-directory/fundamentals/active-directory-how-subscriptions-associated-directory)
   
@@ -369,11 +373,17 @@ If you don't see your error code in this table, here are some other reasons the 
 
 The Windows event log also logs errors associated with the SQL Server Connector, which can help with additional context on why the error is actually happening. The source in the Windows Application Event Log will be "SQL Server Connector for Microsoft Azure Key Vault".
   
-SQL Server Version  |Redistributable Install Link
+#### C++ Runtime Libraries for SQL Server Connector 1.0.5.0
+SQL Server Version  |Redistributable Install Link if using SQL Server Connector 1.0.5.0
 ---------|---------
 2008, 2008 R2, 2012, 2014 | [Visual C++ Redistributable Packages for Visual Studio 2013](https://www.microsoft.com/download/details.aspx?id=40784)
-2016 | [Visual C++ Redistributable for Visual Studio 2015](https://www.microsoft.com/download/details.aspx?id=48145)
-  
+2016, 2017, 2019 | [Visual C++ Redistributable for Visual Studio 2015](https://www.microsoft.com/download/details.aspx?id=48145)
+
+#### C++ Runtime Libraries for SQL Server Connector 1.0.4.0
+SQL Server Version  |Redistributable Install Link if using SQL Server Connector 1.0.4.0
+---------|---------
+2008, 2008 R2, 2012, 2014, 2016, 2017, 2019 | [Visual C++ Redistributable Packages for Visual Studio 2013](https://www.microsoft.com/download/details.aspx?id=40784)
+
 ## Additional References
 
  More About Extensible Key Management:  

@@ -1,19 +1,16 @@
 ---
 title: "Set Distribution retention period"
 description: Set the retention period for data within the Distribution Database in SQL Server Management Studio (SSMS).
-ms.custom: seo-lt-2019
-ms.date: "03/07/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: replication
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "transaction retention periods [SQL Server replication]"
-  - "retention periods [SQL Server replication]"
-ms.assetid: 9a98c53a-fea5-4235-b23d-6c69587c5676
 author: "MashaMSFT"
 ms.author: "mathoma"
+ms.date: "03/07/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: conceptual
+ms.custom: updatefrequency5
+helpviewer_keywords:
+  - "transaction retention periods [SQL Server replication]"
+  - "retention periods [SQL Server replication]"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # Set Distribution Retention Period for Transactional Publications
@@ -26,7 +23,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
   
 2.  To specify the minimum distribution retention period, enter a value in the **At least** box; to specify the maximum distribution retention period, enter a value in the **But not more than** box.  
   
-3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+3.  Select **OK**.
 
 ## See Also  
  [Configure Distribution](../../relational-databases/replication/configure-distribution.md)   

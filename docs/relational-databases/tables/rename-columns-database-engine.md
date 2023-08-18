@@ -1,82 +1,71 @@
 ---
+title: "Rename Columns (Database Engine)"
 description: "Rename Columns (Database Engine)"
-title: "Rename Columns (Database Engine) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/03/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: table-view-index
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.reviewer: randolphwest
+ms.date: 07/27/2022
+ms.service: sql
+ms.subservice: table-view-index
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "columns [SQL Server], names"
   - "renaming columns"
   - "column names [SQL Server]"
-ms.assetid: 7c71ec9f-0180-4398-b32a-4bfb7592e75d
-author: stevestein
-ms.author: sstein
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
-# Rename Columns (Database Engine)
-
+# Rename columns (Database Engine)
 
 [!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
 You can rename a table column in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].
 
-**In This Topic**
+## <a id="Restrictions"></a> Limitations and restrictions
 
-- **Before you begin:**
+Renaming a column won't automatically rename references to that column. You must modify any objects that reference the renamed column manually. For example, if you rename a table column and that column is referenced in a trigger, you must modify the trigger to reflect the new column name. Use [sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md) to list dependencies on the object before renaming it.
 
-   [Limitations and Restrictions](#Restrictions)
+Renaming a column doesn't automatically update the metadata for any objects which SELECT all columns (using the `*`) from that table. For example, if you rename a table column and that column is referenced by a non-schema-bound view or function that SELECTs all columns (using the `*`), the metadata for the view or function continues to reflect the original column name. Refresh the metadata using [sp_refreshsqlmodule](../../relational-databases/system-stored-procedures/sp-refreshsqlmodule-transact-sql.md) or [sp_refreshview](../../relational-databases/system-stored-procedures/sp-refreshview-transact-sql.md).
 
-   [Security](#Security)
-
-- **To rename columns, using:**
-
-   [SQL Server Management Studio](#SSMSProcedure)
-
-   [Transact-SQL](#TsqlProcedure)
-
-## <a name="BeforeYouBegin"></a> Before You Begin
-
-### <a name="Restrictions"></a> Limitations and Restrictions
-
-Renaming a column will not automatically rename references to that column. You must modify any objects that reference the renamed column manually. For example, if you rename a table column and that column is referenced in a trigger, you must modify the trigger to reflect the new column name. Use [sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md) to list dependencies on the object before renaming it.
-
-### <a name="Security"></a> Security
-
-#### <a name="Permissions"></a> Permissions
+## Permissions
 
 Requires ALTER permission on the object.
 
-## <a name="SSMSProcedure"></a> Using SQL Server Management Studio
+## <a id="SSMSProcedure"></a> Use SQL Server Management Studio
 
-### To rename a column using Object Explorer
+### Rename a column using Object Explorer
 
 1. In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].
 2. In **Object Explorer**, right-click the table in which you want to rename columns and choose **Rename**.
 3. Type a new column name.
 
-### To rename a column using Table Designer
+### Rename a column using table designer
 
 1. In **Object Explorer**, right-click the table to which you want to rename columns and choose **Design**.
 2. Under **Column Name**, select the name you want to change and type a new one.
-3. On the **File** menu, click **Save** _table name_.
+3. On the **File** menu, select **Save _table name_**.
 
-> [!NOTE]
-> You can also change the name of a column in the **Column Properties** tab. Select the column whose name you want to change and type a new value for **Name**.
+You can also change the name of a column in the **Column Properties** tab. Select the column whose name you want to change and type a new value for **Name**.
 
-## <a name="TsqlProcedure"></a> Using Transact-SQL
+## <a id="TsqlProcedure"></a> Use Transact-SQL
 
-**To rename a column**
+### Rename a column
 
-### To rename a column
-
-The following example renames the column `TerritoryID` in the table `Sales.SalesTerritory` to `TerrID` in the AdventureWorks database.
+The following example renames the column `ErrorTime` in the table `dbo.ErrorLog` to `ErrorDateTime` in the `AdventureWorksLT` database.
 
 ```sql
-EXEC sp_rename 'Sales.SalesTerritory.TerritoryID', 'TerrID', 'COLUMN';
+EXEC sp_rename 'dbo.ErrorLog.ErrorTime', 'ErrorDateTime', 'COLUMN';
+```
+
+Note the output warning, and verify other objects or queries haven't been broken:
+
+```output
+Caution: Changing any part of an object name could break scripts and stored procedures.
 ```
 
 For more information, see [sp_rename &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-rename-transact-sql.md).
+
+## Next steps
+
+- [Modify columns](modify-columns-database-engine.md)
+- [sys.sql_expression_dependencies &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md)
+- [sp_rename &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-rename-transact-sql.md) 

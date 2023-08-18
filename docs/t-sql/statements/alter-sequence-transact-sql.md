@@ -1,27 +1,23 @@
 ---
-description: "ALTER SEQUENCE (Transact-SQL)"
-title: "ALTER SEQUENCE (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "ALTER SEQUENCE (Transact-SQL)"
+description: ALTER SEQUENCE (Transact-SQL)
+author: markingmyname
+ms.author: maghan
 ms.date: "08/08/2015"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "ALTER_SEQUENCE_TSQL"
   - "ALTER SEQUENCE"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sequence number object, altering"
   - "ALTER SEQUENCE statement"
-ms.assetid: decc0760-029e-4baf-96c9-4a64073df1c2
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+dev_langs:
+  - "TSQL"
 ---
 # ALTER SEQUENCE (Transact-SQL)
-[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Modifies the arguments of an existing sequence object. If the sequence was created with the **CACHE** option, altering the sequence will recreate the cache.  
   
@@ -29,7 +25,7 @@ ms.author: wiassaf
   
  A sequence is a user-defined schema bound object that generates a sequence of numeric values according to a specification. New values are generated from a sequence by calling the NEXT VALUE FOR function. Use **sp_sequence_get_range** to get multiple sequence numbers at once. For information and scenarios that use both CREATE SEQUENCE, **sp_sequence_get_range**, and the NEXT VALUE FOR function, see [Sequence Numbers](../../relational-databases/sequence-numbers/sequence-numbers.md).  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

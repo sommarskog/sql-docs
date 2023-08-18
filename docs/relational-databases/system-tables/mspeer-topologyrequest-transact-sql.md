@@ -1,23 +1,19 @@
 ---
-description: "MSpeer_topologyrequest (Transact-SQL)"
-title: "MSpeer_topologyrequest (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "MSpeer_topologyrequest (Transact-SQL)"
+description: MSpeer_topologyrequest (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "03/03/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: replication
+ms.service: sql
+ms.subservice: replication
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "MSpeer_topologyrequest_TSQL"
   - "MSpeer_topologyrequest"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "MSpeer_topologyrequest"
-ms.assetid: c644814b-4e40-44d7-b6b4-5954b0d4db7c
-author: cawrites
-ms.author: chadam
+dev_langs:
+  - "TSQL"
 ---
 # MSpeer_topologyrequest (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

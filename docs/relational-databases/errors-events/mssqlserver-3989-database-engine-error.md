@@ -1,17 +1,15 @@
 ---
-description: "MSSQLSERVER_3989"
 title: MSSQLSERVER_3989
-ms.custom: ""
-ms.date: 12/25/2020
-ms.prod: sql
-ms.reviewer: ramakoni1, pijocoder, suresh-kandoth, vencher, tejasaks, docast
-ms.technology: supportability
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "3989 (Database Engine error)"
-ms.assetid: 
+description: "MSSQLSERVER_3989"
 author: suresh-kandoth
-ms.author: ramakoni
+ms.author: sureshka
+ms.reviewer: vencher, tejasaks, docast
+ms.date: 12/25/2020
+ms.service: sql
+ms.subservice: supportability
+ms.topic: "reference"
+helpviewer_keywords:
+  - "3989 (Database Engine error)"
 ---
 # MSSQLSERVER_3989
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -26,7 +24,6 @@ ms.author: ramakoni
 |Component|SQLEngine|
 |Symbolic Name|XACT_UNSUPPORT_PARALLEL_TRAN3|
 |Message Text|New request is not allowed to start because it should come with valid transaction descriptor.|
-||
 
 ## Explanation
 
@@ -49,5 +46,7 @@ In this situation, an attempt to run the query may raise either of the two error
 To work around the issue, enclose the distributed query in a 'begin distributed transaction' statement:
 
 ```sql
-BEGIN DISTRIBUTED TRANSACTION <Distributed Query> COMMIT TRANSACTION
+BEGIN DISTRIBUTED TRANSACTION
+/*The actual Distributed Query goes next, outside of comments*/
+COMMIT TRANSACTION
 ```

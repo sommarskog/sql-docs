@@ -1,29 +1,26 @@
 ---
-description: "sys.dm_exec_xml_handles (Transact-SQL)"
-title: "sys.dm_exec_xml_handles (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/15/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics"
-ms.reviewer: ""
-ms.technology: system-objects
+title: "sys.dm_exec_xml_handles (Transact-SQL)"
+description: sys.dm_exec_xml_handles (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
+ms.date: "02/24/2023"
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "dm_exec_xml_handles"
   - "dm_exec_xml_handles_TSQL"
   - "sys.dm_exec_xml_handles_TSQL"
   - "sys.dm_exec_xml_handles"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.dm_exec_xml_handles dynamic management function"
-ms.assetid: a873ce0f-6955-417a-96a1-b2ef11a83633
-author: pmasl 
-ms.author: pelopes
-monikerRange: "=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+dev_langs:
+  - "TSQL"
+monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_exec_xml_handles (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
+
+[!INCLUDE[sql-asdbmi](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Returns information about active handles that have been opened by **sp_xml_preparedocument**.  
   
@@ -63,6 +60,10 @@ dm_exec_xml_handles (session_id | 0 )
 ## Permissions  
  Requires VIEW SERVER STATE permission on the server to see all sessions or session IDs that are not owned by the caller. A caller can always see the data for his or her own current session ID.      
   
+### Permissions for SQL Server 2022 and later
+
+Requires VIEW SERVER PERFORMANCE STATE permission on the server.
+
 ## Examples  
  The following example selects all active handles.  
   

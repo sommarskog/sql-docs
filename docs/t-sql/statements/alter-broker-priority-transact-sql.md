@@ -1,33 +1,29 @@
 ---
-description: "ALTER BROKER PRIORITY (Transact-SQL)"
-title: "ALTER BROKER PRIORITY (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "ALTER BROKER PRIORITY (Transact-SQL)"
+description: ALTER BROKER PRIORITY (Transact-SQL)
+author: markingmyname
+ms.author: maghan
 ms.date: "03/03/2017"
-ms.prod: sql
-ms.prod_service: "sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "ALTER_BROKER_TSQL"
   - "ALTER BROKER PRIORITY"
   - "ALTER BROKER"
   - "ALTER_BROKER_PRIORITY_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "ALTER BROKER PRIORITY statement"
   - "ssbdiagnose"
-ms.assetid: 15fda1b2-e4dd-4f9d-935a-2e38926075b2
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+dev_langs:
+  - "TSQL"
 ---
 # ALTER BROKER PRIORITY (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Changes the properties of a [!INCLUDE[ssSB](../../includes/sssb-md.md)] conversation priority.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

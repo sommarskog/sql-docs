@@ -1,18 +1,16 @@
 ---
-title: "DATEDIFF (Transact-SQL) | Microsoft Docs"
+title: "DATEDIFF (Transact-SQL)"
 description: "Transact-SQL reference for the DATEDIFF function. Returns the numerical difference between a start and end date based on datepart."
+author: markingmyname
+ms.author: maghan
 ms.date: "07/18/2019"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "DATEDIFF_TSQL"
   - "DATEDIFF"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "dates [SQL Server], functions"
   - "DATEDIFF function [SQL Server]"
   - "time [SQL Server], crossed boundaries"
@@ -27,10 +25,9 @@ helpviewer_keywords:
   - "time [SQL Server], functions"
   - "crossing date time boundaries [SQL Server]"
   - "calculating dates times [SQL Server]"
-ms.assetid: eba979f2-1a8d-4cce-9d75-b74f9b519b37
-author: cawrites
-ms.author: chadam
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+dev_langs:
+  - "TSQL"
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-mi-current"
 ---
 # DATEDIFF (Transact-SQL)
 
@@ -40,7 +37,7 @@ This function returns the count (as a signed integer value) of the specified dat
   
 See [DATEDIFF_BIG &#40;Transact-SQL&#41;](../../t-sql/functions/datediff-big-transact-sql.md) for a function that handles larger differences between the *startdate* and *enddate* values. See [Date and Time Data Types and Functions &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md) for an overview of all [!INCLUDE[tsql](../../includes/tsql-md.md)] date and time data types and functions.
   
-![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## Syntax  
   
@@ -61,10 +58,10 @@ The following table lists all the valid _datepart_ values. **DATEDIFF** accepts 
 
 |*datepart* name|*datepart* abbreviation|  
 |-----------|------------|
-|**year**|**yy, yyyy**|  
+|**year**|**y, yy, yyyy**|  
 |**quarter**|**qq, q**|  
 |**month**|**mm, m**|  
-|**dayofyear**|**dy, y**|  
+|**dayofyear**|**dy**|  
 |**day**|**dd, d**|  
 |**week**|**wk, ww**|  
 |**hour**|**hh**|  
@@ -73,7 +70,6 @@ The following table lists all the valid _datepart_ values. **DATEDIFF** accepts 
 |**millisecond**|**ms**|  
 |**microsecond**|**mcs**|  
 |**nanosecond**|**ns**|  
-| &nbsp; | &nbsp; |
 
 > [!NOTE]
 > Each specific *datepart* name and abbreviations for that *datepart* name will return the same value.
@@ -181,7 +177,7 @@ SELECT DATEDIFF(millisecond, GETDATE(), SYSDATETIME());
 This example uses scalar subqueries and scalar functions as arguments for *startdate* and *enddate*.
   
 ```sql
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 SELECT DATEDIFF(day,
     (SELECT MIN(OrderDate) FROM Sales.SalesOrderHeader),  
@@ -201,13 +197,13 @@ SELECT DATEDIFF(day,
 This example uses a numeric expression, `(GETDATE() + 1)`, and scalar system functions `GETDATE` and `SYSDATETIME`, as arguments for *enddate*.
   
 ```sql
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 SELECT DATEDIFF(day, '2007-05-07 09:53:01.0376635', GETDATE() + 1)
     AS NumberOfDays  
     FROM Sales.SalesOrderHeader;  
 GO  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 SELECT
     DATEDIFF(
@@ -223,7 +219,7 @@ GO
 This example uses a ranking function as an argument for *startdate*.
   
 ```sql
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 SELECT p.FirstName, p.LastName  
     ,DATEDIFF(day, ROW_NUMBER() OVER (ORDER BY   
@@ -241,7 +237,7 @@ WHERE TerritoryID IS NOT NULL
 This example uses an aggregate window function as an argument for *startdate*.
   
 ```sql
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 SELECT soh.SalesOrderID, sod.ProductID, sod.OrderQty, soh.OrderDate,
     DATEDIFF(day, MIN(soh.OrderDate)   
@@ -318,7 +314,7 @@ SELECT @result
 118 years, 11 months, 11 days, 7 hours, 8 minutes and 1.123 seconds
 ```
   
-## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## Examples: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 These examples use different types of expressions as arguments for the *startdate* and *enddate* parameters.
   
 ### J. Specifying columns for startdate and enddate  

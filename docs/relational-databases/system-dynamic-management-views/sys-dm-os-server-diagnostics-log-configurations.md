@@ -1,30 +1,26 @@
 ---
-description: "sys.dm_os_server_diagnostics_log_configurations"
-title: "sys.dm_os_server_diagnostics_log_configurations | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
-ms.technology: system-objects
+title: "sys.dm_os_server_diagnostics_log_configurations"
+description: sys.dm_os_server_diagnostics_log_configurations
+author: rwestMSFT
+ms.author: randolphwest
+ms.date: "02/27/2023"
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.dm_os_server_diagnostics_log_configurations"
   - "sys.dm_os_server_diagnostics_log_configurations_TSQL"
   - "dm_os_server_diagnostics_log_configurations"
   - "dm_os_server_diagnostics_log_configurations_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "dm_os_server_diagnostics_log_configurations"
   - "sys.dm_os_server_diagnostics_log_configurations"
-ms.assetid: c09ea433-d283-4f83-af69-d458aad59217
-author: WilliamDAssafMSFT
-ms.author: wiassaf
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+dev_langs:
+  - "TSQL"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_os_server_diagnostics_log_configurations
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Returns one row with the current configuration for the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] failover cluster diagnostic log. These property settings determine whether the diagnostic logging is on or off, and the location, number, and size of the log files.  
   
@@ -38,6 +34,10 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ## Permissions  
  Requires VIEW SERVER STATE permissions on the SQL Server failover cluster instance.  
   
+### Permissions for SQL Server 2022 and later
+
+Requires VIEW SERVER PERFORMANCE STATE permission on the server.
+
 ## Examples  
  The following example uses sys.dm_os_server_diagnostics_log_configurations to return the property settings for the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] failover diagnostic logs.  
   

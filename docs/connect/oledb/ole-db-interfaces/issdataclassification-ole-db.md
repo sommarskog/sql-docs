@@ -1,20 +1,17 @@
 ---
-title: "ISSDataClassification | Microsoft Docs"
+title: "ISSDataClassification"
 description: "ISSDataClassification interface"
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
+ms.reviewer: v-davidengel
 ms.date: "09/30/2020"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: v-daenge
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: reference
-apiname: 
-  - "ISSDataClassification"
-apitype: "COM"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "ISSDataClassification interface"
-author: bazizi
-ms.author: v-beaziz
+apiname: "ISSDataClassification"
+apitype: "COM"
 ---
 # ISSDataClassification
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../../includes/applies-to-version/sql-asdb-asa.md)]

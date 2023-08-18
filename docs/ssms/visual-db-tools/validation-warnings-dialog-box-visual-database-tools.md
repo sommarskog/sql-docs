@@ -1,23 +1,18 @@
 ---
-description: "Validation Warnings Dialog Box (Visual Database Tools)"
 title: Validation Warnings Dialog Box
-ms.custom: seo-lt-2019
-ms.date: 01/19/2017
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
-ms.topic: conceptual
-f1_keywords: 
-  - "vdtsql.chm:65556"
-  - "vdt.dlgbox.validationwarnings"
-ms.assetid: fc76e234-ec9c-4a19-a65b-cb558ec8268e
+description: "Validation Warnings Dialog Box (Visual Database Tools)"
 author: markingmyname
 ms.author: maghan
-ms.reviewer: 
-
+ms.date: 01/19/2017
+ms.service: sql
+ms.subservice: ssms
+ms.topic: conceptual
+f1_keywords:
+  - "vdtsql.chm:65556"
+  - "vdt.dlgbox.validationwarnings"
 ---
 # Validation Warnings Dialog Box (Visual Database Tools)
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server](../../includes/applies-to-version/sqlserver.md)]
 This dialog box appears if you attempt to save modifications with potentially damaging side effects, or if the database commit operation is likely to fail. This dialog box indicates what those side effects might be or why the commit operation might fail. It gives you the chance to continue with the modification or cancel the operation.  
   
 > [!NOTE]  

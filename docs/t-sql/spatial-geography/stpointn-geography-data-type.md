@@ -1,26 +1,22 @@
 ---
+title: "STPointN (geography Data Type)"
 description: "STPointN (geography Data Type)"
-title: "STPointN (geography Data Type) | Microsoft Docs"
-ms.custom: ""
+author: MladjoA
+ms.author: mlandzic
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "STPointN_TSQL"
   - "STPointN (geography Data Type)"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "STPointN method"
-ms.assetid: 47670feb-b9e0-4b4b-af83-b9bba7da66ac
-author: MladjoA
-ms.author: mlandzic 
+dev_langs:
+  - "TSQL"
 ---
 # STPointN (geography Data Type)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Returns the specified point in a **geography** instance.  
   
@@ -56,7 +52,7 @@ ms.author: mlandzic
 ## Examples  
  The following example creates a `LineString` instance and uses `STPointN()` to retrieve the second point in the description of the instance.  
   
-```  
+```sql
 DECLARE @g geography;  
 SET @g = geography::STGeomFromText('LINESTRING(-122.360 47.656, -122.343 47.656)', 4326);  
 SELECT @g.STPointN(2).ToString();  

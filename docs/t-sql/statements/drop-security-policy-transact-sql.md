@@ -1,25 +1,21 @@
 ---
-description: "DROP SECURITY POLICY (Transact-SQL)"
-title: "DROP SECURITY POLICY (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "DROP SECURITY POLICY (Transact-SQL)"
+description: DROP SECURITY POLICY (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "05/11/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "DROP_SECURITY_POLICY_TSQL"
   - "DROP SECURITY POLICY"
   - "DROP SECURITY"
   - "DROP_SECURITY_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "DROP SECURITY POLICY statement"
-ms.assetid: 5bd3393d-2fa5-4db0-a69a-a1a72d638e9d
-author: VanMSFT
-ms.author: vanto
+dev_langs:
+  - "TSQL"
 ---
 # DROP SECURITY POLICY (Transact-SQL)
 
@@ -27,7 +23,7 @@ ms.author: vanto
 
   Deletes a security policy.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

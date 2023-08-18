@@ -1,23 +1,19 @@
 ---
-description: "MSrepl_backup_lsns (Transact-SQL)"
-title: "MSrepl_backup_lsns (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "MSrepl_backup_lsns (Transact-SQL)"
+description: MSrepl_backup_lsns (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "03/04/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: replication
+ms.service: sql
+ms.subservice: replication
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "MSrepl_backup_lsns_TSQL"
   - "MSrepl_backup_lsns"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "MSrepl_backup_Isns system table"
-ms.assetid: de06c349-82a8-48c6-b602-b5d6938514f6
-author: cawrites
-ms.author: chadam
+dev_langs:
+  - "TSQL"
 ---
 # MSrepl_backup_lsns (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

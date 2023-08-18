@@ -1,18 +1,14 @@
 ---
+title: "Migrate to a Partially Contained Database"
 description: "Migrate to a Partially Contained Database"
-title: "Migrate to a Partially Contained Database | Microsoft Docs"
-ms.custom: ""
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: 
+ms.service: sql
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: intro-migration
+helpviewer_keywords:
   - "contained database, migrating to"
-ms.assetid: 90faac38-f79e-496d-b589-e8b2fe01c562
-author: "stevestein"
-ms.author: "sstein"
 ---
 # Migrate to a Partially Contained Database
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -63,7 +59,7 @@ GO
   
 2.  On the **Advanced** page, in the **Containment** section, set the **Enable Contained Databases** option to **True**.  
   
-3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+3.  Select **OK**.
 
 ##  <a name="convert"></a> Converting a Database to Partially Contained  
  A database is converted to a contained database by changing the **CONTAINMENT** option.  
@@ -85,7 +81,7 @@ GO
   
 2.  On the **Options** page, change the **Containment type** option to **Partial**.  
   
-3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+3.  Select **OK**.
   
 ##  <a name="users"></a> Migrating Users to Contained Database Users  
  The following example migrates all users that are based on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logins to contained database users with passwords. The example excludes logins that are not enabled. The example must be executed in the contained database.  

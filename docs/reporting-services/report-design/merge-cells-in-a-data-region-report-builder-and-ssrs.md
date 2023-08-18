@@ -1,19 +1,19 @@
 ---
-title: "Merge Cells in a Data Region (Report Builder) | Microsoft Docs"
-description: Discover how to merge cells in a data region to combine cells, improve data region appearance, or provide spanning labels for column and row groups in Report Builder.
-ms.date: 03/01/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-design
-
-
-ms.topic: conceptual
-ms.assetid: 43551300-89b2-4f4e-af09-69084324afaf
+title: "Merge cells in a data region in a paginated report"
+description: Discover how to merge cells in a data region in a paginated report to combine cells, improve data region appearance, or provide spanning labels for column and row groups in Report Builder.
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 03/01/2017
+ms.service: reporting-services
+ms.subservice: report-design
+ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
-# Merge Cells in a Data Region (Report Builder and SSRS)
-In a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] paginated report, you can merge cells in a data region to combine cells, improve data region appearance, or provide spanning labels for column groups and row groups.  
+# Merge cells in a data region in a paginated report (Report Builder)
+
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-ssrs-rb](../../includes/ssrs-appliesto-ssrs-rb.md)] [!INCLUDE [ssrs-appliesto-pbi-rb](../../includes/ssrs-appliesto-pbi-rb.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
+
+In a paginated report, you can merge cells in a data region to combine cells, improve data region appearance, or provide spanning labels for column groups and row groups.  
   
 You can only merge cells within each area of a data region: corner, column headers, group definition (or row headers), and body. You can't merge cells that cross area boundaries. For example, you can't merge a cell in the data region corner area with a cell in the row group area. Read more about [Tables, Matrices, and Lists &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md).  
   

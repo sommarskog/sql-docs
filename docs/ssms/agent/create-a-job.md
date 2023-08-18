@@ -1,19 +1,15 @@
 ---
-description: "Create a Job"
 title: "Create a Job"
-ms.custom: seo-lt-2019
-ms.date: 01/19/2017
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "jobs [SQL Server Agent], creating"
-  - "SQL Server Agent jobs, creating"
-ms.assetid: b35af2b6-6594-40d1-9861-4d5dd906048c
+description: "Create a Job"
 author: markingmyname
 ms.author: maghan
-ms.reviewer: ""
+ms.date: 01/19/2017
+ms.service: sql
+ms.subservice: ssms
+ms.topic: conceptual
+helpviewer_keywords:
+  - "jobs [SQL Server Agent], creating"
+  - "SQL Server Agent jobs, creating"
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
 ---
 # Create a Job
@@ -22,7 +18,7 @@ monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
 > [!IMPORTANT]  
 > On [Azure SQL Managed Instance](/azure/sql-database/sql-database-managed-instance), most, but not all SQL Server Agent features are currently supported. See [Azure SQL Managed Instance T-SQL differences from SQL Server](/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) for details.
 
-This topic describes how to create a SQL Server Agent job in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)], or SQL Server Management Objects (SMO).  
+This topic describes how to create a SQL Server Agent job in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] by using SQL Server Management Studio, [!INCLUDE[tsql](../../includes/tsql-md.md)], or SQL Server Management Objects (SMO).  
   
 To add job steps, schedules, alerts, and notifications that can be sent to operators, see the links to topics in the See Also section.  
   
@@ -57,7 +53,7 @@ To add job steps, schedules, alerts, and notifications that can be sent to opera
 -   For security reasons, only the job owner or a member of the **sysadmin** role can change the definition of the job. Only members of the **sysadmin** fixed server role can assign job ownership to other users, and they can run any job, regardless of the job owner.  
   
     > [!NOTE]  
-    > If you change job ownership to a user who is not a member of the **sysadmin** fixed server role, and the job is executing job steps that require proxy accounts (for example, [!INCLUDE[ssIS](../../includes/ssis_md.md)] package execution), make sure that the user has access to that proxy account or else the job will fail.  
+    > If you change job ownership to a user who is not a member of the **sysadmin** fixed server role, and the job is executing job steps that require proxy accounts (for example, [!INCLUDE[ssIS](../../includes/ssis-md.md)] package execution), make sure that the user has access to that proxy account or else the job will fail.  
   
 #### <a name="Permissions"></a>Permissions  
 For detailed information, see [Implement SQL Server Agent Security](../../ssms/agent/implement-sql-server-agent-security.md).  
@@ -80,7 +76,7 @@ For detailed information, see [Implement SQL Server Agent Security](../../ssms/a
   
 7.  On the **Alerts** page, organize the alerts for the job. For more information on the available options on this page, see [Job Properties - New Job &#40;Alerts Page&#41;](../../ssms/agent/job-properties-new-job-alerts-page.md)  
   
-8.  On the **Notifications** page, set actions for [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent to perform when the job completes. For more information on the available options on this page, see [Job Properties - New Job &#40;Notifications Page&#41;](../../ssms/agent/job-properties-new-job-notifications-page.md).  
+8.  On the **Notifications** page, set actions for [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent to perform when the job completes. For more information on the available options on this page, see [Job Properties - New Job &#40;Notifications Page&#41;](../../ssms/agent/job-properties-new-job-notifications-page.md).  
   
 9. On the **Targets** page, manage the target servers for the job. For more information on the available options on this page, see [Job Properties - New Job &#40;Targets Page&#41;](../../ssms/agent/job-properties-new-job-targets-page.md).  
   
@@ -90,7 +86,7 @@ For detailed information, see [Implement SQL Server Agent Security](../../ssms/a
   
 #### To create a SQL Server Agent job  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  On the Standard bar, click **New Query**.  
   

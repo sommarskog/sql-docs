@@ -1,22 +1,24 @@
 ---
-title: "Set Parameters on a Published Report - SharePoint Integrated Mode | Microsoft Docs"
-description: Learn how to set parameters and run a parameterized report, in the report definition or after the report is published, in Report Builder.
-ms.date: 03/07/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-design
-
-
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "SharePoint integration [Reporting Services], content management"
-  - "report parameters [Reporting Services]"
-ms.assetid: dec5d985-a6c1-4dd8-8a66-a848e89a2e18
+title: "Set parameters on a published paginated report - SharePoint Integrated Mode"
+description: Learn how to set parameters and run a parameterized paginated report, in the report definition or after the report is published, in Report Builder.
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 03/07/2017
+ms.service: reporting-services
+ms.subservice: report-design
+ms.topic: conceptual
+ms.custom: updatefrequency5
+helpviewer_keywords:
+  - "SharePoint integration [Reporting Services], content management"
+  - "report parameters [Reporting Services]"
+monikerRange: ">=sql-server-2016 <=sql-server-2016"
 ---
-# Set Parameters on a Published Report - SharePoint Integrated Mode
-  A parameterized report is a report that accepts input values that are used to filter data when you run the report. Parameters are defined when the report is created. Depending on how a report parameter is defined in the report definition, it can accept a single value, multiple values, or dynamic values, which change in response to a previous selection (for example, when you select product category, your next selection might be a specific product from that category). A parameter can have a default value, which can be used to run a filtered version of the report automatically or possibly be replaced with a different value.  
+# Set parameters on a published paginated report - SharePoint Integrated Mode (Report Builder)
+
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-ssrs-rb](../../includes/ssrs-appliesto-ssrs-rb.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
+
+
+  A parameterized report is a paginated report that accepts input values that are used to filter data when you run the report. Parameters are defined when the report is created. Depending on how a report parameter is defined in the report definition, it can accept a single value, multiple values, or dynamic values, which change in response to a previous selection (for example, when you select product category, your next selection might be a specific product from that category). A parameter can have a default value, which can be used to run a filtered version of the report automatically or possibly be replaced with a different value.  
   
  These properties can be set in the report definition, or after the report is published. Although you can modify some parameter properties in a published report to change the value and display properties, you cannot change a parameter name or the data type. The parameter name and data type can only be changed by the report author in the report definition.  
   

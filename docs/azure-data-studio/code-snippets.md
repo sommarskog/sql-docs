@@ -1,14 +1,13 @@
 ---
 title: Create reusable code snippets
 description: Learn how to create and use Azure Data Studio SQL code snippets, which make it easy to create databases and database objects.
-ms.prod: azure-data-studio
-ms.technology: azure-data-studio
-ms.topic: how-to
 author: "markingmyname"
 ms.author: "maghan"
-ms.reviewer: alayu, sstein
-ms.custom: "seodec18"
+ms.reviewer: alayu
 ms.date: "09/24/2018"
+ms.service: azure-data-studio
+ms.topic: how-to
+ms.custom: updatefrequency5
 ---
 
 # Create and use code snippets to quickly create Transact-SQL (T-SQL) scripts in Azure Data Studio
@@ -56,7 +55,7 @@ You can define your own snippets. To open up the SQL snippet file for editing:
 
 3. Paste the following code into *sql.json*:
 
-    ```sql
+    ```json
     {
      "Select top 5": {
     "prefix": "sqlSelectTop5",

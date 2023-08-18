@@ -1,20 +1,18 @@
 ---
 title: "Apache Spark connector for SQL Server"
-description: "Learn how to use the Apache Spark connector for SQL Server." 
-ms.custom: ""
-ms.date: 04/23/2021
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: connectivity
-ms.topic: conceptual
+description: "Learn how to use the Apache Spark connector for SQL Server."
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: mikeray
+ms.reviewer: hudequei
+ms.date: 01/18/2022
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: conceptual
 ---
 
 # Apache Spark connector: SQL Server & Azure SQL
 
-The Apache Spark connector for SQL Server and Azure SQL is a high-performance connector that enables you to use transactional data in big data analytics and persist results for ad-hoc queries or reporting. The connector allows you to use any SQL database, on-premises or in the cloud, as an input data source or output data sink for Spark jobs.
+The Apache Spark connector for SQL Server and Azure SQL is a high-performance connector that enables you to use transactional data in big data analytics and persist results for ad hoc queries or reporting. The connector allows you to use any SQL database, on-premises or in the cloud, as an input data source or output data sink for Spark jobs.
 
 This library contains the source code for the Apache Spark Connector for SQL Server and Azure SQL.
 
@@ -24,8 +22,9 @@ There are two versions of the connector available through Maven, a 2.4.x compati
 
 | Connector | Maven Coordinate |
 | --------- | ------------------ |
-| Spark 2.4.x compatible connnector | `com.microsoft.azure:spark-mssql-connector_2.11_2.4:1.0.2` |
-| Spark 3.0.x compatible connnector | `com.microsoft.azure:spark-mssql-connector_2.12_3.0:1.0.0-alpha` |
+| Spark 2.4.x compatible connector | `com.microsoft.azure:spark-mssql-connector:1.0.2` |
+| Spark 3.0.x compatible connector | `com.microsoft.azure:spark-mssql-connector_2.12:1.1.0` |
+| Spark 3.1.x compatible connector | `com.microsoft.azure:spark-mssql-connector_2.12:1.2.0` |
 
 You can also build the connector from source or download the jar from the Release section in GitHub. For the latest information about the connector, see [SQL Spark connector GitHub repository](https://github.com/microsoft/sql-spark-connector).
 
@@ -39,7 +38,7 @@ You can also build the connector from source or download the jar from the Releas
 
 | Component                            | Versions Supported              |
 |--------------------------------------|---------------------------------|
-| Apache Spark                         | 2.4.x, 3.0.x |
+| Apache Spark                         | 2.4.x, 3.0.x, 3.1.x |
 | Scala                                | 2.11, 2.12                            |
 | Microsoft JDBC Driver for SQL Server | 8.4                             |
 | Microsoft SQL Server                 | SQL Server 2008 or later        |
@@ -214,8 +213,9 @@ jdbc_df = spark.read \
         .load()
 ```
 
-A required dependency must be installed in order to authenticate using
-Active Directory.
+A required dependency must be installed in order to authenticate using Active Directory. 
+
+The format of `user` when using ActiveDirectoryPassword should be the UPN format, for example `username@domainname.com`. 
 
 For **Scala,** the `_com.microsoft.aad.adal4j_` artifact will need to be installed.
 

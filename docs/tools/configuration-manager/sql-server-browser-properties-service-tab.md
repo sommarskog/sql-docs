@@ -1,20 +1,16 @@
 ---
 title: "SQL Server Browser Properties (Service Tab)"
 description: Learn about the options on the Service tab in the SQL Server Browser Properties dialog box, such as the binary path, the host name, and the start mode.
-ms.custom: seo-lt-2019
-ms.date: "03/16/2017"
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.reviewer: ""
-ms.technology: tools-other
-ms.topic: conceptual
-ms.assetid: 98ace9b0-72d5-4b72-9b7b-11fbc490981a
 author: markingmyname
 ms.author: maghan
+ms.date: "03/16/2017"
+ms.service: sql
+ms.subservice: tools-other
+ms.topic: conceptual
 monikerRange: ">=sql-server-2016"
 ---
 # SQL Server Browser Properties (Service Tab)
-[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
   The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser program runs as a service on the server. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser listens for incoming requests for [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] resources and provides information about [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instances installed on the computer.  
   
  Use the **Service** tab on the **SQL Server Browser Properties** dialog box to view the following options. All properties except **Start Mode** are read-only.  

@@ -1,26 +1,22 @@
 ---
+title: "ConvexHullAggregate (geography Data Type)"
 description: "ConvexHullAggregate (geography Data Type)"
-title: "ConvexHullAggregate (geography Data Type) | Microsoft Docs"
-ms.custom: ""
+author: MladjoA
+ms.author: mlandzic
 ms.date: "07/30/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "ConvexHullAggregate_TSQL"
   - "ConvexHullAggregate"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "ConvexHullAggregate method (geography)"
-ms.assetid: 21784c66-2725-471b-9e2d-a8c2e3695197
-author: MladjoA
-ms.author: mlandzic 
+dev_langs:
+  - "TSQL"
 ---
 # ConvexHullAggregate (geography Data Type)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 Returns a convex hull for a given set of **geography** objects.
   
@@ -54,8 +50,8 @@ ConvexHullAggregate ( geography_operand )
 ## Examples  
  The following example returns a convex hull of the set of **geography** objects.  
   
- ```
- USE AdventureWorks2012  
+ ```sql
+ USE AdventureWorks2022  
  GO  
  SELECT geography::ConvexHullAggregate(SpatialLocation).ToString() AS SpatialLocation  
  FROM Person.Address  

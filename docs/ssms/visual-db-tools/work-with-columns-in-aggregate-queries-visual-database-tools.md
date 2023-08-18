@@ -1,25 +1,20 @@
 ---
-description: "Work with Columns in Aggregate Queries (Visual Database Tools)"
 title: Work with Columns in Aggregate Queries
-ms.custom: seo-lt-2019
+description: "Work with Columns in Aggregate Queries (Visual Database Tools)"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
+ms.service: sql
+ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "HAVING clause, query summary results"
   - "GROUP BY clause, query summary results"
   - "aggregate queries [SQL Server]"
   - "WHERE clause, query summary results"
-ms.assetid: 1b82681f-3d4f-4b9a-bb1d-2060e44f2577
-author: markingmyname
-ms.author: maghan
-ms.reviewer: 
-
 ---
 # Work with Columns in Aggregate Queries (Visual Database Tools)
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server](../../includes/applies-to-version/sqlserver.md)]
 When you create aggregate queries the [Query and View Designer](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md) makes certain assumptions so that it can construct a valid query. For example, if you are creating an aggregate query and mark a data column for output, the Query and View Designer automatically makes the column part of the GROUP BY clause so that you do not inadvertently attempt to display the contents of an individual row in a summary.  
   
 ## Using Group By  

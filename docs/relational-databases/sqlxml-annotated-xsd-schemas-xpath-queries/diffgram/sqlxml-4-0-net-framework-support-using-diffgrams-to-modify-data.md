@@ -1,14 +1,13 @@
 ---
 title: "Using DiffGrams to Modify Data in SQLXML 4.0"
 description: View information about using Microsoft .NET Framework DiffGrams in SQLXML 4.0 to modify data in Microsoft SQL Server database tables.
-ms.custom: ""
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "03/17/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: xml
+ms.service: sql
+ms.subservice: xml
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "data deletions [SQLXML]"
   - "updating data [SQLXML]"
   - "DiffGrams [SQLXML]"
@@ -23,9 +22,6 @@ helpviewer_keywords:
   - "deleting data"
   - "record updates [SQLXML]"
   - "record deletions [SQLXML]"
-ms.assetid: 48b8a8f9-f3af-404f-8c84-f4c3703364d9
-author: rothja
-ms.author: jroth
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SQLXML 4.0 .NET Framework Support - Using DiffGrams to Modify Data

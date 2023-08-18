@@ -1,22 +1,21 @@
 ---
 title: "Building applications with OLE DB Driver for SQL Server"
 description: "Learn about common issues when building applications with OLE DB Driver for SQL Server and what to expect when upgrading from an older OLE DB driver."
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
+ms.reviewer: mikeray
 ms.date: "02/12/2019"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: "reference"
 helpviewer_keywords:
   - "data access [OLE DB Driver for SQL Server], building applications"
   - "MSOLEDBSQL, building applications"
   - "applications [OLE DB Driver for SQL Server]"
   - "OLE DB Driver for SQL Server, building applications"
-author: David-Engel
-ms.author: v-daenge
-ms.reviewer: mikeray
 ---
 # Building applications with OLE DB Driver for SQL Server
+
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
@@ -24,6 +23,7 @@ ms.reviewer: mikeray
   When developing an application that uses the OLE DB Driver for SQL Server library, there are a number of issues that come into play. The topics in this section discuss many of these issues including upgrading from MDAC to OLE DB Driver for SQL Server, using the OLE DB Driver for SQL Server header and library files, and an overview of the various connection strings that can be used with OLE DB Driver for SQL Server.  
 
 ## In this section  
+
  [Installing OLE DB Driver for SQL Server](../../oledb/applications/installing-oledb-driver-for-sql-server.md)  
  Discusses how OLE DB Driver for SQL Server is installed, the locations that various components are installed to, and how to uninstall OLE DB Driver for SQL Server.  
 
@@ -49,5 +49,6 @@ ms.reviewer: mikeray
  Discusses how various data-access components can be used with different versions of OLE DB Driver for SQL Server.  
 
 ## See Also  
- [OLE DB Driver for SQL Server](../../oledb/oledb-driver-for-sql-server.md)     
+
+ [OLE DB Driver for SQL Server](../../oledb/oledb-driver-for-sql-server.md)  
  [OLE DB how-to topics](../../oledb/ole-db-how-to/ole-db-how-to-topics.md)  

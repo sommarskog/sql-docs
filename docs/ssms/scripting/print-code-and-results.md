@@ -1,26 +1,23 @@
 ---
 title: "Print Code and Results"
 description: Learn how to specify the coloration of text when printed. The colors can differ from those used for display. Learn also how to control whether line numbers appear in the listing.
-ms.prod: sql
-ms.technology: ssms
+author: markingmyname
+ms.author: maghan
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Query Editor [SQL Server Management Studio], printing"
   - "code printing [SQL Server Management Studio]"
   - "text printing [SQL Server Management Studio]"
   - "printing code and text"
-ms.assetid: 6e60173f-77fb-4a3e-a561-62c4d0128b95
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
-ms.custom: seo-lt-2019
-ms.date: "03/01/2017"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 
 # Print Code and Results
 
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 When you print a query or file, colorized elements print in color if your printer supports color printing and color printing is enabled in the printer setup.  
   

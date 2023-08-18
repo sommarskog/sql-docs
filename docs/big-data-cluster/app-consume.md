@@ -2,14 +2,13 @@
 title: Consume applications
 titleSuffix: SQL Server Big Data Clusters
 description: Consume an application deployed on SQL Server Big Data Clusters using a RESTful web service.
-author: cloudmelon
-ms.author: melqin
-ms.reviewer: mikeray
+author: HugoMSFT
+ms.author: hudequei
+ms.reviewer: wiassaf
 ms.date: 06/22/2020
-ms.metadata: seo-lt-2019
+ms.service: sql
+ms.subservice: big-data-cluster
 ms.topic: conceptual
-ms.prod: sql
-ms.technology: big-data-cluster
 ---
 
 # Consume an app deployed on [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] using a RESTful web service
@@ -18,6 +17,8 @@ ms.technology: big-data-cluster
 
 This article describes how to consume an app deployed on a SQL Server big data cluster using a RESTful web service.
 
+[!INCLUDE[big-data-clusters-banner-retirement](../includes/bdc-banner-retirement.md)]
+
 ## Prerequisites
 
 - [SQL Server big data cluster](deployment-guidance.md)
@@ -25,7 +26,7 @@ This article describes how to consume an app deployed on a SQL Server big data c
 - An app deployed using either [azdata](app-create.md) or the [App Deploy extension](app-deployment-extension.md)
 
 > [!NOTE]
-> When the application’s yaml specification file specifies a schedule, the application will be triggered via a cron job. If your big data cluster is deployed on OpenShift, launching the cron job requires additional capabilities. See the details regarding [security considerations on OpenShift](concept-application-deployment.md#app-deploy-security) for specific instructions.
+> When the application's yaml specification file specifies a schedule, the application will be triggered via a cron job. If your big data cluster is deployed on OpenShift, launching the cron job requires additional capabilities. See the details regarding [security considerations on OpenShift](concept-application-deployment.md#app-deploy-security) for specific instructions.
 
 ## Capabilities
 
@@ -45,7 +46,7 @@ The following sections describe how to retrieve an endpoint for an application a
 
 ## Retrieve the endpoint
 
-Big Data Clusters (BDC) provides endpoints that you can access and consume that application using a RESTful web service,  the main purpose is to facilities the interaction with other web or mobile applications and being more proactive for those microservices architecture. The **azdata app describe** command provides detailed information about the app including the end point in your cluster. This is typically used by an app developer to build an app using the swagger client and using the webservice to interact with the app in a RESTful manner.
+Big Data Clusters provides endpoints that you can access and consume that application using a RESTful web service,  the main purpose is to facilities the interaction with other web or mobile applications and being more proactive for those microservices architecture. The **azdata app describe** command provides detailed information about the app including the end point in your cluster. This is typically used by an app developer to build an app using the swagger client and using the webservice to interact with the app in a RESTful manner.
 
 Describe your app by running a command similar to the following example:
 
@@ -126,7 +127,7 @@ The output of this request will give you a JWT `access_token`, which you'll need
 
 ## Execute the app using the RESTful web service
 
-There are multiple ways to consume an app on BDC, you can choose to use [azdata app run command](app-create.md). This section will demonstrate how to use common developer tools such as Postman to execute the app. 
+There are multiple ways to consume an app on SQL Server Big Data Clusters, you can choose to use [azdata app run command](app-create.md). This section will demonstrate how to use common developer tools such as Postman to execute the app. 
 
 You can open the URL for the `swagger` that was returned when you ran `azdata app describe --name [appname] --version [version]` in your browser, which should be similar to `https://[IP]:[PORT]/app/[appname]/[version]/swagger.json`. 
 

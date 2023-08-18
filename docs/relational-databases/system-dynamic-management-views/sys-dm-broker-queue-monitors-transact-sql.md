@@ -1,24 +1,21 @@
 ---
-description: "sys.dm_broker_queue_monitors (Transact-SQL)"
-title: "sys.dm_broker_queue_monitors (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/10/2016"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: system-objects
+title: "sys.dm_broker_queue_monitors (Transact-SQL)"
+description: sys.dm_broker_queue_monitors (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
+ms.date: "02/24/2023"
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "dm_broker_queue_monitors"
   - "sys.dm_broker_queue_monitors_TSQL"
   - "dm_broker_queue_monitors_TSQL"
   - "sys.dm_broker_queue_monitors"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.dm_broker_queue_monitors dynamic management view"
-ms.assetid: 401207dc-ef4a-4a3f-879c-76dcbb52d6bc
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+dev_langs:
+  - "TSQL"
 ---
 # sys.dm_broker_queue_monitors (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,6 +35,10 @@ ms.author: wiassaf
 ## Permissions  
  Requires VIEW SERVER STATE permission on the server.  
   
+### Permissions for SQL Server 2022 and later
+
+Requires VIEW SERVER PERFORMANCE STATE permission on the server.
+
 ## Examples  
   
 ### A. Current status queue monitor  

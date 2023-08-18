@@ -1,28 +1,26 @@
 ---
+title: "sysarticlecolumns (System View) (Transact-SQL)"
 description: "sysarticlecolumns (System View) (Transact-SQL)"
-title: "sysarticlecolumns (System View) (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "03/03/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: replication
+ms.service: sql
+ms.subservice: replication
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sysarticlecolumns"
   - "sysarticlecolumns_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sysarticlecolumns view"
-ms.assetid: a8dd8d13-c827-45c4-87ba-802725301382
-author: "stevestein"
-ms.author: "sstein"
+dev_langs:
+  - "TSQL"
 ---
+
 # sysarticlecolumns (System View) (Transact-SQL)
+
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  The **sysarticlecolumns** view exposes additional information about columns in published articles. This view is stored in the distribution database.  
+The **sysarticlecolumns** view exposes additional information about columns in published articles. This view is stored in the distribution database.  
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  

@@ -1,29 +1,25 @@
 ---
-description: "GRANT System Object Permissions (Transact-SQL)"
-title: "GRANT System Object Permissions (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "GRANT System Object Permissions (Transact-SQL)"
+description: GRANT System Object Permissions (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "07/26/2017"
-ms.prod: sql
-ms.prod_service: "sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "encryption [SQL Server], system objects"
   - "system objects [SQL Server]"
   - "GRANT statement, system objects"
-ms.assetid: 9d4e89f4-478f-419a-8b50-b096771e3880
-author: VanMSFT
-ms.author: vanto
+dev_langs:
+  - "TSQL"
 ---
 # GRANT System Object Permissions (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Grants permissions on system objects such as system stored procedures, extended stored procedures, functions, and views.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -76,7 +72,7 @@ GO
  The following example grants the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login `Sylvester1` permission to select a view that lists [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logins. The example then grants the additional permission that is required to view metadata on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logins that are not owned by the user.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GRANT SELECT ON sys.sql_logins TO Sylvester1;  
 GRANT VIEW SERVER STATE to Sylvester1;  
 GO  

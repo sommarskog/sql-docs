@@ -1,25 +1,21 @@
 ---
-description: "dbo.sysdownloadlist (Transact-SQL)"
-title: "dbo.sysdownloadlist (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "dbo.sysdownloadlist (Transact-SQL)"
+description: dbo.sysdownloadlist (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "03/03/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "dbo.sysdownloadlist"
   - "sysdownloadlist_TSQL"
   - "dbo.sysdownloadlist_TSQL"
   - "sysdownloadlist"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sysdownloadlist system table"
-ms.assetid: 71087a4c-e829-488e-aa7d-a9476e2b4779
-author: cawrites
-ms.author: chadam
+dev_langs:
+  - "TSQL"
 ---
 # dbo.sysdownloadlist (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,32 +1,28 @@
 ---
-description: "&#x40;&#x40;PACK_RECEIVED (Transact-SQL)"
-title: "@@PACK_RECEIVED (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "@@PACK_RECEIVED (Transact-SQL)"
+description: "@@PACK_RECEIVED (Transact-SQL)"
+author: VanMSFT
+ms.author: vanto
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "@@PACK_RECEIVED_TSQL"
   - "@@PACK_RECEIVED"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "@@PACK_RECEIVED function"
   - "number of packets read"
   - "packets [SQL Server], number read"
-ms.assetid: 5c0b3d36-bfad-4f0b-abb8-e8f6391b32cd
-author: VanMSFT
-ms.author: vanto
+dev_langs:
+  - "TSQL"
 ---
 # &#x40;&#x40;PACK_RECEIVED (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Returns the number of input packets read from the network by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] since it was last started.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

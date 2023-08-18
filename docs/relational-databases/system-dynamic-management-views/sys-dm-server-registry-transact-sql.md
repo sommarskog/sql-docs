@@ -1,24 +1,21 @@
 ---
-description: "sys.dm_server_registry (Transact-SQL)"
-title: "sys.dm_server_registry (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/10/2016"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: system-objects
+title: "sys.dm_server_registry (Transact-SQL)"
+description: sys.dm_server_registry (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
+ms.date: "02/27/2023"
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "dm_server_registry_TSQL"
   - "sys.dm_server_registry"
   - "dm_server_registry"
   - "sys.dm_server_registry_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.dm_server_registry dynamic management view"
-ms.assetid: 9b3e0c74-2e99-4996-a383-104d51831e97
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+dev_langs:
+  - "TSQL"
 ---
 # sys.dm_server_registry (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -31,11 +28,13 @@ ms.author: wiassaf
 |value_name|**nvarchar(256)**|Key value name. This is the item shown in the **Name** column of the Registry Editor. Is nullable.|  
 |value_data|**sql_variant**|Value of the key data. This is the value shown in the **Data** column of the Registry Editor for a given entry. Is nullable.|  
   
-## Security  
-  
-### Permissions  
+## Permissions  
  Requires VIEW SERVER STATE permission on the server.  
   
+### Permissions for SQL Server 2022 and later
+
+Requires VIEW SERVER PERFORMANCE STATE permission on the server.
+
 ## Examples  
   
 ### A. Display the SQL Server services  

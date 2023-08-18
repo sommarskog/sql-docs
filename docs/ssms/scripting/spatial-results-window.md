@@ -1,19 +1,16 @@
 ---
 title: "Spatial Results Window"
 description: Learn how to use the Spatial results window, which provides visual mapping tools for viewing spatial data. To view spatial results your query results must include a spatial column with either geometry or geography data.
-ms.custom: seo-lt-2019
-ms.date: "03/01/2017"
-ms.prod: sql
-ms.technology: ssms
-ms.reviewer: ""
-ms.topic: conceptual
-ms.assetid: c2d5a477-6496-4d01-adee-7322ebdfadf3
 author: markingmyname
 ms.author: maghan
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: ssms
+ms.topic: conceptual
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Spatial Results Window
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   The **Spatial results** window provides visual mapping tools for viewing spatial data. To view spatial results, your query results must include a spatial column with either geometry or geography data.  
   
 > [!NOTE]  

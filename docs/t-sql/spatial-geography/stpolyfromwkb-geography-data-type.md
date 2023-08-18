@@ -1,26 +1,22 @@
 ---
+title: "STPolyFromWKB (geography Data Type)"
 description: "STPolyFromWKB (geography Data Type)"
-title: "STPolyFromWKB (geography Data Type) | Microsoft Docs"
-ms.custom: ""
+author: MladjoA
+ms.author: mlandzic
 ms.date: "07/30/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "STPolyFromWKB_TSQL"
   - "STPolyFromWKB (geography Data Type)"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "STPolyFromWKB method"
-ms.assetid: d236e0ea-dabe-4341-a6eb-ecc210d1f056
-author: MladjoA
-ms.author: mlandzic 
+dev_langs:
+  - "TSQL"
 ---
 # STPolyFromWKB (geography Data Type)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 Returns a **geographyPolygon** instance from an Open Geospatial Consortium (OGC) Well-Known Binary (WKB) representation.
   
@@ -53,7 +49,7 @@ STPolyFromWKB ( 'WKB_polygon' , SRID )
 ## Examples  
  The following example uses `STPolyFromWKB()` to create a `geography` instance.  
   
-```  
+```sql
 DECLARE @g geography;   
 SET @g = geography::STPolyFromWKB(0x01030000000100000005000000F4FDD478E9965EC0DD24068195D3474083C0CAA145965EC0508D976E12D3474083C0CAA145965EC04E62105839D44740F4FDD478E9965EC04E62105839D44740F4FDD478E9965EC0DD24068195D34740, 4326);  
 SELECT @g.ToString();  

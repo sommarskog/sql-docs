@@ -1,19 +1,19 @@
 ---
-title: "Add or Remove Margins from a Chart (Report Builder) | Microsoft Docs"
-description: Add or remove margins from a column or scatter chart in Report Builder. Improve readability or appearance of paginated reports. 
-ms.date: 03/03/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-design
-
-
-ms.topic: conceptual
-ms.assetid: 91c43f58-5771-4d33-a54d-0e802d2f5cba
+title: "Add or remove margins from a paginated report chart"
+description: Add or remove margins from a column or scatter chart in Report Builder. Improve readability or appearance of paginated reports.
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 03/03/2017
+ms.service: reporting-services
+ms.subservice: report-design
+ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
-# Add or Remove Margins from a Chart (Report Builder and SSRS)
-For Column and Scatter chart types in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] paginated reports, the chart automatically adds side margins on the ends of the x-axis. In Bar chart types, the chart automatically adds side margins on the ends of the y-axis. In all other chart types, the chart does not add side margins. You cannot change the size of the margin.  
+# Add or remove margins from a paginated report chart (Report Builder)
+
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-ssrs-rb](../../includes/ssrs-appliesto-ssrs-rb.md)] [!INCLUDE [ssrs-appliesto-pbi-rb](../../includes/ssrs-appliesto-pbi-rb.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
+
+For Column and Scatter chart types in paginated reports, the chart automatically adds side margins on the ends of the x-axis. In Bar chart types, the chart automatically adds side margins on the ends of the y-axis. In all other chart types, the chart does not add side margins. You cannot change the size of the margin.  
   
  This topic does not apply to pie, doughnut, funnel, or pyramid chart types.  
   
@@ -30,7 +30,7 @@ For Column and Scatter chart types in [!INCLUDE[ssRSnoversion](../../includes/ss
   
     -   **Disabled** Bar, column, and scatter charts will have no side margins.  
   
-3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+3.  Select **OK**.
   
 ## See Also  
  [Formatting Axis Labels on a Chart &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   

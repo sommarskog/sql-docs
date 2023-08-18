@@ -1,23 +1,19 @@
 ---
-description: "Transactions (Master Data Services)"
 title: Transactions
-ms.custom: ""
+description: "Transactions (Master Data Services)"
+author: CordeliaGrey
+ms.author: jiwang6
 ms.date: "01/10/2017"
-ms.prod: sql
-ms.prod_service: "mds"
-ms.reviewer: ""
-ms.technology: master-data-services
+ms.service: sql
+ms.subservice: master-data-services
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "transactions [Master Data Services], about transactions"
   - "transactions [Master Data Services]"
-ms.assetid: 4cd2fa6f-9c76-4b7a-ae18-d4e5fd2f03f5
-author: lrtoyou1223
-ms.author: lle
 ---
 # Transactions (Master Data Services)
 
-[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
 
 

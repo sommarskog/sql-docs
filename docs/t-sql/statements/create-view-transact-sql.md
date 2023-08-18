@@ -1,22 +1,19 @@
 ---
-description: "CREATE VIEW (Transact-SQL)"
 title: CREATE VIEW (Transact-SQL)
-ms.custom: ""
-ms.date: 04/16/2020
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
-ms.technology: t-sql
+description: CREATE VIEW (Transact-SQL)
+author: markingmyname
+ms.author: maghan
+ms.date: 09/08/2021
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "CREATE VIEW"
   - "VIEW_TSQL"
   - "VIEW"
   - "CREATE_VIEW_TSQL"
   - "SCHEMABINDING_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "table creation [SQL Server], CREATE VIEW"
   - "views [SQL Server], creating"
   - "CREATE VIEW statement"
@@ -34,15 +31,14 @@ helpviewer_keywords:
   - "distributed partitioned views [SQL Server]"
   - "views [SQL Server], indexed views"
   - "maximum number of columns per view"
-ms.assetid: aecc2f73-2ab5-4db9-b1e6-2f9e3c601fb9
-author: WilliamDAssafMSFT
-ms.author: wiassaf
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+dev_langs:
+  - "TSQL"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=fabric"
 ---
 
 # CREATE VIEW (Transact-SQL)
 
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw.md)]
 
   Creates a virtual table whose contents (columns and rows) are defined by a query. Use this statement to create a view of the data in one or more tables in the database. For example, a view can be used for the following purposes:  
   
@@ -52,7 +48,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 -   To provide a backward compatible interface to emulate a table whose schema has changed.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -74,7 +70,7 @@ AS select_statement
 ```  
   
 ```syntaxsql
--- Syntax for Azure Synapse Analytics and Parallel Data Warehouse  
+-- Syntax for Azure Synapse Analytics and Parallel Data Warehouse
   
 CREATE VIEW [ schema_name . ] view_name [  ( column_name [ ,...n ] ) ]   
 AS <select_statement>   
@@ -84,16 +80,28 @@ AS <select_statement>
     [ WITH <common_table_expression> [ ,...n ] ]  
     SELECT <select_criteria>  
 ```  
+
+```syntaxsql
+-- Syntax for [!INCLUDE [fabric](../../includes/fabric.md)]
   
+CREATE [ OR ALTER ] VIEW [ schema_name . ] view_name [  ( column_name [ ,...n ] ) ]   
+AS <select_statement>   
+[;]  
+  
+<select_statement> ::=  
+    [ WITH <common_table_expression> [ ,...n ] ]  
+    SELECT <select_criteria>  
+``` 
+
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## Arguments
 
-OR ALTER  
- **Applies to**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP1).   
+#### OR ALTER  
+ **Applies to**: [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP1).   
   
  Conditionally alters the view only if it already exists. 
- 
+
  *schema_name*  
  Is the name of the schema to which the view belongs.  
   
@@ -108,7 +116,7 @@ OR ALTER
 > [!NOTE]  
 >  In the columns for the view, the permissions for a column name apply across a CREATE VIEW or ALTER VIEW statement, regardless of the source of the underlying data. For example, if permissions are granted on the **SalesOrderID** column in a CREATE VIEW statement, an ALTER VIEW statement can name the **SalesOrderID** column with a different column name, such as **OrderRef**, and still have the permissions associated with the view using **SalesOrderID**.  
   
- AS  
+#### AS  
  Specifies the actions the view is to perform.  
   
  *select_statement*  
@@ -135,23 +143,26 @@ OR ALTER
   
  Functions and multiple SELECT statements separated by UNION or UNION ALL can be used in *select_statement*.  
   
- CHECK OPTION  
+#### CHECK OPTION  
  Forces all data modification statements executed against the view to follow the criteria set within *select_statement*. When a row is modified through a view, the WITH CHECK OPTION makes sure the data remains visible through the view after the modification is committed.  
   
 > [!NOTE]
 >  The CHECK OPTION only applies to updates made through the view. It has no applicability to any updates performed directly to a view's underlying tables.  
   
- ENCRYPTION  
- **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+#### ENCRYPTION  
+ **Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later and [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].  
   
  Encrypts the entries in [sys.syscomments](../../relational-databases/system-compatibility-views/sys-syscomments-transact-sql.md) that contain the text of the CREATE VIEW statement. Using WITH ENCRYPTION prevents the view from being published as part of SQL Server replication.  
   
- SCHEMABINDING  
+#### SCHEMABINDING  
  Binds the view to the schema of the underlying table or tables. When SCHEMABINDING is specified, the base table or tables cannot be modified in a way that would affect the view definition. The view definition itself must first be modified or dropped to remove dependencies on the table that is to be modified. When you use SCHEMABINDING, the *select_statement* must include the two-part names (_schema_**.**_object_) of tables, views, or user-defined functions that are referenced. All referenced objects must be in the same database.  
   
  Views or tables that participate in a view created with the SCHEMABINDING clause cannot be dropped unless that view is dropped or changed so that it no longer has schema binding. Otherwise, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] raises an error. Also, executing ALTER TABLE statements on tables that participate in views that have schema binding fail when these statements affect the view definition.  
+
+> [!NOTE] 
+> In Azure Synapse Analytics, views currently do not support schema binding. For more information, see [T-SQL views with dedicated SQL pool and serverless SQL pool in Azure Synapse Analytics](/azure/synapse-analytics/sql/develop-views#limitations).
   
- VIEW_METADATA  
+#### VIEW_METADATA  
  Specifies that the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] will return to the DB-Library, ODBC, and OLE DB APIs the metadata information about the view, instead of the base table or tables, when browse-mode metadata is being requested for a query that references the view. Browse-mode metadata is additional metadata that the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] returns to these client-side APIs. This metadata enables the client-side APIs to implement updatable client-side cursors. Browse-mode metadata includes information about the base table that the columns in the result set belong to.  
   
  For views created with VIEW_METADATA, the browse-mode metadata returns the view name and not the base table names when it describes columns from the view in the result set.  
@@ -173,8 +184,12 @@ OR ALTER
   
  The [!INCLUDE[ssDE](../../includes/ssde-md.md)] saves the settings of SET QUOTED_IDENTIFIER and SET ANSI_NULLS when a view is created. These original settings are used to parse the view when the view is used. Therefore, any client-session settings for SET QUOTED_IDENTIFIER and SET ANSI_NULLS do not affect the view definition when the view is accessed.  
   
-## Updatable Views  
- You can modify the data of an underlying base table through a view, as long as the following conditions are true:  
+## Updatable Views
+
+> [!NOTE] 
+> In Azure Synapse Analytics, currently updatable views, DML triggers (of either type AFTER or INSTEAD OF), and partitioned views are not supported. For more information, see [T-SQL views with dedicated SQL pool and serverless SQL pool in Azure Synapse Analytics](/azure/synapse-analytics/sql/develop-views#limitations).
+
+You can modify the data of an underlying base table through a view, as long as the following conditions are true:  
   
 -   Any modifications, including UPDATE, INSERT, and DELETE statements, must reference columns from only one base table.  
   
@@ -199,8 +214,12 @@ OR ALTER
 -   **Partitioned Views**  
   
      If the view is a partitioned view, the view is updatable, subject to certain restrictions. When it is needed, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] distinguishes local partitioned views as the views in which all participating tables and the view are on the same instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], and distributed partitioned views as the views in which at least one of the tables in the view resides on a different or remote server.  
-  
-## Partitioned Views  
+
+## Partitioned Views
+
+> [!NOTE] 
+> In Azure Synapse Analytics, currently partitioned views are not supported. For more information, see [T-SQL views with dedicated SQL pool and serverless SQL pool in Azure Synapse Analytics](/azure/synapse-analytics/sql/develop-views#limitations).
+
  A partitioned view is a view defined by a UNION ALL of member tables structured in the same way, but stored separately as multiple tables in either the same instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or in a group of autonomous instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] servers, called federated database servers.  
   
 > [!NOTE]  
@@ -351,7 +370,7 @@ FROM Tn;
   
 ## Examples  
 
-The following examples use the AdventureWorks 2012 or AdventureWorksDW database.  
+The following examples use the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] or [!INCLUDE [sssampledbdwobject-md](../../includes/sssampledbdwobject-md.md)] database.  
 
 ### A. Using a simple CREATE VIEW  
  The following example creates a view by using a simple `SELECT` statement. A simple view is helpful when a combination of columns is queried frequently. The data from this view comes from the `HumanResources.Employee` and `Person.Person` tables of the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database. The data provides name and hire date information for the employees of [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)]. The view could be created for the person in charge of tracking work anniversaries but without giving this person access to all the data in these tables.  
@@ -369,7 +388,7 @@ GO
 ### B. Using WITH ENCRYPTION  
  The following example uses the `WITH ENCRYPTION` option and shows computed columns, renamed columns, and multiple columns.  
   
-**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later and [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
+**Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later and [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
 ```sql
 CREATE VIEW Purchasing.PurchaseOrderReject  
@@ -464,7 +483,7 @@ INSERT dbo.all_supplier_view VALUES ('1', 'CaliforniaCorp'), ('5', 'BraziliaLtd'
 GO  
 ```  
   
-## Examples: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## Examples: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### F. Creating a simple view  
  The following example creates a view by selecting only some of the columns from the source table.  

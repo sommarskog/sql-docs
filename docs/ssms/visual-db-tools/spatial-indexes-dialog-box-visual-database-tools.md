@@ -1,22 +1,17 @@
 ---
-description: "Spatial Indexes Dialog Box (Visual Database Tools)"
 title: Spatial Indexes Dialog Box
-ms.custom: seo-lt-2019
-ms.date: 01/19/2017
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
-ms.topic: conceptual
-f1_keywords: 
-  - "vdt.dlgbox.spatialindexes"
-ms.assetid: 4d84239a-68c7-4aa2-8602-2b51dd07260f
+description: "Spatial Indexes Dialog Box (Visual Database Tools)"
 author: markingmyname
 ms.author: maghan
-ms.reviewer: 
-
+ms.date: 01/19/2017
+ms.service: sql
+ms.subservice: ssms
+ms.topic: conceptual
+f1_keywords:
+  - "vdt.dlgbox.spatialindexes"
 ---
 # Spatial Indexes Dialog Box (Visual Database Tools)
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server](../../includes/applies-to-version/sqlserver.md)]
 Use the **Spatial Indexes** dialog box to create indexes for columns of the **geometry** or **geography** data type (*spatial columns*), which cannot be indexed using the **Index/Keys** dialog box. Each spatial column can have more than one spatial index, but they must be created one at a time.  
   
 For information about restrictions on spatial index creation, see [Spatial Indexes Overview](../../relational-databases/spatial/spatial-indexes-overview.md).  

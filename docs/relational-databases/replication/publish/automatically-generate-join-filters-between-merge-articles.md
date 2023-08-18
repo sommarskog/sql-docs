@@ -1,19 +1,16 @@
 ---
 title: "Automatically generate join filters (Merge)"
 description: Describes how to automatically generate a set of join filters on the 'Filter Table Rows' page of the 'New Publication Wizard' for a Merge Publicaton in SQL Server Management Studio (SSMS).
-ms.custom: seo-lt-2019
-ms.date: "03/07/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: replication
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "automatic join filter generation"
-  - "join filters"
-ms.assetid: 7ef419f4-c17f-42a5-9068-174a3ec08941
 author: "MashaMSFT"
 ms.author: "mathoma"
+ms.date: "03/07/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: conceptual
+ms.custom: updatefrequency5
+helpviewer_keywords:
+  - "automatic join filter generation"
+  - "join filters"
 ---
 # Automatically Generate Join Filters Between Merge Articles
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -55,7 +52,7 @@ ms.author: "mathoma"
   
          Select the option that matches how data will be shared among Subscribers: **A row from this table will go to multiple subscriptions** or **A row from this table will go to only one subscription**. If you select **A row from this table will go to only one subscription**, merge replication can optimize performance by storing and processing less metadata. However, you must ensure that the data is partitioned in such a way that a row cannot be replicated to more than one Subscriber. For more information, see the section "Setting 'partition options'" in the topic [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
-3.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+3.  Select **OK**.
   
      The filter you specified is parsed and run against the table in the SELECT clause. If the filter statement contains syntax errors or other problems, you will be notified and will be able to edit the filter statement.  
   
@@ -69,7 +66,7 @@ ms.author: "mathoma"
   
 2.  In the **Edit Filter** or **Edit Join** dialog box, modify the filter.  
   
-3.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+3.  Select **OK**.
   
 ### To delete a filter that was automatically generated  
   

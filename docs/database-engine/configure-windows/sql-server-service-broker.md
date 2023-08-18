@@ -1,34 +1,32 @@
 ---
-title: "SQL Server Service Broker | Microsoft Docs"
-description: Learn about Service Broker. See how it provides native support for messaging in the SQL Server Database Engine and Azure SQL  Managed Instance.
-ms.custom: ""
-ms.date: "03/17/2021"
-ms.prod: sql
-ms.prod_service: high-availability
-ms.reviewer: ""
-ms.technology: configuration
+title: SQL Server Service Broker
+description: Learn about Service Broker. See how it provides native support for messaging in the SQL Server Database Engine and Azure SQL Managed Instance.
+author: rwestMSFT
+ms.author: randolphwest
+ms.date: "06/07/2021"
+ms.service: sql
+ms.subservice: configuration
 ms.topic: conceptual
-f1_keywords: 
-  - SQL13.SWB.SSBMSGTYPEPROPERTIES.GENERAL.F1
-  - SQL13.SWB.SSBCONTRACTPROPERTIES.GENERAL.F1
-  - SQL13.SWB.SSBQUEUEPROPERTIES.GENERAL.F1
-  - SQL13.SWB.SSBREMSVCBINDPROPERTIES.GENERAL.F1
-  - SQL13.SWB.SSBROUTEPROPERTIES.GENERAL.F1
-  - SQL13.SWB.SSBPRIORITYPROPERTIES.GENERAL.F1
-  - SQL13.SWB.SSBSERVICEPROPERTIES.GENERAL.F1
-helpviewer_keywords: 
+f1_keywords:
+  - "SQL13.SWB.SSBMSGTYPEPROPERTIES.GENERAL.F1"
+  - "SQL13.SWB.SSBCONTRACTPROPERTIES.GENERAL.F1"
+  - "SQL13.SWB.SSBQUEUEPROPERTIES.GENERAL.F1"
+  - "SQL13.SWB.SSBREMSVCBINDPROPERTIES.GENERAL.F1"
+  - "SQL13.SWB.SSBROUTEPROPERTIES.GENERAL.F1"
+  - "SQL13.SWB.SSBPRIORITYPROPERTIES.GENERAL.F1"
+  - "SQL13.SWB.SSBSERVICEPROPERTIES.GENERAL.F1"
+helpviewer_keywords:
   - "Broker See Service Broker"
   - "SQL Server Service Broker"
   - "Service Broker"
-ms.assetid: 8b8b3b57-fd46-44de-9a4e-e3a8e3999c1e
-author: markingmyname
-ms.author: maghan
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017"
 ---
+
 # Service Broker
+
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssSB](../../includes/sssb-md.md)] provide native support for messaging and queuing in the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] and [Azure SQL Managed Instance](/azure/sql-database/sql-database-managed-instance-index). Developers can easily create sophisticated applications that use the [!INCLUDE[ssDE](../../includes/ssde-md.md)] components to communicate between disparate databases, and build distributed and reliable applications.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssSB](../../includes/sssb-md.md)] provide native support for messaging and queuing in the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] and [Azure SQL Managed Instance](/azure/sql-database/sql-database-managed-instance-index). Developers can easily create sophisticated applications that use the [!INCLUDE[ssDE](../../includes/ssde-md.md)] components to communicate between disparate databases, and build distributed and reliable applications.  
   
 ## When to use Service Broker
 
@@ -100,8 +98,8 @@ FROM ExpenseQueue;
 
 Cross-instance service broker message exchange is supported only between Azure SQL Managed Instances:
 
-- `CREATE ROUTE`: You can't use CREATE ROUTE with ADDRESS other than LOCAL or DNS name of another SQL Managed Instance. Port specified must be 4022. See [CREATE ROUTE](/sql/t-sql/statements/create-route-transact-sql).
-- `ALTER ROUTE`: You can't use ALTER ROUTE with ADDRESS other than LOCAL or DNS name of another SQL Managed Instance. Port specified must be 4022. See See [ALTER ROUTE](/sql/t-sql/statements/alter-route-transact-sql).
+- `CREATE ROUTE`: You can't use CREATE ROUTE with ADDRESS other than LOCAL or DNS name of another SQL Managed Instance. Port specified must be 4022. See [CREATE ROUTE](../../t-sql/statements/create-route-transact-sql.md).
+- `ALTER ROUTE`: You can't use ALTER ROUTE with ADDRESS other than LOCAL or DNS name of another SQL Managed Instance. Port specified must be 4022. See See [ALTER ROUTE](../../t-sql/statements/alter-route-transact-sql.md).
 
 Transport security is supported, dialog security is not:
 
@@ -112,7 +110,7 @@ Service broker is enabled by default and cannot be disabled. The following ALTER
 - `ENABLE_BROKER`
 - `DISABLE_BROKER`
 
-No significant changes were introduced in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  The following changes were introduced in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. 
+No significant changes were introduced in [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)].  The following changes were introduced in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. 
 
 ### Messages can be sent to multiple target services (multicast)  
  The syntax of the [SEND &#40;Transact-SQL&#41;](../../t-sql/statements/send-transact-sql.md) statement has been extended to enable multicast by supporting multiple conversation handles.  

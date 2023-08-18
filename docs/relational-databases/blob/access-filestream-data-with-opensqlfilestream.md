@@ -1,27 +1,21 @@
 ---
-title: "Access FILESTREAM Data with OpenSqlFilestream | Microsoft Docs"
+title: "Access FILESTREAM Data with OpenSqlFilestream"
 description: Find out how to access FILESTREAM data with OpenSqlFilestream. View examples demonstrating how to use this API to obtain a Win32 handle.
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: filestream
-ms.topic: conceptual
-apiname: 
-  - "OpenSqlFilestream"
-apilocation: 
-  - "sqlncli11.dll"
-apitype: "DLLExport"
-helpviewer_keywords: 
-  - "OpenSqlFilestream"
-ms.assetid: d8205653-93dd-4599-8cdf-f9199074025f
 author: MikeRayMSFT
 ms.author: mikeray
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: filestream
+ms.topic: conceptual
+helpviewer_keywords:
+  - "OpenSqlFilestream"
+apilocation: "sqlncli11.dll"
+apiname: "OpenSqlFilestream"
+apitype: "DLLExport"
 ---
 # Access FILESTREAM Data with OpenSqlFilestream
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  The OpenSqlFilestream API obtains a Win32 compatible file handle for a FILESTREAM binary large object (BLOB) stored in the file system. The handle can be passed to any of the following Win32 APIs: [ReadFile](https://go.microsoft.com/fwlink/?LinkId=86422), [WriteFile](/windows/win32/api/fileapi/nf-fileapi-writefile), [TransmitFile](/windows/win32/api/mswsock/nf-mswsock-transmitfile), [SetFilePointer](/windows/win32/api/fileapi/nf-fileapi-setfilepointer), [SetEndOfFile](/windows/win32/api/fileapi/nf-fileapi-setendoffile), or [FlushFileBuffers](/windows/win32/api/fileapi/nf-fileapi-flushfilebuffers). If you pass this handle to any other Win32 API, the error ERROR_ACCESS_DENIED is returned. The handle must be closed by passing it to the Win32 [CloseHandle](/windows/win32/api/handleapi/nf-handleapi-closehandle) API before the transaction is committed or rolled back. Failing to close the handle will cause server-side resource leaks.  
+  The OpenSqlFilestream API obtains a Win32 compatible file handle for a FILESTREAM binary large object (BLOB) stored in the file system. The handle can be passed to any of the following Win32 APIs: [ReadFile](/windows/win32/api/fileapi/nf-fileapi-readfile), [WriteFile](/windows/win32/api/fileapi/nf-fileapi-writefile), [TransmitFile](/windows/win32/api/mswsock/nf-mswsock-transmitfile), [SetFilePointer](/windows/win32/api/fileapi/nf-fileapi-setfilepointer), [SetEndOfFile](/windows/win32/api/fileapi/nf-fileapi-setendoffile), or [FlushFileBuffers](/windows/win32/api/fileapi/nf-fileapi-flushfilebuffers). If you pass this handle to any other Win32 API, the error ERROR_ACCESS_DENIED is returned. The handle must be closed by passing it to the Win32 [CloseHandle](/windows/win32/api/handleapi/nf-handleapi-closehandle) API before the transaction is committed or rolled back. Failing to close the handle will cause server-side resource leaks.  
   
  You must perform All FILESTREAM data container access in a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] transaction. [!INCLUDE[tsql](../../includes/tsql-md.md)] statements can also be executed in the same transaction. This maintains consistency between the SQL data and FILESTREAM BLOB data.  
   
@@ -57,7 +51,7 @@ HANDLE OpenSqlFilestream (
 |SQL_FILESTREAM_READWRITE|2|Data can be read and written from the file.|  
   
 > [!NOTE]  
->  These values are defined in the SQL_FILESTREAM_DESIRED_ACCESS enumeration in sqlncli.h.  
+>  These values are defined in the SQL_FILESTREAM_DESIRED_ACCESS enumeration in msoledbsql.h.  
   
  *OpenOptions*  
  [in] The file attributes and flags. This parameter can also include any combination of the following flags.  
@@ -93,10 +87,10 @@ HANDLE OpenSqlFilestream (
  [!code-cpp[FILESTREAM#FS_CPP_WriteBLOB](../../relational-databases/blob/codesnippet/cpp/access-filestream-data-w_0_3.cpp)]  
   
 ## Remarks  
- The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client must be installed to use this API. The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client is installed with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] client tools. For more information, see [Installing SQL Server Native Client](../../relational-databases/native-client/applications/installing-sql-server-native-client.md).  
+
+This sample was originally written for the SQL Server Native Client (sqlncli.h) but has been updated to use the Microsoft OLE DB Driver (msoledbsql.h) for SQL Server. [!INCLUDE[snac-removed-oledb-only](../../includes/snac-removed-oledb-only.md)]
   
 ## See Also  
  [Binary Large Object &#40;Blob&#41; Data &#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)   
  [Make Partial Updates to FILESTREAM Data](../../relational-databases/blob/make-partial-updates-to-filestream-data.md)   
  [Avoid Conflicts with Database Operations in FILESTREAM Applications](../../relational-databases/blob/avoid-conflicts-with-database-operations-in-filestream-applications.md)  
-  

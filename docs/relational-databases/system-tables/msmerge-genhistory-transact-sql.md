@@ -1,23 +1,19 @@
 ---
-description: "MSmerge_genhistory (Transact-SQL)"
-title: "MSmerge_genhistory (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "MSmerge_genhistory (Transact-SQL)"
+description: MSmerge_genhistory (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "03/04/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: replication
+ms.service: sql
+ms.subservice: replication
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "MSmerge_genhistory_TSQL"
   - "MSmerge_genhistory"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "MSmerge_genhistory system table"
-ms.assetid: 475d08ae-eb8b-49de-afd6-33c96ab8004d
-author: cawrites
-ms.author: chadam
+dev_langs:
+  - "TSQL"
 ---
 # MSmerge_genhistory (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

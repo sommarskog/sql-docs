@@ -1,34 +1,30 @@
 ---
+title: "@@TIMETICKS (Transact-SQL)"
 description: "&#x40;&#x40;TIMETICKS (Transact-SQL)"
-title: "@@TIMETICKS (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "09/18/2017"
-ms.prod: sql
-ms.prod_service: "sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "@@TIMETICKS_TSQL"
   - "@@TIMETICKS"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "ticks [SQL Server]"
   - "@@TIMETICKS function"
   - "microseconds per tick [SQL Server]"
   - "time [SQL Server], ticks"
   - "number of microseconds per tick"
-ms.assetid: 9d036633-837f-4309-9c45-3d9600258018
-author: julieMSFT
-ms.author: jrasnick
+dev_langs:
+  - "TSQL"
 ---
 # &#x40;&#x40;TIMETICKS (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Returns the number of microseconds per tick.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

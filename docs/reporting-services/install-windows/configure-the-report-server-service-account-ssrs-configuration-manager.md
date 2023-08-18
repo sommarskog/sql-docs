@@ -1,16 +1,17 @@
 ---
-title: "Configure the Report Server Service Account (Configuration Manager) | Microsoft Docs"
+title: "Configure the Report Server Service Account (Configuration Manager)"
 description: "Reporting Services is implemented as a single service that contains a Report Server Web service, web portal, and a background processing application that is used for scheduled report processing and subscription delivery."
 author: maggiesMSFT
 ms.author: maggies
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
+ms.date: 08/17/2022
+ms.service: reporting-services
 ms.topic: conceptual
-ms.custom: seo-lt-2019​, seo-mmd-2019
-ms.date: 06/09/2020 
+ms.custom: updatefrequency5
 ---
 
 # Configure the Report Server Service Account (Report Server Configuration Manager)
+
+[!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
 
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] is implemented as a single service that contains a Report Server Web service, [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)], and a background processing application that is used for scheduled report processing and subscription delivery. This topic explains how the service account is initially configured and how to modify the account or password using the Reporting Services Configuration tool.  
   
@@ -65,11 +66,14 @@ ms.date: 06/09/2020
 
  For best results, specify an account that has network connection permissions, with access to network domain controllers and corporate SMTP servers or gateways. The following table summarizes the accounts and provides recommendations for using them.  
   
+> [!NOTE]  
+> [Group Managed Service Accounts (gMSAs)](/windows-server/security/group-managed-service-accounts/group-managed-service-accounts-overview) are not supported as a report server service account.
+  
+  
 |Account|Explanation|  
 |-------------|-----------------|  
 |Domain user accounts|If you have a Windows domain user account that has the minimum permissions required for report server operations, you should use it.<br /><br /> A domain user account is recommended because it isolates the Report Server service from other applications. Running multiple applications under a shared account, such as Network Service, increases the risk of a malicious user taking control of the report server because a security breach for any one application can easily extend to all applications that run under the same account.<br /><br /> If you use a domain user account, you have to change the password periodically if your organization enforces a password expiration policy. You might also need to register the service with the user account. For more information, see [Register a Service Principal Name &#40;SPN&#41; for a Report Server](../../reporting-services/report-server/register-a-service-principal-name-spn-for-a-report-server.md).<br /><br /> Avoid using a local Windows user account. Local accounts typically don't have sufficient permission to access resources on other computers. For more information about how using a local account limits report server functionality, see [Considerations for Using Local Accounts](#localaccounts) in this topic.| 
-| **Group Managed Service Account (gMSA)** | Standalone Managed Service Accounts were introduced in Windows Server 2008 R2 and Windows 7. They're managed domain accounts that provide automatic password management and simplified SPN management, including delegation of management to other administrators. The **Group Managed Service Account** provides the same functionality within the domain but also extends that functionality over multiple servers. |
-|**Virtual Service Account**|**Virtual Service Account** represents the windows service. It is a built-in least-privilege account that has network log on permissions. This account is recommended if you don't have a domain user account available or if you want to avoid any service disruptions that might occur as a result of password expiration policies.|  
+|**Virtual Service Account**|**Virtual Service Account** represents the Windows service. It is a built-in least-privilege account that has network log on permissions. This account is recommended if you don't have a domain user account available or if you want to avoid any service disruptions that might occur as a result of password expiration policies.|  
 |**Network Service**|**Network Service** is a built-in least-privilege account that has network log on permissions. <br /><br /> If you select **Network Service**, try to minimize the number of other services that run under the same account. A security breach for any one application compromises the security of all other applications that run under the same account.|  
 |**Local Service**|**Local Service** is a built-in account that is like an authenticated local Windows user account. Services that run as the **Local Service** account access network resources as a null session with no credentials. This account is not appropriate for intranet deployment scenarios where the report server must connect to a remote report server database or a network domain controller to authenticate a user prior to opening a report or processing a subscription.|  
 |**Local System**|**Local System** is a highly privileged account that is not required for running a report server. Avoid this account for report server installations. Choose a domain account or **Network Service** instead.|  

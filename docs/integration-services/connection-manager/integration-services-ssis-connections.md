@@ -1,17 +1,16 @@
 ---
+title: "Integration Services (SSIS) Connections"
 description: "Integration Services (SSIS) Connections"
-title: "Integration Services (SSIS) Connections | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "integration-services"
-ms.reviewer: ""
-ms.technology: integration-services
+ms.service: sql
+ms.subservice: integration-services
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.asvs.connectionmanager.f1"
   - "sql13.dts.designer.adddtsconnection.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Integration Services packages, connections"
   - "SSIS packages, connections"
   - "sources [Integration Services], connections"
@@ -21,9 +20,6 @@ helpviewer_keywords:
   - "connections [Integration Services], about connections"
   - "connections [Integration Services]"
   - "SQL Server Integration Services packages, connections"
-ms.assetid: 72f5afa3-d636-410b-9e81-2ffa27772a8c
-author: chugugrace
-ms.author: chugu
 ---
 # Integration Services (SSIS) Connections
 
@@ -104,11 +100,11 @@ A connection manager can be created at the package level or at the project level
  The following table lists additional types of connection manager that you can download from the [!INCLUDE[msCoName](../../includes/msconame-md.md)] website.  
   
 > [!IMPORTANT]  
->  The connection managers listed in the following table work only with [!INCLUDE[ssEnterpriseEd11](../../includes/ssenterpriseed11-md.md)] and [!INCLUDE[ssDeveloperEd11](../../includes/ssdevelopered11-md.md)].  
+>  The connection managers listed in the following table work only with [!INCLUDE[ssEnterprise](../../includes/ssenterprise-md.md)] and SQL Server Developer edition.  
   
 |Type|Description|Topic|  
 |----------|-----------------|-----------|  
-|ORACLE|Connects to an Oracle \<version info\> server.|The Oracle connection manager is the connection manager component of the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Oracle by Attunity. The [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Oracle by Attunity also includes a source and a destination. For more information, see the download page, [Microsoft Connectors for Oracle and Teradata by Attunity](https://www.microsoft.com/download/details.aspx?id=55179).|  
+|ORACLE|Connects to an Oracle \<version info\> server.|The Oracle connection manager is the connection manager component of the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Oracle by Attunity. The [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Oracle by Attunity also includes a source and a destination. For more information, see the download page, [Microsoft Connector for Oracle](https://www.microsoft.com/en-us/download/details.aspx?id=58228).|  
 |SAPBI|Connects to an SAP NetWeaver BI version 7 system.|The SAP BI connection manager is the connection manager component of the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for SAP BI. The [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for SAP BI also includes a source and a destination. For more information, see the download page, [Microsoft SQL Server 2008 Feature Pack](https://www.microsoft.com/download/details.aspx?id=44277).|  
 |TERADATA|Connects to a Teradata \<version info\> server.|The Teradata connection manager is the connection manager component of the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Teradata by Attunity. The [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Teradata by Attunity also includes a source and a destination. For more information, see the download page, [Microsoft Connectors for Oracle and Teradata by Attunity](https://www.microsoft.com/download/details.aspx?id=55179).|  
   
@@ -243,6 +239,10 @@ Use the **Add SSIS Connection Manager** dialog box to select the type of connect
 1.  In the **Connection Managers** area, right-click the connection manager that you want to create a parameter for and then click **Parameterize**.  
   
 2.  Configure the parameter settings in the **Parameterize** dialog box. For more information, see [Parameterize Dialog Box](../integration-services-ssis-package-and-project-parameters.md).  
+
+> [!NOTE]
+> Property **ConnectionString** is not sensitive and designed not to contain sensitive password information.
+> it is recommended to use property **Password** to parameterize sensitive password.
 
 ## Delete a connection manager 
 ###  <a name="DeletePackageLevel"></a> Delete a connection manager from a package  

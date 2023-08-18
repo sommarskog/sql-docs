@@ -1,21 +1,21 @@
 ---
-title: "Set the Locale for a Report or Text Box (Reporting Services) | Microsoft Docs"
-description: Use the Language property on a text box to provide the locale setting for formats that display data that differ by language and region in Report Builder.
-ms.date: 03/01/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-design
-
-
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "locales [Reporting Services]"
-ms.assetid: df115b01-184b-47f0-b5ec-0ad965ff9bee
+title: "Set the locale for a paginated report or text box"
+description: Use the Language property on a text box to provide the locale setting for formats in a paginated report that display data that differ by language and region in Report Builder.
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 03/01/2017
+ms.service: reporting-services
+ms.subservice: report-design
+ms.topic: conceptual
+ms.custom: updatefrequency5
+helpviewer_keywords:
+  - "locales [Reporting Services]"
 ---
-# Set the Locale for a Report or Text Box (Reporting Services)
-  The **Language** property on a report or a text box contains the locale setting, which determines the default formats for displaying report data that differ by language and region, for example, date, currency, or number values. The **Language** property on a text box overrides the **Language** property on the report. If no value is specified for **Language**, Reporting Services uses the locale of the operating system on the report server for published reports or of the report authoring computer for report preview.  
+# Set the locale for a paginated report or text box (Report Builder)
+
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-ssrs-rb](../../includes/ssrs-appliesto-ssrs-rb.md)] [!INCLUDE [ssrs-appliesto-pbi-rb](../../includes/ssrs-appliesto-pbi-rb.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
+
+  The **Language** property on a paginated report or a text box contains the locale setting, which determines the default formats for displaying report data that differ by language and region, for example, date, currency, or number values. The **Language** property on a text box overrides the **Language** property on the report. If no value is specified for **Language**, Reporting Services uses the locale of the operating system on the report server for published reports or of the report authoring computer for report preview.  
   
  For HTML reports, you can override the default **Language** value and use the language specified by the HTTP header of the browser client by using the built-in field User!Language in an expression for the **Language** property of a report or a text box.  
   

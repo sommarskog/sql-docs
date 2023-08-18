@@ -1,19 +1,16 @@
 ---
-description: "Manage DQS Databases"
 title: "Manage DQS Databases"
-ms.date: "03/01/2017"
-ms.prod: sql
-ms.prod_service: "data-quality-services"
-ms.reviewer: ""
-ms.technology: data-quality-services
-ms.topic: conceptual
-ms.assetid: 655a67aa-d662-42f2-b982-c6217125ada8
+description: "Manage DQS Databases"
 author: swinarko
 ms.author: sawinark
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: data-quality-services
+ms.topic: conceptual
 ---
 # Manage DQS Databases
 
-[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI](../includes/applies-to-version/sqlserver.md)]
 
   This section provides information about database management activities that can be performed on the DQS databases such as backup/restore or detach/attach.  
   

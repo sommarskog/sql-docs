@@ -1,22 +1,19 @@
 ---
-title: "Creating an Assembly | Microsoft Docs"
+title: "Creating an Assembly"
 description: Use CREATE ASSEMBLY to register an assembly in SQL Server and specify its security settings. Register an assembly to use its functionality.
-ms.custom: ""
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: clr
+ms.service: sql
+ms.subservice: clr
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "creating assemblies"
   - "UNSAFE assemblies"
   - "CREATE ASSEMBLY statement"
   - "SAFE assemblies"
   - "EXTERNAL_ACCESS assemblies"
   - "assemblies [CLR integration], creating"
-ms.assetid: a2bc503d-b6b2-4963-8beb-c11c323f18e0
-author: "rothja"
-ms.author: "jroth"
 ---
 # Creating an Assembly
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -45,7 +42,7 @@ FROM 'C:\MyDBApp\SQLCLRTest.dll';
 -   The assembly that is called or referenced was created in the same database.  
   
 ## Specifying Security When Creating Assemblies  
- When creating an assembly into a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] database, you can specify one of three different levels of security in which your code can run: **SAFE**, **EXTERNAL_ACCESS**, or **UNSAFE**. When the **CREATE ASSEMBLY** statement is run, certain checks are performed on the code assembly which may cause the assembly to fail to register on the server. For more information, see the Impersonation sample on [CodePlex](https://msftengprodsamples.codeplex.com/).  
+ When creating an assembly into a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] database, you can specify one of three different levels of security in which your code can run: **SAFE**, **EXTERNAL_ACCESS**, or **UNSAFE**. When the **CREATE ASSEMBLY** statement is run, certain checks are performed on the code assembly which may cause the assembly to fail to register on the server.   
   
  **SAFE** is the default permission set and works for the majority of scenarios. To specify a given security level, you modify the syntax of the CREATE ASSEMBLY statement as follows:  
   

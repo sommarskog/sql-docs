@@ -1,25 +1,20 @@
 ---
-description: "Delete Queries (Visual Database Tools)"
 title: Delete Queries
-ms.custom: seo-lt-2019
+description: "Delete Queries (Visual Database Tools)"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
+ms.service: sql
+ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "dropping queues"
   - "deleting queries"
   - "removing queries"
   - "queries [SQL Server], deleting"
-ms.assetid: 084e1504-3d2f-4bd9-b97c-b9c8c874751c
-author: markingmyname
-ms.author: maghan
-ms.reviewer: 
-
 ---
 # Delete Queries (Visual Database Tools)
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server](../../includes/applies-to-version/sqlserver.md)]
 You can delete a query, removing it from the project and permanently deleting it from the file system. Queries deleted using the following procedure are not sent to the Recycle Bin and cannot be recovered.  
   
 ### To permanently delete a query  

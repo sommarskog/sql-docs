@@ -1,44 +1,40 @@
 ---
-description: "SET QUOTED_IDENTIFIER (Transact-SQL)"
-title: "SET QUOTED_IDENTIFIER (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "SET QUOTED_IDENTIFIER (Transact-SQL)"
+description: SET QUOTED_IDENTIFIER (Transact-SQL)
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "02/21/2019"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "QUOTED_IDENTIFIER_TSQL"
   - "SET_QUOTED_IDENTIFIER_TSQL"
   - "SET QUOTED_IDENTIFIER"
   - "QUOTED_IDENTIFIER"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "delimited identifiers [SQL Server]"
   - "identifiers [SQL Server], delimited"
   - "QUOTED_IDENTIFIER option"
   - "quoted identifiers"
   - "ISO delimited identifiers rules"
   - "SET QUOTED_IDENTIFIER statement"
-ms.assetid: 10f66b71-9241-4a3a-9292-455ae7252565
-author: WilliamDAssafMSFT
-ms.author: wiassaf
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+dev_langs:
+  - "TSQL"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=fabric"
 ---
 # SET QUOTED_IDENTIFIER (Transact-SQL)
 
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw.md)]
 
 Causes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to follow the ISO rules regarding quotation mark delimiting identifiers and literal strings. Identifiers delimited by double quotation marks can be either [!INCLUDE[tsql](../../includes/tsql-md.md)] reserved keywords or can contain characters not generally allowed by the [!INCLUDE[tsql](../../includes/tsql-md.md)] syntax rules for identifiers.
 
-![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## Syntax
 
 ```syntaxsql
--- Syntax for SQL Server, Azure SQL Database and serverless SQL pool in Azure Synapse Analytics
+-- Syntax for SQL Server, Azure SQL Database, serverless SQL pool in Azure Synapse Analytics, and Microsoft Fabric
 
 SET QUOTED_IDENTIFIER { ON | OFF }
 ```
@@ -79,7 +75,7 @@ When `SET ANSI_DEFAULTS` is ON, QUOTED_IDENTIFIER is also ON.
 
 `SET QUOTED_IDENTIFIER` takes effect at [!INCLUDE[tsql](../../includes/tsql-md.md)] parse-time and only affects parsing, not query optimization or query execution.
 
-For a top-level ad-hoc batch parsing begins using the session's current setting for QUOTED_IDENTIFIER. As the batch is parsed any occurrence of `SET QUOTED_IDENTIFIER` will change the parsing behavior from that point on, and save that setting for the session. So after the batch is parsed and executed, the session's QUOTED_IDENTIFER setting will be set according to the last occurrence of `SET QUOTED_IDENTIFIER` in the batch.
+For a top-level ad hoc batch parsing begins using the session's current setting for QUOTED_IDENTIFIER. As the batch is parsed any occurrence of `SET QUOTED_IDENTIFIER` will change the parsing behavior from that point on, and save that setting for the session. So after the batch is parsed and executed, the session's QUOTED_IDENTIFER setting will be set according to the last occurrence of `SET QUOTED_IDENTIFIER` in the batch.
 
 Static [!INCLUDE[tsql](../../includes/tsql-md.md)] in a stored procedure is parsed using the QUOTED_IDENTIFIER setting in effect for the batch that created or altered the stored procedure. `SET QUOTED_IDENTIFIER` has no effect when it appears in the body of a stored procedure as static [!INCLUDE[tsql](../../includes/tsql-md.md)].
 
@@ -90,7 +86,9 @@ To view the current setting for this setting, run the following query:
 ```sql
 DECLARE @QUOTED_IDENTIFIER VARCHAR(3) = 'OFF';
 IF ( (256 & @@OPTIONS) = 256 ) 
-SET @QUOTED_IDENTIFIER = 'ON';
+BEGIN
+    SET @QUOTED_IDENTIFIER = 'ON';
+END
 
 SELECT @QUOTED_IDENTIFIER AS QUOTED_IDENTIFIER;
 ```
@@ -139,12 +137,12 @@ GO
 SET QUOTED_IDENTIFIER OFF;
 GO
 
-USE AdventureWorks2012;
+USE AdventureWorks2022;
 IF EXISTS(SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES
     WHERE TABLE_NAME = 'Test')
     DROP TABLE dbo.Test;
 GO
-USE AdventureWorks2012;
+USE AdventureWorks2022;
 CREATE TABLE dbo.Test (ID INT, String VARCHAR(30)) ;
 GO
 

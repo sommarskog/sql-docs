@@ -1,19 +1,16 @@
 ---
+title: "OBJECT_ID (Transact-SQL)"
 description: "OBJECT_ID (Transact-SQL)"
-title: "OBJECT_ID (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: VanMSFT
+ms.author: vanto
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "OBJECT_ID"
   - "OBJECT_ID_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "objects [SQL Server], IDs"
   - "identification numbers [SQL Server], database objects"
   - "checking object exists"
@@ -23,10 +20,9 @@ helpviewer_keywords:
   - "displaying object IDs"
   - "viewing object IDs"
   - "verifying object exists"
-ms.assetid: f89286db-440f-4218-a828-30881ce3077a
-author: VanMSFT
-ms.author: vanto
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+dev_langs:
+  - "TSQL"
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-mi-current"
 ---
 # OBJECT_ID (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -36,7 +32,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 > [!IMPORTANT]  
 >  Objects that are not schema-scoped, such as DDL triggers, cannot be queried by using OBJECT_ID. For objects that are not found in the [sys.objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) catalog view, obtain the object identification numbers by querying the appropriate catalog view. For example, to return the object identification number of a DDL trigger, use `SELECT OBJECT_ID FROM sys.triggers WHERE name = 'DatabaseTriggerLog``'`.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -79,7 +75,7 @@ OBJECT_ID ( '[ database_name . [ schema_name ] . | schema_name . ]
 ```sql  
 USE master;  
 GO  
-SELECT OBJECT_ID(N'AdventureWorks2012.Production.WorkOrder') AS 'Object ID';  
+SELECT OBJECT_ID(N'AdventureWorks2022.Production.WorkOrder') AS 'Object ID';  
 GO  
 ```  
   
@@ -87,7 +83,7 @@ GO
  The following example checks for the existence of a specified table by verifying that the table has an object ID. If the table exists, it is deleted. If the table does not exist, the `DROP TABLE` statement is not executed.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 IF OBJECT_ID (N'dbo.AWBuildVersion', N'U') IS NOT NULL  
 DROP TABLE dbo.AWBuildVersion;  
@@ -97,7 +93,8 @@ GO
 ### C. Using OBJECT_ID to specify the value of a system function parameter  
  The following example returns information for all indexes and partitions of the `Person.Address` table in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database by using the [sys.dm_db_index_operational_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md) function.  
  
-[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
+> [!NOTE]
+> [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
   
 > [!IMPORTANT]  
 >  When you are using the [!INCLUDE[tsql](../../includes/tsql-md.md)] functions DB_ID and OBJECT_ID to return a parameter value, always make sure that a valid ID is returned. If the database or object name cannot be found, such as when they do not exist or are spelled incorrectly, both functions will return NULL. The **sys.dm_db_index_operational_stats** function interprets NULL as a wildcard value that specifies all databases or all objects. Because this can be an unintentional operation, the examples in this section demonstrate the safe way to determine database and object IDs.
@@ -105,8 +102,8 @@ GO
 ```sql  
 DECLARE @db_id INT;  
 DECLARE @object_id INT;  
-SET @db_id = DB_ID(N'AdventureWorks2012');  
-SET @object_id = OBJECT_ID(N'AdventureWorks2012.Person.Address');  
+SET @db_id = DB_ID(N'AdventureWorks2022');  
+SET @object_id = OBJECT_ID(N'AdventureWorks2022.Person.Address');  
 IF @db_id IS NULL   
   BEGIN;  
     PRINT N'Invalid database';  
@@ -122,7 +119,7 @@ ELSE
 GO  
 ```  
   
-## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## Examples: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### D: Returning the object ID for a specified object  
  The following example returns the object ID for the `FactFinance` table in the [!INCLUDE[ssawPDW](../../includes/ssawpdw-md.md)] database.  

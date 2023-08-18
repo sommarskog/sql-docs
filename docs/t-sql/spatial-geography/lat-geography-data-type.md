@@ -1,26 +1,22 @@
 ---
+title: "Lat (geography Data Type)"
 description: "Lat (geography Data Type)"
-title: "Lat (geography Data Type) | Microsoft Docs"
-ms.custom: ""
+author: MladjoA
+ms.author: mlandzic
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "Lat"
   - "Lat_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Lat method"
-ms.assetid: 051d66bc-04de-4c58-861c-760dc5b859b5
-author: MladjoA
-ms.author: mlandzic 
+dev_langs:
+  - "TSQL"
 ---
 # Lat (geography Data Type)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   The latitude property of the **geography** instance.  
   
@@ -43,7 +39,7 @@ ms.author: mlandzic
 ## Examples  
  This example creates a point and returns the latitude of the point.  
   
-```  
+```sql
 DECLARE @g geography;  
 SET @g = geography::STGeomFromText('POINT(-122.34900 47.65100)', 4326);  
 SELECT @g.Lat;  

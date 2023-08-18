@@ -1,24 +1,20 @@
 ---
-description: "syscollector_execution_log (Transact-SQL)"
-title: "syscollector_execution_log (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "syscollector_execution_log (Transact-SQL)"
+description: syscollector_execution_log (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "06/10/2016"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "syscollector_execution_log_TSQL"
   - "syscollector_execution_log"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "data collector view"
   - "syscollector_execution_log view"
-ms.assetid: 11554d64-0426-42ce-b7ce-5591f67864d2
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+dev_langs:
+  - "TSQL"
 ---
 # syscollector_execution_log (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

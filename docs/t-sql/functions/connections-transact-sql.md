@@ -1,34 +1,30 @@
 ---
+title: "@@CONNECTIONS (Transact-SQL)"
 description: "&#x40;&#x40;CONNECTIONS (Transact-SQL)"
-title: "@@CONNECTIONS (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: markingmyname
+ms.author: maghan
 ms.date: "09/18/2017"
-ms.prod: sql
-ms.prod_service: "sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "@@CONNECTIONS"
   - "@@CONNECTIONS_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "@@CONNECTIONS function"
   - "connections [SQL Server], number of"
   - "connections [SQL Server], attempted"
   - "number of connection attempts"
   - "attempted connections"
-ms.assetid: c59836a8-443c-4b9a-8b96-8863ada97ac7
-author: cawrites
-ms.author: chadam
+dev_langs:
+  - "TSQL"
 ---
 # &#x40;&#x40;CONNECTIONS (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdbmi.md)]
 
 This function returns the number of attempted connections - both successful and unsuccessful - since [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] was last started.
   
-![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## Syntax  
   

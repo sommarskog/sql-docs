@@ -1,31 +1,28 @@
 ---
-description: "sys.dm_cryptographic_provider_algorithms (Transact-SQL)"
-title: "sys.dm_cryptographic_provider_algorithms (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.dm_cryptographic_provider_algorithms (Transact-SQL)"
+description: sys.dm_cryptographic_provider_algorithms (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "06/10/2016"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "dm_cryptographic_provider_algorithms_TSQL"
   - "sys.dm_cryptographic_provider_algorithms"
   - "sys.dm_cryptographic_provider_algorithms_TSQL"
   - "dm_cryptographic_provider_algorithms"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.dm_cryptographic_provider_algorithms dynamic management function"
-ms.assetid: 8bcccb37-5cfb-4e1e-a0bb-7ff4c279fe8e
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+dev_langs:
+  - "TSQL"
 ---
 # sys.dm_cryptographic_provider_algorithms (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns the algorithms supported by an Extensible Key Management (EKM) provider.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions (Transact-SQL)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## Syntax  
   

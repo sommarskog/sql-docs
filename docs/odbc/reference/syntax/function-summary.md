@@ -1,19 +1,15 @@
 ---
+title: "Function Summary"
 description: "Function Summary"
-title: "Function Summary | Microsoft Docs"
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: reference
-helpviewer_keywords: 
+helpviewer_keywords:
   - "functions [ODBC], types"
   - "functions [ODBC]"
-ms.assetid: e7fc96e3-3f16-4799-b70f-49febed53a44
-author: David-Engel
-ms.author: v-daenge
 ---
 # Function Summary
 The following sections summarize the functions used by ODBC-enabled applications and related software.  

@@ -1,25 +1,22 @@
 ---
-description: "sys.dm_hadr_availability_replica_states (Transact-SQL)"
-title: "sys.dm_hadr_availability_replica_states (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/16/2017"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: system-objects
+title: "sys.dm_hadr_availability_replica_states (Transact-SQL)"
+description: sys.dm_hadr_availability_replica_states (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
+ms.date: "02/27/2023"
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "dm_hadr_availability_replica_states"
   - "sys.dm_hadr_availability_replica_states_TSQL"
   - "sys.dm_hadr_availability_replica_states"
   - "dm_hadr_availability_replica_states_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Availability Groups [SQL Server], monitoring"
   - "sys.dm_hadr_availability_replica_states dynamic management view"
-ms.assetid: d2e678bb-51e8-4a61-b223-5c0b8d08b8b1
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+dev_langs:
+  - "TSQL"
 ---
 # sys.dm_hadr_availability_replica_states (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -76,12 +73,14 @@ ms.author: wiassaf
 |FAILED|The local secondary replica is unable to read to and/or write from the WSFC cluster.|  
 |NULL|On a primary replica, this value is returned when the row relates to a secondary replica.|  
   
-## Security  
-  
-### Permissions  
+## Permissions  
  Requires VIEW SERVER STATE permission on the server.  
   
-## See Also  
+### Permissions for SQL Server 2022 and later
+
+Requires VIEW SERVER PERFORMANCE STATE permission on the server.
+
+## See also  
  [Overview of Always On Availability Groups &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Monitor Availability Groups &#40;Transact-SQL&#41;](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)  
   

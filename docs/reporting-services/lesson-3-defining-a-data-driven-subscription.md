@@ -1,15 +1,13 @@
 ---
-title: "Lesson 3: Defining a Data-Driven Subscription | Microsoft Docs"
+title: "Lesson 3: Defining a Data-Driven Subscription"
 description: Use the Reporting Services web portal's data-driven subscription pages to connect to a subscription data source and build a query that retrieves subscription data.
-ms.date: 06/06/2019
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: reporting-services
-
-ms.topic: conceptual
-ms.assetid: 89197b9b-7502-4fe2-bea3-ed7943eebf3b
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 06/06/2019
+ms.service: reporting-services
+ms.subservice: reporting-services
+ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 # Lesson 3: Defining a Data-Driven Subscription
 In this [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] tutorial lesson, you use the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] web portal's data-driven subscription pages to connect to a subscription data source, build a query that retrieves subscription data, and map the result set to report and delivery options.  
@@ -41,7 +39,7 @@ This lesson assumes you completed Lesson 1 and Lesson 2 and that the report data
 6. Select **Apply**.
 
 ## Destination  
-1.  In the Destination section, Select **Windows File Share** for the method of delivery.  
+1.  In the Destination section, select **Windows File Share** for the method of delivery.  
 
 ## Dataset
 1. click **Edit Dataset**.

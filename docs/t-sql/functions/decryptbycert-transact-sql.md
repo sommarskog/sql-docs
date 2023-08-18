@@ -1,32 +1,28 @@
 ---
+title: "DECRYPTBYCERT (Transact-SQL)"
 description: "DECRYPTBYCERT (Transact-SQL)"
-title: "DECRYPTBYCERT (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: VanMSFT
+ms.author: vanto
 ms.date: "03/06/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "DecryptByCert_TSQL"
   - "DECRYPTBYCERT"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "certificates [SQL Server], decryption"
   - "decryption [SQL Server], certificates"
   - "DECRYPTBYCERT function"
-ms.assetid: 4950d787-40fa-4e26-bce8-2cb2ceca12fb
-author: VanMSFT
-ms.author: vanto
+dev_langs:
+  - "TSQL"
 ---
 # DECRYPTBYCERT (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 This function uses the private key of a certificate to decrypt encrypted data.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -63,12 +59,12 @@ This function decrypts data with the private key of a certificate. Cryptographic
 `DECRYPTBYCERT` requires CONTROL permission on the certificate.  
   
 ## Examples  
-This example selects rows from `[AdventureWorks2012].[ProtectedData04]` marked as data originally encrypted by certificate `JanainaCert02`. The example first decrypts the private key of certificate `JanainaCert02` with the password of certificate `pGFD4bb925DGvbd2439587y`. Then, the example decrypts the ciphertext with this private key. The example converts the decrypted data from **varbinary** to **nvarchar**.  
+This example selects rows from `[AdventureWorks2022].[ProtectedData04]` marked as data originally encrypted by certificate `JanainaCert02`. The example first decrypts the private key of certificate `JanainaCert02` with the password of certificate `pGFD4bb925DGvbd2439587y`. Then, the example decrypts the ciphertext with this private key. The example converts the decrypted data from **varbinary** to **nvarchar**.  
 
 ```sql  
 SELECT CONVERT(NVARCHAR(max), DecryptByCert(Cert_Id('JanainaCert02'),  
     ProtectedData, N'pGFD4bb925DGvbd2439587y'))  
-FROM [AdventureWorks2012].[ProtectedData04]   
+FROM [AdventureWorks2022].[ProtectedData04]   
 WHERE Description   
     = N'data encrypted by certificate '' JanainaCert02''';  
 GO  

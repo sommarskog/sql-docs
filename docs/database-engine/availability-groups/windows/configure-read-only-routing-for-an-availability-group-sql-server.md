@@ -1,22 +1,19 @@
 ---
 title: "Configure read-only routing for an availability group"
 description: "Automatically route all read-only traffic to a secondary replica using read-only routing for your Always On availability group - using Transact-SQL (T-SQL), or PowerShell."
-ms.custom: "seodec18"
+author: MashaMSFT
+ms.author: mathoma
 ms.date: "02/25/2019"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: availability-groups
+ms.service: sql
+ms.subservice: availability-groups
 ms.topic: how-to
-helpviewer_keywords: 
+helpviewer_keywords:
   - "read-only routing"
   - "Availability Groups [SQL Server], readable secondary replicas"
   - "Availability Groups [SQL Server], read-only routing"
   - "readable secondary replicas"
   - "Availability Groups [SQL Server], client connectivity"
   - "Availability Groups [SQL Server], active secondary replicas"
-ms.assetid: 7bd89ddd-0403-4930-a5eb-3c78718533d4
-author: cawrites
-ms.author: chadam
 ---
 # Configure read-only routing for an Always On availability group
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -66,7 +63,7 @@ Read-only routing is available in [!INCLUDE[sssql16-md](../../../includes/sssql1
   
 1.  Connect to the server instance that hosts the primary replica.  
   
-2.  If you are specifying a replica for a new availability group, use the [CREATE AVAILABILITY GROUP](../../../t-sql/statements/create-availability-group-transact-sql.md)[!INCLUDE[tsql](../../../includes/tsql-md.md)] statement. If you are adding or modifying a replica for an existing availability group, use the [ALTER AVAILABILITY GROUP](../../../t-sql/statements/alter-availability-group-transact-sql.md)[!INCLUDE[tsql](../../../includes/tsql-md.md)] statement.  
+2.  If you are specifying a replica for a new availability group, use the [CREATE AVAILABILITY GROUP](../../../t-sql/statements/create-availability-group-transact-sql.md) [!INCLUDE[tsql](../../../includes/tsql-md.md)] statement. If you are adding or modifying a replica for an existing availability group, use the [ALTER AVAILABILITY GROUP](../../../t-sql/statements/alter-availability-group-transact-sql.md) [!INCLUDE[tsql](../../../includes/tsql-md.md)] statement.  
   
     -   To configure read-only routing for the secondary role, in the ADD REPLICA or MODIFY REPLICA WITH clause, specify the SECONDARY_ROLE option, as follows:  
   
@@ -195,7 +192,7 @@ Set-SqlAvailabilityReplica -ReadOnlyRoutingList "SecondaryServer","PrimaryServer
  Once the current primary replica and the readable secondary replicas are configured to support read-only routing in both roles, the readable secondary replicas can receive read read-intent connection requests from clients that connect via the availability group listener.  
   
 > [!TIP]  
->  When using the [bcp Utility](../../../tools/bcp-utility.md) or [sqlcmd Utility](../../../tools/sqlcmd-utility.md), you can specify read-only access to any secondary replica that is enabled for read-only access by specifying the **-K ReadOnly** switch.  
+>  When using the [bcp Utility](../../../tools/bcp-utility.md) or [sqlcmd Utility](../../../tools/sqlcmd/sqlcmd-utility.md), you can specify read-only access to any secondary replica that is enabled for read-only access by specifying the **-K ReadOnly** switch.  
   
 ###  <a name="ConnStringReqsRecs"></a> Requirements and Recommendations for Client Connection-Strings  
  For a client application to use read-only routing, its connection string must satisfy the following requirements:  

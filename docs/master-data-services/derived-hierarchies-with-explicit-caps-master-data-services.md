@@ -1,24 +1,20 @@
 ---
-description: "Derived Hierarchies with Explicit Caps (Master Data Services)"
 title: Derived Hierarchies with Explicit Caps
-ms.custom: ""
+description: "Derived Hierarchies with Explicit Caps (Master Data Services)"
+author: CordeliaGrey
+ms.author: jiwang6
 ms.date: "03/01/2017"
-ms.prod: sql
-ms.prod_service: "mds"
-ms.reviewer: ""
-ms.technology: master-data-services
+ms.service: sql
+ms.subservice: master-data-services
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "hierarchies [Master Data Services], derived hierarchies with explicit caps"
   - "explicit hierarchies, derived hierarchies with explicit caps"
   - "derived hierarchies, derived hierarchies with explicit caps"
-ms.assetid: 6a82ff66-c137-4757-99bb-787d189b4295
-author: lrtoyou1223
-ms.author: lle
 ---
 # Derived Hierarchies with Explicit Caps (Master Data Services)
 
-[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], when the levels from an explicit hierarchy are used as the top levels of a derived hierarchy, this is called a derived hierarchy with an explicit cap.  
   
@@ -50,7 +46,6 @@ ms.author: lle
 |Create a derived hierarchy.|[Create a Derived Hierarchy &#40;Master Data Services&#41;](../master-data-services/create-a-derived-hierarchy-master-data-services.md)|  
 |Create an explicit hierarchy.|[Create an Explicit Hierarchy &#40;Master Data Services&#41;](../master-data-services/create-an-explicit-hierarchy-master-data-services.md)|  
 |Delete an existing derived hierarchy.|[Delete a Derived Hierarchy &#40;Master Data Services&#41;](../master-data-services/delete-a-derived-hierarchy-master-data-services.md)|  
-|||  
   
 ## Related Content  
   

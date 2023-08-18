@@ -1,20 +1,18 @@
 ---
 title: Create MDX queries in R using olapR
 description: Learn how to use the olapR package library in SQL Server to write MDX queries or execute an existing MDX query in R language script.
-ms.prod: sql
-ms.technology: machine-learning-services
-
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: 05/04/2021
+ms.service: sql
+ms.subservice: machine-learning-services
 ms.topic: how-to
-author: dphansen
-ms.author: davidph
-ms.custom: seo-lt-2019
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
 ---
 # How to create MDX queries in R using olapR
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
-The [olapR](/machine-learning-server/r-reference/olapr/olapr) in [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) package supports MDX queries against cubes hosted in [SQL Server Analysis Services](/analysis-services/ssas-overview). You can build a query against an existing cube, explore dimensions and other cube objects, and paste in existing MDX queries to retrieve data.
+The [olapR](../r/ref-r-olapr.md) in [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) package supports MDX queries against cubes hosted in [SQL Server Analysis Services](/analysis-services/ssas-overview). You can build a query against an existing cube, explore dimensions and other cube objects, and paste in existing MDX queries to retrieve data.
 
 This article describes the two main uses of the **olapR** package:
 
@@ -73,7 +71,7 @@ The following examples are based on the AdventureWorks data mart and cube projec
 + Create the cube that is used in these examples by following the Analysis Services tutorial up to Lesson 4:
 [Creating an OLAP cube](/analysis-services/multidimensional-tutorial/multidimensional-modeling-adventure-works-tutorial)
 
-+ Download an existing cube as a backup, and restore it to an instance of Analysis Services. For example, this site provides a fully processed cube in zipped format: [Adventure Works Multidimensional Model SQL 2014](https://msftdbprodsamples.codeplex.com/downloads/get/882334). Extract the file, and then restore it to your SSAS instance. For more information, see [Backup and restore](/analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases), or [Restore-ASDatabase Cmdlet](/powershell/module/sqlserver/restore-asdatabase).
++ Download an existing cube as a backup, and restore it to an instance of Analysis Services. For example, this site provides a fully processed cube in zipped format: [Adventure Works Multidimensional Model SQL 2014](/analysis-services/multidimensional-tutorial/multidimensional-modeling-adventure-works-tutorial). Extract the file, and then restore it to your SSAS instance. For more information, see [Backup and restore](/analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases), or [Restore-ASDatabase Cmdlet](/powershell/module/sqlserver/restore-asdatabase).
 
 ### 1. Basic MDX with slicer
 
@@ -88,7 +86,7 @@ WHERE [Sales Territory].[Sales Territory Country].[Australia]
 
 + On columns, you can specify multiple measures as elements of a comma-separated string.
 + The Row axis uses all possible values (all MEMBERS) of the "Product Line" dimension. 
-+ This query would return a table with three columns, containing a _rollup_ summary of Internet sales from all countries.
++ This query would return a table with three columns, containing a _rollup_ summary of Internet sales from all countries/regions.
 + The WHERE clause specifies the _slicer axis_. In this example, the slicer uses a member of the **SalesTerritory** dimension to filter the query so that only the sales from Australia are used in calculations.
 
 #### To build this query using the functions provided in olapR

@@ -1,30 +1,26 @@
 ---
+title: "KEY_NAME (Transact-SQL)"
 description: "KEY_NAME (Transact-SQL)"
-title: "KEY_NAME (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
-ms.topic: reference
-f1_keywords: 
-  - "KEY_NAME_TSQL"
-  - "KEY_NAME"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "KEY_NAME function"
-ms.assetid: 7b693e5d-2325-4bf9-9b45-ad6a23374b41
 author: VanMSFT
 ms.author: vanto
+ms.date: "03/06/2017"
+ms.service: sql
+ms.subservice: t-sql
+ms.topic: reference
+f1_keywords:
+  - "KEY_NAME_TSQL"
+  - "KEY_NAME"
+helpviewer_keywords:
+  - "KEY_NAME function"
+dev_langs:
+  - "TSQL"
 ---
 # KEY_NAME (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Returns the name of the symmetric key from either a symmetric key GUID or cipher text.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

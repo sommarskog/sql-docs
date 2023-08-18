@@ -1,21 +1,18 @@
 ---
-title: "Blocked Process Report Event Class | Microsoft Docs"
+title: "Blocked Process Report Event Class"
 description: The Blocked Process Report event class indicates that a task has been blocked for more than a specified amount of time in SQL Server.
-ms.custom: ""
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: supportability
+ms.service: sql
+ms.subservice: supportability
 ms.topic: reference
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Blocked Process Report event class"
-ms.assetid: e8acb408-938d-4b36-81dd-04f087410cc5
-author: "stevestein"
-ms.author: "sstein"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Blocked Process Report Event Class
-[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
   The **Blocked Process Report** event class indicates that a task has been blocked for more than a specified amount of time. This event class does not include system tasks or tasks that are waiting on non deadlock-detectable resources.  
   
  To configure the threshold and frequency at which reports are generated, use the **sp_configure** command to configure the **blocked process threshold** option, which can be set in seconds. By default, no blocked process reports are produced. For more information about setting the **blocked process threshold** option, see [blocked process threshold Server Configuration Option](../../database-engine/configure-windows/blocked-process-threshold-server-configuration-option.md).  

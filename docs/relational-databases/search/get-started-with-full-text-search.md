@@ -1,24 +1,23 @@
 ---
+title: "Get Started with Full-Text Search"
 description: "Get Started with Full-Text Search"
-title: "Get Started with Full-Text Search | Microsoft Docs"
+author: rwestMSFT
+ms.author: randolphwest
+ms.reviewer: mikeray
 ms.date: "03/31/2020"
-ms.prod: sql
-ms.prod_service: "search, sql-database"
-ms.technology: search
+ms.service: sql
+ms.subservice: search
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: intro-get-started
+helpviewer_keywords:
   - "full-text catalogs [SQL Server], creating"
   - "full-text indexes [SQL Server], creating"
   - "full-text search [SQL Server], about"
   - "full-text search [SQL Server], setting up"
-ms.assetid: 1fa628ba-0ee4-4d8f-b086-c4e52962ca4a
-author: pmasl
-ms.author: pelopes
-ms.reviewer: mikeray
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Get Started with Full-Text Search
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 SQL Server databases are full-text enabled by default. Before you can run full-text queries, however, you must create a full text catalog and create a full-text index on the tables or indexed views you want to search.
 
 ## Set up full-text search in two steps

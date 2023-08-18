@@ -1,19 +1,16 @@
 ---
-description: "Cleanse Data in a Composite Domain"
 title: "Cleanse Data in a Composite Domain"
-ms.date: "03/01/2017"
-ms.prod: sql
-ms.prod_service: "data-quality-services"
-ms.reviewer: ""
-ms.technology: data-quality-services
-ms.topic: conceptual
-ms.assetid: 7d1076e0-7710-469a-9107-e293e4bd80ac
+description: "Cleanse Data in a Composite Domain"
 author: swinarko
 ms.author: sawinark
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: data-quality-services
+ms.topic: conceptual
 ---
 # Cleanse Data in a Composite Domain
 
-[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI](../includes/applies-to-version/sqlserver.md)]
 
   This topic provides information about cleansing of composite domains in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). A composite domain consists of two or more single domains, and maps to a data field that consists of multiple related terms. The individual domains in a composite domain must have a common area of knowledge. For detailed information about composite domains, see [Managing a Composite Domain](../data-quality-services/managing-a-composite-domain.md).  
   

@@ -1,20 +1,16 @@
 ---
+title: "SQL to C: Character"
 description: "SQL to C: Character"
-title: "SQL to C: Character | Microsoft Docs"
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "01/19/2019"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: reference
-helpviewer_keywords: 
+helpviewer_keywords:
   - "converting data from SQL to C types [ODBC], character"
   - "character data type [ODBC]"
   - "data conversions from SQL to C types [ODBC], character"
-ms.assetid: 7fdb7f38-b64d-48f2-bcb4-1ca96b2bbdb6
-author: David-Engel
-ms.author: v-daenge
 ---
 # SQL to C: Character
 
@@ -41,7 +37,6 @@ The following table shows the ODBC C data types to which character SQL data may 
 |SQL_C_TYPE_TIME|Data value is a valid *time-value and the fractional seconds value is 0*[a]<br /><br /> Data value is a valid *timestamp-value or a valid time-value*; fractional seconds portion is zero[a],[d]<br /><br /> Data value is a valid *timestamp-value*; fractional seconds portion is nonzero[a],[d],[e]<br /><br /> Data value is not a valid *time-value* or *timestamp-value*[a]|Data<br /><br /> Data<br /><br /> Truncated data<br /><br /> Undefined|6[b]<br /><br /> 6[b]<br /><br /> 6[b]<br /><br /> Undefined|n/a<br /><br /> n/a<br /><br /> 01S07<br /><br /> 22018|  
 |SQL_C_TYPE_TIMESTAMP|Data value is a valid *timestamp-value or a valid time-value*; fractional seconds portion not truncated[a]<br /><br /> Data value is a valid *timestamp-value or a valid time-value*; fractional seconds portion truncated[a]<br /><br /> Data value is a valid *date-value*[a]<br /><br /> Data value is a valid *time-value*[a]<br /><br /> Data value is not a valid *date-value*, *time-value*, or *timestamp-value*[a]|Data<br /><br /> Truncated data<br /><br /> Data[f]<br /><br /> Data[g]<br /><br /> Undefined|16[b]<br /><br /> 16[b]<br /><br /> 16[b]<br /><br /> 16[b]<br /><br /> Undefined|n/a<br /><br /> 01S07<br /><br /> n/a<br /><br /> n/a<br /><br /> 22018|  
 |All C interval types|Data value is a valid *interval value*; no truncation<br /><br /> Data value is a valid *interval value*; truncation of one or more trailing fields<br /><br /> Data is valid interval; leading field significant precision is lost<br /><br /> The data value is not a valid interval value|Data<br /><br /> Truncated data<br /><br /> Undefined<br /><br /> Undefined|Length of data in bytes<br /><br /> Length of data in bytes<br /><br /> Undefined<br /><br /> Undefined|n/a<br /><br /> 01S07<br /><br /> 22015<br /><br /> 22018|  
-|&nbsp;|&nbsp;|&nbsp;|&nbsp;|&nbsp;|
 
  [a]   The value of *BufferLength* is ignored for this conversion. The driver assumes that the size of  **TargetValuePtr* is the size of the C data type.  
   

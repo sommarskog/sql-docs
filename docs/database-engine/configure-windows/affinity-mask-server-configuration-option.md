@@ -1,11 +1,14 @@
 ---
-title: affinity mask Server Configuration Option
+title: affinity mask (server configuration option)
 description: Learn about the affinity mask option in SQL Server. View an example that uses it to bind processors to specific threads.
-ms.prod: sql
-ms.prod_service: high-availability
-ms.technology: configuration
+author: rwestMSFT
+ms.author: randolphwest
+ms.reviewer: mikeray
+ms.date: 06/11/2020
+ms.service: sql
+ms.subservice: configuration
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "default affinity mask option"
   - "reloading processor cache"
   - "processor cache [SQL Server]"
@@ -15,20 +18,14 @@ helpviewer_keywords:
   - "processor affinity [SQL Server]"
   - "SMP"
   - "DPC"
-ms.assetid: 5823ba29-a75d-4b3e-ba7b-421c07ab3ac1
-author: markingmyname
-ms.author: maghan
-ms.reviewer: mikeray
-ms.custom: ""
-ms.date: 06/11/2020
 ---
 
-# affinity mask Server Configuration Option
+# affinity mask (server configuration option)
 
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 > [!NOTE]
-> [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Use [ALTER SERVER CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-configuration-transact-sql.md) instead.
+> [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use [ALTER SERVER CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-configuration-transact-sql.md) instead.
 
 To carry out multitasking, [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows sometimes move process threads among different processors. Although efficient from an operating system point of view, this activity can reduce SQL Server performance under heavy system loads, as each processor cache is repeatedly reloaded with data. Assigning processors to specific threads can improve performance under these conditions by eliminating processor reloads and reducing thread migration across processors, which reduces context switching. Such an association between a thread and a processor is called processor affinity.
 
@@ -49,7 +46,7 @@ To start a new CPU scheduler, SQL Server creates a new scheduler and adds it to 
 
 Shutting down a scheduler requires all batches on the scheduler to complete their activities and exit. A scheduler that has been shut down is marked as offline so that no new batch is scheduled on it.
 
-Whether you add or remove a new scheduler, the permanent system tasks such as lock monitor, checkpoint, system task thread (processing DTC), and signal process continue to run on the scheduler while the server is operational. These permanent system tasks do not dynamically migrate. To redistribute processor load for these system tasks across schedulers, it's necessary to restart the SQL Server instance. If SQL Server attempts to shut down a scheduler associated with a permanent system task, the task continues to run on the offline scheduler (no migration). This scheduler is bound to the processors in the modified affinity mask and doesn't put any load on the processor it was bound with before the change. Having extra offline schedulers shouldn't significantly affect the load of the system. If it does, a database server reboot is required to reconfigure these tasks on the schedulers available with the modified affinity mask.
+Whether you add or remove a new scheduler, the permanent system tasks such as lock monitor, checkpoint, system task thread (processing DTC), and signal process continue to run on the scheduler while the server is operational. These permanent system tasks do not dynamically migrate. To redistribute processor load for these system tasks across schedulers, it's necessary to restart the SQL Server instance. If SQL Server attempts to shut down a scheduler associated with a permanent system task, the task continues to run on the offline scheduler (no migration). This scheduler is bound to the processors in the modified affinity mask and doesn't put any load on the processor it was bound with before the change. Having extra offline schedulers shouldn't significantly affect the load of the system. If it does, a database server restart is required to reconfigure these tasks on the schedulers available with the modified affinity mask.
 
 Do not set the 'affinity mask' and 'affinity I/O mask' configuration values of SQL Server to use the same CPUs. Performance may suffer if you choose to bind a processor for both SQL Server worker thread scheduling and for I/O processing. Therefore, ensure that the configuration values aren't set for the same processor. The same recommendation applies to the 'affinity64 mask' and 'affinity64 I/O mask'.  To ensure that the affinity mask doesn't overlap with affinity IO mask, the [RECONFIGURE](../../t-sql/language-elements/reconfigure-transact-sql.md) command verifies that the normal CPU and I/O affinities are mutually exclusive. If not, an error message is reported to the client session and to the SQL Server error log, indicating that such a setting isn't recommended.
 

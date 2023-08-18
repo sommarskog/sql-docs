@@ -1,19 +1,16 @@
 ---
 title: "Configure predefined Replication alerts (SSMS)"
 description: Learn how to configure predefined replication alerts using SQL Server Management Studio (SSMS).
-ms.custom: seo-lt-2019
-ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: replication
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "alerts [SQL Server replication]"
-  - "predefined replication alerts [SQL Server replication]"
-ms.assetid: c0414147-7ffe-4f9a-908c-71c1b5201584
 author: "MashaMSFT"
 ms.author: "mathoma"
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: conceptual
+ms.custom: updatefrequency5
+helpviewer_keywords:
+  - "alerts [SQL Server replication]"
+  - "predefined replication alerts [SQL Server replication]"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # Configure Predefined Replication Alerts (SQL Server Management Studio)
@@ -58,7 +55,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
   
     -   On the **Options** page, customize the text of the response.  
   
-5.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+5.  Select **OK**.
 
 ### To configure an alert for a threshold in Replication Monitor  
   
@@ -76,7 +73,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
   
     -   On the **Options** page, customize the text of the response.  
   
-4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+4.  Select **OK**.
   
 5.  Click **Close**.  
   

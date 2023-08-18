@@ -1,23 +1,19 @@
 ---
-description: "Check Constraint Dialog Box (Visual Database Tools)"
 title: Check Constraint Dialog Box
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
-ms.topic: conceptual
-f1_keywords: 
-  - "vdt.dlgbox.checkconstraint"
-ms.assetid: ad0bbf7f-b0de-406a-bd0a-cb779816b101
+description: "Check Constraint Dialog Box (Visual Database Tools)"
 author: markingmyname
 ms.author: maghan
-ms.reviewer: 
-ms.custom: seo-lt-2019
 ms.date: 01/19/2017
+ms.service: sql
+ms.subservice: ssms
+ms.topic: conceptual
+f1_keywords:
+  - "vdt.dlgbox.checkconstraint"
 ---
 
 # Check Constraint Dialog Box (Visual Database Tools)
 
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 This dialog box appears when you right-click a table definition grid in Table Designer and click **Check Constraints**. The dialog box contains a set of properties for non-unique constraints attached to the tables in your database. Properties applying to unique constraints appear in the **Indexes/Keys** dialog box.  
   

@@ -1,33 +1,29 @@
 ---
+title: "COL_LENGTH (Transact-SQL)"
 description: "COL_LENGTH (Transact-SQL)"
-title: "COL_LENGTH (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: markingmyname
+ms.author: maghan
 ms.date: "07/24/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "COL_LENGTH"
   - "COL_LENGTH_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "lengths [SQL Server], columns"
   - "COL_LENGTH function"
   - "column properties [SQL Server]"
   - "column length [SQL Server]"
-ms.assetid: cf891206-c49f-40eb-858e-eefd2b638a33
-author: cawrites
-ms.author: chadam
+dev_langs:
+  - "TSQL"
 ---
 # COL_LENGTH (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 This function returns the defined length of a column, in bytes.
   
-![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## Syntax  
   
@@ -59,7 +55,7 @@ For **varchar** columns declared with the **max** specifier (**varchar(max)**), 
 This example shows the return values for a column of type `varchar(40)` and a column of type `nvarchar(40)`:
   
 ```sql
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 CREATE TABLE t1(c1 VARCHAR(40), c2 NVARCHAR(40) );  
 GO  

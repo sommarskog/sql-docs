@@ -1,21 +1,19 @@
 ---
-title: "Install SQL Server Replication | Microsoft Docs"
+title: "Install SQL Server Replication"
 description: Install replication components by using the SQL Server Installation Wizard or in a Command Prompt window.
-ms.custom: ""
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "07/26/2017"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: install
+ms.service: sql
+ms.subservice: install
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: intro-installation
+helpviewer_keywords:
   - "components [SQL Server replication]"
   - "command line installations [SQL Server replication]"
   - "installing replication"
   - "replication [SQL Server], installing"
   - "command prompt [SQL Server replication]"
-ms.assetid: c50ad078-060b-4a8d-ad45-9e31a8d85729
-author: cawrites
-ms.author: chadam
 monikerRange: ">=sql-server-2016"
 ---
 # Install SQL Server replication
@@ -43,5 +41,4 @@ After replication components are installed, you must configure the server before
  [Install SQL Server](../../database-engine/install-windows/install-sql-server.md)   
  [Install SQL Server from the Command Prompt](./install-sql-server-from-the-command-prompt.md)   
  [Features Supported by the Editions of SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md) and
- [Features Supported by the Editions of SQL Server  2019](../../sql-server/editions-and-components-of-sql-server-version-15.md)
-  
+ [Features Supported by the Editions of SQL Server  2019](../../sql-server/editions-and-components-of-sql-server-2019.md)

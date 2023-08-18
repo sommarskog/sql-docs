@@ -1,31 +1,28 @@
 ---
-description: "sys.dm_cryptographic_provider_keys (Transact-SQL)"
-title: "sys.dm_cryptographic_provider_keys (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.dm_cryptographic_provider_keys (Transact-SQL)"
+description: sys.dm_cryptographic_provider_keys (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "06/10/2016"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.dm_cryptographic_provider_keys_TSQL"
   - "dm_cryptographic_provider_keys_TSQL"
   - "dm_cryptographic_provider_keys"
   - "sys.dm_cryptographic_provider_keys"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.dm_cryptographic_provider_keys dynamic management function"
-ms.assetid: 5a8c1421-c56b-44b5-96e5-4f01782a0c7c
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+dev_langs:
+  - "TSQL"
 ---
 # sys.dm_cryptographic_provider_keys (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns information about the keys provided by a Extensible Key Management (EKM) provider.  
 
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
 
 > [!IMPORTANT]
 > This dynamic management view is currently not supported by the SQL Server EKM Connector. The SQL Server product team is aware of this issue and will address this in the future.

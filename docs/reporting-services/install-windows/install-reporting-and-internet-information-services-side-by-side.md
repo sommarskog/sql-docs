@@ -1,16 +1,16 @@
 ---
+title: "Install Reporting and Internet Information Services Side-by-Side"
 description: "Install Reporting and Internet Information Services Side-by-Side"
-title: "Install Reporting and Internet Information Services Side-by-Side | Microsoft Docs"
-ms.date: 07/02/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "deploying [Reporting Services], IIS"
-ms.assetid: 9b651fa5-f582-4f18-a77d-0dde95d9d211
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 07/02/2017
+ms.service: reporting-services
+ms.topic: conceptual
+ms.custom:
+  - intro-installation
+  - updatefrequency5
+helpviewer_keywords:
+  - "deploying [Reporting Services], IIS"
 ---
 
 # Install Reporting and Internet Information Services Side-by-Side
@@ -38,9 +38,9 @@ You can install and run SQL Server Reporting Services (SSRS) and Internet Inform
   
 |Example|Request|  
 |-------------|-------------|  
-|`https://123.234.345.456:80/reports`|Receives all requests that are sent to `https://123.234.345.456/reports` or `https://\<computername>/reports` if a domain name service can resolve the IP address to that host name.|  
+|`https://123.234.345.456:80/reports`|Receives all requests that are sent to `https://123.234.345.456/reports` or `https://<computername>/reports` if a domain name service can resolve the IP address to that host name.|  
 |`https://+:80/reports`|Receives any requests that are sent to any IP address or host name that is valid for that computer as long as the URL contains the "reports" virtual directory name.|  
-|`https://123.234.345.456:80`|Receives any request that specifies `https://123.234.345.456` or `https://\<computername>` if a domain name service can resolve the IP address to that host name.|  
+|`https://123.234.345.456:80`|Receives any request that specifies `https://123.234.345.456` or `https://<computername>` if a domain name service can resolve the IP address to that host name.|  
 |`https://+:80`|Receives requests that are not already received by other applications, for any application endpoints that are mapped to **All Assigned**.|  
 |`https://*:80`|Receives requests that are not already received by other applications, for application endpoints that are mapped to **All Unassigned**.|  
   
@@ -79,4 +79,4 @@ You can install and run SQL Server Reporting Services (SSRS) and Internet Inform
 [Configure a URL](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   
 [Install Reporting Services Native Mode Report Server](../../reporting-services/install-windows/install-reporting-services-native-mode-report-server.md)  
 
-More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)
+More questions? [Try asking the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user)

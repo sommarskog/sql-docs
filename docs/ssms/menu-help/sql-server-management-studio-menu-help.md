@@ -1,23 +1,19 @@
 ---
-description: "SQL Server Management Studio Menu Help"
 title: "SQL Server Management Studio Menu Help"
-ms.custom: seo-lt-2019
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: "sql-tools"
-ms.reviewer: ""
-ms.technology: ssms
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "SQL Server Management Studio [SQL Server], Help"
-  - "SQL Server Management Studio Help [SQL Server], menu items"
-ms.assetid: 5b8b2e45-bee6-42c8-93d6-31432f4d5699
+description: "SQL Server Management Studio Menu Help"
 author: "markingmyname"
 ms.author: "maghan"
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: ssms
+ms.topic: ui-reference
+helpviewer_keywords:
+  - "SQL Server Management Studio [SQL Server], Help"
+  - "SQL Server Management Studio Help [SQL Server], menu items"
 ---
 # SQL Server Management Studio Menu Help
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-This section contains F1 Help for the dialog boxes and pages available from the menu bar in [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+This section contains F1 Help for the dialog boxes and pages available from the menu bar in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
 [About SQL Server Management Studio](../../ssms/menu-help/about-sql-server-management-studio.md)  
   

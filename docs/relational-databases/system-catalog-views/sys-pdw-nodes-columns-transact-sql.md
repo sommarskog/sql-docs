@@ -1,18 +1,15 @@
 ---
-description: "sys.pdw_nodes_columns (Transact-SQL)"
-title: "sys.pdw_nodes_columns (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.pdw_nodes_columns (Transact-SQL)"
+description: sys.pdw_nodes_columns (Transact-SQL)
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "03/03/2017"
-ms.prod: sql
-ms.technology: data-warehouse
-ms.reviewer: ""
+ms.service: sql
+ms.subservice: data-warehouse
 ms.topic: "reference"
-dev_langs: 
+dev_langs:
   - "TSQL"
-ms.assetid: 268c77b7-1d71-4197-a2ed-5e2b2b8fc260
-author: ronortloff
-ms.author: rortloff
-monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest"
+monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest"
 ---
 # sys.pdw_nodes_columns (Transact-SQL)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -46,7 +43,7 @@ monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest"
 |rule_object_id|**int**|ID of the stand-alone rule bound to the column. <br />0 = No stand-alone rule.|Always 0.|  
 |is_sparse|**bit**|1 = Column is a sparse column.|Always 0.|  
 |is_column_set|**bit**|1 = Column is a column set.|Always 0.|  
-|pdw_node_id|**int**|Unique identifier of a [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] node.|NOT NULL|  
+|pdw_node_id|**int**|Unique identifier of a [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] node.|NOT NULL|  
   
 ## Permissions  
  Requires CONTROL SERVER permission.  

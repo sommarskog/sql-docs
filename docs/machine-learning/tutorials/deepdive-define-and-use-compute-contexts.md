@@ -1,14 +1,12 @@
 ---
 title: Use RevoScaleR compute contexts
 description: "Learn about the RxInSqlServer function, which lets you define a compute context for a remote SQL Server."
-ms.prod: sql
-ms.technology: machine-learning-services
-
-ms.date: 11/27/2018  
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.date: 11/27/2018
+ms.service: sql
+ms.subservice: machine-learning-services
 ms.topic: tutorial
-author: dphansen
-ms.author: davidph
-ms.custom: seo-lt-2019
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
 ---
 # Define and use compute contexts (SQL Server and RevoScaleR tutorial)
@@ -58,7 +56,7 @@ This section walks you through each part.
   
     The *wait* argument to **RxInSqlServer** supports these options:
   
-    -   **TRUE**. The job is configured as blocking and does not return until it has completed or has failed.  For more information, see [Distributed and parallel computing in Machine Learning Server](/machine-learning-server/r/how-to-revoscaler-distributed-computing).
+    -   **TRUE**. The job is configured as blocking and does not return until it has completed or has failed.
   
     -   **FALSE**. Jobs are configured as non-blocking and return immediately, allowing you to continue running other R code. However, even in non-blocking mode, the client connection with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] must be maintained while the job is running.
 

@@ -1,19 +1,16 @@
 ---
-description: "ALTER QUEUE (Transact-SQL)"
-title: "ALTER QUEUE (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "ALTER QUEUE (Transact-SQL)"
+description: ALTER QUEUE (Transact-SQL)
+author: markingmyname
+ms.author: maghan
 ms.date: "05/01/2016"
-ms.prod: sql
-ms.prod_service: "sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "ALTER_QUEUE_TSQL"
   - "ALTER QUEUE"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "number of queue readers"
   - "modifying queues"
   - "ALTER QUEUE statement"
@@ -21,16 +18,15 @@ helpviewer_keywords:
   - "queues [Service Broker], modifying"
   - "unavailable queues [SQL Server]"
   - "activation stored procedures [Service Broker]"
-ms.assetid: d54aa325-8761-4cd4-8da7-acf33df12296
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+dev_langs:
+  - "TSQL"
 ---
 # ALTER QUEUE (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Changes the properties of a queue.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -200,7 +196,7 @@ ALTER QUEUE ExpenseQueue WITH ACTIVATION (MAX_QUEUE_READERS = 7) ;
 ```sql  
 ALTER QUEUE ExpenseQueue  
     WITH ACTIVATION (  
-        PROCEDURE_NAME = AdventureWorks2012.dbo.new_stored_proc ,  
+        PROCEDURE_NAME = AdventureWorks2022.dbo.new_stored_proc ,  
         EXECUTE AS 'SecurityAccount') ;  
 ```  
   

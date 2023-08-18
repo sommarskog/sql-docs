@@ -1,26 +1,22 @@
 ---
+title: "STCurveN (geography Data Type)"
 description: "STCurveN (geography Data Type)"
-title: "STCurveN (geography Data Type) | Microsoft Docs"
-ms.custom: ""
+author: MladjoA
+ms.author: mlandzic
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "STCurveN"
   - "STCurveN_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "STCurveN method (geography)"
-ms.assetid: 99ef7100-2c4b-4f07-8d66-b343da94b023
-author: MladjoA
-ms.author: mlandzic 
+dev_langs:
+  - "TSQL"
 ---
 # STCurveN (geography Data Type)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Returns the curve specified from a **geography** instance that is a **LineString**, **CircularString**, or **CompoundCurve**.  
   
@@ -61,10 +57,10 @@ ms.author: mlandzic
 ### A. Using STCurveN() on a CircularString  
  The following example returns the second curve in a **CircularString** instance:  
   
-```
+```sql
  DECLARE @g geography = 'CIRCULARSTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653)';  
  SELECT @g.STCurveN(2).ToString();
- ```  
+```  
   
  The example returns.  
   
@@ -73,10 +69,10 @@ ms.author: mlandzic
 ### B. Using STCurveN() on a CompoundCurve  
  The following example returns the second curve in a **CompoundCurve** instance:  
   
-```
+```sql
  DECLARE @g geography = 'COMPOUNDCURVE(CIRCULARSTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653))';  
  SELECT @g.STCurveN(2).ToString();
- ```  
+```  
   
  The example returns.  
   
@@ -85,10 +81,10 @@ ms.author: mlandzic
 ### C. Using STCurveN() on a CompoundCurve Containing Three CircularStrings  
  The following example uses a **CompoundCurve** instance that combines three separate **CircularString** instances into the same curve sequence as the previous example:  
   
-```
+```sql
  DECLARE @g geography = 'COMPOUNDCURVE (CIRCULARSTRING (-122.358 47.653, -122.348 47.649, -122.348 47.658), CIRCULARSTRING(-122.348 47.658, -122.358 47.658, -122.358 47.653))';  
  SELECT @g.STCurveN(2).ToString();
- ```  
+```  
   
  The example returns.  
   
@@ -99,7 +95,7 @@ ms.author: mlandzic
 ### D. Testing for Validity Before Calling STCurve()  
  The following example shows how to make sure that *n* is valid before you call the STCurveN() method:  
   
-```
+```sql
  DECLARE @g geography;  
  DECLARE @n int;  
  SET @n = 2;  
@@ -108,7 +104,7 @@ ms.author: mlandzic
  BEGIN  
  SELECT @g.STCurveN(@n).ToString();  
  END
-  ```  
+```  
   
 ## See Also  
  [OGC Methods on Geography Instances](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  

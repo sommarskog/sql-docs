@@ -1,13 +1,13 @@
 ---
-description: "Upgrade Database Diagrams from Previous Editions (Visual Database Tools)"
 title: Upgrade Database Diagrams from Previous Editions
-ms.custom: seo-lt-2019
+description: "Upgrade Database Diagrams from Previous Editions (Visual Database Tools)"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
+ms.service: sql
+ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "old diagrams [SQL Server]"
   - "previous database diagrams [SQL Server]"
   - "database diagrams [SQL Server], upgrading"
@@ -15,14 +15,9 @@ helpviewer_keywords:
   - "upgrading database diagrams"
   - "legacy database diagrams"
   - "diagrams [SQL Server], upgrading"
-ms.assetid: c5434211-697a-423f-ad71-d78178b69a78
-author: markingmyname
-ms.author: maghan
-ms.reviewer: 
-
 ---
 # Upgrade Database Diagrams from Previous Editions (Visual Database Tools)
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server](../../includes/applies-to-version/sqlserver.md)]
 Database diagrams created on previous editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] databases are upgraded automatically when database diagramming is set up on [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]. For more steps for setting up diagramming see [Set Up Database Diagram Designer](../../ssms/visual-db-tools/set-up-database-diagram-designer-visual-database-tools.md).  
   
 ### To upgrade legacy database diagrams  

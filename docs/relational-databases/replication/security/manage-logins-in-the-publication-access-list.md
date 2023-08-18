@@ -1,22 +1,19 @@
 ---
+title: "Manage Logins in the Publication Access List"
 description: "Manage Logins in the Publication Access List"
-title: "Manage Logins in the Publication Access List | Microsoft Docs"
-ms.custom: ""
+author: "MashaMSFT"
+ms.author: "mathoma"
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: replication
+ms.service: sql
+ms.subservice: replication
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "logins [SQL Server replication], publication access list"
   - "publications [SQL Server replication], publication access lists"
   - "publication access list (PAL)"
   - "PAL (publication access list)"
   - "logins [SQL Server replication], managing"
-ms.assetid: fceb216b-0b18-4e3b-8ae0-13e35920dcbc
-author: "MashaMSFT"
-ms.author: "mathoma"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # Manage Logins in the Publication Access List
@@ -51,7 +48,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
     > [!NOTE]  
     >  If a remote Distributor is used, accounts in the PAL must be available at both the Publisher and the Distributor. The account must be either a domain account or a local account that is defined at both servers. The passwords that are associated with both logins must be the same.  
   
-2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+2.  Select **OK**.
   
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
   

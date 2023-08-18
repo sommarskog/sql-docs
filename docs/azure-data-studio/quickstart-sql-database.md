@@ -1,16 +1,17 @@
 ---
-title: Connect and query an Azure SQL database
-description: Do a quickstart in which you use Azure Data Studio to connect to an Azure SQL Database server, and then create and query a database. 
-ms.prod: azure-data-studio
-ms.technology: azure-data-studio
-ms.reviewer: alayu; maghan; sstein
-ms.topic: quickstart
-author: yualan
-ms.author: alayu
-ms.custom: seodec18; sqlfreshmay19; seo-lt-2019
+title: Connect and query an Azure SQL Database
+description: Do a quickstart in which you use Azure Data Studio to connect to an Azure SQL Database server, and then create and query a database.
+author: erinstellato-ms
+ms.author: erinstellato
+ms.reviewer: maghan
 ms.date: 05/14/2019
+ms.service: azure-data-studio
+ms.topic: quickstart
+ms.custom:
+  - intro-quickstart
+  - updatefrequency5
 ---
-# Quickstart: Use Azure Data Studio to connect and query Azure SQL database
+# Quickstart: Use Azure Data Studio to connect and query Azure SQL Database
 
 In this quickstart, you'll  use Azure Data Studio to connect to an Azure SQL Database server. You'll then run Transact-SQL (T-SQL) statements to create and query the TutorialDB database, which is used in other Azure Data Studio tutorials.
 
@@ -33,9 +34,9 @@ Use Azure Data Studio to establish a connection to your Azure SQL Database serve
 
 1. The first time you run Azure Data Studio the **Welcome** page should open. If you don't see the **Welcome** page, select **Help** > **Welcome**. Select **New Connection** to open the **Connection** pane:
    
-   ![Screenshot showing the Welcome Azure Delta Studio dialog box with the Next connection option called out.](media/quickstart-sql-database/new-connection-icon.png)
+   ![Screenshot showing the Welcome Azure Data Studio dialog box with the Next connection option called out.](media/quickstart-sql-database/new-connection-icon.png)
 
-2. This article uses SQL sign-in, but also supports Windows authentication. Fill in the following fields using the server name, user name, and password for your Azure SQL server:
+2. This article uses SQL sign-in, but for Azure SQL Database, Azure AD Universal MFA authentication is also supported. Fill in the following fields using the server name, user name, and password for your Azure SQL server:
 
    | Setting       | Suggested value | Description |
    | ------------ | ------------------ | ------------------------------------------------- | 
@@ -45,7 +46,7 @@ Use Azure Data Studio to establish a connection to your Azure SQL Database serve
    | **Password (SQL Login)** | The server admin account password | The password from the account used to create the server. |
    | **Save Password?** | Yes or No | Select **Yes** if you don't want to enter the password each time. |
    | **Database name** | *leave blank* | You're only connecting to the server here. |
-   | **Server Group** | Select <Default> | You can set this field to a specific server group you created. | 
+   | **Server Group** | Select \<Default\> | You can set this field to a specific server group you created. | 
 
    ![Screenshot of the Azure Data Studio - Connection page.](media/quickstart-sql-database/new-connection-screen.png)  
 

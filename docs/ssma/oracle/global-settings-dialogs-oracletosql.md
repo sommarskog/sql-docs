@@ -1,16 +1,14 @@
 ---
+title: "Global Settings (Dialogs)  (OracleToSQL)"
 description: "Global Settings (Dialogs)  (OracleToSQL)"
-title: "Global Settings (Dialogs)  (OracleToSQL) | Microsoft Docs"
-ms.prod: sql
-ms.custom: ""
+author: cpichuka
+ms.author: cpichuka
 ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.technology: ssma
+ms.service: sql
+ms.subservice: ssma
 ms.topic: conceptual
-ms.assetid: 43989355-cebf-4d8b-ba3d-fa8546e70230
-author: "nahk-ivanov"
-ms.author: "alexiva"
-manager: alexiva
+f1_keywords:
+  - "ssma.oracle.globalsettingdialog.f1"
 ---
 # Global Settings (Dialogs)  (OracleToSQL)
 Use the Dialogs page of the **Global Settings** dialog box to specify the default user action and warning settings for SSMA.  
@@ -36,3 +34,5 @@ Use this option to specify the default object overwrite behavior:
   
 -   If you select **False**, SSMA does not overwrite object metadata during conversion.  
   
+## See Also
+[Global settings for Logging](global-settings-logging-oracletosql.md)

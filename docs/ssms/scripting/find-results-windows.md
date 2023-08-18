@@ -1,24 +1,20 @@
 ---
 title: "Find Results Windows"
 description: There are two Find Results windows to hold matches found by Find in Files and Replace in Files operations. Learn how to display these windows, and how to display the code file and line corresponding to a match.
-ms.custom: seo-lt-2019
+author: markingmyname
+ms.author: maghan
 ms.date: "03/01/2017"
-ms.prod: sql
-ms.prod_service: "sql-tools"
-ms.technology: ssms
-ms.reviewer: ""
+ms.service: sql
+ms.subservice: ssms
 ms.topic: conceptual
 f1_keywords:
   - "vs.findresults2"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Find Results Windows dialog box"
-ms.assetid: 3b68dbb7-26d6-4bc9-bd2c-c27e5dc385c3
-author: markingmyname
-ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
-# Find Results Windows
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+# Find Results windows
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   The two Find Results windows display matches found by using the **Find in Files** or **Replace in Files** tabs of the **Find and Replace** dialog. The **Result Options** command for **Find in Files** and **Replace in Files** allows you to choose the Find Results window where any matches found will be listed.  
   
  The selected Find Results window opens automatically whenever matches are found. To display a Find Results window manually, click **Other Windows** on the **View** menu and then click **Find Results 1** or **Find Results 2**.  

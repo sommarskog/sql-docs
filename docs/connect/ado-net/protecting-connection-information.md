@@ -1,15 +1,13 @@
 ---
 title: "Protecting connection information"
 description: Learn about security vulnerabilities in connection strings, which can arise due to how connection strings are constructed and persisted and authentication type.
-ms.date: "11/13/2020"
-ms.assetid: 1471f580-bcd4-4046-bdaf-d2541ecda2f4
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: connectivity
-ms.topic: conceptual
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ms.reviewer: v-chmalh
+ms.date: "11/13/2020"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: conceptual
 ---
 # Protecting connection information
 
@@ -21,7 +19,7 @@ Protecting access to your data source is one of the most important goals when se
 
 Security vulnerabilities involving connection strings can arise based on the type of authentication used, how connection strings are persisted in memory and on disk, and the techniques used to construct them at run time.
 
-## Use windows authentication
+## Use Windows authentication
 
 To help limit access to your data source, you must secure connection information such as user ID, password, and data source name. In order to avoid exposing user information, we recommend using Windows authentication (sometimes referred to as *integrated security*) wherever possible. Windows authentication is specified in a connection string by using the `Integrated Security` or `Trusted_Connection` keywords, eliminating the need to use a user ID and password. When using Windows authentication, users are authenticated by Windows, and access to server and database resources is determined by granting permissions to Windows users and groups.
 

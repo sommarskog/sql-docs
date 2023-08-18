@@ -1,14 +1,13 @@
 ---
-title: IClientVirtualDeviceSet2::CreateEx
-titlesuffix: SQL Server VDI reference
-description: This article provides reference for the IClientVirtualDeviceSet2::CreateEx command.
+title: "IClientVirtualDeviceSet2::CreateEx"
+titleSuffix: SQL Server VDI reference
+description: "This article provides reference for the IClientVirtualDeviceSet2::CreateEx command."
+author: MashaMSFT
+ms.author: mathoma
 ms.date: 08/30/2019
-ms.prod: sql
-ms.prod_service: backup-restore
-ms.technology: backup-restore
+ms.service: sql
+ms.subservice: backup-restore
 ms.topic: reference
-author: cawrites
-ms.author: chadam
 ---
 
 # IClientVirtualDeviceSet2::CreateEx (VDI)

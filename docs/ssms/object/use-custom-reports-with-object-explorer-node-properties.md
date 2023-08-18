@@ -1,21 +1,17 @@
 ---
-description: "Use Custom Reports with Object Explorer Node Properties"
 title: "Use Custom Reports with Object Explorer Node Properties"
-ms.custom: seo-lt-2019
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: "sql-tools"
-ms.reviewer: ""
-ms.technology: ssms
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "SQL Server Management Studio [SQL Server], custom reports"
-ms.assetid: c7b84355-71ba-402d-85af-23826f18b7da
+description: "Use Custom Reports with Object Explorer Node Properties"
 author: "markingmyname"
 ms.author: "maghan"
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: ssms
+ms.topic: conceptual
+helpviewer_keywords:
+  - "SQL Server Management Studio [SQL Server], custom reports"
 ---
 # Use Custom Reports with Object Explorer Node Properties
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Custom reports can execute in the context of a selected Object Explorer node if the custom reports reference the report parameters of that node. This enables a custom report to use the current context, for example the current database, or a database or server object.  
   
 ## Object Explorer Node Report Parameters  
@@ -50,8 +46,8 @@ To run the example, use the following procedure.
 The report that is created by using the following code will use the parameters that are associated with an Object Explorer node.  
   
 ```  
-<pre><?xml version="1.0" encoding="utf-8"?>  
-<Report xmlns="https://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition" xmlns:rd="https://schemas.microsoft.com/SQLServer/reporting/reportdesigner">  
+<?xml version="1.0" encoding="utf-8"?>  
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">  
 <ReportParameters>  
 <ReportParameter Name="ObjectName">  
 <DataType>String</DataType>  
@@ -521,7 +517,7 @@ The report that is created by using the following code will use the parameters t
 <InteractiveHeight>11in</InteractiveHeight>  
 <Language>en-US</Language>  
 <TopMargin>1in</TopMargin>  
-</Report></pre>  
+</Report>  
 ```
 
 ## See Also  

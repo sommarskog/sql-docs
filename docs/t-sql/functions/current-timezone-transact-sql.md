@@ -1,19 +1,16 @@
 ---
+title: "CURRENT_TIMEZONE (Transact-SQL)"
 description: "CURRENT_TIMEZONE (Transact-SQL)"
-title: "CURRENT_TIMEZONE (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: MladjoA
+ms.author: mlandzic
 ms.date: "05/28/2020"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "CURRENT_TIMEZONE"
   - "CURRENT_TIMEZONE_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "current time zone [SQL Server]"
   - "current timezone [SQL Server]"
   - "system time zone [SQL Server]"
@@ -23,13 +20,12 @@ helpviewer_keywords:
   - "timezone [SQL Server], functions"
   - "time zone [SQL Server], functions"
   - "CURRENT_TIMEZONE function [SQL Server]"
-author: MladjoA
-ms.author: mlandzic
-
+dev_langs:
+  - "TSQL"
 ---
 # CURRENT_TIMEZONE (Transact-SQL)
 
-[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
+[!INCLUDE [sqlserver2022-asdb-asmi](../../includes/applies-to-version/sqlserver2022-asdb-asmi.md)]
 
 This function returns the name of the time zone observed by a server or an instance. For SQL Managed Instance, return value is based on the time zone of the instance itself assigned during instance creation, not the time zone of the underlying operating system.
   

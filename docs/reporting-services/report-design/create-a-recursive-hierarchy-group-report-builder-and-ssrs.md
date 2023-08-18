@@ -1,19 +1,19 @@
 ---
-title: "Create a Recursive Hierarchy Group (Report Builder) | Microsoft Docs"
+title: "Create a recursive hierarchy group in a paginated report"
 description: Learn about organizing data in a paginated report, from a single report dataset that includes hierarchical levels, by using a recursive hierarchy group.
-ms.date: 03/01/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-design
-
-
-ms.topic: conceptual
-ms.assetid: 8b830ba5-4d64-4348-a2b1-76b9338a1462
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 03/01/2017
+ms.service: reporting-services
+ms.subservice: report-design
+ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
-# Create a Recursive Hierarchy Group (Report Builder and SSRS)
-In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] paginated reports, a recursive hierarchy group organizes data from a single report dataset that includes multiple hierarchical levels, such as the report-to structure for manager-employee relationships in an organizational hierarchy.  
+# Create a recursive hierarchy group in a paginated report (Report Builder)
+
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-ssrs-rb](../../includes/ssrs-appliesto-ssrs-rb.md)] [!INCLUDE [ssrs-appliesto-pbi-rb](../../includes/ssrs-appliesto-pbi-rb.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
+
+In paginated reports, a recursive hierarchy group organizes data from a single report dataset that includes multiple hierarchical levels, such as the report-to structure for manager-employee relationships in an organizational hierarchy.  
   
  Before you can organize data in a table as a recursive hierarchy group, you must have a single dataset that contains all the hierarchical data, You must have separate fields for the item to group and for the item to group by. For example, a dataset where you want to group employees recursively under their manager might contain a name, an employee name, an employee ID, and a manager ID.  
   
@@ -34,7 +34,7 @@ In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] paginated repor
   
 6.  In the **Recursive Parent** list, enter or select the field to group on.  
   
-7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+7.  Select **OK**.
   
      Run the report. The report displays the recursive hierarchy group, although there is no indent to show the hierarchy  
   
@@ -53,7 +53,7 @@ In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] paginated repor
   
      The Padding properties all require a string in the format *nnyy*, where *nn* is a number and *yy* is the unit of measure. The example expression builds a string that uses the **Level** function to increase the size of the padding based on recursion level. For example, a row that has a level of 1 would result in a padding of (2 + (1\*10))=12pt, and a row that has a level of 3 would result in a padding of (2 + (3\*10))=32pt. For information about the **Level** function, see [Level](../../reporting-services/report-design/report-builder-functions-level-function.md).  
   
-4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+4.  Select **OK**.
   
      Run the report. The report displays a hierarchical view of the grouped data.  
   

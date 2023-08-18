@@ -1,14 +1,12 @@
 ---
 title: Extensibility architecture
 description: This article describes the architecture of the extensibility framework for running an external Python or R script on SQL server Machine Learning Services. The script executes in a language runtime environment as an extension to the core database engine.
-ms.prod: sql
-ms.technology: machine-learning-services
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: 07/14/2020
+ms.service: sql
+ms.subservice: machine-learning-services
 ms.topic: conceptual
-author: garyericson
-ms.author: garye
-
-ms.custom: seo-lt-2019
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
 ---
 
@@ -62,9 +60,9 @@ The [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] is a serv
 | Trusted launchers | Extension | SQL Server versions |
 |-------------------|-----------|---------------------|
 | RLauncher.dll for the R language for Windows | [R extension](extension-r.md) | SQL Server 2016 and later |
-| Pythonlauncher.dll for Python 3.5 for Windows | [Python extension](extension-python.md) | SQL Server 2017 and later |
+| Pythonlauncher.dll for Python language for Windows | [Python extension](extension-python.md) | SQL Server 2017 and later |
 | RLauncher.so for the R language for Linux | [R extension](extension-r.md) | SQL Server 2019 and later |
-| Pythonlauncher.so for Python 3.5 for Linux | [Python extension](extension-python.md) | SQL Server 2019 and later |
+| Pythonlauncher.so for Python language for Linux | [Python extension](extension-python.md) | SQL Server 2019 and later |
 
 The [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] service runs under its own user account. If you change the account that runs launchpad, be sure to do so using SQL Server Configuration Manager, to ensure that changes are written to related files.
 
@@ -78,7 +76,7 @@ In Linux, only one database engine instance is supported and there is one launch
 
 **BxlServer** is an executable provided by Microsoft that manages communication between SQL Server and the language runtime. It creates the Windows job objects for Windows, or the namespaces for Linux, that are used to contain external script sessions. It also provisions secure working folders for each external script job and uses SQL Satellite to manage data transfer between the external runtime and SQL Server. If you run [Process Explorer](/sysinternals/downloads/process-explorer) while a job is running, you might see one or multiple instances of BxlServer.
 
-In effect, BxlServer is a companion to a language runtime environment that works with SQL Server to transfer data and manage tasks. BXL stands for Binary Exchange language and refers to the data format used to move data efficiently between SQL Server and external processes. BxlServer is also an important part of related products such as Microsoft R Client and Microsoft R Server.
+In effect, BxlServer is a companion to a language runtime environment that works with SQL Server to transfer data and manage tasks. BXL stands for Binary Exchange language and refers to the data format used to move data efficiently between SQL Server and external processes.
 
 **SQL Satellite** is an extensibility API, included in the database engine, that supports external code or external runtimes implemented using C or C++.
 
@@ -93,7 +91,7 @@ BxlServer uses SQL Satellite for these tasks:
 
 SQL Satellite uses a custom data format that is optimized for fast data transfer between SQL Server and external script languages. It performs type conversions and defines the schemas of the input and output datasets during communications between SQL Server and the external script runtime.
 
-The SQL Satellite can be monitored by using windows extended events (xEvents). For more information, see [Extended Events for SQL Server Machine Learning Services](../../machine-learning/administration/extended-events.md).
+The SQL Satellite can be monitored by using Windows extended events (xEvents). For more information, see [Extended Events for SQL Server Machine Learning Services](../../machine-learning/administration/extended-events.md).
 
 ## Communication channels between components
 

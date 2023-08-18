@@ -1,19 +1,16 @@
 ---
-title: "SQL Server 2012 Service Pack release notes | Microsoft Docs"
+title: "SQL Server 2012 Service Pack release notes"
 description: This article contains the aggregated release notes of the four service packs for SQL Server 2012. Each service pack is cumulative of prior service packs.
-ms.prod: sql
-ms.technology: release-landing
-ms.custom: ""
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: 07/22/2020
-ms.reviewer: ""
+ms.service: sql
+ms.subservice: release-landing
 ms.topic: conceptual
-ms.assetid: 67cb8b3e-3d82-47f4-840d-0f12a3bff565
-author: rothja
-ms.author: jroth
 monikerRange: "= sql-server-2016"
 ---
 # SQL Server 2012 Service Pack release notes
-[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sqlserver.md)]
 This topic contains the aggregated release notes of the four service packs for SQL Server 2012. Each service pack is cumulative of prior service packs.
 
 The Service Packs are available online only, not on the installation media, and can be downloaded as follows:
@@ -71,17 +68,17 @@ Use the table below to identify the location and name of the file to download ba
 |If your current installed version is...|And you want to...|Download and install...|  
 |---|---|---|   
 |32-bit Installations:|||  
-|A 32-bit version of any edition of SQL Server 2012|Upgrade to the 32-bit version of SQL Server 2012 SP2|**SQLServer2012SP2-KB2958429-**<arch>**-**<lang id>**.exe** from [SQL Server 2012 SP2 download page](https://go.microsoft.com/fwlink/?LinkID=401006)|  
-|A 32-bit version of SQL Server 2012 RTM Express|Upgrade to the 32-bit version of SQL Server 2012 Express SP2|**SQLEXPR_**<arch>**_**<lang>**.msi** from [SQL Server 2012 SP2 Express download page](https://go.microsoft.com/fwlink/?LinkID=401007)|  
-|A 32-bit version of only the client and manageability tools for SQL Server 2012 (including SQL Server 2012 Management Studio)|Upgrade the client and manageability tools to the 32-bit version of SQL Server 2012 SP2|**SQLEXPRWT_**<arch>**_**<lang>**.msi** from [SQL Server 2012 SP2 Express download page](https://go.microsoft.com/fwlink/?LinkID=401007)|  
-|A 32-bit version of SQL Server 2012 Management Studio Express|Upgrade to the 32-bit version of SQL Server 2012 SP2 Management Studio Express|**SQLManagementStudio_**<arch>**_**<lang>**.msi** from [SQL Server 2012 SP2 Express download page](https://go.microsoft.com/fwlink/?LinkID=401007)|  
-|A 32-bit version of any edition of SQL Server 2012 and a 32-bit version of the client and manageability tools (including SQL Server 2012 RTM Management Studio)|Upgrade all products to the 32-bit version of SQL Server 2012 SP2|**SQLEXPRADV_**<arch>**_**<lang>**.msi** from [SQL Server 2012 SP2 Express download page.](https://go.microsoft.com/fwlink/?LinkID=401007)|  
+|A 32-bit version of any edition of SQL Server 2012|Upgrade to the 32-bit version of SQL Server 2012 SP2|**SQLServer2012SP2-KB2958429-**\<arch\>**-**\<lang id\>**.exe** from [SQL Server 2012 SP2 download page](https://go.microsoft.com/fwlink/?LinkID=401006)|  
+|A 32-bit version of SQL Server 2012 RTM Express|Upgrade to the 32-bit version of SQL Server 2012 Express SP2|**SQLEXPR_**\<arch\>**_**\<lang\>**.msi** from [SQL Server 2012 SP2 Express download page](https://go.microsoft.com/fwlink/?LinkID=401007)|  
+|A 32-bit version of only the client and manageability tools for SQL Server 2012 (including SQL Server 2012 Management Studio)|Upgrade the client and manageability tools to the 32-bit version of SQL Server 2012 SP2|**SQLEXPRWT_**\<arch\>**_**\<lang\>**.msi** from [SQL Server 2012 SP2 Express download page](https://go.microsoft.com/fwlink/?LinkID=401007)|  
+|A 32-bit version of SQL Server 2012 Management Studio Express|Upgrade to the 32-bit version of SQL Server 2012 SP2 Management Studio Express|**SQLManagementStudio_**\<arch\>**_**\<lang\>**.msi** from [SQL Server 2012 SP2 Express download page](https://go.microsoft.com/fwlink/?LinkID=401007)|  
+|A 32-bit version of any edition of SQL Server 2012 and a 32-bit version of the client and manageability tools (including SQL Server 2012 RTM Management Studio)|Upgrade all products to the 32-bit version of SQL Server 2012 SP2|**SQLEXPRADV_**\<arch\>**_**\<lang\>**.msi** from [SQL Server 2012 SP2 Express download page.](https://go.microsoft.com/fwlink/?LinkID=401007)|  
 |A 32-bit version of one or more tools from the [Microsoft SQL Server 2012 RTM Feature Pack](https://www.microsoft.com/download/details.aspx?id=56041) or the [Microsoft SQL Server 2012 SP1 Feature Pack](https://www.microsoft.com/download/details.aspx?id=35575)|Upgrade the tools to the 32-bit version of Microsoft SQL Server 2012 SP2 Feature Pack|One or more tools from Microsoft [SQL Server 2012 SP2 Feature Pack download page](https://www.microsoft.com/download/details.aspx?id=43340)|  
 |64-bit Installations:|||  
-|A 64-bit version of any edition of SQL Server 2012|Upgrade to the 64-bit version of SQL Server 2012 SP2|SQLServer2012SP2-KB2958429-<arch>-<langid>.exe from [SQL Server 2012 SP2 download page](https://go.microsoft.com/fwlink/?LinkID=401006)|  
-|A 64-bit version of SQL Server 2012 RTM Express|Upgrade to the 64-bit version of SQL Server 2012 SP2|**SQLEXPR_**<arch>**_**<lang>**.msi** from [SQL Server 2012 SP2 Express download page](https://go.microsoft.com/fwlink/?LinkID=401007)|  
-|A 64-bit version of only the client and manageability tools for SQL Server 2012 (including SQL Server 2012 Management Studio)|Upgrade the client and manageability tools to the 64-bit version of SQL Server 2012 SP2|**SQLEXPRWT_**<arch>**_**<lang>**.msi** from [SQL Server 2012 SP2 Express download page](https://go.microsoft.com/fwlink/?LinkID=401007)|  
-|A 64-bit version of SQL Server 2012 Management Studio Express|Upgrade to the 64-bit version of SQL Server 2012 SP2 Management Studio Express|**SQLManagementStudio_**<arch>**_**<lang>**.msi** from [SQL Server 2012 SP2 Express download page](https://go.microsoft.com/fwlink/?LinkID=401007)|  
+|A 64-bit version of any edition of SQL Server 2012|Upgrade to the 64-bit version of SQL Server 2012 SP2|SQLServer2012SP2-KB2958429-\<arch\>-\<langid\>.exe from [SQL Server 2012 SP2 download page](https://go.microsoft.com/fwlink/?LinkID=401006)|  
+|A 64-bit version of SQL Server 2012 RTM Express|Upgrade to the 64-bit version of SQL Server 2012 SP2|**SQLEXPR_**\<arch\>**_**\<lang\>**.msi** from [SQL Server 2012 SP2 Express download page](https://go.microsoft.com/fwlink/?LinkID=401007)|  
+|A 64-bit version of only the client and manageability tools for SQL Server 2012 (including SQL Server 2012 Management Studio)|Upgrade the client and manageability tools to the 64-bit version of SQL Server 2012 SP2|**SQLEXPRWT_**\<arch\>**_**\<lang\>**.msi** from [SQL Server 2012 SP2 Express download page](https://go.microsoft.com/fwlink/?LinkID=401007)|  
+|A 64-bit version of SQL Server 2012 Management Studio Express|Upgrade to the 64-bit version of SQL Server 2012 SP2 Management Studio Express|**SQLManagementStudio_**\<arch\>**_**\<lang\>**.msi** from [SQL Server 2012 SP2 Express download page](https://go.microsoft.com/fwlink/?LinkID=401007)|  
 |A 64-bit version of one or more tools from the [Microsoft SQL Server 2012 RTM Feature Pack](https://www.microsoft.com/download/details.aspx?id=56041) or the [Microsoft SQL Server 2012 SP1 Feature Pack](https://www.microsoft.com/download/details.aspx?id=35575)|Upgrade the tools to the 64-bit version of Microsoft SQL Server 2012 SP2 Feature Pack|One or more tools from Microsoft [SQL Server 2012 SP2 Feature Pack download page](https://www.microsoft.com/download/details.aspx?id=43340)|   
 
 
@@ -159,7 +156,7 @@ For a complete list of bugs and known issues fixed in this service pack, see [th
 **Workaround:**  If you installed [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint mode before the SharePoint farm was configured, the required work around depends on what other components are installed.  
   
 #### Power View in SharePoint Server 2013 Requires Microsoft.AnalysisServices.SPClient.dll  
-**Issue:**[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] does not install a required component, **Microsoft.AnalysisServices.SPClient.dll**. If you install SharePoint Server 2013 Preview and [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] in SharePoint mode, but do not download and install the PowerPivot for SharePoint 2013 installer package, **spPowerPivot.msi** then Power View will not work and Power View will exhibit the following symptoms.  
+**Issue:**[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] does not install a required component, **Microsoft.AnalysisServices.SPClient.dll**. If you install SharePoint Server 2013 Preview and [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] in SharePoint mode, but do not download and install the PowerPivot for SharePoint 2013 installer package, **spPowerPivot.msi** then Power View will not work and Power View will exhibit the following symptoms.  
   
 **Symptoms:** When you attempt to create a Power View report, you see an error message similar to the following:  
   
@@ -222,7 +219,7 @@ Previously, DACFx did not preserve the state (WITH CHECK/NOCHECK) of check const
   
 -   Extract DACPAC with data - Creates a database snapshot file (.dacpac) from a live SQL Server or Azure SQL Database that contains data from user tables in addition to the database schema. These packages can be published to a new or existing SQL Server or Azure SQL Database using the SqlPackage.exe Publish action. Data contained in package replaces the existing data in the target database.  
   
--   Export BACPAC - Creates a logical backup file (.bacpac) of a live SQL Server or Azure SQL Database containing the database schema and user data which can be used to migrate a database from on-premise SQL Server to Azure SQL Database. Databases compatible with Azure can be exported and then later imported between supported versions of SQL Server.  
+-   Export BACPAC - Creates a logical backup file (.bacpac) of a live SQL Server or Azure SQL Database containing the database schema and user data which can be used to migrate a database from on-premises SQL Server to Azure SQL Database. Databases compatible with Azure can be exported and then later imported between supported versions of SQL Server.  
   
 -   Import BACPAC - Import a .bacpac file to create a new or populate an empty SQL Server or Azure SQL Database.  
   

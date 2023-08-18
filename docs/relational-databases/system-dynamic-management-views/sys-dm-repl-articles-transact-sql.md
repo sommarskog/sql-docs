@@ -1,23 +1,21 @@
 ---
-description: "sys.dm_repl_articles (Transact-SQL)"
-title: "sys.dm_repl_articles (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/10/2016"
-ms.prod: sql
-ms.technology: system-objects
+title: "sys.dm_repl_articles (Transact-SQL)"
+description: sys.dm_repl_articles (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
+ms.date: "02/27/2023"
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.dm_repl_articles_TSQL"
   - "dm_repl_articles"
   - "dm_repl_articles_TSQL"
   - "sys.dm_repl_articles"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.dm_repl_articles dynamic management function"
-ms.assetid: 794d514e-bacd-432e-a8ec-3a063a97a37b
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+dev_langs:
+  - "TSQL"
 ---
 # sys.dm_repl_articles (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -65,7 +63,11 @@ ms.author: wiassaf
 ## Remarks  
  Information is only returned for replicated database objects that are currently loaded in the replication article cache.  
   
-## See Also  
+### Permissions for SQL Server 2022 and later
+
+Requires VIEW DATABASE PERFORMANCE STATE permission on the database.
+
+## See also  
  [Dynamic Management Views and Functions &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Replication Related Dynamic Management Views &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/replication-related-dynamic-management-views-transact-sql.md)  
   

@@ -1,18 +1,15 @@
 ---
-description: "ALTER AUTHORIZATION (Transact-SQL)"
-title: "ALTER AUTHORIZATION (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "ALTER AUTHORIZATION (Transact-SQL)"
+description: ALTER AUTHORIZATION (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "02/01/2021"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "ALTER_AUTHORIZATION_TSQL"
   - "ALTER AUTHORIZATION"
-dev_langs:
-  - "TSQL"
 helpviewer_keywords:
   - "owners [SQL Server], transferring"
   - "modifying entity ownership"
@@ -23,19 +20,18 @@ helpviewer_keywords:
   - "transferring ownership"
   - "search property lists [SQL Server], permissions"
   - "TAKE OWNERSHIP"
-ms.assetid: 8c805ae2-91ed-4133-96f6-9835c908f373
-author: VanMSFT
-ms.author: vanto
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+dev_langs:
+  - "TSQL"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=fabric"
 ---
 
 # ALTER AUTHORIZATION (Transact-SQL)
 
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw.md)]
 
   Changes the ownership of a securable.
 
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## Syntax
 
@@ -75,7 +71,7 @@ ALTER AUTHORIZATION
 ```
 
 ```syntaxsql
--- Syntax for Azure Synapse Analytics
+-- Syntax for Azure Synapse Analytics and Microsoft Fabric
 
 ALTER AUTHORIZATION ON
      [ <class_type> :: ] <entity_name>
@@ -116,7 +112,8 @@ ALTER AUTHORIZATION ON
     }
 ```
 
-[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
+> [!NOTE]
+> [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
 
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
@@ -127,27 +124,27 @@ ALTER AUTHORIZATION ON
 
 |Class|Product|
 |-|-|
-|OBJECT|**APPLIES TO**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].|
-|ASSEMBLY|**APPLIES TO**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|
-|ASYMMETRIC KEY|**APPLIES TO**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|
-|AVAILABILITY GROUP |**APPLIES TO**: SQL Server 2012 and later.|
-|CERTIFICATE|**APPLIES TO**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|
-|CONTRACT|**APPLIES TO**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.|
-|DATABASE|**APPLIES TO**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. For more information,see [ALTER AUTHORIZATION for databases](#alter-authorization-for-databases).|
-|ENDPOINT|**APPLIES TO**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.|
-|FULLTEXT CATALOG|**APPLIES TO**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|
-|FULLTEXT STOPLIST|**APPLIES TO**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|
-|MESSAGE TYPE|**APPLIES TO**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.|
-|REMOTE SERVICE BINDING|**APPLIES TO**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.|
-|ROLE|**APPLIES TO**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|
-|ROUTE|**APPLIES TO**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.|
-|SCHEMA|**APPLIES TO**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].|
-|SEARCH PROPERTY LIST|**APPLIES TO**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|
-|SERVER ROLE|**APPLIES TO**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.|
-|SERVICE|**APPLIES TO**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.|
-|SYMMETRIC KEY|**APPLIES TO**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|
-|TYPE|**APPLIES TO**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|
-|XML SCHEMA COLLECTION|**APPLIES TO**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|
+|OBJECT|**Applies to:** [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later, [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].|
+|ASSEMBLY|**Applies to:** [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later, [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].|
+|ASYMMETRIC KEY|**Applies to:** [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later, [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].|
+|AVAILABILITY GROUP |**Applies to:** SQL Server 2012 and later.|
+|CERTIFICATE|**Applies to:** [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later, [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].|
+|CONTRACT|**Applies to:** [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later.|
+|DATABASE|**Applies to:** [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later, [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)]. For more information,see [ALTER AUTHORIZATION for databases](#alter-authorization-for-databases).|
+|ENDPOINT|**Applies to:** [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later.|
+|FULLTEXT CATALOG|**Applies to:** [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later, [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].|
+|FULLTEXT STOPLIST|**Applies to:** [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later, [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].|
+|MESSAGE TYPE|**Applies to:** [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later.|
+|REMOTE SERVICE BINDING|**Applies to:** [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later.|
+|ROLE|**Applies to:** [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later, [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].|
+|ROUTE|**Applies to:** [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later.|
+|SCHEMA|**Applies to:** [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later, [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].|
+|SEARCH PROPERTY LIST|**Applies to:** [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later, [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].|
+|SERVER ROLE|**Applies to:** [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later.|
+|SERVICE|**Applies to:** [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later.|
+|SYMMETRIC KEY|**Applies to:** [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later, [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].|
+|TYPE|**Applies to:** [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later, [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].|
+|XML SCHEMA COLLECTION|**Applies to:** [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later, [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].|
 
 *entity_name*
    Is the name of the entity.
@@ -178,7 +175,7 @@ If the target entity is not a database and the entity is being transferred to a 
  Also, note the following:
 
 > [!IMPORTANT]
-> The only reliable way to find the owner of a object is to query the **sys.objects** catalog view. The only reliable way to find the owner of a type is to use the TYPEPROPERTY function.
+> The only reliable way to find the owner of an object is to query the **sys.objects** catalog view. The only reliable way to find the owner of a type is to use the TYPEPROPERTY function.
 
 ## Special Cases and Conditions
 
@@ -217,7 +214,7 @@ The new owner principal must be one of the following:
 - A federated user (not a group) present in Azure AD.
 - A managed user (not a group) or an application present in Azure AD.
 
-If the new owner is an Azure Active Directory user, it cannot exist as a user in the database where the new owner will become the new DBO. Such Azure AD user must be first removed from the database before executing the ALTER AUTHORIZATION statement changing the database ownership to the new user. For more information about configuring an Azure Active Directory users with SQL Database, see [Connecting to SQL Database or [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] By Using Azure Active Directory Authentication](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/).
+If the new owner is an Azure Active Directory user, it cannot exist as a user in the database where the new owner will become the new DBO. Such Azure AD user must be first removed from the database before executing the ALTER AUTHORIZATION statement changing the database ownership to the new user. For more information about configuring an Azure Active Directory users with SQL Database, see [Connecting to SQL Database or [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] By Using Azure Active Directory Authentication](/azure/azure-sql/database/authentication-aad-configure).
 
 **Requirements for the person executing the ALTER AUTHORIZATION statement:**
 You must connect to the target database to change the owner of that database.
@@ -342,7 +339,7 @@ GO
 
 The following example transfers ownership of endpoint `CantabSalesServer1` to `JaePak`. Because the endpoint is a server-level securable, the endpoint can only be transferred to a server-level principal.
 
-**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.
+**Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later.
 
 ```sql
 ALTER AUTHORIZATION ON ENDPOINT::CantabSalesServer1 TO JaePak;
@@ -362,7 +359,7 @@ ALTER AUTHORIZATION ON OBJECT::dbo.Sprockets TO MichikoOsada;
 
 ### F. Changing the owner of a database
 
- **APPLIES TO**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later, [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].
+ **Applies to:** [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later, [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].
 
  The following example change the owner of the `Parts` database to the login `MichikoOsada`.
 
@@ -384,4 +381,3 @@ Azure AD requires brackets `[]` around the user name.
  [OBJECTPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/objectproperty-transact-sql.md)
  [TYPEPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/typeproperty-transact-sql.md)
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)
-

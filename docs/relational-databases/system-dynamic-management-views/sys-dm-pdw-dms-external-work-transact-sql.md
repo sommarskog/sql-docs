@@ -1,23 +1,23 @@
 ---
-description: "sys.dm_pdw_dms_external_work (Transact-SQL)"
-title: "sys.dm_pdw_dms_external_work (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.dm_pdw_dms_external_work (Transact-SQL)"
+description: sys.dm_pdw_dms_external_work (Transact-SQL)
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "03/06/2017"
-ms.prod: sql
-ms.technology: data-warehouse
-ms.reviewer: ""
+ms.service: sql
+ms.subservice: data-warehouse
 ms.topic: "reference"
-dev_langs: 
+dev_langs:
   - "TSQL"
-ms.assetid: 47345015-f861-451e-97c4-6e1cb81d1922
-author: ronortloff
-ms.author: rortloff
-monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest"
+monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest"
 ---
 # sys.dm_pdw_dms_external_work (Transact-SQL)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
-  [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] system view that holds information about all Data Movement Service (DMS) steps for external operations.  
+  [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] system view that holds information about all Data Movement Service (DMS) steps for external operations.
+
+> [!NOTE]
+> [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]  
   
 |Column Name|Data Type|Description|Range|  
 |-----------------|---------------|-----------------|-----------|  
@@ -29,11 +29,11 @@ monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest"
 |work_id|**int**|The file split ID.|Greater than or equal to 0.<br /><br /> Unique per Compute node.|  
 |input_name|**nvarchar(60)**|String name for the input being read.|For a Hadoop file, this is the Hadoop file name.|  
 |read_location|**bigint**|Offset of read location.||  
-|estimated_bytes_processed|**bigint**|Number of bytes processed by this worker.|Greater than or equal to 0.|  
+|bytes_processed|**bigint**|Number of bytes processed by this worker.|Greater than or equal to 0.|  
 |length|**bigint**|Number of bytes in the file split.<br /><br /> For Hadoop, this is the size of the HDFS block.|User-defined. The default is 64 MB.|  
 |status|**nvarchar(32)**|State of the worker.|Pending, Processing, Done, Failed, Aborted|  
 |start_time|**datetime**|Time at which execution of this worker started.|Greater than or equal to start time of the query step this worker belongs to. See [sys.dm_pdw_request_steps &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-request-steps-transact-sql.md).|  
-|end_time|**datetime**|Time at which execution ended, failed, or was cancelled.|NULL for ongoing or queued workers. Otherwise, greater than start_time.|  
+|end_time|**datetime**|Time at which execution ended, failed, or was canceled.|NULL for ongoing or queued workers. Otherwise, greater than start_time.|  
 |total_elapsed_time|**int**|Total time spent in execution, in milliseconds.|Greater than or equal to 0.<br /><br /> If total_elapsed_time exceeds the maximum value for an integer, total_elapsed_time will continue to be the maximum value. This condition will generate the warning "The maximum value has been exceeded."<br /><br /> The maximum value in milliseconds is equivalent to 24.8 days.|  
   
  For information about the maximum rows retained by this view, see the Metadata section in the [Capacity limits](/azure/sql-data-warehouse/sql-data-warehouse-service-capacity-limits#metadata) topic.

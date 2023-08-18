@@ -1,17 +1,14 @@
 ---
 title: "Create an availability group using PowerShell"
 description: "Learn how to use PowerShell cmdlets to create and configure an Always On availability group by using PowerShell in SQL Server 2019 (15.x)."
-ms.custom: "seodec18"
+author: MashaMSFT
+ms.author: mathoma
 ms.date: "05/17/2016"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: availability-groups
+ms.service: sql
+ms.subservice: availability-groups
 ms.topic: how-to
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Availability Groups [SQL Server], creating"
-ms.assetid: bc69a7df-20fa-41e1-9301-11317c5270d2
-author: cawrites
-ms.author: chadam
 ---
 # Create an Always On availability group using PowerShell
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -213,12 +210,6 @@ Add-SqlAvailabilityDatabase -Path "SQLSERVER:\SQL\SecondaryComputer\Instance\Ava
      [SQL Server Always On Team Blogs: The official SQL Server Always On Team Blog](/archive/blogs/sqlalwayson/)  
   
      [CSS SQL Server Engineers Blogs](/archive/blogs/psssql/)  
-  
-- **Videos:**  
-  
-     [Microsoft SQL Server Code-Named "Denali" Always On Series,Part 1: Introducing the Next Generation High Availability Solution](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
-  
-     [Microsoft SQL Server Code-Named "Denali" Always On Series,Part 2: Building a Mission-Critical High Availability Solution Using Always On](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)  
   
 - **Whitepapers:**  
   

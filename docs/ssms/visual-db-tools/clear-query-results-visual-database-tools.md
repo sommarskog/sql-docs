@@ -1,27 +1,22 @@
 ---
-description: "Clear Query Results (Visual Database Tools)"
 title: Clear Query Results
-ms.custom: seo-lt-2019
+description: "Clear Query Results (Visual Database Tools)"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
+ms.service: sql
+ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "result sets [SQL Server], queries"
   - "results [SQL Server], query"
   - "queries [SQL Server], results"
   - "Results pane"
   - "clearing query results"
-ms.assetid: 4ed9692e-5170-47d4-8b0b-028c967d47ff
-author: markingmyname
-ms.author: maghan
-ms.reviewer: 
-
 ---
 # Clear Query Results (Visual Database Tools)
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-After running a query in the **Query and View Designer**, you can clear the Results pane. This procedure applies to queries created by using the **Open View** or **Open Table** options from Object Explorer. In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], after running a query in the Query Editor, the Results pane cannot be cleared except by closing the Query Editor window or running another query.  
+[!INCLUDE[SQL Server](../../includes/applies-to-version/sqlserver.md)]
+After running a query in the **Query and View Designer**, you can clear the Results pane. This procedure applies to queries created by using the **Open View** or **Open Table** options from Object Explorer. In SQL Server Management Studio, after running a query in the Query Editor, the Results pane cannot be cleared except by closing the Query Editor window or running another query.  
   
 > [!NOTE]  
 > This will not undo the changes you've made to the database. For more information about how the Results pane works see [Work with Data in the Results Pane &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-data-in-the-results-pane-visual-database-tools.md).  

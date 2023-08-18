@@ -1,25 +1,21 @@
 ---
-description: "Add Tables to Queries (Visual Database Tools)"
 title: Add Tables to Queries
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
+description: "Add Tables to Queries (Visual Database Tools)"
+author: markingmyname
+ms.author: maghan
+ms.date: 01/19/2017
+ms.service: sql
+ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "inserting tables"
   - "adding tables"
   - "queries [SQL Server], tables"
-ms.assetid: 6551aa7e-31a1-4636-852a-819bc53d658b
-author: markingmyname
-ms.author: maghan
-ms.reviewer: 
-ms.custom: seo-lt-2019
-ms.date: 01/19/2017
 ---
 
 # Add Tables to Queries (Visual Database Tools)
 
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server](../../includes/applies-to-version/sqlserver.md)]
 When you create a query, you are retrieving data from a table or other objects structured like tables - views and certain user-defined functions. To work with any of these objects in your query, you add them to the **Diagram Pane**.  
   
 ### To add a table or table-valued object to a query  

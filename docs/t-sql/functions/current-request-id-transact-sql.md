@@ -1,30 +1,26 @@
 ---
+title: "CURRENT_REQUEST_ID (Transact-SQL)"
 description: "CURRENT_REQUEST_ID (Transact-SQL)"
-title: "CURRENT_REQUEST_ID (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: markingmyname
+ms.author: maghan
 ms.date: "07/24/2017"
-ms.prod: sql
-ms.prod_service: "sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "CURRENT_REQUEST_ID_TSQL"
   - "CURRENT_REQUEST_ID"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "CURRENT_REQUEST_ID"
-ms.assetid: 949f6e5f-bf5f-49d6-a763-c443d1d51fe2
-author: cawrites
-ms.author: chadam
+dev_langs:
+  - "TSQL"
 ---
 # CURRENT_REQUEST_ID (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdbmi.md)]
 
 This function returns the ID of the current request within the current session.
   
-![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## Syntax  
   

@@ -1,17 +1,14 @@
 ---
 title: "Availability group wizard: Add IP Address"
 description: "Describes the options of the 'Add IP Address' dialog box found on the 'Specify Replicas' page in the SQL Server Management Studio 'Availability Group Wizard'. "
-ms.custom: "seo-lt-2019" 
+author: MashaMSFT
+ms.author: mathoma
 ms.date: "05/17/2016"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: availability-groups
+ms.service: sql
+ms.subservice: availability-groups
 ms.topic: end-user-help
-f1_keywords: 
+f1_keywords:
   - "sql13.swb.availabilitygrouplistener.addipaddress.f1"
-ms.assetid: 98c9ad3b-ff3c-4c1d-b344-59a72fca137c
-author: cawrites
-ms.author: chadam
 ---
 # Add IP Address Dialog Box (SQL Server Management Studio)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +39,9 @@ ms.author: chadam
  Click to create add the subnet whose address you selected, along with the static IP address that you specified. A row containing these values will be added to the subnet grid of the **New Availability Group Listener** or **Specify Replicas** dialog box.  
   
 > [!IMPORTANT]  
->  The **Add IP Address** dialog does not verify the IP address. Also the dialog does not prevent you from adding the second subnet address for a subnet that you have already added to the availability group listener.  
+>  The **Add IP Address** dialog doesn't verify the IP address. Also, the dialog doesn't prevent you from adding the second subnet address for a subnet that you already added to the availability group listener.
+>  
+>  You must restart the listener resource for this change to take effect.  
   
  **Cancel**  
  Click to cancel your selections, and return to the **New Availability Group Listener** dialog box or **Listener** tab without adding a static IP address for any subnet.  

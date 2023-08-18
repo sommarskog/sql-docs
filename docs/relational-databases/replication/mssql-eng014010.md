@@ -1,18 +1,15 @@
 ---
+title: "MSSQL_ENG014010"
 description: "MSSQL_ENG014010"
-title: "MSSQL_ENG014010 | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/26/2016"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: replication
-ms.topic: reference
-helpviewer_keywords: 
-  - "MSSQL_ENG014010 error"
-ms.assetid: 6ea84f2f-e7a2-4028-9ea9-af0d2eba660e
 author: "MashaMSFT"
 ms.author: "mathoma"
+ms.date: "08/26/2016"
+ms.service: sql
+ms.subservice: replication
+ms.topic: reference
+ms.custom: updatefrequency5
+helpviewer_keywords:
+  - "MSSQL_ENG014010 error"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # MSSQL_ENG014010
@@ -37,7 +34,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ## User Action  
  Verify that all [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instances in the topology are registered properly. If the network name of the computer and the name of the SQL Server instance differ, either:  
   
--   Add the SQL Server instance name as a valid network name. One method to set an alternative network name is to add it to the local hosts file. The local hosts file is located by default at WINDOWS\system32\drivers\etc or WINNT\system32\drivers\etc. For more information, see the Windows documentation.  
+-   Add the SQL Server instance name as a valid network name. One method to set an alternative network name is to add it to the local hosts file. The local hosts file is located by default at `\Windows\system32\drivers\etc` or `\WINNT\system32\drivers\etc`. For more information, see the Windows documentation.  
   
      For example, if the computer name is comp1 and the computer has an IP address of 10.193.17.129, and the instance name is inst1/instname, add the following entry to the hosts file:  
   

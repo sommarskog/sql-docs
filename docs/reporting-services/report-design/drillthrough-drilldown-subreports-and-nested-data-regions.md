@@ -1,19 +1,19 @@
 ---
-title: "Drillthrough, Drilldown, Subreports, and Nested Data Regions | Microsoft Docs"
-description: Organize data to show the relationship of the general to the detailed and then display the data in a subreport or a separate drillthrough report.
-ms.date: 03/07/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-design
-
-
-ms.topic: conceptual
-ms.assetid: 4791a157-b028-4698-905d-f1dd0887aa0d
+title: "Drillthrough, drilldown, subreports, and nested data regions in a paginated report"
+description: Organize data in a paginated report to show the relationship of the general to the detailed and then display the data in a subreport or a separate drillthrough report.
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 03/07/2023
+ms.service: reporting-services
+ms.subservice: report-design
+ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
-# Drillthrough, Drilldown, Subreports, and Nested Data Regions
-  You can organize data in a variety of ways to show the relationship of the general to the detailed.  You can put all the data in the report, but set it to be hidden until a user clicks to reveal details; this is a *drilldown* action. You can display the data in a data region, such as a table or chart, which is *nested* inside another data region, such as a table or matrix. You can display the data in a *subreport* that is completely contained within a main report. Or, you can put the detail data in *drillthrough* reports, separate reports that are displayed when a user clicks a link.  
+# Drillthrough, drilldown, subreports, and nested data regions in a paginated report (Report Builder)
+
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-ssrs-rb](../../includes/ssrs-appliesto-ssrs-rb.md)] [!INCLUDE [ssrs-appliesto-not-pbi-rb](../../includes/ssrs-appliesto-not-pbi-rb.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
+
+  You can organize data in a paginated report in a variety of ways to show the relationship of the general to the detailed.  You can put all the data in the report, but set it to be hidden until a user clicks to reveal details; this is a *drilldown* action. You can display the data in a data region, such as a table or chart, which is *nested* inside another data region, such as a table or matrix. You can display the data in a *subreport* that is completely contained within a main report. Or, you can put the detail data in *drillthrough* reports, separate reports that are displayed when a user clicks a link.  
   
  ![rs_DrillThruDrilldownEtc](../../reporting-services/report-design/media/rs-drillthrudrilldownetc.gif "rs_DrillThruDrilldownEtc")  
   
@@ -25,7 +25,7 @@ ms.author: maggies
   
  D. Drilldown action  
   
- All of these have commonalities, but they serve different purposes and have different features. Two of them, drillthrough reports and subreports, are actually separate reports. Nesting is a means of putting one data region inside another data region. Drilldown is an action you can apply to any report item to hide and show other report items. They all are ways that you can organize and display data to help your users understand your report better.  
+ All of these have commonalities, but they serve different purposes and have different features. Two of them, drillthrough reports and subreports, are actually separate reports. *Nesting* means a hierarchy structure to drill through. For example, Report A -> Report B -> Report C. *Drilldown* is an action you can apply to any report item to hide and show other report items. They all are ways that you can organize and display data to help your users understand your report better.
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -66,6 +66,8 @@ ms.author: maggies
   
 ###  <a name="Reusability"></a> Reusability  
  Subreports and drillthrough reports are separate reports. Thus, they can be used in a number of reports, or displayed as standalone reports. Nested data regions are not reusable. You cannot save them as report parts because they are nested in a data region. You can save the data region that contains them as a report part, but not the nested data region.  
+
+[!INCLUDE [ssrs-report-parts-deprecated](../../includes/ssrs-report-parts-deprecated.md)]
   
 ###  <a name="Location"></a> Location  
  Subreports and drillthrough reports are both separate reports, so they're stored external to the main report. Subreports can be on the same or a different report server, but drillthrough reports must be on the same report server. Nested data regions are part of the main report.  

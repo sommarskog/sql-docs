@@ -1,16 +1,12 @@
 ---
+title: "Building Packages Programmatically"
 description: "Building Packages Programmatically"
-title: "Building Packages Programmatically | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: sql
-ms.prod_service: "integration-services"
-ms.reviewer: ""
-ms.technology: integration-services 
-ms.topic: "reference"
-ms.assetid: 7474b1f4-7607-4f28-a6fd-67f7db1dd3f8
 author: chugugrace
 ms.author: chugu
+ms.date: "03/16/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: "reference"
 ---
 # Building Packages Programmatically
 
@@ -90,11 +86,7 @@ ms.author: chugu
   
 ## External Resources  
   
--   CodePlex samples, [Integration Services Product Samples](https://go.microsoft.com/fwlink/?LinkID=131204), on www.codeplex.com/MSFTISProdSamples  
-  
 -   Blog entry, [Performance profiling your custom extensions](https://techcommunity.microsoft.com/t5/sql-server-integration-services/performance-profiling-your-custom-extensions/ba-p/387490), on blogs.msdn.com.  
 
 ## See Also  
  [SQL Server Integration Services](../../integration-services/sql-server-integration-services.md)  
-  
-  

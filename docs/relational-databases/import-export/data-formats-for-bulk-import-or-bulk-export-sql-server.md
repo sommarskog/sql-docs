@@ -1,23 +1,19 @@
 ---
 title: "Data formats for bulk import & bulk export"
 description: SQL Server accepts data in character or native binary format. Use character format between SQL Server and other apps and native between instances of SQL Server.
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
-ms.technology: data-movement
+ms.service: sql
+ms.subservice: data-movement
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "data formats [SQL Server], choosing"
   - "bulk importing [SQL Server], data formats"
-ms.assetid: 73fe6741-9437-4b26-b030-28b863e74399
-author: MashaMSFT
-ms.author: mathoma
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
-ms.custom: "seo-lt-2019"
 ---
 # Data formats for bulk import or bulk export (SQL Server)
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] can accept data in character data format or native binary data format. Use character format when you move data between [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and another application (such as [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel) or another database server (such as Oracle or [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]). You can use native format only when you transfer data between instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

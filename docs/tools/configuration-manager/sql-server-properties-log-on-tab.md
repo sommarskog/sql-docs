@@ -1,20 +1,16 @@
 ---
 title: "SQL Server Properties (Log On Tab)"
 description: Learn about the Log On tab of the SQL Server Properties dialog box. Use this tab to specify the account that SQL Server uses and to start or stop the service.
-ms.custom: seo-lt-2019
-ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.reviewer: ""
-ms.technology: tools-other
-ms.topic: conceptual
-ms.assetid: 405073fc-eaa3-43c6-bf82-2cd58cacc1c3
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: tools-other
+ms.topic: conceptual
 monikerRange: ">=sql-server-2016"
 ---
 # SQL Server Properties (Log On Tab)
-[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
   Use the **Log On** tab of the **SQL Server Properties** dialog box to specify the account used by the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service, to change the password of an account, and to start and stop the service. Changing the password of an account takes effect immediately.  
   
 > [!NOTE]  

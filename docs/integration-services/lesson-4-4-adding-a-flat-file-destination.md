@@ -1,16 +1,12 @@
 ---
+title: "Step 4: Add a Flat File destination"
 description: "Lesson 4-4: Add a Flat File destination"
-title: "Step 4: Add a Flat File destination | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/07/2019"
-ms.prod: sql
-ms.prod_service: "integration-services"
-ms.reviewer: ""
-ms.technology: integration-services
-ms.topic: tutorial
-ms.assetid: f4088de3-16d8-419c-96a1-a2cd005d0a5b
 author: chugugrace
 ms.author: chugu
+ms.date: "01/07/2019"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: tutorial
 ---
 # Lesson 4-4: Add a Flat File destination
 
@@ -54,7 +50,7 @@ In this task, you save all this information about the failed rows to a delimited
   
     Clearing this check box persists the errors over multiple package executions by appending each new run's error output.
   
-14. In the **Flat File Destination Editor**, select **Mappings** to verify that all the columns are correct. Optionally, you can rename the columns in the destination.  
+14. In the **Flat File Destination Editor**, select **Mappings** to verify that all the columns are correct. Create mappings for any columns that are not mapped. Optionally, you can rename the columns in the destination.  
   
 15. Select **OK**.  
   

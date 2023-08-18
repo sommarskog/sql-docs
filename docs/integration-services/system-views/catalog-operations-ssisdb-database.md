@@ -1,19 +1,15 @@
 ---
+title: "catalog.operations (SSISDB Database)"
 description: "catalog.operations (SSISDB Database)"
-title: "catalog.operations (SSISDB Database) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "integration-services"
-ms.reviewer: ""
-ms.technology: integration-services
-ms.topic: "language-reference"
-helpviewer_keywords: 
-  - "operations view [Integration Services]"
-  - "catalog.operations view [Integration Services]"
-ms.assetid: 9455c5b1-60ff-45fc-8599-cc3abbd6daf5
 author: chugugrace
 ms.author: chugu
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: "language-reference"
+helpviewer_keywords:
+  - "operations view [Integration Services]"
+  - "catalog.operations view [Integration Services]"
 ---
 # catalog.operations (SSISDB Database)
 
@@ -51,6 +47,7 @@ ms.author: chugu
 |`2`|Retention window<br /><br /> (SQL Agent job)|**NULL**|**NULL**|  
 |`3`|MaxProjectVersion<br /><br /> (SQL Agent job)|**NULL**|**NULL**|  
 |`101`|**deploy_project**<br /><br /> (Stored procedure)|Project ID|Project name|  
+|`102`|**get_project**<br /><br /> (Stored procedure)|Project ID|Project name|  
 |`106`|**restore_project**<br /><br /> (Stored procedure)|Project ID|Project name|  
 |`200`|**create_execution** and **start_execution**<br /><br /> (Stored procedures)|Project ID|**NULL**|  
 |`202`|**stop_operation**<br /><br /> (Stored procedure)|Project ID|**NULL**|  

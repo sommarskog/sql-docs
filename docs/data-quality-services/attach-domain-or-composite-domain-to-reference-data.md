@@ -1,23 +1,19 @@
 ---
 title: "Attach domain or composite domain to reference data"
-description: Describes how to attach domains or composite domains in a data quality knowledge base with Data Quality Services (DQS) on SQL Server. 
-ms.custom: seo-lt-2019
-ms.date: "03/01/2017"
-ms.prod: sql
-ms.prod_service: "data-quality-services"
-ms.reviewer: ""
-ms.technology: data-quality-services
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.dqs.dm.refdata.f1"
-  - "sql13.dqs.dm.refcatalog.f1"
-ms.assetid: 36af981c-d0d0-4dc6-afe5-bbb3c97845dc
+description: Describes how to attach domains or composite domains in a data quality knowledge base with Data Quality Services (DQS) on SQL Server.
 author: swinarko
 ms.author: sawinark
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: data-quality-services
+ms.topic: conceptual
+f1_keywords:
+  - "sql13.dqs.dm.refdata.f1"
+  - "sql13.dqs.dm.refcatalog.f1"
 ---
 # Attach domain or composite domain to reference data - Data Quality Services (DQS)
 
-[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI](../includes/applies-to-version/sqlserver.md)]
 
   This topic describes how to attach domains/composite domains in a data quality knowledge base to a reference data service in Azure Marketplace to build knowledge against the high-quality reference data. Each reference data service contains a schema (data columns). After attaching a domain or a composite domain to a reference data service, you must map the attached domain or the individual domains within the attached composite domain to the appropriate columns in a reference data service schema. Attaching a composite domain to a reference data service enables you to attach just one domain to a reference data service, and then map the individual domains within the composite domain to appropriate columns in the reference data service schema.  
 

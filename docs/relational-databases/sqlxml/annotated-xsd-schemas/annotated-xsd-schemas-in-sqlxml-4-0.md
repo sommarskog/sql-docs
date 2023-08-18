@@ -1,23 +1,19 @@
 ---
 title: "Annotated XSD Schemas in SQLXML 4.0"
 description: View information about using annotated XSD schemas in SQLXML 4.0.
-ms.custom: ""
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: 01/11/2019
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: xml
+ms.service: sql
+ms.subservice: xml
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "annotated XSD schemas"
   - "SQLXML, annotated XSD schemas"
   - "mapping schema [SQLXML]"
   - "XSD schemas [SQLXML]"
   - "XSD schemas [SQLXML], annotations"
   - "schemas [SQLXML]"
-ms.assetid: eecd0d5f-d3dd-4d20-9586-19820410ad47
-author: rothja
-ms.author: jroth
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Annotated XSD Schemas in SQLXML 4.0

@@ -1,18 +1,15 @@
 ---
-title: "Create a Linked Report | Microsoft Docs"
+title: "Create a Linked Report"
 description: Learn how to create a linked report so that you can create additional versions of an existing report.
-ms.date: 05/30/2019
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: reports
-
-
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "linked reports [Reporting Services], creating"
-ms.assetid: 12be8341-cb57-45e8-a421-2bf66b50234d
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 05/30/2019
+ms.service: reporting-services
+ms.subservice: reports
+ms.topic: conceptual
+ms.custom: updatefrequency5
+helpviewer_keywords:
+  - "linked reports [Reporting Services], creating"
 ---
 # Create a Linked Report
   A linked report is a report server item that provides an access point to an existing report. Conceptually, it is similar to a program shortcut that you use to run a program or open a file.  
@@ -27,7 +24,7 @@ ms.author: maggies
   
 1. In the web portal, navigate to the desired report, right-click on it and  select **Manage** from the drop down menu.
 
-2. On the **Manage <reportname>** page, select **Create linked report**.  
+2. On the **Manage \<reportname\>** page, select **Create linked report**.  
   
 3. Enter a name for the new linked report. Optionally enter a description.  
   

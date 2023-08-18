@@ -1,23 +1,19 @@
 ---
-description: "MSrepl_commands (Transact-SQL)"
-title: "MSrepl_commands (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "MSrepl_commands (Transact-SQL)"
+description: MSrepl_commands (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "03/03/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: replication
+ms.service: sql
+ms.subservice: replication
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "MSrepl_commands"
   - "MSrepl_commands_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "MSrepl_commands system table"
-ms.assetid: 53b9f9cd-9429-47a0-aba2-908fc60e7036
-author: cawrites
-ms.author: chadam
+dev_langs:
+  - "TSQL"
 ---
 # MSrepl_commands (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

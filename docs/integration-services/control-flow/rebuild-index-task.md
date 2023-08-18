@@ -1,22 +1,18 @@
 ---
+title: "Rebuild Index Task"
 description: "Rebuild Index Task"
-title: "Rebuild Index Task | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "integration-services"
-ms.reviewer: ""
-ms.technology: integration-services
+ms.service: sql
+ms.subservice: integration-services
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.dts.designer.rebuildindextask.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "rebuilding indexes"
   - "indexes [Integration Services]"
   - "Rebuild Index task"
-ms.assetid: 021884dd-e72d-47b2-99e8-b741410509c3
-author: chugugrace
-ms.author: chugu
 ---
 # Rebuild Index Task
 
@@ -40,7 +36,7 @@ ms.author: chugu
 -   Set ONLINE = ON to not hold table locks so that queries or updates to the underlying table can proceed during re-indexing.  
   
     > [!NOTE]  
-    >  Online index operations are not available in every edition of [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Features Supported by the Editions of SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
+    >  Online index operations are not available in every edition of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Features Supported by the Editions of SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
 -   Specify a value for MAXDOP to limit the number of processors used in a parallel plan execution.  
   

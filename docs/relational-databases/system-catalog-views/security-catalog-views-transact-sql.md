@@ -1,23 +1,19 @@
 ---
-description: "Security Catalog Views (Transact-SQL)"
-title: "Security Catalog Views (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "02/27/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: system-objects
+title: "Security Catalog Views (Transact-SQL)"
+description: Security Catalog Views (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
+ms.date: "05/24/2022"
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "cryptography [SQL Server], catalog views"
   - "encryption [SQL Server], catalog views"
   - "catalog views [SQL Server], security"
   - "security catalog views [SQL Server]"
-ms.assetid: 4d5cf1bf-09a7-4ee0-9dbb-5c584750fc67
-author: VanMSFT
-ms.author: vanto
+dev_langs:
+  - "TSQL"
 ---
 # Security Catalog Views (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -167,6 +163,30 @@ ms.author: vanto
     :::column-end:::
     :::column:::
         [sys.database_audit_specification_details](../../relational-databases/system-catalog-views/sys-database-audit-specification-details-transact-sql.md)
+    :::column-end:::
+:::row-end:::
+
+## Ledger Views
+
+:::row:::
+    :::column:::
+        [sys.database_ledger_transactions](../../relational-databases/system-catalog-views/sys-database-ledger-transactions-transact-sql.md)
+    :::column-end:::
+    :::column:::
+        [sys.database_ledger_blocks](../../relational-databases/system-catalog-views/sys-database-ledger-blocks-transact-sql.md)
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        [sys.ledger_table_history](../../relational-databases/system-catalog-views/sys-ledger-table-history-transact-sql.md)
+    :::column-end:::
+    :::column:::
+        [sys.ledger_column_history](../../relational-databases/system-catalog-views/sys-ledger-column-history-transact-sql.md)
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        [sys.database_ledger_digest_locations](../../relational-databases/system-catalog-views/sys-database-ledger-digest-locations-transact-sql.md)
     :::column-end:::
 :::row-end:::
 

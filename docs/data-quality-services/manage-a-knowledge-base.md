@@ -1,19 +1,16 @@
 ---
-description: "Manage a Knowledge Base"
 title: "Manage a Knowledge Base"
-ms.date: "06/04/2013"
-ms.prod: sql
-ms.prod_service: "data-quality-services"
-ms.reviewer: ""
-ms.technology: data-quality-services
-ms.topic: conceptual
-ms.assetid: 27f306f4-d67c-47f5-b35c-4260cc5d36e3
+description: "Manage a Knowledge Base"
 author: swinarko
 ms.author: sawinark
+ms.date: "06/04/2013"
+ms.service: sql
+ms.subservice: data-quality-services
+ms.topic: conceptual
 ---
 # Manage a Knowledge Base
 
-[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI](../includes/applies-to-version/sqlserver.md)]
 
   This topic describes how to perform management functions on a knowledge base in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). You can delete a knowledge base, unlock it, discard your work on it, rename it, and display its properties.  
   

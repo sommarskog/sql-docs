@@ -1,19 +1,19 @@
 ---
-title: "Report Parts and Datasets in Report Builder | Microsoft Docs"
+title: "Report Parts and Datasets in Report Builder"
 description: Learn about report parts you can add in the Report Builder Report Part Gallery. Also learn about the datasets that the reports depend on.
-ms.date: 09/16/2016
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-data
-
-
-ms.topic: conceptual
-ms.assetid: 1fe86481-9c41-4535-a4b7-c7c4d780cab6
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 09/16/2016
+ms.service: reporting-services
+ms.subservice: report-data
+ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 # Report Parts and Datasets in Report Builder
-  In Report Builder, the easiest way to include data in a report is to add report parts from the Report Part Gallery. Report parts contain the datasets that they depend on, which are known as *dependent datasets*. Dependent datasets are based on shared data sources and can be either embedded datasets or shared datasets. Read more about [Report Parts](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md).  
+
+[!INCLUDE [ssrs-report-parts-deprecated](../../includes/ssrs-report-parts-deprecated.md)]
+
+In Report Builder, the easiest way to include data in a report is to add report parts from the Report Part Gallery. Report parts contain the datasets that they depend on, which are known as *dependent datasets*. Dependent datasets are based on shared data sources and can be either embedded datasets or shared datasets. Read more about [Report Parts](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md).  
   
  Another easy way to include data in a report is to use a shared dataset. For more information, see [Report Embedded Datasets and Shared Datasets &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).  
   

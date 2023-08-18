@@ -1,13 +1,12 @@
 ---
 title: Firewall configuration
 description: How to configure the firewall for outbound connections from SQL Server Machine Learning Services.
-ms.prod: sql
-ms.technology: machine-learning-services
-
-ms.date: 10/17/2018  
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.date: 10/17/2018
+ms.service: sql
+ms.subservice: machine-learning-services
 ms.topic: how-to
-author: dphansen
-ms.author: davidph
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
 ---
 # Firewall configuration for SQL Server Machine Learning Services
@@ -19,7 +18,7 @@ This article lists firewall configuration considerations that the administrator 
 
 By default, the SQL Server Setup disables outbound connections by creating firewall rules.
 
-In SQL Server 2016 and 2017, these rules are based on local user accounts, where Setup created one outbound rule for **SQLRUserGroup** that denied network access to its members (each worker account was listed as a local principle subject to the rule. For more information about SQLRUserGroup, see [Security overview for the extensibility framework in SQL Server Machine Learning Services](../../machine-learning/concepts/security.md#sqlrusergroup).
+In SQL Server 2016 and 2017, these rules are based on local user accounts, where Setup created one outbound rule for **SQLRUserGroup** that denied network access to its members (each worker account was listed as a local principal subject to the rule. For more information about SQLRUserGroup, see [Security overview for the extensibility framework in SQL Server Machine Learning Services](../../machine-learning/concepts/security.md#sqlrusergroup).
 
 In SQL Server 2019, as part of the move to AppContainers, there are new firewall rules based on AppContainer SIDs: one for each of the 20 AppContainers created by SQL Server Setup. Naming conventions for the firewall rule name are **Block network access for AppContainer-00 in SQL Server instance MSSQLSERVER**, where 00 is the number of the AppContainer (00-20 by default), and MSSQLSERVER is the name of the SQL Server instance.
 

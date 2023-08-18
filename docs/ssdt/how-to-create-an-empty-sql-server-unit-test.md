@@ -1,17 +1,14 @@
 ---
 title: Create an Empty SQL Server Unit Test
 description: Learn how to create SQL Server unit tests. See how to use the same TestInitialize and TestCleanup scripts that other tests use and how to use different scripts.
-ms.prod: sql
-ms.technology: ssdt
-ms.topic: conceptual
-f1_keywords: 
-  - "sql.data.tools.unittesting.createtest"
-ms.assetid: b6f3cd5a-3389-42d6-a93f-97b3ddf31b95
 author: markingmyname
 ms.author: maghan
-ms.reviewer: “”
-ms.custom: seo-lt-2019
 ms.date: 02/09/2017
+ms.service: sql
+ms.subservice: ssdt
+ms.topic: conceptual
+f1_keywords:
+  - "sql.data.tools.unittesting.createtest"
 ---
 
 # How to: Create an Empty SQL Server Unit Test
@@ -40,13 +37,13 @@ You have two options for creating a SQL Server unit test:
   
 3.  Under **Test Name**, enter a name for the test.  
   
-4.  Under **Add to Test Project**, select an existing test project, into which to add this test. If no test project exists or if you want to create a new test project, select **Create a new <language> test project**.  
+4.  Under **Add to Test Project**, select an existing test project, into which to add this test. If no test project exists or if you want to create a new test project, select **Create a new \<language\> test project**.  
   
 5.  Click **OK**.  
   
     If your test project is new, the **New Test Project** dialog box appears. Name the project and click **OK**.  
   
-    If your test project is new or has not been configured, the **SQL Server Test Configuration <ProjectName>** dialog box appears. This dialog box allows you to configure the following information for your test project:  
+    If your test project is new or has not been configured, the **SQL Server Test Configuration \<ProjectName\>** dialog box appears. This dialog box allows you to configure the following information for your test project:  
   
     -   The database connection used to execute tests.  
   
@@ -66,7 +63,7 @@ You have two options for creating a SQL Server unit test:
   
     You can also add additional tests by:.  
   
-    -   Right clicking on a test project in **Solution Explorer**, selecting **Add**, **New Test**, and then **SQL Server Unit Test**.  
+    -   Right-clicking on a test project in **Solution Explorer**, selecting **Add**, **New Test**, and then **SQL Server Unit Test**.  
   
     -   In SQL Server Object Explorer, select Create Unit Tests.  
   
@@ -74,7 +71,7 @@ You have two options for creating a SQL Server unit test:
   
 ### To create a SQL Server unit test inside an existing test class  
   
-1.  Open an existing SQL Server unit test class in the **SQL Server Unit Test Designer**. You can access the **SQL Server Unit Test Designer** by double clicking the unit test source code file in **Solution Explorer**.  
+1.  Open an existing SQL Server unit test class in the **SQL Server Unit Test Designer**. You can access the **SQL Server Unit Test Designer** by double-clicking the unit test source code file in **Solution Explorer**.  
   
 2.  Click the plus (**+**) sign in the navigation bar to display the **Specify a unit test name** dialog box.  
   

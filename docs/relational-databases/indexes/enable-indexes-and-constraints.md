@@ -1,27 +1,23 @@
 ---
-description: "Enable Indexes and Constraints"
-title: "Enable Indexes and Constraints | Microsoft Docs"
-ms.custom: ""
+title: "Enable Indexes and Constraints"
+description: Enable Indexes and Constraints
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "02/17/2017"
-ms.prod: sql
-ms.prod_service: "table-view-index, sql-database"
-ms.reviewer: ""
-ms.technology: table-view-index
+ms.service: sql
+ms.subservice: table-view-index
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "indexes [SQL Server], enabling"
   - "nonclustered indexes [SQL Server], enabling a disabled index"
   - "index enabling [SQL Server]"
   - "disabled indexes [SQL Server], how to enable"
   - "constraints [SQL Server], enabling"
   - "clustered indexes, enabling disabled indexes"
-ms.assetid: c55c8865-322e-4ab0-ba04-ea1f56735353
-author: MikeRayMSFT
-ms.author: mikeray
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Enable Indexes and Constraints
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   This topic describes how to enable a disabled index in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. After an index is disabled, it remains in a disabled state until it is rebuilt or dropped  
   
@@ -114,7 +110,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 3.  Copy and paste the following example into the query window and click **Execute**.  
   
     ```  
-    USE AdventureWorks2012;  
+    USE AdventureWorks2022;  
     GO  
     -- Enables the IX_Employee_OrganizationLevel_OrganizationNode index  
     -- on the HumanResources.Employee table.  
@@ -133,7 +129,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 3.  Copy and paste the following example into the query window and click **Execute**.  
   
     ```  
-    USE AdventureWorks2012;  
+    USE AdventureWorks2022;  
     GO  
     -- re-creates the IX_Employee_OrganizationLevel_OrganizationNode index  
     -- on the HumanResources.Employee table  
@@ -154,7 +150,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 3.  Copy and paste the following example into the query window and click **Execute**.  
   
     ```  
-    USE AdventureWorks2012;   
+    USE AdventureWorks2022;   
     GO  
     -- enables the IX_Employee_OrganizationLevel_OrganizationNode index  
     -- on the HumanResources.Employee table  
@@ -171,7 +167,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 3.  Copy and paste the following example into the query window and click **Execute**.  
   
     ```  
-    USE AdventureWorks2012;  
+    USE AdventureWorks2022;  
     GO  
     -- enables all indexes  
     -- on the HumanResources.Employee table  
@@ -189,7 +185,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 3.  Copy and paste the following example into the query window and click **Execute**.  
   
     ```  
-    USE AdventureWorks2012;   
+    USE AdventureWorks2022;   
     GO  
     -- enables all indexes  
     -- on the HumanResources.Employee table  

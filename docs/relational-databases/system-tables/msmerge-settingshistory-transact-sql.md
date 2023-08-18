@@ -1,23 +1,19 @@
 ---
-description: "MSmerge_settingshistory (Transact-SQL)"
-title: "MSmerge_settingshistory (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "MSmerge_settingshistory (Transact-SQL)"
+description: MSmerge_settingshistory (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "03/04/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: replication
+ms.service: sql
+ms.subservice: replication
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "MSmerge_settingshistory"
   - "MSmerge_settingshistory_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "MSmerge_settingshistory system table"
-ms.assetid: 0bdf2d5f-5502-44cd-aa9d-2d5006ad20ce
-author: cawrites
-ms.author: chadam
+dev_langs:
+  - "TSQL"
 ---
 # MSmerge_settingshistory (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

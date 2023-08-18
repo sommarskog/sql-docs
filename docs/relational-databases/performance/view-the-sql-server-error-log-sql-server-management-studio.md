@@ -1,21 +1,18 @@
 ---
 title: "View the SQL Server error log (SSMS)"
 description: Learn about the SQL Server error log, which contains user-defined events and certain system events you can use for troubleshooting.
-ms.custom: seo-dt-2019
-ms.date: "09/29/2017"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: performance
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.date: "10/05/2022"
+ms.service: sql
+ms.subservice: performance
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "viewing logs"
   - "displaying logs"
   - "errors [SQL Server], logs"
   - "logs [SQL Server], SQL Server error logs"
   - "logs [SQL Server], viewing"
-ms.assetid: 55f468ba-146c-4ab3-95cd-d35d051afd12
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 ---
 # View the SQL Server error log in SQL Server Management Studio (SSMS)
 
@@ -26,7 +23,7 @@ The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error log contains
 
 1. In SQL Server Management Studio, select **Object Explorer**. To open **Object Explorer**, select F8. Or on the top menu, select **View**, and then select **Object Explorer**:
     
-    ![Object_Explorer](../../relational-databases/performance/media/object-explorer.png) 
+    :::image type="content" source="../../relational-databases/performance/media/object-explorer.png" alt-text="Object Explorer in the SSMS menu" lightbox="../../relational-databases/performance/media/object-explorer.png":::
 
 2. In **Object Explorer**, connect to an instance of SQL Server, and then expand that instance.
   
@@ -34,10 +31,11 @@ The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error log contains
 
 4. Right-click **SQL Server Logs**, select **View**, and then choose **SQL Server Log**.
 
-    ![View_SQLServer_Log_SSMS](../../relational-databases/performance/media/view-sqlserver-log-ssms.png) 
+    :::image type="content" source="../../relational-databases/performance/media/view-sqlserver-log-ssms.png" alt-text="View the SQL Server Log in SSMS" lightbox="../../relational-databases/performance/media/view-sqlserver-log-ssms.png":::
  
 5. The **Log File Viewer** appears (it might take a moment) with a list of logs for you to view.
 
-  ## See also
-  For more information, see [MSSQLTips.com's](https://www.mssqltips.com/) helpful post [Identify location of the SQL Server Error Log file](https://www.mssqltips.com/sqlservertip/2506/identify-location-of-the-sql-server-error-log-file/).
+## Next steps
 
+- [Configure SQL Server Error Logs](../../database-engine/configure-windows/scm-services-configure-sql-server-error-logs.md)
+- [sp_readerrorlog](../system-stored-procedures/sp-readerrorlog-transact-sql.md)

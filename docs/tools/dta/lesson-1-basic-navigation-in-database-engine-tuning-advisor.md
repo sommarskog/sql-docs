@@ -1,18 +1,14 @@
 ---
 title: "Basic navigation in DTA"
 description: Database Engine Tuning Advisor (DTA) provides a graphical user interface (GUI) based way to view tuning sessions and tuning recommendation reports.
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: performance
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "Database Engine Tuning Advisor [SQL Server], tutorials"
-ms.assetid: ad49b2e0-a5e3-49d2-80fd-9f4eaa3652cb
 author: markingmyname
 ms.author: maghan
-ms.reviewer: ""
-ms.custom: seo-dt-2019
 ms.date: 03/01/2017
+ms.service: sql
+ms.subservice: performance
+ms.topic: conceptual
+helpviewer_keywords:
+  - "Database Engine Tuning Advisor [SQL Server], tutorials"
 ---
 
 # Lesson 1: Basic Navigation in Database Engine Tuning Advisor (DTA)
@@ -23,11 +19,11 @@ Database Engine Tuning Advisor provides a graphical user interface (GUI) based w
 
 ## Prerequisites 
 
-To complete this tutorial, you need SQL Server Management Studio, access to a server that's running SQL Server, and an AdventureWorks database.
+To complete this tutorial, you need SQL Server Management Studio, access to a server that's running SQL Server, and an [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database.
 
-- Install [SQL Server Management Studio.](../../ssms/download-sql-server-management-studio-ssms.md)
-- Install [SQL Server 2017 Developer Edition.](https://www.microsoft.com/sql-server/sql-server-downloads)
-- Download [AdventureWorks2017 sample databases.](../../samples/adventureworks-install-configure.md)
+- Install [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md).
+- Install [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
+- Download [AdventureWorks sample databases](../../samples/adventureworks-install-configure.md).
 
 
 Instructions for restoring databases in SSMS are here: [Restore a database.](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)
@@ -60,7 +56,7 @@ Two main panes are displayed in the Database Engine Tuning Advisor GUI when it i
 -   The right pane contains the **General** and the **Tuning Options** tabs. This is where you can define your Database Engine Tuning session. In the **General** tab, you type the name for your tuning session, specify the workload file or table to use, and select the databases and tables you want to tune in this session. A workload is a set of [!INCLUDE[tsql](../../includes/tsql-md.md)] statements that execute against a database or databases that you want to tune. Database Engine Tuning Advisor uses trace files, trace tables, [!INCLUDE[tsql](../../includes/tsql-md.md)] scripts, or XML files as workload input when tuning databases. On the **Tuning Options** tab, you can select the physical database design structures (indexes or indexed views) and the partitioning strategy that you want Database Engine Tuning Advisor to consider during its analysis. On this tab, you also can specify the maximum time that Database Engine Tuning Advisor takes to tune a workload. By default, Database Engine Tuning Advisor will tune a workload for one hour.  
   
 > [!NOTE]
-> Database Engine Tuning Advisor can take XML files as input when a [!INCLUDE[tsql](../../includes/tsql-md.md)] script is imported from [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Query Editor. For more information, see the section on launching Database Engine Tuning Advisor from the [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Query Editor in [Start and Use the Database Engine Tuning Advisor](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md).  
+> Database Engine Tuning Advisor can take XML files as input when a [!INCLUDE[tsql](../../includes/tsql-md.md)] script is imported from [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Query Editor. For more information, see the section on launching Database Engine Tuning Advisor from the [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Query Editor in [Start and Use the Database Engine Tuning Advisor](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md).  
   
 ## Configure tool options and layout 
 

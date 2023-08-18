@@ -1,26 +1,27 @@
 ---
-description: "External Tools Dialog Box"
 title: "External Tools Dialog Box"
-ms.custom: seo-lt-2019
+description: "External Tools Dialog Box"
+author: "markingmyname"
+ms.author: "maghan"
 ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: "sql-tools"
-ms.reviewer: ""
-ms.technology: ssms
-ms.topic: conceptual
-helpviewer_keywords: 
+ms.service: sql
+ms.subservice: ssms
+ms.topic: ui-reference
+helpviewer_keywords:
   - "adding external tools"
   - "external tools [SQL Server Management Studio]"
   - "SQL Server Management Studio [SQL Server], external tools"
-ms.assetid: ba797203-24d0-4922-9b97-8ab483f1db14
-author: "markingmyname"
-ms.author: "maghan"
 ---
 # External Tools Dialog Box
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-Use the **External Tools** dialog box to add external tools such as SQLCMD or Notepad to the **Tools** menu. Adding external tools allows you to easily launch other applications while working in the [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] environment. You can specify arguments and a working directory when launching the tool. In addition, the output from some tools can be displayed in the **Output** window. The **External Tools** dialog box is available on the **Tools** menu.  
+
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+
+Use the **External Tools** dialog box to add external tools such as SQLCMD or Notepad to the **Tools** menu. Adding external tools allows you to easily launch other applications while working in the 
+
+[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] environment. You can specify arguments and a working directory when launching the tool. In addition, the output from some tools can be displayed in the **Output** window. The **External Tools** dialog box is available on the **Tools** menu.  
   
-## Options  
+## Options
+
 **Menu contents**  
 Lists the titles of the items currently added to the **Tools** menu. Use the **Move Up** and **Move Down** arrows to change the order the items that appear on the menu. Use the **Delete** button to remove an item from the menu.  
   
@@ -60,7 +61,8 @@ Display the **Arguments** dialog box to allow you to enter or edit values for th
 **Close on exit**  
 Close the window opened by the tool when the tool is closed.  
   
-## Example  
+## Example
+
 Entering the following values in the **External Tools** dialog box will create a menu item labeled "DAC" that when selected, opens a command prompt and runs the **sqlcmd** utility using the dedicated administrator connection.  
   
 |Box|Value|  
@@ -69,6 +71,7 @@ Entering the following values in the **External Tools** dialog box will create a
 |**Command**|[!INCLUDE[ssInstallPath](../includes/ssinstallpath-md.md)]Tools\Binn\SQLCMD.exe|  
 |**Arguments**|-A|  
   
-## See Also  
+## See Also
+
 [Arguments for External Tools](../ssms/use-of-sql-server-features-and-capabilities-wwi-oltp.md)  
 [General User Interface Elements](../ssms/general-user-interface-elements.md)  

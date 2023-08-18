@@ -1,38 +1,34 @@
 ---
-description: "CREATE XML SCHEMA COLLECTION (Transact-SQL)"
-title: "CREATE XML SCHEMA COLLECTION (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "CREATE XML SCHEMA COLLECTION (Transact-SQL)"
+description: CREATE XML SCHEMA COLLECTION (Transact-SQL)
+author: markingmyname
+ms.author: maghan
 ms.date: "11/25/2015"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "CREATE XML SCHEMA COLLECTION"
   - "CREATE_XML_SCHEMA_COLLECTION_TSQL"
   - "CREATE XML SCHEMA"
   - "CREATE_XML_SCHEMA_TSQL"
   - "COLLECTION"
   - "COLLECTION_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "CREATE XML SCHEMA COLLECTION statement"
   - "importing schema components"
   - "schema collections [SQL Server], creating"
   - "multiple schema namespaces"
   - "XML schema collections [SQL Server], creating"
-ms.assetid: 350684e8-b3f6-4b58-9dbc-0f05cc776ebb
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+dev_langs:
+  - "TSQL"
 ---
 # CREATE XML SCHEMA COLLECTION (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Imports the schema components into a database.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -184,7 +180,7 @@ CREATE XML SCHEMA COLLECTION MyCollection AS N'
 ```sql  
 CREATE XML SCHEMA COLLECTION ProductDescriptionSchemaCollection AS   
 '<xsd:schema targetNamespace="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain"  
-    xmlns="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain"   
+    xmlns="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain"   
     elementFormDefault="qualified"   
     xmlns:xsd="http://www.w3.org/2001/XMLSchema" >  
     <xsd:element name="Warranty"  >  
@@ -197,7 +193,7 @@ CREATE XML SCHEMA COLLECTION ProductDescriptionSchemaCollection AS
     </xsd:element>  
 </xsd:schema>  
  <xs:schema targetNamespace="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription"   
-    xmlns="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription"   
+    xmlns="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription"   
     elementFormDefault="qualified"   
     xmlns:mstns="https://tempuri.org/XMLSchema.xsd"   
     xmlns:xs="http://www.w3.org/2001/XMLSchema"  

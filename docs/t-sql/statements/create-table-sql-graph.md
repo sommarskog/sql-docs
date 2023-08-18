@@ -1,14 +1,14 @@
 ---
-description: "CREATE TABLE (SQL Graph)"
-title: "CREATE TABLE (SQL Graph) | Microsoft Docs"
-ms.custom: ""
-ms.date: "09/09/2019"
-ms.prod: sql
-ms.prod_service: "sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
+title: "CREATE TABLE (SQL Graph)"
+description: CREATE TABLE (SQL Graph)
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+ms.reviewer: randolphwest
+ms.date: 07/25/2022
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "SQL_GRAPH_TSQL"
   - "TABLE"
   - "CREATE_TABLE_TSQL"
@@ -20,29 +20,26 @@ f1_keywords:
   - "EDGE_TSQL"
   - "AS_EDGE"
   - "AS_EDGE_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "graph"
   - "SQL graph"
   - "CREATE TABLE SQL graph"
   - "NODE"
   - "EDGE"
   - "SQL graph, CREATE TABLE statement"
-ms.assetid: 
-author: "shkale-msft"
-ms.author: "shkale"
+dev_langs:
+  - "TSQL"
 monikerRange: ">=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # CREATE TABLE (SQL Graph)
-[!INCLUDE[SQL Server 2017](../../includes/applies-to-version/sqlserver2017.md)]
+[!INCLUDE[SQL Server 2017](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
 
 Creates a new SQL graph table as either a `NODE` or an `EDGE` table. 
   
 > [!NOTE]   
 >  For standard Transact-SQL statements, see [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md).
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -129,6 +126,9 @@ Creating a temporary table as node or edge table is not supported.
 Creating a node or edge table as a temporal table is not supported.
 
 Stretch database is not supported for node or edge table.
+
+> [!IMPORTANT]  
+> Stretch Database is deprecated in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)]. [!INCLUDE [ssNoteDepFutureAvoid-md](../../includes/ssnotedepfutureavoid-md.md)]
 
 Node or edge tables cannot be external tables (no PolyBase support for graph tables). 
 

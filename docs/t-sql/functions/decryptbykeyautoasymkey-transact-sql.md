@@ -1,30 +1,26 @@
 ---
+title: "DECRYPTBYKEYAUTOASYMKEY (Transact-SQL)"
 description: "DECRYPTBYKEYAUTOASYMKEY (Transact-SQL)"
-title: "DECRYPTBYKEYAUTOASYMKEY (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "09/09/2015"
-ms.prod: sql
-ms.prod_service: "sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
-ms.topic: reference
-f1_keywords: 
-  - "DECRYPTBYKEYAUTOASYMKEY_TSQL"
-  - "DECRYPTBYKEYAUTOASYMKEY"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "DECRYPTBYKEYAUTOASYMSKEY function"
-ms.assetid: 5521d4cf-740c-4ede-98b6-4ba90b84e32d
 author: VanMSFT
 ms.author: vanto
+ms.date: "09/09/2015"
+ms.service: sql
+ms.subservice: t-sql
+ms.topic: reference
+f1_keywords:
+  - "DECRYPTBYKEYAUTOASYMKEY_TSQL"
+  - "DECRYPTBYKEYAUTOASYMKEY"
+helpviewer_keywords:
+  - "DECRYPTBYKEYAUTOASYMSKEY function"
+dev_langs:
+  - "TSQL"
 ---
 # DECRYPTBYKEYAUTOASYMKEY (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdbmi.md)]
 
 This function decrypts encrypted data. To do this, it first decrypts a symmetric key with a separate asymmetric key, and then decrypts the encrypted data with the symmetric key extracted in the first "step".  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -85,7 +81,7 @@ This example shows how `DECRYPTBYKEYAUTOASYMKEY` can simplify decryption code. T
 
 ```sql  
 --Create the keys and certificate.  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'mzkvdMlk979438teag$$ds987yghn)(*&4fdg^';  
 OPEN MASTER KEY DECRYPTION BY PASSWORD = 'mzkvdMlk979438teag$$ds987yghn)(*&4fdg^';  
 CREATE ASYMMETRIC KEY SSN_AKey   

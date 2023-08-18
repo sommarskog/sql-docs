@@ -1,14 +1,13 @@
 ---
 title: Processing and storage capacity
 description: Your business requirements determine the number of Data Scale Units, and the size of the Compute node disks that you need in your Analytics Platform System (APS) appliance.
-author: mzaman1 
-ms.prod: sql
-ms.technology: data-warehouse
-ms.topic: conceptual
-ms.date: 04/17/2018
-ms.author: murshedz
+author: charlesfeddersen
+ms.author: charlesf
 ms.reviewer: martinle
-ms.custom: seo-dt-2019
+ms.date: 04/17/2018
+ms.service: sql
+ms.subservice: data-warehouse
+ms.topic: conceptual
 ---
 
 # Processing and storage capacity in Analytics Platform System

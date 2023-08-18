@@ -1,23 +1,19 @@
 ---
+title: "sp_help_jobschedule (Transact-SQL)"
 description: "sp_help_jobschedule (Transact-SQL)"
-title: "sp_help_jobschedule (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/09/2016"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_help_jobschedule"
-  - "sp_help_jobschedule_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_help_jobschedule"
-ms.assetid: 2cded902-9272-4667-ac4b-a4f95a9f008e
 author: markingmyname
 ms.author: maghan
+ms.date: "08/09/2016"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_help_jobschedule"
+  - "sp_help_jobschedule_TSQL"
+helpviewer_keywords:
+  - "sp_help_jobschedule"
+dev_langs:
+  - "TSQL"
 ---
 # sp_help_jobschedule (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -25,7 +21,7 @@ ms.author: maghan
   Returns information about the scheduling of jobs used by [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] to perform automated activities.  
  
  
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -83,7 +79,8 @@ sp_help_jobschedule { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 |**schedule_uid**|**uniqueidentifier**|Identifier for the schedule.|  
 |**job_count**|**int**|Count of jobs returned.|  
   
-> **NOTE:  sp_help_jobschedule** returns values from the **dbo.sysjobschedules** and **dbo.sysschedules** system tables in **msdb**. **sysjobschedules** updates every 20 minutes. This might affect the values that are returned by this stored procedure.  
+> [!NOTE]  
+> sp_help_jobschedule** returns values from the **dbo.sysjobschedules** and **dbo.sysschedules** system tables in **msdb**. **sysjobschedules** updates every 20 minutes. This might affect the values that are returned by this stored procedure.  
   
 ## Remarks  
  The parameters of **sp_help_jobschedule** can be used only in certain combinations. If *schedule_id* is specified, neither *job_id* nor *job_name* can be specified. Otherwise, the *job_id* or *job_name* parameters can be used with *schedule_name*.  

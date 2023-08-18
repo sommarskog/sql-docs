@@ -1,22 +1,23 @@
 ---
 title: Performance best practices for SQL Server Big Data Clusters
 description: This article provides performance best practices and guidelines for running SQL Server Big Data Clusters on Kubernetes
-author: mihaelablendea 
-ms.author: mihaelab
-ms.reviewer: mikeray
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: 06/30/2020
+ms.service: sql
+ms.subservice: big-data-cluster
 ms.topic: conceptual
-ms.prod: sql
-ms.technology: big-data-cluster
 ---
 
 # Performance best practices and configuration guidelines for SQL Server Big Data Clusters
 
 [!INCLUDE [sqlserver2019](../includes/applies-to-version/sqlserver2019.md)]
 
+[!INCLUDE[big-data-clusters-banner-retirement](../includes/bdc-banner-retirement.md)]
+
 This article provides best practices and recommendations to maximize performance for applications that target services running within a big data cluster.
 
-The following guidelines focus on recommendations for configuring the Linux operating system hosting the Kubernetes worker nodes where BDC will be deployed on. As a best practice, configure the tuning profile before deploying the big data cluster. The settings included in the proposed tuning profile were validated during the case study conducted by Microsoft and Intel. The results of the study are published for download in this [whitepaper](https://aka.ms/sql-bdc-spark-perf/).
+The following guidelines focus on recommendations for configuring the Linux operating system hosting the Kubernetes worker nodes where the big data cluster will be deployed. As a best practice, configure the tuning profile before deploying the big data cluster. The settings included in the proposed tuning profile were validated during the case study conducted by Microsoft and Intel. The results of the study are published for download in this [whitepaper](https://aka.ms/sql-bdc-spark-perf/).
 
 > [!TIP]
 > For tuning configurations specific to SQL Server on Linux, see [Performance best practices and configuration guidelines for SQL Server on Linux](../linux/sql-server-linux-performance-best-practices.md). Also, other best practices like index design for SQL Server databases, still apply.

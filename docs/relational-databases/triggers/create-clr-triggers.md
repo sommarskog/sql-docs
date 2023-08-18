@@ -1,19 +1,15 @@
 ---
+title: "Create CLR Triggers"
 description: "Create CLR Triggers"
-title: "Create CLR Triggers | Microsoft Docs"
-ms.custom: ""
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "03/16/2017"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology:
+ms.service: sql
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "CRL triggers"
   - "DML triggers, CLR triggers"
   - "DDL triggers, CLR triggers"
-ms.assetid: 31f41703-134d-49fc-9850-76c297351c2c
-author: "rothja"
-ms.author: "jroth"
 ---
 # Create CLR Triggers
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -28,7 +24,7 @@ ms.author: "jroth"
 -   Create the trigger that references the registered assembly.  
   
 > [!NOTE]
->  Deploying a SQL Server Project in [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] registers an assembly in the database that was specified for the project. Deploying the project also creates CLR triggers in the database for all methods annotated with the **SqlTrigger** attribute. For more information, see [Deploying CLR Database Objects](../../relational-databases/clr-integration/deploying-clr-database-objects.md).  
+>  Deploying a SQL Server Project in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] registers an assembly in the database that was specified for the project. Deploying the project also creates CLR triggers in the database for all methods annotated with the **SqlTrigger** attribute. For more information, see [Deploying CLR Database Objects](../../relational-databases/clr-integration/deploying-clr-database-objects.md).  
 > 
 > [!NOTE]
 >  The ability of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to execute CLR code is off by default. You can create, alter, and drop database objects that reference managed code modules, but these references will not execute in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unless the [clr enabled Option](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md) is enabled using [sp_configure (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md).  

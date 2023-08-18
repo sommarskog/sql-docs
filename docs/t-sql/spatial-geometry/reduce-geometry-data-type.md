@@ -1,26 +1,22 @@
 ---
+title: "Reduce (geometry Data Type)"
 description: "Reduce (geometry Data Type)"
-title: "Reduce (geometry Data Type) | Microsoft Docs"
-ms.custom: ""
+author: MladjoA
+ms.author: mlandzic
 ms.date: "08/03/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "Reduce_TSQL"
   - "Reduce"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Reduce method"
-ms.assetid: 132184bf-c4d2-4a27-900d-8373445dce2a
-author: MladjoA
-ms.author: mlandzic 
+dev_langs:
+  - "TSQL"
 ---
 # Reduce (geometry Data Type)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 Returns an approximation of the given **geometry** instance. The approximation is produced by running an extension of the Douglas-Peucker algorithm on the instance with the given tolerance.
   
@@ -60,7 +56,7 @@ Returns an approximation of the given **geometry** instance. The approximation i
 ### A. Using Reduce() to simplify a LineString  
  The following example creates a `LineString` instance and uses `Reduce()` to simplify the instance.  
   
-```  
+```sql
 DECLARE @g geometry;  
 SET @g = geometry::STGeomFromText('LINESTRING(0 0, 0 1, 1 0, 2 1, 3 0, 4 1)', 0);  
 SELECT @g.Reduce(.75).ToString();  
@@ -69,7 +65,7 @@ SELECT @g.Reduce(.75).ToString();
 ### B. Using Reduce() with varying tolerance levels on a CircularString  
  The following example uses `Reduce()` with three tolerance levels on a **CircularString** instance:  
   
-```
+```sql
  DECLARE @g geometry = 'CIRCULARSTRING(0 0, 8 8, 16 0, 20 -4, 24 0)'; 
  SELECT @g.Reduce(5).ToString(); 
  SELECT @g.Reduce(15).ToString(); 
@@ -89,7 +85,7 @@ SELECT @g.Reduce(.75).ToString();
 ### C. Using Reduce() with varying tolerance levels on a CompoundCurve  
  The following example uses `Reduce()` with two tolerance levels on a **CompoundCurve** instance:  
   
-```
+```sql
  DECLARE @g geometry = 'COMPOUNDCURVE(CIRCULARSTRING(0 0, 8 8, 16 0, 20 -4, 24 0),(24 0, 20 4, 16 0))';  
  SELECT @g.Reduce(15).ToString();  
  SELECT @g.Reduce(16).ToString();
@@ -100,7 +96,7 @@ SELECT @g.Reduce(.75).ToString();
 ### Showing an example where the original start and end points are lost  
  The following example shows how the original start and endpoints may not be retained by the resulting instance. This behavior occurs because keeping the original start and end points would result in an invalid **LineString** instance.  
   
-```  
+```sql
 DECLARE @g geometry = 'LINESTRING(0 0, 4 0, 2 .01, 1 0)';  
 DECLARE @h geometry = @g.Reduce(1);  
 SELECT @g.STIsValid() AS Valid  

@@ -1,14 +1,14 @@
 ---
+title: "OPENQUERY (DMX)"
 description: "&lt;source data query&gt; - OPENQUERY"
-title: "OPENQUERY (DMX) | Microsoft Docs"
-ms.date: 06/07/2018
-ms.prod: sql
-ms.technology: analysis-services
-ms.custom: dmx
-ms.topic: reference
+author: minewiskan
 ms.author: owend
 ms.reviewer: owend
-author: minewiskan
+ms.date: 02/17/2022
+ms.service: sql
+ms.subservice: analysis-services
+ms.topic: reference
+ms.custom: dmx
 ---
 # &lt;source data query&gt; - OPENQUERY
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -39,7 +39,7 @@ OPENQUERY(<named datasource>, <query syntax>)
  `SELECT * FROM $system.MDSCHEMA_INPUT_DATASOURCES`  
   
 ## Examples  
- The following example uses the MyDS data source already defined in the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] database to create a connection to the [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] database and query the **vTargetMail** view.  
+ The following example uses the MyDS data source already defined in the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] database to create a connection to the [!INCLUDE [sssampledbdwobject-md](../includes/sssampledbdwobject-md.md)] database and query the **vTargetMail** view.  
   
 ```  
 OPENQUERY (MyDS,'SELECT TOP 1000 * FROM vTargetMail')  

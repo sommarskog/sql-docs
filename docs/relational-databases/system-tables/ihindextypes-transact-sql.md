@@ -1,23 +1,19 @@
 ---
-description: "IHindextypes (Transact-SQL)"
-title: "IHindextypes (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "IHindextypes (Transact-SQL)"
+description: IHindextypes (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "03/03/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: replication
+ms.service: sql
+ms.subservice: replication
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "IHindextypes"
   - "IHindextypes_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "IHindextypes system table"
-ms.assetid: 5eb67d59-a19d-4dba-9d2b-657f87818f6b
-author: cawrites
-ms.author: chadam
+dev_langs:
+  - "TSQL"
 ---
 # IHindextypes (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

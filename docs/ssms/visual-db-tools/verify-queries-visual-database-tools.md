@@ -1,26 +1,21 @@
 ---
-description: "Verify Queries (Visual Database Tools)"
 title: Verify Queries
-ms.custom: seo-lt-2019
+description: "Verify Queries (Visual Database Tools)"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
+ms.service: sql
+ms.subservice: ssms
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "vdtsql.chm:100644"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "verifying queries"
   - "queries [SQL Server], verifying"
   - "checking queries"
-ms.assetid: 1382c0c0-46dc-45f9-ab38-9bba1d347eea
-author: markingmyname
-ms.author: maghan
-ms.reviewer: 
-
 ---
 # Verify Queries (Visual Database Tools)
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server](../../includes/applies-to-version/sqlserver.md)]
 To avoid problems, you can check the query you have built to ensure its syntax is correct. This option is especially useful when you enter statements in the [SQL pane](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md).  
   
 Some notes to keep in mind about verifying queries:  

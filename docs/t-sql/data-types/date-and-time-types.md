@@ -1,21 +1,20 @@
 ---
+title: "Date and time types"
 description: "Date and time types"
-title: "Date and time types | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/23/2017"
-ms.prod: sql
-ms.prod_service: "sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-ms.assetid: 100d5670-e2d8-425c-a927-2b4dfe453e28
 author: MikeRayMSFT
 ms.author: mikeray
+ms.date: "07/23/2017"
+ms.service: sql
+ms.subservice: t-sql
+ms.topic: "reference"
+dev_langs:
+  - "TSQL"
+monikerRange: "= azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017 || = azuresqledge-current || =azure-sqldw-latest || =fabric"
 ---
 # Date and time types
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw.md)]
+
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supports the following date and time types.
   

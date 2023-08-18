@@ -1,21 +1,21 @@
 ---
 title: "Monitor and troubleshoot PolyBase"
+titleSuffix: SQL Server
 description: To troubleshoot PolyBase, use these views and DMVs. View PolyBase query plan, monitor nodes in a PolyBase group, and set up Hadoop name node high availability.
-ms.date: 02/17/2021
-ms.prod: sql
-ms.technology: polybase
-ms.topic: conceptual
-dev_langs: 
--  "TSQL"
--  "XML"
-f1_keywords: 
-   - "PolyBase, monitoring"
-   - "PolyBase, performance monitoring"
-helpviewer_keywords: 
-   - "PolyBase, troubleshooting"
 author: MikeRayMSFT
 ms.author: mikeray
-ms.reviewer: ""
+ms.date: 05/20/2021
+ms.service: sql
+ms.subservice: polybase
+ms.topic: conceptual
+f1_keywords:
+  - "PolyBase, monitoring"
+  - "PolyBase, performance monitoring"
+helpviewer_keywords:
+  - "PolyBase, troubleshooting"
+dev_langs:
+  - "TSQL"
+  - "XML"
 monikerRange: ">= sql-server-linux-ver15 || >= sql-server-2016"
 ---
 # Monitor and troubleshoot PolyBase
@@ -132,7 +132,7 @@ Monitor and troubleshoot PolyBase queries using the following DMVs.
 
    1. **Find the execution progress of a SQL step**  
 
-      Use the execution ID and step index recorded in the previous steps. Use the execution ID and step index recorded in the previous steps.
+      Use the execution ID and step index recorded in the previous steps.
 
       ```sql  
       -- Find the execution progress of SQL step    
@@ -167,7 +167,11 @@ Monitor and troubleshoot PolyBase queries using the following DMVs.
    ORDER BY total_elapsed_time DESC;  
    ```  
 
-## To view the PolyBase query plan (To be changed) 
+## To view the PolyBase query plan
+
+In [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)], you can view the execution plan passed to the external data source using trace flag 6408. For more information, see [How to tell if external pushdown occurred](polybase-how-to-tell-pushdown-computation.md).
+
+In [!INCLUDE[sssql19-md](../../includes/sssql16-md.md)] or [!INCLUDE[sssql19-md](../../includes/sssql17-md.md)], this alternative strategy works:
 
 1. In SSMS, enable **Include Actual Execution Plan** (Ctrl + M) and run the query.
 
@@ -178,6 +182,8 @@ Monitor and troubleshoot PolyBase queries using the following DMVs.
 3. Right-click on the **Remote Query operator** and select **Properties**.
 
 4. Copy and paste the Remote Query value into a text editor to view the XML remote query plan. An example is shown below.
+
+The sql_operation tags indicate operations within SQL Server. The dsql_operations with operation_types that aren't "ON" indicate the external operators used by PolyBase Data Movement service.
 
    ```xml  
 
@@ -224,7 +230,7 @@ Monitor and troubleshoot PolyBase queries using the following DMVs.
           </dsql_operation>  
           <dsql_operation operation_type="ExternalRoundRobinMove">  
             <operation_cost cost="16.594848" accumulative_cost="17.594848" average_rowsize="24" output_rows="19207" />  
-            <external_uri>hdfs://10.193.26.177:8020/Demo/car_sensordata.tbl/</external_uri>  
+            <external_uri>hdfs://<ip address>:8020/Demo/car_sensordata.tbl/</external_uri>  
             <destination_table>[TEMP_ID_74]</destination_table>  
           </dsql_operation>  
         </dsql_operation>  
@@ -248,7 +254,7 @@ After configuring a set of machines as part of a PolyBase scale out group, you c
 
 3. Run the DMV [sys.dm_exec_compute_node_status &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-node-status-transact-sql.md) to view the status of all the nodes in the PolyBase Group.
 
-## Hadoop Name Node High Availability
+## Hadoop name node high availability
 
 PolyBase does not interface with Name Node HA services like Zookeeper or Knox today. However, there is a proven workaround that can be used to provide the functionality.
 
@@ -257,22 +263,22 @@ Use DNS name to reroute connections to the active Name Node. In order to do this
 
 ## Log file locations
 
-In Windows servers, the logs are located in the installation directory path, by default: c:\Program Files\Microsoft SQL Server\MSSQLnn.InstanceName\MSSQL\Log\Polybase\.
+In Windows servers, the logs are located in the installation directory path, by default: c:\Program Files\Microsoft SQL Server\MSSQLnn.InstanceName\MSSQL\Log\PolyBase\.
 
 In Linux servers, the logs are located by default in /var/opt/mssql/log/polybase.
 
 PolyBase data movement log files:  
-- <INSTANCENAME>_<SERVERNAME>_Dms_errors.log 
-- <INSTANCENAME>_<SERVERNAME>_Dms_movement.log 
+- \<INSTANCENAME\>_\<SERVERNAME\>_Dms_errors.log 
+- \<INSTANCENAME\>_\<SERVERNAME\>_Dms_movement.log 
 
 PolyBase engine service log files:  
-- <INSTANCENAME>_<SERVERNAME>_DWEngine_errors.log 
-- <INSTANCENAME>_<SERVERNAME>_DWEngine_movement.log 
-- <INSTANCENAME>_<SERVERNAME>_DWEngine_server.log 
+- \<INSTANCENAME\>_\<SERVERNAME\>_DWEngine_errors.log 
+- \<INSTANCENAME\>_\<SERVERNAME\>_DWEngine_movement.log 
+- \<INSTANCENAME\>_\<SERVERNAME\>_DWEngine_server.log 
 
 In Windows, PolyBase Java log files:
-- <SERVERNAME> Dms polybase.log
-- <SERVERNAME>_DWEngine_polybase.log
+- \<SERVERNAME\> Dms polybase.log
+- \<SERVERNAME\>_DWEngine_polybase.log
  
 In Linux, PolyBase Java log files:
 - /var/opt/mssql-extensibility/hdfs_bridge/log/hdfs_bridge_pdw.log
@@ -283,7 +289,7 @@ In Linux, PolyBase Java log files:
 
 For common troubleshooting scenarios, see [PolyBase Errors and Possible Solutions](polybase-errors-and-possible-solutions.md).
 
-## See also
+## Next steps
 
-[Troubleshoot PolyBase Kerberos connectivity](polybase-troubleshoot-connectivity.md)   
-[PolyBase errors and possible solutions](polybase-errors-and-possible-solutions.md)   
+- [Troubleshoot PolyBase Kerberos connectivity](polybase-troubleshoot-connectivity.md)   
+- [PolyBase errors and possible solutions](polybase-errors-and-possible-solutions.md)   

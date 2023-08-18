@@ -1,31 +1,27 @@
 ---
+title: "TRY_CONVERT (Transact-SQL)"
 description: "TRY_CONVERT (Transact-SQL)"
-title: "TRY_CONVERT (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "03/06/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "TRY_CONVERT_TSQL"
   - "TRY_CONVERT"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "TRY_CONVERT function"
-ms.assetid: 3e6e7825-6482-4cb2-a8c2-9abc99e265a6
-author: julieMSFT
-ms.author: jrasnick
-monikerRange: "= azuresqldb-current||>= sql-server-2016 ||>= sql-server-linux-2017||>= aps-pdw-2016||= azure-sqldw-latest"
+dev_langs:
+  - "TSQL"
+monikerRange: "= azuresqldb-current || >= sql-server-2016 || >= sql-server-linux-2017 || >= aps-pdw-2016 || = azure-sqldw-latest ||=fabric"
 ---
 # TRY_CONVERT (Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw.md)]
 
   Returns a value cast to the specified data type if the cast succeeds; otherwise, returns null.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

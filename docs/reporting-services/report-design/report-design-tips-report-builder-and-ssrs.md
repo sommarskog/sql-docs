@@ -1,19 +1,19 @@
 ---
-title: "Report Design Tips (Report Builder) | Microsoft Docs"
-description: Identify visual design methods for better data display in Report Builder. Customize your reports with charts, databars, indicators, sparklines, tables, and maps.
-ms.date: 03/01/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-design
-
-
-ms.topic: conceptual
-ms.assetid: c1490ff0-5b8a-43c1-8d22-e459395db4f6
+title: "Report design tips for paginated reports"
+description: Identify visual design methods for better data display in Report Builder. Customize your reports with charts, databars, indicators, sparklines, tables, and maps in a paginated report.
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 03/01/2017
+ms.service: reporting-services
+ms.subservice: report-design
+ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
-# Report Design Tips (Report Builder and SSRS)
-  Use the following tips to help design your [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] paginated reports.  
+# Report design tips for paginated reports (Report Builder)
+
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-ssrs-rb](../../includes/ssrs-appliesto-ssrs-rb.md)] [!INCLUDE [ssrs-appliesto-pbi-rb](../../includes/ssrs-appliesto-pbi-rb.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
+
+  Use the following tips to help design your paginated reports.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -47,6 +47,8 @@ ms.author: maggies
     3.  **Data regions.** Indicate the type of data region and what data it displays. Data region names are useful in the following scenarios:  
   
         1.  **Data region as a report part.** When report authors browse the Report Part Gallery, a descriptive name helps them find the report parts they are looking for.  
+
+        [!INCLUDE [ssrs-report-parts-deprecated](../../includes/ssrs-report-parts-deprecated.md)]
   
         2.  **Data region as a data feed.** With appropriate permissions, a report reader can create an ATOM data feed from a data region.  
   

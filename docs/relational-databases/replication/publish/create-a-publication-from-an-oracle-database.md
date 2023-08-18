@@ -1,19 +1,16 @@
 ---
+title: "Create a Publication from an Oracle Database"
 description: "Create a Publication from an Oracle Database"
-title: "Create a Publication from an Oracle Database | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: replication
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "publications [SQL Server replication], Oracle databases"
-  - "Oracle publishing [SQL Server replication], configuring"
-ms.assetid: b3812746-14b0-4b22-809e-b4a95e1c8083
 author: "MashaMSFT"
 ms.author: "mathoma"
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: conceptual
+ms.custom: updatefrequency5
+helpviewer_keywords:
+  - "publications [SQL Server replication], Oracle databases"
+  - "Oracle publishing [SQL Server replication], configuring"
 ---
 # Create a Publication from an Oracle Database
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -71,7 +68,7 @@ ms.author: "mathoma"
     > [!NOTE]  
     >  If there are any problems with the network configuration, you will receive an error at this point. If you experience problems connecting to the Oracle database, see the section "The SQL Server Distributor cannot connect to the Oracle database instance" in [Troubleshooting Oracle Publishers](../../../relational-databases/replication/non-sql/troubleshooting-oracle-publishers.md).  
   
-8.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+8.  Select **OK**.
 
 #### To create a publication from an Oracle database  
   

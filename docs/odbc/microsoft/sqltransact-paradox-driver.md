@@ -1,19 +1,15 @@
 ---
+title: "SQLTransact (Paradox Driver)"
 description: "SQLTransact (Paradox Driver)"
-title: "SQLTransact (Paradox Driver) | Microsoft Docs"
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "SQLTransact function [ODBC], Paradox Driver"
   - "Paradox driver [ODBC], SQLTransact"
-ms.assetid: 1d7f0c4c-f092-4bbb-9643-f7c9d07ed1af
-author: David-Engel
-ms.author: v-daenge
 ---
 # SQLTransact (Paradox Driver)
 > [!NOTE]  

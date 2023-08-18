@@ -1,22 +1,22 @@
 ---
-title: "Add Interactive Sort to a Table or Matrix (Report Builder) | Microsoft Docs"
-description: Enable users to change the sort order of rows and columns in tables and matrices using interactive sort buttons in Report Builder.
-ms.date: 03/01/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-design
-
-
-ms.topic: conceptual
-f1_keywords: 
-  - "10121"
-  - "sql13.rtp.rptdesigner.textboxproperties.intrctvsort.f1"
-ms.assetid: 05819637-729b-4cf6-82de-91a99f184ec6
+title: "Add interactive sort to a table or matrix in paginated reports"
+description: Enable users to change the sort order of rows and columns in tables and matrices in paginated reports using interactive sort buttons in Report Builder.
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 03/01/2017
+ms.service: reporting-services
+ms.subservice: report-design
+ms.topic: conceptual
+ms.custom: updatefrequency5
+f1_keywords:
+  - "10121"
+  - "sql13.rtp.rptdesigner.textboxproperties.intrctvsort.f1"
 ---
-# Add Interactive Sort to a Table or Matrix (Report Builder and SSRS)
-  Add interactive sort buttons to enable users to change the sort order of rows and columns in tables and matrices. This feature is supported only in rendering formats that support user interaction, such as HTML.  
+# Add interactive sort to a table or matrix in paginated reports (Report Builder)
+
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-ssrs-rb](../../includes/ssrs-appliesto-ssrs-rb.md)] [!INCLUDE [ssrs-appliesto-pbi-rb](../../includes/ssrs-appliesto-pbi-rb.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
+
+  Add interactive sort buttons to enable users to change the sort order of rows and columns in tables and matrices in paginated reports. This feature is supported only in rendering formats that support user interaction, such as HTML.  
   
  When you create an interactive sort button, you must specify what to sort, what to sort by, and the scope to which to apply the sort. For example, you can sort detail rows by customer last name, subcategory group values within a category group by sales, or category and subcategory group values combined by totals.  
   
@@ -51,7 +51,7 @@ ms.author: maggies
   
 5.  In **Sort by**, specify a sort expression. From the drop-down list, select the field that corresponds to the column for which you are defining a sort action (for example, for a column heading named "Title", choose `[Title]`). Specifying a sort expression is required.  
   
-6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+6.  Select **OK**.
   
 7.  Repeat steps 1-6 for every column to which you want to add an interactive sort button.  
   
@@ -77,7 +77,7 @@ ms.author: maggies
     > [!NOTE]  
     >  For complex group expressions, manually set the **Sort by** expression to the same value as the group expression.  
   
-6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+6.  Select **OK**.
   
  To verify the sort action, click **Run** to preview the report, and then click the interactive sort buttons.  
   
@@ -100,7 +100,7 @@ ms.author: maggies
   
     -   **Groups** Click **Groups** to sort the child group values. For this option, the **Sort by** expression is automatically filled in from the group expression.  
   
-5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+5.  Select **OK**.
   
  To verify the sort action, click **Run** to preview the report, and then click the interactive sort buttons.  
   
@@ -131,7 +131,7 @@ ms.author: maggies
   
 7.  Type the expression that specifies all fields that you want to group by. For example, the following group expression combines a field named Color and a field named Size: `=Fields!Color.Value & Fields!Size.Value`.  
   
-8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+8.  Select **OK**.
   
      You have now defined the group. Next, drag the fields to display to the tablix body area of the matrix. Add the fields that you chose to group by in step 7 to the tablix body area, each in its own column.  
   
@@ -153,7 +153,7 @@ ms.author: maggies
   
 14. From the drop-down list, select the name of the group you created in step 5. The group expression is automatically copied to the **Sort by** text box.  
   
-15. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+15. Select **OK**.
   
      You have added the sort button to the text box.  
   
@@ -192,7 +192,7 @@ ms.author: maggies
   
 10. In Sort by, from the drop-down list, choose the same field that you chose in step 6 to group by.  
   
-11. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+11. Select **OK**.
   
 12. In the matrix, right-click the text box in the column header to which you want to add an interactive sort button, and then click **Text Box Properties**.  
   
@@ -206,7 +206,7 @@ ms.author: maggies
   
 17. Select **Also apply this sort to other groups and data regions within**. In the text box, type the name of the dataset, for example, "SalesData".  
   
-18. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+18. Select **OK**.
   
  To verify the sort action, click **Run** to preview the report, and then click the interactive sort button. The matrix sorts by the combined values of the group expression, although each individual value displays in its own column.  
   

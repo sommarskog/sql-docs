@@ -1,23 +1,19 @@
 ---
-description: "Require Attribute Values (Master Data Services)"
 title: Require Attribute Values
-ms.custom: ""
+description: "Require Attribute Values (Master Data Services)"
+author: CordeliaGrey
+ms.author: jiwang6
 ms.date: "03/01/2017"
-ms.prod: sql
-ms.prod_service: "mds"
-ms.reviewer: ""
-ms.technology: master-data-services
+ms.service: sql
+ms.subservice: master-data-services
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "business rules [Master Data Services], requiring attribute values"
   - "attributes [Master Data Services], requiring values"
-ms.assetid: a360ef13-0c34-43b8-a87e-2f5d8732d30e
-author: lrtoyou1223
-ms.author: lle
 ---
 # Require Attribute Values (Master Data Services)
 
-[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], require attribute values when you want to ensure your master data is complete.  
   

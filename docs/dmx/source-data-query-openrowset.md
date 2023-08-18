@@ -1,14 +1,14 @@
 ---
+title: "OPENROWSET (DMX)"
 description: "&lt;source data query&gt; - OPENROWSET"
-title: "OPENROWSET (DMX) | Microsoft Docs"
-ms.date: 06/07/2018
-ms.prod: sql
-ms.technology: analysis-services
-ms.custom: dmx
-ms.topic: reference
+author: minewiskan
 ms.author: owend
 ms.reviewer: owend
-author: minewiskan
+ms.date: 02/17/2022
+ms.service: sql
+ms.subservice: analysis-services
+ms.topic: reference
+ms.custom: dmx
 ---
 # &lt;source data query&gt; - OPENROWSET
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -42,7 +42,7 @@ OPENROWSET(provider_name,provider_string,query_syntax)
 OPENROWSET  
 (  
 'SQLOLEDB.1',  
-'Provider=SQLOLEDB.1;Integrated Security=SSPI;Persist Security     Info=False;Initial Catalog=AdventureWorksDW2012;Data Source=localhost',  
+'Provider=SQLOLEDB.1;Integrated Security=SSPI;Persist Security     Info=False;Initial Catalog=AdventureWorksDW2022;Data Source=localhost',  
 'SELECT TOP 1000 * FROM vTargetMail'  
 )  
 ```  

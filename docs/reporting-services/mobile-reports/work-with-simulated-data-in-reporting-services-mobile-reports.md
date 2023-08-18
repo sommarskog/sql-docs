@@ -1,17 +1,18 @@
 ---
-title: "Work with simulated data in Reporting Services mobile reports | Microsoft Docs"
+title: "Work with simulated data in Reporting Services mobile reports"
 description: When you place a gallery element on the design surface, Mobile Report Publisher generates simulated data for it. Design your prototypes with the simulated data.
-ms.date: 02/08/2016
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: mobile-reports
-
-ms.topic: conceptual
-ms.assetid: 6baabc36-58fb-4a98-bb9c-c42bafb16d0f
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 07/21/2022
+ms.service: reporting-services
+ms.subservice: mobile-reports
+ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 # Work with simulated data in Reporting Services mobile reports
+
+[!INCLUDE [ssrs-mobile-report-deprecated](../../includes/ssrs-mobile-report-deprecated.md)]
+
 When you place a gallery element on the design surface, [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] immediately generates simulated data for that element. This data serves a number of useful purposes when creating mobile reports.   
   
 ![SS_MRP_SimDataTreeMapProps](../../reporting-services/mobile-reports/media/ss-mrp-simdatatreemapprops.png)  
@@ -34,7 +35,8 @@ As mentioned previously, you can export simulated data to an Excel file, creatin
   
 After all controls are bound to real data, simulated tables that are no longer in use are automatically removed from the mobile report. You can't remove simulated tables still referenced by elements on the design surface.  
   
->**Note**: Simulated data does not add to the overall mobile report footprint because it's not serialized with the mobile report, but generated on-the-fly at runtime.  
+> [!NOTE]  
+> Simulated data does not add to the overall mobile report footprint because it's not serialized with the mobile report, but generated on-the-fly at runtime.  
   
 ### See also  
 - [Create and publish mobile reports with SQL Server Mobile Report Publisher](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)  

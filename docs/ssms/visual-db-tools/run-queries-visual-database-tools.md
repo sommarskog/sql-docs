@@ -1,23 +1,18 @@
 ---
-description: "Run Queries (Visual Database Tools)"
 title: Run Queries
-ms.custom: seo-lt-2019
-ms.date: 01/19/2017
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "queries [SQL Server], executing"
-  - "executing queries [SQL Server]"
-ms.assetid: 6c175c0e-55de-4bff-a53f-505c306abe25
+description: "Run Queries (Visual Database Tools)"
 author: markingmyname
 ms.author: maghan
-ms.reviewer: 
-
+ms.date: 01/19/2017
+ms.service: sql
+ms.subservice: ssms
+ms.topic: conceptual
+helpviewer_keywords:
+  - "queries [SQL Server], executing"
+  - "executing queries [SQL Server]"
 ---
 # Run Queries (Visual Database Tools)
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server](../../includes/applies-to-version/sqlserver.md)]
 When you have finished designing your query, you can run it.  
   
 ### To execute a query  

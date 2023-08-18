@@ -1,20 +1,18 @@
 ---
-title: "PolyBase scale-out groups | Microsoft Docs"
+title: "PolyBase scale-out groups"
 description: Use the PolyBase Group feature to create a cluster of SQL Server instances. This improves query performance for large data sets from external sources.
-ms.date: 04/23/2019
-ms.prod: sql
-ms.technology: polybase
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.date: 02/22/2022
+ms.service: sql
+ms.subservice: polybase
 ms.topic: conceptual
 f1_keywords:
-  - sql13.swb.polybasescaleoutcluster.page.f1
-helpviewer_keywords: 
+  - "sql13.swb.polybasescaleoutcluster.page.f1"
+helpviewer_keywords:
   - "PolyBase"
   - "PolyBase, scale-out groups"
   - "scale-out PolyBase"
-ms.assetid: c7810135-4d63-4161-93ab-0e75e9d10ab5
-author: MikeRayMSFT
-ms.author: mikeray
-ms.reviewer: ""
 monikerRange: ">= sql-server-2016"
 ---
 # PolyBase scale-out groups
@@ -23,6 +21,8 @@ monikerRange: ">= sql-server-2016"
 
 A standalone SQL Server instance with PolyBase can become a performance bottleneck when dealing with massive data sets in Hadoop or Azure Blob Storage. The PolyBase Group feature allows you to create a cluster of SQL Server instances to process large data sets from external data sources, such as Hadoop or Azure Blob Storage, in a scale-out fashion for better query performance. You can now scale your SQL Server compute to meet the performance demands of your workload. PolyBase Scale-out Groups, a group of SQL Server instances, enable you to process large external data sets in a parallel processing architecture. Data loading and query performance can increase linearly as you add more SQL Server instances to the group. 
   
+[!INCLUDE[polybase-scaleout-banner-retirement](../../includes/polybase-scaleout-banner-retirement.md)]
+
 See [Get started with PolyBase](./polybase-guide.md) and [PolyBase Guide](../../relational-databases/polybase/polybase-guide.md).
   
 ![Diagram showing PolyBase scale-out groups.](../../relational-databases/polybase/media/polybase-scale-out-groups.png "PolyBase scale-out groups")  
@@ -39,10 +39,10 @@ A compute node contains the SQL Server instance that assists with scale-out quer
 
 When querying external SQL Server, Oracle or Teradata instances, partitioned tables will benefit from scale-out reads. Each node in a PolyBase scale-out group can spin up to 8 readers to read external data. And each reader is assigned one partition to read in the external table. 
 
-For e.g., let's say you have an external SQL Server table with 12 monthly partitions and a 3-node PolyBase scale-out group, each node will use 4 PolyBase readers to process each of the 12 partitions. This is illustrated in the image below. 
+For example, say you have an external SQL Server table with 12 monthly partitions and a 3-node PolyBase scale-out group, each node will use 4 PolyBase readers to process each of the 12 partitions. This is illustrated in the following image. 
 
 > [!NOTE]
->  that this is different from scale-out reads over Hadoop. 
+> This is different from scale-out reads over Hadoop. 
 
 ![PolyBase scale-out reads](../../relational-databases/polybase/media/polybase-scale-out-groups2.png "PolyBase scale-out groups")
   

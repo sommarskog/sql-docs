@@ -1,37 +1,23 @@
 ---
-description: "Change Data Capture and Other SQL Server Features"
-title: "Change Data Capture and Other SQL Server Features"
-ms.custom: seo-dt-2019
+title: "Change data capture and Other Features"
+description: "Learn how change data capture and functions with other features such as change tracking and database mirroring."
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "01/02/2019"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: 
+ms.service: sql
 ms.topic: conceptual
-helpviewer_keywords: 
-  - "change data capture [SQL Server], other SQL Server features and"
-ms.assetid: 7dfcb362-1904-4578-8274-da16681a960e
-author: rothja
-ms.author: jroth
+helpviewer_keywords:
+  - "change data capture, other features and"
 ---
-# Change Data Capture and Other SQL Server Features
-[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
-  This topic describes how the following features interact with change data capture:  
-  
--   [Change tracking](#ChangeTracking)  
-  
--   [Database mirroring](#DatabaseMirroring)  
-  
--   [Transactional replication](#TransReplication)  
-  
--   [Restoring or Attaching a Database Enabled for Change Data Capture](#RestoreOrAttach)
+# Change data capture and other features
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
--   [Contained Databases](#Contained)
-  
-##  <a name="ChangeTracking"></a> Change Tracking  
+This topic describes how the following features interact with change data capture:  
+    
+##  <a name="ChangeTracking"></a> Change tracking  
  Change data capture and [change tracking](../../relational-databases/track-changes/about-change-tracking-sql-server.md) can be enabled on the same database. No special considerations are required. For more information, see [Work with Change Tracking &#40;SQL Server&#41;](../../relational-databases/track-changes/work-with-change-tracking-sql-server.md).  
   
-##  <a name="DatabaseMirroring"></a> Database Mirroring  
+##  <a name="DatabaseMirroring"></a> Database mirroring  
  A database that is enabled for change data capture can be mirrored. To ensure that capture and cleanup happen automatically after a failover, follow these steps:  
   
 1.  Ensure that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent is running on the new principal server instance.  
@@ -54,7 +40,7 @@ ms.author: jroth
   
  The **proc exec** option of transactional replication is not available when change data capture is enabled.  
   
-##  <a name="RestoreOrAttach"></a> Restoring or Attaching a Database Enabled for Change Data Capture  
+##  <a name="RestoreOrAttach"></a> Database restore or attach
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uses the following logic to determine if change data capture remains enabled after a database is restored or attached:  
   
 -   If a database is restored to the same server with the same database name, change data capture remains enabled.  
@@ -65,19 +51,41 @@ ms.author: jroth
   
 -   If a database is detached and attached to the same server or another server, change data capture remains enabled.  
   
--   If a database is attached or restored with the **KEEP_CDC** option to any edition other than Standard, Enterprise, or Managed Instance, the operation is blocked because change data capture requires [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard, Enterprise, or Managed Instance editions. Error message 934 is displayed:  
+-   If a database is attached or restored with the **KEEP_CDC** option to any edition other than Standard, Enterprise, or SQL Managed Instance, the operation is blocked because change data capture requires [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard, Enterprise, or SQL Managed Instance editions. Error message 934 is displayed:  
   
-     `SQL Server cannot load database '%.*ls' because Change Data Capture is enabled. The currently installed edition of SQL Server does not support Change Data Capture. Either restore database without KEEP_CDC option, or upgrade the instance to one that supports Change Data Capture.`  
+     `SQL Server cannot load database '%.*ls' because change data capture is enabled. The currently installed edition of SQL Server does not support change data capture. Either restore database without KEEP_CDC option, or upgrade the instance to one that supports change data capture.`  
   
  You can use [sys.sp_cdc_disable_db](../../relational-databases/system-stored-procedures/sys-sp-cdc-disable-db-transact-sql.md) to remove change data capture from a restored or attached database.  
+ 
+ After restoring a database on Azure SQL Managed Instance, CDC will remain enabled, but you must ensure that the scan and cleanup jobs are added and running. You can manually add the jobs by running [sys.sp_cdc_add_job](../system-stored-procedures/sys-sp-cdc-add-job-transact-sql.md). 
   
-##  <a name="Contained"></a> Contained Databases  
+##  <a name="Contained"></a> Contained databases  
  Change data capture is not supported in [contained databases](../../relational-databases/databases/contained-databases.md).
+ 
+##  <a name="Serverless"></a> Serverless databases  
+  If a serverless database is enabled for Change Data Capture (CDC) is in pause state, CDC will not run. The CDC scan shall not affect auto-pause. 
   
-## Change Data Capture and Always On  
- When you use Always On, change enumeration should be done on the Secondary replication to reduce the disk load on the primary.  
-  
+## <a name="AlwaysOn"></a> Availability groups 
+ 
+ When you use Always On availability groups, change enumeration should be done on the secondary replica to reduce disk load on the primary.  
+
+## <a name="FailoverAzureSQLDB"></a> Failover (local & GeoDR) in Azure SQL Database 
+ 
+In case of local as well as GeoDR failover scenarios, if the database is enabled for change data capture (CDC), capture and cleanup happen automatically on the new primary, following the failover. 
+
+##  <a name="Point-in-time-restore"></a> Point-in-time-restore (PITR) in Azure SQL Database
+
+If you enabled change data capture (CDC) on your Azure SQL Database as SQL user, point-in-time-restore (PITR) retains the CDC as well in the restored DB, unless it is restored to sub-core SLO. If restored to sub-core SLO, CDC artifacts will not be available.
+
+If you enabled CDC on your Azure SQL Database as an Azure AD user, PITR retains the CDC if restored to same or higher SLO than the source database. PITR to sub-core SLO will fail as mentioned under [known limitations and issues](./about-change-data-capture-sql-server.md?#known-limitations-and-issues).
+
+##  <a name="AzureActiveDirectory"></a> Azure Active Directory in Azure SQL Database 
+
+If you create a database in Azure SQL Database as an Azure AD user and enable change data capture on it, a SQL user (e.g. even sys admin role) will not be able to disable/make changes to change data capture artifacts. However, another Azure AD user will be able to enable/disable change data capture on the same database. 
+
+Similarly, if you create an Azure SQL Database as a SQL user, enabling/disabling change data capture as an Azure AD user won't work. 
+
+
 ## See Also  
- [Administer and Monitor Change Data Capture &#40;SQL Server&#41;](../../relational-databases/track-changes/administer-and-monitor-change-data-capture-sql-server.md)  
-  
+ [Administer and Monitor change data capture &#40;SQL Server&#41;](../../relational-databases/track-changes/administer-and-monitor-change-data-capture-sql-server.md)  
   

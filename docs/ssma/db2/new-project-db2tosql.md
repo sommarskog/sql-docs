@@ -1,15 +1,14 @@
 ---
+title: "New Project (DB2ToSQL)"
 description: "New Project (DB2ToSQL)"
-title: "New Project (DB2ToSQL) | Microsoft Docs"
-ms.prod: sql
-ms.custom: ""
+author: cpichuka
+ms.author: cpichuka
 ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.technology: ssma
+ms.service: sql
+ms.subservice: ssma
 ms.topic: conceptual
-ms.assetid: 66437b45-4686-4fc7-a91b-ebde45e0f1b0
-author: "nahk-ivanov"
-ms.author: "alexiva"
+f1_keywords:
+  - "ssma.db2.workspacedialog.f1"
 ---
 # New Project (DB2ToSQL)
 Use the **New Project** dialog box to create a new SSMA project. To access the **New Project** dialog box, on the **File** menu, click **New Project**.  

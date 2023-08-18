@@ -1,19 +1,16 @@
 ---
+title: "FILE_NAME (Transact-SQL)"
 description: "FILE_NAME (Transact-SQL)"
-title: "FILE_NAME (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: markingmyname
+ms.author: maghan
 ms.date: "03/03/2017"
-ms.prod: sql
-ms.prod_service: "sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "FILE_NAME_TSQL"
   - "FILE_NAME"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "viewing file names"
   - "file names [SQL Server], FILE_NAME"
   - "IDs [SQL Server], files"
@@ -23,16 +20,15 @@ helpviewer_keywords:
   - "identification numbers [SQL Server], files"
   - "FILE_NAME function"
   - "logical file names [SQL Server]"
-ms.assetid: 68b298aa-ce47-4af5-b59f-9a1b46d48326
-author: cawrites
-ms.author: chadam
+dev_langs:
+  - "TSQL"
 ---
 # FILE_NAME (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdbmi.md)]
 
 This function returns the logical file name for a given file identification (ID) number.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -65,7 +61,7 @@ GO
 ```
 File Name 1                File Name 2  
 -------------------------  ------------------------  
-AdventureWorks2012_Data    AdventureWorks2012_Log  
+AdventureWorks2022_Data    AdventureWorks2022_Log  
 
 (1 row(s) affected)
 ``` 

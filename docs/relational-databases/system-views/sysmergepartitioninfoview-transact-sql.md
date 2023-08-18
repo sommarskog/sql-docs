@@ -1,23 +1,19 @@
 ---
+title: "sysmergepartitioninfoview (Transact-SQL)"
 description: "sysmergepartitioninfoview (Transact-SQL)"
-title: "sysmergepartitioninfoview (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "03/06/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: replication
+ms.service: sql
+ms.subservice: replication
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sysmergepartitioninfoview"
   - "sysmergepartitioninfoview_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sysmergepartitioninfoview view"
-ms.assetid: 714e2935-1bc7-4901-aea2-64b1bbda03d6
-author: "stevestein"
-ms.author: "sstein"
+dev_langs:
+  - "TSQL"
 ---
 # sysmergepartitioninfoview (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

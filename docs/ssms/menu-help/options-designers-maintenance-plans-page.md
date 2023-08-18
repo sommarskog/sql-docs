@@ -1,21 +1,17 @@
 ---
-description: "Options (Designers - Maintenance Plans Page)"
 title: "Options (Designers - Maintenance Plans Page)"
-ms.custom: seo-lt-2019
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: "sql-tools"
-ms.reviewer: ""
-ms.technology: ssms
-ms.topic: conceptual
-f1_keywords: 
-  - "VS.ToolsOptionsPages.Designers.MaintenancePlans"
-ms.assetid: 4445ae87-5eaa-4911-aec3-905610592005
+description: "Options (Designers - Maintenance Plans Page)"
 author: "markingmyname"
 ms.author: "maghan"
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: ssms
+ms.topic: ui-reference
+f1_keywords:
+  - "VS.ToolsOptionsPages.Designers.MaintenancePlans"
 ---
 # Options (Designers - Maintenance Plans Page)
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Use the **Options** dialog box to determine the default behavior of the designer when new shapes are added to the design surface. On the **Tools** menu, click **Options**, expand **Designers**, and select **Maintenance Plans**.  
   
 ## UI element list  

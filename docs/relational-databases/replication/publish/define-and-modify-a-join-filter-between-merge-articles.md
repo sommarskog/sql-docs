@@ -1,21 +1,18 @@
 ---
 title: "Define & modify join filter between Merge articles"
 description: Learn how to define and modify the join filter used between Merge articles using SQL Server Management Studio (SSMS) or Transact-SQL (T-SQL).
-ms.custom: seo-lt-2019
+author: "MashaMSFT"
+ms.author: "mathoma"
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: replication
+ms.service: sql
+ms.subservice: replication
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "filters [SQL Server replication], join"
   - "merge replication join filters [SQL Server replication]"
   - "modifying filters, join"
   - "join filters"
-ms.assetid: f7f23415-43ff-40f5-b3e0-0be1d148ee5b
-author: "MashaMSFT"
-ms.author: "mathoma"
 ---
 # Define and Modify a Join Filter Between Merge Articles
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -81,8 +78,8 @@ ms.author: "mathoma"
   
     -   By default, merge replication processes changes on a row-by-row basis during synchronization. To have related changes in rows of both the filtered table and the joined table processed as a unit, select **Logical record** ([!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] and later versions only). This option is available only if the article and publication requirements for using logical records are met. For more information see the section "Considerations for Using Logical Records" in [Group Changes to Related Rows with Logical Records](../../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md).  
   
-5.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
-  
+5.  Select **OK**.
+
 6.  If you are in the **Publication Properties - \<Publication>** dialog box, click **OK** to save and close the dialog box.  
 
 #### To modify a join filter  
@@ -91,7 +88,7 @@ ms.author: "mathoma"
   
 2.  In the **Edit Join** dialog box, modify the filter.  
   
-3.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+3.  Select **OK**.
   
 #### To delete a join filter  
   

@@ -1,30 +1,26 @@
 ---
+title: "SYMKEYPROPERTY (Transact-SQL)"
 description: "SYMKEYPROPERTY (Transact-SQL)"
-title: "SYMKEYPROPERTY (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
-ms.topic: reference
-f1_keywords: 
-  - "SYMKEYPROPERTY_TSQL"
-  - "SYMKEYPROPERTY"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "SYMKEYPROPERTY"
-ms.assetid: 3d1f7075-3a3c-4660-8cd0-ed938b86fecd
 author: VanMSFT
 ms.author: vanto
+ms.date: "03/06/2017"
+ms.service: sql
+ms.subservice: t-sql
+ms.topic: reference
+f1_keywords:
+  - "SYMKEYPROPERTY_TSQL"
+  - "SYMKEYPROPERTY"
+helpviewer_keywords:
+  - "SYMKEYPROPERTY"
+dev_langs:
+  - "TSQL"
 ---
 # SYMKEYPROPERTY (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Returns the algorithm of a symmetric key created from an EKM module.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

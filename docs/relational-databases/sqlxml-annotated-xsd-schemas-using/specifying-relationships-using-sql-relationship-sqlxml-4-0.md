@@ -1,34 +1,18 @@
 ---
 title: "Set relationships with sql:relationship (SQLXML)"
-description: Learn how to use the sql:relationship annotation in SQLXML 4.0 to specify relationships between XML elements.
+description: "Learn how to use the sql:relationship annotation in SQLXML 4.0 to specify relationships between XML elements."
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "03/16/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: xml
+ms.service: sql
+ms.subservice: xml
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "IDREFS relationships [SQLXML]"
   - "parent attribute [SQLXML]"
   - "element relationships [SQLXML]"
   - "multiple element relationships"
   - "attribute relationships [SQLXML]"
-  - "sql:relationship"
-  - "relationship chains [SQLXML]"
-  - "IDREF relationships [SQLXML]"
-  - "parent-child relationships [SQLXML]"
-  - "relationship annotation"
-  - "XSD schemas [SQLXML], relationships"
-  - "annotated XSD schemas, relationships"
-  - "relationships [SQLXML], specifying"
-  - "unnamed relationships"
-  - "ID relationships [SQLXML]"
-  - "hierarchical relationships [SQLXML]"
-  - "named relationships [SQLXML]"
-ms.assetid: 98820afa-74e1-4e62-b336-6111a3dede4c
-author: rothja
-ms.author: jroth
-ms.reviewer: ""
-ms.custom: "seo-lt-2019"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Specifying Relationships Using sql:relationship (SQLXML 4.0)
@@ -528,7 +512,7 @@ Emp2(SalesPersonID, FirstName, LastName, ReportsTo)
 1.  Create these tables in the AdventureWorks database:  
   
     ```  
-    USE AdventureWorks  
+    USE AdventureWorks2022;
     CREATE TABLE Sales.Emp1 (  
            SalesPersonID int primary key,   
            FirstName  varchar(20),   

@@ -1,29 +1,25 @@
 ---
-description: "DENY Object Permissions (Transact-SQL)"
-title: "DENY Object Permissions (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/10/2016"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
-ms.topic: reference
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "DENY statement, objects"
-  - "table permissions [SQL Server]"
-ms.assetid: 0b8d3ddc-38c0-4241-b7bb-ee654a5081aa
+title: "DENY Object Permissions (Transact-SQL)"
+description: DENY Object Permissions (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
+ms.date: "06/10/2016"
+ms.service: sql
+ms.subservice: t-sql
+ms.topic: reference
+helpviewer_keywords:
+  - "DENY statement, objects"
+  - "table permissions [SQL Server]"
+dev_langs:
+  - "TSQL"
 ---
 # DENY Object Permissions (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Denies permissions on a member of the OBJECT class of securables. These are the members of the OBJECT class: tables, views, table-valued functions, stored procedures, extended stored procedures, scalar functions, aggregate functions, service queues, and synonyms.  
 
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -70,7 +66,7 @@ PRIVILEGES
  Specifies the name of a column in a table, view, or table-valued function on which the permission is being denied. The parentheses **( )** are required. Only SELECT, REFERENCES, and UPDATE permissions can be denied on a column. *column* can be specified in the permissions clause or after the securable name.  
   
 > [!CAUTION]  
->  A table-level DENY does not take precedence over a column-level GRANT. This inconsistency in the permissions hierarchy has been preserved for backward compatibility. In SQL Server this behavior is different if the Server is configured to run with the [Common Criteria Compliance Enabled Server Configuration](/../../database-engine/configure-windows/common-criteria-compliance-enabled-server-configuration-option.md). However, this should generally only be used with caution and not as a general practice.
+>  A table-level DENY does not take precedence over a column-level GRANT. This inconsistency in the permissions hierarchy has been preserved for backward compatibility. In SQL Server this behavior is different if the Server is configured to run with the [Common Criteria Compliance Enabled Server Configuration](../../database-engine/configure-windows/common-criteria-compliance-enabled-server-configuration-option.md). However, this should generally only be used with caution and not as a general practice.
   
  ON [ OBJECT **::** ] [ *schema_name* ] **.** *object_name*  
  Specifies the object on which the permission is being denied. The OBJECT phrase is optional if *schema_name* is specified. If the OBJECT phrase is used, the scope qualifier (**::**) is required. If *schema_name* is not specified, the default schema is used. If *schema_name* is specified, the schema scope qualifier (**.**) is required.  
@@ -172,5 +168,4 @@ GO
  [sys.fn_builtin_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md)   
  [HAS_PERMS_BY_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/has-perms-by-name-transact-sql.md)   
  [sys.fn_my_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md)  
-  
   

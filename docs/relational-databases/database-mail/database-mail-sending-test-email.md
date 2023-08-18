@@ -1,19 +1,15 @@
 ---
+title: "Send a test email with database mail"
 description: "Send a test email with database mail"
-title: "Send a test email with database mail | Microsoft Docs"
-ms.custom: ""
+author: MashaMSFT
+ms.author: mathoma
 ms.date: "04/22/2019"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: 
+ms.service: sql
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "architecture [SQL Server], Database Mail"
   - "Database Mail [SQL Server], architecture"
   - "Database Mail [SQL Server], components"
-author: MashaMSFT
-ms.author: mathoma
 ---
 # Send a test email with database mail  
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -27,7 +23,7 @@ You must be a member of the sysadmin fixed server role to use the Send Test E-Ma
 ## Procedure
 
 1. Using Object Explorer in [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md), connect to an instance of SQL Server Database Engine where Database Mail is configured, expand Management, right-click Database Mail, and then select Send Test E-Mail. If no Database Mail profiles exist, a dialog prompts the user to create a profile and opens the Database Mail Configuration Wizard.
-1. In the **Send Test E-Mail** from <instance name> dialog box, in the Database Mail Profile box select the profile you want to test.
+1. In the **Send Test E-Mail** from \<instance name\> dialog box, in the Database Mail Profile box select the profile you want to test.
 1. In the **To** box, type the e-mail name of the recipient of the test e-mail.
 1. In the **Subject** box, type the subject line for the test e-mail. Change the default subject to better identify your e-mail for troubleshooting.
 1. In the **Body** box, type to body of the test e-mail. Change the default subject to better identify your e-mail for troubleshooting.

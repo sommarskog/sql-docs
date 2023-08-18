@@ -1,24 +1,21 @@
 ---
-description: "sys.dm_os_buffer_pool_extension_configuration (Transact-SQL)"
-title: "sys.dm_os_buffer_pool_extension_configuration (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "09/09/2017"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: system-objects
+title: "sys.dm_os_buffer_pool_extension_configuration (Transact-SQL)"
+description: sys.dm_os_buffer_pool_extension_configuration (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
+ms.date: "02/27/2023"
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "dm_os_buffer_pool_extension_configuration"
   - "sys.dm_os_buffer_pool_extension_configuration_TSQL"
   - "dm_os_buffer_pool_extension_configuration_TSQL"
   - "sys.dm_os_buffer_pool_extension_configuration"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.dm_os_buffer_pool_extension_configuration dynamic management view"
-ms.assetid: d52cc481-4d29-4f33-b63d-231ec35d092f
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+dev_langs:
+  - "TSQL"
 ---
 # sys.dm_os_buffer_pool_extension_configuration (Transact-SQL)
 
@@ -35,11 +32,14 @@ ms.author: wiassaf
 |state|**int**|The state of the buffer pool extension feature. Is not nullable.<br /><br /> 0 - Buffer pool extension disabled<br /><br /> 1 - Buffer pool extension disabling<br /><br /> 2 - Reserved for the future use<br /><br /> 3 - Buffer pool extension enabling<br /><br /> 4 - Reserved for the future use<br /><br /> 5 - Buffer pool extension enabled|  
 |state_description|**nvarchar**(60)|Describes the state of the buffer pool extension feature. Is nullable.<br /><br /> 0 = BUFFER POOL EXTENSION DISABLED<br /><br /> 5 = BUFFER POOL EXTENSION ENABLED|
 |current_size_in_kb|**bigint**|Current size of the buffer pool extension file. Is not nullable.|
-| &nbsp; | &nbsp; | &nbsp; |
 
 ## Permissions  
  Requires VIEW SERVER STATE permission on the server.  
   
+### Permissions for SQL Server 2022 and later
+
+Requires VIEW SERVER PERFORMANCE STATE permission on the server.
+
 ## Examples  
   
 ### A. Returning configuration buffer pool extension information  
@@ -60,7 +60,7 @@ WHERE is_in_bpool_extension <> 0
 ;  
 ```  
   
-## See Also  
+## See also  
  [Buffer Pool Extension](../../database-engine/configure-windows/buffer-pool-extension.md)   
  [sys.dm_os_buffer_descriptors &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-buffer-descriptors-transact-sql.md)  
   

@@ -1,27 +1,25 @@
 ---
-description: "sys.dm_os_loaded_modules (Transact-SQL)"
-title: "sys.dm_os_loaded_modules (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/18/2017"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: system-objects
+title: "sys.dm_os_loaded_modules (Transact-SQL)"
+description: sys.dm_os_loaded_modules (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
+ms.date: "02/27/2023"
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.dm_os_loaded_modules"
   - "dm_os_loaded_modules"
   - "sys.dm_os_loaded_modules_TSQL"
   - "dm_os_loaded_modules_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.dm_os_loaded_modules dynamic management view"
-ms.assetid: 56c7743a-b568-4943-bd3b-73c57d9d641c
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+dev_langs:
+  - "TSQL"
+monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||>=aps-pdw-2016"
 ---
 # sys.dm_os_loaded_modules (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [sql-pdw](../../includes/applies-to-version/sql-pdw.md)]
 
   Returns a row for each module loaded into the server address space.  
   
@@ -47,7 +45,11 @@ ms.author: wiassaf
 ## Permissions  
  Requires VIEW SERVER STATE permission on the server.  
   
-## See Also  
+### Permissions for SQL Server 2022 and later
+
+Requires VIEW SERVER PERFORMANCE STATE permission on the server.
+
+## See also  
  [Dynamic Management Views and Functions &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [SQL Server Operating System Related Dynamic Management Views &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
   

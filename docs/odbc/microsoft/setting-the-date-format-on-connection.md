@@ -1,19 +1,15 @@
 ---
+title: "Setting the Date Format on Connection"
 description: "Setting the Date Format on Connection"
-title: "Setting the Date Format on Connection | Microsoft Docs"
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "date formats [ODBC]"
   - "ODBC driver for Oracle [ODBC], date formats"
-ms.assetid: ba0d5123-db52-448b-8e19-b7647ce4b361
-author: David-Engel
-ms.author: v-daenge
 ---
 # Setting the Date Format on Connection
 > [!IMPORTANT]  

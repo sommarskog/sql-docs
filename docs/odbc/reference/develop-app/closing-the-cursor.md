@@ -1,19 +1,15 @@
 ---
+title: "Closing the Cursor"
 description: "Closing the Cursor"
-title: "Closing the Cursor | Microsoft Docs"
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "cursors [ODBC], closing"
   - "closing cursors [ODBC]"
-ms.assetid: 4f19bf5e-6d8c-40ae-a975-cfd62a0790ec
-author: David-Engel
-ms.author: v-daenge
 ---
 # Closing the Cursor
 When an application has finished using a cursor, it calls **SQLCloseCursor** to close the cursor. For example:  

@@ -1,24 +1,21 @@
 ---
-description: "sys.dm_filestream_file_io_requests (Transact-SQL)"
-title: "sys.dm_filestream_file_io_requests (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/03/2017"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: system-objects
+title: "sys.dm_filestream_file_io_requests (Transact-SQL)"
+description: sys.dm_filestream_file_io_requests (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
+ms.date: "02/27/2023"
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.dm_filestream_file_io_requests"
   - "dm_filestream_file_io_requests"
   - "sys.dm_filestream_file_io_requests_TSQL"
   - "dm_filestream_file_io_requests_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.dm_filestream_file_io_requests catalog view"
-ms.assetid: d41e39a5-14d5-4f3d-a2e3-a822b454c1ed
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+dev_langs:
+  - "TSQL"
 ---
 # sys.dm_filestream_file_io_requests (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +39,11 @@ ms.author: wiassaf
 ## Permissions  
  Requires VIEW SERVER STATE permission on the server.  
   
-## See Also  
+### Permissions for SQL Server 2022 and later
+
+Requires VIEW SERVER PERFORMANCE STATE permission on the server.
+
+## See also  
  [Filestream and FileTable Dynamic Management Views &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/filestream-and-filetable-dynamic-management-views-transact-sql.md)  
   
   

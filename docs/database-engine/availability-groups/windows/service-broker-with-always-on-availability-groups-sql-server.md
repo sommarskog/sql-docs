@@ -1,18 +1,16 @@
 ---
 title: "Service Broker with availability groups"
-description: Contains information about configuring Service Broker with SQL Server Always On availability groups. 
-ms.custom: "seo-lt-2019"
+description: Contains information about configuring Service Broker with SQL Server Always On availability groups.
+author: MashaMSFT
+ms.author: mathoma
 ms.date: "05/17/2016"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: availability-groups
+ms.service: sql
+ms.subservice: availability-groups
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Service Broker, AlwaysOn Availability Groups"
+  - "Service Broker, Always On Availability Groups"
   - "Availability Groups [SQL Server], interoperability"
-ms.assetid: 881c20e5-1c99-44eb-b393-09fc5ea0f122
-author: cawrites
-ms.author: chadam
 ---
 # Service Broker with Always On Availability Groups (SQL Server)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -20,7 +18,7 @@ ms.author: chadam
   This topic contains information about configuring Service Broker to work with [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] in [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)].  
   
   
-##  <a name="ReceiveRemoteMessages"></a> Requirements for a Service in an Availability Group to Receive Remote Messages  
+##  <a name="ReceiveRemoteMessages"></a> Receive remote messages from other Service Broker instances  
   
 1.  **Ensure that the availability group possesses a listener.**  
   
@@ -49,7 +47,7 @@ ms.author: chadam
      For more information, see [CREATE ENDPOINT &#40;Transact-SQL&#41;](../../../t-sql/statements/create-endpoint-transact-sql.md).  
 
     > [!NOTE]  
-    SQL Server Service Broker is not MultiSubnet aware. Set `RegisterAllProvidersIP` to 0 and verify that the cluster has required permission in DNS to use static IP addresses. See [configure availability group listener](create-or-configure-an-availability-group-listener-sql-server.md) to learn more. Service Broker may delay message with status "CONVERSING" trying to use a disabled IP address.
+    > SQL Server Service Broker is not MultiSubnet aware. Set `RegisterAllProvidersIP` to 0 and verify that the cluster has required permission in DNS to use static IP addresses. See [configure availability group listener](create-or-configure-an-availability-group-listener-sql-server.md) to learn more. Service Broker may delay message with status "CONVERSING" trying to use a disabled IP address.
 
 3.  **Grant CONNECT permission on the endpoint.**  
   
@@ -68,7 +66,7 @@ ms.author: chadam
     > [!NOTE]  
     >  By default, each user database, including **msdb**, contains the route **AutoCreatedLocal**. This route matches any service name and broker instance and specifies that the message should be delivered within the current instance. **AutoCreatedLocal** has lower priority than routes that explicitly specify a specific service that communicates with a remote instance.  
   
-     For information about creating routes, see [Service Broker Routing Examples](https://msdn.microsoft.com/library/ms166090\(SQL.105\).aspx) (in the [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] version of Books Online) and [CREATE ROUTE &#40;Transact-SQL&#41;](../../../t-sql/statements/create-route-transact-sql.md).  
+     For information about creating routes, see [Service Broker Routing Examples](https://msdn.microsoft.com/library/ms166090\(SQL.105\).aspx) (in the [!INCLUDE[sql2008r2](../../../includes/sql2008r2-md.md)] version of Books Online) and [CREATE ROUTE &#40;Transact-SQL&#41;](../../../t-sql/statements/create-route-transact-sql.md).  
   
 ##  <a name="SendRemoteMessages"></a> Requirements for Sending Messages to a Remote Service in an Availability Group  
   

@@ -1,19 +1,16 @@
 ---
-description: "ALTER LOGIN (Transact-SQL)"
-title: "ALTER LOGIN (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: 01/10/2020
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
-ms.technology: t-sql
+title: "ALTER LOGIN (Transact-SQL)"
+description: ALTER LOGIN (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
+ms.date: 10/06/2021
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "ALTER_LOGIN_TSQL"
   - "ALTER LOGIN"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "ALTER LOGIN statement"
   - "change password"
   - "mapping logins [SQL Server]"
@@ -21,18 +18,17 @@ helpviewer_keywords:
   - "passwords [SQL Server], modifying"
   - "names [SQL Server], logins"
   - "modifying login accounts"
-ms.assetid: e247b84e-c99e-4af8-8b50-57586e1cb1c5
-author: VanMSFT
-ms.author: vanto
+dev_langs:
+  - "TSQL"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # ALTER LOGIN (Transact-SQL)
 
 Changes the properties of a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login account.
 
-![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
-[!INCLUDE[select-product](../../includes/select-product.md)]
+[!INCLUDE [select-product](../includes/select-product.md)]
 
 ::: moniker range=">=sql-server-2016||>=sql-server-linux-2017"
 
@@ -253,7 +249,6 @@ To unlock a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login, exe
 
 ```sql
 ALTER LOGIN [Mary5] WITH PASSWORD = '****' UNLOCK ;
-
 GO
 ```
 
@@ -264,6 +259,7 @@ ALTER LOGIN [Mary5] WITH CHECK_POLICY = OFF;
 ALTER LOGIN [Mary5] WITH CHECK_POLICY = ON;
 GO
 ```
+
 
 ### G. Changing the password of a login using HASHED
 
@@ -414,7 +410,7 @@ ALTER LOGIN John2 WITH CREDENTIAL = Custodian04;
 The following example maps the login `Mary5` to the EKM credential `EKMProvider1`.
 
 
-**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.
+**Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later.
 
 ```sql
 ALTER LOGIN Mary5
@@ -422,29 +418,11 @@ ADD CREDENTIAL EKMProvider1;
 GO
 ```
 
-### F. Unlocking a login
-
-To unlock a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login, execute the following statement, replacing \*\*\*\* with the desired account password.
-
-```sql
-ALTER LOGIN [Mary5] WITH PASSWORD = '****' UNLOCK ;
-
-GO
-```
-
-To unlock a login without changing the password, turn the check policy off and then on again.
-
-```sql
-ALTER LOGIN [Mary5] WITH CHECK_POLICY = OFF;
-ALTER LOGIN [Mary5] WITH CHECK_POLICY = ON;
-GO
-```
-
-### G. Changing the password of a login using HASHED
+### F. Changing the password of a login using HASHED
 
 The following example changes the password of the `TestUser` login to an already hashed value.
 
-**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.
+**Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later.
 
 ```sql
 ALTER LOGIN TestUser WITH
@@ -687,7 +665,7 @@ ALTER LOGIN John2 WITH CREDENTIAL = Custodian04;
 
 The following example maps the login `Mary5` to the EKM credential `EKMProvider1`.
 
-**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later, and Azure SQL Managed Instance.
+**Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later, and Azure SQL Managed Instance.
 
 ```sql
 ALTER LOGIN Mary5
@@ -717,7 +695,7 @@ GO
 
 The following example changes the password of the `TestUser` login to an already hashed value.
 
-**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later, and Azure SQL Managed Instance.
+**Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later, and Azure SQL Managed Instance.
 
 ```sql
 ALTER LOGIN TestUser WITH
@@ -869,7 +847,7 @@ ALTER LOGIN John2 WITH CREDENTIAL = Custodian04;
 
 The following example maps the login `Mary5` to the EKM credential `EKMProvider1`.
 
-**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.
+**Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later.
 
 ```sql
 ALTER LOGIN Mary5
@@ -883,23 +861,15 @@ To unlock a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login, exe
 
 ```sql
 ALTER LOGIN [Mary5] WITH PASSWORD = '****' UNLOCK ;
-
 GO
 ```
 
-To unlock a login without changing the password, turn the check policy off and then on again.
-
-```sql
-ALTER LOGIN [Mary5] WITH CHECK_POLICY = OFF;
-ALTER LOGIN [Mary5] WITH CHECK_POLICY = ON;
-GO
-```
 
 ### G. Changing the password of a login using HASHED
 
 The following example changes the password of the `TestUser` login to an already hashed value.
 
-**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.
+**Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later.
 
 ```sql
 ALTER LOGIN TestUser WITH
@@ -1081,7 +1051,7 @@ ALTER LOGIN John2 WITH CREDENTIAL = Custodian04;
 
 The following example maps the login `Mary5` to the EKM credential `EKMProvider1`.
 
-**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.
+**Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later.
 
 ```sql
 ALTER LOGIN Mary5
@@ -1111,7 +1081,7 @@ GO
 
 The following example changes the password of the `TestUser` login to an already hashed value.
 
-**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.
+**Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later.
 
 ```sql
 ALTER LOGIN TestUser WITH

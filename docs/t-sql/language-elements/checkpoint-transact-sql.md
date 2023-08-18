@@ -1,18 +1,16 @@
 ---
+title: "CHECKPOINT (Transact-SQL)"
 description: "CHECKPOINT (Transact-SQL)"
-title: "CHECKPOINT (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "07/27/2017"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "CHECKPOINT_TSQL"
   - "CHECKPOINT"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "events [SQL Server], checkpoints"
   - "automatic checkpoints"
   - "writing dirty pages to disk"
@@ -24,19 +22,18 @@ helpviewer_keywords:
   - "logs [SQL Server], checkpoints"
   - "manual checkpoints [SQL Server]"
   - "pages [SQL Server], checkpoints"
-ms.assetid: ccdfc689-ad4e-44c0-83f7-0f2cfcfb6406
-author: julieMSFT
-ms.author: jrasnick
+dev_langs:
+  - "TSQL"
 ---
 # CHECKPOINT (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Generates a manual checkpoint in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database to which you are currently connected.  
   
 > [!NOTE]  
 >  For information about different types of database checkpoints and checkpoint operation in general, see [Database Checkpoints &#40;SQL Server&#41;](../../relational-databases/logs/database-checkpoints-sql-server.md).  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

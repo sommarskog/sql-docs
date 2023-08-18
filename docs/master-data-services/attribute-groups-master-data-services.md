@@ -1,23 +1,19 @@
 ---
-description: "Attribute Groups (Master Data Services)"
 title: Attribute Groups
-ms.custom: ""
+description: "Attribute Groups (Master Data Services)"
+author: CordeliaGrey
+ms.author: jiwang6
 ms.date: "03/15/2017"
-ms.prod: sql
-ms.prod_service: "mds"
-ms.reviewer: ""
-ms.technology: master-data-services
+ms.service: sql
+ms.subservice: master-data-services
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "attribute groups [Master Data Services]"
   - "attribute groups [Master Data Services], about attribute groups"
-ms.assetid: 648b3d0b-e15a-45f9-8292-3a54a072e62c
-author: lrtoyou1223
-ms.author: lle
 ---
 # Attribute Groups (Master Data Services)
 
-[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], attribute groups help organize attributes in an entity. When an entity has lots of attributes, attribute groups improve the way an entity is displayed in the [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] web application.  
   

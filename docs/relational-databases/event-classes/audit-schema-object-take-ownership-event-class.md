@@ -1,21 +1,18 @@
 ---
+title: "Audit Schema Object Take Ownership Event Class"
 description: "Audit Schema Object Take Ownership Event Class"
-title: "Audit Schema Object Take Ownership Event Class | Microsoft Docs"
-ms.custom: ""
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: supportability
+ms.service: sql
+ms.subservice: supportability
 ms.topic: reference
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Audit Schema Object Take Ownership event class"
-ms.assetid: 66f39d9b-9ec2-48a7-8a9e-1b42931299c9
-author: "stevestein"
-ms.author: "sstein"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Audit Schema Object Take Ownership Event Class
-[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
   The **Audit Schema Object Take Ownership** event class occurs when the permissions to change the owner of schema object (such as a table, procedure, or function) is checked. This happens when the ALTER AUTHORIZATION statement is used to assign an owner to an object.  
   
 ## Audit Schema Object Take Ownership Event Class Data Columns  

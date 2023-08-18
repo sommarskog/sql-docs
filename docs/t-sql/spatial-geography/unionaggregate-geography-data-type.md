@@ -1,26 +1,22 @@
 ---
+title: "UnionAggregate (geography Data Type)"
 description: "UnionAggregate (geography Data Type)"
-title: "UnionAggregate (geography Data Type) | Microsoft Docs"
-ms.custom: ""
+author: MladjoA
+ms.author: mlandzic
 ms.date: "07/30/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "UnionAggregate"
   - "UnionAggregate_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "UnionAggregate method (geography)"
-ms.assetid: 1a3aeef1-5b0e-4ae8-aeb7-c4aab22f42ab
-author: MladjoA
-ms.author: mlandzic 
+dev_langs:
+  - "TSQL"
 ---
 # UnionAggregate (geography Data Type)
-[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 Performs a union operation on a set of geography objects.
   
@@ -51,8 +47,8 @@ UnionAggregate ( geography_operand )
 ## Examples  
  The following example performs a `UnionAggregate` on a set of **geography** location points within a city.  
   
- ```
- USE AdventureWorks2012  
+ ```sql
+ USE AdventureWorks2022  
  GO  
  SELECT City,  
  geography::UnionAggregate(SpatialLocation) AS SpatialLocation  

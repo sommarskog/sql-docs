@@ -1,23 +1,20 @@
 ---
+title: "STCurveToLine (geometry Data Type)"
 description: "STCurveToLine (geometry Data Type)"
-title: "STCurveToLine (geometry Data Type) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/03/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
-ms.topic: reference
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "STCurveToLine method (geometry)"
-ms.assetid: abc80b32-4152-4e10-b816-798b901e0ac5
 author: MladjoA
-ms.author: mlandzic 
+ms.author: mlandzic
+ms.date: "08/03/2017"
+ms.service: sql
+ms.subservice: t-sql
+ms.topic: reference
+helpviewer_keywords:
+  - "STCurveToLine method (geometry)"
+dev_langs:
+  - "TSQL"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=fabric"
 ---
 # STCurveToLine (geometry Data Type)
-[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance FabricSE FabricDW](../../includes/applies-to-version/sql-asdb-asdbmi-fabricse-fabricdw.md)]
 
 Returns a polygonal approximation of a **geometry** instance that contains circular arc segments.
   
@@ -53,7 +50,7 @@ Returns a polygonal approximation of a **geometry** instance that contains circu
 ### A. Using an Uninitialized Geometry Variable and Empty Instance  
  In the following example, the first **SELECT** statement uses an uninitialized **geometry** instance to call the `STCurveToLine` method, and the second **SELECT** statement uses an empty **geometry** instance. Thus, the method returns **NULL** to the first statement and a **GeometryCollection** collection to the second statement.  
   
-```
+```sql
  DECLARE @g geometry; 
  SET @g = @g.STCurveToLine(); 
  SELECT @g.STGeometryType(); 
@@ -64,7 +61,7 @@ Returns a polygonal approximation of a **geometry** instance that contains circu
 ### B. Using a LineString Instance  
  The **SELECT** statement in the following example uses a **LineString** instance to call the STCurveToLine method. Thus, the method returns a **LineString** instance.  
   
-```
+```sql
  DECLARE @g geometry; 
  SET @g = geometry::Parse('LINESTRING(1 3, 5 5, 4 3, 1 3)'); 
  SET @g = @g.STCurveToLine(); 
@@ -74,7 +71,7 @@ Returns a polygonal approximation of a **geometry** instance that contains circu
 ### C. Using a CircularString Instance  
  The first **SELECT** statement in the following example uses a **CircularString** instance to call the STCurveToLine method. Thus, the method returns a **LineString** instance. This **SELECT** statement also compares the lengths of the two instances, which are approximately the same.  Finally, the second **SELECT** statement returns the number of points for each instance.  It returns only 5 points for the **CircularString** instance, but 65 points for the **LineString**instance.  
   
-```
+```sql
  DECLARE @g1 geometry, @g2 geometry; 
  SET @g1 = geometry::Parse('CIRCULARSTRING(10 0, 0 10, -10 0, 0 -10, 10 0)'); 
  SET @g2 = @g1.STCurveToLine(); 
@@ -85,7 +82,7 @@ Returns a polygonal approximation of a **geometry** instance that contains circu
 ### D. Using a CurvePolygon Instance  
  The **SELECT** statement in the following example uses a **CurvePolygon** instance to call the STCurveToLine method. Thus, the method returns a **Polygon** instance.  
   
-```
+```sql
  DECLARE @g1 geometry, @g2 geometry; 
  SET @g1 = geometry::Parse('CURVEPOLYGON(CIRCULARSTRING(10 0, 0 10, -10 0, 0 -10, 10 0))'); 
  SET @g2 = @g1.STCurveToLine(); 

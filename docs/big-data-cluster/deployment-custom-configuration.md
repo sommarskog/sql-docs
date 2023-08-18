@@ -1,24 +1,26 @@
 ---
 title: Configure deployments
-titleSuffix: SQL Server big data clusters
+titleSuffix: SQL Server Big Data Clusters
 description: Learn how to customize a big data cluster deployment with configuration files that are built into the azdata management tool.
-author: MikeRayMSFT 
-ms.author: mikeray
-ms.reviewer: rajmera3
-ms.date: 02/11/2021
+author: HugoMSFT
+ms.author: hudequei
+ms.reviewer: wiassaf
+ms.date: 09/21/2021
+ms.service: sql
+ms.subservice: big-data-cluster
 ms.topic: conceptual
-ms.prod: sql
-ms.technology: big-data-cluster
 ---
 
-
-# Configure deployment settings for cluster resources and services
+# Configure deployment settings for Big Data Cluster resources and services
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
-> [!Note]
-> Big Data Clusters version CU9+ have support for configuration management functionality. This feature enables post-deployment configurations and provides increased visibility and configurability of the cluster. Versions CU8 and lower do not have this functionality and configurations can only be done at deployment time.
+
+[!INCLUDE[big-data-clusters-banner-retirement](../includes/bdc-banner-retirement.md)]
 
 Starting from a pre-defined set of configuration profiles that are built into the [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] management tool, you can easily modify the default settings to better suit your BDC workload requirements. The structure of the configuration files enables you to granularly update settings for each service of the resource.
+
+> [!Note]
+> Big Data Clusters version CU9+ have support for configuration management functionality. This feature enables post-deployment configurations and provides increased visibility and configurability of the cluster. Versions CU8 and lower do not have this functionality and configurations can only be done at deployment time.
 
 Watch this 13-minute video for an overview of big data cluster configuration:
 
@@ -180,6 +182,9 @@ To customize your cluster deployment configuration files, you can use any JSON f
    azdata bdc config init --source aks-dev-test --target custom-bdc
    ```
 
+> [!WARNING]
+> The parameter ```imagePullPolicy``` is required to be set as ```"Always"``` in the deployment profile control.json file.
+
 ## <a id="docker"></a> Change default Docker registry, repository, and images tag
 
 The built-in configuration files, specifically control.json includes a `docker` section where container registry, repository, and images tag are pre-populated. By default, images required for big data clusters are in the Microsoft Container Registry (`mcr.microsoft.com`), in the `mssql/bdc` repository:
@@ -334,7 +339,7 @@ First create a patch.json file as below that adjust the *storage* settings
                                 }
                         }
                 },
-		{
+        {
                         "op": "add",
                         "path": "spec.resources.master.spec.storage",
                         "value": {

@@ -1,20 +1,21 @@
 ---
-title: Monitor cluster with Azure Data Studio
+title: Monitor Big Data Clusters with Azure Data Studio
 titleSuffix: SQL Server Big Data Clusters
-description: Monitoring cluster with Azure Data Studio on SQL Server 2019 big data cluster.
-author: cloudmelon
-ms.author: melqin
-ms.reviewer: mikeray
-ms.metadata: seo-lt-2019
+description: Monitoring cluster with Azure Data Studio on SQL Server 2019 Big Data Clusters.
+author: HugoMSFT
+ms.author: hudequei
+ms.reviewer: wiassaf
 ms.date: 09/22/2020
+ms.service: sql
+ms.subservice: big-data-cluster
 ms.topic: conceptual
-ms.prod: sql
-ms.technology: big-data-cluster
 ---
 
-# Monitor cluster status with Azure Data Studio
+# Monitor Big Data Clusters status by using Azure Data Studio
 
 This article explains how to view the status of a big data cluster using Azure Data Studio.
+
+[!INCLUDE[big-data-clusters-banner-retirement](../includes/bdc-banner-retirement.md)]
 
 ## <a id="datastudio"></a> Use Azure Data Studio
 
@@ -24,7 +25,7 @@ After downloading the latest **insiders build** of [Azure Data Studio](../azure-
 
 1. Right-click on the big data cluster endpoint, and click **Manage**.
 
-   ![right click manage](media/view-cluster-status/right-click-manage.png)
+   ![right-click manage](media/view-cluster-status/right-click-manage.png)
 
 1. Select the **SQL Server Big Data Cluster** tab to access the big data cluster dashboard.
 
@@ -78,4 +79,4 @@ You can directly click on these links. You will be required to authenticate when
 
 ## Next steps
 
-For more information about [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], see [What are [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]?](big-data-cluster-overview.md).
+For more information about [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], see [Introducing [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]](big-data-cluster-overview.md).

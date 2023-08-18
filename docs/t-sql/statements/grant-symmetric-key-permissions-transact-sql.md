@@ -1,35 +1,32 @@
 ---
-description: "GRANT Symmetric Key Permissions (Transact-SQL)"
-title: "GRANT Symmetric Key Permissions (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "GRANT Symmetric Key Permissions (Transact-SQL)"
+description: GRANT Symmetric Key Permissions (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "08/10/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "symmetric keys [SQL Server], permissions"
   - "permissions [SQL Server], symmetric keys"
   - "encryption [SQL Server], symmetric keys"
   - "GRANT statement, symmetric keys"
   - "cryptography [SQL Server], symmetric keys"
   - "granting permissions [SQL Server], symmetric keys"
-ms.assetid: 5c61557f-67ae-4e55-b86d-713575b27cea
-author: VanMSFT
-ms.author: vanto
-monikerRange: "= azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017||= azure-sqldw-latest"
+dev_langs:
+  - "TSQL"
+monikerRange: "=azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest"
 ---
 # GRANT Symmetric Key Permissions (Transact-SQL)
-[!INCLUDE [sql-asdb-asa](../../includes/applies-to-version/sql-asdb-asa.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   Grants permissions on a symmetric key. 
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md) 
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md) 
 
-[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/\synapse-analytics-od-unsupported-syntax.md)] 
+> [!NOTE]
+> [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)] 
   
 ## Syntax  
   
@@ -129,7 +126,7 @@ GRANT permission [ ,...n ]
  The following example grants `ALTER` permission on the symmetric key `SamInventory42` to the database user `HamidS`.  
   
 ```sql
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GRANT ALTER ON SYMMETRIC KEY::SamInventory42 TO HamidS;  
 GO  
 ```  

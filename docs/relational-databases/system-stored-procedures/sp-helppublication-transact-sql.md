@@ -1,28 +1,26 @@
 ---
+title: "sp_helppublication (Transact-SQL)"
 description: "sp_helppublication (Transact-SQL)"
-title: "sp_helppublication (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: 10/18/2019
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: replication
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_helppublication_TSQL"
-  - "sp_helppublication"
-helpviewer_keywords: 
-  - "sp_helppublication"
-ms.assetid: e801c3f0-dcbd-4b4a-b254-949a05f63518
 author: markingmyname
 ms.author: maghan
+ms.date: 10/05/2021
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_helppublication_TSQL"
+  - "sp_helppublication"
+helpviewer_keywords:
+  - "sp_helppublication"
+dev_langs:
+  - "TSQL"
 ---
 # sp_helppublication (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Returns information about a publication. For a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publication, this stored procedure is executed at the Publisher on the publication database. For an Oracle publication, this stored procedure is executed at the Distributor on any database.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -38,7 +36,7 @@ sp_helppublication [ [ @publication = ] 'publication' ]
  Is the name of the publication to be viewed. *publication* is sysname, with a default of **%**, which returns information about all publications.  
   
 `[ @found = ] 'found' OUTPUT`
- Is a flag to indicate returning rows. *found*is **int** and an OUTPUT parameter, with a default of **23456**. **1** indicates the publication is found. **0** indicates the publication is not found.  
+ Is a flag to indicate returning rows. *found* is **int** and an OUTPUT parameter, with a default of **23456**. **1** indicates the publication is found. **0** indicates the publication is not found.  
   
 `[ @publisher = ] 'publisher'`
  Specifies a non- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publisher. *publisher* is sysname, with a default of NULL.  
@@ -86,7 +84,7 @@ sp_helppublication [ [ @publication = ] 'publication' ]
 |conflict_retention|**int**|Specifies the conflict retention period, in days.|  
 |conflict_policy|**int**|Specifies the conflict resolution policy followed when the queued updating subscriber option is used. Can be one of these values:<br /><br /> **1** = Publisher wins the conflict.<br /><br /> **2** = Subscriber wins the conflict.<br /><br /> **3** = Subscription is reinitialized.|  
 |queue_type||Specifies which type of queue is used. Can be one of these values:<br /><br /> **msmq** = Use [!INCLUDE[msCoName](../../includes/msconame-md.md)] Message Queuing to store transactions.<br /><br /> **sql** = Use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to store transactions.<br /><br /> Note: Support for Message Queuing has been discontinued.|  
-|backward_comp_level||Database compatibility level, and can be one of the following:<br /><br /> **90** = [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> **100** = [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|  
+|backward_comp_level||Database compatibility level, and can be one of the following:<br /><br /> **90** = [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> **100** = [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)]|  
 |publish_to_AD|**bit**|Specifies whether the publication is published in the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory. A value of **1** indicates that it is published, and a value of **0** indicates that it is not published.|  
 |allow_initialize_from_backup|**bit**|Indicates if Subscribers can initialize a subscription to this publication from a backup rather than an initial snapshot. **1** means that subscriptions can be initialized from a backup, and **0** means that they cannot. For more information, see [Initialize a Transactional Subscription Without a Snapshot](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md) a transactional Subscriber without a snapshot.|  
 |replicate_ddl|**int**|Indicates if schema replication is supported for the publication. **1** indicates that data definition language (DDL) statements executed at the publisher are replicated, and **0** indicates that DDL statements are not replicated. For more information, see [Make Schema Changes on Publication Databases](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md).|  
@@ -98,6 +96,7 @@ sp_helppublication [ [ @publication = ] 'publication' ]
 |p2p_continue_onconflict|**int**|Specifies whether The Distribution Agent continues to process changes when a conflict is detected. A value of **1** means that the agent continues to process changes.<br /><br /> **\*\* Caution \*\*** We recommend that you use the default value of **0**. When this option is set to **1**, the Distribution Agent tries to converge data in the topology by applying the conflicting row from the node that has the highest originator ID. This method does not guarantee convergence. You should make sure that the topology is consistent after a conflict is detected. For more information, see "Handling Conflicts" in [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md).|  
 |allow_partition_switch|**int**|Specifies whether ALTER TABLE...SWITCH statements can be executed against the published database. For more information, see [Replicate Partitioned Tables and Indexes](../../relational-databases/replication/publish/replicate-partitioned-tables-and-indexes.md).|  
 |replicate_partition_switch|**int**|Specifies whether ALTER TABLE...SWITCH statements that are executed against the published database should be replicated to Subscribers. This option is valid only if *allow_partition_switch* is set to **1**.|  
+|enabled_for_p2p_lastwriter_conflictdetection|**int**| Starting with [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] CU 13, specifies whether the Distribution Agent detects [last writer](../../relational-databases/replication/transactional/peer-to-peer/configure-last-writer.md) conflicts for a publication that is enabled for peer-to-peer replication. A value of **1** means that last writer conflicts are detected. | 
   
 ## Return Code Values  
  **0** (success) or **1** (failure)  

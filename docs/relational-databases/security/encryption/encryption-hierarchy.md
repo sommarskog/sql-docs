@@ -1,26 +1,23 @@
 ---
-title: "Encryption Hierarchy | Microsoft Docs"
+title: "Encryption Hierarchy"
 description: Learn about the hierarchical encryption and key management infrastructure in SQL Server. Store keys in an Extensible Key Management module.
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
+author: jaszymas
+ms.author: jaszymas
 ms.reviewer: vanto
-ms.technology: security
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: security
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "encryption [SQL Server], hierarchies"
   - "cryptography [SQL Server], hierarchies"
   - "encryption keys [SQL Server]"
   - "security [SQL Server], encryption"
   - "hierarchies [SQL Server], encryption"
-ms.assetid: 96c276d5-1bba-4e95-b678-10f059f1fbcf
-author: jaszymas
-ms.author: jaszymas
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Encryption Hierarchy
-[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../../includes/applies-to-version/sql-asdb-asdbmi.md)]
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] encrypts data with a hierarchical encryption and key management infrastructure. Each layer encrypts the layer below it by using a combination of certificates, asymmetric keys, and symmetric keys. Asymmetric keys and symmetric keys can be stored outside of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in an Extensible Key Management (EKM) module.  
   
  The following illustration shows that each layer of the encryption hierarchy encrypts the layer beneath it, and displays the most common encryption configurations. The access to the start of the hierarchy is usually protected by a password.  

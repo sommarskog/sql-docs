@@ -1,35 +1,31 @@
 ---
-description: "DROP AGGREGATE (Transact-SQL)"
-title: "DROP AGGREGATE (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "DROP AGGREGATE (Transact-SQL)"
+description: DROP AGGREGATE (Transact-SQL)
+author: markingmyname
+ms.author: maghan
 ms.date: "05/10/2017"
-ms.prod: sql
-ms.prod_service: "sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "DROP_AGGREGATE_TSQL"
   - "DROP AGGREGATE"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "aggregate functions [SQL Server], removing"
   - "removing user-defined functions"
   - "dropping user-defined functions"
   - "user-defined functions [CLR integration]"
   - "deleting user-defined functions"
   - "DROP AGGREGATE statement"
-ms.assetid: 84ffc4e7-c451-4f1f-9a67-7fc3a120e53f
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+dev_langs:
+  - "TSQL"
 ---
 # DROP AGGREGATE (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Removes a user-defined aggregate function from the current database. User-defined aggregate functions are created by using [CREATE AGGREGATE](../../t-sql/statements/create-aggregate-transact-sql.md).  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

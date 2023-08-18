@@ -1,16 +1,13 @@
 ---
+title: "Comparison Operators (Transact-SQL)"
 description: "Comparison Operators (Transact-SQL)"
-title: "Comparison Operators (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
+author: rwestMSFT
+ms.author: randolphwest
+ms.date: "03/15/2017"
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "expressions [SQL Server], testing"
   - "operators [Transact-SQL], comparison"
   - "testing expressions"
@@ -18,12 +15,11 @@ helpviewer_keywords:
   - "Boolean expressions"
   - "comparing expressions"
   - "comparison operators [SQL Server]"
-ms.assetid: b0cc68ef-3029-484c-a917-0c15dcbc230d
-author: cawrites
-ms.author: chadam
+dev_langs:
+  - "TSQL"
 ---
 # Comparison Operators (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Comparison operators test whether two expressions are the same. Comparison operators can be used on all expressions except expressions of the **text**, **ntext**, or **image** data types. The following table lists the [!INCLUDE[tsql](../../includes/tsql-md.md)] comparison operators.  
   

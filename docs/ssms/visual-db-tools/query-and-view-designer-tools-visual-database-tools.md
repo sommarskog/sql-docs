@@ -1,32 +1,26 @@
 ---
-description: "Query and View Designer Tools (Visual Database Tools)"
 title: Query and View Designer Tools
-ms.custom: seo-lt-2019
+description: "Query and View Designer Tools (Visual Database Tools)"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
+ms.service: sql
+ms.subservice: ssms
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "vdt.querydesigner"
   - "vdt.pane.diagram"
   - "vdt.pane.grid"
   - "vdt.dlgbox.querybuilder"
   - "vdt.pane.sql"
-  - "vdt.pane.results"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Query Designer [SQL Server], panes"
   - "View Designer, panes"
   - "Query Designer [SQL Server], components"
   - "View Designer, components"
-ms.assetid: 12e4b5a5-b793-4b6c-a0e5-c450c49bf26f
-author: markingmyname
-ms.author: maghan
-ms.reviewer: 
-
 ---
 # Query and View Designer Tools (Visual Database Tools)
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server](../../includes/applies-to-version/sqlserver.md)]
 When you design a query, view, in-line function, or single-statement stored procedure, the designer you use consists of four panes: the Diagram pane, the Criteria pane, the SQL pane, and the Results pane.  
   
 ![Query Designer](../../ssms/visual-db-tools/media/vs_queryviewdsgpanes.gif "Query Designer")  

@@ -1,24 +1,19 @@
 ---
-description: "Specify Search Conditions (Visual Database Tools)"
 title: Specify Search Conditions
-ms.custom: seo-lt-2019
+description: "Specify Search Conditions (Visual Database Tools)"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
+ms.service: sql
+ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "choosing search criteria"
   - "search conditions [SQL Server], specifying"
   - "search criteria [SQL Server], specifying conditions"
-ms.assetid: 18e2c759-68ec-4efe-b208-2f73418cd9bd
-author: markingmyname
-ms.author: maghan
-ms.reviewer: 
-
 ---
 # Specify Search Conditions (Visual Database Tools)
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server](../../includes/applies-to-version/sqlserver.md)]
 You can specify the data rows that appear in your query by specifying search conditions. For example, if you are querying an `employee` table, you can specify that you want to find only the employees who work in a particular region.  
   
 You specify search conditions using an expression. Most commonly the expression consists of an operator and a search value. For example, to find employees in a particular sales region, you might specify the following search criterion for the `region` column:  

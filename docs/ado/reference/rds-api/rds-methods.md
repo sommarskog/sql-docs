@@ -1,19 +1,15 @@
 ---
+title: "RDS Methods"
 description: "RDS Methods"
-title: "RDS Methods | Microsoft Docs"
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: 
-ms.prod: sql
-ms.prod_service: connectivity
-ms.topic: reference
-helpviewer_keywords: 
-  - "RDS methods [ADO]"
-  - "methods [ADO], RDS"
-ms.assetid: c2c6af1a-3c44-4c9d-ad33-b381552c71af
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: ado
+ms.topic: reference
+helpviewer_keywords:
+  - "RDS methods [ADO]"
+  - "methods [ADO], RDS"
 ---
 # RDS Methods
 > [!IMPORTANT]

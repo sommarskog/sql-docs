@@ -1,26 +1,23 @@
 ---
+title: "STGeometryN (geometry Data Type)"
 description: "STGeometryN (geometry Data Type)"
-title: "STGeometryN (geometry Data Type) | Microsoft Docs"
-ms.custom: ""
+author: MladjoA
+ms.author: mlandzic
 ms.date: "08/03/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "STGeometryN_TSQL"
   - "STGeometryN (geometry Data Type)"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "STGeometryN (geometry Data Type)"
-ms.assetid: 348c7047-3442-4590-8879-fe841e79058c
-author: MladjoA
-ms.author: mlandzic 
+dev_langs:
+  - "TSQL"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=fabric"
 ---
 # STGeometryN (geometry Data Type)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance FabricSE FabricDW](../../includes/applies-to-version/sql-asdb-asdbmi-fabricse-fabricdw.md)]
 
 Returns a specified geometry in a **geometry collection**.
   
@@ -48,7 +45,7 @@ Returns a specified geometry in a **geometry collection**.
 ## Examples  
  The following example creates a `MultiPoint``geometry collection` and uses `STGeometryN()` to find the second `geometry` instance of the collection.  
   
-```  
+```sql
 DECLARE @g geometry;  
 SET @g = geometry::STGeomFromText('MULTIPOINT(0 0, 13.5 2, 7 19)', 0);  
 SELECT @g.STGeometryN(2).ToString();  

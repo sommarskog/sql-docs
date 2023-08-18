@@ -1,32 +1,29 @@
 ---
 title: Make a master server
 description: Make a Master Server
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
+author: markingmyname
+ms.author: maghan
+ms.date: 05/14/2021
+ms.service: sql
+ms.subservice: ssms
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.ag.msxwiz.operator.f1"
   - "sql13.ag.msxwiz.login.f1"
   - "sql13.ag.msxwiz.target.f1"
   - "sql13.ag.msxwiz.complete.f1"
   - "sql13.ag.msxwiz.cover.f1"
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
-ms.custom: seo-lt-2019
-ms.date: 05/14/2021
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
 ---
 
 # Make a Master Server
 
-[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-> [!IMPORTANT]  
+> [!IMPORTANT]
 > On [Azure SQL Managed Instance](/azure/sql-database/sql-database-managed-instance), most, but not all SQL Server Agent features are currently supported. See [Azure SQL Managed Instance T-SQL differences from SQL Server](/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) for details.
 
-This topic describes how to make a master server [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+This topic describes how to make a master server [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] by using SQL Server Management Studio or [!INCLUDE[tsql](../../includes/tsql-md.md)].  
 
 ## <a name="BeforeYouBegin"></a>Before You Begin  
 
@@ -54,7 +51,7 @@ Permissions to execute this procedure default to members of the **sysadmin** fix
   
 #### To make a master server  
   
-1.  In **Object Explorer,** connect to an instance of the [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)], and then expand that instance.  
+1.  In **Object Explorer,** connect to an instance of the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], and then expand that instance.  
   
 2.  Right-click **SQL Server Agent**, point to **Multi Server Administration**, and then click **Make this a Master**. The **Master Server Wizard** guides you through the process of making a master server and adding target servers.  
   
@@ -72,7 +69,7 @@ Permissions to execute this procedure default to members of the **sysadmin** fix
 4.  From the **Target Server** page, select target servers for the master server.  
   
     **Registered Servers**  
-    Lists the servers registered in Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] that are not already target servers.  
+    Lists the servers registered in Microsoft SQL Server Management Studio that are not already target servers.  
   
     **Target Servers**  
     Lists the servers that are target servers.  
@@ -104,7 +101,7 @@ Permissions to execute this procedure default to members of the **sysadmin** fix
   
 #### To make a master server  
   
-1.  Connect to the [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
+1.  Connect to the [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  From the Standard bar, click **New Query**.  
   
@@ -116,7 +113,7 @@ GO
 
 EXEC dbo.sp_msx_enlist N'AdventureWorks1',   
     N'Building 21, Room 309, Rack 5' ;   
-GO;  
+GO
 ```
 
 For more information, see [sp_msx_enlist (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-msx-enlist-transact-sql.md).  

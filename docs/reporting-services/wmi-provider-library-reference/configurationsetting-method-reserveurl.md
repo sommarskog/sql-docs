@@ -1,18 +1,15 @@
 ---
+title: "ReserveURL Method (WMI MSReportServer_ConfigurationSetting)"
 description: "ReserveURL Method (WMI MSReportServer_ConfigurationSetting)"
-title: "ReserveURL Method (WMI MSReportServer_ConfigurationSetting) | Microsoft Docs"
-ms.date: 03/01/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: wmi-provider-library-reference
-
-
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "ReservedURL method"
-ms.assetid: b9008a62-3edd-4f8a-99f2-7598c2133899
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 03/01/2017
+ms.service: reporting-services
+ms.subservice: wmi-provider-library-reference
+ms.topic: conceptual
+ms.custom: updatefrequency5
+helpviewer_keywords:
+  - "ReservedURL method"
 ---
 # ConfigurationSetting Method - ReserveURL
   Adds a URL reservation for a given application.  
@@ -52,7 +49,7 @@ public void ReserveURL(string Application, string UrlString, int Lcid,
 ## Remarks  
  *UrlString* does not include the virtual directory name. The [SetVirtualDirectory](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-setvirtualdirectory.md) method is provided for that purpose.  
   
- URL reservations are created for the current windows service account. Changing the windows service account requires updating all the URL reservations manually.  
+ URL reservations are created for the current Windows service account. Changing the Windows service account requires updating all the URL reservations manually.  
   
  This method causes all application domains to hard recycle. Application domains are restarted after this operation is complete.  
   

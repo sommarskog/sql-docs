@@ -1,15 +1,13 @@
 ---
-title: "Working with subscriptions (web portal) | Microsoft Docs"
-description: Learn how to use the Subscriptions page to list all of the subscriptions for the current report in Reporting Services. 
-ms.date: 01/31/2020
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: reporting-services
-
-ms.topic: conceptual
-ms.assetid: 09e8ece5-0200-41f2-87c1-9fab19e261be
+title: "Working with subscriptions (web portal)"
+description: Learn how to use the Subscriptions page to list all of the subscriptions for the current report in Reporting Services.
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 01/24/2022
+ms.service: reporting-services
+ms.subservice: reporting-services
+ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 
 # Working with subscriptions (web portal)
@@ -17,11 +15,14 @@ ms.author: maggies
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
 
 Use the Subscriptions page to list all of the subscriptions for the current report. If you have sufficient permission (as conveyed by the "Manage all subscriptions" task), you can view the subscriptions of all users. Otherwise, this page shows only the subscriptions that you own.  
+
+> [!NOTE]
+> This page is not supported in the mobile layout.
   
 Before you can create a new subscription, you must verify that the report data source uses stored credentials. Use the Data Sources properties page to store credentials.  
   
 > [!NOTE]
-> The SQL Server Agent service needs to be started.   
+> The SQL Server Agent service needs to be started.
   
 ![Manage subscriptions](../reporting-services/media/working-with-subscriptions-web-portal/ssrs-manage-subscriptions.png)  
 You get to the Subscriptions page by selecting the **ellipsis (...)** of a report, selecting **Manage** and selecting **Subscriptions**.  
@@ -90,4 +91,4 @@ After the query has been created, you can then assign values to the required fie
 [Working with paginated reports](working-with-paginated-reports-web-portal.md)  
 [Work with Shared Datasets](../reporting-services/work-with-shared-datasets-web-portal.md)
 
-More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)
+More questions? [Try asking the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user)

@@ -1,19 +1,16 @@
 ---
+title: "FETCH (Transact-SQL)"
 description: "FETCH (Transact-SQL)"
-title: "FETCH (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "FETCH"
   - "FETCH_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "FETCH statement"
   - "cursors [SQL Server], fetching"
   - "Transact-SQL cursors, fetching and scrolling"
@@ -21,16 +18,15 @@ helpviewer_keywords:
   - "fetching [SQL Server]"
   - "SCROLL option"
   - "row fetching [SQL Server]"
-ms.assetid: 5d68dac2-f91b-4342-bb4e-209ee132665f
-author: cawrites
-ms.author: chadam
+dev_langs:
+  - "TSQL"
 ---
 # FETCH (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Retrieves a specific row from a [!INCLUDE[tsql](../../includes/tsql-md.md)] server cursor.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -101,7 +97,7 @@ FETCH
  The following example declares a simple cursor for the rows in the `Person.Person` table with a last name that starts with `B`, and uses `FETCH NEXT` to step through the rows. The `FETCH` statements return the value for the column specified in `DECLARE CURSOR` as a single-row result set.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 DECLARE contact_cursor CURSOR FOR  
 SELECT LastName FROM Person.Person  
@@ -129,7 +125,7 @@ GO
  The following example is similar to example A, except the output of the `FETCH` statements is stored in local variables instead of being returned directly to the client. The `PRINT` statement combines the variables into a single string and returns them to the client.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 -- Declare the variables to store the values returned by FETCH.  
 DECLARE @LastName VARCHAR(50), @FirstName VARCHAR(50);  
@@ -169,7 +165,7 @@ GO
  The following example creates a `SCROLL` cursor to allow full scrolling capabilities through the `LAST`, `PRIOR`, `RELATIVE`, and `ABSOLUTE` options.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 -- Execute the SELECT statement alone to show the   
 -- full result set that is used by the cursor.  

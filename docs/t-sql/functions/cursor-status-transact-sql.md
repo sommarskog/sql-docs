@@ -1,32 +1,28 @@
 ---
+title: "CURSOR_STATUS (Transact-SQL)"
 description: "CURSOR_STATUS (Transact-SQL)"
-title: "CURSOR_STATUS (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: markingmyname
+ms.author: maghan
 ms.date: "07/24/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "CURSOR_STATUS"
   - "CURSOR_STATUS_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "status information [SQL Server], cursors"
   - "CURSOR_STATUS function"
   - "cursors [SQL Server], status information"
-ms.assetid: 3a4a840e-04f8-43bd-aada-35d78c3cb6b0
-author: cawrites
-ms.author: chadam
+dev_langs:
+  - "TSQL"
 ---
 # CURSOR_STATUS (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 For a given parameter, `CURSOR_STATUS` shows whether or not a cursor declaration has returned a cursor and result set.
   
-![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## Syntax  
   

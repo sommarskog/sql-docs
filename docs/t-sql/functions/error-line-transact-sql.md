@@ -1,37 +1,33 @@
 ---
-description: "ERROR_LINE (Transact-SQL)"
 title: ERROR_LINE (Transact-SQL)
-ms.custom: ""
+description: "ERROR_LINE (Transact-SQL)"
+author: markingmyname
+ms.author: maghan
 ms.date: "03/16/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "ERROR_LINE"
   - "ERROR_LINE_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "errors [SQL Server], line number"
   - "messages [SQL Server], line number"
   - "TRY...CATCH [SQL Server]"
   - "line number of error [SQL Server]"
   - "ERROR_LINE function"
   - "CATCH block"
-ms.assetid: 47335734-0baf-45a6-8b3b-6c4fd80d2cb8
-author: cawrites
-ms.author: chadam
+dev_langs:
+  - "TSQL"
 ---
 
 # ERROR_LINE (Transact-SQL)
 
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 This function returns the line number of occurrence of an error that caused the CATCH block of a TRY...CATCH construct to execute.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax
 

@@ -1,32 +1,28 @@
 ---
+title: "DECRYPTBYPASSPHRASE (Transact-SQL)"
 description: "DECRYPTBYPASSPHRASE (Transact-SQL)"
-title: "DECRYPTBYPASSPHRASE (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: VanMSFT
+ms.author: vanto
 ms.date: "03/03/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "DECRYPTBYPASSPHRASE"
   - "DECRYPTBYPASSPHRASE_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "decryption [SQL Server], symmetric keys"
   - "symmetric keys [SQL Server], DECRYPTBYPASSPHRASE function"
   - "DECRYPTBYPASSPHRASE function"
-ms.assetid: ca34b5cd-07b3-4dca-b66a-ed8c6a826c95
-author: VanMSFT
-ms.author: vanto
+dev_langs:
+  - "TSQL"
 ---
 # DECRYPTBYPASSPHRASE (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 This function decrypts data originally encrypted with a passphrase.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -78,7 +74,7 @@ If an authenticator was included at the time of the ciphertext encryption, `DECR
 This example decrypts the record updated in [EncryptByPassPhrase](../../t-sql/functions/encryptbypassphrase-transact-sql.md).  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 -- Get the passphrase from the user.  
 DECLARE @PassphraseEnteredByUser NVARCHAR(128);  
 SET @PassphraseEnteredByUser   

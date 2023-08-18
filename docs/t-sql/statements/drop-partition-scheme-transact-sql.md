@@ -1,34 +1,30 @@
 ---
-description: "DROP PARTITION SCHEME (Transact-SQL)"
-title: "DROP PARTITION SCHEME (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "DROP PARTITION SCHEME (Transact-SQL)"
+description: DROP PARTITION SCHEME (Transact-SQL)
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "03/06/2017"
-ms.prod: sql
-ms.prod_service: "sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "DROP PARTITION SCHEME"
   - "DROP_PARTITION_SCHEME_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "DROP PARTITION SCHEME statement"
   - "deleting partition schemes"
   - "dropping partition schemes"
   - "removing partition schemes"
   - "partition schemes [SQL Server], removing"
-ms.assetid: 6efbc87c-1c92-4e43-96a7-e0f30f1db185
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+dev_langs:
+  - "TSQL"
 ---
 # DROP PARTITION SCHEME (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Removes a partition scheme from the current database. Partition schemes are created by using [CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md) and modified by using [ALTER PARTITION SCHEME](../../t-sql/statements/alter-partition-scheme-transact-sql.md).  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

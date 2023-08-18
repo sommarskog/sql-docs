@@ -1,27 +1,23 @@
 ---
+title: "STLineFromWKB (geometry Data Type)"
 description: "STLineFromWKB (geometry Data Type)"
-title: "STLineFromWKB (geometry Data Type) | Microsoft Docs"
-ms.custom: ""
+author: MladjoA
+ms.author: mlandzic
 ms.date: "08/03/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, pdw, sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "STLineFromWKB (geometry Data Type)"
   - "STLineFromWKB_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "STLineFromWKB (geometry Data Type)"
-ms.assetid: e674c8c4-c67f-4fc1-9873-d9c2ed46c659
-author: MladjoA
-ms.author: mlandzic 
+dev_langs:
+  - "TSQL"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # STLineFromWKB (geometry Data Type)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-pdw-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 Returns a **geometryLineString** instance from an Open Geospatial Consortium (OGC) Well-Known Binary (WKB) representation.
   
@@ -52,7 +48,7 @@ STLineFromWKB ( 'WKB_linestring' , SRID )
 ## Examples  
  The following example uses `STLineFromWKB()` to create a `geometry` instance.  
   
-```  
+```sql
 DECLARE @g geometry;   
 SET @g = geometry::STLineFromWKB(0x0102000000020000000000000000005940000000000000594000000000000069400000000000006940, 0);  
 SELECT @g.STAsText();  

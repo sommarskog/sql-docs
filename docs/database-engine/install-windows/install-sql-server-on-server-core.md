@@ -1,15 +1,13 @@
 ---
-title: "Install SQL Server on Server Core | Microsoft Docs"
+title: "Install SQL Server on Server Core"
 description: You can install SQL Server on a Server Core installation. The Server Core installation option provides a minimal environment for running specific server roles.
-ms.custom: ""
-ms.date: 06/29/2020
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: install
+author: rwestMSFT
+ms.author: randolphwest
+ms.date: 09/16/2021
+ms.service: sql
+ms.subservice: install
 ms.topic: conceptual
-ms.assetid: 1dd294cc-5b69-4d0c-9005-3e307b75678b
-author: cawrites
-ms.author: chadam
+ms.custom: intro-installation
 monikerRange: ">=sql-server-2016"
 ---
 # Install SQL Server on Server Core
@@ -18,7 +16,7 @@ monikerRange: ">=sql-server-2016"
 
 You can install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on a Server Core installation.   
   
-The Server Core installation option provides a minimal environment for running specific server roles. This helps to reduce maintenance and management requirements and the attack surface for those server roles. For more information on Server Core, see [Install Server Core](/windows-server/get-started/getting-started-with-server-core). For more information on Server Core as implemented on [!INCLUDE[win8srv](../../includes/win8srv-md.md)], see [Server Core for Windows Server 2012](https://msdn.microsoft.com/library/hh846323\(VS.85\).aspx) (https://msdn.microsoft.com/library/hh846323(VS.85).aspx).  
+The Server Core installation option provides a minimal environment for running specific server roles. This helps to reduce maintenance and management requirements and the attack surface for those server roles. 
   
  For a list of currently supported operating systems, see [Hardware and Software Requirements for Installing SQL Server](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).
 
@@ -26,7 +24,7 @@ The Server Core installation option provides a minimal environment for running s
   
 |Requirement|How to install|  
 |-----------------|--------------------|  
-|[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6.1 |For all editions of [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] except [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)], Setup requires the [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6.1 Server Core Profile. SQL Server Setup will automatically install this if it is not already installed. Installation requires a reboot. You can install [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] before you run setup to avoid a reboot.|  
+|[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6.1 |For all editions of [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] except [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)], Setup requires the [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6.1 Server Core Profile. SQL Server Setup will automatically install this if it is not already installed. Installation requires a restart. You can install [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] before you run setup to avoid a restart.|  
 |Windows Installer 4.5|Shipped with Server Core installation.|  
 |Windows PowerShell|Shipped with Server Core installation.|  
 |Java Runtime |In order to use PolyBase, you need to install the appropriate Java Runtime. For more information, see [PolyBase installation](../../relational-databases/polybase/polybase-installation.md).|
@@ -65,7 +63,7 @@ The Server Core installation option provides a minimal environment for running s
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] editions|All [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 64-bit editions |  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] language|All languages|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] language on OS language/locale (combination)|ENG [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on JPN (Japanese) Windows<br /><br /> ENG [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on GER (German) Windows<br /><br /> ENG [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on CHS (Chinese-China) Windows<br /><br /> ENG [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on ARA (Arabic (SA)) Windows<br /><br /> ENG [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on THA (Thai) Windows<br /><br /> ENG [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on TRK (Turkish) Windows<br /><br /> ENG [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on pt-PT (Portuguese Portugal) Windows<br /><br /> ENG [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on ENG (English) Windows|  
-|Windows edition|Windows Server 2019 Datacenter <br/><br/> Windows Server 2019 Standard <br /><br />  [!INCLUDE[winserver2016_datacenter_md](../../includes/winserver2016-datacenter-md.md)]<br/><br/>[!INCLUDE[winserver2016_standard_md](../../includes/winserver2016-standard-md.md)]<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Datacenter<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Standard<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Essentials<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Foundation<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] Datacenter<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] Standard<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] Essentials<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] Foundation|  
+|Windows edition|Windows Server 2022 Datacenter <br/><br/> Windows Server 2022 Datacenter: Azure edition <br/><br/>Windows Server 2022 Standard <br /><br />Windows Server 2019 Datacenter <br/><br/> Windows Server 2019 Standard <br /><br />  [!INCLUDE[winserver2016_datacenter_md](../../includes/winserver2016-datacenter-md.md)]<br/><br/>[!INCLUDE[winserver2016_standard_md](../../includes/winserver2016-standard-md.md)]
   
 ## Upgrade 
  On Server Core installations, upgrading from [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] to [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] is supported.  
@@ -76,6 +74,8 @@ The Server Core installation option provides a minimal environment for running s
  Regardless of the installation method, you are required to confirm acceptance of the software license terms as an individual or on behalf of an entity, unless your use of the software is governed by a separate agreement such as a [!INCLUDE[msCoName](../../includes/msconame-md.md)] volume licensing agreement or a third-party agreement with an ISV or OEM.  
   
  The license terms are displayed for review and acceptance in the Setup user interface. Unattended installations (using the /Q or /QS parameters) must include the /IACCEPTSQLSERVERLICENSETERMS parameter. You can review the license terms separately at [Microsoft Software License Terms](https://go.microsoft.com/fwlink/?LinkId=148209).  
+
+ [!INCLUDE [sql-eula-link](../../includes/sql-eula-link.md)]
   
 > [!NOTE]  
 >  Depending on how you received the software (for example, through [!INCLUDE[msCoName](../../includes/msconame-md.md)] volume licensing), your use of the software may be subject to additional terms and conditions.  
@@ -123,7 +123,7 @@ The Server Core installation option provides a minimal environment for running s
   
     - Installing [!INCLUDE[ssDE](../../includes/ssde-md.md)]. 
     
-    The following example shows how to install a new stand-alone instance that includes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../../includes/ssde-md.md)]:  
+    The following example shows how to install a new stand-alone instance that includes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]:  
 
     ```console
     ; SQL Server Configuration File  
@@ -315,7 +315,7 @@ If you accidentally close the command prompt, you can start a new command prompt
  
 1.  Press Ctrl+Shift+Esc to display Task Manager.  
 2.  On the **Applications** tab, click **New Task**.  
-3.  In the **Create New Task** dialog box, type **cmd** in the **Open** field and then [!INCLUDE[clickOK](../../includes/clickok-md.md)].  
+3.  In the **Create New Task** dialog box, type **cmd** in the **Open** field and then select **OK**.  
   
 ## See also  
  [Install SQL Server Using a Configuration File](./install-sql-server-using-a-configuration-file.md)   

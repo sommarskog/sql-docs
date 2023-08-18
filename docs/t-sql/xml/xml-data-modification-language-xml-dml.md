@@ -1,15 +1,13 @@
 ---
-description: "XML Data Modification Language (XML DML)"
 title: XML Data Modification Language (XML DML)
-ms.custom: ""
+description: "XML Data Modification Language (XML DML)"
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "03/16/2017"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "modifying data [SQL Server], XML DML"
   - "XML [SQL Server], DML"
   - "XML DML [SQL Server]"
@@ -18,12 +16,11 @@ helpviewer_keywords:
   - "DML [XML in SQL Server]"
   - "XQuery, XML DML"
   - "xml data type [SQL Server], XML DML"
-ms.assetid: 20ce50d2-c07b-4e41-93a7-1380d2cd49cb
-author: rothja
-ms.author: jroth
+dev_langs:
+  - "TSQL"
 ---
 # XML Data Modification Language (XML DML)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   The XML Data Modification Language (XML DML) is an extension of the XQuery language. As defined by W3C, the XQuery language lacks the Data Manipulation (DML) part. The XML DML introduced in this topic, and also the XQuery language, provides a fully functional query and data-modification language that you can use against the **xml** data type.  
   

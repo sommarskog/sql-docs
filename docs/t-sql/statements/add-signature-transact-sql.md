@@ -1,32 +1,31 @@
 ---
-description: "ADD SIGNATURE (Transact-SQL)"
 title: ADD SIGNATURE (Transact-SQL)
-ms.prod: sql
-ms.technology: t-sql
+description: ADD SIGNATURE (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
+ms.date: 03/16/2021
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "ADD SIGNATURE"
   - "ADD_SIGNATURE_TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "ADD SIGNATURE statement"
   - "adding digital signatures"
   - "signatures [SQL Server]"
   - "digital signatures [SQL Server]"
-ms.assetid: 64d8b682-6ec1-4e5b-8aee-3ba11e72d21f
-author: VanMSFT
-ms.author: vanto
-ms.reviewer: ""
-ms.custom: ""
-ms.date: 03/16/2021
+dev_langs:
+  - "TSQL"
 ---
 
 # ADD SIGNATURE (Transact-SQL)
 
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 Adds a digital signature to a stored procedure, function, assembly, or DML-trigger. Also adds a countersignature to a stored procedure, function, assembly, or DML-trigger.
 
-![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
 
 ## Syntax
 
@@ -111,7 +110,7 @@ Requires ALTER permission on the object and CONTROL permission on the certificat
  The following example signs the stored procedure `HumanResources.uspUpdateEmployeeLogin` with the certificate `HumanResourcesDP`.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 ADD SIGNATURE TO HumanResources.uspUpdateEmployeeLogin   
     BY CERTIFICATE HumanResourcesDP;  
 GO  
@@ -200,7 +199,7 @@ CREATE USER Alice;
 EXECUTE AS LOGIN = 'Alice';  
     SELECT * FROM T1;  
 REVERT;  
-  
+GO  
 -- Create a procedure that directly accesses T1  
 CREATE PROCEDURE procSelectT1 AS  
 BEGIN  
@@ -209,7 +208,7 @@ BEGIN
 END;  
 GO  
 GRANT EXECUTE ON ProcSelectT1 to public;  
-  
+GO
 -- Create special procedure for accessing T1  
 CREATE PROCEDURE  ProcForAlice AS  
 BEGIN  

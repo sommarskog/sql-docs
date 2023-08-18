@@ -1,23 +1,19 @@
 ---
-description: "sysmergesubsetfilters (Transact-SQL)"
-title: "sysmergesubsetfilters (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sysmergesubsetfilters (Transact-SQL)"
+description: sysmergesubsetfilters (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "03/04/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: replication
+ms.service: sql
+ms.subservice: replication
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sysmergesubsetfilters"
   - "sysmergesubsetfilters_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sysmergesubsetfilters system table"
-ms.assetid: f91d1c6c-3132-47f6-926c-88f56848cafe
-author: cawrites
-ms.author: chadam
+dev_langs:
+  - "TSQL"
 ---
 # sysmergesubsetfilters (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

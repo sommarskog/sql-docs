@@ -1,23 +1,19 @@
 ---
-description: "Delete Objects"
 title: "Delete Objects"
-ms.custom: seo-lt-2019
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: "sql-tools"
-ms.reviewer: ""
-ms.technology: ssms
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.swb.deleteobjects.f1"
-helpviewer_keywords: 
-  - "Delete Objects dialog box"
-ms.assetid: 49541441-179c-40d3-ba0c-01bcae545984
+description: "Delete Objects"
 author: "markingmyname"
 ms.author: "maghan"
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: ssms
+ms.topic: conceptual
+f1_keywords:
+  - "sql13.swb.deleteobjects.f1"
+helpviewer_keywords:
+  - "Delete Objects dialog box"
 ---
 # Delete Objects
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Use this dialog box to delete a database or database object.  
   
 ## UI element list  

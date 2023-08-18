@@ -1,14 +1,13 @@
 ---
+title: "Integration Services (SSIS) Variables"
 description: "Integration Services (SSIS) Variables"
-title: "Integration Services (SSIS) Variables | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "integration-services"
-ms.reviewer: ""
-ms.technology: integration-services
+ms.service: sql
+ms.subservice: integration-services
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "variables [Integration Services], passing between packages"
   - "user-defined variables [Integration Services]"
   - "scope [Integration Services]"
@@ -16,9 +15,6 @@ helpviewer_keywords:
   - "variables [Integration Services]"
   - "variables [Integration Services], about variables"
   - "values [Integration Services]"
-ms.assetid: c1e81ad6-628b-46d4-9b09-d2866517b6ca
-author: chugugrace
-ms.author: chugu
 ---
 # Integration Services (SSIS) Variables
 
@@ -134,7 +130,6 @@ The value of a user-defined variable can be a literal or an expression. The valu
 | Numeric and binary data types | 0 (zero) |
 | Char and string data types | (empty string) |
 | Object | System.Object |
-| | |
 
 A variable has options for setting the variable value and the data type of the value. The two properties must be compatible: for example, the use of a string value together with an integer data type is not valid.  
   

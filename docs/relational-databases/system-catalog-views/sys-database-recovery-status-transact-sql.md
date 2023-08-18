@@ -1,28 +1,24 @@
 ---
-description: "sys.database_recovery_status (Transact-SQL)"
-title: "sys.database_recovery_status (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.database_recovery_status (Transact-SQL)"
+description: sys.database_recovery_status (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "08/12/2016"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "database_recovery_status_TSQL"
   - "database_recovery_status"
   - "sys.database_recovery_status"
   - "sys.database_recovery_status_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.database_recovery_status catalog view"
-ms.assetid: 46fab234-1542-49be-8edf-aa101e728acf
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+dev_langs:
+  - "TSQL"
 ---
 # sys.database_recovery_status (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Contains one row per database. If the database is not opened, the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] tries to start it.  
   

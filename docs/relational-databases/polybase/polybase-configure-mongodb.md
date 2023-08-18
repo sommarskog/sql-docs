@@ -1,14 +1,13 @@
 ---
 title: "Access external data: MongoDB - PolyBase"
 description: The article explains how to use PolyBase on a SQL Server instance to query external data in MongoDB. Create external tables to reference the external data.
-ms.date: 03/05/2021
-ms.metadata: seo-lt-2019
-ms.prod: sql
-ms.technology: polybase
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.reviewer: hudequei
+ms.date: 06/06/2022
+ms.service: sql
+ms.subservice: polybase
 ms.topic: conceptual
-author: MikeRayMSFT
-ms.author: mikeray
-ms.reviewer: mikeray
 monikerRange: ">= sql-server-linux-ver15 || >= sql-server-ver15"
 ---
 # Configure PolyBase to access external data in MongoDB
@@ -21,8 +20,7 @@ The article explains how to use PolyBase on a SQL Server instance to query exter
 
 If you haven't installed PolyBase, see [PolyBase installation](polybase-installation.md).
 
-Before creating a database scoped credential a [Master Key](../../t-sql/statements/create-master-key-transact-sql.md) must be created. 
-    
+Before you create a database scoped credential, the database must have a master key to protect the credential. For more information, see [CREATE MASTER KEY](../../t-sql/statements/create-master-key-transact-sql.md).
 
 ## Configure a MongoDB external data source
 
@@ -31,7 +29,8 @@ To query the data from a MongoDB data source, you must create external tables to
 The following Transact-SQL commands are used in this section:
 
 - [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)
-- [CREATE EXTERNAL DATA SOURCE (Transact-SQL)](../../t-sql/statements/create-external-data-source-transact-sql.md) 
+- [CREATE EXTERNAL DATA SOURCE (Transact-SQL)](../../t-sql/statements/create-external-data-source-transact-sql.md)
+- [CREATE EXTERNAL TABLE (Transact-SQL)](../../t-sql/statements/create-external-table-transact-sql.md)
 - [CREATE STATISTICS (Transact-SQL)](../../t-sql/statements/create-statistics-transact-sql.md)
 
 1. Create a database scoped credential for accessing the MongoDB source.
@@ -43,7 +42,7 @@ The following Transact-SQL commands are used in this section:
     - Replace `<password>` with the appropriate password. 
 
     ```sql
-    CREATE DATABASE SCOPED CREDENTIAL <credential_name> WITH IDENTITY = '<username>', Secret = '<password>';
+    CREATE DATABASE SCOPED CREDENTIAL [<credential_name>] WITH IDENTITY = '<username>', Secret = '<password>';
     ```
 
    > [!IMPORTANT]
@@ -64,6 +63,32 @@ The following Transact-SQL commands are used in this section:
     [ [ , ] CONNECTION_OPTIONS = '<key_value_pairs>'[,...]]
     [ [ , ] PUSHDOWN = { ON | OFF } ])
     [ ; ]
+    ```
+
+1. Query the external schema in MongoDB.
+
+    You can use the [Data Virtualization extension for Azure Data Studio](../../azure-data-studio/extensions/data-virtualization-extension.md) to connect to and generate a CREATE EXTERNAL TABLE statement based on the schema detected by the PolyBase ODBC Driver for MongoDB driver. You can also manually customize a script based on the output of the system stored procedure [sp_data_source_objects (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-data-source-objects.md). The Data Virtualization extension for Azure Data Studio and `sp_data_source_table_columns` use the same internal stored procedures to query the external schema schema.
+
+    To create external tables to MongoDB collections that contain arrays, the recommendation is to use [Data Virtualization extension for Azure Data Studio](../../azure-data-studio/extensions/data-virtualization-extension.md). The flattening actions are performed automatically by the driver. The `sp_data_source_table_columns` stored procedure also automatically performs the flattening via the PolyBase ODBC Driver for MongoDB driver.
+
+1. Create an external table.
+
+    If you use the [Data Virtualization extension for Azure Data Studio](../../azure-data-studio/extensions/data-virtualization-extension.md), you can skip this step, as the CREATE EXTERNAL TABLE statement is generated for you. To provide the schema manually, consider the following sample script to create an external table. For reference, see [CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md). 
+
+    Before you run the script, update it for your environment:
+
+    - Update the fields with their name, collation, and if they are collections then specify the collection name and the field name. In the example, `friends` is a custom data type.
+    - Update the location. Set the database name and the table name. Note three-part names are not allowed, so you can't create it for the `system.profile` table. Also you can't specify a view because it can't obtain the metadata from it.
+    - Update the data source with the name of the one you created in the previous step.
+
+    ```sql
+    CREATE EXTERNAL TABLE [MongoDbRandomData](
+      [_id] NVARCHAR(24) COLLATE SQL_Latin1_General_CP1_CI_AS NOT NULL,
+      [RandomData_friends_id] INT,
+      [RandomData_tags] NVARCHAR(MAX) COLLATE SQL_Latin1_General_CP1_CI_AS)
+    WITH (
+      LOCATION='MyDb.RandomData',
+      DATA_SOURCE=[MongoDb])
     ```
 
 1. **Optional:** Create statistics on an external table.
@@ -157,5 +182,7 @@ CREATE EXTERNAL DATA SOURCE external_data_source_name
 ```
 
 ## Next steps
+
+For more tutorials on creating external data sources and external tables to a variety of data sources, see [PolyBase Transact-SQL reference](polybase-t-sql-objects.md).
 
 To learn more about PolyBase, see [Overview of SQL Server PolyBase](polybase-guide.md).

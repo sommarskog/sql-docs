@@ -1,20 +1,16 @@
 ---
-title: "Introduction to Memory-Optimized Tables | Microsoft Docs"
+title: "Introduction to Memory-Optimized Tables"
 description: Learn about memory-optimized tables, which are durable and support transactions that are atomic, consistent, isolated, and durable.
-ms.custom: ""
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "12/02/2016"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: in-memory-oltp
+ms.service: sql
+ms.subservice: in-memory-oltp
 ms.topic: conceptual
-ms.assetid: ef1cc7de-63be-4fa3-a622-6d93b440e3ac
-author: rothja
-ms.author: jroth
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Introduction to Memory-Optimized Tables
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Memory-optimized tables are created using [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md).  
   
@@ -44,7 +40,7 @@ Starting with SQL Server 2016, and in Azure SQL Database, there are no limitatio
   
 -   Through natively compiled stored procedures.  
   
--   Through interpreted [!INCLUDE[tsql](../../includes/tsql-md.md)], outside of a natively-compiled stored procedure. These [!INCLUDE[tsql](../../includes/tsql-md.md)] statements may be either inside interpreted stored procedures or they may be ad-hoc [!INCLUDE[tsql](../../includes/tsql-md.md)] statements.  
+-   Through interpreted [!INCLUDE[tsql](../../includes/tsql-md.md)], outside of a natively-compiled stored procedure. These [!INCLUDE[tsql](../../includes/tsql-md.md)] statements may be either inside interpreted stored procedures or they may be ad hoc [!INCLUDE[tsql](../../includes/tsql-md.md)] statements.  
   
 ## Accessing Data in Memory-Optimized Tables  
 
@@ -97,9 +93,8 @@ EXECUTE AS CALLER has a small (approximately10%) performance hit caused by permi
   
 ## Scenarios
 
-For a brief discussion of typical scenarios where [!INCLUDE[hek_1](../../includes/hek-1-md.md)] can improve performance, see [In-Memory OLTP](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md).  
+For a brief discussion of typical scenarios where [!INCLUDE[inmemory-md](../../includes/inmemory-md.md)] can improve performance, see [In-Memory OLTP](./overview-and-usage-scenarios.md).  
   
 ## See Also
 
-[In-Memory OLTP &#40;In-Memory Optimization&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
-  
+[In-Memory OLTP &#40;In-Memory Optimization&#41;](./overview-and-usage-scenarios.md)  

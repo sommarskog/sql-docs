@@ -1,15 +1,13 @@
 ---
 title: "SAP ASE to SQL Server: Migration guide"
-description: 'This guide teaches you how to migrate your SAP ASE databases to Microsoft SQL Server by using SQL Server Migration Assistant for SAP ASE (SSMA for SAP ASE).'
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: migration-guide
-ms.custom: 
-ms.devlang: 
-ms.topic: how-to
-author: cawrites
-ms.author: chadam
+description: "This guide teaches you how to migrate your SAP ASE databases to Microsoft SQL Server by using SQL Server Migration Assistant for SAP ASE (SSMA for SAP ASE)."
+author: MashaMSFT
+ms.author: mathoma
 ms.date: 03/19/2021
+ms.service: sql
+ms.subservice: migration-guide
+ms.topic: how-to
+ms.custom: intro-migration
 ---
 
 # Migration guide: SAP ASE to SQL Server
@@ -55,7 +53,7 @@ Before you perform a schema conversion, validate the default datatype mappings o
 
 To convert the schema:
 
-1. (Optional) To convert dynamic or ad-hoc queries, right-click the node, and select **Add Statement**.
+1. (Optional) To convert dynamic or ad hoc queries, right-click the node, and select **Add Statement**.
 1. Select the **Connect to SQL Server** tab, and enter SQL Server details. You can choose to connect to an existing database or enter a new name, in which case a database will be created on the target server.
 1. Right-click the database or object you want to migrate in **SAP ASE Metadata Explorer**, and select **Migrate Data**. Alternatively, you can select the **Migrate Data** tab. To migrate data for an entire database, select the check box next to the database name. To migrate data from individual tables, expand the database, expand **Tables**, and then select the check boxes next to the tables. To omit data from individual tables, clear the check boxes.
 1. Compare and review the structure of the schema to identify potential problems.
@@ -73,7 +71,7 @@ To publish your schema and migrate the data:
 1. Publish the schema by right-clicking the database in **SQL Server Metadata Explorer** and selecting **Synchronize with Database**. This action publishes the SAP ASE schema to the SQL Server instance.
 1. Migrate the data by right-clicking the database or object you want to migrate in **SAP ASE Metadata Explorer** and selecting **Migrate Data**. Alternatively, you can select the **Migrate Data** tab. To migrate data for an entire database, select the check box next to the database name. To migrate data from individual tables, expand the database, expand **Tables**, and then select the check boxes next to the tables. To omit data from individual tables, clear the check boxes.
 1. After the migration finishes, view the **Data Migration Report**.
-1. Connect to your SQL Server instance by using [SQL Server Management Studio](/sql/ssms/download-sql-server-management-studio-ssms), and validate the migration by reviewing the data and schema.
+1. Connect to your SQL Server instance by using [SQL Server Management Studio](../../../ssms/download-sql-server-management-studio-ssms.md), and validate the migration by reviewing the data and schema.
 
 ## Post-migration
 
@@ -114,5 +112,5 @@ For more assistance with completing this migration scenario, see the following r
 
 - For an overview of the Azure Database Migration Guide and the information it contains, see the video [How to Use the Database Migration Guide](https://azure.microsoft.com/resources/videos/how-to-use-the-azure-database-migration-guide/).
 - For a matrix of Microsoft and third-party services and tools that are available to assist you with various database and data migration scenarios and specialty tasks, see [Services and tools for data migration](/azure/dms/dms-tools-matrix).
-- For other migration guides, see [Azure Database Migration Guides](https://datamigration.microsoft.com/).
+- For other migration guides, see [Azure Database Migration Guides](/data-migration/).
 - For a migration video, see [Overview of the migration journey and the tools/services recommended for performing assessment and migration](https://azure.microsoft.com/resources/videos/overview-of-migration-and-recommended-tools-services/).

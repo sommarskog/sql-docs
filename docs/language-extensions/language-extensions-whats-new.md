@@ -1,13 +1,13 @@
 ---
 title: What's new in SQL Server Language Extensions?
-titleSuffix: 
-description: Learn about what's new in SQL Server Language Extensions that expands, extends, and deepens the integration between external languages and the data platform. 
-author: dphansen
-ms.author: davidph 
-ms.date: 11/09/2020
+description: Learn about what's new in SQL Server Language Extensions that expands, extends, and deepens the integration between external languages and the data platform.
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.date: 09/28/2021
+ms.service: sql
+ms.subservice: language-extensions
 ms.topic: conceptual
-ms.prod: sql
-ms.technology: language-extensions
+ms.custom: intro-whats-new
 monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15"
 ---
 
@@ -18,7 +18,7 @@ monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15"
 
 ## SQL Server 2019
 
-The new capabilities for [Language Extension](language-extensions-overview.md) in SQL Server 2019 can be found below. For more information about all of the features in this release, see [What's New in SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md) and [Release Notes for SQL Server 2019](../sql-server/sql-server-version-15-release-notes.md).
+The new capabilities for [Language Extension](language-extensions-overview.md) in SQL Server 2019 can be found below. For more information about all of the features in this release, see [What's New in SQL Server 2019](../sql-server/what-s-new-in-sql-server-2019.md) and [Release Notes for SQL Server 2019](../sql-server/sql-server-2019-release-notes.md).
 
 ### New Python and R language extensions
 
@@ -34,6 +34,11 @@ The new capabilities for [Language Extension](language-extensions-overview.md) i
 - [Microsoft Extensibility SDK for Java](how-to/extensibility-sdk-java-sql-server.md).
 - On Windows and Linux, Java code can be accessed in an external library using the [CREATE EXTERNAL LIBRARY (Transact-SQL)](../t-sql/statements/create-external-library-transact-sql.md) statement. Learn more: [How to call Java from SQL Server](how-to/call-java-from-sql.md).
 - [Java language extension](language-extensions-overview.md) on  Windows and Linux. You can make compiled Java code available to SQL Server by assigning permissions and setting the path. Client apps with access SQL Server can use data and run your code by calling [sp_execute_external_script](../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md), the same procedure used for R and Python integration on SQL Server Machine Learning Services.
+
+### New C# language extension
+
+- A [C# language extension](csharp-overview.md) is available, supported by the [SQL Server Language Extensions](language-extensions-overview.md) extensibility framework.
+- For details on how to install, configure, and use the extension, see [What is C# Language Extension?](csharp-overview.md)
 
 ## Next steps
 

@@ -2,14 +2,13 @@
 title: "Quickstart: Run R scripts"
 titleSuffix: SQL machine learning
 description: Run a set of simple R scripts with SQL machine learning. Learn how to use the stored procedure sp_execute_external_script to execute the script.
-ms.prod: sql
-ms.technology: machine-learning
-ms.date: 05/21/2020
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.date: 09/16/2021
+ms.service: sql
+ms.subservice: machine-learning
 ms.topic: quickstart
-author: garyericson
-ms.author: garye
-
-ms.custom: seo-lt-2019
+ms.custom: intro-quickstart
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current"
 ---
 

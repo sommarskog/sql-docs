@@ -1,13 +1,13 @@
 ---
-title: "CLR Hosted Environment | Microsoft Docs"
+title: "CLR Hosted Environment"
 description: This article describes how CLR and SQL Server are integrated to manage system resources uniformly and how CAS and SQL Server security are integrated.
-ms.custom: ""
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/17/2017"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: clr
+ms.service: sql
+ms.subservice: clr
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "type-safe code [CLR integration]"
   - "UNSAFE permission set"
   - "run-time environments [CLR integration]"
@@ -24,9 +24,6 @@ helpviewer_keywords:
   - "scalability [CLR integration]"
   - "hosted environments [CLR integration]"
   - "HPAs [CLR integration]"
-ms.assetid: d280d359-08f0-47b5-a07e-67dd2a58ad73
-author: "rothja"
-ms.author: "jroth"
 ---
 # CLR Integration Architecture - CLR Hosted Environment
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

@@ -1,23 +1,19 @@
 ---
 title: "MSmerge_generation_partition_mappings (T-SQL)"
-description: Describes the MSmerge_generation_partition_mappings stored procedure used to track changes to partitions in a merge publication. 
-ms.custom: seo-lt-2019
+description: Describes the MSmerge_generation_partition_mappings stored procedure used to track changes to partitions in a merge publication.
+author: VanMSFT
+ms.author: vanto
 ms.date: "03/06/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: replication
+ms.service: sql
+ms.subservice: replication
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "MSmerge_generation_partition_mappings_TSQL"
   - "MSmerge_generation_partition_mappings"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "MSmerge_generation_partition_mappings system table"
-ms.assetid: 443a4024-ce48-4772-9ee5-95bd6fb6476b
-author: cawrites
-ms.author: chadam
+dev_langs:
+  - "TSQL"
 ---
 # MSmerge_generation_partition_mappings (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,23 +1,19 @@
 ---
-description: "sysmergesubscriptions (Transact-SQL)"
-title: "sysmergesubscriptions (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sysmergesubscriptions (Transact-SQL)"
+description: sysmergesubscriptions (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: replication
+ms.service: sql
+ms.subservice: replication
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sysmergesubscriptions_TSQL"
   - "sysmergesubscriptions"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sysmergesubscriptions system table"
-ms.assetid: 6adc78da-991d-4c08-98c3-ecb4762e0e99
-author: cawrites
-ms.author: chadam
+dev_langs:
+  - "TSQL"
 ---
 # sysmergesubscriptions (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -53,13 +49,16 @@ ms.author: chadam
 |metadatacleanuptime|**datetime**|The last **datetime** that expired metadata was removed from merge replication system tables.|  
 |partition_id|**int**|Identifies the pre-computed partition to which the subscription belongs.|  
 |cleanedup_unsent_changes|**bit**|Identifies that metadata for unsent changes have been cleaned up at the Subscriber.|  
-|replica_version|**int**|Identifies the version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] for the Subscriber to which the subscription belongs, which can be one of the following values:<br /><br /> **90** = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> **100** = [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|  
+|replica_version|**int**|Identifies the version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] for the Subscriber to which the subscription belongs, which can be one of the following values:<br /><br /> **90** = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> **100** = [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)]|  
 |supportability_mode|**int**|Internal use only.|  
 |application_name|**nvarchar(128)**|Internal use only.|  
 |subscriber_number|**int**|Internal use only.|  
-|last_makegeneration_datetime|**datetime**|The last **datetime** that the makegeneration process ran for the Publisher. For more information, see the -MakeGenerationInterval parameter in [Replication Merge Agent](../../relational-databases/replication/agents/replication-merge-agent.md).|  
+|last_makegeneration_datetime|**datetime**|The last **datetime** that the makegeneration process ran for the Publisher. For more information, see the -MakeGenerationInterval parameter in [Replication Merge Agent](../../relational-databases/replication/agents/replication-merge-agent.md).|
+|last_local_sentgen|**bigint**|Stores the last generation that was sent by the previous merge agent sync.|
+|last_local_recguid|**uniqueidentifier**|Stores the last local received generation GUID from previous merge agent sync.|
+|last_local_recgen|**bigint**|Set by merge cleanup. Stores the last local generation received.|
   
 ## See Also  
- [Replication Tables &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)  
+ [Replication Tables &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md) 
   
   

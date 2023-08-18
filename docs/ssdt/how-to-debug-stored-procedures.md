@@ -1,17 +1,14 @@
 ---
 title: Debug Stored Procedures
 description: Learn how to use the Transact-SQL debugger to interactively debug a stored procedure. See how to display the SQL call stack, local variables, and parameters.
-ms.prod: sql
-ms.technology: ssdt
-ms.topic: conceptual
-f1_keywords: 
-  - "SQL.DATA.TOOLS.EXECUTESTOREDPROCEDURE.DIALOG"
-ms.assetid: e3c8707f-0f6b-4265-8a5a-81f079330b52
 author: markingmyname
 ms.author: maghan
-ms.reviewer: “”
-ms.custom: seo-lt-2019
 ms.date: 02/09/2017
+ms.service: sql
+ms.subservice: ssdt
+ms.topic: conceptual
+f1_keywords:
+  - "SQL.DATA.TOOLS.EXECUTESTOREDPROCEDURE.DIALOG"
 ---
 
 # How to: Debug Stored Procedures
@@ -22,6 +19,9 @@ This example shows how to create and debug a Transact\-SQL stored procedure by s
   
 > [!WARNING]  
 > The following procedure uses entities created in procedures in the [Connected Database Development](../ssdt/connected-database-development.md) and [Project-Oriented Offline Database Development](../ssdt/project-oriented-offline-database-development.md) sections.  
+
+> [!NOTE]
+> Transact\-SQL debugging isn't available for Azure SQL Database or Azure SQL Managed Instance.
   
 ### To debug stored procedures  
   

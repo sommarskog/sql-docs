@@ -1,26 +1,24 @@
 ---
-title: "Create Identical Symmetric Keys on Two Servers | Microsoft Docs"
+title: "Create identical symmetric keys on two servers"
 description: Learn how to create identical symmetric keys on two servers in SQL Server by using Transact-SQL. This supports encryption in separate databases or servers.
-ms.custom: ""
-ms.date: "05/30/2019"
-ms.prod: sql
-ms.reviewer: vanto
-ms.technology: security
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "symmetric keys [SQL Server], creating"
-ms.assetid: a13d0b21-a43b-43c0-9c22-7ba8f3d15e80
 author: jaszymas
 ms.author: jaszymas
+ms.reviewer: vanto
+ms.date: "12/16/2021"
+ms.service: sql
+ms.subservice: security
+ms.topic: conceptual
+helpviewer_keywords:
+  - "symmetric keys [SQL Server], creating"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
-# Create Identical Symmetric Keys on Two Servers
-[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
-  This topic describes how to create identical symmetric keys on two different servers in [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] by using [!INCLUDE[tsql](../../../includes/tsql-md.md)]. In order to decrypt ciphertext, you need the key that was used to encrypt it. When both encryption and decryption occur in a single database, the key is stored in the database and it is available, depending on permissions, for both encryption and decryption. But when encryption and decryption occur in separate databases or on separate servers, the key stored in one database is not available for use on the second database.
+# Create identical symmetric keys on two servers
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../../includes/applies-to-version/sql-asdb-asdbmi.md)]
+  This topic describes how to create identical symmetric keys on two different servers in [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] by using [!INCLUDE[tsql](../../../includes/tsql-md.md)]. In order to decrypt ciphertext, you need the key that was used to encrypt it. When both encryption and decryption occur in a single database, the key is stored in the database and it's available, depending on permissions, for both encryption and decryption. But when encryption and decryption occur in separate databases or on separate servers, the key stored in one database isn't available for use on the second database.
   
-## Before You Begin  
+## Before you begin  
   
-### Limitations and Restrictions  
+### Limitations and restrictions  
   
 - When a symmetric key is created, the symmetric key must be encrypted by using at least one of the following: certificate, password, symmetric key, asymmetric key, or PROVIDER. The key can have more than one encryption of each type. In other words, a single symmetric key can be encrypted by using multiple certificates, passwords, symmetric keys, and asymmetric keys at the same time.  
   
@@ -29,7 +27,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 ## Security  
   
 ### Permissions  
- Requires ALTER ANY SYMMETRIC KEY permission on the database. If AUTHORIZATION is specified, requires IMPERSONATE permission on the database user or ALTER permission on the application role. If encryption is by certificate or asymmetric key, requires VIEW DEFINITION permission on the certificate or asymmetric key. Only Windows logins, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] logins, and application roles can own symmetric keys. Groups and roles cannot own symmetric keys.  
+ Requires ALTER ANY SYMMETRIC KEY permission on the database. If AUTHORIZATION is specified, requires IMPERSONATE permission on the database user or ALTER permission on the application role. If encryption is by certificate or asymmetric key, requires VIEW DEFINITION permission on the certificate or asymmetric key. Only Windows logins, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] logins, and application roles can own symmetric keys. Groups and roles can't own symmetric keys.  
   
 ## Using Transact-SQL  
   
@@ -74,7 +72,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
         DECRYPTION BY CERTIFICATE cert_keyProtection;  
     GO  
     DECLARE @blob varbinary(8000);  
-    SET @blob = SELECT CONVERT(varchar(8000), decryptbykey(@blob));  
+    SELECT CONVERT(varchar(8000), decryptbykey(@blob));  
     GO  
     ```  
   
@@ -92,14 +90,13 @@ SQL Server 2016 uses the SHA1 hashing algorithm for its encryption work. Startin
 - Ensure your SQL Server 2017 is updated to at least Cumulative Update 2 (CU2).
   - See [Cumulative Update 2 (CU2) for SQL Server 2017](https://support.microsoft.com/help/4052574) for important details.
 - After you install CU2, turn on trace flag 4631 in SQL Server 2017: `DBCC TRACEON(4631, -1);`
-  - Trace flag 4631 is new in SQL Server 2017. Trace flag 4631 needs to be `ON` globally before you create the master key, certificate, or symmetrical key in SQL Server 2017. This enables these created items to interoperate with SQL Server 2016 and earlier versions.
+  - Trace flag 4631 is new in SQL Server 2017. Trace flag 4631 needs to be `ON` globally before you create the master key, certificate, or symmetrical key in SQL Server 2017. This enables these created items to interoperate with SQL Server 2016 and earlier versions. This trace flag should only be turned on temporarily to do the re-encryption of data with SHA2-derived keys.
 
-For more guidance, see:
+For more information, see:
 
-- [FIX: SQL Server 2017 cannot decrypt data encrypted by earlier versions of SQL Server by using the same symmetric key](https://support.microsoft.com/help/4053407/sql-server-2017-cannot-decrypt-data-encrypted-by-earlier-versions)
-- [Identical symmetric keys do not work between SQL Server 2017 and other SQL Server version](https://feedback.azure.com/forums/908035-sql-server/suggestions/33116269-identical-symmetric-keys-do-not-work-between-sql-s) <!-- Issue 2225. Thank you Stephen W and Sam Rueby. -->
+- [FIX: SQL Server 2017 can't decrypt data encrypted by earlier versions of SQL Server by using the same symmetric key](https://support.microsoft.com/help/4053407/sql-server-2017-cannot-decrypt-data-encrypted-by-earlier-versions)
 
-## For more information
+## See also
 
 -   [CREATE MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/create-master-key-transact-sql.md)  
   

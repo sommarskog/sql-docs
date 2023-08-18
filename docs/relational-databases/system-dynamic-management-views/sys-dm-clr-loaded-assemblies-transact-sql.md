@@ -1,24 +1,21 @@
 ---
-description: "sys.dm_clr_loaded_assemblies (Transact-SQL)"
-title: "sys.dm_clr_loaded_assemblies (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/09/2016"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: system-objects
+title: "sys.dm_clr_loaded_assemblies (Transact-SQL)"
+description: sys.dm_clr_loaded_assemblies (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
+ms.date: "02/24/2023"
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "dm_clr_loaded_assemblies"
   - "sys.dm_clr_loaded_assemblies_TSQL"
   - "dm_clr_loaded_assemblies_TSQL"
   - "sys.dm_clr_loaded_assemblies"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.dm_clr_loaded_assemblies dynamic management view"
-ms.assetid: 8523d8db-d8a0-4b1f-ae19-6705d633e0a6
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+dev_langs:
+  - "TSQL"
 ---
 # sys.dm_clr_loaded_assemblies (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,6 +34,10 @@ ms.author: wiassaf
 ## Permissions  
  Requires VIEW SERVER STATE permission on the server.  
   
+### Permissions for SQL Server 2022 and later
+
+Requires VIEW SERVER PERFORMANCE STATE permission on the server.
+
 ## Remarks  
  The **dm_clr_loaded_assemblies.appdomain_address** view has a many-to-one relationship with  **dm_clr_appdomains.appdomain_address**. The **dm_clr_loaded_assemblies.assembly_id** view has a one-to-many relationship with **sys.assemblies.assembly_id**.  
   

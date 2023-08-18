@@ -1,25 +1,21 @@
 ---
-description: "sys.dm_tran_version_store_space_usage (Transact-SQL)"
-title: "sys.dm_tran_version_store_space_usage (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/24/2018"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: system-objects
+title: "sys.dm_tran_version_store_space_usage (Transact-SQL)"
+description: sys.dm_tran_version_store_space_usage (Transact-SQL)
+author: "savjani"
+ms.author: "pariks"
+ms.date: "06/19/2023"
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.dm_tran_version_store_space_usage_TSQL"
   - "sys.dm_tran_version_store_space_usage"
   - "dm_tran_version_store_space_usage"
   - "dm_tran_version_store_space_usage_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.dm_tran_version_store_space_usage dynamic management view"
-ms.assetid: 7ab44517-0351-4f91-bdd9-7cf940f03c51
-author: "savjani"
-ms.author: "pariks"
-manager: ajayj
+dev_langs:
+  - "TSQL"
 monikerRange: ">=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_tran_version_store_space_usage (Transact-SQL)
@@ -33,12 +29,16 @@ Because the versioned record is stored as binary, there are no problems with dif
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
-|**database_id**|**int**|Database ID of the database.|  
+|**database_id**|**int**|Database ID of the database. <br /><br />In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], the values are unique within a single database or an elastic pool, but not within a logical server.|  
 |**reserved_page_count**|**bigint**|Total count of the pages reserved in tempdb for version store records of the database.|  
 |**reserved_space_kb**|**bigint**|Total space used in kilobytes in tempdb for version store records of the database.|  
   
 ## Permissions  
 On [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requires `VIEW SERVER STATE` permission.   
+
+### Permissions for SQL Server 2022 and later
+
+Requires VIEW SERVER PERFORMANCE STATE permission on the server.
 
 ## Examples  
 The following query can be used to determine space consumed in tempdb, by version store of each database in a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance. 
@@ -57,12 +57,12 @@ FROM sys.dm_tran_version_store_space_usage;
 Database Name            reserved_page_count reserved_space_kb  
 ------------------------ -------------------- -----------  
 msdb                      0                    0             
-AdventureWorks2016        10                   80             
-AdventureWorks2016DW      0                    0             
+AdventureWorks2022        10                   80             
+AdventureWorks2022DW      0                    0             
 WideWorldImporters        20                   160             
 ```
  
-## See Also  
+## See also  
  [Dynamic Management Views and Functions &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Transaction Related Dynamic Management Views and Functions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/transaction-related-dynamic-management-views-and-functions-transact-sql.md)  
   

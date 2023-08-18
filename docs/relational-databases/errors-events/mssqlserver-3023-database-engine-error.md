@@ -1,17 +1,15 @@
 ---
-description: "MSSQLSERVER_3023"
 title: MSSQLSERVER_3023
-ms.custom: ""
-ms.date: 08/20/2020
-ms.prod: sql
-ms.reviewer: ramakoni1, pijocoder, suresh-kandoth, Masha
-ms.technology: supportability
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "3023 (Database Engine error)"
-ms.assetid: 
+description: "MSSQLSERVER_3023"
 author: suresh-kandoth
-ms.author: ramakoni
+ms.author: sureshka
+ms.reviewer: jopilov, mathoma
+ms.date: 08/20/2020
+ms.service: sql
+ms.subservice: supportability
+ms.topic: "reference"
+helpviewer_keywords:
+  - "3023 (Database Engine error)"
 ---
 # MSSQLSERVER_3023
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -26,7 +24,6 @@ ms.author: ramakoni
 |Component|SQLEngine|
 |Symbolic Name|DB_IN_USE_DUMP|
 |Message Text|Backup and file manipulation operations (such as ALTER DATABASE ADD FILE) on a database must be serialized. Reissue the statement after the current backup or file manipulation operation is completed|
-||
 
 ## Explanation
 

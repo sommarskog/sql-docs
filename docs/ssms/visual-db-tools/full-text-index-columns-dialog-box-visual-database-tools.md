@@ -1,22 +1,17 @@
 ---
-description: "Full-Text Index Columns Dialog Box (Visual Database Tools)"
 title: Full-Text Index Columns Dialog Box
-ms.custom: seo-lt-2019
-ms.date: 01/19/2017
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
-ms.topic: conceptual
-f1_keywords: 
-  - "vdt.dlgbox.fulltextcolumn"
-ms.assetid: a6f41c5c-d950-4d64-9e42-d062925917b6
+description: "Full-Text Index Columns Dialog Box (Visual Database Tools)"
 author: markingmyname
 ms.author: maghan
-ms.reviewer: 
-
+ms.date: 01/19/2017
+ms.service: sql
+ms.subservice: ssms
+ms.topic: conceptual
+f1_keywords:
+  - "vdt.dlgbox.fulltextcolumn"
 ---
 # Full-Text Index Columns Dialog Box (Visual Database Tools)
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server](../../includes/applies-to-version/sqlserver.md)]
 This dialog box lists the columns participating in the full-text index for the table open in Table Designer. To access this dialog box, right-click the table in Table Designer, choose **Full-Text Index**, and in the **Full-Text Index** dialog box, click the index with columns you want to view or edit, click the **Columns** field in the grid to the right, and click the ellipses (**...**).  
   
 ## Options  

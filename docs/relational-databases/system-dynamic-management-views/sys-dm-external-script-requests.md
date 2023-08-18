@@ -1,26 +1,21 @@
 ---
-description: "sys.dm_external_script_requests"
-title: "sys.dm_external_script_requests | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/26/2020"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: machine-learning
-  
+title: "sys.dm_external_script_requests"
+description: sys.dm_external_script_requests
+author: rwestMSFT
+ms.author: randolphwest
+ms.date: "02/27/2023"
+ms.service: sql
+ms.subservice: machine-learning
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.dm_external_script_requests"
   - "sys.dm_external_script_requests_TSQL"
   - "dm_external_script_requests"
   - "dm_external_script_requests_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.dm_external_script_requests dynamic management view"
-ms.assetid: e7e7c50f-b8b2-403c-b8c8-1955da5636c3
-author: dphansen
-ms.author: davidph
-manager: cgronlun
+dev_langs:
+  - "TSQL"
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current"
 ---
 # sys.dm_external_script_requests
@@ -45,6 +40,10 @@ Returns a row for each active worker account that is running an external script.
 > [!NOTE]
 > Users who run external scripts must have the additional permission `EXECUTE ANY EXTERNAL SCRIPT`, however, this DMV can be used by administrators without this permission. 
   
+### Permissions for SQL Server 2022 and later
+
+Requires VIEW SERVER PERFORMANCE STATE permission on the server.
+
 ## Remarks  
 
 This view can be filtered using the script language identifier.

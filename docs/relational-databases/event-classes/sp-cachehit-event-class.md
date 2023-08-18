@@ -1,21 +1,18 @@
 ---
+title: "SP:CacheHit Event Class"
 description: "SP:CacheHit Event Class"
-title: "SP:CacheHit Event Class | Microsoft Docs"
-ms.custom: ""
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: supportability
+ms.service: sql
+ms.subservice: supportability
 ms.topic: reference
-helpviewer_keywords: 
+helpviewer_keywords:
   - "SP:CacheHit event class"
-ms.assetid: 396aa22a-4723-47f5-ae72-7de99d92dd6f
-author: "stevestein"
-ms.author: "sstein"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SP:CacheHit Event Class
-[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
   The SP:CacheHit event class indicates that a stored procedure is in the plan cache.  
   
 ## SP:CacheHit Event Class Data Columns  

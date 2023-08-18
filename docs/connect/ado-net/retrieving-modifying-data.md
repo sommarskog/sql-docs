@@ -1,15 +1,13 @@
 ---
 title: Retrieving and modifying data
 description: In .NET, Microsoft SqlClient Data Provider for SQL Server serves as a bridge between an application and a data source to read and update data.
-ms.date: 03/24/2021
-ms.assetid: 722e7f87-3691-46c6-87e8-7d159722d675
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: connectivity
-ms.topic: conceptual
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
 ms.reviewer: v-chmalh
+ms.date: 03/24/2021
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: conceptual
 ---
 # Retrieving and modifying data in ADO.NET
 
@@ -60,8 +58,8 @@ Describes how to use stored procedure input parameters and output parameters to 
 [Data tracing in SqlClient](data-tracing.md)  
 Describes how Microsoft SqlClient Data Provider for SQL Server provides built-in data tracing functionality.
   
-[Performance counters in SqlClient](performance-counters.md)  
-Describes performance counters available for Microsoft SqlClient Data Provider for SQL Server.
+[Diagnostic counters in SqlClient](diagnostic-counters.md)  
+Describes diagnostic counters and available for Microsoft SqlClient Data Provider for SQL Server.
   
 [Asynchronous programming](asynchronous-programming.md)  
 Describes Microsoft SqlClient Data Provider for SQL Server support for asynchronous programming.

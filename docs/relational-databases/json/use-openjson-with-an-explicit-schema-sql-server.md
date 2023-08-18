@@ -1,21 +1,18 @@
 ---
-description: "Use OPENJSON with an Explicit Schema (SQL Server)"
 title: "Use OPENJSON with an Explicit Schema"
-ms.date: 06/03/2020
-ms.prod: sql
-ms.technology: 
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "OPENJSON, with explicit schema"
-ms.assetid: 9c1c3bfb-e1ad-4659-b94f-722b0848d5a2
+description: "Use OPENJSON with an Explicit Schema (SQL Server)"
 author: jovanpop-msft
 ms.author: jovanpop
 ms.reviewer: jroth
-ms.custom: seo-dt-2019
+ms.date: 06/03/2020
+ms.service: sql
+ms.topic: conceptual
+helpviewer_keywords:
+  - "OPENJSON, with explicit schema"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Use OPENJSON with an Explicit Schema (SQL Server)
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sqlserver2016-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
   Use **OPENJSON** with an explicit schema to return a table that's formatted as you specify in the WITH clause.  
   
@@ -86,11 +83,7 @@ DECLARE @json NVARCHAR(MAX) = '{
 
 For a visual introduction to the built-in JSON support in SQL Server and Azure SQL Database, see the following videos:
 
--   [SQL Server 2016 and JSON Support](https://channel9.msdn.com/Shows/Data-Exposed/SQL-Server-2016-and-JSON-Support)
-
--   [Using JSON in SQL Server 2016 and Azure SQL Database](https://channel9.msdn.com/Shows/Data-Exposed/Using-JSON-in-SQL-Server-2016-and-Azure-SQL-Database)
-
--   [JSON as a bridge between NoSQL and relational worlds](https://channel9.msdn.com/events/DataDriven/SQLServer2016/JSON-as-a-bridge-betwen-NoSQL-and-relational-worlds)
+-   [JSON as a bridge between NoSQL and relational worlds](https://channel9.msdn.com/events/DataDriven-SQLServer2016/JSON-as-bridge-betwen-NoSQL-relational-worlds)
   
 ## See Also  
  [OPENJSON &#40;Transact-SQL&#41;](../../t-sql/functions/openjson-transact-sql.md)  

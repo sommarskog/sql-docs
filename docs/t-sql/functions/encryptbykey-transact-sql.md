@@ -1,36 +1,33 @@
 ---
+title: "ENCRYPTBYKEY (Transact-SQL)"
 description: "ENCRYPTBYKEY (Transact-SQL)"
-title: "ENCRYPTBYKEY (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: VanMSFT
+ms.author: vanto
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "ENCRYPTBYKEY_TSQL"
   - "ENCRYPTBYKEY"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "authenticators [SQL Server]"
   - "encryption [SQL Server], symmetric keys"
   - "symmetric keys [SQL Server], ENCRYPTBYKEY function"
   - "ENCRYPTBYKEY function"
-ms.assetid: 0e11f8c5-f79d-46c1-ab11-b68ef05d6787
-author: VanMSFT
-ms.author: vanto
-monikerRange: "= azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017||= azure-sqldw-latest"
+dev_langs:
+  - "TSQL"
+monikerRange: "= azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017 || = azure-sqldw-latest"
 ---
 # ENCRYPTBYKEY (Transact-SQL)
-[!INCLUDE [sql-asdb-asa](../../includes/applies-to-version/sql-asdb-asa.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   Encrypts data by using a symmetric key.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
-[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/\synapse-analytics-od-unsupported-syntax.md)] 
+> [!NOTE]
+> [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
   
 ## Syntax  
   
@@ -101,7 +98,7 @@ EncryptByKey ( key_GUID , { 'cleartext' | @cleartext }
  The following example adds a column to the `Employee` table, and then encrypts the value of the Social Security number that is stored in column `NationalIDNumber`.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
   
 -- Create a column in which to store the encrypted data.  
@@ -124,7 +121,7 @@ GO
 ### B. Encrypting a record together with an authentication value  
   
 ```sql 
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
   
 -- Create a column in which to store the encrypted data.  
 ALTER TABLE Sales.CreditCard   

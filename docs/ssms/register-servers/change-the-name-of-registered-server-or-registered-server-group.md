@@ -1,23 +1,19 @@
 ---
-description: "Change the Name of Registered Server or Registered Server Group"
 title: Change the Name of Registered Server or Server Group
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
-ms.topic: conceptual
-ms.assetid: 10e1546b-9edb-400c-8676-2ea1192d6134
+description: "Change the Name of Registered Server or Registered Server Group"
 author: markingmyname
 ms.author: maghan
-ms.reviewer: ""
-ms.custom: seo-lt-2019
 ms.date: 08/02/2016
+ms.service: sql
+ms.subservice: ssms
+ms.topic: conceptual
 ---
 
 # Change the Name of Registered Server or Registered Server Group
 
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-This topic describes how to change the name of a registered server or server group in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. The name can be changed at any time. Changing the name of a server in Registered Servers only changes how the name is displayed. To connect to a different server, you must edit the connection properties of the registered server.  
+This topic describes how to change the name of a registered server or server group in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] by using SQL Server Management Studio. The name can be changed at any time. Changing the name of a server in Registered Servers only changes how the name is displayed. To connect to a different server, you must edit the connection properties of the registered server.  
   
 ## <a name="SSMSProcedure"></a> Using SQL Server Management Studio
 

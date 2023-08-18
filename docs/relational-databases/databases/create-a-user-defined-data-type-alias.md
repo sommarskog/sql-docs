@@ -1,25 +1,21 @@
 ---
-title: "Create a User-Defined Data Type Alias | Microsoft Docs"
+title: "Create a User-Defined Data Type Alias"
 description: "Learn how to create a user-defined data type alias in SQL Server 2019 by using SQL Server Management Studio or Transact-SQL."
-ms.custom: ""
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: configuration
+ms.service: sql
+ms.subservice: configuration
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.swb.userdefineddatatype.general.f1"
   - "sql13.swb.new.datatype.properties.general.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "alias data types [SQL Server], creating"
-ms.assetid: b1dd8413-0cd0-411b-a79b-1bb043ccc62d
-author: "stevestein"
-ms.author: "sstein"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Create a User-Defined Data Type Alias
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
   This topic describes how to create a new user-defined data type alias in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  **In This Topic**  

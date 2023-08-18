@@ -1,23 +1,20 @@
 ---
+title: "STCurveN (geometry Data Type)"
 description: "STCurveN (geometry Data Type)"
-title: "STCurveN (geometry Data Type) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/03/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
-ms.topic: reference
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "STCurveN method (geometry)"
-ms.assetid: 64adf1a1-3a41-41fb-b7d1-44390c3e4ea9
 author: MladjoA
-ms.author: mlandzic 
+ms.author: mlandzic
+ms.date: "08/03/2017"
+ms.service: sql
+ms.subservice: t-sql
+ms.topic: reference
+helpviewer_keywords:
+  - "STCurveN method (geometry)"
+dev_langs:
+  - "TSQL"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=fabric"
 ---
 # STCurveN (geometry Data Type)
-[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance FabricSE FabricDW](../../includes/applies-to-version/sql-asdb-asdbmi-fabricse-fabricdw.md)]
 
 Returns the curve specified from a **geometry** instance that is a **LineString**, **CircularString**, **CompoundCurve**, or **MultiLineString**.
   
@@ -58,7 +55,7 @@ Returns the curve specified from a **geometry** instance that is a **LineString*
 ### A. Using STCurveN() on a CircularString instance  
  The following example returns the second curve in a `CircularString` instance:  
   
-```
+```sql
  DECLARE @g geometry = 'CIRCULARSTRING(0 0, 1 2.1082, 3 6.3246, 0 7, -3 6.3246, -1 2.1082, 0 0)';  
  SELECT @g.STCurveN(2).ToString();
  ```  
@@ -70,7 +67,7 @@ Returns the curve specified from a **geometry** instance that is a **LineString*
 ### B. Using STCurveN() on a CompoundCurve instance with one CircularString instance  
  The following example returns the second curve in a `CompoundCurve` instance:  
   
-```
+```sql
  DECLARE @g geometry = 'COMPOUNDCURVE(CIRCULARSTRING(0 0, 1 2.1082, 3 6.3246, 0 7, -3 6.3246, -1 2.1082, 0 0))';  
  SELECT @g.STCurveN(2).ToString();
  ```  
@@ -82,7 +79,7 @@ Returns the curve specified from a **geometry** instance that is a **LineString*
 ### C. Using STCurveN() on a CompoundCurve instance with three CircularString instances  
  The following example uses a `CompoundCurve` instance that combines three separate `CircularString` instances into the same curve sequence as the previous example:  
   
-```
+```sql
  DECLARE @g geometry = 'COMPOUNDCURVE (CIRCULARSTRING (0 0, 1 2.1082, 3 6.3246), CIRCULARSTRING(3 6.3246, 0 7, -3 6.3246), CIRCULARSTRING(-3 6.3246, -1 2.1082, 0 0))';  
  SELECT @g.STCurveN(2).ToString();
  ```  
@@ -96,7 +93,7 @@ Returns the curve specified from a **geometry** instance that is a **LineString*
 ### D. Validating the parameter before calling STCurveN()  
  The following example shows how to make sure `@n` is valid before you call the `STCurveN()`method:  
   
-```
+```sql
  DECLARE @g geometry;  
  DECLARE @n int;  
  SET @n = 3;  

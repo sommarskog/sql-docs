@@ -1,16 +1,13 @@
 ---
+title: "Extended Protection for Authentication with Reporting Services"
 description: "Extended Protection for Authentication with Reporting Services"
-title: "Extended Protection for Authentication with Reporting Services | Microsoft Docs"
-ms.date: 06/22/2020
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: security
-
-
-ms.topic: conceptual
-ms.assetid: eb5c6f4a-3ed5-430b-a712-d5ed4b6b9b2b
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 06/22/2020
+ms.service: reporting-services
+ms.subservice: security
+ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 
 # Extended Protection for Authentication with Reporting Services
@@ -163,4 +160,4 @@ For more information, see [Register a Service Principal Name &#40;SPN&#41; for a
 [RsReportServer.config Configuration File](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
 [SetExtendedProtectionSettings Method &#40;WMI MSReportServer_ConfigurationSetting&#41;](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-setextendedprotectionsettings.md)  
 
-More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)
+More questions? [Try asking the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user)

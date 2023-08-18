@@ -1,15 +1,12 @@
 ---
 title: Custom Test Condition to Verify the Results of a Stored Procedure
 description: Walk through the steps of setting up a custom test condition that checks whether a stored procedure returns the correct number of columns.
-ms.prod: sql
-ms.technology: ssdt
-ms.topic: conceptual
-ms.assetid: 4c33b494-a85e-4dd2-97b6-c88ee858a99c
 author: markingmyname
 ms.author: maghan
-ms.reviewer: “”
-ms.custom: seo-lt-2019
 ms.date: 02/09/2017
+ms.service: sql
+ms.subservice: ssdt
+ms.topic: conceptual
 ---
 
 # Walkthrough: Using a Custom Test Condition to Verify the Results of a Stored Procedure
@@ -75,7 +72,7 @@ Next, you will add the necessary references to the project.
   
 6.  On the **Project** menu, click **Unload Project**.  
   
-7.  Right-click on the project in **Solution Explorer** and choose **Edit <project name>.csproj**.  
+7.  Right-click on the project in **Solution Explorer** and choose **Edit \<project name\>.csproj**.  
   
 8.  Add the following Import statement after the import of **Microsoft.CSharp.targets**:  
   
@@ -342,9 +339,9 @@ Next, we will build the project.
 ## <a name="xxx"></a>Compiling the project and installing your test condition  
 On the **Build** menu, click **Build Solution**.  
   
-Next, you will copy the assembly information to the Extensions directory. When Visual Studio starts, it will identify any extensions in the %Program Files%\Microsoft Visual Studio <Version>\Common7\IDE\Extensions\Microsoft\SQLDB\TestConditions directory and subdirectories, and make them available for use:  
+Next, you will copy the assembly information to the Extensions directory. When Visual Studio starts, it will identify any extensions in the %Program Files%\Microsoft Visual Studio \<Version\>\Common7\IDE\Extensions\Microsoft\SQLDB\TestConditions directory and subdirectories, and make them available for use:  
   
-Copy the **ColumnCountCondition.dll** assembly file from the output directory to the %Program Files%\Microsoft Visual Studio <Version>\Common7\IDE\Extensions\Microsoft\SQLDB\TestConditions directory.  
+Copy the **ColumnCountCondition.dll** assembly file from the output directory to the %Program Files%\Microsoft Visual Studio \<Version\>\Common7\IDE\Extensions\Microsoft\SQLDB\TestConditions directory.  
   
 By default, the path of your compiled .dll file is *YourSolutionPath*\\*YourProjectPath*\bin\Debug or *YourSolutionPath*\\*YourProjectPath*\bin\Release.  
   

@@ -1,17 +1,14 @@
 ---
 title: "Create an availability group with Transact-SQL (T-SQL)"
 description: "Use Transact-SQL to create and configure an availability group on instances of SQL Server 2019 (15.x) on which the Always On availability groups feature is enabled."
-ms.custom: seo-lt-2019
+author: MashaMSFT
+ms.author: mathoma
 ms.date: "05/17/2016"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: availability-groups
+ms.service: sql
+ms.subservice: availability-groups
 ms.topic: how-to
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Availability Groups [SQL Server], creating"
-ms.assetid: 8b0a6301-8b79-4415-b608-b40876f30066
-author: cawrites
-ms.author: chadam
 ---
 # Create an Always On availability group using Transact-SQL (T-SQL)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -226,7 +223,7 @@ ms.author: chadam
   
      The following code example creates a transaction log backup on MyDb1 and on MyDb2.  
   
-    ```sql  
+    ```sql
     -- On the server instance that hosts the primary replica,   
     -- Backup the transaction log on each primary database:  
     BACKUP LOG MyDb1   
@@ -236,7 +233,7 @@ ms.author: chadam
   
     BACKUP LOG MyDb2   
     TO DISK = N'\\FILESERVER\SQLbackups\MyDb2.bak'   
-        WITHNOFORMAT;  
+        WITH NOFORMAT;  
     GO
     ```  
   
@@ -409,7 +406,7 @@ GO
   
 BACKUP LOG MyDb2   
 TO DISK = N'\\FILESERVER\SQLbackups\MyDb2.bak'   
-    WITHNOFORMAT  
+    WITH NOFORMAT  
 GO  
   
 -- Restore the transaction log on each secondary database,  
@@ -500,12 +497,6 @@ GO
      [SQL Server Always On Team Blogs: The official SQL Server Always On Team Blog](/archive/blogs/sqlalwayson/)  
   
      [CSS SQL Server Engineers Blogs](/archive/blogs/psssql/)  
-  
--   **Videos:**  
-  
-     [Microsoft SQL Server Code-Named "Denali" Always On Series,Part 1: Introducing the Next Generation High Availability Solution](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
-  
-     [Microsoft SQL Server Code-Named "Denali" Always On Series,Part 2: Building a Mission-Critical High Availability Solution Using Always On](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)  
   
 -   **Whitepapers:**  
   

@@ -1,34 +1,30 @@
 ---
-description: "DROP FULLTEXT CATALOG (Transact-SQL)"
-title: "DROP FULLTEXT CATALOG (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "DROP FULLTEXT CATALOG (Transact-SQL)"
+description: DROP FULLTEXT CATALOG (Transact-SQL)
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "DROP_FULLTEXT_CATALOG_TSQL"
   - "DROP FULLTEXT CATALOG"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "dropping full-text catalogs"
   - "removing full-text catalogs"
   - "full-text catalogs [SQL Server], removing"
   - "deleting full-text catalogs"
   - "DROP FULLTEXT CATALOG statement"
-ms.assetid: b54efb0b-400b-49ce-923b-ce20a2a12255
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+dev_langs:
+  - "TSQL"
 ---
 # DROP FULLTEXT CATALOG (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Removes a full-text catalog from a database. You must drop all full-text indexes associated with the catalog before you drop the catalog.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

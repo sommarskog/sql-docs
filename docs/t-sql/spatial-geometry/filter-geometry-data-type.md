@@ -1,27 +1,25 @@
 ---
+title: Filter (geometry Data Type)
 description: "Filter (geometry Data Type)"
-title: "Filter (geometry Data Type) | Microsoft Docs"
-ms.custom: ""
+author: MladjoA
+ms.author: mlandzic
 ms.date: "08/03/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "Filter"
   - "Filter_TSQL"
   - "Filter (geometry Data Type)"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Filter method"
-ms.assetid: 3d629a39-157e-4159-a3ca-a3c2e0ed4160
-author: MladjoA
-ms.author: mlandzic 
+dev_langs:
+  - "TSQL"
 ---
+
 # Filter (geometry Data Type)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 A method that offers a fast, index-only intersection method to determine if a **geometry** instance intersects another **geometry** instance, assuming an index is available.
   
@@ -53,7 +51,7 @@ In cases where an index is not available, or is not used, the method will return
 ## Examples  
  The following example uses `Filter()` to determine if two `geometry` instances intersect each other.  
   
-```  
+```sql
 CREATE TABLE sample (id int primary key, g geometry);  
 GO  
 INSERT INTO sample VALUES  

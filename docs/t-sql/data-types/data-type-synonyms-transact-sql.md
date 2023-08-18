@@ -1,38 +1,36 @@
 ---
+title: "Data type synonyms (Transact-SQL)"
 description: "Data type synonyms (Transact-SQL)"
-title: "Data type synonyms (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "07/23/2017"
-ms.prod: sql
-ms.prod_service: "sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "data types [SQL Server], synonyms"
   - "alternate names [SQL Server]"
   - "synonyms [SQL Server], data types"
-ms.assetid: 390eef67-1a49-4185-a971-e07765be9717
-author: MikeRayMSFT
-ms.author: mikeray
+dev_langs:
+  - "TSQL"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=fabric"
 ---
 # Data type synonyms (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricdw.md)]
 
 Data type synonyms are included in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] for ISO compatibility. The following table lists the synonyms and the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] system data types that they map to.
   
 |Synonym|SQL Server system data type|  
 |---|---|
-|**Binary varying**|**varbinary**|  
+|**binary varying**|**varbinary**|  
 |**char varying**|**varchar**|  
 |**character**|**char**|  
 |**character**|**char(1)**|  
 |**character(**_n_**)**|**char(n)**|  
 |**character varying(**_n_**)**|**varchar(n)**|  
-|**Dec**|**decimal**|  
-|**Double precision**|**float**|  
+|**dec**|**decimal**|  
+|**double precision**|**float**|  
 |**float**[**(**_n_**)**] for _n_ = 1-7|**real**|  
 |**float**[**(**_n_**)**] for _n_ = 8-15|**float**|  
 |**integer**|**int**|  
@@ -41,7 +39,7 @@ Data type synonyms are included in [!INCLUDE[ssNoVersion](../../includes/ssnover
 |**national character varying(**_n_**)**|**nvarchar(n)**|  
 |**national char varying(**_n_**)**|**nvarchar(n)**|  
 |**national text**|**ntext**|  
-|**timestamp**|rowversion|  
+|**rowversion**|**timestamp**|  
   
 Data type synonyms can be used instead of the corresponding base data type name in data definition language (DDL) statements. These statements include CREATE TABLE, CREATE PROCEDURE, and DECLARE *\@variable*. However, after the object is created, the synonyms have no visibility. When the object is created, the object is assigned the base data type that is associated with the synonym. There's no record that the synonym was specified in the statement that created the object.
   

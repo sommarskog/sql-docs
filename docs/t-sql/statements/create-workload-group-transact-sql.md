@@ -1,29 +1,26 @@
 ---
-description: "CREATE WORKLOAD GROUP (Transact-SQL)"
 title: "CREATE WORKLOAD GROUP (Transact-SQL)"
-ms.custom: ""
+description: CREATE WORKLOAD GROUP (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: 05/04/2021
-ms.prod: sql
-ms.prod_service: "sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "WORKLOAD GROUP"
   - "WORKLOAD_GROUP_TSQL"
   - "CREATE WORKLOAD GROUP"
   - "CREATE_WORKLOAD_GROUP_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "CREATE WORKLOAD GROUP statement"
-author: julieMSFT
-ms.author: jrasnick
+dev_langs:
+  - "TSQL"
 monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current"
 ---
 # CREATE WORKLOAD GROUP (Transact-SQL)
 
-[!INCLUDE[select-product](../../includes/select-product.md)]
+[!INCLUDE [select-product](../includes/select-product.md)]
 
 ::: moniker range=">=sql-server-2016||>=sql-server-linux-2017"
 
@@ -43,8 +40,8 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest||
 
 ## SQL Server and SQL Managed Instance
 
-[!INCLUDE [CREATE WORKLOAD GROUP](../../includes/create-workload-group.md)]
-  
+[!INCLUDE [create-workload-group](../includes/create-workload-group.md)]
+
 ::: moniker-end
 ::: moniker range="=azuresqldb-mi-current"
 
@@ -64,7 +61,7 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest||
 
 ## SQL Server and SQL Managed Instance
 
-[!INCLUDE [CREATE WORKLOAD GROUP](../../includes/create-workload-group.md)]
+[!INCLUDE [create-workload-group](../includes/create-workload-group.md)]
 
 ::: moniker-end
 ::: moniker range="=azure-sqldw-latest"
@@ -87,7 +84,7 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest||
 
 Creates a workload group. Workload groups are containers for a set of requests and are the basis for how workload management is configured on a system. Workload groups provide the ability to reserve resources for workload isolation, contain resources, define resources per request, and adhere to execution rules. Once the statement completes, the settings are in effect.
 
-:::image type="icon" source="../../database-engine/configure-windows/media/topic-link.gif"::: [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ```syntaxsql
 CREATE WORKLOAD GROUP group_name
@@ -106,13 +103,13 @@ CREATE WORKLOAD GROUP group_name
 Specifies the name by which the workload group is identified. *group_name* is a sysname. It can be up to 128 characters long and must be unique within the instance.
 
 *MIN_PERCENTAGE_RESOURCE* = value</br>
-Specifies a guaranteed minimum resource allocation for this workload group that is not shared with other workload groups. *value* is an integer range from 0 to 100. The sum of min_percentage_resource across all workload groups cannot exceed 100. The value for min_percentage_resource cannot be greater than cap_percentage_resource. There are minimum effective values allowed per service level. See [Effective Values](#effective-values) for more details.
+Specifies a guaranteed minimum resource allocation for this workload group that is not shared with other workload groups. Memory is the only resource governed by this parameter.  *value* is an integer range from 0 to 100. The sum of min_percentage_resource across all workload groups cannot exceed 100. The value for min_percentage_resource cannot be greater than cap_percentage_resource. There are minimum effective values allowed per service level. See [Effective Values](#effective-values) for more details.
 
 *CAP_PERCENTAGE_RESOURCE* = value</br>
-Specifies the maximum resource utilization for all requests in a workload group. The allowed integer range for value is 1 through 100. The value for cap_percentage_resource must be greater than min_percentage_resource. The effective value for cap_percentage_resource can be reduced if min_percentage_resource is configured greater than zero in other workload groups.
+Specifies the maximum resource utilization for all requests in a workload group. Both CPU and memory resources are capped by this parameter. The allowed integer range for value is 1 through 100. The value for cap_percentage_resource must be greater than min_percentage_resource. The effective value for cap_percentage_resource can be reduced if min_percentage_resource is configured greater than zero in other workload groups.
 
 *REQUEST_MIN_RESOURCE_GRANT_PERCENT* = value</br>
-Sets the minimum amount of resources allocated per request. *value* is a required parameter with a decimal range between 0.75 to 100.00. The value for request_min_resource_grant_percent must be a multiple of 0.25, must be a factor of min_percentage_resource, and be less than cap_percentage_resource. There are minimum effective values allowed per service level. See [Effective Values](#effective-values) for more details.
+Sets the minimum amount of resources allocated per request. Memory is the only resource governed by this parameter. *value* is a required parameter with a decimal range between 0.75 to 100.00. The value for request_min_resource_grant_percent must be a multiple of 0.25, must be a factor of min_percentage_resource, and be less than cap_percentage_resource. There are minimum effective values allowed per service level. See [Effective Values](#effective-values) for more details.
 
 For example:
 
@@ -132,10 +129,9 @@ Consider the values that are used for resource classes as a guideline for reques
 |Mediumrc|10%|
 |Largerc|22%|
 |Xlargerc|70%|
-|||
 
 *REQUEST_MAX_RESOURCE_GRANT_PERCENT* = value</br>         
-Sets the maximum amount of resources allocated per request. *value* is an optional decimal parameter with a default value equal to the request_min_resource_grant_percent. *value* must be greater than or equal to request_min_resource_grant_percent. When the value of request_max_resource_grant_percent is greater than request_min_resource_grant_percent and system resources are available, additional resources are allocated to a request.
+Sets the maximum amount of resources allocated per request. Memory is the only resource governed by this parameter. *value* is an optional decimal parameter with a default value equal to the request_min_resource_grant_percent. *value* must be greater than or equal to request_min_resource_grant_percent. When the value of request_max_resource_grant_percent is greater than request_min_resource_grant_percent and system resources are available, additional resources are allocated to a request.
 
 *IMPORTANCE* = { LOW \| BELOW_NORMAL \| NORMAL \| ABOVE_NORMAL \| HIGH }</br>        
 Specifies the default importance of a request for the workload group. Importance is one of the following, with NORMAL being the default:
@@ -181,7 +177,6 @@ The `request_min_resource_grant_percent` parameter has an effective value becaus
 |DW10000c|0.75%|128|
 |DW15000c|0.75%|128|
 |DW30000c|0.75%|128|
-||||
 
 The `min_percentage_resource` parameter must be greater than or equal to the effective `request_min_resource_grant_percent`. A workload group with `min_percentage_resource` configured less than effective `min_percentage_resource` has the value adjusted to zero at run time. When this happens, the resources configured for `min_percentage_resource` are sharable across all workload groups. For example, the workload group `wgAdHoc` with a `min_percentage_resource` of 10% running at DW1000c would have an effective `min_percentage_resource` of 10% (3% is the minimum supported value at DW1000c). `wgAdhoc` at DW100c would have an effective min_percentage_resource of 0%. The 10% configured for `wgAdhoc` would be shared across all workload groups.
 

@@ -1,20 +1,17 @@
 ---
-description: "Import JSON documents into SQL Server"
 title: "Import JSON documents"
-ms.date: 06/03/2020
-ms.prod: sql
-ms.technology: 
-ms.topic: conceptual
-ms.assetid: 0e908ec0-7173-4cd2-8f48-2700757b53a5
+description: "Import JSON documents into SQL Server"
 author: jovanpop-msft
 ms.author: jovanpop
 ms.reviewer: jroth
-ms.custom: seo-dt-2019
+ms.date: 06/03/2020
+ms.service: sql
+ms.topic: conceptual
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Import JSON documents into SQL Server
 
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sqlserver2016-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
 This article describes how to import JSON files into SQL Server. Currently there are lots of JSON documents stored in files. Applications log information in JSON files, sensors generate information that's stored in JSON files, and so forth. It's important to be able to read the JSON data stored in files, load the data into SQL Server, and analyze it.
 
@@ -149,7 +146,6 @@ In this example, OPENROWSET(BULK) reads the content of the file and passes that 
 |978-1423103349|The Sea of Monsters|6.49|304|Rick Riordan| 
 |978-1857995879|Sophie's World : The Greek Philosophers|3.07|64|Jostein Gaarder| 
 |978-1933988177|Lucene in Action, Second Edition|30.5|475|Michael McCandless|
-||||||
 
 Now you can return this table to the user, or load the data into another table.
 
@@ -159,11 +155,7 @@ Now you can return this table to the user, or load the data into another table.
 
 For a visual introduction to the built-in JSON support in SQL Server and Azure SQL Database, see the following videos:
 
--   [SQL Server 2016 and JSON Support](https://channel9.msdn.com/Shows/Data-Exposed/SQL-Server-2016-and-JSON-Support)
-
--   [Using JSON in SQL Server 2016 and Azure SQL Database](https://channel9.msdn.com/Shows/Data-Exposed/Using-JSON-in-SQL-Server-2016-and-Azure-SQL-Database)
-
--   [JSON as a bridge between NoSQL and relational worlds](https://channel9.msdn.com/events/DataDriven/SQLServer2016/JSON-as-a-bridge-betwen-NoSQL-and-relational-worlds)
+-   [JSON as a bridge between NoSQL and relational worlds](https://channel9.msdn.com/events/DataDriven-SQLServer2016/JSON-as-bridge-betwen-NoSQL-relational-worlds)
   
 ## See Also
 

@@ -1,34 +1,30 @@
 ---
-description: "DROP EVENT NOTIFICATION (Transact-SQL)"
-title: "DROP EVENT NOTIFICATION (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "DROP EVENT NOTIFICATION (Transact-SQL)"
+description: DROP EVENT NOTIFICATION (Transact-SQL)
+author: markingmyname
+ms.author: maghan
 ms.date: "03/06/2017"
-ms.prod: sql
-ms.prod_service: "sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "DROP EVENT NOTIFICATION"
   - "DROP_EVENT_NOTIFICATION_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "event notifications [SQL Server], removing"
   - "deleting event notifications"
   - "dropping event notifications"
   - "DROP EVENT NOTIFICATION statement"
   - "removing event notifications"
-ms.assetid: 0ffd8f47-4ea3-4238-9e73-c318df710cf7
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+dev_langs:
+  - "TSQL"
 ---
 # DROP EVENT NOTIFICATION (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [sql-asdbmi](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Removes an event notification trigger from the current database.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -68,7 +64,7 @@ ON { SERVER | DATABASE | QUEUE queue_name }
  The following example creates a database-scoped event notification, then drops it:  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 CREATE EVENT NOTIFICATION NotifyALTER_T1  
 ON DATABASE  

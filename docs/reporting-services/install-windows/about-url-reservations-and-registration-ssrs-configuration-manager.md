@@ -1,19 +1,16 @@
 ---
-title: "URL Reservations & Registration (Configuration Manager) | Microsoft Docs"
+title: "URL Reservations & Registration (Configuration Manager)"
 description: "URLs for Reporting Services applications are defined as URL reservations in HTTP.SYS."
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 01/16/2020
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.custom: seo-lt-2019​, seo-mmd-2019
-
+ms.service: reporting-services
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "URL reservations"
   - "URL registration"
   - "Report Server service, URL reservations"
-ms.assetid: c2c460c3-e749-4efd-aa02-0f8a98ddbc76
-author: maggiesMSFT
-ms.author: maggies
 ---
 # About URL Reservations and Registration  (Report Server Configuration Manager)
   URLs for Reporting Services applications are defined as URL reservations in HTTP.SYS. A URL reservation defines the syntax of a URL endpoint to a Web application. URL reservations are defined for both the Report Server Web service and the web portal when you configure the applications on the report server. URL reservations are created for you automatically when configure URLs through Setup or the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration tool:  
@@ -65,17 +62,17 @@ ms.author: maggies
   
  URL reservations include a port number. The following operating systems will allow multiple Web applications to share a port:  
   
--   [!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2  
+-   [!INCLUDE[winserver2012](../../includes/winserver2012-md.md)] R2  
   
--   [!INCLUDE[win8srv](../../includes/win8srv-md.md)]  
+-   [!INCLUDE[winserver2012](../../includes/winserver2012-md.md)]  
   
 -   [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)]  
   
--   [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)]  
+-   [!INCLUDE[winserver2008](../../includes/winserver2008-md.md)]  
   
 -   [!INCLUDE[win7](../../includes/win7-md.md)]  
   
--   [!INCLUDE[wiprlhlong](../../includes/wiprlhlong-md.md)]  
+-   [!INCLUDE[winvista](../../includes/winvista-md.md)]  
   
 |Instance Type|Application|Default URL|Actual URL reservation in HTTP.SYS|  
 |-------------------|-----------------|-----------------|----------------------------------------|  
@@ -97,7 +94,7 @@ ms.author: maggies
   
  The `https://localhost` URL is interpreted as `https://127.0.0.1`. If you pegged the URL reservation to a computer name or single IP address, you cannot use localhost unless you create an additional reservation for 127.0.0.1 on the local computer. Similarly, if localhost or 127.0.0.1 is disabled on your computer, you cannot use that URL.  
   
- [!INCLUDE[wiprlhlong](../../includes/wiprlhlong-md.md)], [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] and later include new security features to minimize the risk of accidentally running programs with elevated privileges. Additional steps are necessary to enable local administration on these operating systems. For more information, see [Configure a Native Mode Report Server for Local Administration &#40;SSRS&#41;](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
+ [!INCLUDE[winvista](../../includes/winvista-md.md)], [!INCLUDE[winserver2008](../../includes/winserver2008-md.md)] and later include new security features to minimize the risk of accidentally running programs with elevated privileges. Additional steps are necessary to enable local administration on these operating systems. For more information, see [Configure a Native Mode Report Server for Local Administration &#40;SSRS&#41;](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
   
 ## See also  
  [Configure a URL  &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   

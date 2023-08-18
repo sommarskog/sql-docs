@@ -1,21 +1,18 @@
 ---
-description: "SET XACT_ABORT (Transact-SQL)"
-title: "SET XACT_ABORT (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "SET XACT_ABORT (Transact-SQL)"
+description: SET XACT_ABORT (Transact-SQL)
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "10/03/2019"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "XACT_ABORT_TSQL"
   - "XACT_ABORT"
   - "SET XACT_ABORT"
   - "SET_XACT_ABORT_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "transaction rollbacks [SQL Server]"
   - "XACT_ABORT option"
   - "automatic transaction roll backs"
@@ -23,9 +20,8 @@ helpviewer_keywords:
   - "rolling back transactions, SET XACT_ABORT"
   - "roll back transactions [SQL Server]"
   - "SET XACT_ABORT statement"
-ms.assetid: cbcaa433-58f2-4dc3-a077-27273bef65b5
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+dev_langs:
+  - "TSQL"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SET XACT_ABORT (Transact-SQL)
@@ -37,7 +33,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
 Specifies whether [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] automatically rolls back the current transaction when a [!INCLUDE[tsql](../../includes/tsql-md.md)] statement raises a run-time error.
 
-![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## Syntax
 

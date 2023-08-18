@@ -1,19 +1,16 @@
 ---
-title: "Reporting Services Features and Tasks | Microsoft Docs"
+title: "Reporting Services Features and Tasks"
 description: Learn how Reporting Services foundational content is organized by reports and report features, report server features, and Reporting Services product features.
-ms.date: 12/18/2015
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: reporting-services
-
-
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "Reporting Services, programming"
-  - "development [Reporting Services]"
-ms.assetid: 0cc20225-5784-479c-bfb0-445854111367
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 12/18/2015
+ms.service: reporting-services
+ms.subservice: reporting-services
+ms.topic: conceptual
+ms.custom: updatefrequency5
+helpviewer_keywords:
+  - "Reporting Services, programming"
+  - "development [Reporting Services]"
 ---
 # Reporting Services Features and Tasks (SSRS)
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] foundational content is organized by reports and report features, report server features, and [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] product features.  
@@ -30,7 +27,9 @@ ms.author: maggies
  [Report Parameters &#40;Report Builder and Report Designer&#41;](../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)  
   
  [Report Parts in Report Designer &#40;SSRS&#41;](../reporting-services/report-design/report-parts-in-report-designer-ssrs.md)  
-  
+ 
+ [!INCLUDE [ssrs-report-parts-deprecated](../includes/ssrs-report-parts-deprecated.md)]  
+ 
  [Schedules](../reporting-services/subscriptions/schedules.md)  
   
  [Subscriptions and Delivery &#40;Reporting Services&#41;](../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)  

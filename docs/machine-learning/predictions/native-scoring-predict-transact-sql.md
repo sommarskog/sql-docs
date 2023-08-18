@@ -1,14 +1,13 @@
 ---
 title: Native scoring with T-SQL PREDICT
 titleSuffix: SQL machine learning
-description: Learn how to use native scoring with the PREDICT T-SQL function to generate prediction values for new data inputs in near-real-time. 
-ms.prod: sql
-ms.technology: machine-learning
-ms.date: 07/29/2020
+description: Learn how to use native scoring with the PREDICT T-SQL function to generate prediction values for new data inputs in near-real-time.
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.date: 05/27/2021
+ms.service: sql
+ms.subservice: machine-learning
 ms.topic: how-to
-author: dphansen
-ms.author: davidph
-ms.custom: seo-lt-2019
 monikerRange: ">=sql-server-2017||=azuresqldb-current||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest"
 ---
 
@@ -242,3 +241,4 @@ If you get the error, "Error occurred during execution of the function PREDICT. 
 + [SQL machine learning documentation](../index.yml)
 + [Machine learning and AI with ONNX in SQL Edge](/azure/azure-sql-edge/onnx-overview)
 + [Deploy and make predictions with an ONNX model in Azure SQL Edge](/azure/azure-sql-edge/deploy-onnx)
++ [Score machine learning models with PREDICT in Azure Synapse Analytics](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-predict)

@@ -1,14 +1,13 @@
 ---
 title: "Enable Compression on a Table or Index"
 description: Learn how to enable compression on a table or index in SQL Server by using SQL Server Management Studio or Transact-SQL.
-ms.custom: ""
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "01/22/2021"
-ms.prod: sql  
-ms.reviewer: ""
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.technology: performance
+ms.service: sql
+ms.subservice: performance
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.swb.compwiz.compressiontype.f1"
   - "sql13.swb.compwiz.outputoptions.f1"
   - "sql13.swb.compwiz.summary.f1"
@@ -17,18 +16,16 @@ f1_keywords:
   - "sql13.swb.compwiz.welcome.f1"
   - "sql13.swb.compwiz.createjob.f1"
   - "sql13.swb.compwiz.selectaction.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "data compression wizard"
   - "compression [SQL Server], enable"
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016"
 ---
 # Enable Compression on a Table or Index
 
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-This article describes how to enable [data compression](../../relational-databases/data-compression/data-compression.md) on a table or index in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].
+This article describes how to enable [data compression](../../relational-databases/data-compression/data-compression.md) on an existing table or index in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. To enable data compression when creating a table or index, see the [Create a compressed index](../../t-sql/statements/create-index-transact-sql.md#l-create-a-compressed-index) and [Creating a table that uses row compression](../../t-sql/statements/create-table-transact-sql.md#n-creating-a-table-that-uses-row-compression) examples.
   
  **In this article**  
   
@@ -53,11 +50,13 @@ This article describes how to enable [data compression](../../relational-databas
 -   If the table is a heap, the rebuild operation for ONLINE mode will be single threaded. Use OFFLINE mode for a multi-threaded heap rebuild operation. Rebuild operations are OFFLINE unless you specify the ONLINE option. For complete information on performing an ONLINE rebuild, see [Perform Index Operations Online](../indexes/perform-index-operations-online.md).
   
 -   You cannot change the compression setting of a single partition if the table has nonaligned indexes.  
+
+-   Several data types are not affected by data compression. For more detail, see [How row compression affects storage](../../relational-databases/data-compression/row-compression-implementation.md#how-row-compression-affects-storage).
   
 ###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> Permissions  
- Requires ALTER permission on the table or index.  
+ Requires `ALTER` permission on the table or index.  
   
 ##  <a name="SSMSProcedure"></a> Using SQL Server Management Studio  
   
@@ -199,7 +198,7 @@ This article describes how to enable [data compression](../../relational-databas
 
 ### SQL Server
 
-In SQL Server, run `sp_estimate_data_compression_savings` and then enable compression on the table or index. See the following sections. 
+In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], run `sp_estimate_data_compression_savings` and then enable compression on the table or index. See the following sections. 
 
 #### To enable compression on a table  
   
@@ -210,7 +209,7 @@ In SQL Server, run `sp_estimate_data_compression_savings` and then enable compre
 3.  Copy and paste the following example into the query window and select **Execute**. The example first executes the stored procedure `sp_estimate_data_compression_savings` to return the estimated size of the object if it were to use the ROW compression setting. The example then enables ROW compression on all partitions in the specified table.  
   
     ```sql  
-    USE AdventureWorks2012;  
+    USE AdventureWorks2022;  
     GO  
     EXEC sp_estimate_data_compression_savings 'Production', 'TransactionHistory', NULL, NULL, 'ROW' ;  
   
@@ -228,7 +227,7 @@ In SQL Server, run `sp_estimate_data_compression_savings` and then enable compre
 3.  Copy and paste the following example into the query window and select **Execute**. The example first queries the `sys.indexes` catalog view to return the name and `index_id` for each index on the `Production.TransactionHistory` table. It then executes the stored procedure `sp_estimate_data_compression_savings` to return the estimated size of the specified index ID if it were to use the PAGE compression setting. Finally, the example rebuilds index ID 2 (`IX_TransactionHistory_ProductID`), specifying PAGE compression.  
   
     ```sql  
-    USE AdventureWorks2012;   
+    USE AdventureWorks2022;   
     GO  
     SELECT name, index_id  
     FROM sys.indexes  
@@ -247,7 +246,7 @@ In SQL Server, run `sp_estimate_data_compression_savings` and then enable compre
     
 ### On Azure SQL Database
 
-Azure SQL Database does not support the `sp_estimate_data_compression_savings` stored procedure. The following scripts enable compression without estimating the compression amount. 
+[!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] does not support the `sp_estimate_data_compression_savings` stored procedure. The following scripts enable compression without estimating the compression amount. 
 
 #### To enable compression on a table  
   
@@ -258,7 +257,7 @@ Azure SQL Database does not support the `sp_estimate_data_compression_savings` s
 3.  Copy and paste the following example into the query window and select **Execute**. The example enables ROW compression on all partitions in the specified table.  
   
     ```sql  
-    USE AdventureWorks2012;  
+    USE AdventureWorks2022;  
     GO  
 
     ALTER TABLE Production.TransactionHistory REBUILD PARTITION = ALL  
@@ -275,7 +274,7 @@ Azure SQL Database does not support the `sp_estimate_data_compression_savings` s
 3.  Copy and paste the following example into the query window and select **Execute**. The example first queries the `sys.indexes` catalog view to return the name and `index_id` for each index on the `Production.TransactionHistory` table. Finally, the example rebuilds index ID 2 (`IX_TransactionHistory_ProductID`), specifying PAGE compression.  
   
     ```sql  
-    USE AdventureWorks2012;   
+    USE AdventureWorks2022;   
     GO  
     SELECT name, index_id  
     FROM sys.indexes  
@@ -289,6 +288,7 @@ Azure SQL Database does not support the `sp_estimate_data_compression_savings` s
   
 ## See Also  
  [Data Compression](../../relational-databases/data-compression/data-compression.md)   
- [sp_estimate_data_compression_savings &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-estimate-data-compression-savings-transact-sql.md)  
-  
+ [sp_estimate_data_compression_savings &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-estimate-data-compression-savings-transact-sql.md)     
+ [Create a compressed index](../../t-sql/statements/create-index-transact-sql.md#l-create-a-compressed-index)     
+ [Creating a table that uses row compression](../../t-sql/statements/create-table-transact-sql.md#n-creating-a-table-that-uses-row-compression)  
   

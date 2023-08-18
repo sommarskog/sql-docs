@@ -1,16 +1,18 @@
 ---
 title: Upgrade Python and R runtimes (binding)
 description: Upgrade Python and R runtimes in SQL Server Machine Learning Services or SQL Server R Services using sqlbindr.exe to bind to Machine Learning Server.
-ms.prod: sql
-ms.technology: machine-learning-services
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: 09/30/2020
+ms.service: sql
+ms.subservice: machine-learning-services
 ms.topic: how-to
-author: dphansen
-ms.author: davidph
 monikerRange: "=sql-server-2016||=sql-server-2017"
 ---
 # Upgrade Python and R runtime with binding in SQL Server Machine Learning Services
 [!INCLUDE [SQL Server 2016 and 2017](../../includes/applies-to-version/sqlserver2016-2017-only.md)]
+
+[!INCLUDE [retirement banner](~/includes/machine-learning-server-retirement.md)]
 
 This article describes how to use am installation process called **binding** to upgrade the R or Python runtimes in [SQL Server 2016 R Services](../r/sql-server-r-services.md) or [SQL Server 2017 Machine Learning Services](../sql-server-machine-learning-services.md). You can get [newer versions of Python and R](#version-map) by *binding* to [Microsoft Machine Learning Server](/machine-learning-server).
 
@@ -40,7 +42,7 @@ The rest of this article explains the binding mechanism and how it works for eac
 For SQL Server 2016 R Services customers, binding provides:
 
 - Updated R packages.
-- New packages not part of the original installation ([MicrosoftML](/machine-learning-server/r-reference/microsoftml/microsoftml-package))
+- New packages not part of the original installation ([MicrosoftML](../r/ref-r-microsoftml.md))
 - Pre-trained machine learning [models](/machine-learning-server/install/microsoftml-install-pretrained-models) for sentiment analysis and image detection.
 
 All of the binding can further be refreshed at each new major and minor release of [Microsoft Machine Learning Server](/machine-learning-server/index).
@@ -59,10 +61,10 @@ Component |Initial Release | [R Server 9.0.1](/machine-learning-server/install/r
 ----------|----------------|----------------|--------------|---------|-------|-------|
 Microsoft R Open (MRO) over R | R 3.2.2     | R 3.3.2   |R 3.3.3   | R 3.4.1  | R 3.4.3 | R 3.5.2
 [RevoScaleR](/machine-learning-server/r-reference/revoscaler/revoscaler) | 8.0.3  | 9.0.1 |  9.1 |  9.2.1 |  9.3 |  9.4.7 |
-[MicrosoftML](/machine-learning-server/r-reference/microsoftml/microsoftml-package)| n.a. | 9.0.1 |  9.1 |  9.2.1 |  9.3 | 9.4.7 |
+[MicrosoftML](../r/ref-r-microsoftml.md)| n.a. | 9.0.1 |  9.1 |  9.2.1 |  9.3 | 9.4.7 |
 [pretrained models](/machine-learning-server/install/microsoftml-install-pretrained-models)| n.a. | 9.0.1 |  9.1 |  9.2.1 |  9.3 | 9.4.7 |
-[sqlrutils](/machine-learning-server/r-reference/sqlrutils/sqlrutils)| n.a. | 1.0 |  1.0 |  1.0 |  1.0 | 1.0 |
-[olapR](/machine-learning-server/r-reference/olapr/olapr) | n.a. | 1.0 |  1.0 |  1.0 |  1.0 | 1.0 |
+[sqlrutils](../r/ref-r-sqlrutils.md)| n.a. | 1.0 |  1.0 |  1.0 |  1.0 | 1.0 |
+[olapR](../r/ref-r-olapr.md) | n.a. | 1.0 |  1.0 |  1.0 |  1.0 | 1.0 |
 ::: moniker-end
 
 ::: moniker range="=sql-server-2017"
@@ -72,12 +74,12 @@ Component |Initial Release | Machine Learning Server 9.3 | Machine Learning Serv
 ----------|----------------|---------|---------|
 Microsoft R Open (MRO) over R | R 3.3.3 | R 3.4.3 | R 3.5.2 |
 [RevoScaleR](/machine-learning-server/r-reference/revoscaler/revoscaler) |   9.2 |  9.3 | 9.4.7 |
-[MicrosoftML](/machine-learning-server/r-reference/microsoftml/microsoftml-package) | 9.2  | 9.3| 9.4.7 |
-[sqlrutils](/machine-learning-server/r-reference/sqlrutils/sqlrutils)| 1.0 |  1.0 | 1.0 |
-[olapR](/machine-learning-server/r-reference/olapr/olapr) | 1.0 |  1.0 | 1.0 |
+[MicrosoftML](../r/ref-r-microsoftml.md) | 9.2  | 9.3| 9.4.7 |
+[sqlrutils](../r/ref-r-sqlrutils.md)| 1.0 |  1.0 | 1.0 |
+[olapR](../r/ref-r-olapr.md) | 1.0 |  1.0 | 1.0 |
 Anaconda 4.2 over Python 3.5  | 4.2/3.5.2 | 4.2/3.5.2 |
 [revoscalepy](/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) | 9.2  | 9.3| 9.4.7 |
-[microsoftml](/machine-learning-server/python-reference/microsoftml/microsoftml-package) | 9.2  | 9.3| 9.4.7 |
+[microsoftml](../python/ref-py-microsoftml.md) | 9.2  | 9.3| 9.4.7 |
 [pretrained models](/machine-learning-server/install/microsoftml-install-pretrained-models) | 9.2 | 9.3| 9.4.7 |
 ::: moniker-end
 
@@ -268,7 +270,7 @@ Machine Learning Server Installer and SqlBindR both return the following error c
 |Bind error 3 | Invalid instance | An instance exists, but isn't valid for binding. |
 |Bind error 4 | Not bindable | |
 |Bind error 5 | Already bound | You ran the *bind* command, but the specified instance is already bound. |
-|Bind error 6 | Bind failed | An error occurred while unbinding the instance. This error can occur if you run the Machine Learning Server installer without selecting any features. Binding requires that you select both an MSSQL instance and Python and R, assuming the instance is SQL Server 2017. This error also occurs if SqlBindR couldn't write to the Program Files folder. Open sessions or handles to SQL Server will cause this error to occur. If you get this error, reboot the computer and redo the binding steps before starting any new sessions.|
+|Bind error 6 | Bind failed | An error occurred while unbinding the instance. This error can occur if you run the Machine Learning Server installer without selecting any features. Binding requires that you select both an MSSQL instance and Python and R, assuming the instance is SQL Server 2017. This error also occurs if SqlBindR couldn't write to the Program Files folder. Open sessions or handles to SQL Server will cause this error to occur. If you get this error, restart the computer and redo the binding steps before starting any new sessions.|
 |Bind error 7 | Not bound | The database engine instance has R Services or SQL Server Machine Learning Services. The instance isn't bound to Microsoft Machine Learning Server. |
 |Bind error 8 | Unbind failed | An error occurred while unbinding the instance. |
 |Bind error 9 | No instances found | No database engine instances were found on this computer. |
@@ -288,9 +290,9 @@ Use R commands to synchronize installed packages to the file system using record
 ### Problems with overwritten sqlbinr.ini file in SQL Server
 
 Scenario:
-This issue occurs when binding Machine Learning Server 9.4.7 to SQL Server 2017.  When Python is updated and bound or when you update to a new CU, it doesn’t understand that Python is bound, and overwrites files. There isn't a known issue with R.
+This issue occurs when binding Machine Learning Server 9.4.7 to SQL Server 2017.  When Python is updated and bound or when you update to a new CU, it doesn't understand that Python is bound, and overwrites files. There isn't a known issue with R.
 
-As a workaround, create a `sqlbindr.ini` file in the PYTHON_SERVICES directory that isn’t empty. The contents doesn't impact how the file functions.
+As a workaround, create a `sqlbindr.ini` file in the PYTHON_SERVICES directory that isn't empty. The contents doesn't impact how the file functions.
 
 Create a `sqlbindr.ini` file, containing **9.4.7.82**, save to this location:  
 

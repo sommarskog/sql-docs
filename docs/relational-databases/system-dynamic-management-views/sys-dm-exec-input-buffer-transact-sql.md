@@ -1,25 +1,21 @@
 ---
-description: "sys.dm_exec_input_buffer (Transact-SQL)"
-title: "sys.dm_exec_input_buffer (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/14/2019"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: system-objects
+title: "sys.dm_exec_input_buffer (Transact-SQL)"
+description: sys.dm_exec_input_buffer (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
+ms.date: "02/24/2023"
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.dm_exec_input_buffer"
   - "sys.dm_exec_input_buffer _tsql"
   - "dm_exec_input_buffer"
   - "dm_exec_input_buffer_tsql"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.dm_exec_input_buffer dynamic management function"
-ms.assetid: fb34a560-bde9-4ad9-aa96-0d4baa4fc104
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+dev_langs:
+  - "TSQL"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_exec_input_buffer (Transact-SQL)
@@ -65,6 +61,10 @@ On [!INCLUDE[ssSDS](../../includes/sssds-md.md)], if the user is the database ow
 
 > [!IMPORTANT]
 > Running this DMV outside of SQL Server Management Studio against Azure SQL Database without owner permissions (such as in a trigger, stored procedure, or function) throws a permission error on the master database.
+
+### Permissions for SQL Server 2022 and later
+
+Requires VIEW SERVER PERFORMANCE STATE permission on the server.
 
 ## Remarks
 

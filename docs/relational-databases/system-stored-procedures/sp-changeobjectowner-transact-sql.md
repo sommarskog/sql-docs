@@ -1,23 +1,19 @@
 ---
+title: "sp_changeobjectowner (Transact-SQL)"
 description: "sp_changeobjectowner (Transact-SQL)"
-title: "sp_changeobjectowner (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_changeobjectowner_TSQL"
-  - "sp_changeobjectowner"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_changeobjectowner"
-ms.assetid: 45b3dc1c-1cde-45b7-a248-5195c12973e9
 author: VanMSFT
 ms.author: vanto
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_changeobjectowner_TSQL"
+  - "sp_changeobjectowner"
+helpviewer_keywords:
+  - "sp_changeobjectowner"
+dev_langs:
+  - "TSQL"
 ---
 # sp_changeobjectowner (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -25,12 +21,12 @@ ms.author: vanto
   Changes the owner of an object in the current database.  
   
 > [!IMPORTANT]
->  This stored procedure only works with the objects available in [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use [ALTER SCHEMA](../../t-sql/statements/alter-schema-transact-sql.md) or [ALTER AUTHORIZATION](../../t-sql/statements/alter-authorization-transact-sql.md) instead. **sp_changeobjectowner** changes both the schema and the owner. To preserve compatibility with earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], this stored procedure will only change object owners when both the current owner and the new owner own schemas that have the same name as their database user names.  
+>  This stored procedure only works with the objects available in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use [ALTER SCHEMA](../../t-sql/statements/alter-schema-transact-sql.md) or [ALTER AUTHORIZATION](../../t-sql/statements/alter-authorization-transact-sql.md) instead. **sp_changeobjectowner** changes both the schema and the owner. To preserve compatibility with earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], this stored procedure will only change object owners when both the current owner and the new owner own schemas that have the same name as their database user names.  
 > 
 > [!IMPORTANT]
 >  A new permission requirement has been added to this stored procedure.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

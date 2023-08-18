@@ -1,23 +1,19 @@
 ---
-description: "Integration Services Tables (Transact-SQL)"
-title: "Integration Services Tables (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "Integration Services Tables (Transact-SQL)"
+description: Integration Services Tables (Transact-SQL)
+author: lrtoyou1223
+ms.author: lle
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "SQL Server Integration Services system tables"
   - "system tables [SQL Server], Integration Services"
   - "system tables [Integration Services]"
   - "SSIS, system tables"
-ms.assetid: 683b181b-0091-4a9c-86db-bc577af43cec
-author: lrtoyou1223
-ms.author: lle
+dev_langs:
+  - "TSQL"
 ---
 # Integration Services Tables (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

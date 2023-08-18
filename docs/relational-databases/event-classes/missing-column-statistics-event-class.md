@@ -1,21 +1,18 @@
 ---
+title: "Missing Column Statistics Event Class"
 description: "Missing Column Statistics Event Class"
-title: "Missing Column Statistics Event Class | Microsoft Docs"
-ms.custom: ""
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: supportability
+ms.service: sql
+ms.subservice: supportability
 ms.topic: reference
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Missing Column Statistics event class"
-ms.assetid: b9321143-3f29-4a19-8471-7085669282ef
-author: "stevestein"
-ms.author: "sstein"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Missing Column Statistics Event Class
-[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
   The Missing Column Statistics event class indicates that column statistics that could have been useful for the optimizer are not available.  
   
  By monitoring the Missing Column Statistics event class, you can determine if there are statistics missing for a column used by a query. This can cause the optimizer to choose a less efficient query plan than expected.  

@@ -1,18 +1,19 @@
 ---
 title: What is standalone Machine Learning Server or R Server?
 description: Learn the differences between standalone R Server and Machine Learning Server in SQL Server Setup.
-ms.prod: sql
-ms.technology: machine-learning-services
-
-ms.date: 08/13/2019  
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.date: 08/01/2023
+ms.service: sql
+ms.subservice: machine-learning-services
 ms.topic: how-to
-author: dphansen
-ms.author: davidph
-ms.custom: seo-lt-2019
+ms.custom: intro-overview
 monikerRange: ">=sql-server-2016"
 ---
 # What are standalone Machine Learning Server or R Server in SQL Server?
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
+
+[!INCLUDE [ML Server retirement banner](~/includes/machine-learning-server-retirement.md)]
 
 SQL Server provides installation support for a standalone R Server or Machine Learning Server that runs independently of SQL Server. Depending on your SQL Server version, a standalone server has a foundation of open-source R and possibly Python, overlaid with high-performance libraries from Microsoft that add statistical and predictive analytics at scale. Libraries also enable machine learning tasks scripted in R or Python. 
 
@@ -28,7 +29,7 @@ SQL Server 2016 is R only. SQL Server 2017 supports R and Python. The following 
 | Component | Description |
 |-----------|-------------|
 | R packages | [**RevoScaleR**](ref-r-revoscaler.md) is the primary library for scalable R with functions for data manipulation, transformation, visualization, and analysis.  <br/>[**MicrosoftML**](ref-r-microsoftml.md) adds machine learning algorithms to create custom models for text analysis, image analysis, and sentiment analysis. <br/>[**sqlRUtils**](ref-r-sqlrutils.md) provides helper functions for putting R scripts into a T-SQL stored procedure, registering a stored procedure with a database, and running the stored procedure from an R development environment.<br/>[**olapR**](ref-r-olapr.md) is for specifying MDX queries in R.|
-| Microsoft R Open (MRO) | [**MRO**](https://mran.microsoft.com/open) is Microsoft's open-source distribution of R. The package and interpreter are included. Always use the version of MRO bundled in setup. |
+| Microsoft R Open (MRO) | Microsoft R Open ([retired](https://techcommunity.microsoft.com/t5/azure-sql-blog/microsoft-r-application-network-retirement/ba-p/3707161)) was Microsoft's open-source distribution of R. |
 | R tools | R console windows and command prompts are standard tools in an R distribution. Find them at \Program files\Microsoft SQL Server\140\R_SERVER\bin\x64. |
 | R Samples and scripts |  Open-source R and RevoScaleR packages include built-in data sets so that you can create and run script using pre-installed data. Look for them at \Program files\Microsoft SQL Server\140\R_SERVER\library\datasets and \library\RevoScaleR. |
 | Python packages | [**revoscalepy**](../python/ref-py-revoscalepy.md) is the primary library for scalable Python with functions for data manipulation, transformation, visualization, and analysis. <br/>[**microsoftml**](../python/ref-py-microsoftml.md) adds machine learning algorithms to create custom models for text analysis, image analysis, and sentiment analysis.  |
@@ -60,7 +61,7 @@ Install either one of these versions:
 
 On a standalone server, it's common to work locally using a development installed on the same computer.
 
-+ [Set up R tools](set-up-a-data-science-client.md)
++ [Set up R tools](set-up-data-science-client.md)
 + [Set up Python tools](../python/setup-python-client-tools-sql.md)
 
 ### Step 3: Write your first script

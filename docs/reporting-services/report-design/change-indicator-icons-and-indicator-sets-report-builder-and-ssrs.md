@@ -1,19 +1,19 @@
 ---
-title: "Change Indicator Icons and Indicator Sets (Report Builder) | Microsoft Docs"
-description: Learn how to change the indicator icons and sets to include different, more, or fewer indicator icons enabling you to depict data better in Report Builder.  
-ms.date: 03/01/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-design
-
-
-ms.topic: conceptual
-ms.assetid: 8a056adf-4473-473d-9b0c-314675af7bfd
+title: "Change indicator icons and indicator sets in a paginated report"
+description: Learn how to change the indicator icons and sets in a paginated report to include different, more, or fewer indicator icons enabling you to depict data better in Report Builder.
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 03/01/2017
+ms.service: reporting-services
+ms.subservice: report-design
+ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
-# Change Indicator Icons and Indicator Sets (Report Builder and SSRS)
-  The preconfigured indicators sets that [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] provides for paginated reports might not always depict your data effectively and work well in the delivered report. This topic provides procedures to change the appearance of indicator icons and change the indicator sets to include different, more, or fewer indicator icons.  
+# Change indicator icons and indicator sets in a paginated report (Report Builder)
+
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-ssrs-rb](../../includes/ssrs-appliesto-ssrs-rb.md)] [!INCLUDE [ssrs-appliesto-pbi-rb](../../includes/ssrs-appliesto-pbi-rb.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
+
+  The preconfigured indicators sets that provides for paginated reports might not always depict your data effectively and work well in the delivered report. This topic provides procedures to change the appearance of indicator icons and change the indicator sets to include different, more, or fewer indicator icons.  
   
  Options such as colors can be set by using expressions. For more information, see [Expressions &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md).  
   

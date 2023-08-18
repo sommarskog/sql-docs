@@ -1,23 +1,19 @@
 ---
-description: "MSagent_profiles (Transact-SQL)"
-title: "MSagent_profiles (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "MSagent_profiles (Transact-SQL)"
+description: MSagent_profiles (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "03/06/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: replication
+ms.service: sql
+ms.subservice: replication
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "MSagent_profiles"
   - "MSagent_profiles_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "MSagent_profiles system table"
-ms.assetid: 4ab1b2ae-b6d9-42b7-9b31-98547dbb7f99
-author: cawrites
-ms.author: chadam
+dev_langs:
+  - "TSQL"
 ---
 # MSagent_profiles (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

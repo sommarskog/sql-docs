@@ -1,38 +1,34 @@
 ---
-description: "Register Servers"
 title: Register Servers
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
+description: "Register Servers"
+author: markingmyname
+ms.author: maghan
+ms.manager: jroth
+ms.date: 03/14/2017
+ms.service: sql
+ms.subservice: ssms
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.swb.sqlserverregisteredserver.dhelp"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "connections [SQL Server], registered servers"
   - "registering servers"
   - "servers [SQL Server], registering"
   - "server management [SQL Server], registering servers"
   - "server registration [SQL Server]"
-ms.assetid: c2a2513e-fa09-419c-99e7-a12d57c5a0db
-author: markingmyname
-ms.author: maghan
-ms.manageR: jroth
-ms.reviewer: ""
-ms.custom: seo-lt-2019
-ms.date: 03/14/2017
 ---
 
 # Register Servers
 
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-Registering a server in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] allows you to store the server connection information for future connections.There are three ways to register a server in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+Registering a server in SQL Server Management Studio allows you to store the server connection information for future connections.There are three ways to register a server in SQL Server Management Studio.  
   
 1.  Local instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] are automatically registered during the first launch of [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] after its installation.  
   
 2.  You can also initiate the automatic registration process at any time, to restore the registration of local server instances.  
   
-3.  Lastly, you can register a server using the Registered Servers tool in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+3.  Lastly, you can register a server using the Registered Servers tool in SQL Server Management Studio.  
   
 ## Benefits of Registered Servers  
  With Registered Servers you can:  

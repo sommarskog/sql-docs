@@ -1,19 +1,15 @@
 ---
+title: "Recordset, SourceRecordset Properties (RDS)"
 description: "Recordset, SourceRecordset Properties (RDS)"
-title: "Recordset, SourceRecordset Properties (RDS) | Microsoft Docs"
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: 
-ms.prod: sql
-ms.prod_service: connectivity
-ms.topic: reference
-apitype: "COM"
-helpviewer_keywords: 
-  - "Recordset property [ADO]"
-ms.assetid: a29e3fb9-306d-497a-9a59-1856a914e5e9
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: ado
+ms.topic: reference
+helpviewer_keywords:
+  - "Recordset property [ADO]"
+apitype: "COM"
 ---
 # Recordset, SourceRecordset Properties (RDS)
 Indicates the **Recordset** object returned from a custom business object.  

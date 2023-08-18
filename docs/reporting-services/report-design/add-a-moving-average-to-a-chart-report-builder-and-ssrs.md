@@ -1,19 +1,19 @@
 ---
-title: "Add a Moving Average to a Chart (Report Builder) | Microsoft Docs"
+title: "Add a moving average to a chart in a paginated report"
 description: Learn how the Moving Average formula price indicator can be shown on a chart to identify trends in Report Builder.
-ms.date: 03/03/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-design
-
-
-ms.topic: conceptual
-ms.assetid: 166cf9c1-0750-4866-8381-542e4fbfe65a
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 03/03/2017
+ms.service: reporting-services
+ms.subservice: report-design
+ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
-# Add a Moving Average to a Chart (Report Builder and SSRS)
-A moving average is an average of the data in your series, calculated over a defined period of time. In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] paginated reports, the moving average can be shown on the chart to identify significant trends.  
+# Add a moving average to a chart in a paginated report (Report Builder)
+
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-ssrs-rb](../../includes/ssrs-appliesto-ssrs-rb.md)] [!INCLUDE [ssrs-appliesto-pbi-rb](../../includes/ssrs-appliesto-pbi-rb.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
+
+A moving average is an average of the data in your series, calculated over a defined period of time. In paginated reports, the moving average can be shown on the chart to identify significant trends.  
 
 ![Screenshot of a Sales Chart.](../../reporting-services/media/report-builder-column-chart-tutorial.png)
   

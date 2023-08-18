@@ -1,18 +1,15 @@
 ---
-description: "sys.pdw_materialized_view_distribution_properties (Transact-SQL) (preview)"
 title: "sys.pdw_materialized_view_distribution_properties (Transact-SQL)"
-ms.custom: seo-dt-2019
-ms.date: "07/03/2019"
-ms.prod: sql
-ms.technology: data-warehouse
-ms.reviewer: ""
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-ms.assetid: d62b0e25-3226-4f87-a10a-b3a0d9555e19
-author: XiaoyuMSFT 
+description: sys.pdw_materialized_view_distribution_properties (Transact-SQL) (preview)
+author: XiaoyuMSFT
 ms.author: xiaoyul
-monikerRange: "= azure-sqldw-latest"
+ms.date: "07/03/2019"
+ms.service: sql
+ms.subservice: data-warehouse
+ms.topic: "reference"
+dev_langs:
+  - "TSQL"
+monikerRange: "=azure-sqldw-latest"
 ---
 # sys.pdw_materialized_view_distribution_properties (Transact-SQL) (preview)
 

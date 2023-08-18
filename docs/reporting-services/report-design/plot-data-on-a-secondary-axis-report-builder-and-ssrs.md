@@ -1,21 +1,20 @@
 ---
-title: "Plot Data on a Secondary Axis (Report Builder) | Microsoft Docs"
-description:  Find out about the uses for the secondary axis type for comparing two distinct data ranges in Report Builder. 
-ms.date: 05/30/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-design
-
-
-ms.topic: conceptual
-ms.assetid: 094f39bf-3634-4852-9fc3-3adec4b266e5
+title: "Plot data on a secondary axis in a paginated report"
+description: Find out about the uses for the secondary axis type in a paginated report for comparing two distinct data ranges in Report Builder.
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 05/30/2017
+ms.service: reporting-services
+ms.subservice: report-design
+ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 
-# Plot Data on a Secondary Axis (Report Builder and SSRS)
+# Plot data on a secondary axis in a paginated report (Report Builder)
 
-The chart has two axis types: primary and secondary. The secondary axis is useful when comparing two value sets with two distinct data ranges that share a common category.  
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-ssrs-rb](../../includes/ssrs-appliesto-ssrs-rb.md)] [!INCLUDE [ssrs-appliesto-pbi-rb](../../includes/ssrs-appliesto-pbi-rb.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
+
+The paginated report chart has two axis types: primary and secondary. The secondary axis is useful when comparing two value sets with two distinct data ranges that share a common category.  
   
  For example, suppose you have a chart that calculates Revenue vs. Tax for the year 2008. In this case, the 2008 time period is common to both value sets. However, when both series are plotted on the same y-axis, we cannot make a useful comparison because the scale of the y-axis is optimized for the largest values in the dataset. If we show Revenue on the primary axis, and Tax on the secondary axis, we can display each series on its own y-axis with its own scale of values. The series still share a common x-axis.  
   

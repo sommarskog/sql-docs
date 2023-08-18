@@ -1,36 +1,32 @@
 ---
-description: "SETUSER (Transact-SQL)"
-title: "SETUSER (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "SETUSER (Transact-SQL)"
+description: SETUSER (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "07/26/2017"
-ms.prod: sql
-ms.prod_service: "sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "SETUSER_TSQL"
   - "SETUSER"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "delegation [SQL Server]"
   - "impersonation [SQL Server]"
   - "SETUSER statement"
   - "user impersonation [SQL Server]"
-ms.assetid: 7acfac5c-9ad6-4226-b874-7add36c4ea43
-author: VanMSFT
-ms.author: vanto
+dev_langs:
+  - "TSQL"
 ---
 # SETUSER (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Allows a member of the **sysadmin** fixed server role or the owner of a database to impersonate another user.  
   
 > [!IMPORTANT]  
 >  SETUSER is included for backward compatibility only. SETUSER may not be supported in a future release of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. We recommend that you use [EXECUTE AS](../../t-sql/statements/execute-as-transact-sql.md) instead.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

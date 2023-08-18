@@ -1,25 +1,21 @@
 ---
-description: "ALTER ENDPOINT (Transact-SQL)"
-title: "ALTER ENDPOINT (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "ALTER ENDPOINT (Transact-SQL)"
+description: ALTER ENDPOINT (Transact-SQL)
+author: markingmyname
+ms.author: maghan
 ms.date: "03/06/2017"
-ms.prod: sql
-ms.prod_service: "sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "ALTER ENDPOINT"
   - "ALTER_ENDPOINT_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "ALTER ENDPOINT statement"
   - "modifying endpoints"
   - "endpoints [SQL Server], modifying"
-ms.assetid: 70f35566-30cf-47c6-8394-dfe5d71629d3
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+dev_langs:
+  - "TSQL"
 ---
 # ALTER ENDPOINT (Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +33,7 @@ ms.author: wiassaf
   
  Native XML Web Services (SOAP/HTTP endpoints) is removed beginning in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

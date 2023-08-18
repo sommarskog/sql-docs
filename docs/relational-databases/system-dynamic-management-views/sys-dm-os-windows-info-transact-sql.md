@@ -1,24 +1,21 @@
 ---
-description: "sys.dm_os_windows_info (Transact-SQL)"
-title: "sys.dm_os_windows_info (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: system-objects
+title: "sys.dm_os_windows_info (Transact-SQL)"
+description: sys.dm_os_windows_info (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
+ms.date: "02/27/2023"
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "dm_os_windows_info"
   - "dm_os_windows_info_TSQL"
   - "sys.dm_os_windows_info"
   - "sys.dm_os_windows_info_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.dm_os_windows_info dynamic management view"
-ms.assetid: adc81283-fdc2-46c0-bb48-abe82bbf2459
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+dev_langs:
+  - "TSQL"
 ---
 # sys.dm_os_windows_info (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,6 +34,10 @@ ms.author: wiassaf
   
 ## Permissions  
 The SELECT permission on sys.dm_os_windows_info is granted to the public role by default. If revoked, requires VIEW SERVER STATE permission on the server.  
+
+### Permissions for SQL Server 2022 and later
+
+Requires VIEW SERVER PERFORMANCE STATE permission on the server.
 
 ## Limitations and Restrictions
 To see informaton for SQL running on a non-Windows host, such as Linux, use [sys.dm_os_host_info &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-host-info-transact-sql.md). 

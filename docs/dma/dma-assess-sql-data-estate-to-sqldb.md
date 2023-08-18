@@ -2,19 +2,14 @@
 title: "Assess SQL Server readiness to migrate to Azure SQL Database"
 titleSuffix: Data Migration Assistant
 description: "Learn how to use Data Migration Assistant to migrate a SQL Server data estate for migration to Azure SQL Database"
+author: ajithkr-ms
+ms.author: ajithkr
 ms.date: "12/19/2019"
-ms.prod: sql
-ms.prod_service: "dma"
-ms.reviewer: ""
-ms.technology: dma
+ms.service: sql
+ms.subservice: dma
 ms.topic: conceptual
-keywords: ""
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Data Migration Assistant, on-premises SQL Server"
-ms.assetid: ""
-author: rajeshsetlem
-ms.author: rajpo
-ms.custom: "seo-lt-2019"
 ---
 # Assess the readiness of a SQL Server data estate migrating to Azure SQL Database using the Data Migration Assistant
 
@@ -24,7 +19,6 @@ This article provides step-by-step instructions for leveraging the [Data Migrati
 
 [!INCLUDE [online-offline](../includes/azure-migrate-to-assess-sql-data-estate.md)]
 
->
 > [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Data-Migration-Assistant/player?WT.mc_id=dataexposed-c9-niner]
 
 ## Create a project and add a tool
@@ -46,7 +40,7 @@ An Azure Migrate project is used to store discovery, assessment, and migration m
 
    ![Azure Migrate - add tools](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-azure-migrate-add-tools.png)
 
-5. On the **Migrate project** tab, select your Azure subscription and resource group (if you don’t already have a resource group, create one).
+5. On the **Migrate project** tab, select your Azure subscription and resource group (if you don't already have a resource group, create one).
 6. Under **Project Details**, specify the project name and the geography in which you want to create the project.
 
     ![Azure Migrate - add a tool dialog box](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-azure-migrate-add-tool-dialog.png)

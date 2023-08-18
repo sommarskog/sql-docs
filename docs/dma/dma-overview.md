@@ -1,19 +1,15 @@
 ---
-title: "Overview of Data Migration Assistant (SQL Server) | Microsoft Docs"
+title: "Overview of Data Migration Assistant (SQL Server)"
 description: Learn how to use Data Migration Assistant to migrate SQL Server databases to other SQL Server or Azure databases
-ms.custom: ""
-ms.date: "11/05/2019"
-ms.prod: sql
-ms.prod_service: "dma"
-ms.reviewer: ""
-ms.technology: dma
+author: ajithkr-ms
+ms.author: ajithkr
+ms.reviewer: randolphwest
+ms.date: 05/24/2022
+ms.service: sql
+ms.subservice: dma
 ms.topic: conceptual
-keywords: ""
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Data Migration Assistant, overview"
-ms.assetid: ""
-author: rajeshsetlem
-ms.author: rajpo
 ---
 
 # Overview of Data Migration Assistant
@@ -62,41 +58,45 @@ To install DMA, download the latest version of the tool from the [Microsoft Down
 
   - Information issues: detects partially supported or deprecated features that are used in source package(s).
 
+> [!NOTE]  
+> DMA does not support database migrations to Azure SQL Managed Instance. Recommendation is to use the [Azure SQL migration extension for Azure Data Studio](/azure/dms/migration-using-azure-data-studio), which supports both online and offline database migrations to Azure SQL Managed Instance.
+
 ## Prerequisites
 
-To run an assessment, you have to be a member of the SQL Server **sysadmin** role.
+To run an assessment, you have to be a member of the SQL Server **sysadmin** role. The recommended display resolution is 1024x756.
 
 ## Supported source and target versions
 
-DMA replaces all previous versions of SQL Server Upgrade Advisor and should be used for upgrades for most SQL Server versions. Supported source and target versions are:
+DMA replaces all previous versions of SQL Server Upgrade Advisor and should be used for upgrades for most SQL Server versions. Supported source and target versions for assessment are:
 
-**Sources**
+### Sources
 
-- SQL Server 2005
+- SQL Server 2005 (deprecated)
 - SQL Server 2008
 - SQL Server 2008 R2
 - SQL Server 2012
 - SQL Server 2014
 - SQL Server 2016
-- SQL Server 2017 on Windows
+- SQL Server 2017
+- SQL Server 2019
+- SQL Server 2022
+- Amazon RDS for SQL Server
 
-**Targets**
+### Targets
 
 - SQL Server 2012
 - SQL Server 2014
 - SQL Server 2016
 - SQL Server 2017 on Windows and Linux
 - SQL Server 2019
+- SQL Server 2022
 - Azure SQL Database single database
-- Azure SQL Managed Instance
-- SQL server running on an Azure Virtual Machine
+- Azure SQL Managed Instance (assessment only)
+- SQL Server running on an Azure Virtual Machine
 
 ## See also
 
-[Assess your SQL Server Migration](../dma/dma-assesssqlonprem.md)
-
-[Data Migration Assistant: Configuration settings](../dma/dma-configurationsettings.md)
-
-[Migrate On-Premises SQL Server using Data Migration Assistant](../dma/dma-migrateonpremsql.md)
-
-[Data Migration Assistant: Best Practices](../dma/dma-bestpractices.md)
+- [Assess your SQL Server Migration](../dma/dma-assesssqlonprem.md)
+- [Data Migration Assistant: Configuration settings](../dma/dma-configurationsettings.md)
+- [Migrate On-Premises SQL Server using Data Migration Assistant](../dma/dma-migrateonpremsql.md)
+- [Data Migration Assistant: Best Practices](../dma/dma-bestpractices.md)

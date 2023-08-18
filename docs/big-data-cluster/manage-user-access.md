@@ -1,18 +1,19 @@
 ---
 title: Manage big data cluster access in Active Directory mode
 description: Manage access to the big data cluster
-author: MikeRayMSFT
-ms.author: mikeray
-ms.reviewer: mikeray
-ms.date: 08/04/2020
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.date: 07/09/2021
+ms.service: sql
+ms.subservice: big-data-cluster
 ms.topic: conceptual
-ms.prod: sql
-ms.technology: big-data-cluster
 ---
 
 # Manage big data cluster access in Active Directory mode
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
+
+[!INCLUDE[big-data-clusters-banner-retirement](../includes/bdc-banner-retirement.md)]
 
 This article describes how to add new Active Directory groups with *bdcUser* roles in addition to the ones provided during deployment through the *clusterUsers* configuration setting.
 
@@ -85,7 +86,7 @@ For a complete list of server roles, see the corresponding SQL Server security t
    GO
    ```
 
-   To find the SID of the user or the group being added, you can use [Get-ADUser](/powershell/module/addsadministration/get-aduser/) or  [Get-ADGroup](/powershell/module/addsadministration/get-adgroup/) PowerShell commands.
+   To find the SID of the user or the group being added, you can use [Get-ADUser](/powershell/module/activedirectory/get-aduser/) or [Get-ADGroup](/powershell/module/activedirectory/get-adgroup/) PowerShell commands.
 
 2. Verify that the members of the group that you added have the expected *bdcUser* permissions by logging in to the controller endpoint or authentication to the SQL Server master instance. For example:
 

@@ -1,15 +1,13 @@
 ---
+title: "Rotate"
 description: "Rotate enclave-enabled keys"
-title: "Rotate  | Microsoft Docs"
-ms.custom: ""
-ms.date: 01/15/2021
-ms.prod: sql
-ms.reviewer: vanto
-ms.prod_service: "database-engine, sql-database"
-ms.technology: security
-ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
+ms.reviewer: vanto
+ms.date: 05/24/2022
+ms.service: sql
+ms.subservice: security
+ms.topic: conceptual
 monikerRange: ">= sql-server-ver15"
 ---
 # Rotate enclave-enabled keys
@@ -34,12 +32,12 @@ The below steps include links to detailed articles, depending on your rotation s
     - If you're rotating a column encryption key and both the source key and the target key are enclave-enabled, you can run the rotation (which involves re-encrypting your data) in-place. For more information, see [Configure column encryption in-place using Always Encrypted with secure enclaves](always-encrypted-enclaves-configure-encryption.md).
     - For detailed steps for rotating keys, see [Rotate Always Encrypted keys using SQL Server Management Studio](rotate-always-encrypted-keys-using-ssms.md) and [Rotate Always Encrypted keys using PowerShell](rotate-always-encrypted-keys-using-powershell.md).
 
-## Next Steps
+## Next steps
 
 - [Run Transact-SQL statements using secure enclaves](always-encrypted-enclaves-query-columns.md)
 - [Configure column encryption in-place using Always Encrypted with secure enclaves](always-encrypted-enclaves-configure-encryption.md)
 - [Enable Always Encrypted with secure enclaves for existing encrypted columns](always-encrypted-enclaves-enable-for-encrypted-columns.md)
 - [Develop applications using Always Encrypted with secure enclaves](always-encrypted-enclaves-client-development.md)  
 
-## See Also  
+## See also  
 - [Manage keys for Always Encrypted with secure enclaves](always-encrypted-enclaves-manage-keys.md)

@@ -1,21 +1,18 @@
 ---
 title: "Configure read-only access to secondary availability group replica"
 description: "Configure your secondary replica to allow only read access for your Always On availability group. "
-ms.custom: seo-lt-2019
+author: MashaMSFT
+ms.author: mathoma
 ms.date: "05/17/2016"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: availability-groups
+ms.service: sql
+ms.subservice: availability-groups
 ms.topic: how-to
-helpviewer_keywords: 
+helpviewer_keywords:
   - "connection access to availability replicas"
   - "Availability Groups [SQL Server], readable secondary replicas"
   - "active secondary replicas [SQL Server], read-only access to"
   - "Availability Groups [SQL Server], read-only routing"
   - "Availability Groups [SQL Server], client connectivity"
-ms.assetid: 22387419-22c4-43fa-851c-5fecec4b049b
-author: cawrites
-ms.author: chadam
 ---
 # Configure read-only access to a secondary replica of an Always On availability group
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -171,7 +168,7 @@ Set-SqlAvailabilityReplica -ConnectionModeInPrimaryRole "AllowAllConnections" `
 ##  <a name="FollowUp"></a> Follow Up: After Configuring Read-Only Access for an Availability Replica  
  **Read-only access to a readable secondary replica**  
   
--   When using the [bcp Utility](../../../tools/bcp-utility.md) or [sqlcmd Utility](../../../tools/sqlcmd-utility.md), you can specify read-only access to any secondary replica that is enabled for read-only access by specifying the **-K ReadOnly** switch.  
+-   When using the [bcp Utility](../../../tools/bcp-utility.md) or [sqlcmd Utility](../../../tools/sqlcmd/sqlcmd-utility.md), you can specify read-only access to any secondary replica that is enabled for read-only access by specifying the **-K ReadOnly** switch.  
   
 -   To enable client applications to connect to readable secondary replicas:  
   
@@ -221,5 +218,4 @@ DATABASEPROPERTYEX([db name],'UpdateAbility') = N'READ_ONLY'
 ## See Also  
  [Overview of Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Active Secondaries: Readable Secondary Replicas &#40;Always On Availability Groups&#41;](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
- [About Client Connection Access to Availability Replicas &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md)  
-  
+ [About Client Connection Access to Availability Replicas &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md)

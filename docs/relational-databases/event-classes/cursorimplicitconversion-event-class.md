@@ -1,21 +1,18 @@
 ---
+title: "CursorImplicitConversion Event Class"
 description: "CursorImplicitConversion Event Class"
-title: "CursorImplicitConversion Event Class | Microsoft Docs"
-ms.custom: ""
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: supportability
+ms.service: sql
+ms.subservice: supportability
 ms.topic: reference
-helpviewer_keywords: 
+helpviewer_keywords:
   - "CursorImplicitConversion event class"
-ms.assetid: 44d12e23-146a-42e6-bb38-1f2f6a035bad
-author: "stevestein"
-ms.author: "sstein"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # CursorImplicitConversion Event Class
-[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
   The **CursorImplicitConversion** event class describes cursor-implicit conversion events that occur in application programming interfaces (APIs) or [!INCLUDE[tsql](../../includes/tsql-md.md)] cursors. Cursor implicit conversion events occur when the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] executes a Transact-SQL statement that is not supported by server cursors of the type requested. The [!INCLUDE[ssDE](../../includes/ssde-md.md)] returns an error that indicates the cursor type has changed.  
   
  Include the **CursorImplicitConversion** event class in traces that are recording the performance of cursors.  

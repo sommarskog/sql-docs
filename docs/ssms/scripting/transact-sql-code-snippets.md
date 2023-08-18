@@ -1,21 +1,18 @@
 ---
 title: Transact-SQL Code Snippets
 description: You can use Transact-SQL code snippets to aid your code writing. Look here for a list of snippet tasks with links to articles that describe them.
-ms.prod: sql
-ms.technology: ssms
-ms.topic: conceptual
-ms.assetid: 12834855-535a-4102-8b19-5d18b4080926
 author: markingmyname
 ms.author: maghan
-ms.reviewer: ""
-ms.custom: seo-lt-2019
 ms.date: 03/16/2017
+ms.service: sql
+ms.subservice: ssms
+ms.topic: conceptual
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 
 # Transact-SQL Code Snippets
 
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 A [!INCLUDE[tsql](../../includes/tsql-md.md)].code snippet is a template containing the basic structure of a [!INCLUDE[tsql](../../includes/tsql-md.md)] statement or block. You can use snippets as a starting point when adding statements in the [!INCLUDE[ssDE](../../includes/ssde-md.md)] Query Editor. You can insert the pre-defined snippets supplied with SQL Server, or create your own.  
 

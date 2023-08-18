@@ -1,19 +1,16 @@
 ---
 title: "Change availability mode of a replica for an availability group"
 description: "A description for how to change the availability mode of an availability replica within an Always On availability group using either Transact-SQL (T-SQL), PowerShell, or SQL Server Management Studio."
-ms.custom: "seo-lt-2019"
+author: MashaMSFT
+ms.author: mathoma
 ms.date: "05/17/2016"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: availability-groups
+ms.service: sql
+ms.subservice: availability-groups
 ms.topic: how-to
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Availability Groups [SQL Server], deploying"
   - "Availability Groups [SQL Server], configuring"
   - "Availability Groups [SQL Server], availability modes"
-ms.assetid: c4da8f25-fb1b-45a4-8bf2-195df6df634c
-author: cawrites
-ms.author: chadam
 ---
 # Change availability mode of a replica within an Always On availability group
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -48,8 +45,11 @@ You must be connected to the server instance that hosts the primary replica.
 2.  Use the [ALTER AVAILABILITY GROUP](../../../t-sql/statements/alter-availability-group-transact-sql.md) statement, as the following example:  
   
      ```sql
-     ALTER AVAILABILITY GROUP *group_name* MODIFY REPLICA ON '*server_name*'  
-     WITH ( AVAILABILITY_MODE = ASYNCHRONOUS_COMMIT , FAILOVER_MODE = MANUAL );  
+     ALTER AVAILABILITY GROUP [<availability_group_name>] MODIFY REPLICA ON '*server_name*'  
+     WITH ( AVAILABILITY_MODE = ASYNCHRONOUS_COMMIT)
+	 
+     ALTER AVAILABILITY GROUP [<availability_group_name>] MODIFY REPLICA ON '*server_name*'  
+     WITH ( FAILOVER_MODE = MANUAL );  
      ```
      
      Where *group_name* is the name of the availability group and *server_name* is the name of the server instance that hosts the replica to be modified.  

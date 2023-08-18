@@ -1,24 +1,21 @@
 ---
 title: Generate Scripts
 description: Learn how to use the Generate and Publish Scripts Wizard to create Transact-SQL scripts for multiple objects, and how to use the Script as menu in Object Explorer to generate scripts for individual or multiple objects.
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
-ms.topic: conceptual
-ms.assetid: 9711c617-3c68-4e5a-aea3-befc64d51524
 author: markingmyname
 ms.author: maghan
 ms.reviewer: mathoma
-ms.custom: seo-lt-2019
 ms.date: 04/07/2020
+ms.service: sql
+ms.subservice: ssms
+ms.topic: conceptual
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 
 # Generate Scripts (SQL Server Management Studio)
 
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] provides two mechanisms for generating [!INCLUDE[tsql](../../includes/tsql-md.md)] scripts. You can create scripts for multiple objects by using the **Generate and Publish Scripts Wizard**. You can also generate a script for individual objects or multiple objects by using the **Script as** menu in **Object Explorer**.
+SQL Server Management Studio provides two mechanisms for generating [!INCLUDE[tsql](../../includes/tsql-md.md)] scripts. You can create scripts for multiple objects by using the **Generate and Publish Scripts Wizard**. You can also generate a script for individual objects or multiple objects by using the **Script as** menu in **Object Explorer**.
 
 For a detailed Tutorial on scripting various objects using SQL Server Management Studio (SSMS), see [Tutorial: Scripting in SSMS](../tutorials/scripting-ssms.md).
 

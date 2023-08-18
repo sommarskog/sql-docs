@@ -1,15 +1,13 @@
 ---
-title: "PowerShell cmdlets for Reporting Services SharePoint mode | Microsoft Docs"
+title: "PowerShell cmdlets for Reporting Services SharePoint mode"
 description: PowerShell cmdlets are installed to support SQL Server Reporting Services SharePoint mode, including installation and feature and application management.
-ms.date: 09/25/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-server-sharepoint
-
-
-ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 09/25/2017
+ms.service: reporting-services
+ms.subservice: report-server-sharepoint
+ms.topic: conceptual
+ms.custom: updatefrequency5
 monikerRange: ">=sql-server-2016 <=sql-server-2016"
 ---
 # PowerShell cmdlets for Reporting Services SharePoint mode
@@ -290,4 +288,4 @@ Get-SPRSExtension -identity $app -ExtensionType "Data" | select name,extensionty
 [CheckList: Use PowerShell to verify Power Pivot for SharePoint](/analysis-services/instances/install-windows/checklist-use-powershell-to-verify-power-pivot-for-sharepoint)   
 [Get help SQL Server PowerShell](../../powershell/sql-server-powershell.md)   
 
-More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)
+More questions? [Try asking the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user)

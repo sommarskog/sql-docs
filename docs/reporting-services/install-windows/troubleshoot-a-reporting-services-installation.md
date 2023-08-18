@@ -1,14 +1,12 @@
 ---
+title: "Troubleshoot a Reporting Services installation"
 description: "Troubleshoot a Reporting Services installation"
-title: "Troubleshoot a Reporting Services installation | Microsoft Docs"
-ms.date: 01/17/2018
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-
-ms.topic: conceptual
-ms.assetid: e2536f7f-d90c-4571-9ffd-6bbfe69018d6
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 01/17/2018
+ms.service: reporting-services
+ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 
 # Troubleshoot a Reporting Services installation
@@ -193,7 +191,7 @@ ms.author: maggies
 ##  <a name="bkmk_tshoot_native"></a> Troubleshoot problems with the native mode installations  
   
 ###  <a name="PerfCounters"></a> Performance counters are not visible after upgrading to Windows Vista or Windows Server 2008  
- If you upgrade the operating system to [!INCLUDE[wiprlhext](../../includes/wiprlhext-md.md)] or [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] on a computer that runs [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] performance counters will not be set after the upgrade.  
+ If you upgrade the operating system to [!INCLUDE[winvista](../../includes/winvista-md.md)] or [!INCLUDE[winserver2008](../../includes/winserver2008-md.md)] on a computer that runs [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] performance counters will not be set after the upgrade.  
   
 #### To reinstate Reporting Services performance counters  
   
@@ -272,5 +270,5 @@ ms.author: maggies
   
 -   [Microsoft Q & A: SQL Server Reporting Services](/answers/topics/sql-server-reporting-services.html)  
   
--   Got feedback or more questions? Visit [Microsoft SQL Server UserVoice](https://feedback.azure.com/forums/908035-sql-server).  
+-   Got feedback or more questions? Share [ideas for SQL](https://feedback.azure.com/forums/908035-sql-server).  
   

@@ -1,32 +1,30 @@
 ---
+title: "MATCH (SQL Graph)"
 description: "MATCH (Transact-SQL)"
-title: "MATCH (SQL Graph) | Microsoft Docs"
-ms.custom: ""
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "06/26/2019"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "MATCH"
   - "MATCH_TSQL"
   - "SHORTEST_PATH"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "MATCH statement [SQL Server], SQL graph"
   - "SQL graph, MATCH statement"
   - "Shortest Path, shortest_path"
-author: shkale-msft
-ms.author: shkale
+dev_langs:
+  - "TSQL"
 monikerRange: "=azuresqldb-current||>=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # MATCH (Transact-SQL)
-[!INCLUDE[SQL Server 2017](../../includes/applies-to-version/sqlserver2017.md)]
+[!INCLUDE [sqlserver2017-asdb-asdbmi](../../includes/applies-to-version/sqlserver2017-asdb-asdbmi.md)]
 
   Specifies a search condition for a graph. MATCH can be used only with graph node and edge tables, in the SELECT statement as part of  WHERE clause. 
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -120,8 +118,8 @@ Name or alias of a node table provided in the FROM clause.
 *edge_alias*  
 Name or alias of an edge table provided in the FROM clause.
 
-*SHORTEST_PATH*   
-Shortest path function is used to find shortest path between two given nodes in a graph or between a given node and all the other nodes in a graph. It takes an arbitrary length pattern as input, that is searched repeatedly in a graph. 
+*SHORTEST_PATH*
+Shortest path function is used to find shortest path between two given nodes in a graph or between a given node and all the other nodes in a graph. It takes an arbitrary length pattern as input, that is searched repeatedly in a graph. Introduced in SQL Server 2019. Requires SQL Server 2019 or later.
 
 *arbitrary_length_match_pattern*  
 Specifies the nodes and edges that must be traversed repeatedly until the desired node is reached or until the maximum number of iterations as specified in the pattern is met. 
@@ -129,7 +127,7 @@ Specifies the nodes and edges that must be traversed repeatedly until the desire
 *al_pattern_quantifier*   
 The arbitrary length pattern takes regular expression style pattern quantifiers in order to specify the number of times a given search pattern is repeated. The supported search pattern quantifiers are:   
 * **+**: Repeat the pattern 1 or more times. Terminate as soon as a shortest path is found.    
-* **{1,n}**: Repeat the pattern 1 to ‘n’ times. Terminate as soon as a shortest path is found.     
+* **{1,n}**: Repeat the pattern 1 to *n* times. Terminate as soon as a shortest path is found.     
 
 ## Remarks  
 The node names inside MATCH can be repeated.  In other words, a node can be traversed an arbitrary number of times in the same query.  

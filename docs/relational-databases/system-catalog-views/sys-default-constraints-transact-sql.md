@@ -1,29 +1,25 @@
 ---
-description: "sys.default_constraints (Transact-SQL)"
-title: "sys.default_constraints (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.default_constraints (Transact-SQL)"
+description: sys.default_constraints (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "03/15/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.default_constraints"
   - "sys.default_constraints_TSQL"
   - "default_constraints"
   - "default_constraints_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.default_constraints catalog view"
-ms.assetid: 096e3659-edeb-4440-a016-f847acd6166b
-author: VanMSFT
-ms.author: vanto
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+dev_langs:
+  - "TSQL"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=fabric"
 ---
 # sys.default_constraints (Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricdw.md)]
 
   Contains a row for each object that is a default definition (created as part of a CREATE TABLE or ALTER TABLE statement instead of a CREATE DEFAULT statement), with **sys.objects.type** = D.  
   
@@ -41,7 +37,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
  The following example returns the definition of the DEFAULT constraint that is applied to the `VacationHours` column of the `HumanResources.Employee` table.  
   
 ```  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 SELECT d.definition   
 FROM sys.default_constraints AS d  

@@ -1,28 +1,24 @@
 ---
+title: "GetLevel (Database Engine)"
 description: "GetLevel (Database Engine)"
-title: "GetLevel (Database Engine) | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/22/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
-ms.topic: "reference"
-f1_keywords: 
-  - "GetLevel"
-  - "GetLevel_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "GetLevel [Database Engine]"
-ms.assetid: 81577d7e-8ff6-4e73-b7f4-94c03d4921e7
 author: MikeRayMSFT
 ms.author: mikeray
+ms.date: "07/22/2017"
+ms.service: sql
+ms.subservice: t-sql
+ms.topic: "reference"
+f1_keywords:
+  - "GetLevel"
+  - "GetLevel_TSQL"
+helpviewer_keywords:
+  - "GetLevel [Database Engine]"
+dev_langs:
+  - "TSQL"
 ---
 
 # GetLevel (Database Engine)
 
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 Returns an integer that represents the depth of the node *this* in the tree.
   

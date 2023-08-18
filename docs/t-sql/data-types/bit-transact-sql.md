@@ -1,27 +1,23 @@
 ---
+title: "bit (Transact-SQL)"
 description: "bit (Transact-SQL)"
-title: "bit (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/23/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
-ms.technology: t-sql
-ms.topic: "reference"
-f1_keywords: 
-  - "bit_TSQL"
-  - "bit"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "bit data type"
-ms.assetid: 40adfd08-a31c-49cb-a172-386bcaa6edee
 author: MikeRayMSFT
 ms.author: mikeray
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+ms.date: "07/23/2017"
+ms.service: sql
+ms.subservice: t-sql
+ms.topic: "reference"
+f1_keywords:
+  - "bit_TSQL"
+  - "bit"
+helpviewer_keywords:
+  - "bit data type"
+dev_langs:
+  - "TSQL"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=fabric"
 ---
 # bit (Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw.md)]
 
   An integer data type that can take a value of 1, 0, or NULL.  
   

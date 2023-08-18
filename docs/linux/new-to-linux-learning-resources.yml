@@ -6,11 +6,11 @@ summary: Tutorials, quickstarts, and other educational resources meant to teach 
 metadata:
   title: "New to Linux: Learning resources"
   description: A collection of resources meant to teach you to use SQL Server on Linux for new-to-Linux users. 
-  ms.prod: sql
+  ms.service: sql
   ms.topic: landing-page
   author: MashaMSFT
   ms.author: mathoma
-  ms.date: 07/25/2020  
+  ms.date: 10/21/2021  
 
 landingContent:
   - title: "Module 1: Introduction to SQL Server on Linux"
@@ -20,11 +20,7 @@ landingContent:
       - text: Introduction to Linux
         url: new-to-linux-resources.md
       - text: "Learn: SQL Server on Linux"
-        url: /learn/modules/introduction-sql-server-linux/
-      - text: "Channel 9 - How SQL Server runs on Linux (optional)"
-        url: https://channel9.msdn.com/Shows/Data-Exposed/SQL-Server-on-Linux-The-HOW?term=sql%20server%20on%20Linux&lang-en=true
-      - text: "Channel 9 - SQL Server on Linux (optional)"
-        url: https://channel9.msdn.com/events/Connect/2016/101?term=sql%20server%20on%20Linux&lang-en=true 
+        url: /training/modules/introduction-sql-server-linux/
 
 
   - title: "Module 2: Planning SQL Server on Linux"
@@ -43,7 +39,7 @@ landingContent:
     linkLists:
     - linkListType: learn
       links:
-      - text: Redhat
+      - text: Red Hat
         url: quickstart-install-connect-red-hat.md
       - text: SUSE
         url: quickstart-install-connect-suse.md
@@ -55,8 +51,6 @@ landingContent:
         url: ../tools/overview-sql-tools.md
       - text: Azure Data Studio (tool)
         url: ../azure-data-studio/what-is-azure-data-studio.md
-      - text: Channel 9 - Cross-platform SQL tools (optional)
-        url: https://channel9.msdn.com/events/Connect/2016/173?term=SQL%20on%20linux&lang-en=true
 
 
   - title: "Module 4: Configure SQL Server on Linux"

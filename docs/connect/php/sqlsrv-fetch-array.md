@@ -1,23 +1,18 @@
 ---
 title: "sqlsrv_fetch_array"
 description: "API reference for the sqlsrv_fetch_array function in the Driver for PHP for SQL Server."
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "03/26/2018"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: reference
-apiname: 
-  - "sqlsrv_fetch_array"
-apitype: "NA"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sqlsrv_fetch_array"
   - "retrieving data, as an array"
   - "API Reference, sqlsrv_fetch_array"
-ms.assetid: 69270b9e-0791-42f4-856d-412da39dea63
-author: David-Engel
-ms.author: v-daenge
+apiname: "sqlsrv_fetch_array"
+apitype: "NA"
 ---
 # sqlsrv_fetch_array
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -115,7 +110,7 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-## Indexed array xample  
+## Indexed array example  
 The following example retrieves each row of a result set as a numerically indexed array.  
   
 The example retrieves product information from the *Purchasing.PurchaseOrderDetail* table of the AdventureWorks database for products that have a specified date and a stocked quantity (*StockQty*) less than a specified value.  

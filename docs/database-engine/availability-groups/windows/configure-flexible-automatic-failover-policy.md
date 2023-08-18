@@ -1,20 +1,18 @@
 ---
 title: "Configure a flexible automatic failover policy for an availability group"
 description: "Describes how to configure a flexible failover policy for an Always On availability group using Transact-SQL (T-SQL), PowerShell, or SQL Server Management Studio."
+author: MashaMSFT
+ms.author: mathoma
 ms.date: "11/05/2019"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: availability-groups
+ms.service: sql
+ms.subservice: availability-groups
 ms.topic: how-to
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Availability Groups [SQL Server], flexible failover policy"
   - "Availability Groups [SQL Server], failover"
   - "failover [SQL Server], AlwaysOn Availability Groups"
-ms.assetid: 1ed564b4-9835-4245-ae35-9ba67419a4ce
-author: cawrites
-ms.author: chadam
+  - "failover [SQL Server], Always On Availability Groups"
 monikerRange: ">=sql-server-2016"
-ms.custom: "seo-lt-2019"
 ---
 # Configure a flexible automatic failover policy for an Always On availability group
 
@@ -32,7 +30,7 @@ ms.custom: "seo-lt-2019"
   
 -   For an automatic failover to occur, the current primary replica and one secondary replica must be configured for synchronous-commit availability mode with automatic failover and the secondary replica must be synchronized with the primary replica.  
   
--   Only three replicas are supported for automatic failover.  
+-   [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)] increased the maximum number of synchronous replicas to 5, up from 3 in [!INCLUDE[ssSQL17](../../../includes/sssql17-md.md)]. You can configure this group of five replicas to have automatic failover within the group. There is one primary replica, plus four synchronous secondary replicas.
   
 -   If an availability group exceeds its WSFC failure threshold, the WSFC cluster will not attempt an automatic failover for the availability group. Furthermore, the WSFC resource group of the availability group remains in a failed state until either the cluster administrator manually brings the failed resource group online or the database administrator performs a manual failover of the availability group. The *WSFC failure threshold* is defined as the maximum number of failures supported for the availability group during a given time period. The default time period is six hours, and the default value for the maximum number of failures during this period is *n*-1, where *n* is the number of WSFC nodes. To change the failure-threshold values for a given availability group, use the WSFC Failover Manager Console.  
   
@@ -59,13 +57,13 @@ ms.custom: "seo-lt-2019"
 > [!IMPORTANT]  
 >  Damaged databases and suspect databases are not detected by any failure-condition level. Therefore, a database that is damaged or suspect (whether due to a hardware failure, data corruption, or other issue) never triggers an automatic failover.  
   
- The following table describes the failure-conditions that corresponds to each level.  
+ The following table describes the failure-condition that corresponds to each level.  
   
-|Level|Failure Condition|[!INCLUDE[tsql](../../../includes/tsql-md.md)] Value|PowerShell Value|  
+|Level|Failure-condition|[!INCLUDE[tsql](../../../includes/tsql-md.md)] Value|PowerShell Value|  
 |-----------|-----------------------|------------------------------|----------------------|  
 |One|On server down. Specifies that an automatic failover is initiated when one the following occurs:<br /><br /> The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] service is down.<br /><br /> The lease of the availability group for connecting to the WSFC cluster expires because no ACK is received from the server instance. For more information, see [How It Works: SQL Server Always On Lease Timeout](https://techcommunity.microsoft.com/t5/sql-server-support/how-it-works-sql-server-alwayson-lease-timeout/ba-p/317268).<br /><br /> <br /><br /> This is the least restrictive level.|1|**OnServerDown**|  
 |Two|On server unresponsive. Specifies that an automatic failover is initiated when one of the following occurs:<br /><br /> The instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] does not connect to cluster, and the user-specified health check timeout threshold of the availability group is exceeded.<br /><br /> The availability replica is in failed state.|2|**OnServerUnresponsive**|  
-|Three|On critical server error. Specifies that an automatic failover is initiated on critical [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] internal errors, such as orphaned spinlocks, serious write-access violations, or too much dumping.<br /><br /> This is the default level.|3|**OnCriticalServerError**|  
+|Three|On critical server error. Specifies that an automatic failover is initiated on critical [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] internal errors, such as orphaned spinlocks, serious write-access violations, or too many memory dumps generated in a short period of time.<br /><br /> This is the default level.|3|**OnCriticalServerError**|  
 |Four|On moderate server error. Specifies that an automatic failover is initiated on moderate [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] internal errors, such as a persistent out-of-memory condition in the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] internal resource pool.|4|**OnModerateServerError**|  
 |Five|On any qualified failure conditions. Specifies that an automatic failover is initiated on any qualified failure conditions, including:<br /><br /> Detection of Scheduler deadlock.<br /><br /> Detection of an unsolvable deadlock.<br /><br /> <br /><br /> This is the most restrictive level.|5|**OnAnyQualifiedFailureConditions**|  
   
@@ -97,8 +95,9 @@ ms.custom: "seo-lt-2019"
         |3|Three|On critical server error. Any condition of lower value is satisfied or an internal critical server error occurs.<br /><br /> This is the default level.|  
         |4|Four|On moderate server error. Any condition of lower value is satisfied or a moderate Server error occurs.|  
         |5|Five|On any qualified failure conditions. Any condition of lower value is satisfied or a qualifying failure condition occurs.|  
+    
+         For more information about the failover condition levels, see [Flexible Failover Policy for Automatic Failover of an Availability Group &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-flexible-automatic-failover-policy.md#FClevel).  
   
-         For more information about the failover condition levels, see [Flexible Failover Policy for Automatic Failover of an Availability Group &#40;SQL Server&#41;]().  
   
     -   To configure the health check timeout threshold, use the HEALTH_CHECK_TIMEOUT = *n* option, where, *n* is an integer from 15000 milliseconds (15 seconds) to 4294967295 milliseconds. The default value is 30000 milliseconds (30 seconds)  
   
@@ -125,8 +124,8 @@ ms.custom: "seo-lt-2019"
         |**OnCriticalServerError**|Three|On critical server error. Any condition of lower value is satisfied or an internal critical server error occurs.<br /><br /> This is the default level.|  
         |**OnModerateServerError**|Four|On moderate server error. Any condition of lower value is satisfied or a moderate Server error occurs.|  
         |**OnAnyQualifiedFailureConditions**|Five|On any qualified failure conditions. Any condition of lower value is satisfied or a qualifying failure condition occurs.|  
-  
-         For more information about the failover condition levels, see [Flexible Failover Policy for Automatic Failover of an Availability Group &#40;SQL Server&#41;]().  
+         
+         For more information about the failover condition levels, see [Flexible Failover Policy for Automatic Failover of an Availability Group &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-flexible-automatic-failover-policy.md#FClevel).   
   
          For example, the following command changes the failure-condition level of an existing availability group, `AG1`, to level one.  
   

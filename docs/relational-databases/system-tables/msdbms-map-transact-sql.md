@@ -1,23 +1,19 @@
 ---
-description: "MSdbms_map (Transact-SQL)"
-title: "MSdbms_map (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "MSdbms_map (Transact-SQL)"
+description: MSdbms_map (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "03/06/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: replication
+ms.service: sql
+ms.subservice: replication
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "MSdbms_map"
   - "MSdbms_map_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "MSdbms_map system table"
-ms.assetid: df67e691-3a50-450a-99c5-8c4a041749ae
-author: cawrites
-ms.author: chadam
+dev_langs:
+  - "TSQL"
 ---
 # MSdbms_map (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

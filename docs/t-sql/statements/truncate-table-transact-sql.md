@@ -1,29 +1,26 @@
 ---
-description: "TRUNCATE TABLE (Transact-SQL)"
-title: "TRUNCATE TABLE (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "TRUNCATE TABLE (Transact-SQL)"
+description: TRUNCATE TABLE (Transact-SQL)
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "08/10/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "TRUNCATE"
   - "TRUNCATE TABLE"
   - "TRUNCATE_TSQL"
   - "TRUNCATE_TABLE_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "row removal [SQL Server], TRUNCATE TABLE statement"
   - "table truncating [SQL Server]"
   - "removing rows"
   - "TRUNCATE TABLE statement"
   - "deleting rows"
   - "dropping rows"
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+dev_langs:
+  - "TSQL"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # TRUNCATE TABLE (Transact-SQL)
@@ -31,7 +28,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
 Removes all rows from a table or specified partitions of a table, without logging the individual row deletions. TRUNCATE TABLE is similar to the DELETE statement with no WHERE clause; however, TRUNCATE TABLE is faster and uses fewer system and transaction log resources.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -58,16 +55,17 @@ TRUNCATE TABLE { database_name.schema_name.table_name | schema_name.table_name |
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## Arguments
- *database_name*  
+
+#### *database_name*  
  Is the name of the database.  
   
- *schema_name*  
+#### *schema_name*  
  Is the name of the schema to which the table belongs.  
   
- *table_name*  
+#### *table_name*  
  Is the name of the table to truncate or from which all rows are removed. *table_name* must be a literal. *table_name* cannot be the **OBJECT_ID()** function or a variable.  
   
- WITH ( PARTITIONS ( { \<*partition_number_expression*> | \<*range*> } [ , ...n ] ) )    
+#### WITH ( PARTITIONS ( { \<*partition_number_expression*> | \<*range*> } [ , ...n ] ) )    
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] through [current version](/troubleshoot/sql/general/determine-version-edition-update-level))
   
  Specifies the partitions to truncate or from which all rows are removed. If the table is not partitioned, the `WITH PARTITIONS` argument will generate an error. If the `WITH PARTITIONS` clause is not provided, the entire table will be truncated.  
@@ -123,7 +121,7 @@ TRUNCATE TABLE { database_name.schema_name.table_name | schema_name.table_name |
   
  TRUNCATE TABLE cannot activate a trigger because the operation does not log individual row deletions. For more information, see [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md). 
  
- In [!INCLUDE[sssdwfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[sspdw](../../includes/sspdw-md.md)]:
+ In [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[sspdw](../../includes/sspdw-md.md)]:
 
 - `TRUNCATE TABLE` is not allowed within the EXPLAIN statement.
 
@@ -141,7 +139,7 @@ TRUNCATE TABLE { database_name.schema_name.table_name | schema_name.table_name |
  The following example removes all data from the `JobCandidate` table. `SELECT` statements are included before and after the `TRUNCATE TABLE` statement to compare results.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 SELECT COUNT(*) AS BeforeTruncateCount   
 FROM HumanResources.JobCandidate;  

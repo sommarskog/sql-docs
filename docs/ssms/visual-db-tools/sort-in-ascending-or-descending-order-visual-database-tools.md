@@ -1,23 +1,18 @@
 ---
-description: "Sort in Ascending or Descending Order (Visual Database Tools)"
 title: Sort in Ascending or Descending Order
-ms.custom: seo-lt-2019
-ms.date: 01/19/2017
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "descending sorts"
-  - "ascending sorts"
-ms.assetid: d61cc55b-9ee8-4ecf-a32f-6459ae43910b
+description: "Sort in Ascending or Descending Order (Visual Database Tools)"
 author: markingmyname
 ms.author: maghan
-ms.reviewer: 
-
+ms.date: 01/19/2017
+ms.service: sql
+ms.subservice: ssms
+ms.topic: conceptual
+helpviewer_keywords:
+  - "descending sorts"
+  - "ascending sorts"
 ---
 # Sort in Ascending or Descending Order (Visual Database Tools)
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server](../../includes/applies-to-version/sqlserver.md)]
 You can sort query results in ascending or descending order on one or more of the columns in the result set by using the **ASC** or **DESC** keywords with the **ORDER BY** clause.  
   
 > [!NOTE]  

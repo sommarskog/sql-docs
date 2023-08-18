@@ -1,18 +1,17 @@
 ---
+title: "Query columns using Always Encrypted with Azure Data Studio"
 description: "Query columns using Always Encrypted with Azure Data Studio"
-title: "Query columns using Always Encrypted with Azure Data Studio | Microsoft Docs"
-ms.custom: ""
-ms.date: 01/15/2021
-ms.prod: sql
-ms.reviewer: vanto
-ms.technology: security
-ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
+ms.reviewer: vanto
+ms.date: 01/15/2021
+ms.service: sql
+ms.subservice: security
+ms.topic: conceptual
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Query columns using Always Encrypted with Azure Data Studio
-[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 This article describes how to query columns, encrypted with [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md) using [Azure Data Studio](../../../azure-data-studio/what-is-azure-data-studio.md). With Azure Data Studio, you can:
 - Retrieve ciphertext values stored in encrypted columns. 
@@ -200,9 +199,9 @@ column_encryption_key_database_name = 'Clinic') are incompatible in the equal to
 > [!NOTE]
 > Without parameterization, the entire query, including type conversions is processed inside SQL Server/Azure SQL Database. With parameterization enabled, some type conversions are performed by Microsoft .NET Data Provider for SQL Server inside Azure Data Studio. Due to differences between the Microsoft .NET type system and the SQL Server type system (for example, different precision of some types, such as float), a query executed with parameterization enabled can produce different results than the query executed without parameterization enabled. 
 
-## Next Steps
+## Next steps
 - [Develop applications using Always Encrypted](always-encrypted-client-development.md)
 
 
-## See Also
+## See also
 - [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)

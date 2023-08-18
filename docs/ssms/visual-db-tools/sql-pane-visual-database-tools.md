@@ -1,24 +1,19 @@
 ---
-description: "SQL Pane (Visual Database Tools)"
 title: SQL Pane
-ms.custom: seo-lt-2019
+description: "SQL Pane (Visual Database Tools)"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
+ms.service: sql
+ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Query Designer [SQL Server], SQL pane"
   - "View Designer, SQL pane"
   - "SQL pane [Visual Database Tools]"
-ms.assetid: dbabab18-0614-415b-a2ef-9bcd0d320d5c
-author: markingmyname
-ms.author: maghan
-ms.reviewer: 
-
 ---
 # SQL Pane (Visual Database Tools)
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server](../../includes/applies-to-version/sqlserver.md)]
 You can use the SQL pane to create your own SQL statement, or you can use the Criteria pane and Diagram pane to create the statement, in which case the SQL statements will be created in the SQL pane. As you build your query, the SQL pane automatically updates and reformats for easy readability.  
   
 To open the SQL pane, first open Query and View Designer (with a database object selected in Server Explorer, from the **Database** menu, click **New Query**). Then from the **Query Designer** menu point to **Pane** and click **SQL**.  

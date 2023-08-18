@@ -2,9 +2,9 @@
   "build_entry_point": "docs",
   "docsets_to_publish": [
     {
-      "docset_name": "data-migration",
-      "build_source_folder": "data-migration",
-      "build_output_subfolder": "data-migration",
+      "docset_name": "azure-sql",
+      "build_source_folder": "azure-sql",
+      "build_output_subfolder": "azure-sql",
       "locale": "en-us",
       "monikers": [],
       "moniker_ranges": [],
@@ -16,9 +16,9 @@
       "template_folder": "_themes"
     },
     {
-      "docset_name": "azure-data-studio",
-      "build_source_folder": "azure-data-studio",
-      "build_output_subfolder": "azure-data-studio",
+      "docset_name": "data-migration",
+      "build_source_folder": "data-migration",
+      "build_output_subfolder": "data-migration",
       "locale": "en-us",
       "monikers": [],
       "moniker_ranges": [],
@@ -63,13 +63,55 @@
     {
       "path_to_root": "_themes",
       "url": "https://github.com/Microsoft/templates.docs.msft",
+      "branch": "main",
+      "branch_mapping": {}
+    },
+    {
+      "path_to_root": "terraform_samples",
+      "url": "https://github.com/Azure/terraform",
       "branch": "master",
       "branch_mapping": {}
     },
     {
+      "path_to_root": "azure",
+      "url": "https://github.com/MicrosoftDocs/azure-docs-pr",
+      "branch": "main",
+      "branch_mapping": {}
+    },
+    {
+      "path_to_root": "azure_cli_scripts",
+      "url": "https://github.com/Azure-Samples/azure-cli-samples",
+      "branch": "master",
+      "branch_mapping": {}
+    },
+    {
+      "path_to_root": "azure-dev-docs-pr",
+      "url": "https://github.com/MicrosoftDocs/azure-dev-docs-pr",
+      "branch": "main",
+      "branch_mapping": {}
+    },
+    {
+      "path_to_root": "terraform_scripts",
+      "url": "https://github.com/Azure/terraform/",
+      "branch": "master",
+      "branch_mapping": {}
+    },
+    {
+      "path_to_root": "powershell_scripts",
+      "url": "https://github.com/Azure/azure-docs-powershell-samples",
+      "branch": "master",
+      "branch_mapping": {}
+    },    
+    {
+      "path_to_root": "quickstart-templates",
+      "url": "https://github.com/Azure/azure-quickstart-templates",
+      "branch": "master",
+      "branch_mapping": {}
+    },    
+    {
       "path_to_root": "samples",
       "url": "https://github.com/dotnet/samples",
-      "branch": "master",
+      "branch": "main",
       "branch_mapping": {
         "live": "live"
       }
@@ -77,19 +119,25 @@
     {
       "path_to_root": "sqlclient",
       "url": "https://github.com/dotnet/sqlclient",
-      "branch": "master",
+      "branch": "main",
       "branch_mapping": {}
     },
     {
       "path_to_root": "_themes.pdf",
       "url": "https://github.com/Microsoft/templates.docs.msft.pdf",
-      "branch": "master",
+      "branch": "main",
       "branch_mapping": {}
     },
     {
       "path_to_root": "sql-server-samples",
       "url": "https://github.com/Microsoft/sql-server-samples",
       "branch": "master",
+      "branch_mapping": {}
+    },
+    {
+      "path_to_root": "azure-sql/reusable-content",
+      "url": "https://github.com/MicrosoftDocs/reusable-content",
+      "branch": "main",
       "branch_mapping": {}
     }
   ],
@@ -98,7 +146,7 @@
       "Publish",
       "PDF"
     ],
-    "master": [
+    "main": [
       "Publish",
       "PDF"
     ],
@@ -113,11 +161,13 @@
       "template_folder": "_themes.pdf"
     }
   },
-  "docs_build_engine": {
-    "name": "docfx_v3"
-  },
+  "docs_build_engine": {},
+  "contribution_branch_mappings": null,
   "need_generate_pdf": false,
   "need_generate_intellisense": false,
   "enable_branch_build_custom_validation": true,
-  "enable_pull_request_custom_validation": true
-}
+  "enable_pull_request_custom_validation": true, 
+  "redirection_files": [
+    ".openpublishing.redirection.azure-sql.json" 
+  ]
+ }

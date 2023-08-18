@@ -1,15 +1,13 @@
 ---
-title: "Manipulating UDT Data | Microsoft Docs"
+title: "Manipulating UDT Data"
 description: This article describes how to insert, select, and update data in UDT columns of a SQL Server database.
-ms.custom: ""
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "12/05/2019"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: clr
+ms.service: sql
+ms.subservice: clr
 ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "CAST function"
   - "data deletions [CLR integration]"
   - "data insertions [CLR integration]"
@@ -26,9 +24,8 @@ helpviewer_keywords:
   - "UDTs [CLR integration], data manipulation"
   - "invoking UDT methods"
   - "inserting data"
-ms.assetid: 51b1a5f2-7591-4e11-bfe2-d88e0836403f
-author: "rothja"
-ms.author: "jroth"
+dev_langs:
+  - "TSQL"
 ---
 # Working with User-Defined Types - Manipulating UDT Data
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,14 +1,14 @@
 ---
+title: "Search for Words Close to Another Word with NEAR"
 description: "Search for Words Close to Another Word with NEAR"
-title: "Search for Words Close to Another Word with NEAR | Microsoft Docs"
+author: rwestMSFT
+ms.author: randolphwest
+ms.reviewer: mikeray
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "search, sql-database"
-ms.technology: search
+ms.service: sql
+ms.subservice: search
 ms.topic: conceptual
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "word searches [full-text search]"
   - "NEAR option [full-text search]"
   - "phrase searches [full-text search]"
@@ -16,14 +16,12 @@ helpviewer_keywords:
   - "full-text search [SQL Server], proximity searches"
   - "full-text queries [SQL Server], proximity"
   - "queries [full-text search], proximity"
-ms.assetid: 87520646-4865-49ae-8790-f766b80a41f3
-author: pmasl
-ms.author: pelopes
-ms.reviewer: mikeray
+dev_langs:
+  - "TSQL"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Search for Words Close to Another Word with NEAR
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
   You can use the *proximity term* **NEAR** in a [CONTAINS](../../t-sql/queries/contains-transact-sql.md) predicate or [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) function to search for words or phrases near one another. 
   
 ##  <a name="Custom_NEAR"></a> Overview of NEAR  

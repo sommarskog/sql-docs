@@ -1,19 +1,16 @@
 ---
-description: "DENY (Transact-SQL)"
 title: DENY (Transact-SQL)
-ms.custom: ""
+description: DENY (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "05/15/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "DENY"
   - "DENY_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "schema-level securables [SQL Server]"
   - "security [SQL Server], denying access"
   - "DENY statement"
@@ -24,20 +21,19 @@ helpviewer_keywords:
   - "principal security [SQL Server]"
   - "database-level securables [SQL Server]"
   - "denying permissions [SQL Server]"
-ms.assetid: c32d1e01-9ee9-4665-a516-fcfece58078e
-author: VanMSFT
-ms.author: vanto
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+dev_langs:
+  - "TSQL"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=fabric"
 ---
 
 # DENY (Transact-SQL)
 
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw.md)]
 
   Denies a permission to a principal. Prevents that principal from inheriting the permission through its group or role memberships. DENY takes precedence over all permissions, except that DENY does not apply to object owners or members of the sysadmin fixed server role.
   **Security Note** Members of the sysadmin fixed server role and object owners cannot be denied permissions."
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -60,7 +56,7 @@ DENY   { ALL [ PRIVILEGES ] }
 ```  
   
 ```syntaxsql
--- Syntax for Azure Synapse Analytics and Parallel Data Warehouse  
+-- Syntax for Azure Synapse Analytics and Parallel Data Warehouse and Microsoft Fabric
   
 DENY   
     <permission> [ ,...n ]  
@@ -138,6 +134,8 @@ The use of AS in this statement does not imply the ability to impersonate anothe
   
  The sp_helprotect system stored procedure reports permissions on a database-level securable.  
   
+ In [!INCLUDE [fabric](../../includes/fabric.md)], CREATE USER cannot be explicitly executed currently. When GRANT or DENY is executed, the user will be created automatically.
+
 > [!CAUTION]  
 >  A table-level DENY does not take precedence over a column-level GRANT. This inconsistency in the permissions hierarchy has been preserved for the sake of backward compatibility. It will be removed in a future release.  
   

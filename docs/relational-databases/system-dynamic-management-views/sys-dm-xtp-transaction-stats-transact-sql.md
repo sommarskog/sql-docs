@@ -1,30 +1,28 @@
 ---
-description: "sys.dm_xtp_transaction_stats (Transact-SQL)"
 title: "sys.dm_xtp_transaction_stats (Transact-SQL)"
-ms.custom: ""
-ms.date: "03/12/2021"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: system-objects
+description: sys.dm_xtp_transaction_stats (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
+ms.date: "02/27/2023"
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "dm_xtp_transaction_stats_TSQL"
   - "dm_xtp_transaction_stats"
   - "sys.dm_xtp_transaction_stats_TSQL"
   - "sys.dm_xtp_transaction_stats"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.dm_xtp_transaction_stats dynamic management view"
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+dev_langs:
+  - "TSQL"
 ---
 # sys.dm_xtp_transaction_stats (Transact-SQL)
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Reports statistics about transactions that have run since the server started.  
   
- For more information, see [In-Memory OLTP &#40;In-Memory Optimization&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md).  
+ For more information, see [In-Memory OLTP &#40;In-Memory Optimization&#41;](../in-memory-oltp/overview-and-usage-scenarios.md).  
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
@@ -62,7 +60,10 @@ ms.author: wiassaf
 ## Permissions  
  Requires VIEW SERVER STATE permission on the server.  
   
-## See Also  
+### Permissions for SQL Server 2022 and later
+
+Requires VIEW SERVER PERFORMANCE STATE permission on the server.
+
+## See also  
  [Memory-Optimized Table Dynamic Management Views &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
-  
   

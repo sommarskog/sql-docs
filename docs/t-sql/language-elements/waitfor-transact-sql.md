@@ -1,19 +1,16 @@
 ---
+title: "WAITFOR (Transact-SQL)"
 description: "WAITFOR (Transact-SQL)"
-title: "WAITFOR (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/15/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "WAITFOR"
   - "WAITFOR_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "TIME option"
   - "delaying executions [SQL Server]"
   - "batches [SQL Server], execution times"
@@ -24,16 +21,15 @@ helpviewer_keywords:
   - "transactions [SQL Server], execution times"
   - "WAITFOR statement"
   - "timing executions"
-ms.assetid: 8e896e73-af27-4cae-a725-7a156733f3bd
-author: cawrites
-ms.author: chadam
+dev_langs:
+  - "TSQL"
 ---
 # WAITFOR (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Blocks the execution of a batch, stored procedure, or transaction until either a specified time or time interval elapses, or a specified statement modifies or returns at least one row.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

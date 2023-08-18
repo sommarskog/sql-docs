@@ -1,14 +1,13 @@
 ---
 title: Adding additional functionality through extensibility
 description: Learn about the extensibility model and key extensibility areas for extending the functionality of Azure Data Studio
-ms.prod: azure-data-studio
-ms.technology: azure-data-studio
-ms.topic: conceptual
 author: "markingmyname"
 ms.author: "maghan"
-ms.reviewer: "alayu, maghan, sstein"
-ms.custom: "seodec18"
+ms.reviewer: erinstellato
 ms.date: "09/24/2018"
+ms.service: azure-data-studio
+ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 
 # Azure Data Studio extensibility
@@ -29,7 +28,7 @@ Some of the key extensibility points are:
 Because the core Azure Data Studio platform is built upon Visual Studio Code, details about the Visual Studio Code extensibility APIs are found in the [Extension Authoring](https://code.visualstudio.com/docs/extensions/overview) and [Extension API](https://code.visualstudio.com/docs/extensionAPI/overview) documentation on the Visual Studio Code website.
 
 > [!NOTE]
->  Azure Data Studio releases are aligned with a recent version of VS Code, however the included VS Code engine may not be the current VS Code release. For example, in November 2020 the VS Code engine in Azure Data Studio is 1.48 and the current VS Code version is 1.51.  The error message "Unable to install extension '<name>' as it is not compatible with VS Code <version>" when installing an extension is caused by an extension that has a later VS Code engine version defined in the package manifest (`package.json`). You can verify the VS Code engine version in your Azure Data Studio through the **Help** menu under **About**.
+>  Azure Data Studio releases are aligned with a recent version of VS Code, however the included VS Code engine may not be the current VS Code release. For example, in November 2020 the VS Code engine in Azure Data Studio is 1.48 and the current VS Code version is 1.51.  The error message "Unable to install extension '\<name\>' as it is not compatible with VS Code \<version\>" when installing an extension is caused by an extension that has a later VS Code engine version defined in the package manifest (`package.json`). You can verify the VS Code engine version in your Azure Data Studio through the **Help** menu under **About**.
 
 ## Manage Dashboard tab panel contributions
 

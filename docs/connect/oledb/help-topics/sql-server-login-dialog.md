@@ -1,15 +1,13 @@
 ---
-title: "SQL Server Login Dialog Box (OLE DB) | Microsoft Docs"
+title: "SQL Server Login Dialog Box (OLE DB)"
 description: When you attempt to connect without specifying enough information, the OLE DB Driver for SQL Server prompts you with the SQL Server Login dialog box.
-ms.custom: ""
-ms.date: "09/30/2020"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: v-daenge
-ms.technology: connectivity
+author: David-Engel
+ms.author: v-davidengel
+ms.reviewer: v-davidengel
+ms.date: "10/26/2022"
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: conceptual
-ms.author: "v-beaziz"
-author: bazizi
 ---
 # SQL Server Login dialog box
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -43,8 +41,11 @@ When you attempt to connect without specifying enough information, the OLE DB dr
 |Language|Specifies the national language to use for SQL Server system messages. The computer running SQL Server must have the language installed. This setting overrides the default language specified for the login on the server. If no language is specified, the connection uses the default language specified for the login on the server.|
 |Application Name|Specifies the application name to be stored in the **program_name** column in the row for this connection in **sys.sysprocesses**.|
 |Workstation ID|Specifies the workstation ID to be stored in the **hostname** column in the row for this connection in **sys.sysprocesses**.|
-|Use strong encryption for data|When checked, data that is passed through the connection will be encrypted.|
-|Trust server certificate|When checked, the server's certificate will be validated. Server's certificate must have the correct hostname of the server and issued by a trusted certificate authority.|
+|Connection encryption|When `Mandatory` or `Strict`, data that is passed through the connection will be encrypted. The `Strict` option additionally encrypts the PRELOGIN packets. This option is only available for versions 19.x.x.|
+|Use strong encryption for data|When checked, data that is passed through the connection will be encrypted. This option is only available for versions 18.x.x.|
+|Trust server certificate|When unchecked, the server's certificate will be validated. Server's certificate must have the correct hostname of the server and issued by a trusted certificate authority.|
+|Server certificate|Specifies the path to a certificate file to match against the SQL Server TLS/SSL certificate. This option can only be used when `Strict` encryption is enabled.<br/><br/>Type the full path to the certificate file in the text box labeled `Server certificate`, or click on the `...` button to browse for the certificate file. This option is only available in versions 19.2+.|
+|Host name in certificate|The host name to be used in validating the SQL Server TLS/SSL certificate. If not set, the driver uses the server name on the connection URL as the host name to validate the SQL Server TLS/SSL certificate. This option is only available in versions 19+.|
 
 > [!NOTE]  
 > When using `Windows Authentication` or `SQL Server Authentication` modes, **Trust server certificate** is considered only when the **Use strong encryption for data** option is enabled.

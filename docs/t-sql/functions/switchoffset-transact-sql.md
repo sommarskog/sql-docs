@@ -1,19 +1,16 @@
 ---
+title: "SWITCHOFFSET (Transact-SQL)"
 description: "SWITCHOFFSET (Transact-SQL)"
-title: "SWITCHOFFSET (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "12/02/2015"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
-  - "SWITCHTZ"
-  - "SWITCHTZ_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+f1_keywords:
+  - "SWITCHOFFSET"
+  - "SWITCHOFFSET_TSQL"
+helpviewer_keywords:
   - "dates [SQL Server], functions"
   - "functions [SQL Server], time"
   - "functions [SQL Server], date and time"
@@ -21,10 +18,9 @@ helpviewer_keywords:
   - "time [SQL Server], functions"
   - "date and time [SQL Server], SWITCHOFFSET"
   - "time zones [SQL Server]"
-ms.assetid: 32a48e36-0aa4-4260-9fe9-cae9197d16c5
-author: julieMSFT
-ms.author: jrasnick
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+dev_langs:
+  - "TSQL"
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-mi-current"
 ---
 # SWITCHOFFSET (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -33,7 +29,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
  For an overview of all [!INCLUDE[tsql](../../includes/tsql-md.md)] date and time data types and functions, see [Date and Time Data Types and Functions &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

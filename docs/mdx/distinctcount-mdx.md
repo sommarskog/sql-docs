@@ -1,14 +1,14 @@
 ---
+title: "DistinctCount (MDX)"
 description: "DistinctCount (MDX)"
-title: "DistinctCount (MDX) | Microsoft Docs"
-ms.date: 11/12/2020
-ms.prod: sql
-ms.technology: analysis-services
-ms.custom: mdx
-ms.topic: reference
+author: minewiskan
 ms.author: owend
 ms.reviewer: owend
-author: minewiskan
+ms.date: 01/12/2021
+ms.service: sql
+ms.subservice: analysis-services
+ms.topic: reference
+ms.custom: mdx
 ---
 # DistinctCount (MDX)
 
@@ -32,31 +32,20 @@ DistinctCount(Set_Expression)
 ## Examples  
  The following query shows how to use the DistinctCount function:  
   
- `WITH SET MySet AS`  
-  
- `{[Customer].[Customer Geography].[Country].&[Australia],[Customer].[Customer Geography].[Country].&[Australia],`  
-  
- `[Customer].[Customer Geography].[Country].&[Canada],[Customer].[Customer Geography].[Country].&[France],`  
-  
- `[Customer].[Customer Geography].[Country].&[United Kingdom],[Customer].[Customer Geography].[Country].&[United Kingdom]}`  
-  
- `*`  
-  
- `{([Date].[Calendar].[Date].&[20010701],[Measures].[Internet Sales Amount] )}`  
-  
- `//Returns the value 3 because Internet Sales Amount is null`  
-  
- `//for the UK on the date specified`  
-  
- `MEMBER MEASURES.SETDISTINCTCOUNT AS`  
-  
- `DISTINCTCOUNT(MySet)`  
-  
- `SELECT {MEASURES.SETDISTINCTCOUNT} ON 0`  
-  
- `FROM [Adventure Works]`  
- 
-The DistinctCount function returns the distinct number of items in a set; in this example, the optional second parameter is used to exclude items that don’t have a value for a given tuple. In this case there are four distinct items in the set in the first parameter, but the function returns three because only Australia, Canada and France have data for July 1st 2001 for Internet Sales Amount.
+ ```mdx
+WITH SET MySet AS  
+ {[Customer].[Customer Geography].[Country].&[Australia],[Customer].[Customer Geography].[Country].&[Australia],
+ [Customer].[Customer Geography].[Country].&[Canada],[Customer].[Customer Geography].[Country].&[France],  
+ [Customer].[Customer Geography].[Country].&[United Kingdom],[Customer].[Customer Geography].[Country].&[United Kingdom]}  
+ * 
+ {([Date].[Calendar].[Date].&[20010701],[Measures].[Internet Sales Amount] )}   
+ MEMBER MEASURES.SETDISTINCTCOUNT AS  
+ DISTINCTCOUNT(MySet)  
+ SELECT {MEASURES.SETDISTINCTCOUNT} ON 0 
+ FROM [Adventure Works] 
+ ```
+
+The DistinctCount function returns the distinct number of items in a set; in this example, the optional second parameter is used to exclude items that don't have a value for a given tuple. In this case there are four distinct items in the set in the first parameter, but the function returns three because only Australia, Canada and France have data for July 1st 2001 for Internet Sales Amount.
  
 ## See Also  
  [Count &#40;Set&#41; &#40;MDX&#41;](../mdx/count-set-mdx.md)   

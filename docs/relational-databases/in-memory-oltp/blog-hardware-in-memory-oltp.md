@@ -1,15 +1,12 @@
 ---
-title: "Hardware for SQL In-Memory OLTP | Microsoft Docs"
+title: "Hardware for SQL In-Memory OLTP"
 description: Learn about hardware considerations for In-Memory OLTP performance in SQL Server. In-Memory OLTP uses memory and disk in different ways than disk-based tables.
-ms.custom: ""
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "03/28/2019"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: in-memory-oltp
+ms.service: sql
+ms.subservice: in-memory-oltp
 ms.topic: conceptual
-author: rothja
-ms.author: jroth
 monikerRange: "=azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017"
 ---
 # Hardware considerations for In-Memory OLTP in SQL Server
@@ -19,7 +16,7 @@ In-Memory OLTP uses memory and disk in different ways than traditional disk-base
 > [!NOTE]
 > This article was a blog published on August 1, 2013, by the Microsoft SQL Server 2014 team. The blog webpage is being retired.
 >
-> [SQL Server In-Memory-OLTP](./in-memory-oltp-in-memory-optimization.md)
+> [SQL Server In-Memory-OLTP](./overview-and-usage-scenarios.md)
 
 <!--
     Here was the link to the blog. This blog was captured into this new article on 2018/11/30, by GeneMi (MightyPen).
@@ -54,13 +51,13 @@ Non-durable memory-optimized tables (NDTs), i.e., memory-optimized tables with D
 
 Log records pertaining to memory-optimized tables are written to the database transaction log, along with the other SQL Server log records.
 
-It is always important to put the log file on a drive that has low latency, such that transactions do not need to wait too long, and to prevent contention on log IO. Your system will run as fast as your slowest component (Amdahl’s law). You need to ensure that, when running In-Memory OLTP, your log IO device does not become a bottleneck. We recommend using a storage device with low latency, at least SSD.
+It is always important to put the log file on a drive that has low latency, such that transactions do not need to wait too long, and to prevent contention on log IO. Your system will run as fast as your slowest component (Amdahl's law). You need to ensure that, when running In-Memory OLTP, your log IO device does not become a bottleneck. We recommend using a storage device with low latency, at least SSD.
 
 Note that memory-optimized tables use less log bandwidth than disk-based tables, as they do not log index operations and do not log UNDO records. This can help to relieve log IO contention.
 
 ## Data drive
 
-Persistence of memory-optimized tables using checkpoint files uses streaming IO. Therefore, these files do not need a drive with low latency or fast random IO. Instead, the main factor for these drives is the speed of sequential IO and bandwidth of the host bus adapter (HBA). Thus, you don’t need SSDs for checkpoint files; you can place them on high performance spindles (e.g., SAS), as long as their sequential IO speed meets your requirements.
+Persistence of memory-optimized tables using checkpoint files uses streaming IO. Therefore, these files do not need a drive with low latency or fast random IO. Instead, the main factor for these drives is the speed of sequential IO and bandwidth of the host bus adapter (HBA). Thus, you don't need SSDs for checkpoint files; you can place them on high performance spindles (e.g., SAS), as long as their sequential IO speed meets your requirements.
 
 The biggest factor in determining the speed requirement is your RTO [Recovery Time Objective] on server restart. During database recovery, all data in the memory-optimized tables needs to be read from disk, into memory. Database recovery happens at the sequential read speed of your IO subsystem; disk is the bottleneck.
 

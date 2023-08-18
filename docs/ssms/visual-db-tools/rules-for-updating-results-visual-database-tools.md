@@ -1,25 +1,20 @@
 ---
-description: "Rules for Updating Results (Visual Database Tools)"
 title: Rules for Updating Results
-ms.custom: seo-lt-2019
+description: "Rules for Updating Results (Visual Database Tools)"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
+ms.service: sql
+ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "View Designer, Results pane"
   - "updating query results"
   - "Query Designer [SQL Server], Results pane"
   - "Results pane"
-ms.assetid: de131ef0-ccbd-446f-9400-b93c7b8fa537
-author: markingmyname
-ms.author: maghan
-ms.reviewer: 
-
 ---
 # Rules for Updating Results (Visual Database Tools)
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server](../../includes/applies-to-version/sqlserver.md)]
 In many cases, you can update the result set displayed in the [Results Pane](../../ssms/visual-db-tools/results-pane-visual-database-tools.md). However, in some cases you cannot.  
   
 In general, in order to update results, the [Query and View Designer](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md) must have sufficient information to uniquely identify the row in the table. An example is if the query includes a primary key in the output list. In addition, you must have sufficient permission to update the database.  

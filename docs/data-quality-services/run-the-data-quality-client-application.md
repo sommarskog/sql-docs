@@ -1,22 +1,19 @@
 ---
-description: "Run the Data Quality Client Application"
 title: "Run the Data Quality Client Application"
-ms.date: "03/01/2017"
-ms.prod: sql
-ms.prod_service: "data-quality-services"
-ms.reviewer: ""
-ms.technology: data-quality-services
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.dqs.browseforservers.f1"
-  - "sql13.dqs.connecttoserver.f1"
-ms.assetid: 0b2aa202-7ab2-4c9d-b0f1-802588053a1e
+description: "Run the Data Quality Client Application"
 author: swinarko
 ms.author: sawinark
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: data-quality-services
+ms.topic: conceptual
+f1_keywords:
+  - "sql13.dqs.browseforservers.f1"
+  - "sql13.dqs.connecttoserver.f1"
 ---
 # Run the Data Quality Client Application
 
-[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI](../includes/applies-to-version/sqlserver.md)]
 
   Run [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)], and log on to a [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)].  
   

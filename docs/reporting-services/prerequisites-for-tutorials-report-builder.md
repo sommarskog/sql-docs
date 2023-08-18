@@ -1,15 +1,13 @@
 ---
-title: "Prerequisites for Tutorials (Report Builder) | Microsoft Docs"
+title: "Prerequisites for Tutorials (Report Builder)"
 description: Learn about the prerequisites that you must have in place to complete the Report Builder tutorials.
-ms.date: 05/30/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: reporting-services
-
-ms.topic: conceptual
-ms.assetid: 9b8346a6-f4f4-4ad3-bc98-8f2be342ef2d
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 05/30/2017
+ms.service: reporting-services
+ms.subservice: reporting-services
+ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 
 # Prerequisites for Tutorials (Report Builder)
@@ -28,7 +26,7 @@ You must have the following prerequisites to complete Report Builder tutorials:
   
     On a report server in SharePoint integrated mode, on the **Documents** tab, select **New Document**, and from the drop-down list, select **Report Builder Report**. For example, `https://<servername>/sites/mySite/reports`. The SharePoint administrator must enable the Report Builder Report feature for each document library.  
   
--   The URL to a [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] report server or a SharePoint site that is integrated with a [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] report server. You must have permission to save and view reports, shared data sources, shared datasets, report parts, and models. By default, the URL for a report server is `https://<servername>/reportserver`. By default, the URL for a SharePoint site is `https://<sitename>` or `https://<server>/site`.  
+-   The URL to a [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] report server or a SharePoint site that is integrated with a [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] report server. You must have permission to save and view reports, shared data sources, shared datasets, and models. By default, the URL for a report server is `https://<servername>/reportserver`. By default, the URL for a SharePoint site is `https://<sitename>` or `https://<server>/site`.  
   
 -   The name of a SQL Server instance and credentials sufficient for read-only access to any database. The dataset queries in the tutorials use literal data, but each query must be processed by a SQL Server instance to return the metadata that is required for a report dataset. For example, the following connection string specifies only a server: `data source=<servername>`. You must have read access to the default database that is assigned to you by the system administrator who grants you permission to access the server. You can also specify a database, as shown in the following connection string: `data source=<servername>;initial catalog=<database>`.  
   
@@ -42,4 +40,4 @@ The report server administrator must grant you the necessary permissions on the 
 
 [Report Builder tutorials](../reporting-services/report-builder-tutorials.md)  
 
-More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)
+More questions? [Try asking the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user)

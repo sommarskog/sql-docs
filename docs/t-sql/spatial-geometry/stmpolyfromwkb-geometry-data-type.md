@@ -1,26 +1,22 @@
 ---
+title: "STMPolyFromWKB (geometry Data Type)"
 description: "STMPolyFromWKB (geometry Data Type)"
-title: "STMPolyFromWKB (geometry Data Type) | Microsoft Docs"
-ms.custom: ""
+author: MladjoA
+ms.author: mlandzic
 ms.date: "08/03/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "STMPolyFromWKB (geometry Data Type)"
   - "STMPolyFromWKB_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "STMPolyFromWKB (geometry Data Type)"
-ms.assetid: cac25868-08ef-46fc-9c3d-a15e43794a7a
-author: MladjoA
-ms.author: mlandzic 
+dev_langs:
+  - "TSQL"
 ---
 # STMPolyFromWKB (geometry Data Type)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 Returns a **geometryMultiPolygon** instance from an Open Geospatial Consortium (OGC) Well-Known Binary (WKB) representation.
   
@@ -52,7 +48,7 @@ STMPolyFromWKB ( 'WKB_multipolygon' , SRID )
 ## Examples  
  The following example uses `STMPolyFromWKB()` to create a `geometry` instance:  
   
-```  
+```sql
 DECLARE @g geometry;   
 SET @g = geometry::STMPolyFromWKB(0x0106000000020000000103000000010000000400000000000000000014400000000000001440000000000000244000000000000014400000000000002440000000000000244000000000000014400000000000001440010300000001000000050000000000000000002440000000000000244000000000000059400000000000002440000000000000694000000000000069400000000000003E400000000000003E4000000000000024400000000000002440, 0);  
 SELECT @g.STAsText();  

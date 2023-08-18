@@ -4,17 +4,18 @@ titleSuffix: SQL Server Big Data Clusters
 description: Submit Spark jobs on SQL Server big data cluster in Azure Data Studio.
 author: jejiang
 ms.author: jejiang
-ms.reviewer: mikeray
-ms.metadata: seo-lt-2019
+ms.reviewer: wiassaf
 ms.date: 12/13/2019
+ms.service: sql
+ms.subservice: big-data-cluster
 ms.topic: conceptual
-ms.prod: sql
-ms.technology: big-data-cluster
 ---
 
 # Submit Spark jobs on [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] in Azure Data Studio
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
+
+[!INCLUDE[big-data-clusters-banner-retirement](../includes/bdc-banner-retirement.md)]
 
 One of the key scenarios for big data clusters is the ability to submit Spark jobs for SQL Server. The Spark job submission feature allows you to submit a local Jar or Py files with references to SQL Server 2019 big data cluster. It also enables you to execute a Jar or Py files, which are already located in the HDFS file system. 
 
@@ -46,7 +47,7 @@ There are several ways to open the Spark job submission dialog. The ways include
 
 - Use **Submit Spark Job** from the command palette by typing **Ctrl+Shift+P** (in Windows) and **Cmd+Shift+P** (in Mac).
 
-    ![Submit menu command palette in windows](./media/submit-spark-job/submit-spark-job-3.png)
+    ![Submit menu command palette in Windows](./media/submit-spark-job/submit-spark-job-3.png)
 
     ![Submit menu command palette in mac](./media/submit-spark-job/submit-spark-job-4.png)
   
@@ -73,4 +74,4 @@ After the Spark job is submitted, the Spark job submission and execution status 
 
 ## Next steps
 
-For more information on SQL Server big data cluster and related scenarios, see [What are SQL Server big data clusters?](big-data-cluster-overview.md)
+For more information on SQL Server big data cluster and related scenarios, see [Introducing [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](big-data-cluster-overview.md).

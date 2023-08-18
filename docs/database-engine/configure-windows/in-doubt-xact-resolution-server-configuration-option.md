@@ -1,22 +1,18 @@
 ---
-title: "in-doubt xact resolution Server Configuration Option | Microsoft Docs"
-description: 'Become familiar with the "in-doubt xact resolution" option. See how it determines the default outcome for in-doubt transactions in SQL Server.'
-ms.custom: ""
+title: "in-doubt xact resolution (server configuration option)"
+description: "Become familiar with the in-doubt xact resolution option. See how it determines the default outcome for in-doubt transactions in SQL Server."
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/02/2017"
-ms.prod: sql
-ms.prod_service: high-availability
-ms.reviewer: ""
-ms.technology: configuration
+ms.service: sql
+ms.subservice: configuration
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "distributed transactions [SQL Server], unresolved transactions"
   - "unresolved transactions"
   - "in-doubt xact resolution option"
-ms.assetid: 3426fd32-cad2-4f2f-8ca9-e0296cc12703
-author: markingmyname
-ms.author: maghan
 ---
-# in-doubt xact resolution Server Configuration Option
+# in-doubt xact resolution (server configuration option)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Use the **in-doubt xact resolution** option to control the default outcome of transactions that the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Distributed Transaction Coordinator (MS DTC) is unable to resolve. Inability to resolve transactions may be related to the MS DTC down time or an unknown transaction outcome at the time of recovery.  
@@ -72,7 +68,7 @@ GO
  The **in-doubt xact resolution** option is an advanced option. If you are using the **sp_configure** system stored procedure to change the setting, you can change **in-doubt xact resolution** only when **show advanced options** is set to 1. The setting takes effect immediately without a server restart.  
   
 > [!NOTE]
->  Consistent configuration of this option across all [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instances involved in any distributed transactions will help avoid data inconsistencies.  
+>  Consistent configuration of this option across all [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instances involved in any distributed transactions will help avoid data inconsistencies.  
   
 ## See Also  
  [RECONFIGURE &#40;Transact-SQL&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)   

@@ -1,30 +1,26 @@
 ---
-description: "sys.dm_exec_compute_node_status (Transact-SQL)"
-title: "sys.dm_exec_compute_node_status (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.dm_exec_compute_node_status (Transact-SQL)"
+description: sys.dm_exec_compute_node_status (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: 11/04/2019
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "DM_EXEC_COMPUTE_NODE_STATUS_TSQL"
   - "DM_EXEC_COMPUTE_NODE_STATUS"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "PolyBase,views"
   - "PolyBase"
   - "dm_exec_compute_node_status"
   - "sys.dm_exec_compute_node_status management view"
-ms.assetid: b606f91f-3a08-4a4f-bb57-32ae155b3738
-author: WilliamDAssafMSFT
-ms.author: wiassaf
-monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+dev_langs:
+  - "TSQL"
+monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_exec_compute_node_status (Transact-SQL)
-[!INCLUDE [sqlserver2016-asa-pdw](../../includes/applies-to-version/sqlserver2016-asa-pdw.md)]
+[!INCLUDE [sqlserver2016-asdbmi](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
 
   Holds additional information about the performance and status of all PolyBase nodes. Lists one row per node.  
   

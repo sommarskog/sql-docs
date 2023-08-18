@@ -1,19 +1,16 @@
 ---
 title: "Availability database is suspended for an availability group"
 description: "Identify possible causes for why a database in an Always On availability group might be suspended."
-ms.custom: "seodec18"
+author: MashaMSFT
+ms.author: mathoma
 ms.date: "05/17/2016"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: availability-groups
+ms.service: sql
+ms.subservice: availability-groups
 ms.topic: end-user-help
-f1_keywords: 
+f1_keywords:
   - "sql13.swb.agdashboard.drp1notsuspended.issues.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Availability Groups [SQL Server], policies"
-ms.assetid: 6baee70f-848c-4e86-b20d-78875c0f82cb
-author: cawrites
-ms.author: chadam
 ---
 # Availability database is suspended for an availability group
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

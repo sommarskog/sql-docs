@@ -1,15 +1,13 @@
 ---
-title: "Tutorial: Introducing Expressions | Microsoft Docs"
+title: "Tutorial: Introducing Expressions"
 description: Learn to use expressions with common functions and operators to create powerful and flexible Reporting Services paginated reports.
-ms.date: 09/16/2016
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: reporting-services
-
-ms.topic: conceptual
-ms.assetid: 2d05ef4c-5f91-48b2-8795-f0a201a0b3cc
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 09/16/2016
+ms.service: reporting-services
+ms.subservice: reporting-services
+ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 # Tutorial: Introducing Expressions
 In this [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)] tutorial, you use expressions with common functions and operators to create powerful and flexible [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] paginated reports. 
@@ -128,7 +126,7 @@ In this section, you create a table report, a data source, and a dataset. When y
   
 3.  In the **Name** box, type **ExpressionsDataSource**  
   
-4.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
+4.  Select **OK**.
   
 ### To update the default name of the dataset  
   
@@ -140,7 +138,7 @@ In this section, you create a table report, a data source, and a dataset. When y
   
 3.  In the **Name** box, type **Expressions**  
   
-4.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
+4.  Select **OK**.
   
 ## <a name="Concatenate"></a>3. Display First Initial and Last Name  
 In this section, you use the **Left** function and the **Concatenate** (**&**) operator in an expression that evaluates to a name that includes an initial and a last name. You can build the expression step by step or skip ahead in the procedure and copy/paste the expression from the tutorial into the **Expression** dialog box.   
@@ -183,7 +181,7 @@ In this section, you use the **Left** function and the **Concatenate** (**&**) o
     
     ![Screenshot showing how to add a LastName value to an expression.](../reporting-services/media/report-builder-expression-tutorial-complete-name-expression.png)
   
-11. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
+11. Select **OK**.
   
 12. Click **Run** to preview the report.  
 
@@ -346,7 +344,7 @@ In this section, you create the CountryRegion dataset and use the **Lookup** fun
   
     The query results are the country/region identifiers and names.  
   
-10. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
+10. Select **OK**.
   
 11. Click **OK** again to close the **Dataset Properties** dialog box.  
 
@@ -372,7 +370,7 @@ In this section, you create the CountryRegion dataset and use the **Lookup** fun
   
     The syntax of the **Lookup** function specifies a lookup between CountryRegionID in the Expressions dataset and ID in the CountryRegion dataset that returns the CountryRegion value from the CountryRegion dataset.  
   
-10. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
+10. Select **OK**.
   
 11. Click **Run** to preview the report.  
   
@@ -412,7 +410,7 @@ In this section, you add a column and then use the **Now** function or the `Exec
     
     ![Screenshot showing the complete expression for the date since last purchase.](../reporting-services/media/report-builder-expression-tutorial-date-since-last-purchase.png)
   
-17. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
+17. Select **OK**.
 
 11. Click **Run** to preview the report.  
   
@@ -439,7 +437,7 @@ Configuring the indicator and its states takes many steps. If you want, you can 
 
     ![Screenshot showing how to add an indicator.](../reporting-services/media/report-builder-expression-tutorial-select-indicator.png)
   
-3.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
+3.  Select **OK**.
   
 ### To configure the indicator  
   
@@ -463,7 +461,7 @@ Configuring the indicator and its states takes many steps. If you want, you can 
   
     The completed expression is: `=Round(Fields!YTDPurchase.Value - Avg(Fields!YTDPurchase.Value, "Expressions"))`  
   
-15. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
+15. Select **OK**.
   
 16. In the **States Measurement Unit** box, select **Numeric**.  
   
@@ -487,7 +485,7 @@ Configuring the indicator and its states takes many steps. If you want, you can 
   
     The completed expression: `=Round(Fields!YTDPurchase.Value - Avg(Fields!YTDPurchase.Value, "Expressions")) < 0`  
   
-30. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
+30. Select **OK**.
   
 31. In the text box for the **End** value, type **0**  
   
@@ -503,7 +501,7 @@ Configuring the indicator and its states takes many steps. If you want, you can 
   
 35. In the **Expression** dialog box, delete **100** and create the expression: `=Round(Fields!YTDPurchase.Value - Avg(Fields!YTDPurchase.Value, "Expressions")) >0`  
   
-36. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
+36. Select **OK**.
   
 37. Click **OK** again to close the **Indicator properties** dialog box.  
   
@@ -556,7 +554,7 @@ Create a parameter so report readers can specify the color to apply to alternati
 
     ![Screenshot of the Report Parameter Properties dialog box showing the Choose the available values for this parameter step.](../reporting-services/media/report-builder-expression-tutorial-parameter-available.png)
   
-19. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
+19. Select **OK**.
   
 ### To apply alternating colors to detail rows  
   
@@ -590,7 +588,7 @@ Create a parameter so report readers can specify the color to apply to alternati
     
     ![Screenshot showing the complete banded color expression.](../reporting-services/media/report-builder-expression-tutorial-banded-color-expressn.png)
   
-24. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
+24. Select **OK**.
   
 ### Run the Report  
   

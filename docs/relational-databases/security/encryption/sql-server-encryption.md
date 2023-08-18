@@ -1,24 +1,21 @@
 ---
-title: "SQL Server Encryption | Microsoft Docs"
+title: "SQL Server Encryption"
 description: Use these resources to understand how SQL Server uses encryption to enhance security for your databases.
-ms.custom: ""
-ms.date: "05/15/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
+author: jaszymas
+ms.author: jaszymas
 ms.reviewer: vanto
-ms.technology: security
+ms.date: "05/15/2017"
+ms.service: sql
+ms.subservice: security
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "encryption [SQL Server], about encryption"
   - "security [SQL Server], encryption"
   - "cryptography [SQL Server], about cryptography"
-ms.assetid: ead0150e-4943-4ad5-84c8-36f85c7278f4
-author: jaszymas
-ms.author: jaszymas
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SQL Server Encryption
-[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../../includes/applies-to-version/sql-asdb-asdbmi.md)]
   Encryption is the process of obfuscating data by the use of a key or password. This can make the data useless without the corresponding decryption key or password. Encryption does not solve access control problems. However, it enhances security by limiting data loss even if access controls are bypassed. For example, if the database host computer is misconfigured and a hacker obtains sensitive data, that stolen information might be useless if it is encrypted.  
   
 
@@ -81,5 +78,4 @@ You can use encryption in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-m
  [sys.key_encryptions &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-key-encryptions-transact-sql.md)   
  [SQL Server and Database Encryption Keys &#40;Database Engine&#41;](../../../relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine.md)   
  [Back Up and Restore Reporting Services Encryption Keys](../../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)     
- [Enable Encrypted Connections to the Database Engine](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)    
-  
+ [Enable Encrypted Connections to the Database Engine](../../../database-engine/configure-windows/configure-sql-server-encryption.md)

@@ -1,21 +1,18 @@
 ---
-title: "Turn on Reporting Services events for the SharePoint trace log (ULS) | Microsoft Docs"
+title: "Turn on Reporting Services events for the SharePoint trace log (ULS)"
 description: Learn how to turn on writing of Reporting Services events to the SharePoint ULS trace log for Reporting Services servers in SharePoint mode.
-ms.date: 05/30/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-server
-
-
-ms.topic: conceptual
-ms.assetid: 81110ef6-4289-405c-a931-e7e9f49e69ba
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 05/30/2017
+ms.service: reporting-services
+ms.subservice: report-server
+ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 
 # Turn on Reporting Services events for the SharePoint trace log (ULS)
 
-  Starting with [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] servers in SharePoint mode can write [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] events to the SharePoint Unified Logging Service (ULS) trace log. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] specific categories are available on the Monitoring page of SharePoint Central Administration.  
+  Starting with [!INCLUDE[sql2008r2](../../includes/sql2008r2-md.md)], [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] servers in SharePoint mode can write [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] events to the SharePoint Unified Logging Service (ULS) trace log. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] specific categories are available on the Monitoring page of SharePoint Central Administration.  
   
  In this Topic:  
   
@@ -34,7 +31,7 @@ ms.author: maggies
 -   [Trace Log Location](#bkmk_trace)  
   
 ##  <a name="bkmk_general"></a> General ULS Log Recommendations  
- The following table lists event categories and levels that are recommended for monitoring a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] environment.. When an event is logged, each entry includes the time the event was logged, the process name, and the thread ID.  
+ The following table lists event categories and levels that are recommended for monitoring a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] environment. When an event is logged, each entry includes the time the event was logged, the process name, and the thread ID.  
   
 |Category|Level|Description|  
 |--------------|-----------|-----------------|  
@@ -85,7 +82,7 @@ Get-SPDiagnosticConfig
   
 2.  **Category:** Events related to the server will have the characters "Report Server", at the beginning of the name. For example "Report Server Alerting Runtime" These events are also logged to the report server log files.  
   
-3.  **Category:** Events related to or communicated from a web front-end component do not contain "Report Server". For example "Service Application Proxy" Report Server Alerting Runtime". The WFE entries do contain a CorrelationID but the server entries do not.  
+3.  **Category:** Events related to or communicated from a web front-end component don't contain "Report Server". For example "Service Application Proxy" Report Server Alerting Runtime". The WFE entries do contain a CorrelationID but the server entries don't.  
   
 ##  <a name="bkmk_list"></a> List of SQL Server Reporting Services Events  
  The following table is a list of the events in the SQL Server Reporting Services Category:  
@@ -98,7 +95,7 @@ Get-SPDiagnosticConfig
 |Local Mode Rendering||  
 |SOAP Client Proxy||  
 |UI Pages||  
-|Power View|Log entries that were written to the **LogClientTraceEvents** API. These entries are sourced from client applications, including Power View, a feature of SQL Server Reporting Services Add-in.<br /><br /> All log entries from the LogClientTraceEvents API will be logged under the **Category** of "SQL Server Reporting Services" and the **Area** of "Power View".<br /><br /> The content of entries logged with the area of "Power View" is determined by the client application.|  
+|Power View|Log entries that were written to the **LogClientTraceEvents** API. These entries are sourced from client applications, including Power View, a feature of SQL Server Reporting Services Add-in.<br /><br /> All log entries from the LogClientTraceEvents API will be logged under the **Category** of "SQL Server Reporting Services" and the **Area** of "Power View".<br /><br /> The content of entries logged with the area of "Power View" is determined by the client application.<br />Power View support is no longer available after SQL Server 2017.|  
 |Report Server Alerting Runtime||  
 |Report Server App Domain Manager||  
 |Report Server Buffered Response||  
@@ -136,7 +133,7 @@ Get-SPDiagnosticConfig
 |Shared Service|Sample entries:<br /><br /> MediumUpdating ReportingWebServiceApplication<br /><br /> MediumGranting access to content databases.<br /><br /> MediumProvisioning instances for ReportingWebServiceApplication<br /><br /> MediumProcessing service account change for ReportingWebServiceApplication<br /><br /> MediumSetting database permissions.|  
   
 ##  <a name="bkmk_powershell"></a> View a Log file with PowerShell  
- ![PowerShell related content](/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell related content")You can use PowerShell to return a list of the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] related events from a ULS Log file. Type the following command from the SharePoint 2010 Management Shell to return a filtered list of rows from the file a ULS log file UESQL11SPOINT-20110606-1530.log, that contain "**sql server reporting services**":  
+ ![PowerShell related content](/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell related content")You can use PowerShell to return a list of the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] related events from a ULS Log file. Type the following command from the SharePoint 2010 Management Shell to return a filtered list of rows from the file a ULS log file UESQL11SPOINT-20110606-1530.log that contains "**sql server reporting services**":  
   
 ```  
 Get-content -path "C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\14\LOGS\UESQL11SPOINT-20110606-1530.log" | select-string "sql server reporting services"  

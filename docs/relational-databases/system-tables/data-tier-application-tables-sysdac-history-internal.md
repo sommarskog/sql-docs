@@ -1,23 +1,19 @@
 ---
-description: "Data-tier Application Tables - sysdac_history_internal"
-title: "sysdac_history_internal (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sysdac_history_internal (Transact-SQL)"
+description: Data-tier Application Tables - sysdac_history_internal
+author: VanMSFT
+ms.author: vanto
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sysdac_history_internal"
   - "sysdac_history_internal_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sysdac_history_internal"
-ms.assetid: 774a1678-0b27-42be-8adc-a6d7a4a56510
-author: cawrites
-ms.author: chadam
+dev_langs:
+  - "TSQL"
 ---
 # Data-tier Application Tables - sysdac_history_internal
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -68,7 +64,7 @@ WHERE instance_id NOT IN
  Deleting rows for active DACs does not impact DAC operations; the only impact is that you will not be able to report the full history for the DAC.  
   
 > [!NOTE]  
->  Currently, there is no mechanism for deleting **sysdac_history_internal** rows on [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+>  Currently, there is no mechanism for deleting **sysdac_history_internal** rows on [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].  
   
 ## Permissions  
  Requires membership in the sysadmin fixed server role. Read-only access to this view is available to all users with permissions to connect to the master database.  

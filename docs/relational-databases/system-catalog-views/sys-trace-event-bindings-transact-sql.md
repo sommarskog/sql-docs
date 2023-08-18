@@ -1,28 +1,24 @@
 ---
-description: "sys.trace_event_bindings (Transact-SQL)"
-title: "sys.trace_event_bindings (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.trace_event_bindings (Transact-SQL)"
+description: sys.trace_event_bindings (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "06/10/2016"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.trace_event_bindings_TSQL"
   - "trace_event_bindings"
   - "sys.trace_event_bindings"
   - "trace_event_bindings_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.trace_event_bindings catalog view"
-ms.assetid: 22f534e1-4ed6-4b3e-9ead-1d1001a1b0f5
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+dev_langs:
+  - "TSQL"
 ---
 # sys.trace_event_bindings (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   The **sys.trace_event_bindings** catalog view contains a list of all possible usage combinations of events and columns. For each event listed in the **trace_event_id** column, all available columns are listed in the **trace_column_id** column. Not all available columns are populated each time a given event occurs. These values do not change for a given version of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
   

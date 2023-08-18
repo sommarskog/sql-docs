@@ -1,14 +1,13 @@
 ---
 title: Install packages with R tools
 description: Learn how to use standard R tools to install new R packages to an instance of SQL Server Machine Learning Services or SQL Server R Services.
-ms.prod: sql
-ms.technology: machine-learning-services
-
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: 11/20/2019
+ms.service: sql
+ms.subservice: machine-learning-services
 ms.topic: how-to
-author: garyericson
-ms.author: garye
-
+ms.custom: intro-installation
 monikerRange: "=sql-server-2016||=sql-server-2017"
 ---
 

@@ -1,24 +1,21 @@
 ---
-title: "ObjectType Trace Event Column | Microsoft Docs"
+title: "ObjectType Trace Event Column"
 description: Refer to the possible values of the Object Type trace event column, which is used in a variety of trace events in SQL Server.
-ms.custom: ""
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: supportability
+ms.service: sql
+ms.subservice: supportability
 ms.topic: reference
-helpviewer_keywords: 
+helpviewer_keywords:
   - "SQL Server event classes, Object Type column values"
   - "events [SQL Server], Object Type column values"
   - "event classes [SQL Server], Object Type column values"
   - "Object Type column values [SQL Server]"
-ms.assetid: 42f85c50-34c9-49ca-955f-af9595e2707f
-author: "stevestein"
-ms.author: "sstein"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # ObjectType Trace Event Column
-[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
   The Object Type trace event column is used in a variety of trace events. This topic describes the possible values of this column and their associated definitions.  
   
 ## Object Type Column Values  

@@ -1,14 +1,13 @@
 ---
-description: "CREATE COLUMN MASTER KEY (Transact-SQL)"
-title: "CREATE COLUMN MASTER KEY (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "CREATE COLUMN MASTER KEY (Transact-SQL)"
+description: CREATE COLUMN MASTER KEY (Transact-SQL)
+author: jaszymas
+ms.author: jaszymas
 ms.date: "10/15/2019"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "SQL13.SWB.NEWCOLUMNMASTERKEYDEF.GENERAL.F1"
   - "SQL13.SWB.COLUMNMASTERKEYDEF.GENERAL.F1"
   - "CREATE COLUMN MASTER KEY"
@@ -17,16 +16,13 @@ f1_keywords:
   - "COLUMN_MASTER_KEY_TSQL"
   - "SQL13.SWB.NEWCOLUMNMASTERKEY.GENERAL.F1"
   - "SQL13.SWB.COLUMNMASTERKEY.GENERAL.F1"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "column master key definition"
   - "column master key, create"
   - "CREATE COLUMN MASTER KEY statement"
   - "Always Encrypted, create column master key"
-ms.assetid: f8926b95-e146-4e3f-b56b-add0c0d0a30e
-author: jaszymas
-ms.author: jaszymas
+dev_langs:
+  - "TSQL"
 ---
 # CREATE COLUMN MASTER KEY (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
@@ -34,7 +30,7 @@ ms.author: jaszymas
 
 Creates a column master key metadata object in a database. A column master key metadata entry represents a key, stored in an external key store. The key protects (encrypts) column encryption keys when you're using [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md) or [Always Encrypted with secure enclaves](../../relational-databases/security/encryption/always-encrypted-enclaves.md). Multiple column master keys allow for periodic key rotation to enhance security. Create a column master key in a key store and its related metadata object in the database by using the Object Explorer in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or PowerShell. For details, see [Overview of Key Management for Always Encrypted](../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md).  
   
-![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
  
 
 > [!IMPORTANT]

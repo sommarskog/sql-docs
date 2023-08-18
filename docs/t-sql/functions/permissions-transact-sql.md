@@ -1,19 +1,16 @@
 ---
+title: "PERMISSIONS (Transact-SQL)"
 description: "PERMISSIONS (Transact-SQL)"
-title: "PERMISSIONS (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: VanMSFT
+ms.author: vanto
 ms.date: "03/06/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "PERMISSIONS_TSQL"
   - "PERMISSIONS"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "permissions [SQL Server], verifying"
   - "current permission status"
   - "users [SQL Server], permissions status"
@@ -22,18 +19,18 @@ helpviewer_keywords:
   - "verifying permission status"
   - "testing permissions"
   - "PERMISSIONS function"
-ms.assetid: 81625a56-b160-4424-91c5-1ce8b259a8e6
-author: VanMSFT
-ms.author: vanto
+dev_langs:
+  - "TSQL"
 ---
 # PERMISSIONS (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Returns a value containing a bitmap that indicates the statement, object, or column permissions of the current user.  
   
- **Important** [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use [fn_my_permissions](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md) and [Has_Perms_By_Name](../../t-sql/functions/has-perms-by-name-transact-sql.md) instead. Continued use of the PERMISSIONS function may result in slower performance.  
+ > [!IMPORTANT]  
+ > [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use [fn_my_permissions](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md) and [Has_Perms_By_Name](../../t-sql/functions/has-perms-by-name-transact-sql.md) instead. Continued use of the PERMISSIONS function may result in slower performance.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -119,20 +116,20 @@ ELSE
 ```  
   
 ### B. Using the PERMISSIONS function with object permissions  
- The following example determines whether the current user can insert a row of data into the `Address` table in the `AdventureWorks2012` database.  
+ The following example determines whether the current user can insert a row of data into the `Address` table in the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database.  
   
 ```sql  
-IF PERMISSIONS(OBJECT_ID('AdventureWorks2012.Person.Address','U'))&8=8   
+IF PERMISSIONS(OBJECT_ID('AdventureWorks2022.Person.Address','U'))&8=8   
    PRINT 'The current user can insert data into Person.Address.'  
 ELSE  
    PRINT 'ERROR: The current user cannot insert data into Person.Address.';  
 ```  
   
 ### C. Using the PERMISSIONS function with grantable permissions  
- The following example determines whether the current user can grant the INSERT permission on the `Address` table in the `AdventureWorks2012` database to another user.  
+ The following example determines whether the current user can grant the INSERT permission on the `Address` table in the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database to another user.  
   
 ```sql  
-IF PERMISSIONS(OBJECT_ID('AdventureWorks2012.Person.Address','U'))&0x80000=0x80000  
+IF PERMISSIONS(OBJECT_ID('AdventureWorks2022.Person.Address','U'))&0x80000=0x80000  
    PRINT 'INSERT on Person.Address is grantable.'  
 ELSE  
    PRINT 'You may not GRANT INSERT permissions on Person.Address.';  

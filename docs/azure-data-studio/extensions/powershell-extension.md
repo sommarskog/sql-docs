@@ -1,14 +1,12 @@
 ---
 title: PowerShell extension
 description: Learn how to install and use the Azure Data Studio PowerShell extension, which provides rich PowerShell editor support for writing and debugging scripts.
-ms.prod: azure-data-studio
-ms.technology: azure-data-studio
-ms.topic: conceptual
 author: "SQLvariant"
 ms.author: "aanelson"
-ms.reviewer: "alayu, maghan, sstein"
-ms.custom: 
+ms.reviewer: "alayu, maghan"
 ms.date: "04/19/2019"
+ms.service: azure-data-studio
+ms.topic: conceptual
 ---
 
 # PowerShell Editor Support for Azure Data Studio
@@ -23,7 +21,7 @@ Now you can write and debug PowerShell scripts using the excellent IDE-like inte
 - Syntax highlighting
 - Code snippets
 - IntelliSense for cmdlets and more
-- Rule-based analysis provided by [PowerShell Script Analyzer](http://github.com/PowerShell/PSScriptAnalyzer)
+- Rule-based analysis provided by [PowerShell Script Analyzer](https://github.com/PowerShell/PSScriptAnalyzer)
 - Go to Definition of cmdlets and variables
 - Find References of cmdlets and variables
 - Document and workspace symbol discovery
@@ -71,19 +69,19 @@ how to use them.
 This folder can be found at the following path:
 
 ```powershell
-$HOME/.azuredatastudio/extensions/ms-vscode.PowerShell-<version>/examples
+$HOME/.azuredatastudio/extensions/microsoft.powershell-<version>/examples
 ```
 
 or if you're using the preview version of the extension
 
  ```powershell
-$HOME/.azuredatastudio/extensions/ms-vscode.powershell-preview-<version>/examples
+$HOME/.azuredatastudio/extensions/microsoft.powershell-preview-<version>/examples
 ```
 
 To open/view the extension's examples in Azure Data Studio, run the following code from your PowerShell command prompt:
 
 ```powershell
-azuredatastudio (Get-ChildItem $Home\.azuredatastudio\extensions\ms-vscode.PowerShell-*\examples)[-1]
+azuredatastudio (Get-ChildItem $Home\.azuredatastudio\extensions\microsoft.powershell-*\examples)[-1]
 ```
 
 ### Creating and opening files
@@ -178,7 +176,7 @@ Here is a sample of what that output will look like:
 Name                 Status           Size     Space  Recovery Compat. Owner
                                             Available  Model     Level
 ----                 ------           ---- ---------- -------- ------- -----
-AdventureWorks2017   Normal      336.00 MB   57.01 MB Simple       140 sa
+AdventureWorks2022   Normal      336.00 MB   57.01 MB Simple       140 sa
 master               Normal        6.00 MB  368.00 KB Simple       140 sa
 model                Normal       16.00 MB    5.53 MB Full         140 sa
 msdb                 Normal       48.44 MB    1.70 MB Simple       140 sa
@@ -223,7 +221,7 @@ Here is a sample of what that output will look like:
 Name                 Status           Size  Space     Recovery Compat. Owner
                                             Available Model    Level
 ----                 ------           ---- ---------- -------- ------- -----
-AdventureWorks2017   Normal      336.00 MB   57.01 MB Simple       140 sa
+AdventureWorks2022   Normal      336.00 MB   57.01 MB Simple       140 sa
 master               Normal        6.00 MB  368.00 KB Simple       140 sa
 model                Normal       16.00 MB    5.53 MB Full         140 sa
 msdb                 Normal       48.44 MB    1.70 MB Simple       140 sa

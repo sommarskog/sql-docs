@@ -1,23 +1,19 @@
 ---
+title: "CollectionAggregate (geometry Data Type)"
 description: "CollectionAggregate (geometry Data Type)"
-title: "CollectionAggregate (geometry Data Type) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/03/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
-ms.topic: reference
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "CollectionAggregate method (geometry)"
-ms.assetid: b7c85d59-c841-4b7f-9d46-8b4b7f2a3afe
 author: MladjoA
-ms.author: mlandzic 
+ms.author: mlandzic
+ms.date: "08/03/2017"
+ms.service: sql
+ms.subservice: t-sql
+ms.topic: reference
+helpviewer_keywords:
+  - "CollectionAggregate method (geometry)"
+dev_langs:
+  - "TSQL"
 ---
 # CollectionAggregate (geometry Data Type)
-[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 Creates a **GeometryCollection** instance from a set of **geometry** types.
   
@@ -51,7 +47,7 @@ CollectionAggregate ( geometry_operand )
 ## Examples  
  The following example returns a `GeometryCollection` instance that contains a `CurvePolygon` and a `Polygon`.  
   
- ```
+ ```sql
  -- Setup table variable for CollectionAggregate example  
  DECLARE @Geom TABLE  
  (  

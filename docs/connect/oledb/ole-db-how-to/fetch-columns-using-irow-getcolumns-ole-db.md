@@ -1,17 +1,14 @@
 ---
-title: "Fetch columns using IRow::GetColumns (OLE DB driver) | Microsoft Docs"
-description: Learn to fetch columns using the IRow::GetColumns method in OLE DB Driver for SQL Server. This example gets one column at a time from a row.
-ms.custom: ""
-ms.date: "06/14/2018"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "IRow interface"
+title: "Fetch columns using IRow::GetColumns (OLE DB driver)"
+description: "Learn to fetch columns using the IRow::GetColumns method in OLE DB Driver for SQL Server. This example gets one column at a time from a row."
 author: David-Engel
-ms.author: v-daenge
+ms.author: v-davidengel
+ms.date: "06/14/2018"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: "reference"
+helpviewer_keywords:
+  - "IRow interface"
 ---
 # Fetch Columns Using IRow::GetColumns (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -48,7 +45,7 @@ ms.author: v-daenge
   
  In the DBCOLUMNACCESS structure, if pData is NULL and cbMaxLen is 0, the call to IRow->GetColumns returns only the actual column length. In this case IRow->GetColumns can be called again on the same column to retrieve the actual data. This sample is not supported on IA64.  
   
- This sample requires the AdventureWorks sample database, which you can download from the [Microsoft SQL Server Samples and Community Projects](https://go.microsoft.com/fwlink/?LinkID=85384) home page.  
+ [!INCLUDE [article-uses-adventureworks](../../../includes/article-uses-adventureworks.md)]
   
  The first ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) code listing creates a table used by the sample.  
   
@@ -57,7 +54,7 @@ ms.author: v-daenge
  The third ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) code listing deletes the table used by the sample.  
   
 ```  
-use AdventureWorks  
+use AdventureWorks2022;
 go  
   
 if exists (select name from sysobjects where name = 'MyTable')  
@@ -506,7 +503,7 @@ int InitializeAndEstablishConnection() {
 ```  
   
 ```  
-use AdventureWorks  
+use AdventureWorks2022;
 go  
   
 if exists (select name from sysobjects where name = 'MyTable')  

@@ -1,39 +1,34 @@
 ---
+title: "sys.fn_hadr_backup_is_preferred_replica  (Transact-SQL)"
 description: "sys.fn_hadr_backup_is_preferred_replica  (Transact-SQL)"
-title: "sys.fn_hadr_backup_is_preferred_replica  (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "03/16/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.fn_hadr_backup_is_preferred_replica_TSQL"
   - "sys.fn_hadr_backup_is_preferred_replica"
   - "fn_hadr_backup_is_preferred_replica_TSQL"
   - "fn_hadr_backup_is_preferred_replica"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "backup on secondary replicas"
   - "active secondary replicas [SQL Server], backup on secondary replicas"
   - "sys.fn_hadr_backup_is_preferred_replica function"
-ms.assetid: 61b9be77-e2f6-4da1-b2ae-a62cbe226145
-author: MikeRayMSFT
-ms.author: mikeray
+dev_langs:
+  - "TSQL"
 ---
 # sys.fn_hadr_backup_is_preferred_replica  (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Used to determine if the current replica is the preferred backup replica.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 sys.fn_hadr_backup_is_preferred_replica ( 'dbname' )  
 ```  
   
@@ -47,13 +42,14 @@ sys.fn_hadr_backup_is_preferred_replica ( 'dbname' )
 ## Remarks  
  Use this function in a backup script to determine if the current database is on the replica that is preferred for backups. You can run a script on every availability replica. Each of these jobs looks at the same data to determine which job should run, so only one of the scheduled jobs actually proceeds to the backup stage. Sample code could be similar to the following.  
   
-```  
+```sql  
 If sys.fn_hadr_backup_is_preferred_replica( @dbname ) <> 1   
 BEGIN  
--- If this is not the preferred replica, exit (probably without error).  
+-- If this is not the preferred replica, exit (probably without error).
+      Select 'This is not the preferred replica, exiting with success';  
 END  
 -- If this is the preferred replica, continue to do the backup.  
-  
+  /* actual backup command goes here */
 ```  
   
 ## Examples  
@@ -61,7 +57,7 @@ END
 ### A. Using sys.fn_hadr_backup_is_preferred_replica  
  The following example returns 1 if the current database is the preferred backup replica.  
   
-```  
+```sql
 SELECT sys.fn_hadr_backup_is_preferred_replica ('TestDB');  
 GO  
 ```  

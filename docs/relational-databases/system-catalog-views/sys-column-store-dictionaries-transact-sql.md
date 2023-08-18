@@ -1,28 +1,24 @@
 ---
-description: "sys.column_store_dictionaries (Transact-SQL)"
-title: "sys.column_store_dictionaries (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.column_store_dictionaries (Transact-SQL)"
+description: sys.column_store_dictionaries (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "06/10/2016"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.column_store_dictionaries_TSQL"
   - "column_store_dictionaries"
   - "column_store_dictionaries_TSQL"
   - "sys.column_store_dictionaries"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.column_store_dictionaries catalog view"
-ms.assetid: 56efd563-2f72-4caf-94e3-8a182385c173
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+dev_langs:
+  - "TSQL"
 ---
 # sys.column_store_dictionaries (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE[SQL Server 2012 Azure SQL Managed Instance](../../includes/applies-to-version/sqlserver2012-asdbmi.md)]
 
   Contains a row for each dictionary used in xVelocity memory optimized columnstore indexes. Dictionaries are used to encode some, but not all data types, therefore not all columns in a columnstore index have dictionaries. A dictionary can exist as a primary dictionary (for all segments) and possibly for other secondary dictionaries used for a subset of the column's segments.  
   

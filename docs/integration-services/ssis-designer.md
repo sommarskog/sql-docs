@@ -1,30 +1,26 @@
 ---
+title: "SSIS Designer"
 description: "SSIS Designer"
-title: "SSIS Designer | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/31/2016"
-ms.prod: sql
-ms.prod_service: "integration-services"
-ms.reviewer: ""
-ms.technology: integration-services
+author: chugugrace
+ms.author: chugu
+ms.date: "09/01/2016"
+ms.service: sql
+ms.subservice: integration-services
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.dts.designer.controlflowwindow.f1"
   - "sql13.dts.designer.dataflowwindow.f1"
   - "sql13.dts.designer.eventhandlerwindow.f1"
   - "sql13.dts.designer.treeview.f1"
   - "sql13.dts.designer.progress.f1"
   - "sql13.dts.designer.connectionstray.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "SQL Server Integration Services, SSIS Designer"
   - "Business Intelligence Development Studio, Integration Services in"
   - "tools [Integration Services], SSIS Designer"
   - "SSIS, SSIS Designer"
   - "SSIS Designer, about SSIS Designer"
   - "Integration Services, SSIS Designer"
-ms.assetid: 006d68ea-1b5c-4c1e-8079-3910288e012c
-author: chugugrace
-ms.author: chugu
 ---
 # SSIS Designer
 
@@ -49,7 +45,7 @@ ms.author: chugu
   
  ![Screenshot of SSIS Designer and Toolbox](../integration-services/media/denali-designerandtoolbox.gif "Screenshot of SSIS Designer and Toolbox")  
   
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] includes additional dialog boxes and windows for adding functionality to packages, and [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] provides windows and dialog boxes for configuring the development environment and working with packages. For more information, see [Integration Services User Interface](../integration-services/integration-services-user-interface.md).  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] includes additional dialog boxes and windows for adding functionality to packages, and [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] provides dialog boxes and windows for configuring the development environment and working with packages. For more information, see [Integration Services User Interface](../integration-services/integration-services-user-interface.md).  
   
  [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer has no dependency on the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] service, the service that manages and monitors packages, and it is not required that the service be running to create or modify packages in [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer. However, if you stop the service while [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer is open, you can no longer open the dialog boxes that [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer provides and you may receive the error message "RPC server is unavailable." To reset [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer and continue working with the package, you must close the designer, exit [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], and then reopen [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] project, and the package.  
   
@@ -82,7 +78,8 @@ ms.author: chugu
   
  For more information about parameters, see [Integration Services (SSIS) Parameters](integration-services-ssis-package-and-project-parameters.md).  
   
-> **IMPORTANT!!**  Parameters are available only to projects developed for the project deployment model. Therefore, you will see the Parameters tab only for packages that are part of a project configured to use the project deployment model.  
+> [!IMPORTANT]  
+> Parameters are available only to projects developed for the project deployment model. Therefore, you will see the Parameters tab only for packages that are part of a project configured to use the project deployment model.  
   
 ### Event Handlers Tab  
  You construct the events in a package on the design surface of the **Event Handlers** tab. On the **Event Handlers** tab, you select the package or package object that you want to create an event handler for, and then select the event to associate with the event handler. An event handler has a control flow and optional data flows.  
@@ -97,7 +94,8 @@ ms.author: chugu
 ### Progress/Execution Result Tab  
  While a package is running, the **Progress** tab shows the execution progress of the package. After the package has finished running, the execution results remain available on the **Execution Result** tab.  
   
-> **NOTE:** To enable or disable the display of messages on the **Progress** tab, toggle the **Debug Progress Reporting** option on the **SSIS** menu.  
+> [!NOTE]  
+> To enable or disable the display of messages on the **Progress** tab, toggle the **Debug Progress Reporting** option on the **SSIS** menu.  
   
 #### Connection Managers Area  
  You add and modify the connection managers that a package uses in the **Connection Managers** area. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] includes connection managers to connect to a variety of data sources, such as text files, OLE DB databases, and .NET providers.  

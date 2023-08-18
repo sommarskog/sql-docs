@@ -1,29 +1,27 @@
 ---
-description: "sys.external_languages (Transact-SQL) - SQL Server"
-title: "sys.external_languages (Transact-SQL) - SQL Server | Microsoft Docs"
-ms.custom: ""
+title: "sys.external_languages (Transact-SQL) - SQL Server"
+description: sys.external_languages (Transact-SQL) - SQL Server
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: rothja
 ms.date: 05/22/2019
-ms.prod: sql
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "external_languages"
   - "external_languages_TSQL"
   - "sys.external_languages"
   - "sys.external_languages_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.external_languages catalog view"
-author: MikeRayMSFT
-ms.author: mikeray
-ms.reviewer: dphansen
-manager: cgronlun
+dev_langs:
+  - "TSQL"
 monikerRange: ">=sql-server-ver15"
 ---
 
 # sys.external_languages (Transact-SQL)
-[!INCLUDE[SQL Server 2019](../../includes/applies-to-version/sqlserver2019.md)]
+[!INCLUDE[SQL Server 2019 Azure SQL Managed Instance](../../includes/applies-to-version/sqlserver2019-asdbmi.md)]
 
 This catalog view provides a list of the external languages in the database. **R** and **Python** are reserved names and no external language can be created with those specific names.
 

@@ -1,23 +1,19 @@
 ---
-description: "Assign a Job to a Job Category"
 title: "Assign a Job to a Job Category"
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
+description: "Assign a Job to a Job Category"
+author: markingmyname
+ms.author: maghan
+ms.date: 06/03/2020
+ms.service: sql
+ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "jobs [SQL Server Agent], assigning"
   - "SQL Server Agent jobs, categories"
   - "jobs [SQL Server Agent], categories"
   - "categories [SQL Server Agent jobs]"
   - "SQL Server Agent jobs, assigning"
   - "assigning job to category"
-ms.assetid: a9ea65a2-1d73-4582-a335-63adeb450cb6
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
-ms.custom: seo-lt-2019
-ms.date: 06/03/2020
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
 ---
 
@@ -28,7 +24,7 @@ monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
 > [!IMPORTANT]  
 > On [Azure SQL Managed Instance](/azure/sql-database/sql-database-managed-instance), most, but not all SQL Server Agent features are currently supported. See [Azure SQL Managed Instance T-SQL differences from SQL Server](/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) for details.
 
-This topic describes how to assign [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent jobs to job categories in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)] or SQL Server Management Objects.  
+This topic describes how to assign [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent jobs to job categories in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] by using SQL Server Management Studio, [!INCLUDE[tsql](../../includes/tsql-md.md)] or SQL Server Management Objects.  
   
 Job categories help you organize your jobs for easy filtering and grouping. For example, you can organize all your database backup jobs in the Database Maintenance category. You can assign jobs to built-in job categories, or you can create a user-defined job category and then assign jobs to that.  
 
@@ -57,7 +53,7 @@ For detailed information, see [Implement SQL Server Agent Security](../../ssms/a
   
 #### To assign a job to a job category  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  On the Standard bar, click **New Query**.  
   

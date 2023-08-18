@@ -1,24 +1,20 @@
 ---
+title: "STRING_ESCAPE (Transact-SQL)"
 description: "STRING_ESCAPE (Transact-SQL)"
-title: "STRING_ESCAPE (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "02/25/2016"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "STRING_ESCAPE"
   - "STRING_ESCAPE_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "STRING_ESCAPE function"
-ms.assetid: 2163bc7a-3816-4304-9c40-8954804f5465
-author: julieMSFT
-ms.author: jrasnick
-monikerRange: "= azuresqldb-current||>= sql-server-2016||>= sql-server-linux-2017"
+dev_langs:
+  - "TSQL"
+monikerRange: "= azuresqldb-current || >= sql-server-2016 || >= sql-server-linux-2017"
 ---
 # STRING_ESCAPE (Transact-SQL)
 
@@ -27,7 +23,7 @@ monikerRange: "= azuresqldb-current||>= sql-server-2016||>= sql-server-linux-201
 
 Escapes special characters in texts and returns text with escaped characters. **STRING_ESCAPE** is a deterministic function, introduced in SQL Server 2016. 
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -38,7 +34,7 @@ STRING_ESCAPE( text , type )
 ## Arguments
 
  *text*  
- Is a **nvarchar**[expression](../../t-sql/language-elements/expressions-transact-sql.md) expression representing the object that should be escaped.  
+ Is a **nvarchar** [expression](../../t-sql/language-elements/expressions-transact-sql.md) representing the object that should be escaped.  
   
  *type*  
  Escaping rules that will be applied. Currently the value supported is `'json'`.  

@@ -1,13 +1,12 @@
 ---
+title: "Create DML Triggers"
 description: "Create DML Triggers"
-title: "Create DML Triggers | Microsoft Docs"
-ms.custom: ""
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "09/01/2017"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology:
+ms.service: sql
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "encryption [SQL Server], DML triggers"
   - "deferred name resolution, DML triggers"
   - "WITH ENCRYPTION clause"
@@ -16,13 +15,10 @@ helpviewer_keywords:
   - "DML triggers, programming"
   - "testing column changes"
   - "results [SQL Server], DML triggers"
-ms.assetid: b2b52258-642b-462e-8e0f-18c09d2eccf4
-author: "rothja"
-ms.author: "jroth"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Create DML Triggers
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
   This topic describes how to create a [!INCLUDE[tsql](../../includes/tsql-md.md)] DML trigger by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] and by using the [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE TRIGGER statement.  
   
 ##  <a name="Top"></a> Before You Begin  
@@ -107,7 +103,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
     ```sql  
     -- Trigger valid for multirow and single row inserts  
     -- and optimal for single row inserts.  
-    USE AdventureWorks2012;  
+    USE AdventureWorks2022;  
     GO  
     CREATE TRIGGER NewPODetail3  
     ON Purchasing.PurchaseOrderDetail  

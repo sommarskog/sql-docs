@@ -1,37 +1,33 @@
 ---
+title: "@@IDLE (Transact-SQL)"
 description: "&#x40;&#x40;IDLE (Transact-SQL)"
-title: "@@IDLE (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: markingmyname
+ms.author: maghan
 ms.date: "09/18/2017"
-ms.prod: sql
-ms.prod_service: "sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "@@IDLE_TSQL"
   - "@@IDLE"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "time [SQL Server], idle"
   - "ticks [SQL Server]"
   - "@@IDLE function"
   - "status information [SQL Server], idle time"
   - "idle time [SQL Server]"
-ms.assetid: 8f49c62a-8da5-4afd-a5eb-4df8ef8be755
-author: cawrites
-ms.author: chadam
+dev_langs:
+  - "TSQL"
 ---
 # &#x40;&#x40;IDLE (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Returns the time that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] has been idle since it was last started. The result is in CPU time increments, or "ticks," and is cumulative for all CPUs, so it may exceed the actual elapsed time. Multiply by @@TIMETICKS to convert to microseconds.  
   
 > [!NOTE]  
 >  If the time returned in @@CPU_BUSY, or @@IO_BUSY exceeds approximately 49 days of cumulative CPU time, you receive an arithmetic overflow warning. In that case, the value of @@CPU_BUSY, @@IO_BUSY and @@IDLE variables are not accurate.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

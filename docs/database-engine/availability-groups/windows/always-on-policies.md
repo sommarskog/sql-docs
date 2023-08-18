@@ -1,15 +1,12 @@
 ---
 title: "Use group policies for availability group health"
 description: "Learn how to view the group system policies that the Always On dashboard uses to provide information about the availability group health."
-ms.custom: seo-lt-2019
+author: MashaMSFT
+ms.author: mathoma
 ms.date: "06/13/2017"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: availability-groups
+ms.service: sql
+ms.subservice: availability-groups
 ms.topic: how-to
-ms.assetid: 26bf8f71-c2b8-45ef-b3a3-372b96c9e6e3
-author: rothja
-ms.author: jroth
 ---
 # Evaluate health of the Always On availability group using group policies
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

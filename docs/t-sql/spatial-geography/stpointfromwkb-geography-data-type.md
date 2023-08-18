@@ -1,26 +1,22 @@
 ---
+title: "STPointFromWKB (geography Data Type)"
 description: "STPointFromWKB (geography Data Type)"
-title: "STPointFromWKB (geography Data Type) | Microsoft Docs"
-ms.custom: ""
+author: MladjoA
+ms.author: mlandzic
 ms.date: "07/30/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "STPointFromWKB_TSQL"
   - "STPointFromWKB (geography Data Type)"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "STPointFromWKB method"
-ms.assetid: b3b4e3bb-47bc-4621-99c4-c97aa60cdf8b
-author: MladjoA
-ms.author: mlandzic 
+dev_langs:
+  - "TSQL"
 ---
 # STPointFromWKB (geography Data Type)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 Returns a **geographyPoint** instance from an Open Geospatial Consortium (OGC) Well-Known Binary (WKB) representation.
   
@@ -53,7 +49,7 @@ STPointFromWKB ( 'WKB_point' , SRID )
 ## Examples  
  The following example uses `STPointFromWKB()` to create a `geography` instance.  
   
-```  
+```sql
 DECLARE @g geography;  
 SET @g = geography::STPointFromWKB(0x010100000017D9CEF753D347407593180456965EC0, 4326);  
 SELECT @g.ToString();  

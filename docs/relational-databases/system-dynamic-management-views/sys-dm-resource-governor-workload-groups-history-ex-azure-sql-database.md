@@ -1,24 +1,22 @@
 ---
-description: "sys.dm_resource_governor_workload_groups_history_ex (Azure SQL Database)"
-title: "sys.dm_resource_governor_workload_groups_history_ex (Azure SQL Database) | Microsoft Docs"
-ms.custom: ""
+title: "sys.dm_resource_governor_workload_groups_history_ex (Azure SQL Database)"
+description: sys.dm_resource_governor_workload_groups_history_ex (Azure SQL Database)
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "01/05/2021"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.dm_resource_governor_workload_groups_history_ex_TSQL"
   - "sys.dm_resource_governor_workload_groups_history_ex"
   - "dm_resource_governor_workload_groups_history_ex"
   - "dm_resource_governor_workload_groups_history_ex_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Availability Groups [SQL Server], monitoring"
   - "sys.dm_resource_governor_workload_groups_history_ex dynamic management view"
-author: joesackmsft
-ms.author: josack
+dev_langs:
+  - "TSQL"
 ---
 # sys.dm_resource_governor_workload_groups_history_ex (Azure SQL Database)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -68,7 +66,9 @@ Each row represents a periodic snapshot of workload group statistics in Azure SQ
 |**max_log_rate_kb**| bigint |Maximum log rate (kilo-bytes per sec) at resource group level.|
 |**max_session**| int |Session limit for the group.|
 |**max_worker**| int |Worker limit for the group.|
-|||
+|**active_outbound_connection_worker_count**|int|Total outbound connection workers in current snapshot.|
+|**max_outbound_connection_worker**|int|Outbound connection worker limit for the group.|
+|**max_outbound_connection_worker_percent**|decimal(5,2)|Maximum concurrent outbound connection workers (requests) in percentage based on the limit of the group.|
 
 ## Permissions
 

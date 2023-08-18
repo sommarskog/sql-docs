@@ -1,15 +1,12 @@
 ---
 title: Authoring a Custom Static Code Analysis Rule Assembly for SQL Server
 description: Find out how to create SQL Server Code Analysis rules. Set up a rule to avoid WAITFOR DELAY statements in stored procedures, triggers, and functions.
-ms.prod: sql
-ms.technology: ssdt
-ms.topic: conceptual
-ms.assetid: f7b6ed8c-a4e0-4e33-9858-a8aa40aef309
 author: markingmyname
 ms.author: maghan
-ms.reviewer: “”
-ms.custom: seo-lt-2019
 ms.date: 02/09/2017
+ms.service: sql
+ms.subservice: ssdt
+ms.topic: conceptual
 ---
 
 # Walkthrough Authoring a Custom Static Code Analysis Rule Assembly for SQL Server
@@ -55,9 +52,9 @@ First create a class library. To create a class library project:
   
 5. Click **Browse** and navigate to the C:\Program Files (x86)\\MicrosoftSQL Server\120\SDK\Assemblies directory, select Microsoft.SqlServer.TransactSql.ScriptDom.dll, and the click OK.  
   
-6. Next install the required DACFx references. Click **Browse** and navigate to the <Visual Studio Install Dir>\Common7\IDE\Extensions\\Microsoft\SQLDB\DAC\120 directory. Choose the Microsoft.SqlServer.Dac.dll, Microsoft.SqlServer.Dac.Extensions.dll, and Microsoft.Data.Tools.Schema.Sql.dll entries and click **Add**, then click **OK**.  
+6. Next install the required DACFx references. Click **Browse** and navigate to the \<Visual Studio Install Dir\>\Common7\IDE\Extensions\\\\Microsoft\SQLDB\DAC\120 directory. Choose the Microsoft.SqlServer.Dac.dll, Microsoft.SqlServer.Dac.Extensions.dll, and Microsoft.Data.Tools.Schema.Sql.dll entries and click **Add**, then click **OK**.  
   
-    DACFx binaries are now installed inside your Visual Studio install directory. For Visual Studio 2012 the <Visual Studio Install Dir> will usually be C:\Program Files (x86)\\MicrosoftVisual Studio 11.0. For Visual Studio 2013 this will usually be C:\Program Files (x86)\\MicrosoftVisual Studio 12.0.  
+    DACFx binaries are now installed inside your Visual Studio install directory. For Visual Studio 2012 the \<Visual Studio Install Dir\> will usually be C:\Program Files (x86)\\\\MicrosoftVisual Studio 11.0. For Visual Studio 2013 this will usually be C:\Program Files (x86)\\\\MicrosoftVisual Studio 12.0.  
   
 Next you will add supporting classes that will be used by the rule.  
   
@@ -101,7 +98,7 @@ The first class that you must define is the WaitForDelayVisitor class, derived f
   
     ```  
     public WaitForDelayVisitor() {  
-       WaitForDelayStatments = new List<WaitForStatement>();  
+       WaitForDelayStatements = new List<WaitForStatement>();  
     }  
     ```  
   
@@ -111,7 +108,7 @@ The first class that you must define is the WaitForDelayVisitor class, derived f
     public override void ExplicitVisit(WaitForStatement node) {  
        // We are only interested in WAITFOR DELAY occurrences  
        if (node.WaitForOption == WaitForOption.Delay)  
-          WaitForDelayStatments.Add(node);  
+          WaitForDelayStatements.Add(node);  
     }  
     ```  
   
@@ -493,7 +490,7 @@ Now that you have added the helper classes that the custom Code Analysis rule wi
   
 3. Click **Sign the assembly**.  
   
-4. In **Choose a strong name key file**, click **<New>**.  
+4. In **Choose a strong name key file**, click **\<New\>**.  
   
 5. In the **Create Strong Name Key** dialog box, in **Key file name**, type MyRefKey.  
   
@@ -513,11 +510,11 @@ To install a rule, you must copy the assembly and associated .pdb file to the Ex
   
 ### To Install the SampleRules Assembly
 
-Next, you will copy the assembly information to the Extensions directory. When Visual Studio starts, it will identify any extensions in <Visual Studio Install Dir>\Common7\IDE\Extensions\\Microsoft\SQLDB\DAC\120\Extensions directory and subdirectories, and make them available for use.  
+Next, you will copy the assembly information to the Extensions directory. When Visual Studio starts, it will identify any extensions in \<Visual Studio Install Dir\>\Common7\IDE\Extensions\\\\Microsoft\SQLDB\DAC\120\Extensions directory and subdirectories, and make them available for use.  
   
-For Visual Studio 2012 the <Visual Studio Install Dir> will usually be C:\Program Files (x86)\\MicrosoftVisual Studio 11.0. For Visual Studio 2013 this will usually be C:\Program Files (x86)\\MicrosoftVisual Studio 12.0.  
+For Visual Studio 2012 the \<Visual Studio Install Dir\> will usually be C:\Program Files (x86)\\\\MicrosoftVisual Studio 11.0. For Visual Studio 2013 this will usually be C:\Program Files (x86)\\\\MicrosoftVisual Studio 12.0.  
   
-Copy the SampleRules.dll assembly file from the output directory to the <Visual Studio Install Dir>\Common7\IDE\Extensions\\Microsoft\SQLDB\DAC\120\Extensions directory. By default, the path of your compiled .dll file is YourSolutionPath\YourProjectPath\bin\Debug or YourSolutionPath\YourProjectPath\bin\Release.  
+Copy the SampleRules.dll assembly file from the output directory to the \<Visual Studio Install Dir\>\Common7\IDE\Extensions\\\\Microsoft\SQLDB\DAC\120\Extensions directory. By default, the path of your compiled .dll file is YourSolutionPath\YourProjectPath\bin\Debug or YourSolutionPath\YourProjectPath\bin\Release.  
   
 Your rule should now be installed and will appear once you restart Visual Studio. Next, you will start a new session of Visual Studio and create a database project.  
   

@@ -1,20 +1,85 @@
 ---
-title: "What's New in SSMA for SAP ASE (SybaseToSQL) | Microsoft Docs"
+title: "What's New in SSMA for SAP ASE (SybaseToSQL)"
 description: Find out about changes to SQL Server Migration Assistant (SSMA) for Sybase (SybaseToSQL) for each release.
-author: nahk-ivanov
-
-ms.prod: sql
-ms.custom: ""
+author: cpichuka
+ms.author: cpichuka
 ms.date: "04/29/2021"
-ms.reviewer: ""
-ms.technology: ssma
+ms.service: sql
+ms.subservice: ssma
 ms.topic: conceptual
-ms.assetid: 2be0cf8d-6dbe-443a-abbd-036249922205
-ms.author: alexiva
+ms.custom: intro-whats-new
 ---
 # What's New in SSMA for SAP ASE (SybaseToSQL)
 
 This article lists SQL Server Migration Assistant (SSMA) for SAP ASE (formerly SSMA for Sybase) changes in each release.
+
+## SSMA v9.4
+The v9.4 release of SSMA for SAP ASE contains the following changes:
+
+ * Support for bigdatetime data type
+ * Fix for missing subscriptions in migration through migrationat scale
+ * Improve conversion of Primary and Unique keys present as Index hints
+ * Improve conversion of SELECT statement
+   
+## SSMA v9.3
+The v9.2 release of SSMA for SAP ASE contains the following changes:
+
+ * Added support for SQL Server 2022 target
+
+## SSMA v9.2
+The v9.2 release of SSMA for SAP ASE contains the following changes:
+
+ * Enhanced data movement pipelines at scale monintoring 
+
+
+## SSMA v9.1
+The v9.1 release of SSMA for SAP ASE contains the following changes:
+
+ * Minor performance improvements, bug fixes and enhanced get help experience  
+
+## SSMA v9.0
+
+The v9.0 release of SSMA for SAP ASE contains the following changes:
+
+* New offline at scale data migration support
+* Enhanced data migration architecture
+* Online help viewer support
+
+## SSMA v8.24
+
+The v8.24 release of SSMA for SAP ASE contains the following changes:
+
+* Minor performance improvements and bug fixes
+
+## SSMA v8.23
+
+The v8.23 release of SSMA for SAP ASE contains the following changes:
+
+* Improved messaging for conversion of TRANSACTION_RPC statements
+* New option "Allow Statements from Files", for adding statements from file system
+* Enhanced XML output when running in console mode
+* New "Feedback" link in reports to send feedback
+* In reports, enhanced visualization experience
+
+## SSMA v8.22
+
+The v8.22 release of SSMA for SAP ASE contains the following changes:
+
+* Allow to specify additional connection string options for target database connection
+* Introduce summary charts in assessment reports
+* Improve messages navigation in assessment reports
+
+## SSMA v8.21
+
+The v8.21 release of SSMA for SAP ASE contains the following changes:
+
+* Use `COUNT_BIG` in row count queries for the target database
+
+## SSMA v8.20
+
+The v8.20 release of SSMA for SAP ASE contains the following changes:
+
+* Minor performance improvements and bug fixes
 
 ## SSMA v8.19
 
@@ -111,7 +176,7 @@ To leverage this setting, in SSMA for SAP ASE, navigate to **Tools** > **Project
 
 ## SSMA v8.5
 
-The v8.5 release of SSMA for SAP ASE is enhanced with support for Azure Active Directory authentication and basic support for JSON features in SQL server, together with a targeted set of fixes designed to improve usability and performance.
+The v8.5 release of SSMA for SAP ASE is enhanced with support for Azure Active Directory authentication and basic support for JSON features in SQL Server, together with a targeted set of fixes designed to improve usability and performance.
 
 In addition, SSMA for SAP ASE now allows you to hide system tables and views (exclude them from conversion).
 

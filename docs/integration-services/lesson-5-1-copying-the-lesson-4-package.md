@@ -1,16 +1,12 @@
 ---
+title: "Step 1: Copy the Lesson 4 package"
 description: "Lesson 5-1: Copy the Lesson 4 package"
-title: "Step 1: Copy the Lesson 4 package | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/08/2019"
-ms.prod: sql
-ms.prod_service: "integration-services"
-ms.reviewer: ""
-ms.technology: integration-services
-ms.topic: tutorial
-ms.assetid: 8aa7d690-4649-4c0a-ac6f-9504637ee426
 author: chugugrace
 ms.author: chugu
+ms.date: "01/08/2019"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: tutorial
 ---
 # Lesson 5-1: Copy the Lesson 4 package
 
@@ -32,9 +28,9 @@ Use this procedure if you're copying the completed Lesson 4.  To copy the sample
 
 4.  In **Solution Explorer**, right-click **SSIS Packages** and then select **Paste**.
 
-    By default, the name of the copied package is **Lesson 4.dtsx**.
+    By default, the name of the copied package is **Lesson 5.dtsx**.
 
-5.  In **Solution Explorer**, double-click **Lesson 4.dtsx** to open the package.
+5.  In **Solution Explorer**, double-click **Lesson 5.dtsx** to open the package.
 
 6.  Right-click anywhere in the background of the **Control Flow** design surface and select **Properties**.
 

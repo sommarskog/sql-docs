@@ -1,25 +1,21 @@
 ---
-title: "Restore Pages (SQL Server) | Microsoft Docs"
-description: Learn how to restore pages in SQL Server by using SQL Server Management Studio or Transact-SQL. Restore damaged pages without restoring the whole database. 
-ms.custom: ""
+title: "Restore Pages (SQL Server)"
+description: Learn how to restore pages in SQL Server by using SQL Server Management Studio or Transact-SQL. Restore damaged pages without restoring the whole database.
+author: MashaMSFT
+ms.author: mathoma
 ms.date: "03/15/2017"
-ms.prod: sql
-ms.prod_service: backup-restore
-ms.reviewer: ""
-ms.technology: backup-restore
+ms.service: sql
+ms.subservice: backup-restore
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.swb.restorepage.general.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "restoring pages [SQL Server]"
   - "pages [SQL Server], restoring"
   - "databases [SQL Server], damaged"
   - "page restores [SQL Server]"
   - "pages [SQL Server], damaged"
   - "restoring [SQL Server], pages"
-ms.assetid: 07e40950-384e-4d84-9ac5-84da6dd27a91
-author: cawrites
-ms.author: chadam
 ---
 # Restore Pages (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -102,7 +98,7 @@ ms.author: chadam
  RESTORE permissions are given to roles in which membership information is always readily available to the server. Because fixed database role membership can be checked only when the database is accessible and undamaged, which is not always the case when RESTORE is executed, members of the **db_owner** fixed database role do not have RESTORE permissions.  
   
 ##  <a name="SSMSProcedure"></a> Using SQL Server Management Studio  
- Starting in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] supports page restores.  
+ Starting in [!INCLUDE [sssql16-md](../../includes/sssql16-md.md)], [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] supports page restores.  
   
 #### To restore pages  
   
@@ -162,15 +158,17 @@ ms.author: chadam
 
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
  To specify a page in a RESTORE DATABASE statement, you need the file ID of the file containing the page and the page ID of the page. The required syntax is as follows:  
+
+```syntaxsql  
+ RESTORE DATABASE <database_name>  
   
- `RESTORE DATABASE <database_name>`  
+ PAGE = '<file: page> [ ,... n ] ' [ ,... n ]
   
- `PAGE = '<file: page> [ ,... n ] ' [ ,... n ]`  
+ FROM <backup_device> [ ,... n ]
   
- `FROM <backup_device> [ ,... n ]`  
-  
- `WITH NORECOVERY`  
-  
+ WITH NORECOVERY
+```
+
  For more information about the parameters of the PAGE option, see [RESTORE Arguments &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md). For more information about the RESTORE DATABASE syntax, see [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md).  
   
 #### To restore pages  
@@ -202,16 +200,16 @@ ms.author: chadam
  The following example restores four damaged pages of file `B` with `NORECOVERY`. Next, two log backups are applied with `NORECOVERY`, followed with the tail-log backup, which is restored with `RECOVERY`. This example performs an online restore. In the example, the file ID of file `B` is `1`, and the page IDs of the damaged pages are `57`, `202`, `916`, and `1016`.  
   
 ```sql  
-RESTORE DATABASE <database> PAGE='1:57, 1:202, 1:916, 1:1016'  
-   FROM <file_backup_of_file_B>   
+RESTORE DATABASE [<database>] PAGE='1:57, 1:202, 1:916, 1:1016'  
+   FROM DISK = '<file_backup_of_file_B>'
    WITH NORECOVERY;  
-RESTORE LOG <database> FROM <log_backup>   
+RESTORE LOG [<database>] FROM [<log_backup>]
    WITH NORECOVERY;  
-RESTORE LOG <database> FROM <log_backup>   
+RESTORE LOG [<database>] FROM [<log_backup>]
    WITH NORECOVERY;   
-BACKUP LOG <database> TO <new_log_backup>;   
-RESTORE LOG <database> FROM <new_log_backup> WITH RECOVERY;  
-GO  
+BACKUP LOG [<database>] TO [<new_log_backup>];
+RESTORE LOG [<database>] FROM [<new_log_backup>] WITH RECOVERY;  
+GO
 ```  
   
 ## See Also  

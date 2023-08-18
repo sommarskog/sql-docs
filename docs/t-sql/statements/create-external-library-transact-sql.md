@@ -1,24 +1,21 @@
 ---
-description: "CREATE EXTERNAL LIBRARY (Transact-SQL) - SQL Server"
-title: "CREATE EXTERNAL LIBRARY (Transact-SQL) - SQL Server | Microsoft Docs"
-ms.custom: ""
+title: "CREATE EXTERNAL LIBRARY (Transact-SQL) - SQL Server"
+description: CREATE EXTERNAL LIBRARY (Transact-SQL) - SQL Server
+author: VanMSFT
+ms.author: vanto
 ms.date: 01/28/2021
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: machine-learning
+ms.service: sql
+ms.subservice: machine-learning
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "CREATE EXTERNAL LIBRARY"
   - "CREATE_EXTERNAL_LIBRARY_TSQL"
   - "EXTERNAL LIBRARY"
   - "EXTERNAL_LIBRARY_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "CREATE EXTERNAL LIBRARY"
-author: dphansen
-ms.author: davidph
-manager: cgronlund
+dev_langs:
+  - "TSQL"
 monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current"
 ---
 # CREATE EXTERNAL LIBRARY (Transact-SQL)  
@@ -377,7 +374,7 @@ When you use `sp_execute_external_script` to install the package, depending on t
 EXECUTE sp_execute_external_script 
     @LANGUAGE = N'R',
     @SCRIPT = N'
-library(packageA)
+library(packageA)'
 ```
 ::: moniker-end
 

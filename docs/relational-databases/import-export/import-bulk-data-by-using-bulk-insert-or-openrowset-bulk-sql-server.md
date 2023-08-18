@@ -1,12 +1,13 @@
 ---
 title: "Use BULK INSERT or OPENROWSET(BULK...) to import data to SQL Server"
 description: Find out how to use Transact-SQL statements to bulk import data from a file to a SQL Server or Azure SQL Database table, including security considerations.
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: data-movement
+author: markingmyname
+ms.author: maghan
+ms.date: "09/25/2019"
+ms.service: sql
+ms.subservice: data-movement
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "BULK INSERT statement, importing data from a remote data file"
   - "bulk importing [SQL Server], methods"
   - "bulk exporting [SQL Server], methods"
@@ -17,16 +18,11 @@ helpviewer_keywords:
   - "remote data access [SQL Server], bulk importing"
   - "bulk importing [SQL Server], BULK INSERT statement"
   - "Transact-SQL bulk export/import operations"
-ms.assetid: 18a64236-0285-46ea-8929-6ee9bcc020b9
-author: markingmyname
-ms.author: maghan
-ms.date: "09/25/2019"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
-ms.custom: "seo-lt-2019"
 ---
 # Use BULK INSERT or OPENROWSET(BULK...) to import data to SQL Server
 
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 This article provides an overview of how to use the [!INCLUDE[tsql](../../includes/tsql-md.md)] BULK INSERT statement and the INSERT...SELECT * FROM OPENROWSET(BULK...) statement to bulk import data from a data file into a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or Azure SQL Database table. This article also describes security considerations for using BULK INSERT and OPENROWSET(BULK...), and using these methods to bulk import from a remote data source.
 
@@ -92,7 +88,7 @@ To use BULK INSERT or INSERT...SELECT \* FROM OPENROWSET(BULK...) to bulk import
 For example, the following `BULK INSERT` statement bulk imports data into the `SalesOrderDetail` table of the `AdventureWorks` database from a data file that is named `newdata.txt`. This data file resides in a shared folder named `\dailyorders` on a network share directory named `salesforce` on a system named `computer2`.
 
 ```sql
-BULK INSERT AdventureWorks2012.Sales.SalesOrderDetail
+BULK INSERT AdventureWorks2022.Sales.SalesOrderDetail
    FROM '\\computer2\salesforce\dailyorders\neworders.txt';
 ```
 
@@ -101,7 +97,12 @@ BULK INSERT AdventureWorks2012.Sales.SalesOrderDetail
 
 ## Bulk importing from Azure Blob storage
 
-When importing from Azure Blob storage and the data is not public (anonymous access), create a [DATABASE SCOPED CREDENTIAL](../../t-sql/statements/create-database-scoped-credential-transact-sql.md) based on a SAS key which is encrypted with a [MASTER KEY](../../t-sql/statements/create-master-key-transact-sql.md), and then create an [external database source](../../t-sql/statements/create-external-data-source-transact-sql.md) for use in your BULK INSERT command.
+When importing from Azure Blob storage and the data is not public (anonymous access), create a [DATABASE SCOPED CREDENTIAL](../../t-sql/statements/create-database-scoped-credential-transact-sql.md) based on a SAS key which is encrypted with a [MASTER KEY](../../t-sql/statements/create-master-key-transact-sql.md), and then create an [external database source](../../t-sql/statements/create-external-data-source-transact-sql.md) for use in your BULK INSERT command. 
+
+Alternatively, create a [DATABASE SCOPED CREDENTIAL](../../t-sql/statements/create-database-scoped-credential-transact-sql.md) based on `MANAGED IDENTITY` to authorize requests for data access in non-public storage accounts. When using `MANAGED IDENTITY`, Azure storage must grant permissions to the managed identity of the instance by adding the **Storage Blob Data Contributor** built-in Azure role-based access control (RBAC) role that provides read/write access to the managed identity for the necessary Azure Blob Storage containers. Azure SQL Managed Instance have a system assigned managed identity, and can also have one or more user-assigned managed identities. You can use either system-assigned managed identities or user-assigned managed identities to authorize the requests. For authorization, the `default` identity of the managed instance would be used (that is primary user-assigned managed identity, or system-assigned managed identity if user-assigned managed identity is not specified).
+
+> [!IMPORTANT]
+> Managed Identity is applicable only to Azure SQL. SQL Server does not support Managed Identity.
 
 > [!NOTE]
 > Do not use explicit transaction, or you receive a 4861 error.
@@ -133,6 +134,33 @@ BULK INSERT Sales.Invoices
 FROM 'inv-2017-12-08.csv'
 WITH (DATA_SOURCE = 'MyAzureBlobStorage');
 ```
+
+The following example shows how to use the BULK INSERT command to load data from a csv file in an Azure Blob storage location using Managed Identity. The Azure Blob storage location is configured as an external data source. 
+
+```sql
+--> Optional - a MASTER KEY is not required if a DATABASE SCOPED CREDENTIAL is not required because the blob is configured for public (anonymous) access!
+CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'YourStrongPassword1';
+GO
+
+--> Optional - a DATABASE SCOPED CREDENTIAL is not required because the blob is configured for public (anonymous) access!
+CREATE DATABASE SCOPED CREDENTIAL MyAzureBlobStorageCredential 
+WITH IDENTITY = 'Managed Identity';
+
+-- NOTE: Make sure you have granted Storage Bob Data Contributor RBAC on storage to provides read/write access to the managed identity for the necessary Azure Blob Storage containers.
+
+CREATE EXTERNAL DATA SOURCE MyAzureBlobStorage
+WITH ( TYPE = BLOB_STORAGE,
+          LOCATION = 'https://****************.blob.core.windows.net/invoices'
+          , CREDENTIAL= MyAzureBlobStorageCredential --> CREDENTIAL is not required if a blob is configured for public (anonymous) access!
+);
+
+BULK INSERT Sales.Invoices
+FROM 'inv-2017-12-08.csv'
+WITH (DATA_SOURCE = 'MyAzureBlobStorage');
+```
+
+> [!IMPORTANT]
+> Managed Identity is applicable only to Azure SQL. SQL Server does not support Managed Identity.
 
 > [!IMPORTANT]
 > Azure SQL Database does not support reading from Windows files.

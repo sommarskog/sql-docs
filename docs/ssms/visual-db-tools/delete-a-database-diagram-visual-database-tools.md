@@ -1,25 +1,22 @@
 ---
-description: "Delete a Database Diagram (Visual Database Tools)"
 title: Delete a Database Diagram
-ms.custom: seo-lt-2019
+description: "Delete a Database Diagram (Visual Database Tools)"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
+ms.service: sql
+ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "diagrams [SQL Server], deleting"
   - "deleting database diagrams"
   - "database diagrams [SQL Server], deleting"
   - "removing database diagrams"
-ms.assetid: 2e558164-f1cb-4e43-b966-3567ed0190ee
-author: markingmyname
-ms.author: maghan
-ms.reviewer: 
-
 ---
 # Delete a Database Diagram (Visual Database Tools)
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+
+[!INCLUDE[SQL Server Azure SQL Database PDW](../../includes/applies-to-version/sql-asdb-asdbmi-pdw.md)]
+
 When you no longer need a database diagram, you can delete it.  
   
 ### To delete a database diagram  

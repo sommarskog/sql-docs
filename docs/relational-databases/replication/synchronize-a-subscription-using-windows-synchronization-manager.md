@@ -1,19 +1,16 @@
 ---
 title: "Synchronize subscription (Windows Synchronization Manager)"
-description: Learn how to synchronize subscriptions using the Windows Synchronization Manager. 
-ms.custom: seo-lt-2019
-ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: replication
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "synchronization [SQL Server replication], Windows Synchronization Manager"
-  - "Windows Synchronization Manager"
-ms.assetid: 80f15dd6-e84d-4f96-9866-5b34ea531f1e
+description: Learn how to synchronize subscriptions using the Windows Synchronization Manager.
 author: "MashaMSFT"
 ms.author: "mathoma"
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: conceptual
+ms.custom: updatefrequency5
+helpviewer_keywords:
+  - "synchronization [SQL Server replication], Windows Synchronization Manager"
+  - "Windows Synchronization Manager"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # Synchronize a Subscription Using Windows Synchronization Manager
@@ -27,13 +24,13 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
  Synchronization Manager allows you to use the Interactive Resolver for merge subscriptions. Typically, conflicts detected during synchronization are resolved automatically, but if interactive resolution is enabled, conflicts can be resolved by a user during synchronization. If a synchronization is performed outside of Windows Synchronization Manager (as a scheduled synchronization or an on demand synchronization in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or Replication Monitor), conflicts are resolved automatically without user intervention, according to the resolver specified for the article.  
   
 > [!NOTE]  
->  Beginning with [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] and [!INCLUDE[wiprlhlong](../../includes/wiprlhlong-md.md)], 64-bit versions of the Windows Synchronization Manager cannot detect 32-bit subscriptions.  
+>  Beginning with [!INCLUDE[winserver2008](../../includes/winserver2008-md.md)] and [!INCLUDE[winvista](../../includes/winvista-md.md)], 64-bit versions of the Windows Synchronization Manager cannot detect 32-bit subscriptions.  
   
 ### To enable the synchronization of pull subscriptions with Windows Synchronization Manager  
   
 1.  On the **General** page of the **Subscription Properties - \<Subscriber>: \<SubscriptionDatabase>** dialog box, select a value of **Enable** for the **Use Windows Synchronization Manager** option.  
   
-2.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+2.  Select **OK**.
   
 ### To synchronize a pull subscription with Synchronization Manager  
   
@@ -57,7 +54,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
   
 3.  Click **Yes**.  
   
-4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+4.  Select **OK**.
   
      The next time the subscription is synchronized, by default a new snapshot is applied to the subscription database. For more information, see [Reinitialize Subscriptions](../../relational-databases/replication/reinitialize-subscriptions.md).  
   
@@ -80,7 +77,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
   
      It is recommended to use Windows Authentication for all connections. For information about the permissions required by the Distribution Agent and the Merge Agent, see [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md).  
   
-3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+3.  Select **OK**.
   
 ### To remove a pull subscription from Synchronization Manager  
   
@@ -90,7 +87,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
   
 3.  Select an option in the **Remove Subscription** dialog box.  
   
-4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+4.  Select **OK**.
   
 ### To use the Interactive Resolver  
   

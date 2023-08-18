@@ -1,20 +1,16 @@
 ---
-title: "Statistics for Memory-Optimized Tables | Microsoft Docs"
+title: "Statistics for Memory-Optimized Tables"
 description: Learn how the query optimizer uses statistics about columns in memory-optimized tables to create query plans that improve query performance for In-Memory OLTP.
-ms.custom: ""
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "10/23/2016"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: in-memory-oltp
+ms.service: sql
+ms.subservice: in-memory-oltp
 ms.topic: conceptual
-ms.assetid: e644766d-1d1c-43d7-83ff-8ccfe4f3af9f
-author: rothja
-ms.author: jroth
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Statistics for Memory-Optimized Tables
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   The query optimizer uses statistics about columns to create query plans that improve query performance. Statistics are collected from the tables in the database and stored in the database metadata.  
   
@@ -24,7 +20,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
   
  Considerations for statistics on memory-optimized tables:  
   
--   Starting in SQL Server 2016 and in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], automatic update of statistics is supported for memory-optimized tables, when using database compatibility level of at least 130. See [ALTER DATABASE Compatibility Level (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md). If a database has tables that were previously created using a lower compatibility level, the statistics need to be updated manually once, to enable automatic update of statistics going forward.
+-   Starting in SQL Server 2016 and in [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], automatic update of statistics is supported for memory-optimized tables, when using database compatibility level of at least 130. See [ALTER DATABASE Compatibility Level (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md). If a database has tables that were previously created using a lower compatibility level, the statistics need to be updated manually once, to enable automatic update of statistics going forward.
   
 -   For natively compiled stored procedures, execution plans for queries in the procedure are optimized when the procedure is compiled, which happens at create time. They are not automatically recompiled when statistics are updated. Therefore, the tables should contain a representative set of data before the procedures are created.  
   

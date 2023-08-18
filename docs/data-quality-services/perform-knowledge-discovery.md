@@ -1,24 +1,21 @@
 ---
-description: "Perform Knowledge Discovery"
 title: "Perform Knowledge Discovery"
+description: "Perform Knowledge Discovery"
+author: swinarko
+ms.author: sawinark
 ms.date: "06/04/2013"
-ms.prod: sql
-ms.prod_service: "data-quality-services"
-ms.reviewer: ""
-ms.technology: data-quality-services
+ms.service: sql
+ms.subservice: data-quality-services
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.dqs.kb.kbterms.f1"
   - "sql13.dqs.kb.viewselectcd.f1"
   - "sql13.dqs.kb.kbanalyze.f1"
   - "sql13.dqs.kb.kbmap.f1"
-ms.assetid: 34a0ea16-02e6-46ed-90bc-dede68687f63
-author: swinarko
-ms.author: sawinark
 ---
 # Perform Knowledge Discovery
 
-[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI](../includes/applies-to-version/sqlserver.md)]
 
   This topic describes how to build a knowledge base through knowledge discovery. In the discovery process, [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) analyzes the data in a sample data source through a computer-assisted process, and adds the knowledge that it gains to the knowledge base. This knowledge can be modified and enhanced in the **Manage Domain Values** step of the knowledge discovery activity, or in the domain management activity.  
   

@@ -1,15 +1,12 @@
 ---
 title: Extend Database Project Build to Generate Model Stats
 description: Find out how to create, install, and test a build contributor that outputs statistics from the SQL database model when you build a database project.
-ms.prod: sql
-ms.technology: ssdt
-ms.topic: conceptual
-ms.assetid: d44935ce-63bf-46df-976a-5a54866c8119
 author: markingmyname
 ms.author: maghan
-ms.reviewer: “”
-ms.custom: seo-lt-2019
 ms.date: 02/09/2017
+ms.service: sql
+ms.subservice: ssdt
+ms.topic: conceptual
 ---
 
 # Walkthrough: Extend Database Project Build to Generate Model Statistics
@@ -433,7 +430,7 @@ To create a build contributor, you must perform the following tasks:
   
 3.  Click **Sign the assembly**.  
   
-4.  In **Choose a strong name key file**, click **<New>**.  
+4.  In **Choose a strong name key file**, click **\<New\>**.  
   
 5.  In the **Create Strong Name Key** dialog box, in **Key file name**, type **MyRefKey**.  
   
@@ -474,11 +471,14 @@ You can do this in one of two ways:
 -   You can manually modify the .sqlproj file to add the required arguments. You might choose to do this if you do not intend to reuse the build contributor across a large number of projects. If you choose this option, add the following statements to the .sqlproj file after the first Import node in the file  
   
     ```  
-    /// <PropertyGroup>  
-    ///     <ContributorArguments Condition="'$(Configuration)' == 'Debug'">  
-    ///         $(ContributorArguments);ModelStatistics.GenerateModelStatistics=true;ModelStatistics.SortModelStatisticsBy="name";  
-    ///     </ContributorArguments>  
-    /// <PropertyGroup>  
+    <PropertyGroup>  
+        <BuildContributors>  
+            $(BuildContributors);ExampleContributors.ModelStatistics  
+        </BuildContributors>  
+        <ContributorArguments Condition="'$(Configuration)' == 'Debug'">  
+            $(ContributorArguments);ModelStatistics.GenerateModelStatistics=true;ModelStatistics.SortModelStatisticsBy=name;  
+        </ContributorArguments>  
+    </PropertyGroup>  
   
     ```  
   
@@ -495,7 +495,7 @@ You can do this in one of two ways:
         ```  
         <?xml version="1.0" encoding="utf-8"?>  
   
-        <Project xmlns="https://schemas.microsoft.com/developer/msbuild/2003">  
+        <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">  
           <PropertyGroup>  
             <BuildContributors>$(BuildContributors);ExampleContributors.ModelStatistics</BuildContributors>  
             <ContributorArguments Condition="'$(Configuration)' == 'Debug'">$(ContributorArguments);ModelStatistics.GenerateModelStatistics=true;ModelStatistics.SortModelStatisticsBy=name;</ContributorArguments>  
@@ -520,7 +520,7 @@ After you have followed one of these approaches, you can use MSBuild to pass in 
   
 1.  In Visual Studio, right-click on your project and select "Rebuild". This will rebuild the project, and you should see the model statistics generated, with the output included in the build output and saved to ModelStatistics.xml. Note that you may need to choose "Show all Files" in Solution Explorer to see the xml file.  
   
-2.  Open a Visual Studio command prompt: On the **Start** menu, click **All Programs**, click **Microsoft Visual Studio <Visual Studio Version>**, click **Visual Studio Tools**, and then click **Visual Studio Command Prompt (<Visual Studio Version>)**.  
+2.  Open a Visual Studio command prompt: On the **Start** menu, click **All Programs**, click **Microsoft Visual Studio \<Visual Studio Version\>**, click **Visual Studio Tools**, and then click **Visual Studio Command Prompt (\<Visual Studio Version\>)**.  
   
 3.  At the command prompt, navigate to the folder that contains your SQL project.  
   

@@ -1,15 +1,12 @@
 ---
 title: "Configure FailureConditionLevel property settings"
 description: "Use the FailureConditionLevel property to set the conditions for the Always On Failover Cluster Instance (FCI) to fail over or restart."
-ms.custom: "seo-lt-2019"
+author: MashaMSFT
+ms.author: mathoma
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: failover-cluster-instance
+ms.service: sql
+ms.subservice: failover-cluster-instance
 ms.topic: how-to
-ms.assetid: 513dd179-9a46-46da-9fdd-7632cf6d0816
-author: cawrites
-ms.author: chadam
 ---
 # Configure FailureConditionLevel property settings
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -70,7 +67,7 @@ Get-ClusterResource $fci | Set-ClusterParameter FailureConditionLevel 3
   
 3.  Right-click the **SQL Server resource** under **Other Resources**, and then select **Properties** from the menu. The SQL Server resource **Properties** dialog box opens.  
   
-4.  Select the **Properties** tab, enter the desired value for the **FaliureConditionLevel** property, and then click **OK** to apply the change.  
+4.  Select the **Properties** tab, enter the desired value for the **FailureConditionLevel** property, and then click **OK** to apply the change.  
   
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
  **To configure FailureConditionLevel property settings:**  

@@ -4,11 +4,12 @@ description: This tutorial shows how you can create an Azure SQL Database.
 author: ninarn
 ms.author: ninarn
 ms.reviewer: alayu, markingmyname
-ms.topic: tutorial
-ms.prod: azure-data-studio
-ms.technology: azure-data-studio
-ms.custom: ""
 ms.date: 10/16/2020
+ms.service: azure-data-studio
+ms.topic: tutorial
+ms.custom:
+  - intro-deployment
+  - updatefrequency5
 ---
 
 # Create an Azure SQL Database using Azure Data Studio

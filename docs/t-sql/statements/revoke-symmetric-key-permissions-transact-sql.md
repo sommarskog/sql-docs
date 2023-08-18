@@ -1,29 +1,25 @@
 ---
-description: "REVOKE Symmetric Key Permissions (Transact-SQL)"
-title: "REVOKE Symmetric Key Permissions (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "REVOKE Symmetric Key Permissions (Transact-SQL)"
+description: REVOKE Symmetric Key Permissions (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "08/10/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "symmetric keys [SQL Server], permissions"
   - "permissions [SQL Server], symmetric keys"
   - "REVOKE statement, symmetric keys"
-ms.assetid: 091da030-a768-4aa3-9509-cc23bd719cea
-author: VanMSFT
-ms.author: vanto
+dev_langs:
+  - "TSQL"
 ---
 # REVOKE Symmetric Key Permissions (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Revokes permissions granted and denied on a symmetric key.  
    
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -118,7 +114,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
  The following example revokes `ALTER` permission on the symmetric key `SamInventory42` from the user `HamidS` and from other principals to which `HamidS` has granted `ALTER` permission.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 REVOKE ALTER ON SYMMETRIC KEY::SamInventory42 TO HamidS CASCADE;  
 GO  
 ```  

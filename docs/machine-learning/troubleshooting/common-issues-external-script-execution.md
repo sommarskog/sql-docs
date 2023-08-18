@@ -1,13 +1,12 @@
 ---
 title: Troubleshoot Launchpad for Python and R scripts
 description: This article provides troubleshooting guidance for many issues that prevent the SQL Server Launchpad service from starting, including configuration problems or changes, or missing network protocols. The Launchpad service supports external script execution for R and Python.
-ms.prod: sql
-ms.technology: machine-learning-services
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: 04/08/2021
+ms.service: sql
+ms.subservice: machine-learning-services
 ms.topic: troubleshooting
-author: dphansen
-ms.author: davidph
-ms.custom: contperf-fy21q3
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
 ---
 # Troubleshoot issues with Launchpad service executing Python and R scripts in SQL Server Machine Learning Services
@@ -152,7 +151,7 @@ This error can mean one of several things:
 
 - Launchpad might have insufficient external users to run the external query. For example, if you are running more than 20 external queries concurrently, and there are only 20 default users, one or more queries might fail.
 
-- Insufficient memory is available to process the R task. This error happens most often in a default environment, where SQL Server might be using up to 70 percent of the computer's resources. For information about how to modify the server configuration to support greater use of resources by R, see [Operationalizing your R code](/sql/machine-learning/tutorials/python-ski-rental-linear-regression-deploy-model).
+- Insufficient memory is available to process the R task. This error happens most often in a default environment, where SQL Server might be using up to 70 percent of the computer's resources. For information about how to modify the server configuration to support greater use of resources by R, see [Operationalizing your R code](../tutorials/python-ski-rental-linear-regression-deploy-model.md).
 
 ## "Can't find package"
 
@@ -162,7 +161,7 @@ This error can happen in many ways:
 
 - You installed a new package on the server, but access was denied, so R installed the package to a user library.
 
-- You installed R Services and then installed another R tool or set of libraries, including Microsoft R Server (Standalone), Microsoft R Client, RStudio, and so forth.
+- You installed R Services and then installed another R tool or set of libraries, such as RStudio.
 
 To determine the location of the R package library that's used by the instance, open SQL Server Management Studio (or any other database query tool), connect to the instance, and then run the following stored procedure:
 
@@ -183,7 +182,7 @@ To resolve the issue, you must reinstall the package to the SQL Server instance 
 
 ::: moniker range=">=sql-server-2016"
 >[!NOTE]
->If you have upgraded an instance of SQL Server 2016 to use the latest version of Microsoft R, the default library location is different. For more information, see [Use SqlBindR to upgrade an instance of R Services](../install/upgrade-r-and-python.md).
+>If you have upgraded an instance of SQL Server 2016 to use the latest version of Microsoft R, the default library location is different. For more information, see [Default R library location](../package-management/r-package-information.md#default-r-library-location).
 ::: moniker-end
 
 ::: moniker range=">=sql-server-2016"
@@ -233,4 +232,4 @@ As a workaround, you can enable the 8dot3 notation on the volume where SQL Serve
 
 [Install SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md)
 
-[Troubleshoot database engine connections](../../database-engine/configure-windows/troubleshoot-connecting-to-the-sql-server-database-engine.md)
+[Troubleshoot database engine connections](/troubleshoot/sql/connect/network-related-or-instance-specific-error-occurred-while-establishing-connection)

@@ -1,23 +1,20 @@
 ---
-title: "CLR Table-Valued Functions | Microsoft Docs"
+title: "CLR Table-Valued Functions"
 description: A table-valued function returns a table. In SQL Server CLR integration, you can write table-valued functions in managed code.
-ms.custom: ""
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: clr
+ms.service: sql
+ms.subservice: clr
 ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Transact-SQL table-valued functions"
   - "table-valued functions [CLR integration]"
   - "TVFs [CLR integration]"
-ms.assetid: 9a6133ea-36e9-45bf-b572-1c0df3d6c194
-author: "rothja"
-ms.author: "jroth"
+dev_langs:
+  - "TSQL"
+  - "VB"
+  - "CSharp"
 ---
 # CLR Table-Valued Functions
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -173,7 +170,7 @@ go
 ```  
   
 ## Sample: Returning the Results of a SQL Server Query  
- The following sample shows a table-valued function that queries a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database. This sample uses the AdventureWorks Light database from [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]. See [https://www.codeplex.com/sqlserversamples](https://go.microsoft.com/fwlink/?LinkId=87843) for more information on downloading AdventureWorks.  
+ The following sample shows a table-valued function that queries a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database. This sample uses the AdventureWorks Lightweight database from [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)], see the [AdventureWorks sample databases](../../samples/adventureworks-install-configure.md#download-backup-files)
   
  Name your source code file FindInvalidEmails.cs or FindInvalidEmails.vb.  
   
@@ -412,5 +409,4 @@ go
 SELECT * FROM FindInvalidEmails('2000-01-01');  
 go  
 ```  
-  
   

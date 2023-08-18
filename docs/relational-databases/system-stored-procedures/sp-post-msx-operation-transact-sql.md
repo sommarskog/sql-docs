@@ -1,30 +1,26 @@
 ---
+title: "sp_post_msx_operation (Transact-SQL)"
 description: "sp_post_msx_operation (Transact-SQL)"
-title: "sp_post_msx_operation (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_post_msx_operation"
-  - "sp_post_msx_operation_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_post_msx_operation"
-ms.assetid: 085deef8-2709-4da9-bb97-9ab32effdacf
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_post_msx_operation"
+  - "sp_post_msx_operation_TSQL"
+helpviewer_keywords:
+  - "sp_post_msx_operation"
+dev_langs:
+  - "TSQL"
 ---
 # sp_post_msx_operation (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Inserts operations (rows) into the **sysdownloadlist** system table for target servers to download and execute.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -41,7 +37,7 @@ sp_post_msx_operation
   
 ## Arguments  
 `[ @operation = ] 'operation'`
- The type of operation for the posted operation. *operation*is **varchar(64)**, with no default. Valid operations depend upon *object_type*.  
+ The type of operation for the posted operation. *operation* is **varchar(64)**, with no default. Valid operations depend upon *object_type*.  
   
 |Object type|Operation|  
 |-----------------|---------------|  
@@ -73,7 +69,7 @@ sp_post_msx_operation
 ## Remarks  
  **sp_post_msx_operation** must be run from the **msdb** database.  
   
- **sp_post_msx_operation** can always be called safely because it first determines if the current server is a multiserver Microsoft SQL Server Agent and, if so, whether *object*is a multiserver job.  
+ **sp_post_msx_operation** can always be called safely because it first determines if the current server is a multiserver Microsoft SQL Server Agent and, if so, whether *object* is a multiserver job.  
   
  After an operation has been posted, it appears in the **sysdownloadlist** table. After a job has been created and posted, subsequent changes to that job must also be communicated to the target servers (TSX). This is also accomplished using the download list.  
   

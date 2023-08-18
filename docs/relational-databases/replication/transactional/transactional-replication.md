@@ -1,24 +1,23 @@
 ---
-title: "Transactional Replication | Microsoft Docs"
+title: "Transactional Replication"
 description: Transactional replication uses a snapshot of the database, applying changes to the Subscriber as they occurred at the Publisher to ensure consistency.
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: replication
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "transactional replication, about transactional replication"
-  - "transactional replication"
-ms.assetid: 3ca82fb9-81e6-4c3c-94b3-b15f852b18bd
 author: "MashaMSFT"
 ms.author: "mathoma"
+ms.date: 10/05/2021
+ms.service: sql
+ms.subservice: replication
+ms.topic: conceptual
+ms.custom: updatefrequency5
+helpviewer_keywords:
+  - "transactional replication, about transactional replication"
+  - "transactional replication"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # Transactional Replication
-[!INCLUDE[sql-asdb](../../../includes/applies-to-version/sql-asdb.md)]
-  Transactional replication typically starts with a snapshot of the publication database objects and data. As soon as the initial snapshot is taken, subsequent data changes and schema modifications made at the Publisher are usually delivered to the Subscriber as they occur (in near real time). The data changes are applied to the Subscriber in the same order and within the same transaction boundaries as they occurred at the Publisher; therefore, within a publication, transactional consistency is guaranteed.  
+
+[!INCLUDE[sql-asdb-asdbmi](../../../includes/applies-to-version/sql-asdb-asdbmi.md)]
+
+Transactional replication typically starts with a snapshot of the publication database objects and data. As soon as the initial snapshot is taken, subsequent data changes and schema modifications made at the Publisher are usually delivered to the Subscriber as they occur (in near real time). The data changes are applied to the Subscriber in the same order and within the same transaction boundaries as they occurred at the Publisher; therefore, within a publication, transactional consistency is guaranteed.  
   
  Transactional replication is typically used in server-to-server environments and is appropriate in each of the following cases:  
   
@@ -77,7 +76,7 @@ Transactional replication offers four publication types:
 |----------------------|-----------------|  
 |Standard transactional publication|Appropriate for topologies in which all data at the Subscriber is read-only (transactional replication does not enforce this at the Subscriber).<br /><br /> Standard transactional publications are created by default when using Transact-SQL or Replication Management Objects (RMO). When using the New Publication Wizard, they are created by selecting **Transactional publication** on the **Publication Type** page.<br /><br /> For more information about creating publications, see [Publish Data and Database Objects](../../../relational-databases/replication/publish/publish-data-and-database-objects.md).|  
 |Transactional publication with updatable subscriptions|The characteristics of this publication type are:<br /><br /> -Each location has identical data, with one Publisher and one Subscriber. <br /> -It is possible to update rows at the Subscriber<br /> -This topology is best suited for server environments requiring high availability and read scalability.<br /><br />For more information, see [Updatable Subscriptions](../../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md).|  
-|Peer-to-peer topology|The characteristics of this publication type are:<br /> - Each location has identical data and acts as both a Publisher and Subscriber.<br /> - The same row can be changed only at one location at a time.<br /> - Supports [conflict detection](../../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)  <br />- This topology is best suited for server environments requiring high availability and read scalability.<br /><br />For more information, see [Peer-to-Peer Transactional Replication](../../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md).|  
+|Peer-to-peer topology|The characteristics of this publication type are:<br /> - Each location has identical data and acts as both a Publisher and Subscriber.<br /> - The same row can be changed in only one location at a time. <br/> - Supports [conflict detection](../../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)  <br />- This topology is best suited for server environments requiring high availability and read scalability.<br /><br />For more information, see [Peer-to-Peer Transactional Replication](../../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md).|  
 |Bidirectional transactional replication|The characteristics of this publication type are:<br />Bidirectional replication is similar to Peer-to-Peer replication, however, it does not provide conflict resolution. Additionally, bidirectional replication is limited to 2 servers. <br /><br /> For more information, see [Bidirectional Transactional Replication](../../../relational-databases/replication/transactional/bidirectional-transactional-replication.md) |  
   
   

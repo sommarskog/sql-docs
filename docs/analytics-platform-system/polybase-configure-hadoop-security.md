@@ -1,14 +1,13 @@
 ---
 title: "Configure PolyBase Hadoop security"
-description: Provides a reference for various configuration settings that affect APS PolyBase connectivity to Hadoop. 
-author: mzaman1 
-ms.prod: sql
-ms.technology: data-warehouse
-ms.topic: conceptual
-ms.date: 10/26/2018
-ms.author: murshedz
+description: Provides a reference for various configuration settings that affect APS PolyBase connectivity to Hadoop.
+author: charlesfeddersen
+ms.author: charlesf
 ms.reviewer: martinle
-ms.custom: seo-dt-2019
+ms.date: 10/26/2018
+ms.service: sql
+ms.subservice: data-warehouse
+ms.topic: conceptual
 ---
 # Configure PolyBase Hadoop security
 

@@ -1,14 +1,16 @@
 ---
 title: Database Project Settings
 description: Learn about database project settings. See how to use these settings to control aspects of your database, debugging, and build configurations.
-ms.prod: sql
-ms.technology: ssdt
+author: markingmyname
+ms.author: maghan
+ms.date: 02/09/2017
+ms.service: sql
+ms.subservice: ssdt
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql.data.tools.DebugProperties"
   - "sql.data.tools.dacsettings.dialog"
   - "sql.data.tools.dbsqlclrlanguagevb"
-  - "SQL.DATA.TOOLS.DBADVANCEDBUILDSETTINGSCS"
   - "sql.data.tools.dbadvancedbuildsettingscs"
   - "ql.data.tools.criticalerror.dialog"
   - "sql.data.tools.dbassemblysigningchangekeypassword"
@@ -34,12 +36,8 @@ f1_keywords:
   - "sql.data.tools.csadvancedsettings.dialog"
   - "sql.data.tools.dbassemblyinfo"
   - "sql.data.tools.extendedpropertieseditor.dialog"
-ms.assetid: 34418730-1aaa-4948-aee2-8f1e62cda85c
-author: markingmyname
-ms.author: maghan
-ms.reviewer: “”
-ms.custom: seo-lt-2019
-ms.date: 02/09/2017
+dev_langs:
+  - "TSQL"
 ---
 
 # Database Project Settings
@@ -70,7 +68,7 @@ You use database project settings to control aspects of your database, debugging
   
 1.  In **Solution Explorer**, right-click the database project for which you want to configure properties, and select **Properties**.  
   
-    Alternatively, double click the **Properties** node of the project in **Solution Explorer**.  
+    Alternatively, double-click the **Properties** node of the project in **Solution Explorer**.  
   
 2.  The properties sheet for your database project appears.  
   

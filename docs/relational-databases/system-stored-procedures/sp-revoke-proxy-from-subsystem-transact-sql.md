@@ -1,30 +1,26 @@
 ---
+title: "sp_revoke_proxy_from_subsystem (Transact-SQL)"
 description: "sp_revoke_proxy_from_subsystem (Transact-SQL)"
-title: "sp_revoke_proxy_from_subsystem (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_revoke_login_from_subsystem"
-  - "sp_revoke_login_from_subsystem_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_revoke_proxy_from_subsystem"
-ms.assetid: b87bc8ba-3ea8-4aed-b54b-32c3d82d9d2a
 author: VanMSFT
 ms.author: vanto
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_revoke_login_from_subsystem"
+  - "sp_revoke_login_from_subsystem_TSQL"
+helpviewer_keywords:
+  - "sp_revoke_proxy_from_subsystem"
+dev_langs:
+  - "TSQL"
 ---
 # sp_revoke_proxy_from_subsystem (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Revokes access to a subsystem from a proxy.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -49,7 +45,7 @@ sp_revoke_proxy_from_subsystem
   
 |Value|Description|  
 |-----------|-----------------|  
-|**2**|ActiveX Script<br /><br /> **\*\* Important \*\*** The ActiveX Scripting subsystem will be removed from [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent in a future version of [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Avoid using this feature in new development work, and plan to modify applications that currently use this feature.|  
+|**2**|ActiveX Script<br /><br /> **\*\* Important \*\*** The ActiveX Scripting subsystem will be removed from [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent in a future version of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Avoid using this feature in new development work, and plan to modify applications that currently use this feature.|  
 |**3**|Operating System (CmdExec)|  
 |**4**|Replication Snapshot Agent|  
 |**5**|Replication Log Reader Agent|  

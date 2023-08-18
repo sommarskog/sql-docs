@@ -1,10 +1,11 @@
 ---
 author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: randolphwest
+ms.date: 02/17/2023
 ms.service: sql
 ms.topic: include
-ms.date: 06/11/2020
-ms.author: mikeray
 ---
 
-<Token>![yes](../media/yes-icon.png) `azdata`</Token>
+:::image type="icon" source="../media/yes-icon.svg" border="false"::: Azure Data CLI (`azdata`)
 

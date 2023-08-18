@@ -1,21 +1,17 @@
 ---
-description: "ALTER INDEX (Selective XML Indexes)"
-title: "ALTER INDEX (Selective XML Indexes) | Microsoft Docs"
-ms.custom: ""
+title: "ALTER INDEX (Selective XML Indexes)"
+description: ALTER INDEX (Selective XML Indexes)
+author: markingmyname
+ms.author: maghan
 ms.date: "05/01/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-dev_langs: 
+dev_langs:
   - "TSQL"
-ms.assetid: cca96a8f-7737-42d2-bbcc-03d5f858dcc1
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 ---
 # ALTER INDEX (Selective XML Indexes)
-[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Modifies an existing selective XML index. The ALTER INDEX statement changes one or more of the following items:  
   
@@ -27,7 +23,7 @@ ms.author: wiassaf
   
  You cannot alter secondary selective XML indexes. For more information, see [Create, Alter, and Drop Secondary Selective XML Indexes](../../relational-databases/xml/create-alter-and-drop-secondary-selective-xml-indexes.md).  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

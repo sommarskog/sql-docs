@@ -1,23 +1,18 @@
 ---
-description: "Save Change Script Dialog Box (Visual Database Tools)"
 title: Save Change Script Dialog Box
-ms.custom: seo-lt-2019
-ms.date: 01/19/2017
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
-ms.topic: conceptual
-f1_keywords: 
-  - "vdt.dlgbox.generatechangescript"
-  - "vdtsql.chm:65544"
-ms.assetid: fc9d1639-5efa-44fe-a04f-4d4d0def2833
+description: "Save Change Script Dialog Box (Visual Database Tools)"
 author: markingmyname
 ms.author: maghan
-ms.reviewer: 
-
+ms.date: 01/19/2017
+ms.service: sql
+ms.subservice: ssms
+ms.topic: conceptual
+f1_keywords:
+  - "vdt.dlgbox.generatechangescript"
+  - "vdtsql.chm:65544"
 ---
 # Save Change Script Dialog Box (Visual Database Tools)
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server](../../includes/applies-to-version/sqlserver.md)]
 This dialog box shows the [!INCLUDE[tsql](../../includes/tsql-md.md)] script for the changes you have made since you last saved the table. It also allows you to save the script to a text file at a location you choose.  
   
 You can access this dialog box after you have made unsaved changes to a table in Table Designer. On the **Table Designer** menu, click **Generate Change Script**.  

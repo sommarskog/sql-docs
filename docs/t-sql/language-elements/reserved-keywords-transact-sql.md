@@ -1,32 +1,28 @@
 ---
+title: "Reserved Keywords (Transact-SQL)"
 description: "Reserved Keywords (Transact-SQL)"
-title: "Reserved Keywords (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "ODBC function calls"
   - "keywords [SQL Server], reserved"
   - "reserved words [SQL Server]"
   - "keywords [SQL Server]"
-ms.assetid: ed8b3e27-6796-40f0-aef3-0cac5e0e2418
-author: cawrites
-ms.author: chadam
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+dev_langs:
+  - "TSQL"
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-mi-current ||=fabric"
 ---
 
 # Reserved Keywords (Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw.md)]
 
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uses reserved keywords for defining, manipulating, and accessing databases. Reserved keywords are part of the grammar of the [!INCLUDE[tsql](../../includes/tsql-md.md)] language that is used by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to parse and understand [!INCLUDE[tsql](../../includes/tsql-md.md)] statements and batches. Although it is syntactically possible to use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] reserved keywords as identifiers and object names in [!INCLUDE[tsql](../../includes/tsql-md.md)] scripts, you can do this only by using delimited identifiers.  
   
- The following table lists [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] reserved keywords.  
+ The following table lists [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] reserved keywords.  
 
 :::row:::
     :::column:::
@@ -711,7 +707,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 :::row-end:::
 
   
-The following table lists reserved keywords that are exclusive to **[!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]**.
+The following table lists reserved keywords that are exclusive to **[!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]**.
   
 :::row:::
     :::column:::

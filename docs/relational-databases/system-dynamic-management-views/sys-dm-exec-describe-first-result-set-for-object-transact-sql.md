@@ -1,33 +1,29 @@
 ---
-description: "sys.dm_exec_describe_first_result_set_for_object (Transact-SQL)"
-title: "sys.dm_exec_describe_first_result_set_for_object (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.dm_exec_describe_first_result_set_for_object (Transact-SQL)"
+description: sys.dm_exec_describe_first_result_set_for_object (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "06/10/2016"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.dm_exec_describe_first_result_set_for_object_TSQL"
   - "sys.dm_exec_describe_first_result_set_for_object"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.dm_exec_describe_first_result_set_for_object catalog view"
-ms.assetid: 63b0fde7-95d7-4ad7-a219-a9feacf1bd89
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+dev_langs:
+  - "TSQL"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_exec_describe_first_result_set_for_object (Transact-SQL)
-[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   This dynamic management function takes an @object_id as a parameter and describes the first result metadata for the module with that ID. The @object_id specified can be the ID of a [!INCLUDE[tsql](../../includes/tsql-md.md)] stored procedure or a [!INCLUDE[tsql](../../includes/tsql-md.md)] trigger. If it is the ID of any other object (such as a view, table, function, or CLR procedure), an error will be specified in the error columns of the result.  
   
  **sys.dm_exec_describe_first_result_set_for_object** has the same result set definition as [sys.dm_exec_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md) and is similar to [sp_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md).  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -136,7 +132,7 @@ GO
  The following example uses both the sys.procedures system catalog view and the **sys.dm_exec_describe_first_result_set_for_object** function to display metadata for the result sets of all stored procedures in the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database.  
   
 ```  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
   
 SELECT p.name, r.*   

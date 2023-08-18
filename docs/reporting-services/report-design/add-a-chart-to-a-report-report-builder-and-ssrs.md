@@ -1,19 +1,19 @@
 ---
-title: "Add a Chart to a Report (Report Builder) | Microsoft Docs"
+title: "Add a chart to a paginated report"
 description: Learn how to add a chart to a paginated report when you want to summarize data in a visual format in Report Builder.
-ms.date: 03/03/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-design
-
-
-ms.topic: conceptual
-ms.assetid: a6b595dc-f775-4a53-8554-74a0bf9335ec
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 03/03/2017
+ms.service: reporting-services
+ms.subservice: report-design
+ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
-# Add a Chart to a Report (Report Builder and SSRS)
-  When you want to summarize data in a visual format in a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] paginated report, use a Chart data region. It is important to choose an appropriate chart type for the type of data that you are presenting. This affects how well the data can be interpreted when put in chart form. For more information, see [Charts &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md).  
+# Add a chart to a paginated report (Report Builder)
+
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-ssrs-rb](../../includes/ssrs-appliesto-ssrs-rb.md)] [!INCLUDE [ssrs-appliesto-pbi-rb](../../includes/ssrs-appliesto-pbi-rb.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
+
+When you want to summarize data in a visual format in a paginated report, use a Chart data region. It is important to choose an appropriate chart type for the type of data that you are presenting. This affects how well the data can be interpreted when put in chart form. For more information, see [Charts &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md).  
   
  The simplest way to add a Chart data region to your report is to run the New Chart Wizard. The wizard offers column, line, pie, bar, and area charts. For these and other chart types, you can also add a chart manually.  
   
@@ -39,13 +39,14 @@ ms.author: maggies
   
 1.  Create a report and define a dataset. For more information, see [Report Datasets &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md).  
   
-2.  On the **Insert** tab, click **Chart**, and then click **Insert Chart**.  
+2.  On the **Insert** tab, select **Chart**, and then select **Insert Chart**.  
+
   
-3.  Click on the design surface where you want the upper-left corner of the chart, and then drag to where you want the lower-right corner of the chart.  
+3.  Select the design surface where you want the upper-left corner of the chart, and then drag to where you want the lower-right corner of the chart.  
   
      The **Select Chart Type** dialog box appears.  
   
-4.  Select the type of chart you want to add. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+4.  Select the type of chart you want to add. Select **OK**.
   
 5.  Click the chart to display the **Chart Data** pane.  
   
@@ -53,7 +54,7 @@ ms.author: maggies
   
 7.  Add a grouping field to the **Category Groups** area. When you add this field to the **Category Groups** area, a grouping field is automatically created for you. Each group represents a data point in your series.  
   
-8.  To summarize the data by category, right-click the data field and click **Series Properties**. In the **Category** box, select the category field from the drop-down list. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+8.  To summarize the data by category, right-click the data field and click **Series Properties**. In the **Category** box, select the category field from the drop-down list. Select **OK**.
   
 9. On the **Home** tab, click **Run** to see the rendered report.  
   

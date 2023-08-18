@@ -1,21 +1,21 @@
 ---
-title: "Add Custom Locations to a Map (Report Builder) | Microsoft Docs"
-description:  Learn how to add custom locations to a map you have added to a paginated report in Report Builder. 
-ms.date: 03/07/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-design
-
-
-ms.topic: conceptual
-f1_keywords: 
-  - "MICROSOFT.REPORTDESIGNER.MAPPOINT.POINTTEMPLATE"
-ms.assetid: 7d36faae-5bcc-446a-9eba-f42349cafacb
+title: "Add custom locations to a map in a paginated report"
+description: Learn how to add custom locations to a map you have added to a paginated report in Report Builder.
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 03/07/2017
+ms.service: reporting-services
+ms.subservice: report-design
+ms.topic: conceptual
+ms.custom: updatefrequency5
+f1_keywords:
+  - "MICROSOFT.REPORTDESIGNER.MAPPOINT.POINTTEMPLATE"
 ---
-# Add Custom Locations to a Map (Report Builder and SSRS)
-  After you add a map to a [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] paginated report, you can add your own point locations.  
+# Add custom locations to a map in a paginated report (Report Builder)
+
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-ssrs-rb](../../includes/ssrs-appliesto-ssrs-rb.md)] [!INCLUDE [ssrs-appliesto-pbi-rb](../../includes/ssrs-appliesto-pbi-rb.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
+
+  After you add a map to a paginated report, you can add your own point locations.  
   
  Display properties for all points on a layer are controlled by setting options for the point properties for the layer. For a selected embedded point, you can override the display properties.  
   

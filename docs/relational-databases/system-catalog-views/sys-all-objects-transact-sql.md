@@ -1,28 +1,25 @@
 ---
-description: "sys.all_objects (Transact-SQL)"
-title: "sys.all_objects (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.all_objects (Transact-SQL)"
+description: sys.all_objects (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "05/20/2020"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.all_objects"
   - "all_objects_TSQL"
   - "all_objects"
   - "sys.all_objects_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.all_objects catalog view"
-ms.assetid: 547e4be4-a8e4-48ce-9d8d-37b169985081
-author: WilliamDAssafMSFT
-ms.author: wiassaf
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+dev_langs:
+  - "TSQL"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=fabric"
 ---
 # sys.all_objects (Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw.md)]
 
   Shows the UNION of all schema-scoped user-defined objects and system objects.  
   

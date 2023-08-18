@@ -1,19 +1,16 @@
 ---
+title: "VERIFYSIGNEDBYCERT (Transact-SQL)"
 description: "VERIFYSIGNEDBYCERT (Transact-SQL)"
-title: "VERIFYSIGNEDBYCERT (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: VanMSFT
+ms.author: vanto
 ms.date: "03/06/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "VERIFYSIGNEDBYCERT"
   - "VERIFYSIGNEDBYCERT_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "digitally signed data for changes [SQL Server]"
   - "verifying digitally signed data for changes"
   - "testing digitally signed data for changes"
@@ -21,16 +18,15 @@ helpviewer_keywords:
   - "VERIFYSIGNEDBYCERT"
   - "signatures [SQL Server]"
   - "digital signatures [SQL Server]"
-ms.assetid: 4e041f33-60c4-4190-91c7-220d51dd6c8f
-author: VanMSFT
-ms.author: vanto
+dev_langs:
+  - "TSQL"
 ---
 # VERIFYSIGNEDBYCERT (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Tests whether digitally signed data has been changed since it was signed.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -69,7 +65,7 @@ VerifySignedByCert( Cert_ID , signed_data , signature )
 ```sql
 SELECT Data, VerifySignedByCert( Cert_Id( 'Shipping04' ),  
     Signed_Data, DataSignature ) AS IsSignatureValid  
-FROM [AdventureWorks2012].[SignedData04]   
+FROM [AdventureWorks2022].[SignedData04]   
 WHERE Description = N'data signed by certificate ''Shipping04''';  
 GO  
 ```  
@@ -78,7 +74,7 @@ GO
  This query returns only records that have not been changed since they were signed using certificate `Shipping04`.  
   
 ```sql
-SELECT Data FROM [AdventureWorks2012].[SignedData04]   
+SELECT Data FROM [AdventureWorks2022].[SignedData04]   
 WHERE VerifySignedByCert( Cert_Id( 'Shipping04' ), Data,   
     DataSignature ) = 1   
 AND Description = N'data signed by certificate ''Shipping04''';  

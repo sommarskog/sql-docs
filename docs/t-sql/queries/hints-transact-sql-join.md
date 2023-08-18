@@ -1,46 +1,42 @@
 ---
+title: "Join Hints (Transact-SQL)"
 description: "Hints (Transact-SQL) - Join"
-title: "Join Hints (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: VanMSFT
+ms.author: vanto
 ms.date: "08/09/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "Join Hint"
   - "Join_Hint_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "HASH join hint"
   - "REMOTE join hint"
   - "LOOP join hint"
   - "join hints"
   - "MERGE join hint"
   - "hints [SQL Server], join"
-ms.assetid: 09069f4a-f2e3-4717-80e1-c0110058efc4
-author: VanMSFT
-ms.author: vanto
+dev_langs:
+  - "TSQL"
 ---
 # Hints (Transact-SQL) - Join
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Join hints specify that the query optimizer enforce a join strategy between two tables in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]. For general information about joins and join syntax, see [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md).  
   
 > [!CAUTION]  
 >  Because the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] query optimizer typically selects the best execution plan for a query, we recommend that hints be used only as a last resort by experienced developers and database administrators.
   
- **Applies to:**  
+#### Applies to
   
- [DELETE](../../t-sql/statements/delete-transact-sql.md)  
+- [DELETE](../../t-sql/statements/delete-transact-sql.md)  
   
- [SELECT](../../t-sql/queries/select-transact-sql.md)  
+- [SELECT](../../t-sql/queries/select-transact-sql.md)  
   
- [UPDATE](../../t-sql/queries/update-transact-sql.md)  
+- [UPDATE](../../t-sql/queries/update-transact-sql.md)  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

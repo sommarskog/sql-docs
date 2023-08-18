@@ -1,23 +1,19 @@
 ---
-description: "MSreplmonthresholdmetrics (Transact-SQL)"
-title: "MSreplmonthresholdmetrics (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "MSreplmonthresholdmetrics (Transact-SQL)"
+description: MSreplmonthresholdmetrics (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "03/04/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: replication
+ms.service: sql
+ms.subservice: replication
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "msreplmonthresholdmetrics_TSQL"
   - "msreplmonthresholdmetrics"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "MSreplmonthresholdmetrics system table"
-ms.assetid: 0cc9b40a-36ce-485b-9bc2-d4abd5aa6727
-author: cawrites
-ms.author: chadam
+dev_langs:
+  - "TSQL"
 ---
 # MSreplmonthresholdmetrics (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

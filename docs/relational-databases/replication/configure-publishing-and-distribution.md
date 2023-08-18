@@ -1,20 +1,17 @@
 ---
-title: "Configure Publishing and Distribution | Microsoft Docs"
+title: "Configure Publishing and Distribution"
 description: Learn how to configure publishing and distribution in SQL Server by using SQL Server Management Studio, Transact-SQL, or Replication Management Objects.
-ms.custom: ""
-ms.date: "09/23/2018"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: replication
-ms.topic: conceptual
-helpviewer_keywords:
- - "replication [SQL Server], distribution"
- - "distribution configuration [SQL Server replication]"
- - "publishing [SQL Server replication], configuring"
-ms.assetid: 3cfc8966-833e-42fa-80cb-09175d1feed7
 author: "MashaMSFT"
 ms.author: "mathoma"
+ms.date: "09/23/2018"
+ms.service: sql
+ms.subservice: replication
+ms.topic: conceptual
+ms.custom: updatefrequency5
+helpviewer_keywords:
+  - "replication [SQL Server], distribution"
+  - "distribution configuration [SQL Server replication]"
+  - "publishing [SQL Server replication], configuring"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # Configure Publishing and Distribution
@@ -127,7 +124,8 @@ The following example demonstrates how to configure publishing and distribution 
 
 5. Install the Distributor by calling the <xref:Microsoft.SqlServer.Replication.ReplicationServer.InstallDistributor%2A> method. Specify a secure password (used by the Publisher when connecting to the remote Distributor) and the <xref:Microsoft.SqlServer.Replication.DistributionDatabase> object from step 3. For more information, see [Secure the Distributor](../../relational-databases/replication/security/secure-the-distributor.md).
 
-   > `IMPORTANT!!` When possible, prompt users to enter security credentials at runtime. If you must store credentials, use the [cryptographic services](/previous-versions/aa719848(v=vs.71)) provided by the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows .NET Framework.
+   > [!IMPORTANT]  
+   > When possible, prompt users to enter security credentials at runtime. If you must store credentials, use the [cryptographic services](/previous-versions/aa719848(v=vs.71)) provided by the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows .NET Framework.
 
 6. Create an instance of the <xref:Microsoft.SqlServer.Replication.DistributionPublisher> class.
 

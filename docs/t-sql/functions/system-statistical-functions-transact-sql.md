@@ -1,25 +1,21 @@
 ---
+title: "System Statistical Functions (Transact-SQL)"
 description: "System Statistical Functions (Transact-SQL)"
-title: "System Statistical Functions (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "03/15/2017"
-ms.prod: sql
-ms.prod_service: "sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "statistical functions [SQL Server]"
   - "system statistical functions [SQL Server]"
   - "functions [SQL Server], statistical"
-ms.assetid: 45828c67-1b9a-4653-bb24-86246084d8ba
-author: julieMSFT
-ms.author: jrasnick
+dev_langs:
+  - "TSQL"
 ---
 # System Statistical Functions (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdbmi.md)]
 
   The following scalar functions return statistical information about the system:  
 

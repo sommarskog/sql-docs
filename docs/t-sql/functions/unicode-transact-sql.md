@@ -1,33 +1,29 @@
 ---
+title: "UNICODE (Transact-SQL)"
 description: "UNICODE (Transact-SQL)"
-title: "UNICODE (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "UNICODE"
   - "UNICODE_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "first character of input expression [SQL Server]"
   - "UNICODE function"
   - "Unicode [SQL Server], UNICODE function"
-ms.assetid: 5e3c40b2-8401-4741-9f2a-bae70eaa4da6
-author: julieMSFT
-ms.author: jrasnick
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+dev_langs:
+  - "TSQL"
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-mi-current||=fabric"
 ---
 # UNICODE (Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw.md)]
 
   Returns the integer value, as defined by the Unicode standard, for the first character of the input expression.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -45,12 +41,12 @@ Is an **nchar** or **nvarchar** expression.
 **int**  
   
 ## Remarks  
-In versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] earlier than [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], the UNICODE function returns a UCS-2 codepoint in the range 000000 through 00FFFF which is capable of representing the 65,535 characters in the Unicode Basic Multilingual Plane (BMP). Starting with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], when using [Supplementary Character (SC)](../../relational-databases/collations/collation-and-unicode-support.md#Supplementary_Characters) enabled collations, UNICODE returns a UTF-16 codepoint in the range 000000 through 10FFFF. For more information on Unicode support in the [!INCLUDE[ssde_md](../../includes/ssde_md.md)], see [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md#Unicode_Defn). 
+In versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] earlier than [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and in [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], the UNICODE function returns a UCS-2 codepoint in the range 000000 through 00FFFF which is capable of representing the 65,535 characters in the Unicode Basic Multilingual Plane (BMP). Starting with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], when using [Supplementary Character (SC)](../../relational-databases/collations/collation-and-unicode-support.md#Supplementary_Characters) enabled collations, UNICODE returns a UTF-16 codepoint in the range 000000 through 10FFFF. For more information on Unicode support in the [!INCLUDE[ssDE-md](../../includes/ssde-md.md)], see [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md#Unicode_Defn). 
   
 ## Examples  
   
 ### A. Using UNICODE and the NCHAR function  
- The following example uses the `UNICODE` and `NCHAR` functions to print the UNICODE value of the first character of the `Åkergatan` 24-character string, and to print the actual first character, `Å`.  
+ The following example uses the `UNICODE` and `NCHAR` functions to print the UNICODE value of the first character of the string `Åkergatan 24`, and to print the actual first character, `Å`.  
   
 ```sql  
 DECLARE @nstring NCHAR(12);  

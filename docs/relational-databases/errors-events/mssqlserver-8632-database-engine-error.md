@@ -1,17 +1,15 @@
 ---
-description: "MSSQLSERVER_8632"
 title: MSSQLSERVER_8632
-ms.custom: ""
-ms.date: 10/27/2020
-ms.prod: sql
-ms.reviewer: ramakoni1, pijocoder, suresh-kandoth, vencher, tejasaks, docast
-ms.technology: supportability
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "8632 (Database Engine error)"
-ms.assetid: 
+description: "MSSQLSERVER_8632"
 author: suresh-kandoth
-ms.author: ramakoni
+ms.author: sureshka
+ms.reviewer: vencher, tejasaks, docast
+ms.date: 10/27/2020
+ms.service: sql
+ms.subservice: supportability
+ms.topic: "reference"
+helpviewer_keywords:
+  - "8632 (Database Engine error)"
 ---
 # MSSQLSERVER_8632
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -26,7 +24,6 @@ ms.author: ramakoni
 |Component|SQLEngine|
 |Symbolic Name|QUERY_EXPRESSION_TOO_COMPLEX|
 |Message Text|Internal error: An expression services limit has been reached. Please look for potentially complex expressions in your query, and try to simplify them.|
-||
 
 ## Explanation
 

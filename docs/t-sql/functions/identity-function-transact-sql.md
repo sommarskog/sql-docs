@@ -1,37 +1,33 @@
 ---
+title: "IDENTITY (Function) (Transact-SQL)"
 description: "IDENTITY (Function) (Transact-SQL)"
-title: "IDENTITY (Function) (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: VanMSFT
+ms.author: vanto
 ms.date: "03/06/2017"
-ms.prod: sql
-ms.prod_service: "sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "IDENTITY_TSQL"
   - "IDENTITY"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "IDENTITY function"
   - "SELECT statement [SQL Server], IDENTITY function"
   - "inserting identity columns"
   - "columns [SQL Server], creating"
   - "identity columns [SQL Server], IDENTITY function"
-ms.assetid: ebec77eb-fc02-4feb-b6c5-f0098d43ccb6
-author: VanMSFT
-ms.author: vanto
+dev_langs:
+  - "TSQL"
 ---
 # IDENTITY (Function) (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Is used only in a SELECT statement with an INTO *table* clause to insert an identity column into a new table. Although similar, the IDENTITY function is not the IDENTITY property that is used with CREATE TABLE and ALTER TABLE.  
   
 > [!NOTE]  
 >  To create an automatically incrementing number that can be used in multiple tables or that can be called from applications without referencing any table, see [Sequence Numbers](../../relational-databases/sequence-numbers/sequence-numbers.md).  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -76,12 +72,12 @@ FROM OldTable;
  The following example inserts all rows from the `Contact` table from the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]database into a new table called `NewContact`. The IDENTITY function is used to start identification numbers at 100 instead of 1 in the `NewContact` table.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 IF OBJECT_ID (N'Person.NewContact', N'U') IS NOT NULL  
     DROP TABLE Person.NewContact;  
 GO  
-ALTER DATABASE AdventureWorks2012 SET RECOVERY BULK_LOGGED;  
+ALTER DATABASE AdventureWorks2022 SET RECOVERY BULK_LOGGED;  
 GO  
 SELECT  IDENTITY(smallint, 100, 1) AS ContactNum,  
         FirstName AS First,  
@@ -89,7 +85,7 @@ SELECT  IDENTITY(smallint, 100, 1) AS ContactNum,
 INTO Person.NewContact  
 FROM Person.Person;  
 GO  
-ALTER DATABASE AdventureWorks2012 SET RECOVERY FULL;  
+ALTER DATABASE AdventureWorks2022 SET RECOVERY FULL;  
 GO  
 SELECT ContactNum, First, Last FROM Person.NewContact;  
 GO  

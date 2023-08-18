@@ -1,14 +1,14 @@
 ---
-title: "Change Map Legends-Color Scale-Associated Rules in Report Builder-SSRS | Microsoft Docs"
-description: Learn how to change map legends to help users interpret the data visualization on maps in Report Builder. 
+title: "Change map legends-color scale-associated rules in a paginated report"
+description: Learn how to change map legends in a paginated report to help users interpret the data visualization on maps in Report Builder.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 03/07/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-design
-
-
+ms.service: reporting-services
+ms.subservice: report-design
 ms.topic: conceptual
-f1_keywords: 
+ms.custom: updatefrequency5
+f1_keywords:
   - "sql13.rtp.rptdesigner.mapcolorscaleproperties.labels.f1"
   - "sql13.rtp.rptdesigner.mappointlayerproperties.typerules.f1"
   - "sql13.rtp.rptdesigner.shared.maprulesdistribution.f1"
@@ -31,12 +31,12 @@ f1_keywords:
   - "sql13.rtp.rptdesigner.maplegendproperties.general.f1"
   - "10540"
   - "10517"
-ms.assetid: a1d691b2-c5ae-420f-af60-b7c54a7385a4
-author: maggiesMSFT
-ms.author: maggies
 ---
-# Change Map Legends, Color Scale, and Associated Rules (Report Builder and SSRS)
-  In a [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] paginated report, a map can contain map legends, a color scale, and a distance scale. These parts of a map help users interpret the data visualization on the map.  
+# Change map legends, color scale, and associated rules in a paginated report (Report Builder)
+
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-ssrs-rb](../../includes/ssrs-appliesto-ssrs-rb.md)] [!INCLUDE [ssrs-appliesto-pbi-rb](../../includes/ssrs-appliesto-pbi-rb.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
+
+  In a paginated report, a map can contain map legends, a color scale, and a distance scale. These parts of a map help users interpret the data visualization on the map.  
   
  Legends include the following parts of a map:  
   
@@ -58,7 +58,7 @@ ms.author: maggies
   
 3.  To display the legend outside the viewport, select **Show \<report item> outside viewport**.  
   
-4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+4.  Select **OK**.
   
     > [!NOTE]  
     >  In preview, map legends and the color scale appear only when there are results from the rules related to that legend. If there are no items to display, the legend does not appear in the rendered report.  
@@ -71,7 +71,7 @@ ms.author: maggies
   
 2.  In **Legend layout**, click the table layout that you want to use for the legend. As you click different options, the layout on the design surface changes.  
   
-3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+3.  Select **OK**.
   
 ##  <a name="MapLegendTitle"></a> To show or hide a map legend title  
   
@@ -104,7 +104,7 @@ ms.author: maggies
   
 4.  In the **Show in this legend** drop-down list, click the name of the legend to display the rule results in.  
   
-5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+5.  Select **OK**.
   
 ##  <a name="TemplateStyle"></a> To vary map element colors based on a template style  
   
@@ -118,7 +118,7 @@ ms.author: maggies
   
      A template style specifies font, border style, and color palette. Each map element is assigned a different color from the color palette for the theme that was specified in the Map Wizard or Map Layer Wizard. This is the only option that applies to layers that do not have associated analytical data.  
   
-4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+4.  Select **OK**.
   
 ##  <a name="ColorPalette"></a> To vary map element colors based on color palette  
   
@@ -136,7 +136,7 @@ ms.author: maggies
   
 5.  In **Palette**, from the drop-down list, select the name of the palette to use.  
   
-6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+6.  Select **OK**.
   
 ##  <a name="ColorRanges"></a> To vary map element colors based on color ranges  
   
@@ -158,7 +158,7 @@ ms.author: maggies
   
 7.  In **End color**, specify the color to use for the highest range.  
   
-8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+8.  Select **OK**.
   
 ##  <a name="CustomColors"></a> To vary map element colors based on custom colors  
   
@@ -176,7 +176,7 @@ ms.author: maggies
   
 5.  In **Custom colors**, click **Add** to specify each custom color.  
   
-6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+6.  Select **OK**.
   
 ##  <a name="DistributionOptions"></a> To set distribution options for a legend  
   
@@ -208,7 +208,7 @@ ms.author: maggies
   
 8.  In **Range end**, type a maximum range value. All values larger than this number are the same as the range maximum.  
   
-9. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+9. Select **OK**.
   
 ##  <a name="RuleLegend"></a> To change the contents of a rule legend  
   
@@ -229,7 +229,7 @@ ms.author: maggies
   
 6.  In **Show in this legend**, select the map legend to use to display the rule results.  
   
-7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+7.  Select **OK**.
   
 ##  <a name="ColorScale"></a> To change the contents of the color scale  
   
@@ -250,7 +250,7 @@ ms.author: maggies
   
 6.  In **Color scale options**, select **Show in color scale** to display the rule results in the color scale. You can specify this option for more than one color rule.  
   
-7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+7.  Select **OK**.
   
 ##  <a name="HideItems"></a> To remove all items from a legend  
   
@@ -262,7 +262,7 @@ ms.author: maggies
   
 3.  Click **Legend**.  
   
-4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+4.  Select **OK**.
   
 ##  <a name="ChangeFormatItems"></a> To change the format of content in a legend  
  Set legend options for the rule that is associated with the map legend.  
@@ -277,7 +277,7 @@ ms.author: maggies
   
 4.  **Legend text** displays keywords that specify which data appears in the legend. Use map keywords and custom formats to help control the format of legend text. For example, #FROMVALUE {C2} specifies a currency format with two decimal places. For more information, see [Vary Polygon, Line, and Point Display by Rules and Analytical Data &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/vary-polygon-line-and-point-display-by-rules-and-analytical-data.md).  
   
-5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+5.  Select **OK**.
   
 ## See Also  
  [Maps &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)   

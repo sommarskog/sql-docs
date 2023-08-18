@@ -1,33 +1,29 @@
 ---
+title: "MIN_ACTIVE_ROWVERSION (Transact-SQL)"
 description: "MIN_ACTIVE_ROWVERSION (Transact-SQL)"
-title: "MIN_ACTIVE_ROWVERSION (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: markingmyname
+ms.author: maghan
 ms.date: "03/03/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "MIN_ACTIVE_ROWVERSION"
   - "MIN_ACTIVE_ROWVERSION_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "MIN_ACTIVE_ROWVERSION function [Transact-SQL]"
-ms.assetid: 87c89547-8ea1-4820-b75e-36be683e4e10
-author: cawrites
-ms.author: chadam
+dev_langs:
+  - "TSQL"
 ---
 # MIN_ACTIVE_ROWVERSION (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Returns the lowest active **rowversion** value in the current database. A **rowversion** value is active if it is used in a transaction that has not yet been committed. For more information, see [rowversion &#40;Transact-SQL&#41;](../../t-sql/data-types/rowversion-transact-sql.md).  
   
 > [!NOTE]  
 >  The **rowversion** data type is also known as **timestamp**.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

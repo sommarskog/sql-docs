@@ -1,13 +1,13 @@
 ---
 title: "XML Bulk Load Examples (SQLXML)"
-description: View detailed examples of the XML Bulk Load functionality in SQKXML 4.0 with XSD and XDR schemas for each example. 
+description: View detailed examples of the XML Bulk Load functionality in SQKXML 4.0 with XSD and XDR schemas for each example.
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "03/17/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: xml
+ms.service: sql
+ms.subservice: xml
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "overflow-field annotation"
   - "ConnectionCommand property"
   - "XMLFragment property"
@@ -15,23 +15,6 @@ helpviewer_keywords:
   - "multiple table bulk loading"
   - "examples [SQLXML], XML Bulk Load"
   - "overflow data [SQLXML]"
-  - "sql:datatype"
-  - "transaction mode [SQLXML]"
-  - "CheckConstraints property"
-  - "sql:overflow-field"
-  - "XML Bulk Load [SQLXML], examples"
-  - "TempFilePath property"
-  - "datatype annotation"
-  - "Transaction property"
-  - "KeepIdentity property"
-  - "Execute method"
-  - "streaming XML data"
-  - "xml data type [SQL Server], SQLXML"
-  - "bulk load [SQLXML], examples"
-ms.assetid: 970e4553-b41d-4a12-ad50-0ee65d1f305d
-author: rothja
-ms.author: jroth
-ms.custom: "seo-lt-2019"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # XML Bulk Load Examples (SQLXML 4.0)
@@ -1247,7 +1230,7 @@ End Sub
 <?xml version="1.0" encoding="utf-8" ?>  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
            xmlns:sql="urn:schemas-microsoft-com:mapping-schema"  
-           xmlns="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription">   
+           xmlns="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription">   
   <xsd:element name="ProductModel"  sql:relation="Production.ProductModel" >  
     <xsd:complexType>  
       <xsd:sequence>  

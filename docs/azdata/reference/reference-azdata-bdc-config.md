@@ -1,19 +1,19 @@
 ---
 title: azdata bdc config reference
-titleSuffix: SQL Server big data clusters
+titleSuffix: SQL Server Big Data Clusters
 description: Reference article for azdata bdc config commands.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: seanw
-ms.date: 04/29/2021
+ms.date: 10/05/2021
+ms.service: sql
+ms.subservice: big-data-cluster
 ms.topic: reference
-ms.prod: sql
-ms.technology: big-data-cluster
 ---
 
 # azdata bdc config
 
-Applies to [!INCLUDE [azure-data-cli-azdata](../../includes/azure-data-cli-azdata.md)]
+[!INCLUDE[azdata](../../includes/applies-to-version/azdata.md)]
 
 The following article provides reference for the **sql** commands in the **azdata** tool. For more information about other **azdata** commands, see [azdata reference](reference-azdata.md)
 
@@ -49,9 +49,9 @@ azdata bdc config init --source aks-dev-test --target custom
 ```
 ### Optional Parameters
 #### `--path -p`
-File path of where you would like the config profile placed, defaults to <cwd>/custom.
+File path of where you would like the config profile placed, defaults to \<cwd\>/custom.
 #### `--source -s`
-Config profile source: ['kubeadm-dev-test', 'kubeadm-prod', 'aro-dev-test-ha', 'aro-dev-test', 'aks-dev-test-ha', 'openshift-dev-test', 'aks-dev-test', 'openshift-prod']
+Config profile source: ['kubeadm-dev-test', 'kubeadm-prod', 'openshift-prod', 'aks-dev-test-ha', 'aks-dev-test', 'aro-dev-test', 'openshift-dev-test', 'aro-dev-test-ha']
 #### `--force -f`
 Force overwrite of the target file.
 #### `--accept-eula -a`
@@ -86,7 +86,7 @@ azdata bdc config list --config-profile aks-dev-test
 ```
 ### Optional Parameters
 #### `--config-profile -c`
-Default config profile: ['kubeadm-dev-test', 'kubeadm-prod', 'aro-dev-test-ha', 'aro-dev-test', 'aks-dev-test-ha', 'openshift-dev-test', 'aks-dev-test', 'openshift-prod']
+Default config profile: ['kubeadm-dev-test', 'kubeadm-prod', 'openshift-prod', 'aks-dev-test-ha', 'aks-dev-test', 'aro-dev-test', 'openshift-dev-test', 'aro-dev-test-ha']
 #### `--type -t`
 What config type you would like to see.
 #### `--accept-eula -a`
@@ -127,7 +127,7 @@ azdata bdc config show --config-file custom-config/bdc.json --json-path "$.spec.
 ```
 ### Optional Parameters
 #### `--config-file -c`
-Big data cluster config file path if you don't want the config of the cluster you are currently logged in to, i.e. custom/bdc.json
+Big data cluster config file path if you don't want the config of the cluster you are currently signed-in to, i.e. custom/bdc.json
 #### `--target -t`
 Output file to store the result in. Default: directed to stdout.
 #### `--json-path -j`

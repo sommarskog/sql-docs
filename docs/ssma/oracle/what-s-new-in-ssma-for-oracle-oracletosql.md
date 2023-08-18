@@ -1,20 +1,98 @@
 ---
-title: "What's New in SSMA for Oracle (OracleToSQL) | Microsoft Docs"
+title: "What's New in SSMA for Oracle (OracleToSQL)"
 description: Find out about changes to SQL Server Migration Assistant (SSMA) for Oracle (OracleToSQL) for each release.
-author: nahk-ivanov
-
-ms.prod: sql
-ms.custom: ""
+author: cpichuka
+ms.author: cpichuka
 ms.date: "04/29/2021"
-ms.reviewer: ""
-ms.technology: ssma
+ms.service: sql
+ms.subservice: ssma
 ms.topic: conceptual
-ms.assetid: f305ebb6-7393-4a43-abb3-6332b739d690
-ms.author: alexiva
+ms.custom: intro-whats-new
 ---
 # What's New in SSMA for Oracle (OracleToSQL)
 
 This article lists SQL Server Migration Assistant (SSMA) for Oracle changes in each release.
+## SSMA v9.4
+
+The v9.4 release of SSMA for Oracle contains the following changes:
+ * Add support for BULK COLLECT conversion using bulk emulation function to retrive multiple rows in a single fetch.
+ * Fix for missing subscriptions in migration through migration at scale.
+ * Improve conversion of DECODE function.
+ * Improve conversion for comparison of empty strings with NULL.
+
+## SSMA v9.3
+
+The v9.3 release of SSMA for Oracle contains the following changes:
+  * Add support for SQL Server 2022 target
+
+## SSMA v9.2
+
+The v9.2 release of SSMA for Oracle contains the following changes:
+ * Add Support for legacy unicode string literals
+ * Add Support for arbitary expressions in ESCAPE clause
+ * Conversion Support for EXTRACT(XML) and XMLQUERY
+ * Enhanced data pipeline monitoring for at scale migration
+ * Conversion Support for EXTRACT(XML),EXTRACTVALUE and XMLQUERY
+ * Support for Azure Data Factory (ADF) pipeline monitoring
+
+## SSMA v9.1
+
+The v9.1 release of SSMA for Oracle contains the following changes:
+
+* Support for at scale data migration from Oracle to SQL with integration of Azure Data factory
+* Add support for exclusion of system generated invisble column for conversion and data migration 
+* Improve get help experience
+
+## SSMA v9.0
+
+The v9.0 release of SSMA for Oracle contains the following changes:
+
+* Add support for VARRAY and TABLE  user defined types at schema level
+* Add support for conversion for arguments, parameter and local declaration for user defined types
+
+## SSMA v8.24
+
+The v8.24 release of SSMA for Oracle contains the following changes:
+
+* Add support for LISTAGG function
+* Add support for Oracle compound triggers
+* Improve detection logic for JOIN clause and PIPELINED functions
+* Improve naming for "Save As" statements
+
+## SSMA v8.23
+
+The v8.23 release of SSMA for Oracle contains the following changes:
+
+* Support for mapping of DATE type from Oracle to the SQL Server DATE type in the Type Mapping setting
+* Support for table partition added for Azure SQL Database targets with all table partition mapped to primary filegroup
+* New option "Allow Statements from Files", for adding statements from file system
+* Enhanced XML output when running in console mode
+* New "Feedback" link in reports to send feedback
+* In reports, enhanced visualization experience
+
+## SSMA v8.22
+
+The v8.22 release of SSMA for Oracle contains the following changes:
+
+* Allow to specify additional connection string options for target database connection
+* Introduce summary charts in assessment reports
+* Improve messages navigation in assessment reports
+
+## SSMA v8.21
+
+The v8.21 release of SSMA for Oracle contains the following changes:
+
+* Fix OLE DB connection string mode to respect the provider name
+* Add missing `ssma_oracle.fn_getColEntryByRange` emulation function
+* Use `COUNT_BIG` in row count queries for the target database
+* Add setting to emulate Oracle's empty string behavior in coalesce operations
+
+## SSMA v8.20
+
+The v8.20 release of SSMA for Oracle contains the following changes:
+
+* Add support for partitioned tables
+* Add conversion of SKIP LOCKED clause
 
 ## SSMA v8.19
 
@@ -24,7 +102,7 @@ The v8.19 release of SSMA for Oracle contains the following changes:
 * Improve resolution logic in `SELECT` list when user-defined column names match system functions
 * Ignore system-defined columns (`SYS_STS*`) and indexes (`SYS_IL*`)
 * Fix issue with packages disappearing from the objects tree after reconnect to Oracle database
-* Fix CLR assemblies deployment issue on [!INCLUDE [ssazure](../../includes/ssazure_md.md)] in 32-bit SSMA package
+* Fix CLR assemblies deployment issue on [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] in 32-bit SSMA package
 
 ## SSMA v8.18
 
@@ -148,7 +226,7 @@ In addition, SSMA for Oracle now provides improved parsing of the `XMLTABLE` cla
 
 ## SSMA v8.5
 
-The v8.5 release of SSMA for Oracle is enhanced with support for Azure Active Directory authentication and basic support for JSON features in SQL server, together with a targeted set of fixes designed to improve usability and performance.
+The v8.5 release of SSMA for Oracle is enhanced with support for Azure Active Directory authentication and basic support for JSON features in SQL Server, together with a targeted set of fixes designed to improve usability and performance.
 
 In addition, SSMA for Oracle has been enhanced with support for:
 

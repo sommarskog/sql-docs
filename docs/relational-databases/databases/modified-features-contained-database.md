@@ -1,21 +1,16 @@
 ---
+title: "Modified Features (Contained Database)"
 description: "Modified Features (Contained Database)"
-title: "Modified Features (Contained Database) | Microsoft Docs"
-ms.custom: ""
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: 
+ms.service: sql
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "contained database, modifications to DBs"
-ms.assetid: a2942509-39a2-4903-b504-ae80a300a9de
-author: "stevestein"
-ms.author: "sstein"
 ---
 # Modified Features (Contained Database)
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+ [!INCLUDE [SQL Server Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdbmi.md)]
   The following features have been modified to be supported by a partially contained database. Features are usually modified so they do not cross the database boundary.  
   
  For more information, see [Contained Databases](../../relational-databases/databases/contained-databases.md).  

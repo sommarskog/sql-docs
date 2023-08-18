@@ -1,23 +1,21 @@
 ---
-description: "sys.database_scoped_credentials (Transact-SQL)"
-title: "sys.database_scoped_credentials (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.database_scoped_credentials (Transact-SQL)"
+description: sys.database_scoped_credentials (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "03/27/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics"
-ms.reviewer: ""
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sys.database_scoped_credentials"
   - "sys.database_scoped_credentials_TSQL"
   - "database_scoped_credentials"
   - "database_scoped_credentials_TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.database_scoped_credentials catalog view"
-ms.assetid: 68e8aa6b-bcdc-42aa-93d8-d498f724c188
-author: VanMSFT
-ms.author: vanto
+dev_langs:
+  - "TSQL"
 monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.database_scoped_credentials (Transact-SQL)

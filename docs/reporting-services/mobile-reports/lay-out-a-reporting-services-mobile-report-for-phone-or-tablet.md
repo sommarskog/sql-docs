@@ -1,17 +1,18 @@
 ---
-title: "Lay out a Reporting Services mobile report for phone or tablet | Microsoft Docs"
+title: "Lay out a Reporting Services mobile report for phone or tablet"
 description: After you create a Reporting Services mobile report in SQL Server Mobile Report Publisher, you can lay out a phone and tablet version of it.
-ms.date: 03/01/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: mobile-reports
-
-ms.topic: conceptual
-ms.assetid: f8632816-068f-4a87-b15a-779387f3d3a3
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 07/21/2022
+ms.service: reporting-services
+ms.subservice: mobile-reports
+ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 # Lay out a Reporting Services mobile report for phone or tablet
+
+[!INCLUDE [ssrs-mobile-report-deprecated](../../includes/ssrs-mobile-report-deprecated.md)]
+
 Now that you've [created your Reporting Services mobile report](../../reporting-services/mobile-reports/create-a-reporting-services-mobile-report.md) in [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-long.md)], you can lay out a phone and tablet version of it.  
   
 ![SSMRP_SalesTrendRptLayout](../../reporting-services/mobile-reports/media/ssmrp-salestrendrptlayout.png)   

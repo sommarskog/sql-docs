@@ -1,33 +1,29 @@
 ---
-description: "&#x40;&#x40;DBTS (Transact-SQL)"
 title: DBTS (Transact-SQL)
-ms.custom: ""
+description: "@@DBTS (Transact-SQL)"
+author: markingmyname
+ms.author: maghan
 ms.date: "09/18/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "@@DBTS_TSQL"
   - "@@DBTS"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "@@DBTS function"
   - "timestamp data type"
-ms.assetid: 91842ddd-91c0-4445-a03f-116f6bc991d0
-author: cawrites
-ms.author: chadam
+dev_langs:
+  - "TSQL"
 ---
 
 # &#x40;&#x40;DBTS (Transact-SQL)
 
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 This function returns the value of the current **timestamp** data type for the current database. The current database will have a guaranteed unique timestamp value.
   
-![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## Syntax  
   
@@ -49,7 +45,7 @@ Changes to the transaction isolation levels do  not affect the @@DBTS function.
 This example returns the current **timestamp** from the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database.
   
 ```sql
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 SELECT @@DBTS;  
 ```  

@@ -1,29 +1,25 @@
 ---
+title: "Lookup Transformation"
 description: "Lookup Transformation"
-title: "Lookup Transformation | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "integration-services"
-ms.reviewer: ""
-ms.technology: integration-services
+ms.service: sql
+ms.subservice: integration-services
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.dts.designer.lookuptrans.f1"
   - "sql13.dts.designer.lookuptransformation.general.f1"
   - "sql13.dts.designer.lookuptransformation.referencetable.f1"
   - "sql13.dts.designer.lookuptransformation.columns.f1"
   - "sql13.dts.designer.lookuptransformation.advanced.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Lookup transformation"
   - "joining columns [Integration Services]"
   - "cache [Integration Services]"
   - "match exactly [Integration Services]"
   - "lookups [Integration Services]"
   - "exact matches [Integration Services]"
-ms.assetid: de1cc8de-e7af-4727-b5a5-a1f0a739aa09
-author: chugugrace
-ms.author: chugu
 ---
 # Lookup Transformation
 
@@ -134,10 +130,7 @@ ms.author: chugu
 -   Blog entry, [Best Practices for Using the Lookup Transformation Cache Modes](https://go.microsoft.com/fwlink/?LinkId=146623), on blogs.msdn.com  
   
 -   Blog entry, [Lookup Pattern: Case Insensitive](https://go.microsoft.com/fwlink/?LinkId=157782), on blogs.msdn.com  
-  
--   Sample, [Lookup Transformation](https://go.microsoft.com/fwlink/?LinkId=267528), on msftisprodsamples.codeplex.com.  
-  
-     For information on installing [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] product samples and sample databases, see [SQL Server Integration Services Product Samples](https://go.microsoft.com/fwlink/?LinkId=267527).  
+      
   
 ## Lookup Transformation Editor (General Page)
   Use the **General** page of the Lookup Transformation Editor dialog box to select the cache mode, select the connection type, and specify how to handle rows with no matching entries.  
@@ -277,4 +270,3 @@ ms.author: chugu
  [Term Lookup Transformation](../../../integration-services/data-flow/transformations/term-lookup-transformation.md)   
  [Data Flow](../../../integration-services/data-flow/data-flow.md)   
  [Integration Services Transformations](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
-  

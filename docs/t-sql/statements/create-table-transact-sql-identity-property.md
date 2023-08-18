@@ -1,26 +1,22 @@
 ---
-description: "CREATE TABLE (Transact-SQL) IDENTITY (Property)"
-title: "IDENTITY (Property) (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "IDENTITY (Property) (Transact-SQL)"
+description: CREATE TABLE (Transact-SQL) IDENTITY (Property)
+author: VanMSFT
+ms.author: vanto
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "synapse-analytics, database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "IDENTITY_TSQL"
   - "IDENTITY"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "IDENTITY property"
   - "columns [SQL Server], creating"
   - "identity columns [SQL Server], IDENTITY property"
   - "autonumbers, identity numbers"
-ms.assetid: 8429134f-c821-4033-a07c-f782a48d501c
-author: VanMSFT
-ms.author: vanto
+dev_langs:
+  - "TSQL"
 monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # CREATE TABLE (Transact-SQL) IDENTITY (Property)
@@ -31,7 +27,7 @@ monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sq
 > [!NOTE]  
 >  The IDENTITY property is different from the SQL-DMO **Identity** property that exposes the row identity property of a column.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -39,7 +35,8 @@ monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sq
 IDENTITY [ (seed , increment) ]
 ```  
   
-[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]  
+> [!NOTE]
+> [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]  
 
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
@@ -64,14 +61,14 @@ IDENTITY [ (seed , increment) ]
   
  The identity property on a column does not guarantee the following:  
   
--   **Uniqueness of the value** - Uniqueness must be enforced by using a **PRIMARY KEY** or **UNIQUE** constraint or **UNIQUE** index. - 
+-   **Uniqueness of the value** - Uniqueness must be enforced by using a **PRIMARY KEY** or **UNIQUE** constraint or **UNIQUE** index.  
  
 > [!NOTE]
 > Azure Synapse Analytics does not support **PRIMARY KEY** or **UNIQUE** constraint or **UNIQUE** index. Please see [Using IDENTITY to create surrogate keys in a Synapse SQL pool](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-tables-identity#what-is-a-surrogate-key) for more information.
 
 -   **Consecutive values within a transaction** - A transaction inserting multiple rows is not guaranteed to get consecutive values for the rows because other concurrent inserts might occur on the table. If values must be consecutive then the transaction should use an exclusive lock on the table or use the **SERIALIZABLE** isolation level.  
   
--   **Consecutive values after server restart or other failures** -[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] might cache identity values for performance reasons and some of the assigned values can be lost during a database failure or server restart. This can result in gaps in the identity value upon insert. If gaps are not acceptable then the application should use its own mechanism to generate key values. Using a sequence generator with the **NOCACHE** option can limit the gaps to transactions that are never committed.  
+-   **Consecutive values after server restart or other failures** - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] might cache identity values for performance reasons and some of the assigned values can be lost during a database failure or server restart. This can result in gaps in the identity value upon insert. If gaps are not acceptable then the application should use its own mechanism to generate key values. Using a sequence generator with the **NOCACHE** option can limit the gaps to transactions that are never committed.  
   
 -   **Reuse of values** - For a given identity property with specific seed/increment, the identity values are not reused by the engine. If a particular insert statement fails or if the insert statement is rolled back then the consumed identity values are lost and will not be generated again. This can result in gaps when the subsequent identity values are generated.  
   
@@ -89,7 +86,7 @@ IDENTITY [ (seed , increment) ]
  The following example creates a new table using the `IDENTITY` property for an automatically incrementing identification number.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
   
 IF OBJECT_ID ('dbo.new_employees', 'U') IS NOT NULL  
    DROP TABLE new_employees;  

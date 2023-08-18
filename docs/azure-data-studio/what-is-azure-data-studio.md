@@ -1,21 +1,20 @@
 ---
 title: What is Azure Data Studio
-description: Azure Data Studio is a free, light-weight tool, that runs on Windows, macOS, and Linux, for managing SQL Server, Azure SQL Database, and Azure Synapse Analytics. 
-ms.prod: azure-data-studio
-ms.technology: azure-data-studio
-ms.topic: "overview"
+description: Azure Data Studio is a free, light-weight tool, that runs on Windows, macOS, and Linux, for managing SQL Server, Azure SQL Database, and Azure Synapse Analytics.
 author: "markingmyname"
 ms.author: "maghan"
-ms.reviewer: "alayu, sstein"
-ms.custom: "seodec18, sqlfreshmay19"
-ms.date: "10/20/2020"
+ms.reviewer: erinstellato
+ms.date: 08/10/2023
+ms.service: azure-data-studio
+ms.topic: "overview"
+ms.custom: intro-overview
 ---
 
 # What is Azure Data Studio?
 
-Azure Data Studio is a cross-platform database tool for data professionals using on-premises and cloud data platforms on Windows, macOS, and Linux.
+Azure Data Studio is a lightweight, cross-platform data management and development tool with connectivity to popular cloud and on-premises databases. Azure Data Studio supports Windows, macOS, and Linux, with immediate capability to connect to Azure SQL and SQL Server.  Browse the extension library for more database support options including MySQL, PostgreSQL, and CosmosDB.
 
-Azure Data Studio offers a modern editor experience with IntelliSense, code snippets, source control integration, and an integrated terminal. It's engineered with the data platform user in mind, with built-in charting of query result sets and customizable dashboards.
+Azure Data Studio’s familiar interface offers a modern editor experience with IntelliSense, code snippets, source control integration, and an integrated terminal.  Engineered with the data platform user in mind, its extensibility allows users to customize their experience by installing the extensions relevant to their workflow, including database migrations, charting, GitHub Copilot, and more!
 
 The source code for Azure Data Studio and its data providers is available on GitHub under a source code EULA that provides rights to modify and use the software, but not to redistribute it or host it in a cloud service. For more information, see [Azure Data Studio FAQ](faq.yml).
 
@@ -80,15 +79,14 @@ To learn about authoring extensions, see [Extension authoring](extensions/extens
 |Integrated Terminal|Yes||
 |Object Explorer|Yes|Yes|
 |Object Scripting|Yes|Yes|
-|Project System|Yes||
 |Select from Table|Yes|Yes|
 |Source Code Control|Yes||
 |Task Pane|Yes||
 |Themes, including Dark Mode|Yes||
-|Azure Resource Explorer|Preview||
+|Azure Resource Explorer|Yes||
 |Generate Scripts Wizard||Yes|
-|Object Properties||Yes|
-|Table Designer||Yes|
+|Object Properties|Preview|Yes|
+|Table Designer|Yes|Yes|
 
 ### Query Editor
 
@@ -100,7 +98,7 @@ To learn about authoring extensions, see [Extension authoring](extensions/extens
 |Results to Text||Yes|
 |IntelliSense|Yes|Yes|
 |Snippets|Yes|Yes|
-|Show Plan|Preview|Yes|
+|Show Plan|Yes|Yes|
 |Client Statistics||Yes|
 |Live Query Stats||Yes|
 |Query Options||Yes|
@@ -127,7 +125,7 @@ To learn about authoring extensions, see [Extension authoring](extensions/extens
 
 |Feature|Azure Data Studio|SSMS|
 |:---|:---|:---|
-|Backup / Restore|Yes|Yes|
+|Backup / Restore|Preview|Yes|
 |Flat File Import|Yes|Yes|
 |SQL Agent|Preview|Yes|
 |SQL Profiler|Preview|Yes|
@@ -144,7 +142,7 @@ To learn about authoring extensions, see [Extension authoring](extensions/extens
 |Query Store||Yes|
 |Registered Servers||Yes|
 |Replication||Yes|
-|Security Management||Yes|
+|Security Management|Yes|Yes|
 |Service Broker||Yes|
 |SQL Assessment|Preview|Yes|
 |SQL Mail||Yes|
@@ -159,12 +157,17 @@ To learn about authoring extensions, see [Extension authoring](extensions/extens
 |SQL Projects|Preview||
 |Schema Compare|Yes||
 
+## SQL Tools Service
+
+Azure Data Studio uses the [SqlToolsService](https://github.com/microsoft/sqltoolsservice) as the SQL API layer to the application.  SQL Tools Service is .NET-based and is open source under the MIT license. For SQL connectivity, SQL Tools Service uses [Microsoft.Data.SqlClient](https://github.com/dotnet/SqlClient) as the SQL driver.
+
 ## Next steps
 
 - [Download and Install Azure Data Studio](./download-azure-data-studio.md)
 - [Azure Data Studio FAQ](faq.yml)
 - [Connect and query SQL Server](quickstart-sql-server.md)
 - [Connect and query Azure SQL Database](quickstart-sql-database.md)
+- [Download SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)
 
 [!INCLUDE[get-help-sql-tools](../includes/paragraph-content/get-help-sql-tools.md)]
 

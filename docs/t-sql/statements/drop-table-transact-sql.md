@@ -1,19 +1,16 @@
 ---
-description: "DROP TABLE (Transact-SQL)"
-title: "DROP TABLE (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/12/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
-ms.technology: t-sql
+title: "DROP TABLE (Transact-SQL)"
+description: DROP TABLE (Transact-SQL)
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.date: "05/25/2021"
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "DROP_TABLE_TSQL"
   - "DROP TABLE"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "removing indexes"
   - "table removal [SQL Server]"
   - "deleting indexes"
@@ -34,29 +31,28 @@ helpviewer_keywords:
   - "deleting data"
   - "dropping constraints"
   - "dropping permissions"
-ms.assetid: 0b6f2b6f-3aa3-4767-943f-43df3c3c5cfd
-author: WilliamDAssafMSFT
-ms.author: wiassaf
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+dev_langs:
+  - "TSQL"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=fabric"
 ---
 # DROP TABLE (Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricdw.md)]
 
   Removes one or more table definitions and all data, indexes, triggers, constraints, and permission specifications for those tables. Any view or stored procedure that references the dropped table must be explicitly dropped by using [DROP VIEW](../../t-sql/statements/drop-view-transact-sql.md) or [DROP PROCEDURE](../../t-sql/statements/drop-procedure-transact-sql.md). To report the dependencies on a table, use [sys.dm_sql_referencing_entities](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql.md).  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
 ```syntaxsql
--- Syntax for SQL Server and Azure SQL Database  
+-- Syntax for SQL Server, Azure SQL Database, Warehouse in Microsoft Fabric
   
 DROP TABLE [ IF EXISTS ] { database_name.schema_name.table_name | schema_name.table_name | table_name } [ ,...n ]  
 [ ; ]  
 ```  
   
 ```syntaxsql
--- Syntax for Azure Synapse Analytics and Parallel Data Warehouse  
+-- Syntax for Azure Synapse Analytics and Parallel Data Warehouse and Microsoft Fabric
   
 DROP TABLE { database_name.schema_name.table_name | schema_name.table_name | table_name }
 [;]  
@@ -92,13 +88,19 @@ DROP TABLE { database_name.schema_name.table_name | schema_name.table_name | tab
   
  Large tables and indexes that use more than 128 extents are dropped in two separate phases: logical and physical. In the logical phase, the existing allocation units used by the table are marked for deallocation and locked until the transaction commits. In the physical phase, the IAM pages marked for deallocation are physically dropped in batches.  
   
- If you drop a table that contains a VARBINARY(MAX) column with the FILESTREAM attribute, any data stored in the file system will not be removed.  
+ If you drop a table that contains a VARBINARY(MAX) column with the FILESTREAM attribute, any data stored in the file system will not be removed.
+
+ When a ledger table is dropped, its dependent objects (the history table and the ledger view) are also dropped. A history table or a ledger view cannot be dropped directly. The system enforces a *soft-delete* semantics when dropping ledger tables and its dependent objects – they are not really dropped, but instead they are marked as dropped in system catalog views and renamed. For more information, see [Ledger considerations and limitations](../../relational-databases/security/ledger/ledger-limits.md).
+
   
 > [!IMPORTANT]  
 >  DROP TABLE and CREATE TABLE should not be executed on the same table in the same batch. Otherwise an unexpected error may occur.  
   
 ## Permissions  
- Requires ALTER permission on the schema to which the table belongs, CONTROL permission on the table, or membership in the **db_ddladmin** fixed database role.  
+ Requires ALTER permission on the schema to which the table belongs, CONTROL permission on the table, or membership in the **db_ddladmin** fixed database role.
+
+ If the statement drops a ledger table, `ALTER LEDGER` permission is required.
+
   
 ## Examples  
   
@@ -113,7 +115,7 @@ DROP TABLE ProductVendor1 ;
  The following example drops the `SalesPerson2` table in the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database. The example can be executed from any database on the server instance.  
   
 ```sql  
-DROP TABLE AdventureWorks2012.dbo.SalesPerson2 ;  
+DROP TABLE AdventureWorks2022.dbo.SalesPerson2 ;  
 ```  
   
 ### C. Dropping a temporary table  

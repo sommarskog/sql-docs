@@ -1,19 +1,19 @@
 ---
-title: "CountRows Function (Report Builder) | Microsoft Docs"
-description: Learn about the CountRows function, which returns the number of rows in a specified scope, including rows with null values. 
-ms.date: 03/07/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-design
-
-
-ms.topic: conceptual
-ms.assetid: 5b1c403d-6afd-44c8-b5f6-5ecff2a29a45
+title: "CountRows function in a paginated report"
+description: Learn about the CountRows function, which returns the number of rows in a specified scope, including rows with null values in a paginated report.
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 03/07/2017
+ms.service: reporting-services
+ms.subservice: report-design
+ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
-# Report Builder Functions - CountRows Function
-  Returns the number of rows in the specified scope, including rows with null values.  
+# Report Builder functions - CountRows function in a paginated report (Report Builder)
+
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-ssrs-rb](../../includes/ssrs-appliesto-ssrs-rb.md)] [!INCLUDE [ssrs-appliesto-pbi-rb](../../includes/ssrs-appliesto-pbi-rb.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
+
+  Returns the number of rows in the specified scope in a paginated report, including rows with null values.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  

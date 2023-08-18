@@ -1,21 +1,18 @@
 ---
+title: "Optimize Parameterized Row Filters"
 description: "Optimize Parameterized Row Filters"
-title: "Optimize Parameterized Row Filters | Microsoft Docs"
-ms.custom: ""
+author: "MashaMSFT"
+ms.author: "mathoma"
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: replication
+ms.service: sql
+ms.subservice: replication
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "precomputed partitions [SQL Server replication]"
   - "filters [SQL Server replication], parameterized"
   - "merge replication precomputed partitions [SQL Server replication], SQL Server Management Studio"
   - "parameterized filters [SQL Server replication], optimizing"
-ms.assetid: 49349605-ebd0-4757-95be-c0447f30ba13
-author: "MashaMSFT"
-ms.author: "mathoma"
 ---
 # Optimize Parameterized Row Filters
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -69,7 +66,7 @@ ms.author: "mathoma"
   
      If you select **A row from this table will go to only one subscription**, merge replication can optimize performance by storing and processing less metadata. However, you must ensure that the data is partitioned in such a way that a row cannot be replicated to more than one Subscriber. For more information, see the section "Setting 'partition options'" in the topic [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
-4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+4.  Select **OK**.
   
 5.  If you are in the **Publication Properties - \<Publication>** dialog box, click **OK** to save and close the dialog box.  
   
@@ -91,7 +88,7 @@ ms.author: "mathoma"
   
      For more information about these options and how they relate to the options available in the **Add Filter** and **Edit Filter** dialog boxes, see the "Setting 'partition options'" section of [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
-4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+4.  Select **OK**.
   
 5.  If you are in the **Publication Properties - \<Publication>** dialog box, click **OK** to save and close the dialog box.  
   
@@ -103,13 +100,13 @@ ms.author: "mathoma"
   
     -   A snapshot has not yet been generated for the publication. In this case, the option displays a value of **Set automatically when a snapshot is created**.  
   
-2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+2.  Select **OK**.
   
 #### To set Optimize Synchronization  
   
 1.  On the **Subscription Options** page of the **Publication Properties - \<Publication>** dialog box, select a value of `True` for the **Optimize Synchronization** option.  
   
-2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+2.  Select **OK**.
   
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
  For definitions of the filtering options for `@keep_partition_changes` and `@use_partition_groups`, see [sp_addmergepublication](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md).  

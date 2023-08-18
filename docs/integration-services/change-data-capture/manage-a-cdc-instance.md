@@ -1,27 +1,20 @@
 ---
+title: "Manage a CDC Instance"
 description: "Manage a CDC Instance"
-title: "Manage a CDC Instance | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: sql
-ms.prod_service: "integration-services"
-ms.reviewer: ""
-ms.technology: integration-services
-ms.topic: conceptual
-f1_keywords: 
-  - "manIns"
-ms.assetid: cfed22c8-c666-40ca-9e73-24d93e85ba92
 author: chugugrace
 ms.author: chugu
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+f1_keywords:
+  - "manIns"
 ---
 # Manage a CDC Instance
 
-[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
-
-
   You can use the CDC Designer Console to view information about the instances that you create and to manage the operation of the instances.  
   
- Click on the name of an instance in the left pane to view the information about the instance.  
+ Select the name of an instance in the left pane to view the information about the instance.  
   
 > [!NOTE]  
 >  If you select a service in the left pane, the list of available instances is also displayed in the center of the CDC Designer Console. If you select one of the instances in this section, you can carry out the tasks in the right pane; however, you will not be able to view the information in the property tabs.  

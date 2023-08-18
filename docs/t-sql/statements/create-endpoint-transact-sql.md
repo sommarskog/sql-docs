@@ -1,21 +1,18 @@
 ---
-description: "CREATE ENDPOINT (Transact-SQL)"
 title: CREATE ENDPOINT (Transact-SQL)
-ms.custom: ""
+description: CREATE ENDPOINT (Transact-SQL)
+author: markingmyname
+ms.author: maghan
 ms.date: "08/10/2017"
-ms.prod: sql
-ms.prod_service: "sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "ENDPOINT"
   - "CREATE ENDPOINT"
   - "ENDPOINT_TSQL"
   - "CREATE_ENDPOINT_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "database mirroring [SQL Server], endpoint"
   - "HTTP SOAP support [SQL Server]"
   - "CREATE ENDPOINT statement"
@@ -29,9 +26,8 @@ helpviewer_keywords:
   - "TCP protocol option [SQL Server]"
   - "SERVICE_BROKER option"
   - "Availability Groups [SQL Server], endpoint"
-ms.assetid: 6405e7ec-0b5b-4afd-9792-1bfa5a2491f6
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+dev_langs:
+  - "TSQL"
 ---
 
 # CREATE ENDPOINT (Transact-SQL)
@@ -50,9 +46,10 @@ ms.author: wiassaf
   
      In this part, you define the payload that is supported on the endpoint. The payload can be one of several supported types: [!INCLUDE[tsql](../../includes/tsql-md.md)], service broker, database mirroring. In this part, you also include language-specific information.  
   
-> **NOTE:** Native XML Web Services (SOAP/HTTP endpoints) was removed in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
+> [!NOTE]  
+> Native XML Web Services (SOAP/HTTP endpoints) was removed in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -114,8 +111,9 @@ FOR DATABASE_MIRRORING (
  Specifies a valid [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or Windows login that is assigned ownership of the newly created endpoint object. If AUTHORIZATION is not specified, by default, the caller becomes owner of the newly created object.  
   
  To assign ownership by specifying AUTHORIZATION, the caller must have IMPERSONATE permission on the specified *login*.  
-  
- To reassign ownership, see [ALTER ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/alter-endpoint-transact-sql.md).  
+
+ The AUTHORIZATION option is not available in ALTER ENDPOINT. Ownership can only be assigned when the endpoint is created.
+ To reassign ownership, see [DROP ENDPOINT (Transact-SQL)](../../t-sql/statements/drop-endpoint-transact-sql.md) and then return to this article to recreate the endpoint. 
   
  STATE **=** { STARTED | **STOPPED** | DISABLED }  
  Is the state of the endpoint when it is created. If the state is not specified when the endpoint is created, STOPPED is the default.  
@@ -144,7 +142,7 @@ FOR DATABASE_MIRRORING (
  The following arguments apply only to the TCP protocol option.  
   
  LISTENER_PORT **=**_listenerPort_  
- Specifies the port number listened to for connections by the service broker TCP/IP protocol. By convention, 4022 is used but any number between 1024 and 32767 is valid.  
+ Specifies the port number listened to for connections by the service broker TCP/IP protocol. By convention, 5022 is used but any number between 1024 and 32767 is valid.  
   
  LISTENER_IP **=** ALL | **(**_4-part-ip_ **)** | **(** "*ip_address_v6*" **)**  
  Specifies the IP address that the endpoint will listen on. The default is ALL. This means that the listener will accept a connection on any valid IP address.  
@@ -158,8 +156,8 @@ FOR DATABASE_MIRRORING (
 > [!NOTE]  
 >  For options that are specific to SERVICE_BROKER, see "SERVICE_BROKER Options," later in this section. For options that are specific to DATABASE_MIRRORING, see "DATABASE_MIRRORING Options," later in this section.  
   
- AUTHENTICATION **=** \<authentication_options> 
- Specifies the TCP/IP authentication requirements for connections for this endpoint. The default is WINDOWS.  
+ AUTHENTICATION **=** \<authentication_options>  
+ Specifies the TCP/IP authentication requirements for connections for this endpoint. The default value is `WINDOWS`.
   
  The supported authentication methods include NTLM and or Kerberos or both.  
   
@@ -212,7 +210,7 @@ FOR DATABASE_MIRRORING (
  Specifies that the two endpoints will negotiate for an encryption algorithm with this endpoint giving preference to the RC4 algorithm.  
   
 > [!NOTE]  
->  The RC4 algorithm is deprecated. [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] We recommend that you use AES.  
+>  The RC4 algorithm is deprecated. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] We recommend that you use AES.  
   
  If both endpoints specify both algorithms but in different orders, the endpoint accepting the connection wins.  
   
@@ -243,7 +241,7 @@ FOR DATABASE_MIRRORING (
  Enables the endpoint to perform in the role of a witness in the mirroring process.  
   
 > [!NOTE]  
->  For [!INCLUDE[ssExpressEd2005](../../includes/ssexpressed2005-md.md)], WITNESS is the only option available.  
+>  For [!INCLUDE[ssexpress-2005-md](../../includes/ssexpress-2005-md.md)], WITNESS is the only option available.  
   
  PARTNER  
  Enables the endpoint to perform in the role of a partner in the mirroring process.  
@@ -321,6 +319,3 @@ GRANT CONNECT ON ENDPOINT::ipv6_endpoint_special
  [Choose an Encryption Algorithm](../../relational-databases/security/encryption/choose-an-encryption-algorithm.md)   
  [DROP ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/drop-endpoint-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
-  
-  
-

@@ -1,25 +1,27 @@
 ---
 title: Troubleshoot `pyspark` notebook
-titleSuffix: SQL Server Big Data Cluster
+titleSuffix: SQL Server Big Data Clusters
 description: Troubleshoot `pyspark` notebook
-author: DaniBunny
-ms.author: dacoelho
-ms.reviewer: mikeray
+author: HugoMSFT
+ms.author: hudequei
+ms.reviewer: wiassaf
 ms.date: 06/01/2020
-ms.topic: how-to
-ms.prod: sql
-ms.technology: big-data-cluster
+ms.service: sql
+ms.subservice: big-data-cluster
+ms.topic: troubleshooting
 ---
 
-# Troubleshoot `pyspark` notebook
+# Troubleshoot a `pyspark` notebook
+
+[!INCLUDE[big-data-clusters-banner-retirement](../includes/bdc-banner-retirement.md)]
 
 This article demonstrates how to troubleshoot a `pyspark` notebook that fails.
 
 ## Architecture of a PySpark job under Azure Data Studio
 
-Azure Data Studio communicates with the `livy` endpoint on SQL Server BDC. 
+Azure Data Studio communicates with the `livy` endpoint on SQL Server Big Data Clusters. 
 
-The `livy` endpoint issues `spark-submit` commands within the BDC cluster. Each `spark-submit` command has a parameter that specifies YARN as the cluster resource manager.
+The `livy` endpoint issues `spark-submit` commands within the big data cluster. Each `spark-submit` command has a parameter that specifies YARN as the cluster resource manager.
 
 To efficiently troubleshoot your PySpark session you will collect and review logs within each layer: Livy, YARN and Spark.
 
@@ -166,4 +168,4 @@ This troubleshooting steps require that you have:
 
 ## Next steps
 
-[Troubleshoot SQL Server Big Data Cluster Active Directory integration](troubleshoot-active-directory.md)
+[Troubleshoot SQL Server Big Data Clusters Active Directory integration](troubleshoot-active-directory.md)

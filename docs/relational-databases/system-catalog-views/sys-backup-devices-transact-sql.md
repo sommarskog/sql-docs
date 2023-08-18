@@ -1,26 +1,22 @@
 ---
-description: "sys.backup_devices (Transact-SQL)"
-title: "sys.backup_devices (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.backup_devices (Transact-SQL)"
+description: sys.backup_devices (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "backup_devices_TSQL"
   - "backup_devices"
   - "sys.backup_devices"
   - "sys.backup_devices_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "backup devices [SQL Server], viewing information"
   - "sys.backup_devices catalog view"
-ms.assetid: 457edaa4-aca1-4bd3-bf8d-734490b80fcd
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+dev_langs:
+  - "TSQL"
 ---
 # sys.backup_devices (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

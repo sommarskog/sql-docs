@@ -1,19 +1,20 @@
 ---
-title: What is the controller?
-titleSuffix: SQL Server big data clusters
+title: The controller in SQL Server Big Data Clusters
+titleSuffix: SQL Server Big Data Clusters
 description: This article describes the controller of a SQL Server big data cluster.
-author: mihaelablendea 
-ms.author: mihaelab
-ms.reviewer: mikeray
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: 11/04/2019
+ms.service: sql
+ms.subservice: big-data-cluster
 ms.topic: conceptual
-ms.prod: sql
-ms.technology: big-data-cluster
 ---
 
-# What is the controller on a SQL Server big data cluster?
+# Introducing the controller on a [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
+
+[!INCLUDE[big-data-clusters-banner-retirement](../includes/bdc-banner-retirement.md)]
 
 The controller hosts the core logic for deploying and managing a SQL Server big data cluster. It takes care of all interactions with Kubernetes, SQL Server instances that are part of the cluster and other components like HDFS and Spark.
 
@@ -58,5 +59,5 @@ Authentication to the controller service endpoint is either using an Active Dire
 
 To learn more about the [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], see the following resources:
 
-- [What are [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]?](big-data-cluster-overview.md)
+- [Introducing [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]](big-data-cluster-overview.md)
 - [Workshop: Microsoft [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] Architecture](https://github.com/microsoft/sqlworkshops-bdc)

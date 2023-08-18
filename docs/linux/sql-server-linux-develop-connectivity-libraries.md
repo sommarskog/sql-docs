@@ -1,13 +1,12 @@
 ---
 title: Connectivity libraries and frameworks
-description: Lists the connectivity drivers that client apps can use from various languages to connect to Microsoft SQL Server running on-premises or in the cloud, on Linux, Windows or Docker and also to Azure SQL Database and Azure Synapse Analytics. 
-author: VanMSFT 
-ms.author: vanto
+description: Lists the connectivity drivers that client apps can use from various languages to connect to Microsoft SQL Server running on-premises or in the cloud, on Linux, Windows or Docker and also to Azure SQL Database and Azure Synapse Analytics.
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: 03/17/2017
+ms.service: sql
+ms.subservice: linux
 ms.topic: conceptual
-ms.prod: sql
-ms.technology: linux
-ms.assetid: 80efe5ff-09ba-48a0-ac93-a91d62cff47c
 ---
 # Connectivity libraries and frameworks for Microsoft SQL Server
 
@@ -31,7 +30,7 @@ The following table lists a few examples of Object Relational Mapping (ORM) fram
 
 | Language | Platform | ORM(s) |
 | :-- | :-- | :-- |
-| C# | Windows, Linux, macOS | [Entity Framework](/ef)<br>[Entity Framework Core](/ef/core/index) |
+| C# | Windows, Linux, macOS | [Entity Framework](/ef)<br />[Entity Framework Core](/ef/core/index) |
 | Java | Windows, Linux, macOS |[Hibernate ORM](https://hibernate.org/orm)|
 | PHP | Windows, Linux | [Laravel (Eloquent)](https://laravel.com/docs/5.0/eloquent) |
 | Node.js | Windows, Linux, macOS | [Sequelize ORM](http://sequelize.org/) |

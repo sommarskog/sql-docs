@@ -1,34 +1,30 @@
 ---
+title: "NEWID (Transact-SQL)"
 description: "NEWID (Transact-SQL)"
-title: "NEWID (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "07/29/2017"
-ms.prod: sql
-ms.prod_service: "synapse-analytics, sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "NEWID"
   - "NEWID_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "uniqueidentifier data type"
   - "NEWID function"
-ms.assetid: f7014e60-96d5-457e-afc3-72b60ba20c0f
-author: julieMSFT
-ms.author: jrasnick
-monikerRange: "=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+dev_langs:
+  - "TSQL"
+monikerRange: ">= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-mi-current || azure-sqldw-latest||=fabric"
 ---
 
 # NEWID (Transact-SQL)
 
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
+[!INCLUDE [sql-asdb-asdbmi-fabricse-fabricdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricse-fabricdw.md)]
 
 Creates a unique value of type **uniqueidentifier**.  
   
-![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -37,6 +33,9 @@ NEWID ( )
 ```  
   
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+> [!Note]
+> Not supported in Azure Synapse serverless pools.
 
 ## Return Types
  **uniqueidentifier**  
@@ -115,6 +114,18 @@ SET @myid = 'A972C577-DFB0-064E-1189-0154C99310DAAC12';
 SELECT @myid;  
 GO  
 ```  
+ 
+### D. Query random data with the NEWID() function
+
+The following example queries a random record from the `Production.Product` table using the `NEWID()` function. To query more records radomly, increase the `TOP` value.
+  
+```sql  
+SELECT TOP 1 ProductID, Name, ProductNumber
+FROM Production.Product
+ORDER BY NEWID()
+GO
+```
+
   
 ## See Also  
  [NEWSEQUENTIALID &#40;Transact-SQL&#41;](../../t-sql/functions/newsequentialid-transact-sql.md)   

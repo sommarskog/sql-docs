@@ -1,35 +1,31 @@
 ---
+title: "FILEPROPERTY (Transact-SQL)"
 description: "FILEPROPERTY (Transact-SQL)"
-title: "FILEPROPERTY (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: markingmyname
+ms.author: maghan
 ms.date: "03/03/2017"
-ms.prod: sql
-ms.prod_service: "sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "FILEPROPERTY_TSQL"
   - "FILEPROPERTY"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "viewing file properties"
   - "names [SQL Server], files"
   - "displaying file properties"
   - "file properties [SQL Server]"
   - "FILEPROPERTY function"
   - "file names [SQL Server], FILEPROPERTY"
-ms.assetid: b82244ed-d623-431f-aa06-8017349d847f
-author: cawrites
-ms.author: chadam
+dev_langs:
+  - "TSQL"
 ---
 # FILEPROPERTY (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Returns the specified file name property value when a file name in the current database and a property name are specified. Returns NULL for files that are not in the current database.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -63,7 +59,7 @@ FILEPROPERTY ( file_name , property )
  The following example returns the setting for the `IsPrimaryFile` property for the `AdventureWorks_Data` file name in [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] the database.  
   
 ```sql
-SELECT FILEPROPERTY('AdventureWorks2012_Data', 'IsPrimaryFile')AS [Primary File];  
+SELECT FILEPROPERTY('AdventureWorks2022_Data', 'IsPrimaryFile')AS [Primary File];  
 GO  
 ```  
   

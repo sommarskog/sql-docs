@@ -1,17 +1,16 @@
 ---
-title: "Principals (Database Engine) | Microsoft Docs"
+title: "Principals (Database Engine)"
 description: Learn about principals in Database Engine, which are entities that can request SQL Server resources. There are SQL Server-level and database-level principals.
-ms.custom: ""
+author: VanMSFT
+ms.author: vanto
 ms.date: "01/09/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
-ms.technology: security
+ms.service: sql
+ms.subservice: security
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.swb.roleproperties.selectroll.f1"
   - "sql13.swb.databaseuser.permissions.user.f1--May use common.permissions"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "certificates [SQL Server], principals"
   - "roles [SQL Server], principals"
   - "permissions [SQL Server], principals"
@@ -26,15 +25,12 @@ helpviewer_keywords:
   - "security [SQL Server], principals"
   - "users [SQL Server], principals"
   - "##MS_SQLReplicationSigningCertificate##"
-ms.assetid: 3f7adbf7-6e40-4396-a8ca-71cbb843b5c2
-author: VanMSFT
-ms.author: vanto
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Principals (Database Engine)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  *Principals* are entities that can request [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] resources. Like other components of the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] authorization model, principals can be arranged in a hierarchy. The scope of influence of a principal depends on the scope of the definition of the principal: Windows, server, database; and whether the principal is indivisible or a collection. A Windows Login is an example of an indivisible principal, and a Windows Group is an example of a principal that is a collection. Every principal has a security identifier (SID). This topic applies to all version of SQL Server, but there are some restrictions on server-level principals in SQL Database or Azure Synapse Analytics. 
+  *Principals* are entities that can request [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] resources. Like other components of the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] authorization model, principals can be arranged in a hierarchy. The scope of influence of a principal depends on the scope of the definition of the principal: Windows, server, database; and whether the principal is indivisible or a collection. A Windows Login is an example of an indivisible principal, and a Windows Group is an example of a principal that is a collection. Every principal has a security identifier (SID). This topic applies to all versions of SQL Server, but there are some restrictions on server-level principals in SQL Database or Azure Synapse Analytics. 
   
 ## SQL Server-level principals  
   
@@ -52,7 +48,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 - Application Role
   
 ## sa Login  
- The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `sa` log in is a server-level principal. By default, it is created when an instance is installed. Beginning in [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], the default database of sa is master. This is a change of behavior from earlier versions of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. The `sa` login is a member of the `sysadmin` fixed server-level role. The `sa` login has all permissions on the server and cannot be limited. The `sa` login cannot be dropped, but it can be disabled so that no one can use it.
+ The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `sa` login is a server-level principal. By default, it is created when an instance is installed. Beginning in [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], the default database of sa is master. This is a change of behavior from earlier versions of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. The `sa` login is a member of the `sysadmin` fixed server-level role. The `sa` login has all permissions on the server and cannot be limited. The `sa` login cannot be dropped, but it can be disabled so that no one can use it.
 
 ## dbo User and dbo Schema
 

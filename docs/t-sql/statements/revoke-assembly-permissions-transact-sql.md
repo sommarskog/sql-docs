@@ -1,28 +1,24 @@
 ---
-description: "REVOKE Assembly Permissions (Transact-SQL)"
-title: "REVOKE Assembly Permissions (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/26/2017"
-ms.prod: sql
-ms.prod_service: "sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
-ms.topic: reference
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "REVOKE statement, assemblies"
-  - "assemblies [CLR integration], permissions"
-ms.assetid: f88e9da1-2c0b-4bdd-9ec5-44467707cb46
+title: "REVOKE Assembly Permissions (Transact-SQL)"
+description: REVOKE Assembly Permissions (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
+ms.date: "07/26/2017"
+ms.service: sql
+ms.subservice: t-sql
+ms.topic: reference
+helpviewer_keywords:
+  - "REVOKE statement, assemblies"
+  - "assemblies [CLR integration], permissions"
+dev_langs:
+  - "TSQL"
 ---
 # REVOKE Assembly Permissions (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Revokes permissions on an assembly.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

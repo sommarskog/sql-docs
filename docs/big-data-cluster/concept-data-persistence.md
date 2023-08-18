@@ -1,19 +1,20 @@
 ---
 title: Data persistence on Kubernetes
-titleSuffix: SQL Server big data clusters
+titleSuffix: SQL Server Big Data Clusters
 description: Learn how persistent volumes provide a plug-in model for storage in Kubernetes. Also learn how data persistence works in a SQL Server 2019 Big Data Cluster.
-author: mihaelablendea 
-ms.author: mihaelab
-ms.reviewer: mikeray
-ms.date: 11/04/2019
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.date: 07/16/2021
+ms.service: sql
+ms.subservice: big-data-cluster
 ms.topic: conceptual
-ms.prod: sql
-ms.technology: big-data-cluster
 ---
 
-# Data persistence with SQL Server big data cluster in Kubernetes
+# Data persistence in Kubernetes with [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
+
+[!INCLUDE[big-data-clusters-banner-retirement](../includes/bdc-banner-retirement.md)]
 
 [Persistent volumes](https://kubernetes.io/docs/concepts/storage/persistent-volumes/) provide a plug-in model for storage in Kubernetes. In this model, the way that storage is provided is abstracted from how it's consumed. Therefore, you can bring your own highly available storage and plug it into the SQL Server big data cluster. This gives you full control over the type of storage, availability, and performance you require. Kubernetes supports [various kinds of storage solutions](https://kubernetes.io/docs/concepts/storage/storage-classes/#provisioner), including Azure disks and files, Network File System (NFS), and local storage.
 
@@ -40,7 +41,7 @@ Here are some important aspects to consider when you're planning storage configu
 
 | Resources | Storage type for data | Storage type for log |  Notes |
 |---|---|---|--|
-| SQL Server master instance | Local (replicas>=3) or remote redundant storage (replica=1) | Local storage | Stateful set-based implementation in which pods that stick to the nodes will ensure restarts, and transient failures won’t cause data loss. |
+| SQL Server master instance | Local (replicas>=3) or remote redundant storage (replica=1) | Local storage | Stateful set-based implementation in which pods that stick to the nodes will ensure restarts, and transient failures won't cause data loss. |
 | Compute pool | Local storage | Local storage | No user data stored. |
 | Data pool | Local/remote redundant storage | Local storage | Use remote redundant storage if data pool can't be rebuilt from other data sources.  |
 | Storage pool (HDFS) | Local/remote redundant storage | Local storage | HDFS replication is enabled. |

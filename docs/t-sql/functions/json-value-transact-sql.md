@@ -1,23 +1,22 @@
 ---
+title: "JSON_VALUE (Transact-SQL)"
 description: "JSON_VALUE (Transact-SQL)"
-title: "JSON_VALUE (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: "jovanpop-msft"
+ms.author: "jovanpop"
 ms.date: 06/03/2020
-ms.prod: sql
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "JSON_VALUE"
   - "JSON_VALUE_TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "JSON_VALUE function"
   - "JSON, extracting"
   - "JSON, querying"
-ms.assetid: cd016e14-11eb-4eaf-bf05-c7cfcc820a10
-author: "jovanpop-msft"
-ms.author: "jovanpop"
-ms.reviewer: chadam
-monikerRange: "= azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017"
+dev_langs:
+  - "TSQL"
+monikerRange: "= azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017"
 ---
 # JSON_VALUE (Transact-SQL)
 
@@ -27,7 +26,7 @@ monikerRange: "= azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>
   
  To extract an object or an array from a JSON string instead of a scalar value, see [JSON_QUERY &#40;Transact-SQL&#41;](../../t-sql/functions/json-query-transact-sql.md). For info about the differences between **JSON_VALUE** and **JSON_QUERY**, see [Compare JSON_VALUE and JSON_QUERY](../../relational-databases/json/validate-query-and-change-json-data-with-built-in-functions-sql-server.md#JSONCompare).  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -45,9 +44,9 @@ JSON_VALUE ( expression , path )
  *path*  
  A JSON path that specifies the property to extract. For more info, see [JSON Path Expressions &#40;SQL Server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md).  
 
-In [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] and in [!INCLUDE[ssSDSfull_md](../../includes/sssdsfull-md.md)], you can provide a variable as the value of *path*.
+In [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] and in [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], you can provide a variable as the value of *path*.
   
- If the format of *path* isn't valid, **JSON_VALUE** returns an error .  
+ If the format of *path* isn't valid, **JSON_VALUE** returns an error.  
   
 ## Return value
 
@@ -95,7 +94,6 @@ SET @jsonInfo=N'{
 |$.info.tags|NULL|Error|Not a scalar value.<br /><br /> Use **JSON_QUERY** instead.|  
 |$.info.type[0]|NULL|Error|Not an array.|  
 |$.info.none|NULL|Error|Property does not exist.|  
-| &nbsp; | &nbsp; | &nbsp; | &nbsp; |
   
 ## Examples  
   
@@ -107,10 +105,10 @@ SET @jsonInfo=N'{
   
 ```sql  
 SELECT FirstName, LastName,
- JSON_VALUE(jsonInfo,'$.info.address[0].town') AS Town
+ JSON_VALUE(jsonInfo,'$.info.address.town') AS Town
 FROM Person.Person
-WHERE JSON_VALUE(jsonInfo,'$.info.address[0].state') LIKE 'US%'
-ORDER BY JSON_VALUE(jsonInfo,'$.info.address[0].town')
+WHERE JSON_VALUE(jsonInfo,'$.info.address.state') LIKE 'US%'
+ORDER BY JSON_VALUE(jsonInfo,'$.info.address.town')
 ```  
   
 ### Example 2

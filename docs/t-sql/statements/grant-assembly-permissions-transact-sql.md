@@ -1,29 +1,25 @@
 ---
-description: "GRANT Assembly Permissions (Transact-SQL)"
-title: "GRANT Assembly Permissions (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "GRANT Assembly Permissions (Transact-SQL)"
+description: GRANT Assembly Permissions (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "06/12/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "granting permissions [SQL Server], assemblies"
   - "assemblies [CLR integration], permissions"
   - "GRANT statement, assemblies"
-ms.assetid: dce1e027-f859-4967-bdda-16a95ae460d0
-author: VanMSFT
-ms.author: vanto
+dev_langs:
+  - "TSQL"
 ---
 # GRANT Assembly Permissions (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Grants permissions on an assembly.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

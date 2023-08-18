@@ -1,34 +1,30 @@
 ---
-description: "CREATE AGGREGATE (Transact-SQL)"
-title: "CREATE AGGREGATE (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "CREATE AGGREGATE (Transact-SQL)"
+description: CREATE AGGREGATE (Transact-SQL)
+author: markingmyname
+ms.author: maghan
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "CREATE_AGGREGATE_TSQL"
   - "CREATE AGGREGATE"
   - "AGGREGATE_TSQL"
   - "AGGREGATE"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "CREATE AGGREGATE statement"
   - "aggregate functions [SQL Server], user-defined"
   - "user-defined functions [CLR integration]"
-ms.assetid: 62eebc19-9f15-4245-94fa-b3fcd64a9d42
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+dev_langs:
+  - "TSQL"
 ---
 # CREATE AGGREGATE (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Creates a user-defined aggregate function whose implementation is defined in a class of an assembly in the [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. For the [!INCLUDE[ssDE](../../includes/ssde-md.md)] to bind the aggregate function to its implementation, the [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] assembly that contains the implementation must first be uploaded into an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] by using a CREATE ASSEMBLY statement.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -92,7 +88,7 @@ EXTERNAL NAME assembly_name [ .class_name ]
  The example creates aggregate `Concatenate`. Before the aggregate is created, the assembly `StringUtilities.dll` is registered in the local database.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 DECLARE @SamplesPath nvarchar(1024)  
 -- You may have to modify the value of the this variable if you have  

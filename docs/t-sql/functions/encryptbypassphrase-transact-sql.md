@@ -1,32 +1,31 @@
 ---
+title: "ENCRYPTBYPASSPHRASE (Transact-SQL)"
 description: "ENCRYPTBYPASSPHRASE (Transact-SQL)"
-title: "ENCRYPTBYPASSPHRASE (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/03/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
+author: VanMSFT
+ms.author: vanto
+ms.date: "09/30/2022"
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "ENCRYPTBYPASSPHRASE"
   - "ENCRYPTBYPASSPHRASE_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "ENCRYPTBYPASSPHRASE function"
   - "encryption [SQL Server], symmetric keys"
   - "symmetric keys [SQL Server], ENCRYPTBYPASSPHRASE function"
-ms.assetid: f8dbb9e6-94d6-40d7-8b38-6833a409d597
-author: VanMSFT
-ms.author: vanto
+dev_langs:
+  - "TSQL"
 ---
 # ENCRYPTBYPASSPHRASE (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Encrypt data with a passphrase using the TRIPLE DES algorithm with a 128 key bit length.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+  > [!NOTE]
+  > SQL Server 2017 and later versions encrypts data with a passphrase using an AES256 key.
+  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -76,7 +75,7 @@ EncryptByPassPhrase ( { 'passphrase' | @passphrase }
  The following example updates a record in the `SalesCreditCard` table and encrypts the value of the credit card number stored in column `CardNumber_EncryptedbyPassphrase`, using the primary key as an authenticator.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 -- Create a column in which to store the encrypted data.  
 ALTER TABLE Sales.CreditCard   

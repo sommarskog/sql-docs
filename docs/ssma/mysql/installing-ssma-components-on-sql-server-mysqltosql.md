@@ -1,20 +1,18 @@
 ---
-title: "Installing SSMA components on SQL Server (MySQLToSql) | Microsoft Docs"
+title: "Installing SSMA components on SQL Server (MySQLToSQL)"
 description: Install components on the server that runs SQL Server to support MySQL database conversion with SSMA, including the SSMA extension pack and MySQL providers.
-ms.prod: sql
-ms.custom: ""
+author: cpichuka
+ms.author: cpichuka
 ms.date: "07/14/2020"
-ms.reviewer: ""
-ms.technology: ssma
+ms.service: sql
+ms.subservice: ssma
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: intro-installation
+helpviewer_keywords:
   - "SSMA extension pack, Installation"
-ms.assetid: 6772d0c5-258f-4d7b-afb0-b5f810e71af1
-author: "nahk-ivanov"
-ms.author: "alexiva"
 ---
 
-# Installing SSMA components on SQL Server (MySQLToSql)
+# Installing SSMA components on SQL Server (MySQLToSQL)
 
 In addition to installing SSMA, you must also install components on the computer that is running [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. These components include the SSMA extension pack, which supports data migration, and MySQL providers to enable server-to-server connectivity.
 
@@ -28,8 +26,8 @@ Also, when you migrate data to [!INCLUDE[ssNoVersion](../../includes/ssnoversion
 
 Before you install the SSMA for MySQL server components on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], make sure that the computer meets the following requirements:
 
-- [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows Installer 3.1 or a later version.
-- The [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort_md.md)] version 4.7.2 or a later version. You can obtain it from the [.NET Framework Developer Center](https://go.microsoft.com/fwlink/?LinkId=48882).
+- [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows Installer 3.1 or a later version.
+- The [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] version 4.7.2 or a later version. You can obtain it from the [.NET Framework Developer Center](https://go.microsoft.com/fwlink/?LinkId=48882).
 - The MySQL Client Provider, and connectivity to the MySQL database that you want to migrate. You can install providers from the MySQL product media or MySQL Web site.
 - The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser service must be running during installation. This is used to populate a list of the instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in the Setup wizard. You can disable the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser service after installation.  
 

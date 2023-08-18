@@ -1,14 +1,12 @@
 ---
 title: Kusto (KQL) extension for Azure Data Studio
 description: This article describes how you can connect and query Azure Data Explorer clusters with Azure Data Studio.
-ms.prod: azure-data-studio
-ms.technology: azure-data-studio
-ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.reviewer: jukoesma
-ms.custom: 
-ms.date: 10/29/2020
+ms.reviewer: erinstellato
+ms.date: 3/8/2023
+ms.service: azure-data-studio
+ms.topic: conceptual
 ---
 
 # Kusto (KQL) extension for Azure Data Studio (Preview)
@@ -64,14 +62,10 @@ To set up an Azure Data Explorer cluster to connect to, follow the steps below.
 
 2. Fill in the **Connection Details** information.
     1. For **Connection type**, select *Kusto*.
-    2. For **Cluster**, enter in your Azure Data Explorer cluster.
-
-        > [!Note]
-        > When entering the cluster name, don't include the `https://` prefix or a trailing `/`.
-
+    2. For **Cluster**, enter in your Azure Data Explorer cluster address (for example, `https://mydataexplorercluster.kusto.windows.net`).
     3. For **Authentication Type**, use the default - *Azure Active Directory - Universal with MFA account*.
     4. For **Account**, use your account information.
-    5. For **Database**, use *Default*.
+    5. For **Database**, use *Default*. If your account does not have access to the *Default* database, you can use any database that you have access to.
     6. For **Server Group**, use *Default*.
         1. You can use this field to organize your servers in a specific group.
     7. For **Name (optional)**, leave blank.
@@ -119,7 +113,7 @@ The extensions settings look like this:
 
 ## SandDance visualization
 
-The [SandDance extension](sanddance-extension.md) with the Kusto (KQL) extension in Azure Data Studio bring rich interactive visualization together. From the KQL query result set, select the **Visualizer** button to launch [SandDance](https://sanddance.js.org/).
+The [SandDance extension](sanddance-extension.md) with the Kusto (KQL) extension in Azure Data Studio bring rich interactive visualization together. From the KQL query result set, select the **Visualizer** button to launch [SandDance](https://microsoft.github.io/SandDance/).
 
 :::image type="content" source="media/kusto-extension/kusto-extension-sanddance-demo.gif" alt-text="SandDance visualization":::
 
@@ -128,7 +122,7 @@ The [SandDance extension](sanddance-extension.md) with the Kusto (KQL) extension
 | Details | Workaround |
 |---------|------------|
 | [In Kusto notebook, Changing a database connection on a saved alias connection is stuck after an error in code cell execution](https://github.com/microsoft/azuredatastudio/issues/12384) | Close and reopen the Notebook, then connect to the right cluster with the database |
-| [In Kusto Notebook, changing a database connection on a non-saved alias connection doesn't work](https://github.com/microsoft/azuredatastudio/issues/12843) |Create a new connection from Connection Viewlet and save it with an alias. Then create a new notebook and connect to the newly saved connection) | 
+| [In Kusto Notebook, changing a database connection on a non-saved alias connection doesn't work](https://github.com/microsoft/azuredatastudio/issues/12843) |Create a new connection from Connection Viewlet and save it with an alias. Then create a new notebook and connect to the newly saved connection) |
 | [In Kusto Notebook, the database dropdown isn't populated when creating a new ADX connection](https://github.com/microsoft/azuredatastudio/issues/12666) | Create a new connection from Connection Viewlet and save it with an alias. Then create a new notebook and connect to the newly saved connection) |
 
 You can file a [feature request](https://github.com/microsoft/azuredatastudio/issues/new?assignees=&labels=&template=feature_request.md&title=) to provide feedback to the product team.  
@@ -140,4 +134,4 @@ You can file a [bug](https://github.com/microsoft/azuredatastudio/issues/new?ass
 - [Kqlmagic notebook in Azure Data Studio](../notebooks/notebooks-kqlmagic.md)
 - [SQL to Kusto cheat sheet](/azure/data-explorer/kusto/query/sqlcheatsheet)
 - [What is Azure Data Explorer?](/azure/data-explorer/data-explorer-overview)
-- [Using SandDance visualizations](https://sanddance.js.org/)
+- [Using SandDance visualizations](https://microsoft.github.io/SandDance/)

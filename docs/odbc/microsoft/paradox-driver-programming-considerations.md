@@ -1,21 +1,17 @@
 ---
+title: "Paradox Driver Programming Considerations"
 description: "Paradox Driver Programming Considerations"
-title: "Paradox Driver Programming Considerations | Microsoft Docs"
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Paradox driver [ODBC]"
   - "ODBC desktop database drivers [ODBC], Paradox driver"
   - "desktop database drivers [ODBC], Paradox driver"
   - "Jet-based ODBC drivers [ODBC], Paradox driver"
-ms.assetid: 327e952b-e7d5-4209-9423-f4b49cea272f
-author: David-Engel
-ms.author: v-daenge
 ---
 # Paradox Driver Programming Considerations
 This section contains the following topics:  
@@ -27,6 +23,7 @@ This section contains the following topics:
 -   [SQLGetInfo Returned Values for Paradox](../../odbc/microsoft/sqlgetinfo-returned-values-for-paradox.md)  
   
 -   [Other Paradox Driver Programming Details](../../odbc/microsoft/other-paradox-driver-programming-details.md)  
-  
+
 > [!NOTE]  
+
 >  Accessing Paradox ISAM files through the ODBC Desktop Database Drivers requires installation of the Borland database engine.

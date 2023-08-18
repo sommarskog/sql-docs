@@ -1,24 +1,21 @@
 ---
-description: "sys.dm_os_memory_clerks (Transact-SQL)"
 title: "sys.dm_os_memory_clerks (Transact-SQL)"
-ms.custom: ""
-ms.date: "02/18/2021"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
-ms.technology: system-objects
+description: sys.dm_os_memory_clerks (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
+ms.date: "02/27/2023"
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "dm_os_memory_clerks"
   - "sys.dm_os_memory_clerks"
   - "dm_os_memory_clerks_TSQL"
   - "sys.dm_os_memory_clerks_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.dm_os_memory_clerks dynamic management view"
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+dev_langs:
+  - "TSQL"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_os_memory_clerks (Transact-SQL)
@@ -27,7 +24,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   Returns the set of all memory clerks that are currently active in the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!NOTE]  
->  To call this from [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] or [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use the name **sys.dm_pdw_nodes_os_memory_clerks**. 
+>  To call this from [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] or [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use the name **sys.dm_pdw_nodes_os_memory_clerks**. [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
  
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
@@ -35,9 +32,9 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 |**type**|**nvarchar(60)**|Specifies the type of memory clerk. Every clerk has a specific type, such as CLR Clerks MEMORYCLERK_SQLCLR. Is not nullable.|  
 |**name**|**nvarchar(256)**|Specifies the internally assigned name of this memory clerk. A component can have several memory clerks of a specific type. A component might choose to use specific names to identify memory clerks of the same type. Is not nullable.|  
 |**memory_node_id**|**smallint**|Specifies the ID of the memory node. Not nullable.|  
-|**single_pages_kb**|**bigint**|**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]. For more information, see [Changes to Memory Management starting with SQL Server 2012 (11.x)](../memory-management-architecture-guide.md#changes-to-memory-management-starting-with-).|  
+|**single_pages_kb**|**bigint**|**Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] through [!INCLUDE[sql2008r2](../../includes/sql2008r2-md.md)]. For more information, see [Changes to Memory Management starting with SQL Server 2012 (11.x)](../memory-management-architecture-guide.md#changes-to-memory-management-starting-with-).|  
 |**pages_kb**|**bigint**|**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later.<br /><br /> Specifies the amount of page memory allocated in kilobytes (KB) for this memory clerk. Is not nullable.|  
-|**multi_pages_kb**|**bigint**|**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]. For more information, see [Changes to Memory Management starting with SQL Server 2012 (11.x)](../memory-management-architecture-guide.md#changes-to-memory-management-starting-with-).<br /><br /> Amount of multipage memory allocated in KB. This is the amount of memory allocated by using the multiple page allocator of the memory nodes. This memory is allocated outside the buffer pool and takes advantage of the virtual allocator of the memory nodes. Is not nullable.|  
+|**multi_pages_kb**|**bigint**|**Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] through [!INCLUDE[sql2008r2](../../includes/sql2008r2-md.md)]. For more information, see [Changes to Memory Management starting with SQL Server 2012 (11.x)](../memory-management-architecture-guide.md#changes-to-memory-management-starting-with-).<br /><br /> Amount of multipage memory allocated in KB. This is the amount of memory allocated by using the multiple page allocator of the memory nodes. This memory is allocated outside the buffer pool and takes advantage of the virtual allocator of the memory nodes. Is not nullable.|  
 |**virtual_memory_reserved_kb**|**bigint**|Specifies the amount of virtual memory that is reserved by a memory clerk. Is not nullable.|  
 |**virtual_memory_committed_kb**|**bigint**|Specifies the amount of virtual memory that is committed by a memory clerk. The amount of committed memory should always be less than the amount of reserved memory. Is not nullable.|  
 |**awe_allocated_kb**|**bigint**|Specifies the amount of memory in kilobytes (KB) locked in the physical memory and not paged out by the operating system. Is not nullable.|  
@@ -46,13 +43,17 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 |**page_size_in_bytes**|**bigint**|Specifies the granularity of the page allocation for this memory clerk. Is not nullable.|  
 |**page_allocator_address**|**varbinary(8)**|Specifies the address of the page allocator. This address is unique for a memory clerk and can be used in **sys.dm_os_memory_objects** to locate memory objects that are bound to this clerk. Is not nullable.|  
 |**host_address**|**varbinary(8)**|Specifies the memory address of the host for this memory clerk. For more information, see [sys.dm_os_hosts &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-hosts-transact-sql.md). Components, such as [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, access [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] memory resources through the host interface.<br /><br /> 0x00000000 = Memory clerk belongs to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> Is not nullable.|  
-|**pdw_node_id**|**int**|**Applies to**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> The identifier for the node that this distribution is on.|  
+|**pdw_node_id**|**int**|**Applies to**: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> The identifier for the node that this distribution is on.|  
 
 ## Permissions
 
 On [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requires `VIEW SERVER STATE` permission.   
-On [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] Basic, S0, and S1 service objectives, and for databases in elastic pools, the [server admin](/azure/azure-sql/database/logins-create-manage#existing-logins-and-user-accounts-after-creating-a-new-database) account or the [Azure Active Directory admin](/azure/azure-sql/database/authentication-aad-overview#administrator-structure) account is required. On all other [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] service objectives, the `VIEW DATABASE STATE` permission is required in the database.   
+On [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] Basic, S0, and S1 service objectives, and for databases in elastic pools, the [server admin](/azure/azure-sql/database/logins-create-manage#existing-logins-and-user-accounts-after-creating-a-new-database) account or the [Azure Active Directory admin](/azure/azure-sql/database/authentication-aad-overview#administrator-structure) account is required. On all other [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] service objectives, the `VIEW DATABASE STATE` permission is required in the database.   
   
+### Permissions for SQL Server 2022 and later
+
+Requires VIEW SERVER PERFORMANCE STATE permission on the server.
+
 ## Remarks
 
  The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] memory manager consists of a three-layer hierarchy. At the bottom of the hierarchy are memory nodes. The middle level consists of memory clerks, memory caches, and memory pools. The top layer consists of memory objects. These objects are used to allocate memory in an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -120,11 +121,11 @@ The following table lists the memory clerk types:
 |MEMORYCLERK_FSCHUNKER     |      This memory clerk is used for various allocations by [FILESTREAM](../blob/filestream-sql-server.md) functionality for creating filestream chunks.   |
 |MEMORYCLERK_FULLTEXT     |     This memory clerk is used for allocations by Full-Text engine structures.   |
 |MEMORYCLERK_FULLTEXT_SHMEM     |   This memory clerk is used for allocations by Full-Text engine structures related to Shared memory connectivity with the Full Text Daemon process.      |
-|MEMORYCLERK_HADR     |     This memory clerk is used for memory allocations by AlwaysOn functionality     |
+|MEMORYCLERK_HADR     |     This memory clerk is used for memory allocations by Always On functionality     |
 |MEMORYCLERK_HOST     |    This memory clerk is used for allocations by SQL OS functionality.     |
 |MEMORYCLERK_LANGSVC     |     This memory clerk is used for allocations by SQL T-SQL statements and commands (parser, algebrizer, etc.)    |
 |MEMORYCLERK_LWC     |   This memory clerk is used for allocations by Full-Text [Semantic Search](../search/semantic-search-sql-server.md) engine       |
-|MEMORYCLERK_POLYBASE     |    This memory clerk keeps track of memory allocations for [Polybase](../polybase/polybase-guide.md) functionality inside SQL Server.     |
+|MEMORYCLERK_POLYBASE     |    This memory clerk keeps track of memory allocations for [PolyBase](../polybase/polybase-guide.md) functionality inside SQL Server.     |
 |MEMORYCLERK_QSRANGEPREFETCH     |  This memory clerk is used for allocations during query execution for query scan range prefetch.      |
 |MEMORYCLERK_QUERYDISKSTORE     |     This memory clerk is used by [Query Store](../performance/monitoring-performance-by-using-the-query-store.md) memory allocations inside SQL Server.    |
 |MEMORYCLERK_QUERYDISKSTORE_HASHMAP     |   This memory clerk is used by [Query Store](../performance/monitoring-performance-by-using-the-query-store.md) memory allocations inside SQL Server.      |
@@ -140,13 +141,13 @@ The following table lists the memory clerk types:
 |MEMORYCLERK_SOSOS     |     This memory clerk allocates structures for  SQLOS (SOS) thread scheduling and memory and I/O management..    |
 |MEMORYCLERK_SPATIAL     |    This memory clerk is used by [Spatial Data](../spatial/spatial-data-sql-server.md) components for memory allocations.     |
 |MEMORYCLERK_SQLBUFFERPOOL     |    This memory clerk keeps track of commonly the largest memory consumer inside [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] - data and index pages. Buffer Pool or data cache keeps data and index pages loaded in memory to provide fast access to data. For more information, see [Buffer Management](../memory-management-architecture-guide.md#buffer-management).     |
-|MEMORYCLERK_SQLCLR     |     This memory clerk is used for allocations by [SQLCLR ](../clr-integration/clr-integration-overview.md).     |
-|MEMORYCLERK_SQLCLRASSEMBLY     |     This memory clerk is used for allocations for [SQLCLR ](../clr-integration/clr-integration-overview.md) assemblies.     |
+|MEMORYCLERK_SQLCLR     |     This memory clerk is used for allocations by [SQLCLR](../clr-integration/clr-integration-overview.md).     |
+|MEMORYCLERK_SQLCLRASSEMBLY     |     This memory clerk is used for allocations for [SQLCLR](../clr-integration/clr-integration-overview.md) assemblies.     |
 |MEMORYCLERK_SQLCONNECTIONPOOL     |     This memory clerk caches information on the server that the client application may need the server to keep track of. One example is an application that creates prepare handles via  [sp_prepexecrpc](../system-stored-procedures/sp-prepexecrpc-transact-sql.md). The application should properly unprepare (close) those handles after execution.  |
 |MEMORYCLERK_SQLEXTENSIBILITY     |    This memory clerk is used for allocations by the [Extensibility Framework](../../machine-learning/concepts/extensibility-framework.md) for running external Python or R scripts on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  <br /><br />**Applies to**: [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] and later   |
 |MEMORYCLERK_SQLGENERAL     |   This memory clerk could be used by multiple consumers inside SQL engine. Examples include replication memory, internal debugging/diagnostics, some [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] startup functionality, some SQL parser functionality, building system indexes, initialize global memory objects, Create OLEDB connection inside the server and Linked Server queries, Server-side Profiler tracing, creating showplan data, some security functionality, compilation of computed columns, memory for Parallelism structures, memory for some XML functionality     |
 |MEMORYCLERK_SQLHTTP     |    Deprecated     |
-|MEMORYCLERK_SQLLOGPOOL     |   This memory clerk is used by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Log Pool.  Log Pool is a cache  used to improve performance when reading the transaction log. Specifically it improves log cache utilization during multiple log reads, reduces disk I/O log reads and allows sharing of log scans. Primary consumers of log pool are AlwaysOn (Change Capture and Send), Redo Manager, Database Recovery - Analysis/Redo/Undo, Transaction Runtime Rollback, Replication/CDC, Backup/Restore.    |
+|MEMORYCLERK_SQLLOGPOOL     |   This memory clerk is used by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Log Pool.  Log Pool is a cache  used to improve performance when reading the transaction log. Specifically it improves log cache utilization during multiple log reads, reduces disk I/O log reads and allows sharing of log scans. Primary consumers of log pool are Always On (Change Capture and Send), Redo Manager, Database Recovery - Analysis/Redo/Undo, Transaction Runtime Rollback, Replication/CDC, Backup/Restore.    |
 |MEMORYCLERK_SQLOPTIMIZER     |     This memory clerk is used for memory allocations during different phases of compiling a query. Some uses include query optimization, index statistics manager, view definitions compilation, histogram generation.   |
 |MEMORYCLERK_SQLQERESERVATIONS     |     This memory clerk is used for Memory Grant allocations, that is memory allocated to queries to perform sort and hash operations during query execution. For more information on Query Execution reservations (memory grants), see [this blog](https://techcommunity.microsoft.com/t5/sql-server-support/memory-grants-the-mysterious-sql-server-memory-consumer-with/ba-p/333994)     |
 |MEMORYCLERK_SQLQUERYCOMPILE     |    This memory clerk is used by Query optimizer for allocating memory during query compiling.   |
@@ -154,7 +155,7 @@ The following table lists the memory clerk types:
 |MEMORYCLERK_SQLQUERYPLAN     |     This memory clerk is used for allocations by [Heap](../indexes/heaps-tables-without-clustered-indexes.md) page management, [DBCC CHECKTABLE](../../t-sql/database-console-commands/dbcc-checktable-transact-sql.md) allocations, and [sp_cursor* stored procedure](../system-stored-procedures/cursor-stored-procedures-transact-sql.md) allocations   |
 |MEMORYCLERK_SQLSERVICEBROKER     |   This memory clerk is used by [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md) memory allocations.       |
 |MEMORYCLERK_SQLSERVICEBROKERTRANSPORT     |     This memory clerk is used by [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md) transport memory allocations.    |
-|MEMORYCLERK_SQLSLO_OPERATIONS     |      This memory clerk is used to gather performance statistics <br /><br />**Applies to**:  [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]   |
+|MEMORYCLERK_SQLSLO_OPERATIONS     |      This memory clerk is used to gather performance statistics <br /><br />**Applies to**:  [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)]   |
 |MEMORYCLERK_SQLSOAP     |     Deprecated    |
 |MEMORYCLERK_SQLSOAPSESSIONSTORE     |    Deprecated     |
 |MEMORYCLERK_SQLSTORENG     |   This memory clerk is used for allocations by multiple storage engine components. Examples of components include structures for database files, database snapshot replica file manager, deadlock monitor, DBTABLE structures, Log manager structures, some tempdb versioning structures, some server startup functionality, execution context for child threads in parallel queries.      |
@@ -168,10 +169,10 @@ The following table lists the memory clerk types:
 |MEMORYCLERK_WRITEPAGERECORDER     |    This memory clerk is used for allocations by Write Page Recorder.   |
 |MEMORYCLERK_XE     |    This memory clerk is used for [Extended Events](../extended-events/extended-events.md) memory allocations      |
 |MEMORYCLERK_XE_BUFFER     |      This memory clerk is used for [Extended Events](../extended-events/extended-events.md) memory allocations   |
-|MEMORYCLERK_XLOG_SERVER     |   This memory clerk is used for allocations by Xlog used for log file management in SQL Azure Database   <br /><br />**Applies to**:  [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] |
-|MEMORYCLERK_XTP     |    This memory clerk is used for [In-Memory OLTP](../in-memory-oltp/in-memory-oltp-in-memory-optimization.md) memory allocations.     |
+|MEMORYCLERK_XLOG_SERVER     |   This memory clerk is used for allocations by Xlog used for log file management in SQL Azure Database   <br /><br />**Applies to**:  [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] |
+|MEMORYCLERK_XTP     |    This memory clerk is used for [In-Memory OLTP](../in-memory-oltp/overview-and-usage-scenarios.md) memory allocations.     |
 |OBJECTSTORE_LBSS     |    This object store is used to allocate temporary LOBs - variables, parameters, and intermediate results for expressions. An example that uses this store is [table-valued parameters](../../connect/ado-net/sql/table-valued-parameters.md) (TVP) . See the [KB article 4468102](https://support.microsoft.com/topic/kb4468102-fix-excessive-memory-usage-when-you-trace-rpc-events-that-involve-table-valued-parameters-in-sql-server-2016-and-2017-c68aa214-26f1-98de-6b4d-c7dcad82dbd4) and  [KB article 4051359](https://support.microsoft.com/topic/kb4051359-fix-sql-server-runs-out-of-memory-when-table-valued-parameters-are-captured-in-extended-events-sessions-in-sql-server-2016-even-if-collecting-statement-or-data-stream-isn-t-enabled-a3639efa-0618-82a8-f6b1-8cdcba29ce6d) for more information on fixes in this space.     |
-|OBJECTSTORE_LOCK_MANAGER     |      This memory clerk keeps track of allocations made by the [Lock Manager](../sql-server-transaction-locking-and-row-versioning-guide.md#Lock_Engine) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].   |
+|OBJECTSTORE_LOCK_MANAGER     |      This memory clerk keeps track of allocations made by the [Lock Manager](../sql-server-transaction-locking-and-row-versioning-guide.md#lock_engine) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].   |
 |OBJECTSTORE_SECAUDIT_EVENT_BUFFER     |   This object store is used for [SQL Server Audit](../security/auditing/sql-server-audit-database-engine.md) memory allocations.        |
 |OBJECTSTORE_SERVICE_BROKER     |     This object store is used by [Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)    |
 |OBJECTSTORE_SNI_PACKET     |     This object store is used by Server Network Interface (SNI) components which manage connectivity    |
@@ -183,6 +184,8 @@ The following table lists the memory clerk types:
 |USERSTORE_SXC     |    This user store is used for allocations to store all [RPC](/openspecs/windows_protocols/ms-tds/619c43b6-9495-4a58-9e49-a4950db245b3) parameters.     |
 |USERSTORE_TOKENPERM     |    TokenAndPermUserStore is a single SOS user store that keeps track of security entries for security context, login, user, permission, and audit. Multiple hash tables are allocated to store these objects.    |
 
+[!INCLUDE [sql-b-tree](../../includes/sql-b-tree.md)]
+
 ## See Also  
 
  [SQL Server Operating System Related Dynamic Management Views &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)   
@@ -190,4 +193,4 @@ The following table lists the memory clerk types:
  [sys.dm_exec_query_memory_grants &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)   
  [sys.dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)   
  [sys.dm_exec_query_plan &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)   
- [sys.dm_exec_sql_text &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)  
+ [sys.dm_exec_sql_text &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)

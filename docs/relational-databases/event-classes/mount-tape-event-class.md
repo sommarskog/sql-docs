@@ -1,21 +1,18 @@
 ---
+title: "Mount Tape Event Class"
 description: "Mount Tape Event Class"
-title: "Mount Tape Event Class | Microsoft Docs"
-ms.custom: ""
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: supportability
+ms.service: sql
+ms.subservice: supportability
 ms.topic: reference
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Mount Tape event class"
-ms.assetid: 4c595e0a-d968-47d3-a84f-9b6857342671
-author: "stevestein"
-ms.author: "sstein"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Mount Tape Event Class
-[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
   The Mount Tape event class occurs when a tape mount request is received. Use this event class to monitor tape mount requests and their success or failure.  
   
 ## Mount Tape Event Class Data Columns  

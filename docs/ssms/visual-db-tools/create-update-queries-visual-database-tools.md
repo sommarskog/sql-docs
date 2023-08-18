@@ -1,25 +1,20 @@
 ---
-description: "Create Update Queries (Visual Database Tools)"
 title: Create Update Queries
-ms.custom: seo-lt-2019
+description: "Create Update Queries (Visual Database Tools)"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
+ms.service: sql
+ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "tables [SQL Server], updating"
   - "queries [SQL Server], types"
   - "Update query"
   - "updating tables"
-ms.assetid: 178b7b75-8078-4e61-b2a8-4719b9d8033d
-author: markingmyname
-ms.author: maghan
-ms.reviewer: 
-
 ---
 # Create Update Queries (Visual Database Tools)
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server](../../includes/applies-to-version/sqlserver.md)]
 You can change the contents of multiple rows in one operation by using an Update query. For example, in a `titles` table you can use an Update query to add 10% to the price of all books for a particular publisher.  
   
 When you create an Update query, you specify:  

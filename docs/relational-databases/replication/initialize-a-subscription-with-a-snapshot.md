@@ -1,18 +1,16 @@
 ---
-description: "Initialize a Subscription with a Snapshot for a New Publication"
 title: Initialize subscription with snapshot
-ms.custom:
+description: "Initialize a Subscription with a Snapshot for a New Publication"
+author: MashaMSFT
+ms.author: mathoma
 ms.date: 03/23/2020
-ms.prod: sql
-ms.reviewer:
-ms.technology: replication
+ms.service: sql
+ms.subservice: replication
 ms.topic: conceptual
+ms.custom: updatefrequency5
 helpviewer_keywords:
   - "snapshots [SQL Server replication], initializing subscriptions"
   - "initializing subscriptions [SQL Server replication], snapshots"
-ms.assetid: 77a9ade2-cdc0-4ae9-a02d-6e29d7c2ada0
-author: MashaMSFT
-ms.author: mathoma
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
 ---
 # Initialize a Subscription with a Snapshot for a New Publication
@@ -46,7 +44,6 @@ The following table displays the contents of the snapshot, for each type of publ
 | :---------------------------------------- | :----------------------- |
 | <ul> <li>Snapshot publication</li> <li>Transactional publication</li> <li>Merge publication that doesn't use parameterized filters</li> </ul> | <ul> <li>Schema</li> <li>Data, in files for the bulk copy program (BCP)</li> <li>Constraints</li> <li>Extended properties</li> <li>Indexes</li> <li>Triggers</li> <li>System tables needed for replication</li> </ul> <br/>See [Create and Apply the Snapshot](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md). |
 | <ul> <li>Merge publication that does use parameterized filters</li> </ul> | <ul> <li>Schema snapshot (replication scripts, published objects, but no data)</li> <li>Data that belongs to the subscription's partition</li> </ul> <br/>See [Snapshots for Merge Publications with Parameterized Filters](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md). |
-| | |
 
 #### Two-part process with merge publication that uses parameterized filters
 
@@ -71,7 +68,6 @@ The file types contained in the snapshot depend on the type of replication, and 
 | :------------------ | :-------------------- |
 | Snapshot Replication, or<br/>Transactional Replication | &bullet; Schema (.sch) <br/>&bullet; Data (.bcp) <br/>&bullet; Constraints and indexes (.dri) <br/>&bullet; Compressed snapshot files (.cab) <br/>&bullet; Triggers (.tag), only to update a Subscriber <br/><br/>&bullet; Constraints (.idx). |
 | Merge Replication                                      | &bullet; Schema (.sch) <br/>&bullet; Data (.bcp) <br/>&bullet; Constraints and indexes (.dri) <br/>&bullet; Compressed snapshot files (.cab) <br/>&bullet; Triggers (.trg) <br/><br/>&bullet; System table data (.sys) <br/>&bullet; Conflict tables (.cft). |
-| | |
 
 ### Snapshot folder
 

@@ -1,22 +1,18 @@
 ---
+title: "FTP Connection Manager"
 description: "FTP Connection Manager"
-title: "FTP Connection Manager | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "integration-services"
-ms.reviewer: ""
-ms.technology: integration-services
+ms.service: sql
+ms.subservice: integration-services
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.dts.designer.ftpconnectionmanager.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "FTP connection manager"
   - "connections [Integration Services], FTP"
   - "connection managers [Integration Services], FTP"
-ms.assetid: c4f43455-29ca-44ba-ac7f-ea729b1daf93
-author: chugugrace
-ms.author: chugu
 ---
 # FTP Connection Manager
 
@@ -50,7 +46,9 @@ ms.author: chugu
   
 ## Active/Passive Modes  
  An FTP connection manager can send and receive files using either active mode or passive mode. In active mode, the server initiates the data connection, and in passive mode, the client initiates the data connection.  
-  
+> [!NOTE]
+> Passive Mode is recommended for SSIS Integration Runtime (IR), as SSIS IR might not be able to accept incoming TCP connections.
+ 
 ## Configuration of the FTP Connection Manager  
  You can set properties through [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer or programmatically.  
   

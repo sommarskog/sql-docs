@@ -1,18 +1,15 @@
 ---
-title: "Distribution Database | Microsoft Docs"
+title: "Distribution Database"
 description: In SQL Server, the distribution database stores metadata and history data for all types of replication, and transactions for transactional replication.
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: replication
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.rep.configuredistributionwizard.distributiondatabase.f1"
-ms.assetid: 5b42a083-7a11-41d8-9e3f-320c7c907237
 author: "MashaMSFT"
 ms.author: "mathoma"
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: conceptual
+ms.custom: updatefrequency5
+f1_keywords:
+  - "sql13.rep.configuredistributionwizard.distributiondatabase.f1"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # Distribution Database
@@ -26,7 +23,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
  Enter a name for the distribution database. The default name for the distribution database is 'distribution'. If you specify a name, the name can be a maximum of 128 characters, must be unique within an instance of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], and must conform to the rules for identifiers. For more information, see [Database Identifiers](../../relational-databases/databases/database-identifiers.md).  
   
  **Folder for the distribution database file** and **Folder for the distribution database log file**  
- Enter the path for the distribution database and log files. Paths must refer to disks that are local to the Distributor and begin with a local drive letter and colon (for example, C:). Mapped drive letters and network paths are not valid.  
+ Enter the path for the distribution database and log files. If using the SQL Server Management Studio GUI, paths must refer to disks that are local to the Distributor and begin with a local drive letter and colon (for example, C:). If using Transact-SQL (T-SQL), supported UNC path formats for SMB file shares are valid.  See more information in [SQL Server with SMB fileshare storage](../../database-engine/install-windows/install-sql-server-with-smb-fileshare-as-a-storage-option.md).
   
 > [!NOTE]  
 >  You can decrease the time it takes to write transactions and improve the performance of replication by placing the distribution database log on a separate disk drive from the distribution database.  

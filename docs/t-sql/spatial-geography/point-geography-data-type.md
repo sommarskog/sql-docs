@@ -1,27 +1,23 @@
 ---
+title: "Point (geography Data Type)"
 description: "Point (geography Data Type)"
-title: "Point (geography Data Type) | Microsoft Docs"
-ms.custom: ""
+author: MladjoA
+ms.author: mlandzic
 ms.date: "10/10/2019"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "Point"
   - "Point_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Point method"
   - "Point (geography Data Type)"
-ms.assetid: 0dc6f422-7aae-4016-b7f4-3289fa8f989c
-author: MladjoA
-ms.author: mlandzic 
+dev_langs:
+  - "TSQL"
 ---
 # Point (geography Data Type)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 Constructs a **geography** instance representing a **Point** instance from its latitude and longitude values and a spatial reference ID (SRID).
   
@@ -55,7 +51,7 @@ Point ( Lat, Long, SRID )
 ## Examples  
  The following example uses `Point()` to create a `geography` instance.  
   
-```  
+```sql
 DECLARE @g geography;   
 SET @g = geography::Point(47.65100, -122.34900, 4326)  
 SELECT @g.ToString();  

@@ -1,23 +1,19 @@
 ---
-description: "dbo.cdc_jobs (Transact-SQL)"
-title: "dbo.cdc_jobs (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "dbo.cdc_jobs (Transact-SQL)"
+description: dbo.cdc_jobs (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "06/10/2016"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "cdc_jobs"
   - "cdc_jobs_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "dbo.cdc_jobs"
-ms.assetid: 85e2d580-1c54-4b81-b7e6-2e12997199fd
-author: cawrites
-ms.author: chadam
+dev_langs:
+  - "TSQL"
 ---
 # dbo.cdc_jobs (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

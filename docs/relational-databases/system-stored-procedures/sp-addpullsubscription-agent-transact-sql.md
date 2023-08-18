@@ -1,28 +1,26 @@
 ---
+title: "sp_addpullsubscription_agent (Transact-SQL)"
 description: "sp_addpullsubscription_agent (Transact-SQL)"
-title: "sp_addpullsubscription_agent (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/29/2021"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: replication
+author: markingmyname
+ms.author: maghan
+ms.date: 07/15/2023
+ms.service: sql
+ms.subservice: replication
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sp_addpullsubscription_agent"
   - "sp_addpullsubscription_agent_TSQL"
 helpviewer_keywords:
   - "sp_addpullsubscription_agent"
-ms.assetid: b9c2eaed-6d2d-4b78-ae9b-73633133180b
-author: markingmyname
-ms.author: maghan
+dev_langs:
+  - "TSQL"
 ---
 # sp_addpullsubscription_agent (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
  
   Adds a new scheduled agent job used to synchronize a pull subscription to a transactional publication. This stored procedure is executed at the Subscriber on the subscription database.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -93,6 +91,9 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
   
 `[ @subscriber = ] 'subscriber'`
  Is the name of the Subscriber instance or the name of the AG listener if the subscriber database is in an availability group. *subscriber* is **sysname**, with a default of NULL.  
+
+> [!NOTE]  
+>  When running **sp_addpullsubscription_agent** for a subscriber that is part of an Always On Availability Group, it is necessary to pass the **@Subscriber** parameter as the AG listener name. If you are running [!INCLUDE[sssql15-md](../../includes/sssql16-md.md)] and earlier versions, or [!INCLUDE[sssql14](../../includes/sssql17-md.md)] prior to CU16, the stored procedure will execute without returning an error but the **@Subscriber** parameter on the [Distribution Agent job](../replication/agents/replication-distribution-agent.md) will not reference the AG Listener name; the parameter will be created with the subscriber server name on which the command is executed. To amend this issue, manually update the Distribution Agent job ([Distribution Agent job](../replication/agents/replication-distribution-agent.md#arguments) **@Subscriber** parameter with the AG Listener name value. 
   
 > [!NOTE]  
 >  This parameter has been deprecated and is maintained for backward compatibility of scripts.  
@@ -128,7 +129,12 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
  Is the name of the distribution database. *distribution_db* is **sysname**, with a default value of NULL.  
   
 `[ @distributor_security_mode = ] distributor_security_mode`
- Is the security mode to use when connecting to a Distributor when synchronizing. *distributor_security_mode* is **int**, with a default of **1**. **0** specifies [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication. **1** specifies Windows Authentication.  
+ Is the security mode to use when connecting to a Distributor when synchronizing. *distributor_security_mode* is **int**, with a default of **1**. The following values define the security mode: 
+- **0** specifies [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication. 
+- **1** specifies Windows Authentication.  
+- **2** specifies Azure Active Directory (Azure AD) Password Authentication starting with SQL Server 2022 CU 6. 
+- **3** specifies Azure AD Integrated Authentication starting with SQL Server 2022 CU 6. 
+- **4** specifies Azure AD Token Authentication starting with SQL Server 2022 CU 6. 
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
@@ -292,5 +298,3 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
  [sp_droppullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droppullsubscription-transact-sql.md)   
  [sp_helppullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helppullsubscription-transact-sql.md)   
  [sp_helpsubscription_properties &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-properties-transact-sql.md)  
-  
-  

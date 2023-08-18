@@ -1,23 +1,19 @@
 ---
-description: "IHpublisherindexes (Transact-SQL)"
-title: "IHpublisherindexes (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "IHpublisherindexes (Transact-SQL)"
+description: IHpublisherindexes (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "03/06/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: replication
+ms.service: sql
+ms.subservice: replication
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "IHpublisherindexes"
   - "IHpublisherindexes_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "IHpublisherindexes system table"
-ms.assetid: 6008ef89-eeb9-46dc-93a2-f7623298cf0f
-author: cawrites
-ms.author: chadam
+dev_langs:
+  - "TSQL"
 ---
 # IHpublisherindexes (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

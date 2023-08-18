@@ -1,19 +1,15 @@
 ---
-title: "Remote Blob Store (RBS) (SQL Server) | Microsoft Docs"
+title: "Remote Blob Store (RBS) (SQL Server)"
 description: SQL Server Remote BLOB Store (RBS) stores binary large objects in commodity storage instead of on the main database server. Learn about this add-on component.
-ms.custom: ""
-ms.date: "11/03/2016"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: filestream
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "Remote Blob Store (RBS) [SQL Server]"
-  - "RBS (Remote Blob Store) [SQL Server]"
-ms.assetid: 31c947cf-53e9-4ff4-939b-4c1d034ea5b1
 author: MikeRayMSFT
 ms.author: mikeray
+ms.date: "11/03/2016"
+ms.service: sql
+ms.subservice: filestream
+ms.topic: conceptual
+helpviewer_keywords:
+  - "Remote Blob Store (RBS) [SQL Server]"
+  - "RBS (Remote Blob Store) [SQL Server]"
 ---
 # Remote Blob Store (RBS) (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -29,7 +25,6 @@ ms.author: mikeray
 | [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] | [[!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP2 Feature Pack](https://www.microsoft.com/download/details.aspx?id=56833) |
 | [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] | [[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] Feature Pack](https://www.microsoft.com/download/details.aspx?id=55992) |
 | [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] | [[!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] RBS download page](https://go.microsoft.com/fwlink/?linkid=2109005) |
-| &nbsp; | &nbsp; |
   
  
   
@@ -55,7 +50,7 @@ ms.author: mikeray
 ## RBS Requirements  
  - RBS requires [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise for the main database server in which the BLOB metadata is stored.  However, if you use the supplied FILESTREAM provider, you can store the BLOBs themselves on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard. To connect to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], RBS requires at least ODBC driver version 11 for [!INCLUDE[ssSQL14_md](../../includes/sssql14-md.md)] and ODBC Driver version 13 for [!INCLUDE[ssSQL15_md](../../includes/sssql16-md.md)]. Drivers are available at [Download ODBC Driver for SQL Server](../../connect/odbc/download-odbc-driver-for-sql-server.md).    
   
- RBS includes a FILESTREAM provider that lets you use RBS to store BLOBs on an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. If you want use RBS to store BLOBs in a different storage solution, you have to use a third party RBS provider developed for that storage solution, or develop a custom RBS provider using the RBS API. A sample provider that stores BLOBs in the NTFS file system is available as a learning resource on [Codeplex](https://go.microsoft.com/fwlink/?LinkId=210190).  
+ RBS includes a FILESTREAM provider that lets you use RBS to store BLOBs on an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. If you want use RBS to store BLOBs in a different storage solution, you have to use a third party RBS provider developed for that storage solution, or develop a custom RBS provider using the RBS API.
   
 ## RBS Security  
  The SQL Remote Blob Storage Team Blog is a good source of information about this feature. The RBS security model is described in the post at [RBS Security Model](/archive/blogs/sqlrbs/rbs-security-model).  
@@ -68,7 +63,7 @@ ms.author: mikeray
   
 -   RBS 2016 uses an **AES_128** symmetric key. [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] does not allow the creation of new **TRIPLE_DES** keys except for backwards compatibility reasons. For more information, see [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-symmetric-key-transact-sql.md).  
   
--   RBS 2014 and prior versions use a credential store which holds secrets encrypted using the **TRIPLE_DES** symmetric key algorithm which is outdated. If you are currently using **TRIPLE_DES**[!INCLUDE[msCoName](../../includes/msconame-md.md)] recommends that you enhance your security by following the steps in this topic to rotate your key to a stronger encryption method.  
+-   RBS 2014 and prior versions use a credential store which holds secrets encrypted using the **TRIPLE_DES** symmetric key algorithm which is outdated. If you are currently using **TRIPLE_DES**, [!INCLUDE[msCoName](../../includes/msconame-md.md)] recommends that you enhance your security by following the steps in this topic to rotate your key to a stronger encryption method.  
   
  You can determine the RBS credential store symmetric key properties by executing the following [!INCLUDE[tsql](../../includes/tsql-md.md)] statement in the RBS database:   
 `SELECT * FROM sys.symmetric_keys WHERE name = 'mssqlrbs_encryption_skey';` If the output from that statement shows that **TRIPLE_DES** is still used, then you should rotate this key.  
@@ -79,9 +74,6 @@ If your security policies require different key properties (e.g., algorithm or k
   
 ##  <a name="rbsresources"></a> RBS resources  
   
- **RBS samples**  
- The RBS samples available on [Codeplex](https://go.microsoft.com/fwlink/?LinkId=210190) demonstrate how to develop an RBS application, and how to develop and install a custom RBS provider.  
-  
  **RBS blog**  
  The [RBS blog](/archive/blogs/sqlrbs/) provides additional information to help you understand, deploy, and maintain RBS.  
   
@@ -89,9 +81,7 @@ If your security policies require different key properties (e.g., algorithm or k
  This example creates a stored procedure named `sp_rotate_rbs_symmetric_credential_key` to replace the currently used RBS credential store symmetric key  
 with one of your choosing.  You may want to do this if there is a security policy requiring   
 periodic key rotation or if there are specific algorithm requirements.  
- In this stored procedure, a symmetric key using **AES_256** will replace the current one.  As a result of  
-the symmetric key replacement, secrets need to be re-encrypted with the new key.  This stored   
-procedure will also re-encrypt the secrets.  The database should be backed up prior to key rotation.  
+ In this stored procedure, a symmetric key using **AES_256** will replace the current one.  As a result of the symmetric key replacement, secrets need to be re-encrypted with the new key. This stored procedure will also re-encrypt the secrets.  The database should be backed up prior to key rotation.  
   
 ```  
 CREATE PROC sp_rotate_rbs_symmetric_credential_key  

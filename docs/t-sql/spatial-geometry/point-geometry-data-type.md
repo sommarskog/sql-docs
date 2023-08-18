@@ -1,26 +1,22 @@
 ---
+title: "Point (geometry Data Type)"
 description: "Point (geometry Data Type)"
-title: "Point (geometry Data Type) | Microsoft Docs"
-ms.custom: ""
+author: MladjoA
+ms.author: mlandzic
 ms.date: "08/03/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "Point"
   - "Point_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Point (geometry Data Type)"
-ms.assetid: 7a2e593a-4d4c-4214-b0c5-02d1ac46bc66
-author: MladjoA
-ms.author: mlandzic 
+dev_langs:
+  - "TSQL"
 ---
 # Point (geometry Data Type)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 Constructs a **geometry** instance representing a **Point** instance from its X and Y values and an SRID.
   
@@ -53,7 +49,7 @@ Point ( X, Y, SRID )
 ## Examples  
  The following example uses `Point()` to create a `geometry` instance.  
   
-```  
+```sql
 DECLARE @g geometry;   
 SET @g = geometry::Point(1, 10, 0);  
 SELECT @g.ToString();  

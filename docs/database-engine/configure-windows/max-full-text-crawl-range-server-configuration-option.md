@@ -1,23 +1,19 @@
 ---
-title: "max full-text crawl range Server Configuration Option | Microsoft Docs"
-description: 'Find out about the "max full-text crawl range" option. See how it optimizes SQL Server CPU utilization to improve crawl performance during a full crawl.'
-ms.custom: ""
+title: "max full-text crawl range (server configuration option)"
+description: "Find out about the max full-text crawl range option. See how it optimizes SQL Server CPU utilization to improve crawl performance during a full crawl."
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/02/2017"
-ms.prod: sql
-ms.prod_service: high-availability
-ms.reviewer: ""
-ms.technology: configuration
+ms.service: sql
+ms.subservice: configuration
 ms.topic: conceptual
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "crawls [full-text search]"
   - "max full-text crawl range option"
-ms.assetid: a49de86b-0891-4dcd-89c0-ead30aab00e0
-author: markingmyname
-ms.author: maghan
+dev_langs:
+  - "TSQL"
 ---
-# max full-text crawl range Server Configuration Option
+# max full-text crawl range (server configuration option)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Use the **max full-text crawl range** option to optimize CPU utilization, which improves crawl performance during a full crawl. Using this option, you can specify the number of partitions that [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] should use during a full index crawl. For example, if there are many CPUs and their utilization is not optimal, you can increase the maximum value of this option. In addition to this option, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uses a number of other factors, such as the number of rows in the table and the number of CPUs, to determine the actual number of partitions used.  

@@ -1,16 +1,12 @@
 ---
+title: "Example demonstrating use of Azure Key Vault provider with Always Encrypted enabled with secure enclaves"
 description: "Example demonstrating use of Azure Key Vault provider with Always Encrypted enabled with secure enclaves"
-title: "Example demonstrating use of Azure Key Vault provider with Always Encrypted enabled with secure enclaves | Microsoft Docs"
-ms.custom: ""
-ms.date: 03/03/2021
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: connectivity
-ms.tgt_pltfrm: ""
-ms.topic: tutorial
 author: David-Engel
-ms.author: v-daenge
-ms.reviewer: v-jizho2
+ms.author: v-davidengel
+ms.date: 02/15/2023
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: tutorial
 ---
 
 # Example demonstrating use of Azure Key Vault provider with Always Encrypted enabled with secure enclaves
@@ -18,6 +14,9 @@ ms.reviewer: v-jizho2
 [!INCLUDE [sqlserver2019-windows-only-asdb](../../../includes/applies-to-version/sqlserver2019-windows-only-asdb.md)]
 
 [!INCLUDE [appliesto-netfx-netcore-netst-md](../../../includes/appliesto-netfx-netcore-netst-md.md)]
+
+This example shows you how you can use the Azure Key Vault provider with Always Encrypted with secure enclaves. The script will create a column master key in the database based on the Azure Key Vault URL.
+Secondly, a column encryption key is created. Once the keys are created, a table with encrypted columns will be created, a few records will be inserted and read again from the table.
 
 ## AzureKeyVaultProvider v2.0+
 
@@ -32,6 +31,8 @@ ms.reviewer: v-jizho2
 > - To use Always Encrypted with secure enclaves for .NET Standard application, **Microsoft.Data.SqlClient** version 2.1.0 or higher is required. The supported .NET Standard version is 2.1 or higher.
 >
 > - To use Always Encrypted with secure enclaves on Linux and macOS, **Microsoft.Data.SqlClient** version 2.1.0 or higher is required.
+>
+> - To use Always Encrypted with VBS enclaves without attestation, **Microsoft.Data.SqlClient** version 4.1.0 or higher is required.
 
 ## See also
 

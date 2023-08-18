@@ -1,26 +1,26 @@
 ---
-title: "Maps (Report Builder) | Microsoft Docs"
-description: Get acquainted with how to add a map to your paginated report showing business data against a geographical background in your paginated report in Report Builder. 
+title: "Maps in a paginated report"
+description: Get acquainted with how to add a map to your paginated report showing business data against a geographical background in your paginated report in Report Builder.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 08/17/2018
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-design
-
-
+ms.service: reporting-services
+ms.subservice: report-design
 ms.topic: conceptual
-f1_keywords: 
+ms.custom: updatefrequency5
+f1_keywords:
   - "10508"
   - "MICROSOFT.REPORTDESIGNER.MAPBINDINGFIELDPAIR.FIELDNAME"
   - "sql13.rtp.rptdesigner.mapproperties.general.f1"
   - "MICROSOFT.REPORTDESIGNER.MAPPOLYGON.CENTERPOINTTEMPLATE"
   - "10500"
   - "sql13.rtp.rptdesigner.maptitleproperties.general.f1"
-ms.assetid: b5e9ef21-11b7-4ed2-838e-d8eecdb5c5f0
-author: maggiesMSFT
-ms.author: maggies
 ---
-# Maps (Report Builder and SSRS)
-  To visualize business data against a geographical background, you can add a map to your [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] paginated report. The type of map that you select depends on what information that you want to communicate in your report. You can add a map that displays locations only, or a bubble map that varies bubble size based on number of households for an area, or a marker map that varies marker style based on the most profitable product for each store, or a line map that displays routes between stores.  
+# Maps in a paginated report (Report Builder)
+
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-ssrs-rb](../../includes/ssrs-appliesto-ssrs-rb.md)] [!INCLUDE [ssrs-appliesto-pbi-rb](../../includes/ssrs-appliesto-pbi-rb.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
+
+  To visualize business data against a geographical background, you can add a map to your paginated report. The type of map that you select depends on what information that you want to communicate in your report. You can add a map that displays locations only, or a bubble map that varies bubble size based on number of households for an area, or a marker map that varies marker style based on the most profitable product for each store, or a line map that displays routes between stores.  
   
  A map contains a title, a viewport that specifies the center point and scale, an optional Bing map tile background for the viewport, one or more layers that display spatial data, and a variety of legends that help users interpret the data visualizations. The following illustration shows the basic parts of a map.  
   
@@ -29,7 +29,7 @@ ms.author: maggies
  To start to use a map immediately, see [Tutorial: Map Report &#40;Report Builder&#41;](../../reporting-services/tutorial-map-report-report-builder.md) or [Report Samples (Report Builder and SSRS)](https://go.microsoft.com/fwlink/?LinkId=198283).  
   
 > [!NOTE]  
->  You can save maps separate from a report as report parts. Read more about [Report Parts](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md).  
+>  You can save maps separate from a report as report parts. Read more about [Report Parts](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md). However, report parts are deprecated for all releases of SQL Server Reporting Services after SQL Server Reporting Services 2019, and discontinued starting in SQL Server Reporting Services 2022 and Power BI Report Server.
   
 ##  <a name="Process"></a> Adding a Map to Your Report  
  To add a map to your report, here is a list of the general steps to follow:  
@@ -70,7 +70,7 @@ ms.author: maggies
 -   **Map Gallery reports.** Spatial data is embedded in reports located in the map gallery. By default, the Map Gallery is installed in *\<drive>*:\Program Files\Microsoft SQL Server\Report Builder \MapGallery.  
   
     > [!NOTE]  
-    >  This [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] mapping feature uses data from TIGER/Line Shapefiles provided courtesy of the U.S. Census Bureau ([https://www.census.gov/](https://www.census.gov/)). TIGER/Line Shapefiles are an extract of selected geographic and cartographic information from the Census MAF/TIGER database. TIGER/Line Shapefiles are available without charge from the U.S. Census Bureau. To obtain more information about the TIGER/Line Shapefiles go to [TIGER/Line Shapefiles and TIGER/Line Files Technical Documentation](https://www.census.gov/programs-surveys/geography/technical-documentation/complete-technical-documentation/tiger-geo-line.html). The boundary information in the TIGER/Line Shapefiles are for statistical data collection and tabulation purposes only; their depiction and designation for statistical purposes does not constitute a determination of jurisdictional authority or rights of ownership or entitlement and they are not legal land descriptions. Census TIGER and TIGER/Line are registered trademarks of the U.S. Bureau of the Census.  
+    >  This Report Builder mapping feature uses data from TIGER/Line Shapefiles provided courtesy of the U.S. Census Bureau ([https://www.census.gov/](https://www.census.gov/)). TIGER/Line Shapefiles are an extract of selected geographic and cartographic information from the Census MAF/TIGER database. TIGER/Line Shapefiles are available without charge from the U.S. Census Bureau. To obtain more information about the TIGER/Line Shapefiles go to [TIGER/Line Shapefiles and TIGER/Line Files Technical Documentation](https://www.census.gov/programs-surveys/geography/technical-documentation/complete-technical-documentation/tiger-geo-line.html). The boundary information in the TIGER/Line Shapefiles are for statistical data collection and tabulation purposes only; their depiction and designation for statistical purposes does not constitute a determination of jurisdictional authority or rights of ownership or entitlement and they are not legal land descriptions. Census TIGER and TIGER/Line are registered trademarks of the U.S. Bureau of the Census.  
   
 -   **ESRI Shapefiles.** ESRI Shapefiles contain data that complies with the Environmental Systems Research Institute, Inc. (ESRI) Shapefile spatial data format. ESRI Shapefiles refer to a set of files. Data in the .shp file specifies the geographical or geometrical shapes. Data in the .dbf file provides attributes for the shapes. To view a map in design view or to run a map from the report server, both files must be in the same folder. When you add spatial data from a .shp file on your local file system, the spatial data is embedded in your report. To retrieve spatial data dynamically at run time, upload the Shapefiles to your report server, and then specify them as the source for spatial data. For more information, see [Finding ESRI Shapefiles for a Map](https://go.microsoft.com/fwlink/?linkid=178814).  
   

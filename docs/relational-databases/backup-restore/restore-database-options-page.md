@@ -1,18 +1,14 @@
 ---
-title: "Restore Database (Options Page) | Microsoft Docs"
+title: "Restore Database (Options Page)"
 description: While restoring a database in SQL Server, use the Options page of the Restore Database dialog box to modify the behavior and outcome of the restore operation.
-ms.custom: ""
+author: MashaMSFT
+ms.author: mathoma
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: backup-restore
-ms.reviewer: ""
-ms.technology: backup-restore
+ms.service: sql
+ms.subservice: backup-restore
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.swb.restoredb.options.f1"
-ms.assetid: 9a75d48b-c25f-40f3-8ea1-32cfa8211754
-author: cawrites
-ms.author: chadam
 ---
 # Restore Database (Options Page)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,11 +35,18 @@ ms.author: chadam
 >  Use this option only after careful consideration. For more information, see [RESTORE Arguments &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md).  
   
  **Preserve the replication settings [WITH KEEP_REPLICATION]**  
- Preserves the replication settings when restoring a published database to a server other than the server where the database was created. This option is relevant only if the database was replicated when the backup was created.  
+ Preserves the replication settings when doing a restore using a backup file of a published database to a server other than the server where the database was created. This option is relevant only if the database was replicated when the backup was created.  
   
  This option is available only with the **Leave the database ready for use by rolling back the uncommitted transactions** option (described later in this table), which is equivalent to restoring a backup with the RECOVERY option.  
   
  Selecting this option is equivalent to using the KEEP_REPLICATION option in a [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) statement.  
+ 
+ When doing a restore using a backup file of a published database to the same server where the database was created and with same database name, KEEP_REPLICATION is not needed.
+
+
+When running RESTORE WITH RECOVERY and not restoring from a backup file, add the KEEP_REPLICATION option to preserve replication settings.
+
+
   
  For more information, see [Back Up and Restore Replicated Databases](../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md).  
   

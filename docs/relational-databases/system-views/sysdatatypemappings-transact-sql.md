@@ -1,23 +1,19 @@
 ---
+title: "sysdatatypemappings (Transact-SQL)"
 description: "sysdatatypemappings (Transact-SQL)"
-title: "sysdatatypemappings (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "03/03/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: replication
+ms.service: sql
+ms.subservice: replication
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sysdatatypemappings"
   - "sysdatatypemappings_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sysdatatypemappings view"
-ms.assetid: 5dfafb70-3e3d-4465-b293-1acff1f855b6
-author: "stevestein"
-ms.author: "sstein"
+dev_langs:
+  - "TSQL"
 ---
 # sysdatatypemappings (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

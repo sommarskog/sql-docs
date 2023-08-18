@@ -1,17 +1,17 @@
 ---
 title: Install on Linux
-titleSuffix: SQL Server Machine Learning Services
-description: 'Learn how to install SQL Server Machine Learning Services (Python and R) on Linux: Red Hat, Ubuntu, and SUSE.'
-author: dphansen
-ms.author: davidph
-manager: cgronlun
-ms.date: 11/24/2020
+titleSuffix: SQL Server 2019 Machine Learning Services
+description: "Learn how to install SQL Server 2019 Machine Learning Services on Linux: Red Hat, Ubuntu, and SUSE."
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.date: 01/27/2023
+ms.service: sql
+ms.subservice: machine-learning-services
 ms.topic: how-to
-ms.prod: sql
-ms.technology: machine-learning-services
-monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15"
+ms.custom: intro-installation
+monikerRange: "=sql-server-ver15||=sql-server-linux-ver15"
 ---
-# Install SQL Server Machine Learning Services (Python and R) on Linux
+# Install SQL Server 2019 Machine Learning Services (Python and R) on Linux
 
 [!INCLUDE [SQL Server 2019 - Linux](../includes/applies-to-version/sqlserver2019-linux.md)]
 
@@ -19,8 +19,9 @@ This article guides you in the installation of [SQL Server Machine Learning Serv
 
 You can install Machine Learning Services on Red Hat Enterprise Linux (RHEL), SUSE Linux Enterprise Server (SLES), and Ubuntu. For more information, see [the Supported platforms section in the Installation guidance for SQL Server on Linux](sql-server-linux-setup.md#supportedplatforms).
 
-> [!NOTE]
-> Machine Learning Services is installed by default on SQL Server Big Data Clusters. For more information, see [Use Machine Learning Services (Python and R) on Big Data Clusters](../big-data-cluster/machine-learning-services.md)
+> [!IMPORTANT]
+> These instructions are specific to [!INCLUDE [sssql19-md](../includes/sssql19-md.md)]. For [!INCLUDE [sssql22-md](../includes/sssql22-md.md)], where installation steps are different, refer to [Install SQL Server 2022 Machine Learning Services (Python and R) on Linux](sql-server-linux-setup-machine-learning-sql-2022.md).
+
 
 <a name="mro"></a>
 
@@ -33,9 +34,7 @@ You can install Machine Learning Services on Red Hat Enterprise Linux (RHEL), SU
 
 * (R only) Microsoft R Open (MRO) provides the base R distribution for the R feature in SQL Server and is a prerequisite for using RevoScaleR, MicrosoftML, and other R packages installed with Machine Learning Services.
     * The required version is MRO 3.5.2.
-    * Choose from the following two approaches to install MRO:
-        * Download the MRO tarball from MRAN, unpack it, and run its install.sh script. You can follow the [installation instructions on MRAN](https://mran.microsoft.com/releases/3.5.2) if you want this approach.
-        * Register the **packages.microsoft.com** repo as described below to install the MRO distribution: microsoft-r-open-mro and microsoft-r-open-mkl. 
+    * Register the `packages.microsoft.com` repo as described below to install the MRO distribution: `microsoft-r-open-mro` and `microsoft-r-open-mkl`. 
     * See the installation sections below for how to install MRO.
 
 * You should have a tool for running T-SQL commands. 
@@ -74,9 +73,9 @@ The following commands register the repository providing MRO. Post-registration,
 sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
 
 # Set the location of the package repo at the "prod" directory
-# The following command is for version 7.x
-# For 6.x, replace 7 with 6 to get that version
-rpm -Uvh https://packages.microsoft.com/config/rhel/7/packages-microsoft-prod.rpm
+# The following command is for version 8.x
+# To get the version for 6.x or 7.x, replace 8 with 6 or 7, respectively.
+rpm -Uvh https://packages.microsoft.com/config/rhel/8/packages-microsoft-prod.rpm
 
 # Update packages on your system (optional)
 yum update
@@ -85,7 +84,7 @@ yum update
 Installation Options for Python and R:
 
 *  Install language support based on your requirements (single or multiple languages).
-*  The *full installation* provides all available features the including pre-trained machine learning models.
+*  The *full installation* provides all available features including pre-trained machine learning models.
 *  The *minimal installation* excludes the models but still has all of the functionality.
 
 > [!Tip]
@@ -144,9 +143,12 @@ sudo su
 # Optionally, if your system does not have the https apt transport option
 apt-get install apt-transport-https
 
+# If you are on Ubuntu 20.04, install the following package (MRO 3.5 has a dependency on libtinfo.so.5 in Ubuntu 20.04)
+apt-get install libncurses5
+
 # Set the location of the package repo the "prod" directory containing the distribution.
-# This example specifies 16.04. Replace with 14.04 if you want that version
-wget https://packages.microsoft.com/config/ubuntu/16.04/packages-microsoft-prod.deb
+# This example specifies 20.04. Replace with 16.04 or 14.04 if you want those versions.
+wget https://packages.microsoft.com/config/ubuntu/20.04/packages-microsoft-prod.deb
 
 # Register the repo
 dpkg -i packages-microsoft-prod.deb
@@ -217,7 +219,7 @@ The following commands register the repository providing MRO. Post-registration,
 sudo su
 
 # Set the location of the package repo at the "prod" directory containing the distribution
-# This example is for SLES12, the only supported version of SLES in Machine Learning Server
+# This example is for SLES12
 zypper ar -f https://packages.microsoft.com/sles/12/prod packages-microsoft-com
 
 # Update packages on your system (optional)
@@ -375,19 +377,19 @@ Follow the [Offline installation](sql-server-linux-setup.md#offline) instruction
 
 Download packages from [https://packages.microsoft.com/](https://packages.microsoft.com/). All of the mlservices packages for Python and R are colocated with database engine package. Base version for the mlservices packages is 9.4.6. Recall that the microsoft-r-open packages are in a [different repository](#mro).
 
-### RHEL/7 paths
+### RHEL/8 paths
 
 |Package|Download location|
 |--|----|
-| mssql/mlservices packages | [https://packages.microsoft.com/rhel/7/mssql-server-2019/](https://packages.microsoft.com/rhel/7/mssql-server-2019/) |
-| microsoft-r-open packages | [https://packages.microsoft.com/rhel/7/prod/](https://packages.microsoft.com/rhel/7/prod/) | 
+| mssql/mlservices packages | [https://packages.microsoft.com/rhel/8/mssql-server-2019/](https://packages.microsoft.com/rhel/8/mssql-server-2019/) |
+| microsoft-r-open packages | [https://packages.microsoft.com/rhel/8/prod/](https://packages.microsoft.com/rhel/8/prod/) | 
 
-### Ubuntu/16.04 paths
+### Ubuntu/20.04 paths
 
 |Package|Download location|
 |--|----|
-| mssql/mlservices packages | [https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019/pool/main/m/](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019/pool/main/m/) |
-| microsoft-r-open packages | [https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/](https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/) | 
+| mssql/mlservices packages | [https://packages.microsoft.com/ubuntu/20.04/mssql-server-2019/pool/main/m/](https://packages.microsoft.com/ubuntu/20.04/mssql-server-2019/pool/main/m/) |
+| microsoft-r-open packages | [https://packages.microsoft.com/ubuntu/20.04/prod/pool/main/m/](https://packages.microsoft.com/ubuntu/20.04/prod/pool/main/m/) | 
 
 ### SLES/12 paths
 

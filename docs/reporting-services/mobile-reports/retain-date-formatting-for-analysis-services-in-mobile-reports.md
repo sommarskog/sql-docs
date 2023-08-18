@@ -1,17 +1,18 @@
 ---
-title: "Retain date formatting for Analysis Services in mobile reports | Reporting Services | Microsoft Docs"
+title: "Retain date formatting for Analysis Services in mobile reports | Reporting Services"
 description: In Mobile Report Publisher, add a measure to a shared dataset in Report Builder so that dates in Analysis Services data sources retain their data type.
-ms.date: 03/07/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: mobile-reports
-
-ms.topic: conceptual
-ms.assetid: e9a9a199-40e3-4381-b250-1b99fb83aa62
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 07/21/2022
+ms.service: reporting-services
+ms.subservice: mobile-reports
+ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 # Retain date formatting for Analysis Services in mobile reports
+
+[!INCLUDE [ssrs-mobile-report-deprecated](../../includes/ssrs-mobile-report-deprecated.md)]
+
 Add a measure to a shared dataset in Report Builder so dates in [!INCLUDE[ssASnoversion_md](../../includes/ssasnoversion-md.md)] data sources retain their data type in [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-short.md)].
 
 The default return type for [!INCLUDE[ssASnoversion_md](../../includes/ssasnoversion-md.md)] queries is a string.  When you build a dataset in [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] Report Builder, the string type is respected and gets saved to the server. 

@@ -1,34 +1,30 @@
 ---
+title: "DEALLOCATE (Transact-SQL)"
 description: "DEALLOCATE (Transact-SQL)"
-title: "DEALLOCATE (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "DEALLOCATE"
   - "DEALLOCATE_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "locking [SQL Server], cursors"
   - "DEALLOCATE statement"
   - "deallocations [SQL Server]"
   - "deleting cursor references"
   - "removing cursor references"
-ms.assetid: c75cf73d-0268-4c57-973d-b8a84ff801fa
-author: cawrites
-ms.author: chadam
+dev_langs:
+  - "TSQL"
 ---
 # DEALLOCATE (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Removes a cursor reference. When the last cursor reference is deallocated, the data structures comprising the cursor are released by [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -77,7 +73,7 @@ After a cursor name is associated with a cursor, the name cannot be used for ano
  A `DEALLOCATE <@cursor_variable_name>` statement removes only the reference of the named variable to the cursor. The variable is not deallocated until it goes out of scope at the end of the batch, stored procedure, or trigger. After a `DEALLOCATE <@cursor_variable_name>` statement, the variable can be associated with another cursor using the SET statement.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
   
 DECLARE @MyCursor CURSOR;  
@@ -100,7 +96,7 @@ A cursor variable does not have to be explicitly deallocated. The variable is im
  The following script shows how cursors persist until the last name or until the variable referencing them has been deallocated.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 -- Create and open a global named cursor that  
 -- is visible outside the batch.  

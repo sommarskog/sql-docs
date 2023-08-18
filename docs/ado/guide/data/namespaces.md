@@ -1,18 +1,14 @@
 ---
+title: "Namespaces"
 description: "Namespaces"
-title: "Namespaces | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "namespaces in ADO"
-ms.assetid: efff5569-db52-451d-a039-2e74870534da
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: ado
+ms.topic: conceptual
+helpviewer_keywords:
+  - "namespaces in ADO"
 ---
 # Namespaces
 The XML persistence format in ADO uses the following four namespaces.  

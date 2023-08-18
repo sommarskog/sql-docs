@@ -1,16 +1,12 @@
 ---
+title: "Flat File Custom Properties"
 description: "Flat File Custom Properties"
-title: "Flat File Custom Properties | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: sql
-ms.prod_service: "integration-services"
-ms.reviewer: ""
-ms.technology: integration-services
-ms.topic: conceptual
-ms.assetid: 7f2caeab-784c-4b0c-9b3e-6a88d1ccdbf9
 author: chugugrace
 ms.author: chugu
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
 ---
 # Flat File Custom Properties
 
@@ -48,6 +44,7 @@ ms.author: chugu
 |-------------------|---------------|-----------------|  
 |Header|String|A block of text that is inserted in the file before any data is written.<br /><br /> The value of this property can be specified by using a property expression.|  
 |Overwrite|Boolean|A value that specifies whether to overwrite or append to an existing destination file that has the same name. The default value of this property is **True**.|  
+|EscapeQualifier|Boolean|When text qualifier is enabled, specifies whether the text qualifier in the data written to the destination file will be escaped or not. The default value of this property is **False**|
   
  The input and the input columns of the Flat File destination have no custom properties.  
   

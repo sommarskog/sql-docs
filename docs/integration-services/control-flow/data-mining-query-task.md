@@ -1,29 +1,27 @@
 ---
+title: "Data Mining Query Task"
 description: "Data Mining Query Task"
-title: "Data Mining Query Task | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "integration-services"
-ms.reviewer: ""
-ms.technology: integration-services
+ms.service: sql
+ms.subservice: integration-services
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.dts.designer.dataminingquerytask.f1"
   - "sql13.dts.designer.dmquerytask.miningmodel.f1"
   - "sql13.dts.designer.dmquerytask.query.f1"
   - "sql13.dts.designer.dmquerytask.output.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "prediction queries [Integration Services]"
   - "Data Mining Query task [Integration Services]"
-ms.assetid: f489348c-2008-4f66-8c2c-c07c3029439a
-author: chugugrace
-ms.author: chugu
 ---
 # Data Mining Query Task
 
 [!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
+> [!IMPORTANT]
+> Data mining was deprecated in [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] Analysis Services and now discontinued in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] Analysis Services. Documentation is not updated for deprecated and discontinued features. To learn more, see [Analysis Services backward compatibility](/analysis-services/analysis-services-backward-compatibility).
 
   The Data Mining Query task runs prediction queries based on data mining models built in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. The prediction query creates a prediction for new data by using mining models. For example, a prediction query can predict how many sailboats are likely to sell during the summer months or generate a list of prospective customers who are likely to buy a sailboat.  
   

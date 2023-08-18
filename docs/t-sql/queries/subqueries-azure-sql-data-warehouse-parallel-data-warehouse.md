@@ -1,24 +1,22 @@
 ---
 title: Subqueries
-description: Subqueries in Azure Synapse Analytics and Parallel Data Warehouse
-ms.custom: "seo-lt-2019"
 titleSuffix: "Azure Synapse Analytics"
+description: Subqueries in Azure Synapse Analytics, Parallel Data Warehouse, Microsoft Fabric.
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "03/03/2017"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: t-sql
-ms.topic: conceptual
-ms.assetid: 0e8ebd60-1936-48c9-b2b9-e099c8269fcf
-author: shkale-msft
-ms.author: shkale
-monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest"
+ms.service: sql
+ms.subservice: t-sql
+ms.topic: reference
+monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest ||=fabric"
 ---
-# Subqueries (Azure Synapse Analytics, Parallel Data Warehouse)
-[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
-  This topic gives examples of using subqueries in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] or [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
+# Subqueries
+[!INCLUDE[applies-to-version/asa-pdw-fabricse-fabricdw](../../includes/applies-to-version/asa-pdw-fabricse-fabricdw.md)]
+
+This topic gives examples of using subqueries in [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], or [!INCLUDE [fabric](../../includes/fabric.md)].  
   
- For the SELECT statement, see [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)  
+For the SELECT statement, see [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)  
   
 ## Contents  
   
@@ -36,8 +34,8 @@ monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest"
  Correlated subquery  
  A subquery that refers to a table in the outer query.  
   
-##  <a name="Examples"></a> Examples: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- This section provides examples of subqueries supported in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] or [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
+##  <a name="Examples"></a> Examples: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+ This section provides examples of subqueries supported in [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] or [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
   
 ### A. TOP and ORDER BY in a subquery  
   

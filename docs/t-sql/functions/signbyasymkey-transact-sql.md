@@ -1,19 +1,16 @@
 ---
+title: "SIGNBYASYMKEY (Transact-SQL)"
 description: "SIGNBYASYMKEY (Transact-SQL)"
-title: "SIGNBYASYMKEY (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: VanMSFT
+ms.author: vanto
 ms.date: "03/06/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "SIGNBYASYMKEY_TSQL"
   - "SIGNBYASYMKEY"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "text signing [SQL Server]"
   - "encryption [SQL Server], asymmetric keys"
   - "signing text [SQL Server]"
@@ -21,16 +18,15 @@ helpviewer_keywords:
   - "asymmetric keys [SQL Server], SIGNBYASYMKEY function"
   - "cryptography [SQL Server], asymmetric keys"
   - "clear text signing"
-ms.assetid: b1c46159-cc76-4205-a841-8f4a71742f80
-author: VanMSFT
-ms.author: vanto
+dev_langs:
+  - "TSQL"
 ---
 # SIGNBYASYMKEY (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Signs plaintext with an asymmetric key  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

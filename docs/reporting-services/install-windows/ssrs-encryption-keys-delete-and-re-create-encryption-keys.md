@@ -1,22 +1,19 @@
 ---
-title: "Delete and Recreate Encryption Keys (Configuration Manager) | Microsoft Docs"
+title: "Delete and Recreate Encryption Keys (Configuration Manager)"
 description: "Deleting and recreating encryption keys are activities that fall outside of routine encryption key maintenance."
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 12/04/2019
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.custom: seo-lt-2019​, seo-mmd-2019
-
+ms.service: reporting-services
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "recreating encryption keys"
   - "encryption keys [Reporting Services]"
   - "deleting encryption keys"
   - "symmetric keys [Reporting Services]"
   - "removing encryption keys"
   - "resetting encryption keys"
-ms.assetid: 201afe5f-acc9-4a37-b5ec-121dc7df2a61
-author: maggiesMSFT
-ms.author: maggies
 ---
 # Delete and Recreate Encryption Keys (Report Server Configuration Manager)
   Deleting and recreating encryption keys are activities that fall outside of routine encryption key maintenance. You perform these tasks in response to a specific threat to your report server, or as a last resort when you can no longer access a report server database.  
@@ -46,7 +43,7 @@ ms.author: maggies
   
 2.  Start the Reporting Services Configuration tool, and then connect to the report server instance you want to configure.  
   
-3.  On the Encryption Keys page, click **Change**. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+3.  On the Encryption Keys page, click **Change**. Select **OK**.
   
 4.  Restart the Report Server Windows service. If you are recreating encryption keys for a scale-out deployment, restart the service on all instances.  
   
@@ -85,7 +82,7 @@ ms.author: maggies
   
 1.  Start the Reporting Services Configuration tool, and then connect to the report server instance you want to configure.  
   
-2.  Click **Encryption Keys**, and then click **Delete**. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+2.  Click **Encryption Keys**, and then click **Delete**. Select **OK**.
   
 3.  Restart the Report Server Windows service. For a scale-out deployment, do this on all report server instances.  
   

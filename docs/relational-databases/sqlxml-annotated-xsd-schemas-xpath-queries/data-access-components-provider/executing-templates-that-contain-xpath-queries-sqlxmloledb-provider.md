@@ -1,13 +1,13 @@
 ---
 title: "Execute templates containing XPath Queries (SQLXMLOLEDB)"
 description: View an example of an ADO application that uses the SQLXMLOLEDB Provider to execute a template containing XPath queries.
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "03/16/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: xml
+ms.service: sql
+ms.subservice: xml
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "SQLXMLOLEDB Provider, executing template files"
   - "Base Path property"
   - "templates [SQLXML], XPath queries"
@@ -15,10 +15,6 @@ helpviewer_keywords:
   - "XPath queries [SQLXML], SQLXMLOLEDB Provider"
   - "Mapping Schema property"
   - "XML templates [SQLXML]"
-ms.assetid: 7368c188-607e-459e-8254-8f23352dfa01
-author: rothja
-ms.author: jroth
-ms.custom: "seo-lt-2019"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Executing Templates That Contain XPath Queries (SQLXMLOLEDB Provider)

@@ -1,26 +1,23 @@
 ---
-description: "Reconcile a Database Diagram with a Modified Database (Visual Database Tools)"
 title: Reconcile a Database Diagram with a Modified Database
-ms.custom: seo-lt-2019
+description: "Reconcile a Database Diagram with a Modified Database (Visual Database Tools)"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
+ms.service: sql
+ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "updating diagram to match database"
   - "reconciling database diagrams"
   - "diagrams [SQL Server], reconciling changes"
   - "updating database to match diagram"
   - "database diagrams [SQL Server], reconciling changes"
-ms.assetid: eda8dea2-eedd-43a7-85aa-92bd97783b5f
-author: markingmyname
-ms.author: maghan
-ms.reviewer: 
-
 ---
 # Reconcile a Database Diagram with a Modified Database (Visual Database Tools)
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+
+[!INCLUDE[SQL Server Azure SQL Database PDW](../../includes/applies-to-version/sql-asdb-asdbmi-pdw.md)]
+
 You save your database diagram when you are ready to update the database to match your diagram. However, if other users have updated the database since you opened your diagram, their changes might affect your diagram and vice versa.  
   
 Saving your diagram will reconcile the database with your diagram by overwriting other users' changes so that the database will match your diagram.  

@@ -1,14 +1,13 @@
 ---
 title: Uninstall hotfixes
 description: Uninstall Analytics Platform System hotfixes.
-author: mzaman1 
-ms.prod: sql
-ms.technology: data-warehouse
-ms.topic: conceptual
-ms.date: 04/17/2018
-ms.author: murshedz
+author: charlesfeddersen
+ms.author: charlesf
 ms.reviewer: martinle
-ms.custom: seo-dt-2019
+ms.date: 04/17/2018
+ms.service: sql
+ms.subservice: data-warehouse
+ms.topic: conceptual
 ---
 
 # Uninstall Analytics Platform System hotfixes 
@@ -31,7 +30,7 @@ To perform these steps, you will need:
   
 2.  Use the Run as Administrator option to open a Command Prompt.  
   
-3.  Change directories to `C:\PDWINST\Patches\<kbarticle>\media` where *<kbarticle>* is the Knowledge Base article number for the hotfix to uninstall.  
+3.  Change directories to `C:\PDWINST\Patches\<kbarticle>\media` where *\<kbarticle\>* is the Knowledge Base article number for the hotfix to uninstall.  
   
     ```  
     cd /d c:\PDWINST\Patches\<kbarticle>\media  

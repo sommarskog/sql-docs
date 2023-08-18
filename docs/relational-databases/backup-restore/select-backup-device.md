@@ -1,18 +1,14 @@
 ---
-title: "Select Backup Device | Microsoft Docs"
+title: "Select Backup Device"
 description: For SQL Server restore, use the Select Backup Device dialog box to select a logical backup device for the restore operation.
-ms.custom: ""
+author: MashaMSFT
+ms.author: mathoma
 ms.date: "03/01/2017"
-ms.prod: sql
-ms.prod_service: backup-restore
-ms.reviewer: ""
-ms.technology: backup-restore
+ms.service: sql
+ms.subservice: backup-restore
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.swb.selectbackupdevice.f1"
-ms.assetid: 7887c9fd-15ce-4cc8-b069-845c1d09088c
-author: cawrites
-ms.author: chadam
 ---
 # Select Backup Device
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

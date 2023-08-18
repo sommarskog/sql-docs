@@ -1,26 +1,23 @@
 ---
+title: "STExteriorRing (geometry Data Type)"
 description: "STExteriorRing (geometry Data Type)"
-title: "STExteriorRing (geometry Data Type) | Microsoft Docs"
-ms.custom: ""
+author: MladjoA
+ms.author: mlandzic
 ms.date: "08/03/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "STExteriorRing_TSQL"
   - "STExteriorRing (geometry Data Type)"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "STExteriorRing (geometry Data Type)"
-ms.assetid: b402b36f-05bf-4c6d-8cd6-76c0fff19db2
-author: MladjoA
-ms.author: mlandzic 
+dev_langs:
+  - "TSQL"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=fabric"
 ---
 # STExteriorRing (geometry Data Type)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance FabricSE FabricDW](../../includes/applies-to-version/sql-asdb-asdbmi-fabricse-fabricdw.md)]
 
 Returns the exterior ring of a **geometry** instance that is a polygon.
   
@@ -46,7 +43,7 @@ Returns the exterior ring of a **geometry** instance that is a polygon.
 ## Examples  
  The following example creates a `Polygon` instance and uses `STExteriorRing()` to return the exterior ring of the polygon as a **LineString**.  
   
-```  
+```sql
 DECLARE @g geometry;  
 SET @g = geometry::STGeomFromText('POLYGON((0 0, 3 0, 3 3, 0 3, 0 0),(2 2, 2 1, 1 1, 1 2, 2 2))', 0);  
 SELECT @g.STExteriorRing().ToString();  

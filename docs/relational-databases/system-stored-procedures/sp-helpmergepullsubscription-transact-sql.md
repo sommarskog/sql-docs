@@ -1,28 +1,26 @@
 ---
+title: "sp_helpmergepullsubscription (Transact-SQL)"
 description: "sp_helpmergepullsubscription (Transact-SQL)"
-title: "sp_helpmergepullsubscription (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: replication
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_helpmergepullsubscription"
-  - "sp_helpmergepullsubscription_TSQL"
-helpviewer_keywords: 
-  - "sp_helpmergepullsubscription"
-ms.assetid: 6f3125f3-0dfa-40bd-b725-8aa1591234f6
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_helpmergepullsubscription"
+  - "sp_helpmergepullsubscription_TSQL"
+helpviewer_keywords:
+  - "sp_helpmergepullsubscription"
+dev_langs:
+  - "TSQL"
 ---
 # sp_helpmergepullsubscription (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns information about pull subscriptions that exist at a Subscriber. This stored procedure is executed at the Subscriber on the subscription database.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -56,7 +54,7 @@ sp_helpmergepullsubscription [ [ @publication=] 'publication']
 |**publisher**|**sysname**|Name of the Publisher.|  
 |**publisher_db**|**sysname**|Name of the Publisher database.|  
 |**subscriber**|**sysname**|Name of the Subscriber.|  
-|**subscription_db**|**sysname**|Name of the subscription database.|  
+|**subscriber_db**|**sysname**|Name of the subscription database.|  
 |**status**|**int**|Subscription status:<br /><br /> **0** = Inactive subscription<br /><br /> **1** = Active subscription<br /><br /> **2** = Deleted subscription<br /><br /> **3** = Detached subscription<br /><br /> **4** = Attached subscription<br /><br /> **5** = Subscription has been marked for reinitialization with upload<br /><br /> **6** = Attaching the subscription failed<br /><br /> **7** = Subscription restored from backup|  
 |**subscriber_type**|**int**|Type of Subscriber:<br /><br /> **1** = Global<br /><br /> **2** = Local<br /><br /> **3** = Anonymous|  
 |**subscription_type**|**int**|Type of subscription:<br /><br /> **0** = Push<br /><br /> **1** = Pull<br /><br /> **2** = Anonymous|  

@@ -1,31 +1,27 @@
 ---
 title: "[^] Wildcard to exclude characters"
-description: "T-SQL wildcard for characters not to match"
 titleSuffix: SQL Server (Transact-SQL)
-ms.custom: "seo-lt-2019"
+description: "T-SQL wildcard for characters not to match"
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "12/06/2016"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "wildcard"
   - "[^]_TSQL"
   - "[^]"
   - "Not Match"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "wildcard characters [SQL Server]"
   - "[^] (wildcard - character(s) not to match)"
-ms.assetid: b970038f-f4e7-4a5d-96f6-51e3248c6aef
-author: cawrites
-ms.author: chadam
+dev_langs:
+  - "TSQL"
 ---
 
 # \[^\] (Wildcard - Character(s) Not to Match) (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Matches any single character that is not within the range or set specified between the square brackets `[^]`. These wildcard characters can be used in string comparisons that involve pattern matching, such as `LIKE` and `PATINDEX`. 
   

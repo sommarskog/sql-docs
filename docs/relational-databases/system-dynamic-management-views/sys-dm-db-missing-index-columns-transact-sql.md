@@ -1,31 +1,29 @@
 ---
-description: "sys.dm_db_missing_index_columns (Transact-SQL)"
 title: "sys.dm_db_missing_index_columns (Transact-SQL)"
-ms.custom: ""
-ms.date: "03/12/2021"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: system-objects
+description: The sys.dm_db_missing_index_columns dynamic management function returns information about database table columns that are missing an index.
+author: rwestMSFT
+ms.author: randolphwest
+ms.date: "02/24/2023"
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "dm_db_missing_index_columns_TSQL"
   - "sys.dm_db_missing_index_columns_TSQL"
   - "sys.dm_db_missing_index_columns"
   - "dm_db_missing_index_columns"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.dm_db_missing_index_columns dynamic management function"
   - "missing indexes feature [SQL Server], sys.dm_db_missing_index_columns dynamic management function"
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+dev_langs:
+  - "TSQL"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_db_missing_index_columns (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
-  Returns information about database table columns that are missing an index, excluding spatial indexes. `sys.dm_db_missing_index_columns` is a dynamic management function.  
+  Returns information about database table columns that are missing an index. `sys.dm_db_missing_index_columns` is a dynamic management function.  
+
 
 ## Syntax  
   
@@ -58,12 +56,16 @@ sys.dm_db_missing_index_columns(index_handle)
   
 ## Permissions  
  Users must be granted the VIEW SERVER STATE permission or any permission that implies the VIEW SERVER STATE permission to query this dynamic management function.  
+
+### Permissions for SQL Server 2022 and later
+
+Requires VIEW SERVER PERFORMANCE STATE permission on the server.
   
 ## Examples  
  The following example runs a query against the `Address` table and then runs a query using the `sys.dm_db_missing_index_columns` dynamic management view to return the table columns that are missing an index.  
   
 ```sql
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 SELECT City, StateProvinceID, PostalCode  
 FROM Person.Address  
@@ -76,11 +78,18 @@ CROSS APPLY sys.dm_db_missing_index_columns (mid.index_handle)
 INNER JOIN sys.dm_db_missing_index_groups AS mig ON mig.index_handle = mid.index_handle  
 ORDER BY mig.index_group_handle, mig.index_handle, column_id;  
 GO  
-```  
-  
-## See Also  
- [sys.dm_db_missing_index_details &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md)   
- [sys.dm_db_missing_index_groups &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-groups-transact-sql.md)   
- [sys.dm_db_missing_index_group_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-group-stats-transact-sql.md)  
- [sys.dm_db_missing_index_group_stats_query &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-group-stats-query-transact-sql.md)     
- [sys.dm_os_sys_info  &#40;Transact-SQL&#41;](sys-dm-os-sys-info-transact-sql.md)  
+```
+
+Missing index suggestions should be combined when possible with one another, and with existing indexes in the current database. Learn how to apply these suggestions in [tune nonclustered indexes with missing index suggestions](../indexes/tune-nonclustered-missing-index-suggestions.md).
+
+
+## Next steps
+
+Learn more about the missing index feature in the following articles:
+
+- [Tune nonclustered indexes with missing index suggestions](../indexes/tune-nonclustered-missing-index-suggestions.md)
+- [sys.dm_db_missing_index_details &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md)   
+- [sys.dm_db_missing_index_groups &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-groups-transact-sql.md)   
+- [sys.dm_db_missing_index_group_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-group-stats-transact-sql.md)  
+- [sys.dm_db_missing_index_group_stats_query &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-group-stats-query-transact-sql.md)     
+- [sys.dm_os_sys_info  &#40;Transact-SQL&#41;](sys-dm-os-sys-info-transact-sql.md) 

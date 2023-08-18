@@ -1,34 +1,30 @@
 ---
-description: "SET STATISTICS XML (Transact-SQL)"
-title: "SET STATISTICS XML (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "SET STATISTICS XML (Transact-SQL)"
+description: SET STATISTICS XML (Transact-SQL)
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "06/10/2016"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "SET_STATISTICS_XML_TSQL"
   - "SET STATISTICS XML"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "statistical information [SQL Server], statement processing"
   - "STATISTICS XML option"
   - "SET STATISTICS XML statement"
   - "statements [SQL Server], statistical information"
   - "XML [SQL Server], statement execution information"
-ms.assetid: 2b6d4c5a-a7f5-4dd1-b10a-7632265b1af7
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+dev_langs:
+  - "TSQL"
 ---
 # SET STATISTICS XML (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Causes Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to execute [!INCLUDE[tsql](../../includes/tsql-md.md)] statements and generate detailed information about how the statements were executed in the form of a well-defined XML document.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -72,7 +68,7 @@ SET STATISTICS XML { ON | OFF }
  The two statements that follow use the SET STATISTICS XML settings to show the way [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] analyzes and optimizes the use of indexes in queries. The first query uses the Equals (=) comparison operator in the WHERE clause on an indexed column. The second query uses the LIKE operator in the WHERE clause. This forces [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to use a clustered index scan to find the data that satisfies the WHERE clause condition. The values in the **EstimateRows** and the **EstimatedTotalSubtreeCost** attributes are smaller for the first indexed query indicating that it was processed much faster and used fewer resources than the nonindexed query.  
   
 ```sql
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 SET STATISTICS XML ON;  
 GO  
@@ -92,6 +88,4 @@ GO
   
 ## See Also  
  [SET SHOWPLAN_XML &#40;Transact-SQL&#41;](../../t-sql/statements/set-showplan-xml-transact-sql.md)   
- [sqlcmd Utility](../../tools/sqlcmd-utility.md)  
-  
-  
+ [sqlcmd Utility](../../tools/sqlcmd/sqlcmd-utility.md)  

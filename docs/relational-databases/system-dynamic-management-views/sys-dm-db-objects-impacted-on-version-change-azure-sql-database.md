@@ -1,31 +1,28 @@
 ---
-description: "sys.dm_db_objects_impacted_on_version_change (Azure SQL Database)"
 title: "sys.dm_db_objects_impacted_on_version_change"
 titleSuffix: Azure SQL Database
+description: sys.dm_db_objects_impacted_on_version_change (Azure SQL Database)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/03/2017"
 ms.service: sql-database
-ms.reviewer: ""
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.dm_db_objects_impacted_on_version_change_TSQL"
   - "dm_db_objects_impacted_on_version_change"
   - "dm_db_objects_impacted_on_version_change_TSQL"
   - "sys.dm_db_objects_impacted_on_version_change"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "dm_db_objects_impacted_on_version_change"
   - "sys.dm_db_objects_impacted_on_version_change"
-ms.assetid: b94af834-c4f6-4a27-80a6-e8e71fa8793a
-author: WilliamDAssafMSFT
-ms.author: wiassaf
-monikerRange: "= azuresqldb-current"
-ms.custom: seo-dt-2019
+dev_langs:
+  - "TSQL"
+monikerRange: "=azuresqldb-current"
 ---
 # sys.dm_db_objects_impacted_on_version_change (Azure SQL Database)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
-  This database-scoped system view is designed to provide an early warning system to determine objects that will be impacted by a major release upgrade in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. You can use the view either before or after the upgrade to get a full enumeration of impacted objects. You will need to query this view in each database to get a full accounting across the entire server.  
+  This database-scoped system view is designed to provide an early warning system to determine objects that will be impacted by a major release upgrade in [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)]. You can use the view either before or after the upgrade to get a full enumeration of impacted objects. You will need to query this view in each database to get a full accounting across the entire server.  
   
 |Column name|Data Type|Description|  
 |-----------------|---------------|-----------------|  

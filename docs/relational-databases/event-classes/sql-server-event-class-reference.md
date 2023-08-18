@@ -1,25 +1,22 @@
 ---
-title: "SQL Server Event Class Reference | Microsoft Docs"
+title: "SQL Server Event Class Reference"
 description: Record events as they occur in an instance of SQL Server Database Engine by using the SQL Server Profiler.
-ms.custom: ""
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: supportability
+ms.service: sql
+ms.subservice: supportability
 ms.topic: reference
-helpviewer_keywords: 
+helpviewer_keywords:
   - "events [SQL Server], event classes"
   - "event classes [SQL Server], listed"
   - "event classes [SQL Server]"
   - "SQL Server event classes, listed"
   - "SQL Server event classes"
-ms.assetid: 0f0fe567-e115-4ace-b63c-73dc3428c0f6
-author: "stevestein"
-ms.author: "sstein"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SQL Server Event Class Reference
-[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
   [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] lets you record events as they occur in an instance of the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. The recorded events are instances of the event classes in the trace definition. In [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], event classes and their event categories are available on the **Events Selection** tab of the **Trace File Properties** dialog box.  
   
  The following table describes the event categories and lists their associated event classes.  

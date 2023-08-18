@@ -1,19 +1,16 @@
 ---
 title: Output Window
-description: Learn how to use the Output window to view status messages and other output from the SQL Server Management Studio debugger and other tools.
 titleSuffix: T-SQL Debugger
-ms.prod: sql
-ms.technology: ssms
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "Output Window [Transact-SQL]"
-  - "Output Window [SQL Server Management Studio]"
-ms.assetid: 9808e00c-c8f6-45cc-896e-192b8420f747
+description: Learn how to use the Output window to view status messages and other output from the SQL Server Management Studio debugger and other tools.
 author: markingmyname
 ms.author: maghan
-ms.reviewer: ""
-ms.custom: seo-lt-2019
 ms.date: 12/04/2019
+ms.service: sql
+ms.subservice: ssms
+ms.topic: conceptual
+helpviewer_keywords:
+  - "Output Window [Transact-SQL]"
+  - "Output Window [SQL Server Management Studio]"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 
@@ -21,7 +18,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-This window displays status messages for various features in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Output is delivered to special panes in the **Output** window from the [!INCLUDE[tsql](../../includes/tsql-md.md)] debugger, external tools features, or commands that are run in the debugger **Command Window**. Output that is usually displayed in the Command Prompt window from external tools, such as .bat or .com files, is also available.
+This window displays status messages for various features in SQL Server Management Studio. Output is delivered to special panes in the **Output** window from the [!INCLUDE[tsql](../../includes/tsql-md.md)] debugger, external tools features, or commands that are run in the debugger **Command Window**. Output that is usually displayed in the Command Prompt window from external tools, such as .bat or .com files, is also available.
 
 [!INCLUDE[ssms-old-versions](../../includes/ssms-old-versions.md)]
   

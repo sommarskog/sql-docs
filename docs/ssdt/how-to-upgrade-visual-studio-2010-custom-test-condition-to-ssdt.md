@@ -1,15 +1,12 @@
 ---
 title: Upgrade a Visual Studio 2010 Custom Test Condition from a Previous Release
 description: Find out how to upgrade a Visual Studio 2010 custom test condition for use in SQL Server Data Tools. See which changes to make and how to install the condition.
-ms.prod: sql
-ms.technology: ssdt
-ms.topic: conceptual
-ms.assetid: 44c895a3-dee0-4032-a60f-812f5fe3c713
 author: markingmyname
 ms.author: maghan
-ms.reviewer: “”
-ms.custom: seo-lt-2019
 ms.date: 02/09/2017
+ms.service: sql
+ms.subservice: ssdt
+ms.topic: conceptual
 ---
 
 # How to: Upgrade a Visual Studio 2010 Custom Test Condition from a Previous Release to SQL Server Data Tools
@@ -128,7 +125,7 @@ In previous versions of database unit testing, you may have been required to ins
   
 After you update your references, verify that your assembly is signed and compiled.  
   
-Next, copy the assembly file from the output directory, by default, My Documents\Visual Studio 2010\Projects\\<yoursolutionname>\\<yourprojectname>\bin\Debug\\) to %Program Files%\Microsoft Visual Studio <Version>\Common7\IDE\Extensions\Microsoft\SQLDB\TestConditions directory. When Visual Studio starts, it will identify any extensions in the TestConditions directory and make them available for use in the session:  
+Next, copy the assembly file from the output directory, by default, My Documents\Visual Studio 2010\Projects\\\\<yoursolutionname\>\\\\<yourprojectname\>\bin\Debug\\\\) to %Program Files%\Microsoft Visual Studio \<Version\>\Common7\IDE\Extensions\Microsoft\SQLDB\TestConditions directory. When Visual Studio starts, it will identify any extensions in the TestConditions directory and make them available for use in the session:  
   
 ## Upgrade Existing Tests that Need to Use the New Test Condition  
 Locate all test projects that use the old test condition and that need to use the new condition. Make sure these test projects are upgraded. For more information, see [Upgrade an Older Test Project Containing Database Unit Tests](../ssdt/upgrade-an-older-test-project-containing-database-unit-tests.md).  

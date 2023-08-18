@@ -1,30 +1,30 @@
 ---
-description: "Full-Text and Semantic Search Dynamic Management Views - Functions"
-title: "Full-Text and Semantic Search Dynamic Management Views - Functions | Microsoft Docs"
-ms.custom: ""
+title: "Full-Text and Semantic Search Dynamic Management Views - Functions"
+description: Full-Text and Semantic Search Dynamic Management Views - Functions
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/15/2017"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "dynamic management objects [SQL Server], full-text search"
   - "full-text search [SQL Server], dynamic management views"
-ms.assetid: 199dbd5a-29f6-4ef0-8e65-86e32c0aaa3a
-author: pmasl 
-ms.author: pelopes
+dev_langs:
+  - "TSQL"
 ---
 # Full-Text and Semantic Search Dynamic Management Views - Functions
+
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  This section contains the following dynamic management views and functions that are related to full-text search and semantic search.  
+ This section contains the following dynamic management views and functions that are related to full-text search and semantic search.  
   
 ## Full-Text Search Dynamic Management Views and Functions  
- [sys.dm_fts_active_catalogs &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-active-catalogs-transact-sql.md)  
- Returns information on the full-text catalogs that have some population activity in progress on the server.  
-  
+
+[sys.dm_fts_active_catalogs &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-active-catalogs-transact-sql.md)  
+Returns information on the full-text catalogs that have some population activity in progress on the server.  
+
+ 
  [sys.dm_fts_fdhosts](../../relational-databases/system-dynamic-management-views/sys-dm-fts-fdhosts-transact-sql.md)  
  Returns information on the current activity of the filter daemon host or hosts on the server instance.  
   

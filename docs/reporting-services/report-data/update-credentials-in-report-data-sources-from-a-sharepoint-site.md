@@ -1,16 +1,13 @@
 ---
-title: "Update Credentials in Report Data Sources from a SharePoint Site | Microsoft Docs"
+title: "Update Credentials in Report Data Sources from a SharePoint Site"
 description: Learn how to update data sources embedded in reports and shared data sources that are saved in a SharePoint document library.
-ms.date: 03/01/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-data
-
-
-ms.topic: conceptual
-ms.assetid: e0c50b6e-89e7-4b4d-8fe5-c90682c5d1b1
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 03/01/2017
+ms.service: reporting-services
+ms.subservice: report-data
+ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 # Update Credentials in Report Data Sources from a SharePoint Site
   This topic describes how to update data sources embedded in reports and shared data sources that are saved in a SharePoint document library.  
@@ -49,7 +46,7 @@ ms.author: maggies
   
 8.  To verify the data source can connect by using the updated credentials, click **Test connection**.  
   
-9. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+9.  Select **OK**.
   
 ### To update a shared data source to use stored credentials  
   
@@ -77,7 +74,7 @@ ms.author: maggies
   
 7.  Verify that Enable this data source is selected.  
   
-8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+8.  Select **OK**.
   
 ## See Also  
  [Upload Documents to a SharePoint Library &#40;Reporting Services in SharePoint Mode&#41;](../../reporting-services/report-server-sharepoint/upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode.md)  

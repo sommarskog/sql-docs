@@ -1,22 +1,20 @@
 ---
+title: "Change the Word Breaker Used for US English and UK English"
 description: "Change the Word Breaker Used for US English and UK English"
-title: "Change the Word Breaker Used for US English and UK English | Microsoft Docs"
-ms.date: "05/11/2020"
-ms.prod: sql
-ms.prod_service: "search, sql-database"
-ms.technology: search
-ms.topic: conceptual
-ms.assetid: 6b5d2177-db98-47f5-b32e-4b80a2f74ffe
-author: pmasl
-ms.author: pelopes
+author: rwestMSFT
+ms.author: randolphwest
 ms.reviewer: mikeray
+ms.date: "05/11/2020"
+ms.service: sql
+ms.subservice: search
+ms.topic: conceptual
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Change the Word Breaker Used for US English and UK English
 
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  Starting with [!INCLUDE[sssql11-md](../../includes/sssql11-md.md)], setup installs an updated version of the word breaker and stemmer for the English language, replacing the previous version of these components. For information about the changed behavior of the updated components, see [Behavior Changes to Full-Text Search](../../2014/database-engine/behavior-changes-to-full-text-search.md#behavior-changes-in-full-text-search-in--1). This topic describes how to switch from the updated version of these components to the previous version, or to switch back from the previous version to the updated version. For cluster installations, these changes should be made on all nodes.  
+  Starting with [!INCLUDE[sssql11-md](../../includes/sssql11-md.md)], setup installs an updated version of the word breaker and stemmer for the English language, replacing the previous version of these components. For information about the changed behavior of the updated components, see [Behavior Changes to Full-Text Search](/previous-versions/sql/2014/database-engine/behavior-changes-to-full-text-search#behavior-changes-in-full-text-search-in--1). This topic describes how to switch from the updated version of these components to the previous version, or to switch back from the previous version to the updated version. For cluster installations, these changes should be made on all nodes.  
   
  Some previous versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] used different word breakers represented by different CLSIDs for US English (LCID 1033) and UK English (LCID 2057). Starting with [!INCLUDE[sssql11-md](../../includes/sssql11-md.md)], both LCIDs use the same components with the same CLSIDs, as shown in the following table:  
   
@@ -124,4 +122,3 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 ## See Also  
  [Revert the Word Breakers Used by Search to the Previous Version](../../relational-databases/search/revert-the-word-breakers-used-by-search-to-the-previous-version.md)   
  [Behavior Changes to Full-Text Search](./full-text-search.md)  
-  

@@ -1,18 +1,15 @@
 ---
-title: "Report Embedded Datasets and Shared Datasets (Report Builder) | Microsoft Docs"
+title: "Report Embedded Datasets and Shared Datasets (Report Builder)"
 description: Learn about report embedded datasets and shared datasets so you can create expressions that evaluate to the actual data when the report runs.
-ms.date: 03/14/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-data
-
-
-ms.topic: conceptual
-f1_keywords: 
-  - "10420"
-ms.assetid: c5852c8a-40e4-424d-a847-64eb151448ff
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 03/14/2017
+ms.service: reporting-services
+ms.subservice: report-data
+ms.topic: conceptual
+ms.custom: updatefrequency5
+f1_keywords:
+  - "10420"
 ---
 # Report Embedded Datasets and Shared Datasets (Report Builder and SSRS)
   A dataset specifies the data that you want to use from a data connection. A dataset is based on a data connection that has been saved in the report as an embedded data source or a reference to a shared data source on a report server. The dataset includes a query that specifies a set of fields. As you drag these fields to the design surface, you create expressions that evaluate to the actual data when the report runs.  
@@ -42,7 +39,9 @@ ms.author: maggies
 7.  **Metadata from schema** The data provider runs a schema query command separate from the query to retrieve metadata for the dataset field collection. For example, a [!INCLUDE[tsql](../../includes/tsql-md.md)] **SELECT** statement returns the column names for a database table. Use the Report Data pane to expand the dataset to view the dataset field collection.  
   
  Data can also be included in a report by using predefined shared datasets and report parts. These items already have the data connection information that you need. For more information, see [Report Datasets &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md) and [Report Parts &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md).  
-  
+ 
+ [!INCLUDE [ssrs-report-parts-deprecated](../../includes/ssrs-report-parts-deprecated.md)]
+ 
  For more information about built-in data source types and data extensions, see [Add Data from External Data Sources &#40;SSRS&#41;](../../reporting-services/report-data/add-data-from-external-data-sources-ssrs.md).  
   
 > [!NOTE]  

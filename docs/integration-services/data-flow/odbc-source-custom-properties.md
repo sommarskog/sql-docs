@@ -1,16 +1,12 @@
 ---
+title: "ODBC Source Custom Properties"
 description: "ODBC Source Custom Properties"
-title: "ODBC Source Custom Properties | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: sql
-ms.prod_service: "integration-services"
-ms.reviewer: ""
-ms.technology: integration-services
-ms.topic: conceptual
-ms.assetid: 362bbcd8-b7b0-4bab-8afe-1212b2ad1af9
 author: chugugrace
 ms.author: chugu
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
 ---
 # ODBC Source Custom Properties
 
@@ -33,7 +29,6 @@ ms.author: chugu
 |StatementTimeout|Integer|The number of seconds to wait for an SQL statement to execute before returning, with an error, to the application. The default value is 0. A value of 0 indicates that the system does not time out.|  
 |TableName|String|The name of the table with the data that is being used when AccessMode is set to Table Name.|  
 |LobChunckSize|Integer|The chunk size allocation for LOB columns.|  
-||||  
   
 ## See Also  
  [ODBC Source](../../integration-services/data-flow/odbc-source.md)   

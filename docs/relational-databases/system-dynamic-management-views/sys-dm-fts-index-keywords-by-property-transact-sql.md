@@ -1,27 +1,24 @@
 ---
-description: "sys.dm_fts_index_keywords_by_property (Transact-SQL)"
-title: "sys.dm_fts_index_keywords_by_property (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.dm_fts_index_keywords_by_property (Transact-SQL)"
+description: sys.dm_fts_index_keywords_by_property (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "dm_fts_index_keywords_by_property"
   - "dm_fts_index_keywords_by_property_TSQL"
   - "sys.dm_fts_index_keywords_by_property"
   - "sys.dm_fts_index_keywords_by_property_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "full-text search [SQL Server], troubleshooting"
   - "search property lists [SQL Server], viewing keywords by property"
   - "full-text search [SQL Server], viewing keywords"
   - "sys.dm_fts_index_keywords_by_property dynamic management view"
-ms.assetid: fa41e052-a79a-4194-9b1a-2885f7828500
-author: pmasl 
-ms.author: pelopes
+dev_langs:
+  - "TSQL"
 ---
 # sys.dm_fts_index_keywords_by_property (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -109,7 +106,7 @@ GO
 ```  
 -- Once the full-text index is configured to support property searching  
 -- on the Author property, return any keywords indexed for this property.  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO   
 SELECT KWBPOP.* FROM   
    sys.dm_fts_index_keywords_by_property( DB_ID(),   

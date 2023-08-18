@@ -1,24 +1,20 @@
 ---
+title: "Parse (geography Data Type)"
 description: "Parse (geography Data Type)"
-title: "Parse (geography Data Type) | Microsoft Docs"
-ms.custom: ""
+author: MladjoA
+ms.author: mlandzic
 ms.date: "07/30/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Parse method"
   - "Parse (geography Data Type)"
-ms.assetid: 21c402fa-fd0f-4d09-a097-49cee0316d4e
-author: MladjoA
-ms.author: mlandzic 
+dev_langs:
+  - "TSQL"
 ---
 # Parse (geography Data Type)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 Returns a **geography** instance from an Open Geospatial Consortium (OGC) Well-Known Text (WKT) representation. Parse() is equivalent to [STGeomFromText](../../t-sql/spatial-geography/stgeomfromtext-geography-data-type.md), except that it assumes a spatial reference ID (SRID) of 4326 as a parameter. The input may carry optional Z (elevation) and M (measure) values.
   
@@ -52,7 +48,7 @@ Parse ( 'geography_tagged_text' )
 ## Examples  
  The following example uses `Parse()` to create a `geography` instance.  
   
-```  
+```sql
 DECLARE @g geography;   
 SET @g = geography::Parse('LINESTRING(-122.360 47.656, -122.343 47.656)');  
 SELECT @g.ToString();  

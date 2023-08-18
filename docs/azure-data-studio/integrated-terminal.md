@@ -1,14 +1,13 @@
 ---
 title: Integrated terminal
 description: Learn how to open a terminal that is integrated into Azure Data Studio. An integrated terminal can be more convenient than a separate one.
-ms.prod: azure-data-studio
-ms.technology: azure-data-studio
-ms.topic: conceptual
-author: "yualan"
-ms.author: "alayu"
-ms.reviewer: "alayu, maghan, sstein"
-ms.custom: "seodec18"
+author: erinstellato-ms
+ms.author: erinstellato
+ms.reviewer: "maghan"
 ms.date: "09/24/2018"
+ms.service: azure-data-studio
+ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 
 # Integrated Terminal
@@ -39,7 +38,7 @@ Remove terminal instances by pressing the trash can button.
 
 ## Configuration
 
-The shell used defaults to `$SHELL` on Linux and macOS, PowerShell on Windows 10 and cmd.exe on earlier versions of Windows. These can be overridden manually by setting `terminal.integrated.shell.*` in [settings](settings.md). Arguments can be passed to the terminal shell on Linux and macOS using the `terminal.integrated.shellArgs.*` settings.
+The shell used defaults to `$SHELL` on Linux and macOS, PowerShell on Windows 10 and Windows 11, and `cmd.exe` on earlier versions of Windows. These can be overridden manually by setting `terminal.integrated.shell.*` in [settings](settings.md). Arguments can be passed to the terminal shell on Linux and macOS using the `terminal.integrated.shellArgs.*` settings.
 
 ### Windows
 

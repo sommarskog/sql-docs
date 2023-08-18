@@ -1,26 +1,22 @@
 ---
+title: "Write (Database Engine)"
 description: "Write (Database Engine)"
-title: "Write (Database Engine) | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/23/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
-ms.topic: "reference"
-f1_keywords: 
-  - "Write_TSQL"
-  - "Write"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "Write [Database Engine]"
-ms.assetid: 7c554334-d2d9-4eae-a4ae-097aa4020e1a
 author: MikeRayMSFT
 ms.author: mikeray
+ms.date: "07/23/2017"
+ms.service: sql
+ms.subservice: t-sql
+ms.topic: "reference"
+f1_keywords:
+  - "Write_TSQL"
+  - "Write"
+helpviewer_keywords:
+  - "Write [Database Engine]"
+dev_langs:
+  - "TSQL"
 ---
 # Write (Database Engine)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 Write writes out a binary representation of **SqlHierarchyId** to the passed-in **BinaryWriter**. Write cannot be called by using [!INCLUDE[tsql](../../includes/tsql-md.md)]. Use CAST or CONVERT instead.
   

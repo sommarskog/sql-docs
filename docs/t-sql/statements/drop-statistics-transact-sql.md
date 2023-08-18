@@ -1,19 +1,16 @@
 ---
-description: "DROP STATISTICS (Transact-SQL)"
-title: "DROP STATISTICS (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: DROP STATISTICS (Transact-SQL)
+description: DROP STATISTICS (Transact-SQL)
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "03/22/2016"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "DROP STATISTICS"
   - "DROP_STATISTICS_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "removing statistics"
   - "column statistics [SQL Server]"
   - "DROP STATISTICS statement"
@@ -21,17 +18,25 @@ helpviewer_keywords:
   - "dropping statistics"
   - "table statistics [SQL Server]"
   - "statistical information [SQL Server], removing"
-ms.assetid: 222806b7-4e45-445b-8cd0-bd5461f3ca4a
-author: WilliamDAssafMSFT
-ms.author: wiassaf
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+dev_langs:
+  - "TSQL"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=fabric"
 ---
-# DROP STATISTICS (Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  Drops statistics for multiple collections within the specified tables in the current database.  
+# DROP STATISTICS (Transact-SQL)
+
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw.md)]
+
+Drops statistics for multiple collections within the specified tables in the current database.  
+
+::: moniker range="=fabric"
+
+> [!NOTE]
+> For more information on statistics in [!INCLUDE [fabric](../../includes/fabric.md)], see [Statistics in [!INCLUDE [fabric](../../includes/fabric.md)]](/fabric/data-warehouse/statistics).
+
+::: moniker-end
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -42,7 +47,7 @@ DROP STATISTICS table.statistics_name | view.statistics_name [ ,...n ]
 ```  
   
 ```syntaxsql
--- Syntax for Azure Synapse Analytics and Parallel Data Warehouse  
+-- Syntax for Azure Synapse Analytics and Parallel Data Warehouse and Microsoft Fabric
   
 DROP STATISTICS [ schema_name . ] table_name.statistics_name   
 [;]  
@@ -74,7 +79,7 @@ DROP STATISTICS [ schema_name . ] table_name.statistics_name
   
 ```sql  
 -- Create the statistics groups.  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 CREATE STATISTICS VendorCredit  
     ON Purchasing.Vendor (Name, CreditRating)  
@@ -86,7 +91,7 @@ GO
 DROP STATISTICS Purchasing.Vendor.VendorCredit, Sales.SalesOrderHeader.CustomerTotal;  
 ```  
   
-## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## Examples: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### B. Dropping statistics from a table  
  The following examples drop the `CustomerStats1` statistics from table `Customer`.  
@@ -108,7 +113,4 @@ DROP STATISTICS dbo.Customer.CustomerStats1;
  [UPDATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/update-statistics-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
  [USE &#40;Transact-SQL&#41;](../../t-sql/language-elements/use-transact-sql.md)  
-  
-  
-
-
+ [Statistics in Microsoft Fabric](/fabric/data-warehouse/statistics)

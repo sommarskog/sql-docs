@@ -1,23 +1,19 @@
 ---
 title: "Local audit usage and diagnostic data collection"
 description: Learn about the local audit used by SQL Server to collect and send usage and diagnostic data to Microsoft.
-ms.custom: seo-lt-2019
-ms.date: 03/27/2019
-ms.prod: sql
-ms.prod_service: security
-ms.reviewer: ""
-ms.technology: security
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "Local Audit"
-ms.assetid: a0665916-7789-4f94-9086-879275802cf3
 author: MashaMSFT
 ms.author: mathoma
+ms.date: 04/12/2022
+ms.service: sql
+ms.subservice: security
+ms.topic: conceptual
+helpviewer_keywords:
+  - "Local Audit"
 monikerRange: ">=sql-server-2016"
 ---
 # Local audit for SQL Server usage and diagnostic data collection (CEIP)
 
-[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
 ## Introduction
 
@@ -30,7 +26,7 @@ For SQL Server 2016 CU2 and CU3, local audit is configurable at the instance lev
  - Removing or disabling the SQL CEIP service is not supported. 
  - Removing the SQL CEIP resources from the Cluster Group is not supported. 
 
-To opt out of the data collection, see [Turning local audit on or off](#turning-local-audit-on-or-off)
+Opting out of SQL Server usage and diagnostic data collection is supported, but the service can't be removed or disabled. To opt out of the data collection, see [Turning local audit on or off](#turning-local-audit-on-or-off)
 
 ## Prerequisites 
 
@@ -63,7 +59,7 @@ Do the following steps to get the SQL Server CEIP service logon account
 
 3. Right-click on the service and choose **Properties**. 
 
-4. Select on the **Log On** tab. The Logon account is in listed in **This Account**. 
+4. Select the **Log On** tab. The Logon account is in listed in **This Account**. 
 
 ### Configure a new folder for the local audit files.    
 
@@ -107,21 +103,18 @@ Create a new folder (local audit directory) where the local audit will write the
    | 2016    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSSQL**13**.*Your-Instance-Name*\\CPE |
    | 2017    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSSQL**14**.*Your-Instance-Name*\\CPE |
    | 2019    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSSQL**15**.*Your-Instance-Name*\\CPE |
-   | &nbsp; | &nbsp; |
 
    | Version | ***Analysis Services*** - Registry key |
    | :------ | :------------------------------- |
    | 2016    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSAS**13**.*Your-Instance-Name*\\CPE |
    | 2017    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSAS**14**.*Your-Instance-Name*\\CPE |
    | 2019    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSAS**15**.*Your-Instance-Name*\\CPE |  
-   | &nbsp; | &nbsp; |
 
    | Version | ***Integration Services*** - Registry key |
    | :------ | :---------------------------------- |
    | 2016    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\**130** |
    | 2017    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\**140** |
    | 2019    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\**150** |
-   | &nbsp; | &nbsp; |
 
 1. Right-click the CPE path and choose **New**. Select **String Value**.
 

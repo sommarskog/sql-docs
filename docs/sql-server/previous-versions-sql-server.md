@@ -1,13 +1,12 @@
 ---
 title: Previous versions of SQL Server documentation
 description: How to get online and offline documentation for previous versions of SQL Server, including 2005, 2008, 2012, and 2014.
-ms.prod: sql
-ms.technology: install
-ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.reviewer: ""
 ms.date: 08/12/2020
+ms.service: sql
+ms.subservice: install
+ms.topic: conceptual
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017"
 ---
 
@@ -19,7 +18,7 @@ The documentation for several older versions of Microsoft SQL Server has been ar
 
 To access the online documentation for SQL Server 2005 - 2014, see the following landing page:
 
-- [SQL Server previous versions documentation](https://docs.microsoft.com/previous-versions/sql/).
+- [SQL Server previous versions documentation](/previous-versions/sql/).
 
 ## Offline documentation
 
@@ -38,7 +37,7 @@ Review the Microsoft Product Lifecycle for information about how a specific prod
 
 For specific guidance on your options for SQL Server end of support, see the following article:
 
-- [SQL Server end of support options](../sql-server/end-of-support/sql-server-end-of-life-overview.md)
+- [SQL Server end of support options](../sql-server/end-of-support/sql-server-end-of-support-overview.md)
 
 ## Next steps
 

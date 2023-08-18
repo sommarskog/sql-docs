@@ -1,18 +1,15 @@
 ---
+title: "Lock:Escalation Event Class"
 description: "Lock:Escalation Event Class"
-title: "Lock:Escalation Event Class | Microsoft Docs"
-ms.custom: ""
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: supportability
+ms.service: sql
+ms.subservice: supportability
 ms.topic: reference
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Escalation event class"
   - "lock escalation [SQL Server], event class"
-ms.assetid: d253b44c-7600-4afa-a3a7-03cc937c6a4b
-author: "stevestein"
-ms.author: "sstein"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Lock:Escalation Event Class

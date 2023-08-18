@@ -1,27 +1,23 @@
 ---
-title: "Connect to the Database Engine Using Extended Protection | Microsoft Docs"
+title: "Connect to the Database Engine Using Extended Protection"
 description: Learn how Extended Protection uses service binding and channel binding to help prevent authentication relay attacks. See how to enable this feature.
-ms.custom: ""
-ms.date: "05/21/2019"
-ms.prod: sql
-ms.prod_service: high-availability
-ms.reviewer: ""
-ms.technology: configuration
+author: VanMSFT
+ms.author: vanto
+ms.date: "08/11/2021"
+ms.service: sql
+ms.subservice: configuration
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "spoofing attacks"
   - "service binding"
   - "luring attacks"
   - "Schannel"
   - "channel binding"
   - "Extended Protection"
-ms.assetid: ecfd783e-7dbb-4a6c-b5ab-c6c27d5dd57f
-author: VanMSFT
-ms.author: vanto
 ---
 # Connect to the Database Engine Using Extended Protection
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supports **Extended Protection** beginning with [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]. **Extended Protection for Authentication** is a feature of the network components implemented by the operating system. **Extended Protection** is supported in Windows 7 and Windows Server 2008 R2. **Extended Protection** is included in service packs for older [!INCLUDE[msCoName](../../includes/msconame-md.md)] operating systems. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is more secure when connections are made using **Extended Protection**.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supports **Extended Protection** beginning with [!INCLUDE[sql2008r2](../../includes/sql2008r2-md.md)]. **Extended Protection for Authentication** is a feature of the network components implemented by the operating system. **Extended Protection** is supported in Windows 7 and Windows Server 2008 R2. **Extended Protection** is included in service packs for older [!INCLUDE[msCoName](../../includes/msconame-md.md)] operating systems. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is more secure when connections are made using **Extended Protection**.  
   
 > [!IMPORTANT]  
 > Windows does not enable **Extended Protection** by default. For information about how to enable **Extended Protection** in Windows, see [Extended Protection for Authentication](/dotnet/framework/wcf/feature-details/extended-protection-for-authentication-overview).
@@ -44,7 +40,7 @@ ms.author: vanto
  Channel binding establishes a secure channel (Schannel) between a client and an instance of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service. The service verifies the authenticity of the client by comparing the client's channel binding token (CBT) specific to that channel, with its own CBT. Channel binding addresses both luring and spoofing attacks. However, it incurs a larger runtime cost, because it requires Transport Layer Security (TLS) encryption of all the session traffic. Channel Binding occurs when a client application uses encryption to connect to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], regardless of whether encryption is enforced by the client or by the server.  
   
 > [!WARNING]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE[msCoName](../../includes/msconame-md.md)] data providers for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] support TLS 1.0 and SSL 3.0. If you enforce a different protocol (such as TLS 1.1 or TLS 1.2) by making changes in the operating system SChannel layer, your connections to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] might fail.  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE[msCoName](../../includes/msconame-md.md)] data providers for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] support TLS 1.0 and SSL 3.0. If you enforce a different protocol (such as TLS 1.1 or TLS 1.2) by making changes in the operating system SChannel layer, your connections to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] might fail. Make sure that you have the latest build of SQL Server to Support TLS 1.1 or TLS 1.2. For more information, see <https://support.microsoft.com/topic/kb3135244-tls-1-2-support-for-microsoft-sql-server-e4472ef8-90a9-13c1-e4d8-44aad198cdbe>.
   
 ### Operating System Support  
  The following links provide more information about how Windows supports **Extended Protection**:  
@@ -77,7 +73,7 @@ ms.author: vanto
 ## Enabling Extended Protection for the Database Engine  
  To use **Extended Protection**, both the server and the client must have an operating system on that supports **Extended Protection**, and **Extended Protection** must be enabled on the operating system. For more information about how to enable **Extended Protection** for the operating system, see [Extended Protection for Authentication](/dotnet/framework/wcf/feature-details/extended-protection-for-authentication-overview).  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supports **Extended Protection** beginning with [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]. **Extended Protection** for some earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] will be made available in future updates. After enabling **Extended Protection** on the server computer, use the following steps to enable **Extended Protection**:  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supports **Extended Protection** beginning with [!INCLUDE[sql2008r2](../../includes/sql2008r2-md.md)]. **Extended Protection** for some earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] will be made available in future updates. After enabling **Extended Protection** on the server computer, use the following steps to enable **Extended Protection**:  
   
 1.  On the **Start** menu, choose **All Programs**, point to **Microsoft SQL Server** and then click **SQL Server Configuration Manager**.  
   

@@ -1,26 +1,23 @@
 ---
-description: "Map Many-to-Many Relationships (Visual Database Tools)"
 title: Map Many-to-Many Relationships
-ms.custom: seo-lt-2019
+description: "Map Many-to-Many Relationships (Visual Database Tools)"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
+ms.service: sql
+ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "relationships [SQL Server], many-to-many"
   - "junction tables [SQL Server]"
   - "many-to-many relationships [SQL Server]"
   - "mapping many-to-many relationships [SQL Server]"
   - "database diagrams [SQL Server], relationships"
-ms.assetid: 2977cf92-98b5-48b2-b0fd-8fbc7040f2b4
-author: markingmyname
-ms.author: maghan
-ms.reviewer: 
-
 ---
 # Map Many-to-Many Relationships (Visual Database Tools)
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+
+[!INCLUDE[SQL Server Azure SQL Database PDW](../../includes/applies-to-version/sql-asdb-asdbmi-pdw.md)]
+
 Many-to-many relationships let you relate each row in one table to many rows in another table, and vice versa. For example, you could create a many-to-many relationship between the `authors` table and the `titles` table to match each author to all of his or her books and to match each book to all of its authors. Creating a one-to-many relationship from either table would incorrectly indicate that every book can have only one author, or that every author can write only one book.  
   
 Many-to-many relationships between tables are accommodated in databases by means of junction tables. A junction table contains the primary key columns of the two tables you want to relate. You then create a relationship from the primary key columns of each of those two tables to the matching columns in the junction table. In the pubs database, the `titleauthor` table is a junction table.  

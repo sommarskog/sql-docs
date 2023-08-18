@@ -1,21 +1,18 @@
 ---
 title: Develop applications for SQL Server on Linux
 description: You can create applications that connect to and use SQL Server on Linux from a variety of programming languages and popular web frameworks.
-author: VanMSFT 
-ms.author: vanto
-ms.date: 11/17/2017
+author: rwestMSFT
+ms.author: randolphwest
+ms.date: 10/21/2021
+ms.service: sql
+ms.subservice: linux
 ms.topic: conceptual
-ms.prod: sql
-ms.technology: linux
-ms.assetid: 758cb738-b018-465b-9ab0-59a24b892e66
 ---
 # How to get started developing applications for SQL Server on Linux
 
 [!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 You can create applications that connect to and use SQL Server on Linux from a variety of programming languages, such as C#, Java, Node.js, PHP, Python, Ruby, and C++. You can also use popular web frameworks and Object Relational Mapping (ORM) frameworks.
-
-> [!VIDEO https://channel9.msdn.com/events/Connect/2017/T153/player]
 
 > [!TIP]
 > These same development options also enable you to target SQL Server on other platforms. Applications can target SQL Server running on-premises or in the cloud, on Linux, Windows, or Docker on macOS. Or you can target Azure SQL Database and Azure Synapse Analytics.
@@ -37,7 +34,7 @@ If you're creating a new application, take a look at a list of the [Connectivity
 
 ## Use existing applications
 
-If you have an existing database application, you can simply change its connection string to target SQL Server on Linux. Make sure to read about the [Known Issues](sql-server-linux-release-notes.md) in SQL Server on Linux.
+If you have an existing database application, you can simply change its connection string to target SQL Server on Linux. Make sure to read about the [Known Issues](sql-server-linux-release-notes-2017.md#known-issues) in SQL Server on Linux.
 
 ## Use existing SQL tools on Windows with SQL Server on Linux
 
@@ -60,7 +57,7 @@ You can use the new [mssql extension](https://aka.ms/mssql-marketplace) for [Vis
 
 You can also use new command-line tools that are native for Linux. These tools include the following:
 
-- [sqlcmd](../tools/sqlcmd-utility.md)
+- [sqlcmd](../tools/sqlcmd/sqlcmd-utility.md)
 - [bcp](sql-server-linux-migrate-bcp.md)
 - [mssql-conf](sql-server-linux-configure-mssql-conf.md)
 

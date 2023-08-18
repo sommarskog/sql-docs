@@ -1,100 +1,113 @@
 ---
-title: Connect to Azure Arc
-titleSuffix:
-description: Connect an instance of SQL Server to Azure Arc
+title: Connect your SQL Server to Azure Arc
+description: Connect an instance of SQL Server to Azure Arc. Allows you to manage SQL Server centrally, as an Arc-enabled resource.
 author: anosov1960
-ms.author: sashan 
-ms.reviewer: mikeray
-ms.date: 04/06/2021
+ms.author: sashan
+ms.reviewer: mikeray, maghan
+ms.date: 07/18/2023
 ms.topic: conceptual
-ms.prod: sql
 ---
+
 # Connect your SQL Server to Azure Arc
 
-You can connect your SQL Server instance on premises to Azure Arc by following these steps.
+[!INCLUDE [sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
-## Prerequisites
+> [!IMPORTANT]  
+> Azure Arc automatically installs the Azure extension for SQL Server when a server connected to Azure Arc has SQL Server installed. All the SQL Server instance resources are automatically created in Azure, providing a centralized management platform for all your SQL Servers.
+> To automatically connect your SQL Server instances, see [Automatically Connect your SQL Server to Azure Arc](automatically-connect.md).
+> Use the method below, if your server is already connected to Azure, but Azure extension for SQL Server is not deployed automatically using above methods.
+>
 
-* Your machine has at least one instance of SQL Server installed
-* The **Microsoft.AzureArcData** resource provider has been registered using one of the methods below:  
-    * Using Azure portal:
-        - Select **Subscriptions** 
-        - Choose your subscription
-        - Under **Settings**, select **Resource providers**
-        - Search for `Microsoft.AzureArcData` and select **Register**
-    * Using PowerShell, run `Register-AzResourceProvider -ProviderNamespace Microsoft.AzureArcData`
-    * Using CLI, run `az provider register --namespace 'Microsoft.AzureArcData`
+This article explains how to connect your SQL Server instance to Azure Arc. Before you proceed, complete the [Prerequisites](prerequisites.md#prerequisites).
 
-## Generate a registration script for SQL Server
+## Onboard the server to Azure Arc
 
-In this step you generate a script that discovers all SQL Server instances installed on the machine and registers them as __SQL Server - Azure Arc__ resources. If the hosting physical or virtual machine is not registered with Azure Arc, the script automatically does it.
+If the server that runs your SQL Server instance isn't yet connected to Azure, you can initiate the connection from the target machine using the onboarding script. This script connects the server to Azure and installs the Azure extension for SQL Server.
 
-1. Search for __SQL Server - Azure Arc__ resource type and add a new one through the creation blade.
+> [!NOTE]  
+> If your server is already connected to Azure and to deploy Azure SQL Server extension for SQL Server proceed to [When the machine is already connected to an Arc-enabled Server](connect-already-enabled.md).
 
-![Start creation](media/join/start-creation-of-sql-server-azure-arc-resource.png)
 
-2. Review the pre-requisites and go to the **Server details** tab.  
+### Generate an onboarding script for SQL Server
 
-3. Select the the subscription, resource group, Azure region and the host operating system. If required, also specify the proxy that your network uses to connect to Internet.
+1. Go to **Azure Arc > SQL Server** and select **+ Add**
 
-> [!IMPORTANT]
-> If the machine hosting the SQL Server instance is already [connected to Azure Arc](/azure/azure-arc/servers/onboard-portal), make sure to select the same resource group that contains the corresponding __Machine - Azure Arc__ resource.
+   :::image type="content" source="media/join/start-creation-of-sql-server-azure-arc-resource.png" alt-text="Screenshot of the start creation.":::
 
-![Server details](media/join/server-details-sql-server-azure-arc.png)
+1. Under **Connect SQL Server to Azure Arc**, select **Connect Servers**
 
-4. Go to the **Run script** tab and download the displayed registration script. The portal generates the script for the hosting OS you specified.
+1. Review the prerequisites and select **Next: Server details**
 
-![Download script](media/join/download-script-sql-server-azure-arc.png)
+1. Specify:
 
-## Connect the installed SQL Server instances to Azure Arc
+    - **Subscription**
+    - **Resource group**
+    - **Region**
+    - **Operating system**
 
-In this step you will take the script you downloaded from Azure portal and execute it on the target physical or virtual machine. As a result, each installed SQL Server instance on the machine will be registered as a __SQL Server - Azure Arc__ resource. In addition, if the machines itself does not have the guest configuration agent installed, it will be installed automatically and registered as a __Machine - Azure Arc__ resource.
+    If necessary, specify the proxy your network uses to connect to the Internet.
 
-> [!NOTE]
-> Make sure to execute the script using an account that meets the minimum permission requirements described in [prerequisites](overview.md#prerequisites).
+    To use a specific name for Azure Arc enabled Server instead of default host name, users can add the name for Azure Arc enabled Server in **Server Name**.
 
-### Windows
+   :::image type="content" source="media/join/server-details-sql-server-azure-arc.png" alt-text="Screenshot of server details for Azure Arc.":::
 
-1. Launch an admin instance of __powershell.exe__ and sign in your PowerShell module with your Azure credentials. Follow the [sign in instructions](/powershell/azure/install-az-ps#sign-in).
+1. Select the SQL Server edition and license type you are using on this machine. Some Arc-enabled SQL Server features are only available for SQL Servers with Software Assurance (Paid) or with Azure pay-as-you-go. For more information, review [Manage SQL Server license type](manage-license-type.md).
 
-2. Execute the downloaded script
+1. Specify the SQL Server instance(s) you want to exclude from registering (if you have multiple instances installed on the server).  Separate each excluded instance by a space.
+
+   > [!IMPORTANT]  
+   > If the machine hosting the SQL Server instance is already [connected to Azure Arc](/azure/azure-arc/servers/onboard-portal), make sure to select the same resource group that contains the corresponding **Server - Azure Arc** resource.
+
+   :::image type="content" source="media/join/server-details-sql-server-management-azure-arc.png" alt-text="Screenshot of server management details.":::
+
+1. Select **Next: Tags** to optionally add tags to the resource for your SQL Server instance.
+
+1. Select **Run script** to generate the onboarding script.
+Screenshot of
+
+   :::image type="content" source="media/join/download-script-sql-server-azure-arc.png" alt-text="Screenshot of a download script.":::
+
+1. Select **Download** to download the script to your machine.
+
+### Connect SQL Server instances to Azure Arc
+
+In this step, execute the script you downloaded from the Azure portal, on the target machine. The script installs Azure extension for SQL Server. If the machine itself doesn't have the Azure connected machine agent installed, the script installs it first, then install the Azure extension for SQL Server. Azure connected machine agent registers the connected server as an Azure resource of type `Server - Azure Arc`, and the Azure extension for SQL Server connects the SQL Server instances as an Azure resource of type `SQL Server - Azure Arc`.
+
+> [!IMPORTANT]  
+> Make sure to execute the script using an account that meets the minimum permission requirements described in [prerequisites](prerequisites.md).
+
+## [Windows](#tab/windows)
+
+1. Launch an admin instance of **powershell.exe** and sign in to your PowerShell module with your Azure credentials. Follow the [sign-in instructions](/powershell/azure/install-az-ps#sign-in).
+
+1. Execute the downloaded script.
 
    ```powershell
    & '.\RegisterSqlServerArc.ps1'
    ```
 
-   > [!NOTE]
-   > You may see issues the first time if you haven't previously installed the AZ module for powershell. In that case follow the instructions in the script to install and connect your account and run the script again.
+   > [!NOTE]  
+   > If you have yet to previously install the [Az PowerShell module](/powershell/azure/new-azureps-module-az) and see issues the first time you run it, follow the instructions in the script and rerun it.
 
-### Linux
+## [Linux](#tab/linux)
 
 1. Use Azure CLI to sign in with your Azure credentials. Follow the [sign in instructions](/cli/azure/authenticate-azure-cli)
 
-2. Grant the execution permission to the downloaded script and execute it.
+1. Grant the execution permission to the downloaded script and execute it.
 
-   ```bash
+   ```console
    sudo chmod +x ./RegisterSqlServerArc.sh
    ./RegisterSqlServerArc.sh
    ```
 
-## Register SQL Server instances on multiple machines
+---
+## Validate your Arc-enabled SQL Server resources
 
-You can connect multiple SQL Server instances installed on multiple Windows or Linux machines to Azure Arc using the same script you generated for a single machine. Follow the instructions how [connect SQL Server instances to Azure Arc at scale](connect-at-scale.md).
+Go to **Azure Arc > SQL Server** and open the newly registered Arc-enabled SQL Server resource to validate.
 
-## Validate the SQL Server - Azure Arc resources
-
-Go [Azure portal](https://ms.portal.azure.com/#home) and open the newly registered __SQL Server - Azure Arc__ resource to validate.
-
-![Validate connected SQL server ](media/join/validate-sql-server-azure-arc.png)
-
-## Disconnect your SQL Server instance
-
-To disconnect your SQL Server instance from Azure Arc, go to Azure portal, open the __SQL Server - Azure Arc__ resource for that instance, and click the **Unregister** button.
-
-![Unregister SQL Server](media/join/unregister-sql-server-azure-arc.png)
+   :::image type="content" source="media/join/validate-sql-server-azure-arc.png" alt-text="Screenshot of validating a connected SQL Server.":::
 
 ## Next steps
 
-* [Configure advanced data security for your SQL Server instance](configure-advanced-data-security.md)
-
-* [Configure on-demand SQL assessment for your SQL Server instance](assess.md)
+- [Configure advanced data security for your SQL Server instance](configure-advanced-data-security.md)
+- [Configure best practices assessment on an Azure Arc-enabled SQL Server instance](assess.md)

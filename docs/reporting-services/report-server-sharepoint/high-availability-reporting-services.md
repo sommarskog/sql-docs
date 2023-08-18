@@ -1,15 +1,13 @@
 ---
-title: "High availability in SQL Server Reporting Services | Microsoft Docs"
+title: "High availability in SQL Server Reporting Services"
 description: Learn about the best way to ensure the availability of Reporting Services functionality in SQL Server.
-ms.date: 10/05/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-server-sharepoint
-
-
-ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 10/05/2017
+ms.service: reporting-services
+ms.subservice: report-server-sharepoint
+ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 # High availability in SQL Server Reporting Services
 
@@ -27,4 +25,4 @@ A [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report server is
   
  The Report Server Web service and Windows service are tightly integrated and run together as a single report server instance. You cannot configure availability for one service separately from the other.  
 
-More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)
+More questions? [Try asking the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user)

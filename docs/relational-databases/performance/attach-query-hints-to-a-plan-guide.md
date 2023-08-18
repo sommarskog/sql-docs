@@ -1,18 +1,15 @@
 ---
-title: "Attach Query Hints to a Plan Guide | Microsoft Docs"
+title: "Attach Query Hints to a Plan Guide"
 description: Any combination of valid query hints can be used in a plan guide. Learn about attaching hints to a plan guide in SQL Server.
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: performance
-ms.topic: conceptual
-ms.assetid: 2131f796-6359-4f9e-9047-da0b3d4dedaf
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: performance
+ms.topic: conceptual
 ---
 # Attach Query Hints to a Plan Guide
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
   Any combination of valid query hints can be used in a plan guide. When a plan guide matches a query, the OPTION clause specified in the hints clause of a plan guide is added to the query before it compiles and optimizes. If a query that is matched to a plan guide already has an OPTION clause, the query hints specified in the plan guide replace those in the query. However, for a plan guide to match a query that already has an OPTION clause, you must include the OPTION clause of the query when you specify the text of the query to match in the sp_create_plan_guide statement. If you want the hints specified in the plan guide to be added to the hints that already exist on the query, instead of replacing them, you must specify both the original hints and the additional hints in the OPTION clause of the plan guide.  
   
 > [!CAUTION]  

@@ -1,22 +1,18 @@
 ---
 title: "Using ADO to Execute SQLXML 4.0 Queries"
 description: Learn how to execute SQLXML 4.0 queries in a COM-based application by using SQLXML extensions to ActiveX Data Objects (ADO).
-ms.custom: ""
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: 12/15/2019
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: xml
+ms.service: sql
+ms.subservice: xml
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "query testers [SQLXML]"
   - "test scripts"
   - "ADO [SQLXML]"
   - "queries [SQLXML], ADO"
   - "SQLXML, ADO"
-ms.assetid: 3d54e3bb-7c5f-427e-82f8-1403a54c4f53
-author: rothja
-ms.author: jroth
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Using ADO to Execute SQLXML 4.0 Queries
@@ -88,11 +84,11 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
   
 2.  Update the following script values for the sample you are trying to test and your test environment.  
   
-    -   Find "`@@FILE_NAME@@`" and replace it with the name of your template file.  
+    -   Find `@@FILE_NAME@@` and replace it with the name of your template file.  
   
-    -   Find "`@@SERVER_NAME@@`" and replace it with the name of your [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance (for example, "`(local)`" if [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is running locally).  
+    -   Find `@@SERVER_NAME@@` and replace it with the name of your [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance (for example, `(local)` if [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is running locally).  
   
-    -   Find "`@@DATABASE_NAME@@`" and replace it with the name of the database (for example, either "`AdventureWorks2012`" or "`tempdb`").  
+    -   Find "`@@DATABASE_NAME@@`" and replace it with the name of the database (for example, either [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] or `tempdb`).  
   
      Update any other values if mentioned in the specific instructions for the example you are attempting to recreate locally on your computer.  
   

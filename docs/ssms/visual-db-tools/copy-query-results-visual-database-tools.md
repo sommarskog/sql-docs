@@ -1,22 +1,17 @@
 ---
-description: "Copy Query Results (Visual Database Tools)"
 title: Copy Query Results
-ms.custom: seo-lt-2019
-ms.date: 01/19/2017
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "Visual Database Tools [SQL Server], queries"
-ms.assetid: 65883f21-c898-4857-a0b8-d1851e1486e1
+description: "Copy Query Results (Visual Database Tools)"
 author: markingmyname
 ms.author: maghan
-ms.reviewer: 
-
+ms.date: 01/19/2017
+ms.service: sql
+ms.subservice: ssms
+ms.topic: conceptual
+helpviewer_keywords:
+  - "Visual Database Tools [SQL Server], queries"
 ---
 # Copy Query Results (Visual Database Tools)
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server](../../includes/applies-to-version/sqlserver.md)]
 You can copy the result set as tab-separated text from the **Results** pane. You may copy the entire result set or any number of contiguous or non-contiguous rows or cells.  
   
 ### To copy result-set text from the Results pane  

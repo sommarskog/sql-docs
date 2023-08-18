@@ -1,25 +1,22 @@
 ---
-description: "sys.dm_resource_governor_external_resource_pool_affinity (Transact-SQL)"
-title: "sys.dm_resource_governor_external_resource_pool_affinity (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/13/2017"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: system-objects
+title: "sys.dm_resource_governor_external_resource_pool_affinity (Transact-SQL)"
+description: sys.dm_resource_governor_external_resource_pool_affinity (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
+ms.date: "02/27/2023"
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.dm_resource_governor_external_resource_pool_affinity"
   - "sys.dm_resource_governor_external_resource_pool_affinity_TSQL"
   - "dm_resource_governor_external_resource_pool_affinity"
   - "dm_resource_governor_external_resource_pool_affinity_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.dm_resource_governor_external_resource_pool_affinity"
   - "dm_resource_governor_external_resource_pool_affinity"
-ms.assetid: e32fac49-5161-47c0-8540-af3fe730c00c
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+dev_langs:
+  - "TSQL"
 ---
 # sys.dm_resource_governor_external_resource_pool_affinity (Transact-SQL)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -40,6 +37,10 @@ Pools that are created with an affinity of `AUTO` do not appear in this view bec
 ## Permissions
 
 Requires `VIEW SERVER STATE` permission.
+
+### Permissions for SQL Server 2022 and later
+
+Requires VIEW SERVER PERFORMANCE STATE permission on the server.
 
 ## See also
 

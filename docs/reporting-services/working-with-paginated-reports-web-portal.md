@@ -1,15 +1,13 @@
 ---
-title: "Working with paginated reports (web portal) | Microsoft Docs"
+title: "Working with paginated reports (web portal)"
 description: Learn how to view and manage the properties of a paginated report within the web portal. Also, learn to use Report Builder to create or edit paginated reports.
-ms.date: 07/02/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: reporting-services
-
-ms.topic: conceptual
-ms.assetid: fb0bc38f-dc56-4350-8457-cd135c0346e1
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 07/02/2017
+ms.service: reporting-services
+ms.subservice: reporting-services
+ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 
 # Working with paginated reports (web portal)
@@ -99,7 +97,7 @@ Store an encrypted user name and password in the report server database. Select 
   
 You can also choose the type of credential this would be. Either Windows authentication (Windows user name and password), or a specific database credential (Database user name and password) such as SQL authentication.  
   
-If the account is a windows credential, the account you specify must have log on locally permissions on the computer that hosts the data source used by the report.  
+If the account is a Windows credential, the account you specify must have log on locally permissions on the computer that hosts the data source used by the report.  
   
 Select **Log in using these credentials, but then try to impersonate the user viewing the report** to allow delegation of credentials, but only if a data source supports impersonation. For SQL Server databases, this option sets the SETUSER function. For Analysis Services, this uses EffectiveUserName.  
   
@@ -190,4 +188,4 @@ Select to change how security is defined for the current item.
 [Web portal](../reporting-services/web-portal-ssrs-native-mode.md)  
 [Work with Shared Datasets](../reporting-services/work-with-shared-datasets-web-portal.md)
 
-More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)
+More questions? [Try asking the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user)

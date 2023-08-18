@@ -1,25 +1,22 @@
 ---
-description: "sys.dm_hadr_physical_seeding_stats (Transact-SQL)"
-title: "sys.dm_hadr_physical_seeding_stats (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/17/2021"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: system-objects
+title: "sys.dm_hadr_physical_seeding_stats (Transact-SQL)"
+description: sys.dm_hadr_physical_seeding_stats (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
+ms.date: "02/27/2023"
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "dm_hadr_physical_seeding_stats_TSQL"
   - "sys.dm_hadr_physical_seeding_stats"
   - "sys.dm_hadr_physical_seeding_stats_TSQL"
-  - "sys.dm_hadr_physical_seeding_stats"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Availability Groups [SQL Server], monitoring"
   - "physical seeding"
   - "sys.dm_hadr_physical_seeding_stats dynamic management view"
-author: cawrites
-ms.author: chadam
+dev_langs:
+  - "TSQL"
 ---
 # sys.dm_hadr_physical_seeding_stats (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -52,10 +49,14 @@ The following table defines the meaning of the various columns:
   
 ## Security  
   
-### Permissions  
+## Permissions  
  Requires VIEW SERVER STATE permission on the server.  
   
-## See Also  
+### Permissions for SQL Server 2022 and later
+
+Requires VIEW SERVER PERFORMANCE STATE permission on the server.
+
+## See also  
  [Automatic Page Repair &#40;Availability Groups: Database Mirroring&#41;](../../sql-server/failover-clusters/automatic-page-repair-availability-groups-database-mirroring.md)   
  [suspect_pages &#40;Transact-SQL&#41;](../../relational-databases/system-tables/suspect-pages-transact-sql.md)   
  [Manage the suspect_pages Table &#40;SQL Server&#41;](../../relational-databases/backup-restore/manage-the-suspect-pages-table-sql-server.md)  

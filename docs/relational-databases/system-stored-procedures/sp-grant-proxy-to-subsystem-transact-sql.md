@@ -1,23 +1,19 @@
 ---
+title: "sp_grant_proxy_to_subsystem (Transact-SQL)"
 description: "sp_grant_proxy_to_subsystem (Transact-SQL)"
-title: "sp_grant_proxy_to_subsystem (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_grant_login_to_subsystem_TSQL"
-  - "sp_grant_login_to_subsystem"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_grant_proxy_to_subsystem"
-ms.assetid: 866aaa27-a1e0-453a-9b1b-af39431ad9c2
 author: VanMSFT
 ms.author: vanto
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_grant_login_to_subsystem_TSQL"
+  - "sp_grant_login_to_subsystem"
+helpviewer_keywords:
+  - "sp_grant_proxy_to_subsystem"
+dev_langs:
+  - "TSQL"
 ---
 # sp_grant_proxy_to_subsystem (Transact-SQL)
 
@@ -25,7 +21,7 @@ ms.author: vanto
 
   Grants a proxy access to a subsystem.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -47,7 +43,7 @@ sp_grant_proxy_to_subsystem
   
 |Value|Description|  
 |-----------|-----------------|  
-|**2**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] ActiveX Script<br /><br /> **\*\* Important \*\*** The ActiveX Scripting subsystem will be removed from [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent in a future version of [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Avoid using this feature in new development work, and plan to modify applications that currently use this feature.|  
+|**2**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] ActiveX Script<br /><br /> **\*\* Important \*\*** The ActiveX Scripting subsystem will be removed from [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent in a future version of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Avoid using this feature in new development work, and plan to modify applications that currently use this feature.|  
 |**3**|Operating System (**CmdExec**)|  
 |**4**|Replication Snapshot Agent|  
 |**5**|Replication Log Reader Agent|  
@@ -58,7 +54,6 @@ sp_grant_proxy_to_subsystem
 |**10**|Analysis Services Command|  
 |**11**|[!INCLUDE[ssIS](../../includes/ssis-md.md)] package execution|  
 |**12**|PowerShell Script|  
-| &nbsp; | &nbsp; |
   
 `[ @subsystem_name = ] 'subsystem_name'`
  The name of the subsystem to grant access to. The **subsystem_name** is **sysname**, with a default of NULL. Either *subsystem_id* or *subsystem_name* must be specified, but both cannot be specified. The following table lists the values for each subsystem.  
@@ -76,7 +71,6 @@ sp_grant_proxy_to_subsystem
 |**ANALYSISCOMMAND**|Analysis Services Command|  
 |**Dts**|SSIS package execution|  
 |**PowerShell**|PowerShell Script|  
-| &nbsp; | &nbsp; |
   
 ## Remarks  
  Granting a proxy access to a subsystem does not change the permissions for the principal specified in the proxy.  

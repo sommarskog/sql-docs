@@ -1,22 +1,19 @@
 ---
 title: "Bulk load encrypted data to columns using Always Encrypted"
 description: Learn how to bulk load data to columns using Always Encrypted with SQL Server.
-ms.custom: seo-lt-2019
-ms.date: "11/04/2015"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: vanto
-ms.technology: security
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "Always Encrypted, bulk import"
-ms.assetid: b2ca08ed-a927-40fb-9059-09496752595e
 author: jaszymas
 ms.author: jaszymas
+ms.reviewer: vanto
+ms.date: "11/04/2015"
+ms.service: sql
+ms.subservice: security
+ms.topic: conceptual
+helpviewer_keywords:
+  - "Always Encrypted, bulk import"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Bulk load encrypted data to columns using Always Encrypted
-[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 To load encrypted data without performing metadata checks on the server during bulk copy operations, create the user with the **ALLOW_ENCRYPTED_VALUE_MODIFICATIONS** option. This option is intended to be used by legacy tools or third-party Extract-Transform-Load (ETL) workflows that cannot use Always Encrypted. This allows a user to securely move encrypted data from one set of tables, containing encrypted columns, to another set of tables with encrypted columns (in the same or a different database).  
 

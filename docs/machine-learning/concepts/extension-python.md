@@ -1,13 +1,12 @@
 ---
 title: Python language extension
 description: Learn about the Python extension for running external Python scripts with SQL Server Machine Learning Services.
-ms.prod: sql
-ms.technology: machine-learning-services
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: 07/14/2020
+ms.service: sql
+ms.subservice: machine-learning-services
 ms.topic: conceptual
-author: dphansen
-ms.author: davidph
-ms.custom: seo-lt-2019
 monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15"
 ---
 # Python language extension in SQL Server Machine Learning Services
@@ -37,7 +36,7 @@ Python packages added by Microsoft for parallel and distributed workloads includ
 | Library | Description |
 |---------|-------------|
 | [**revoscalepy**](/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) | Supports data source objects and data exploration, manipulation, transformation, and visualization. It supports creation of remote compute contexts, as well as a various scalable machine learning models, such as **rxLinMod**. For more information, see [revoscalepy module with SQL Server](../python/ref-py-revoscalepy.md).  |
-| [**microsoftml**](/machine-learning-server/python-reference/microsoftml/microsoftml-package) | Contains machine learning algorithms that have been optimized for speed and accuracy, as well as in-line transformations for working with text and images. For more information, see [microsoftml module with SQL Server](../python/ref-py-microsoftml.md). |
+| [**microsoftml**](../python/ref-py-microsoftml.md) | Contains machine learning algorithms that have been optimized for speed and accuracy, as well as in-line transformations for working with text and images. For more information, see [microsoftml module with SQL Server](../python/ref-py-microsoftml.md). |
 
 Microsoftml and revoscalepy are tightly coupled; data sources used in microsoftml are defined as revoscalepy objects. Compute context limitations in revoscalepy transfer to microsoftml. Namely, all functionality is available for local operations, but switching to a remote compute context requires RxInSqlServer.
 
@@ -74,7 +73,7 @@ In Linux, SQL uses a **launchpadd** service to communicate with a separate launc
 
 ### Python scripts executed from a remote client
 
-You can run Python scripts from a remote computer, such as a laptop, and have them execute in the context of the SQl Server computer, if these conditions are met:
+You can run Python scripts from a remote computer, such as a laptop, and have them execute in the context of the SQL Server computer, if these conditions are met:
 
 + You design the scripts appropriately
 + The remote computer has installed the extensibility libraries that are used by Machine Learning Services. The [revoscalepy](../python/ref-py-revoscalepy.md) package is required to use remote compute contexts.

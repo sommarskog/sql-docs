@@ -2,21 +2,17 @@
 title: Create a Trace
 titleSuffix: SQL Server Profiler
 description: Learn how to capture event data in SQL Server Profiler by creating a trace. Read about the various options you can specify for traces.
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.reviewer: ""
-ms.technology: profiler
-ms.topic: conceptual
-ms.assetid: 0302fa6d-d2b5-43fe-ad70-7a337575b112
 author: markingmyname
 ms.author: maghan
-ms.custom: seo-lt-2019
 ms.date: 08/01/2016
+ms.service: sql
+ms.subservice: profiler
+ms.topic: conceptual
 ---
 
 # Create a Trace (SQL Server Profiler)
 
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+ [!INCLUDE [SQL Server Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdbmi.md)]
 
 This topic describes how to use [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] to create a trace.  
   
@@ -26,7 +22,8 @@ This topic describes how to use [!INCLUDE[ssSqlProfiler](../../includes/sssqlpro
   
      The **Trace Properties** dialog box appears.  
   
-    > **NOTE:** The **Trace Properties** dialog box fails to appear, and the trace begins instead, if **Start tracing immediately after making connection** is selected. To turn off this setting, on the **Tools* *menu, click **Options**, and clear the Start tracing immediately after making connection check box.  
+    > [!NOTE]  
+    > The **Trace Properties** dialog box fails to appear, and the trace begins instead, if **Start tracing immediately after making connection** is selected. To turn off this setting, on the **Tools* *menu, click **Options**, and clear the Start tracing immediately after making connection check box.  
   
 2.  In the **Trace name** box, type a name for the trace.  
   

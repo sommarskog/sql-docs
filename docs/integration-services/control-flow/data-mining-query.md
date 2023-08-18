@@ -1,23 +1,21 @@
 ---
+title: "Data Mining Query"
 description: "Data Mining Query"
-title: "Data Mining Query | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: sql
-ms.prod_service: "integration-services"
-ms.reviewer: ""
-ms.technology: integration-services
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.dts.designer.dataminingquery.f1"
-ms.assetid: 948e358a-6245-429f-82c7-4cedc5e048fd
 author: chugugrace
 ms.author: chugu
+ms.date: "03/06/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+f1_keywords:
+  - "sql13.dts.designer.dataminingquery.f1"
 ---
 # Data Mining Query
 
 [!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
+> [!IMPORTANT]
+> Data mining was deprecated in [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] Analysis Services and now discontinued in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] Analysis Services. Documentation is not updated for deprecated and discontinued features. To learn more, see [Analysis Services backward compatibility](/analysis-services/analysis-services-backward-compatibility).
 
   The design pane contains the data mining prediction query builder, which you can use to build data mining prediction queries. You can design either prediction queries based on input tables, or singleton prediction queries. Switch to the result view to run the query and view the results. The query view displays the Data Mining Extensions (DMX) query created by the prediction query builder.  
   

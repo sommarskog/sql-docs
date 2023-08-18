@@ -1,22 +1,19 @@
 ---
 title: "Configure multi-homed computer for access"
 description: Learn how to configure SQL Server and Windows Firewall to provide for network connections to an instance of SQL Server in a multi-homed environment.
-ms.custom: "seo-lt-2019"
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "12/13/2019"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: install
+ms.service: sql
+ms.subservice: install
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "ports [SQL Server], multi-homed computer"
   - "multi-homed computer [SQL Server] configuring ports"
   - "firewall systems [Database Engine], multi-homed computer"
-ms.assetid: ba369e5b-7d1f-4544-b7f1-9b098a1e75bc
-author: cawrites
-ms.author: chadam
 ---
 # Configure a Multi-Homed Computer for SQL Server Access
-[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
 
   When a server must provide a connection to two or more networks or network subnets, a typical scenario uses a multi-homed computer. Frequently this computer is located in a perimeter network (also known as DMZ, demilitarized zone, or screened subnet). This article describes how to configure [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and Windows Firewall with Advanced Security to provide for network connections to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in a multi-homed environment.  
   
@@ -51,7 +48,7 @@ ms.author: chadam
   
 #### To determine the IP addresses available on the computer  
   
-1.  On the computer on which [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is installed, click **Start**, click **Run**, type **cmd** and then [!INCLUDE[clickOK](../../includes/clickok-md.md)].  
+1.  On the computer on which [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is installed, click **Start**, click **Run**, type **cmd** and then select **OK**.
   
 2.  In the Command Prompt window, type **ipconfig,** and then press ENTER to list the IP addresses available on this computer.  
   
@@ -100,7 +97,7 @@ ms.author: chadam
 10. On the **Action** page, review the options. In this example, you are not using the firewall to force secure connections. Therefore, click **Allow the connection**, and then click **Next**.  
   
     > [!NOTE]  
-    >  Your environment might require secure connections. If you select one of the secure connections options, you might have to configure a certificate and the **Force Encryption** option. For more information about secure connections, see [Enable Encrypted Connections to the Database Engine &#40;SQL Server Configuration Manager&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md) and [Enable Encrypted Connections to the Database Engine &#40;SQL Server Configuration Manager&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
+    >  Your environment might require secure connections. If you select one of the secure connections options, you might have to configure a certificate and the **Force Encryption** option. For more information about secure connections, see [Enable Encrypted Connections to the Database Engine &#40;SQL Server Configuration Manager&#41;](../../database-engine/configure-windows/configure-sql-server-encryption.md) and [Enable Encrypted Connections to the Database Engine &#40;SQL Server Configuration Manager&#41;](../../database-engine/configure-windows/configure-sql-server-encryption.md).  
   
 11. On the **Profile** page, select one or more profiles for the rule. If you are unfamiliar with firewall profiles, click the **Learn more about profiles** link in the firewall program.  
   
@@ -124,7 +121,7 @@ ms.author: chadam
   
 4.  In the **IP Address** dialog box, select **This IP address or subnet**, and then type one of the IP addresses that you want to configure.  
   
-5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+5.  Select **OK**.
   
 6.  In the **Remote IP address** area, select **These IP addresses**, and then click **Add**.  
   
@@ -137,5 +134,3 @@ ms.author: chadam
 ## See Also  
  [SQL Server Browser Service &#40;Database Engine and SSAS&#41;](../../database-engine/configure-windows/sql-server-browser-service-database-engine-and-ssas.md)   
  [Connect to SQL Server Through a Proxy Server &#40;SQL Server Configuration Manager&#41;](../../database-engine/configure-windows/connect-to-sql-server-through-a-proxy-server-sql-server-configuration-manager.md)  
-  
-  

@@ -1,19 +1,16 @@
 ---
 title: "Publish execution of stored procedure (Transactional)"
 description: Learn how to publish the execution of stored procedures using SQL Server Management Studio.
-ms.custom: seo-lt-2019
-ms.date: "03/07/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: replication
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "publishing [SQL Server replication], stored procedure execution"
-  - "stored procedures [SQL Server replication], publishing"
-ms.assetid: 1d3a3525-0bc5-466f-b097-5359dc74432d
 author: "MashaMSFT"
 ms.author: "mathoma"
+ms.date: "03/07/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: conceptual
+ms.custom: updatefrequency5
+helpviewer_keywords:
+  - "publishing [SQL Server replication], stored procedure execution"
+  - "stored procedures [SQL Server replication], publishing"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # Publish Execution of Stored Procedure in Transactional Publication
@@ -36,7 +33,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
   
          This is the recommended option, because it replicates the procedure execution only if the procedure is executed within the context of a serializable transaction. If the stored procedure is executed outside of a serializable transaction, changes to data in published tables are replicated as a series of data manipulation language (DML) statements.  
   
-4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+4.  Select **OK**.
   
 5.  If you are in the **Publication Properties - \<Publication>** dialog box, click **OK** to save and close the dialog box.  
   

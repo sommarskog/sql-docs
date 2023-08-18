@@ -1,34 +1,30 @@
 ---
-description: "&#x40;&#x40;ROWCOUNT (Transact-SQL)"
-title: "@@ROWCOUNT (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "@@ROWCOUNT (Transact-SQL)"
+description: "@@ROWCOUNT (Transact-SQL)"
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "08/29/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "@@ROWCOUNT_TSQL"
   - "@@ROWCOUNT"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "@@ROWCOUNT function"
   - "number of rows affected by statement"
   - "row affected by statements [SQL Server]"
   - "statements [SQL Server], last statement"
   - "counting rows"
-ms.assetid: 97a47998-81d9-4331-a244-9eb8b6fe4a56
-author: julieMSFT
-ms.author: jrasnick
+dev_langs:
+  - "TSQL"
 ---
 # &#x40;&#x40;ROWCOUNT (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Returns the number of rows affected by the last statement. If the number of rows is more than 2 billion, use [ROWCOUNT_BIG](../../t-sql/functions/rowcount-big-transact-sql.md).  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -68,7 +64,7 @@ ms.author: jrasnick
  The following example executes an `UPDATE` statement and uses `@@ROWCOUNT` to detect if any rows were changed.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 UPDATE HumanResources.Employee   
 SET JobTitle = N'Executive'  

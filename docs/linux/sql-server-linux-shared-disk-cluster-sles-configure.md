@@ -1,14 +1,13 @@
 ---
 title: Configure SLES shared disk cluster for SQL Server
 description: Implement high availability by configuring SUSE Linux Enterprise Server (SLES) shared disk cluster for SQL Server.
-author: VanMSFT
-ms.author: vanto
+author: rwestMSFT
+ms.author: randolphwest
 ms.reviewer: vanto
 ms.date: 03/17/2017
+ms.service: sql
+ms.subservice: linux
 ms.topic: conceptual
-ms.prod: sql
-ms.technology: linux
-ms.assetid: e5ad1bdd-c054-4999-a5aa-00e74770b481
 ---
 # Configure SLES shared disk cluster for SQL Server
 
@@ -242,7 +241,7 @@ Full list of resources:
 ## Managing cluster resources
 
 To manage your cluster resources,see the following SUSE topic:
-[Managing Cluster Resources](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#sec.ha.config.crm )
+[Managing Cluster Resources](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#sec.ha.config.crm)
 
 ### Manual failover
 

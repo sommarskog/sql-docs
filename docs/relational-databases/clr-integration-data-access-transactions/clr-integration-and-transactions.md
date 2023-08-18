@@ -1,22 +1,19 @@
 ---
-title: "CLR Integration and Transactions | Microsoft Docs"
+title: "CLR Integration and Transactions"
 description: For CLR integration and transactions, System.Transactions and ADO.NET work together to extend and simplify the use of local and distributed transactions in managed applications.
-ms.custom: ""
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: clr
+ms.service: sql
+ms.subservice: clr
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "ADO.NET [CLR integration]"
   - "common language runtime [SQL Server], ADO.NET"
   - "managed code [SQL Server], transactions"
   - "common language runtime [SQL Server], transactions"
   - "System.Transactions namespace"
   - "transactions [CLR integration]"
-ms.assetid: 381d206e-06e2-48d0-8206-295fcf06ac98
-author: "rothja"
-ms.author: "jroth"
 ---
 # CLR Integration and Transactions
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

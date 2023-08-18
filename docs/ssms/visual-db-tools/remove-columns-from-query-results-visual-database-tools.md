@@ -1,27 +1,22 @@
 ---
-description: "Remove Columns from Query Results (Visual Database Tools)"
 title: Remove Columns from Query Results
-ms.custom: seo-lt-2019
+description: "Remove Columns from Query Results (Visual Database Tools)"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
+ms.service: sql
+ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "columns [SQL Server], deleting"
   - "result sets [SQL Server], queries"
   - "removing columns"
   - "results [SQL Server], query"
   - "deleting columns"
   - "queries [SQL Server], results"
-ms.assetid: a7de7a87-4249-49bd-863d-dc0b40a49e78
-author: markingmyname
-ms.author: maghan
-ms.reviewer: 
-
 ---
 # Remove Columns from Query Results (Visual Database Tools)
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server](../../includes/applies-to-version/sqlserver.md)]
 If you are using a column in a Select query but do not want to display it in the result set (that is, you do not want it in the query's select list), you can remove it from output. After you remove the column from the query's output, you can still use it in search conditions or as a sorting field.  
   
 > [!NOTE]  

@@ -1,34 +1,30 @@
 ---
+title: "INDEX_COL (Transact-SQL)"
 description: "INDEX_COL (Transact-SQL)"
-title: "INDEX_COL (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: markingmyname
+ms.author: maghan
 ms.date: "03/06/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "INDEX_COL_TSQL"
   - "INDEX_COL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "displaying column names"
   - "INDEX_COL function"
   - "viewing column names"
   - "column names [SQL Server]"
   - "names [SQL Server], columns"
-ms.assetid: 4db1fb3b-e46f-43fb-b269-a5b6e8b39ed0
-author: cawrites
-ms.author: chadam
+dev_langs:
+  - "TSQL"
 ---
 # INDEX_COL (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Returns the indexed column name. Returns NULL for XML indexes.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -69,12 +65,12 @@ INDEX_COL ( '[ database_name . [ schema_name ] .| schema_name ]
  The following example returns the column names of the two key columns in the index `PK_SalesOrderDetail_SalesOrderID_LineNumber`.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 SELECT   
-    INDEX_COL (N'AdventureWorks2012.Sales.SalesOrderDetail', 1,1) AS  
+    INDEX_COL (N'AdventureWorks2022.Sales.SalesOrderDetail', 1,1) AS  
         [Index Column 1],   
-    INDEX_COL (N'AdventureWorks2012.Sales.SalesOrderDetail', 1,2) AS  
+    INDEX_COL (N'AdventureWorks2022.Sales.SalesOrderDetail', 1,2) AS  
         [Index Column 2]  
 ;  
 GO  

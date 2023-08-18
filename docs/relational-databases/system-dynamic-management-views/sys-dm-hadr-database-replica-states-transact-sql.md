@@ -1,25 +1,22 @@
 ---
-description: "sys.dm_hadr_database_replica_states (Transact-SQL)"
-title: "sys.dm_hadr_database_replica_states (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/26/2018"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: system-objects
+title: "sys.dm_hadr_database_replica_states (Transact-SQL)"
+description: sys.dm_hadr_database_replica_states (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
+ms.date: "02/27/2023"
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
-  - "sys.dm_hadr_database_states_TSQL"
-  - "sys.dm_hadr_database_states"
-  - "dm_hadr_database_states"
-  - "dm_hadr_database_states_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+f1_keywords:
+  - "sys.dm_hadr_database_replica_states_TSQL"
+  - "sys.dm_hadr_database_replica_states"
+  - "dm_hadr_database_replica_states"
+  - "dm_hadr_database_replica_states_TSQL"
+helpviewer_keywords:
   - "Availability Groups [SQL Server], monitoring"
   - "sys.dm_hadr_database_replica_states dynamic management view"
-ms.assetid: 1a17b0c9-2535-4f3d-8013-cd0a6d08f773
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+dev_langs:
+  - "TSQL"
 ---
 # sys.dm_hadr_database_replica_states (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,24 +40,24 @@ ms.author: wiassaf
 |**synchronization_health**|**tinyint**|Reflects the intersection of the synchronization state of a database that is joined to the availability group on the availability replica and the availability mode of the availability replica (synchronous-commit or asynchronous-commit mode), one of the following values.<br /><br /> 0 = Not healthy. The **synchronization_state** of the database is 0 (NOT SYNCHRONIZING).<br /><br /> 1 = Partially healthy. A database on a synchronous-commit availability replica is considered partially healthy if **synchronization_state** is 1 (SYNCHRONIZING).<br /><br /> 2 = Healthy. A database on an synchronous-commit availability replica is considered healthy if **synchronization_state** is 2 (SYNCHRONIZED), and a database on an asynchronous-commit availability replica is considered healthy if **synchronization_state** is 1 (SYNCHRONIZING).|  
 |**synchronization_health_desc**|**nvarchar(60)**|Description of the **synchronization_health** of the availability database.<br /><br /> NOT_HEALTHY<br /><br /> PARTIALLY_HEALTHY<br /><br /> HEALTHY|  
 |**database_state**|**tinyint**|0 = Online<br /><br /> 1 = Restoring<br /><br /> 2 = Recovering<br /><br /> 3 = Recovery pending<br /><br /> 4 = Suspect<br /><br /> 5 = Emergency<br /><br /> 6 = Offline<br /><br /> **Note:** Same as **state** column in sys.databases.|  
-|**database_state_desc**|**nvarchar(60)**|Description of the **database_state** of the availability replica.<br /><br /> ONLINE<br /><br /> RESTORING<br /><br /> RECOVERING<br /><br /> RECOVERY_PENDING<br /><br /> SUSPECT<br /><br /> EMERGENCY<br /><br /> OFFLINE<br /><br /> **Note:** Same as **state_desc** column in sys.databases.|  
+|**database_state_desc**|**nvarchar(60)**|Description of the **database_state** of the availability replica.<br /><br /> ONLINE<br /><br /> RESTORING<br /><br /> RECOVERING<br /><br /> RECOVERY_PENDING<br /><br /> SUSPECT<br /><br /> EMERGENCY<br /><br /> OFFLINE<br /><br /> **Note:** Same as `state_desc` column in sys.databases.|  
 |**is_suspended**|**bit**|Database state, one of:<br /><br /> 0 = Resumed<br /><br /> 1 = Suspended|  
 |**suspend_reason**|**tinyint**|If the database is suspended, the reason for the suspended state, one of:<br /><br /> 0 = User action<br /><br /> 1 = Suspend from partner<br /><br /> 2 = Redo<br /><br /> 3 = Capture<br /><br /> 4 = Apply<br /><br /> 5 = Restart<br /><br /> 6 = Undo<br /><br /> 7 = Revalidation<br /><br /> 8 = Error in the calculation of the secondary-replica synchronization point|  
 |**suspend_reason_desc**|**nvarchar(60)**|Description of the database suspended state reason, one of:<br /><br /> SUSPEND_FROM_USER = A user manually suspended data movement<br /><br /> SUSPEND_FROM_PARTNER = The database replica is suspended after a forced failover<br /><br /> SUSPEND_FROM_REDO = An error occurred during the redo phase<br /><br /> SUSPEND_FROM_APPLY = An error occurred when writing the log to file (see error log)<br /><br /> SUSPEND_FROM_CAPTURE = An error occurred while capturing log on the primary replica<br /><br /> SUSPEND_FROM_RESTART = The database replica was suspended before the database was restarted (see error log)<br /><br /> SUSPEND_FROM_UNDO = An error occurred during the undo phase (see error log)<br /><br /> SUSPEND_FROM_REVALIDATION = Log change mismatch is detected on reconnection (see error log)<br /><br /> SUSPEND_FROM_XRF_UPDATE = Unable to find the common log point (see error log)|  
-|**recovery_lsn**|**numeric(25,0)**|On the primary replica, the end of the transaction log before the primary database writes any new log records after recovery or failover. For a given secondary database, if this value is less than the current hardened LSN (last_hardened_lsn), recovery_lsn is the value to which this secondary database would need to resynchronize (that is, to revert to and reinitialize to). If this value is greater than or equal to the current hardened LSN, resynchronization would be unnecessary and would not occur.<br /><br /> **recovery_lsn** reflects a log-block ID padded with zeroes. It is not an actual log sequence number (LSN). For information about how this value is derived, see [Understanding the LSN Column Values](#LSNcolumns), later in this topic.|  
-|**truncation_lsn**|**numeric(25,0)**|On the primary replica, for the primary database, reflects the minimum log truncation LSN across all the corresponding secondary databases. If local log truncation is blocked (such as by a backup operation), this LSN might be higher than the local truncation LSN.<br /><br /> For a given secondary database, reflects the truncation point of that database.<br /><br /> **truncation_lsn** reflects a log-block ID padded with zeroes. It is not an actual log sequence number.|  
-|**last_sent_lsn**|**numeric(25,0)**|The log block identifier that indicates the point up to which all log blocks have been sent by the primary. This is the ID of the next log block that will be sent, rather than the ID of the most recently sent log block.<br /><br /> **last_sent_lsn** reflects a log-block ID padded with zeroes, It is not an actual log sequence number.|  
-|**last_sent_time**|**datetime**|Time when the last log block was sent.|  
-|**last_received_lsn**|**numeric(25,0)**|Log block ID identifying the point up to which all log blocks have been received by the secondary replica that hosts this secondary database.<br /><br /> **last_received_lsn** reflects a log-block ID padded with zeroes. It is not an actual log sequence number.|  
-|**last_received_time**|**datetime**|Time when the log block ID in last message received was read on the secondary replica.|  
-|**last_hardened_lsn**|**numeric(25,0)**|Start of the Log Block containing the log records of last hardened LSN on a secondary database.<br /><br /> On an asynchronous-commit primary database or on a synchronous-commit database whose current policy is "delay", the value is NULL. For other synchronous-commit primary databases, **last_hardened_lsn** indicates the minimum of the hardened LSN across all the secondary databases.<br /><br /> **Note: last_hardened_lsn** reflects a log-block ID padded with zeroes. It is not an actual log sequence number. For more information, see [Understanding the LSN Column Values](#LSNcolumns), later in this topic.|  
-|**last_hardened_time**|**datetime**|On a secondary database, time of the log-block identifier for the last hardened LSN (**last_hardened_lsn**). On a primary database, reflects the time corresponding to minimum hardened LSN.|  
-|**last_redone_lsn**|**numeric(25,0)**|Actual log sequence number of the last log record that was redone on the secondary database. **last_redone_lsn** is always less than **last_hardened_lsn**.|  
+|**recovery_lsn**|**numeric(25,0)**|On the primary replica, the end of the transaction log before the primary database writes any new log records after recovery or failover. For a given secondary database, if this value is less than the current hardened LSN (`last_hardened_lsn`), `recovery_lsn` is the value to which this secondary database would need to resynchronize (that is, to revert to and reinitialize to). If this value is greater than or equal to the current hardened LSN, resynchronization would be unnecessary and would not occur.<br /><br /> The `recovery_lsn` reflects a log-block ID padded with zeroes. It is not an actual log sequence number (LSN). For information about how this value is derived, see [Understanding the LSN Column Values](#LSNcolumns), later in this topic.|  
+|**truncation_lsn**|**numeric(25,0)**|On the primary replica, for the primary database, reflects the minimum log truncation LSN across all the corresponding secondary databases. If local log truncation is blocked (such as by a backup operation), this LSN might be higher than the local truncation LSN.<br /><br /> For a given secondary database, reflects the truncation point of that database.<br /><br /> `truncation_lsn` reflects a log-block ID padded with zeroes. It is not an actual log sequence number.|  
+|**last_sent_lsn**|**numeric(25,0)**|When querying the primary replica, `last_sent_lsn` is reported for each secondary replica database row. The log block identifier that indicates the point up to which all log blocks have been sent by the primary. This is the ID of the next log block that will be sent, rather than the ID of the most recently sent log block.<br /><br /> `last_sent_lsn` reflects a log-block ID padded with zeroes, It is not an actual log sequence number.|  
+|**last_sent_time**|**datetime**|When querying the primary replica, `last_sent_time` is reported for each secondary replica database row. Time when the last log block was sent.|  
+|**last_received_lsn**|**numeric(25,0)**|When querying a secondary replica, `last_received_lsn` is reported for the local secondary replica database row. Log block ID identifying the point up to which all log blocks have been received by the secondary replica that hosts this secondary database.<br /><br />The `last_received_lsn` reflects a log-block ID padded with zeroes. It is not an actual log sequence number.|  
+|**last_received_time**|**datetime**|When querying a secondary replica, `last_received_time` is reported for the local secondary replica database row. Time when the log block ID in last message received was read on the secondary replica.|  
+|**last_hardened_lsn**|**numeric(25,0)**|Start of the Log Block containing the log records of last hardened LSN on a secondary database.<br /><br /> On an asynchronous-commit primary database or on a synchronous-commit database whose current policy is "delay", the value is NULL. For other synchronous-commit primary databases, `last_hardened_lsn` indicates the minimum of the hardened LSN across all the secondary databases.<br /><br /> **Note:** the `last_hardened_lsn` reflects a log-block ID padded with zeroes. It is not an actual log sequence number. For more information, see [Understanding the LSN Column Values](#LSNcolumns), later in this topic.|  
+|**last_hardened_time**|**datetime**|On a secondary database, time of the log-block identifier for the last hardened LSN (`last_hardened_lsn`). On a primary database, reflects the time corresponding to minimum hardened LSN.|  
+|**last_redone_lsn**|**numeric(25,0)**|Actual log sequence number of the last log record that was redone on the secondary database. The `last_redone_lsn` is always less than **last_hardened_lsn**.|  
 |**last_redone_time**|**datetime**|Time when the last log record was redone on the secondary database.|  
 |**log_send_queue_size**|**bigint**|Amount of log records of the primary database that has not been sent to the secondary databases, in kilobytes (KB).|  
 |**log_send_rate**|**bigint**|Average rate at which primary replica instance sent data during last active period, in kilobytes (KB)/second.|  
 |**redo_queue_size**|**bigint**|Amount of log records in the log files of the secondary replica that has not yet been redone, in kilobytes (KB).|  
-|**redo_rate**|**bigint**|Average Rate at which the log records are being redone on a given secondary database, in kilobytes (KB)/second.|  
+|**redo_rate**|**bigint**|Average rate at which the log records are being redone on a given secondary database, in kilobytes (KB)/second.<br /><br />**redo_rate** is calculated by dividing the total log bytes redone since database engine startup by the time span when redo was actively running, rather than by the elapsed time. Because redo may not be running continuously, resulting value may be different (higher) than the value of `Database Replica:Redone Bytes/sec` performance counter.|  
 |**filestream_send_rate**|**bigint**|The rate at which the FILESTREAM files are shipped to the secondary replica, in kilobytes (KB)/second.|  
 |**end_of_log_lsn**|**numeric(25,0)**|Local end of log LSN. Actual LSN corresponding to the last log record in the log cache on the primary and secondary databases. On the primary replica, the secondary rows reflect the end of log LSN from the latest progress messages that the secondary replicas have sent to the primary replica.<br /><br /> **end_of_log_lsn** reflects a log-block ID padded with zeroes. It is not an actual log sequence number. For more information, see [Understanding the LSN Column Values](#LSNcolumns), later in this topic.|  
 |**last_commit_lsn**|**Numeric(25,0)**|Actual log sequence number corresponding to the last commit record in the transaction log.<br /><br /> On the primary database, this corresponds to the last commit record processed. Rows for secondary databases show the log sequence number that the secondary replica has sent to the primary replica.<br /><br /> On the secondary replica, this is the last commit record that was redone.|  
@@ -74,13 +71,15 @@ ms.author: wiassaf
  **end_of_log_lsn**, **last_hardened_lsn**, and **recovery_lsn** are flush LSNs. For example, **last_hardened_lsn** indicates the start of the next block past the blocks that are already on disk.  So any LSN < the value of **last_hardened_lsn** is on disk.  LSN that are >= to this value are not flushed.  
   
  Of the LSN values returned by **sys.dm_hadr_database_replica_states**, only **last_redone_lsn** is a real LSN.  
-  
-## Security  
-  
-### Permissions  
+
+## Permissions  
  Requires VIEW SERVER STATE permission on the server.  
   
-## See Also  
+### Permissions for SQL Server 2022 and later
+
+Requires VIEW SERVER PERFORMANCE STATE permission on the server.
+
+## See also  
  [Always On Availability Groups &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
  [Monitor Availability Groups &#40;Transact-SQL&#41;](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)  
   

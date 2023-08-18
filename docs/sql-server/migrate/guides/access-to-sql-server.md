@@ -1,15 +1,13 @@
 ---
-title: 'Access to SQL Server: Migration guide'
-description: 'This guide teaches you how to migrate your Microsoft Access databases to Microsoft SQL Server by using SQL Server Migration Assistant for Access (SSMA for Access).'
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: migration-guide
-ms.custom:
-ms.devlang:
+title: "Access to SQL Server: Migration guide"
+description: "This guide teaches you how to migrate your Microsoft Access databases to Microsoft SQL Server by using SQL Server Migration Assistant for Access (SSMA for Access)."
+author: MashaMSFT
+ms.author: mathoma
+ms.date: 10/05/2021
+ms.service: sql
+ms.subservice: migration-guide
 ms.topic: how-to
-author: cawrites
-ms.author: chadam
-ms.date: 03/19/2021
+ms.custom: intro-migration
 ---
 
 # Migration guide: Access to SQL Server
@@ -18,7 +16,7 @@ ms.date: 03/19/2021
 
 In this guide, you learn how to migrate your Microsoft Access databases to SQL Server by using SQL Server Migration Assistant for Access (SSMA for Access).
 
-For other migration guides, see [Azure Database Migration Guides](https://datamigration.microsoft.com/).
+For other migration guides, see [Azure Database Migration Guides](/data-migration/).
 
 ## Prerequisites
 
@@ -34,7 +32,7 @@ After you've met the prerequisites, you're ready to discover the topology of you
 
 ### Assess
 
-By using SSMA for Access, you can review database objects and data and assess databases for migration. To learn more about the tool, see [SQL Server Migration Assistant for Access](/sql/ssma/access/sql-server-migration-assistant-for-access-accesstosql).
+By using SSMA for Access, you can review database objects and data and assess databases for migration. To learn more about the tool, see [SQL Server Migration Assistant for Access](../../../ssma/access/sql-server-migration-assistant-for-access-accesstosql.md).
 
 To create an assessment:
 
@@ -120,7 +118,7 @@ To publish your schema and migrate the data by using SSMA for Access:
 
    ![Screenshot that shows the Migrate Data Report.](./media/access-to-sql-server/migrate-data-review.png)
 
-1. Connect to your SQL Server instance by using [SQL Server Management Studio](/sql/ssms/download-sql-server-management-studio-ssms), and validate the migration by reviewing the data and schema.
+1. Connect to your SQL Server instance by using [SQL Server Management Studio](../../../ssms/download-sql-server-management-studio-ssms.md), and validate the migration by reviewing the data and schema.
 
    ![Screenshot that shows the validation in SQL Server Management Studio.](./media/access-to-sql-server/validate-in-ssms.png)
 
@@ -154,14 +152,14 @@ For more assistance with completing this migration scenario, see the following r
 
 | Title | Description |
 | -------------- | --------------- |
-| [Data Workload Assessment Model and Tool](https://github.com/Microsoft/DataMigrationTeam/tree/master/Data%20Workload%20Assessment%20Model%20and%20Tool) | This tool provides suggested "best fit" target platforms, cloud readiness, and application or database remediation level for a given workload. It offers simple, one-click calculation and report generation that helps to accelerate large estate assessments by providing an automated and uniform target platform decision process. |
+| [Data Workload Assessment Model and Tool](https://www.microsoft.com/download/details.aspx?id=103130) | This tool provides suggested "best fit" target platforms, cloud readiness, and application or database remediation level for a given workload. It offers simple, one-click calculation and report generation that helps to accelerate large estate assessments by providing an automated and uniform target platform decision process. |
 
 The Data SQL Engineering team developed these resources. This team's core charter is to unblock and accelerate complex modernization for data platform migration projects to Microsoft's Azure data platform.
 
 
 ## Next steps
 
-- After the migration, review the [Post-migration validation and optimization guide](/sql/relational-databases/post-migration-validation-and-optimization-guide).
+- After the migration, review the [Post-migration validation and optimization guide](../../../relational-databases/post-migration-validation-and-optimization-guide.md).
 - For a matrix of Microsoft and third-party services and tools that are available to assist you with various database and data migration scenarios and specialty tasks, see [Data migration services and tools](/azure/dms/dms-tools-matrix).
-- For other migration guides, see [Azure Database Migration Guides](https://datamigration.microsoft.com/).
+- For other migration guides, see [Azure Database Migration Guides](/data-migration/).
 - For migration videos, see [Overview of the migration journey](https://azure.microsoft.com/resources/videos/overview-of-migration-and-recommended-tools-services/).

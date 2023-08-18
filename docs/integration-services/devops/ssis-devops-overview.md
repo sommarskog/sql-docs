@@ -1,18 +1,16 @@
 ---
-title: "SQL Server Integration Services DevOps overview | Microsoft Docs"
+title: "SQL Server Integration Services DevOps overview"
 description: Learn how to build SSIS CICD with SSIS DevOps Tools.
-ms.date: "4/21/2021"
-ms.topic: conceptual
-ms.prod: sql
-ms.prod_service: "integration-services"
-ms.custom: ""
-ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
+ms.date: "7/22/2022"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
 ---
 # SQL Server Integration Services (SSIS) DevOps Tools Azure DevOps extension
 
-[SSIS DevOps Tools](https://marketplace.visualstudio.com/items?itemName=SSIS.ssis-devops-tools) extension is available in **Azure DevOps** Marketplace.
+[SSIS DevOps Tools](https://marketplace.visualstudio.com/items?itemName=SSIS.ssis-devops-tools) extension is available in **Azure DevOps** Marketplace. SSIS DevOps supports **Azure DevOps Services**, **Azure DevOps Server 2019** and above.
 
 If you do not have an **Azure DevOps** organization, firstly sign up for [Azure Pipelines](/azure/devops/pipelines/get-started/pipelines-sign-up?view=azure-devops&preserve-view=true), then add **SSIS DevOps Tools** extension following [the steps](/azure/devops/marketplace/overview?tabs=browser&view=azure-devops&preserve-view=true#add-an-extension).
 
@@ -56,7 +54,9 @@ Path of a separate folder to save build results, which can be published as build
 
 ### Limitations and known issues
 
-- SSIS Build task relies on Visual Studio and SSIS designer, which is mandatory on build agents. Thus, to run SSIS Build task in the pipeline, you must choose **vs2017-win2016** for Microsoft-hosted agents, or install Visual Studio and SSIS designer (either VS2017 + SSDT2017, or VS2019 + SSIS Projects extension) on self-hosted agents.
+- SSIS Build task relies on Visual Studio and SSIS designer, which is mandatory on build agents. Thus, to run SSIS Build task in the pipeline:
+    - for Microsoft-hosted agents, you must choose an available image that includes Visual Studio and SQL Server Integration Services extension, for example, **windows-2022**. Details refer to [Microsoft-hosted agents documentation](/azure/devops/pipelines/agents/hosted) for softwares included in available images.
+    - for self-hosted agents, install Visual Studio and SSIS designer (either VS2017 + SSDT2017, or VS2019 + SSIS Projects extension) on self-hosted agents.
 
 - To build SSIS projects using any out-of-box components (including SSIS Azure feature pack, and other third-party components), those out-of-box components must be installed on the machine where the pipeline agent is running.  For Microsoft-hosted agent, user can add a [PowerShell Script task](/azure/devops/pipelines/tasks/utility/powershell?view=azure-devops&preserve-view=true) or [Command Line Script task](/azure/devops/pipelines/tasks/utility/command-line?view=azure-devops&preserve-view=true) to download and install the components before SSIS Build task  is executed. Below is the sample PowerShell script to install Azure Feature Pack: 
 
@@ -70,7 +70,7 @@ cat log.txt
 
 - Protection level **EncryptSensitiveWithPassword** and **EncryptAllWithPassword** are not supported in SSIS Build task. Make sure all SSIS projects in codebase are not using these two protection levels, or SSIS Build task will stop responding and time out during execution.
 
-## SSIS Build task version 1.* (Preview)
+## SSIS Build task version 1.* 
 
 Enhancements in version 1.*:
 
@@ -79,6 +79,9 @@ Enhancements in version 1.*:
 - No need of installing out-of-box components.
 
 - Support protection level EncryptionWithPassword and EncryptionAllWithPassword.
+### Limitations and known issues
+
+- SSIS Build task version 1.* doesn't support building the SSIS project containing SSIS package with digital signature. 
 
 ### Version 1.* only properties
 
@@ -109,7 +112,7 @@ Type of the destination. Currently SSIS Deploy task supports two types:
 
 #### Destination server
 
-Name of destination SQL server. It can be the name of an on-premises SQL Server, Azure SQL Database, or Azure SQL Managed Instance. This property is only visible when destination type is SSISDB.
+Name of destination Database Engine. It can be the name of an on-premises SQL Server, Azure SQL Database, or Azure SQL Managed Instance. This property is only visible when destination type is SSISDB.
 
 #### Destination path
 
@@ -161,13 +164,19 @@ Specify whether to continue deployment for remaining projects or files when an e
 
 ### Limitations and known issues
 
-SSIS Deploy Task doesn't support the following scenarios currently:
+SSIS Deploy task currently doesn't support the following scenarios:
 
-- Configure environment in SSIS catalog.
-- Deploy ispac to Azure SQL Server or Azure SQL Managed Instance, which only allows multi-factor authentication (MFA).
-- Deploy packages to MSDB or SSIS Package Store.
+- Configuring the environment in the SSIS catalog.
+- Deploying ISPAC to Azure SQL Server or Azure SQL Managed Instance, which allow only multifactor authentication.
+- Deploying packages to MSDB or SSIS Package Store.
+- If you install the SSIS DevOps Tools extension in Azure DevOps Server, you might see the message "The extension package size exceeds the maximum package size." To resolve the issue, complete the following steps: 
+  1. Connect to the on-premises SQL Server instance and select the database **Gallery_Configuration**.
+  1. Run the query `INSERT INTO dbo.tbl_RegistryItems VALUES (1,'#\Configuration\Service\Gallery\LargeExtensionUpload\SSIS\','MaxPackageSizeMB\',50)`. Change `50` to a higher number if the extension is larger than 50 MBs.
+  1. After you run the query, restart Internet Information Services. Try again to upload the extension.
+  1. If the error persists, please contact the SQL Server support team. 
 
-## SSIS Deploy task version 1.* (Preview)
+
+## SSIS Deploy task version 1.* 
 
 Enhancements in version 1.*:
 
@@ -370,6 +379,19 @@ The configuration JSON schema has three layers:
 |sensitive|Whether the value of the environment variable is sensitive.|Valid inputs are: <br> *true* <br> *false*|
 
 ## Release notes
+
+### Version 1.0.6
+
+Release Date: September 1, 2021
+
+- General Availability(GA) release.
+    
+### Version 1.0.5
+
+Release Date: June 2, 2021
+
+- Fixed an issue that sometimes SSIS Build Task of version 1.\* failed to build projects/packages with protection level EncryptSensitiveWithPassword or EncryptAllWithPassword with the error "Specified initialization vector (IV) does not match the block size for this algorithm."
+- Removed the JSON content in the log of the SSIS Catalog Configuration task when "Configuration file source" is "File Path".
 
 ### Version 1.0.4
 

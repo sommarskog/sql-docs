@@ -1,30 +1,28 @@
 ---
+title: "Data Mining Model Training Destination"
 description: "Data Mining Model Training Destination"
-title: "Data Mining Model Training Destination | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "integration-services"
-ms.reviewer: ""
-ms.technology: integration-services
+ms.service: sql
+ms.subservice: integration-services
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.dts.designer.dataminingmodeltrainingdest.f1"
   - "sql13.dts.designer.dmmtrainingtransformation.connection.f1"
   - "sql13.dts.designer.dmmtrainingtransformation.columns.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "destinations [Integration Services], Data Mining Model Training"
   - "Data Mining Model Training destination"
   - "mining models [Analysis Services], training"
   - "training mining models"
-ms.assetid: 6bc8cbe2-46af-4f7b-93d6-86779313c9d7
-author: chugugrace
-ms.author: chugu
 ---
 # Data Mining Model Training Destination
 
 [!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
+> [!IMPORTANT]
+> Data mining was deprecated in [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] Analysis Services and now discontinued in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] Analysis Services. Documentation is not updated for deprecated and discontinued features. To learn more, see [Analysis Services backward compatibility](/analysis-services/analysis-services-backward-compatibility).
 
   The Data Mining Model Training destination trains data mining models by passing the data that the destination receives through the data mining model algorithms. Multiple data mining models can be trained by one destination if the models are built on the same data mining structure. For more information, see [Mining Structure Columns](/analysis-services/data-mining/mining-structure-columns) and [Mining Model Columns](/analysis-services/data-mining/mining-model-columns).  
   

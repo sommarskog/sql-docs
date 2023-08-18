@@ -1,26 +1,22 @@
 ---
+title: "Operator Precedence (Transact-SQL)"
 description: "Operator Precedence (Transact-SQL)"
-title: "Operator Precedence (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/15/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "operators [Transact-SQL], precedence"
   - "operator precedence [Transact-SQL]"
   - "order of operator execution [Transact-SQL]"
   - "precedence [SQL Server], operators"
-ms.assetid: f04d2439-6fff-4e4c-801f-cc62faef510a
-author: cawrites
-ms.author: chadam
+dev_langs:
+  - "TSQL"
 ---
 # Operator Precedence (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   When a complex expression has multiple operators, operator precedence determines the sequence of operations. The order of execution can significantly affect the resulting value.  
   

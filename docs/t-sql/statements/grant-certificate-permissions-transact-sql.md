@@ -1,33 +1,30 @@
 ---
-description: "GRANT Certificate Permissions (Transact-SQL)"
-title: "GRANT Certificate Permissions (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "GRANT Certificate Permissions (Transact-SQL)"
+description: GRANT Certificate Permissions (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "06/12/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "granting permissions [SQL Server], certificates"
   - "certificates [SQL Server], permissions"
   - "permissions [SQL Server], certificates"
   - "GRANT statement, certificates"
-ms.assetid: 77270245-a24b-4a20-b481-e6a5ea05b499
-author: VanMSFT
-ms.author: vanto
-monikerRange: "= azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017||= azure-sqldw-latest"
+dev_langs:
+  - "TSQL"
+monikerRange: "=azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest"
 ---
 # GRANT Certificate Permissions (Transact-SQL)
-[!INCLUDE [sql-asdb-asa](../../includes/applies-to-version/sql-asdb-asa.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   Grants permissions on a certificate in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
-[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/\synapse-analytics-od-unsupported-syntax.md)]  
+> [!NOTE]
+> [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
   
 ## Syntax  
   

@@ -1,23 +1,19 @@
 ---
-description: "Manage Files with Encoding"
 title: "Manage Files with Encoding"
-ms.custom: seo-lt-2019
+description: "Manage Files with Encoding"
+author: "markingmyname"
+ms.author: "maghan"
 ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: "sql-tools"
-ms.reviewer: ""
-ms.technology: ssms
+ms.service: sql
+ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "files [SQL Server Management Studio]"
   - "encoding [SQL Server Management Studio]"
   - "files [SQL Server Management Studio], encoding"
-ms.assetid: 919544c9-59f0-4cc6-bb2a-f1ad671eb74b
-author: "markingmyname"
-ms.author: "maghan"
 ---
 # Manage Files with Encoding
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 To facilitate the display of your code in a particular language and on a particular platform, you can associate a particular character encoding with a file.  
   
 ## Opening Files  
@@ -38,7 +34,7 @@ You can also save your code with a Unicode encoding or a different code page to 
   
 #### To save a file with a different encoding or line ending type  
   
-1.  On the **File** menu, click **Save <filename> As**.  
+1.  On the **File** menu, click **Save \<filename\> As**.  
   
 2.  In the **Save File As** dialog, expand the **Save** button, and then click **Save with Encoding**.  
   
@@ -47,7 +43,7 @@ You can also save your code with a Unicode encoding or a different code page to 
 4.  From the **Line Endings**list, select the type of line ending you want.  
   
     > [!NOTE]  
-    > If you save your file your file with Unicode encoding, the file should be checked into [!INCLUDE[msCoName](../../includes/msconame_md.md)] Visual SourceSafe as a binary file because Visual SourceSafe does not support merging, comparing, and showing differences between files that are saved as Unicode.  
+    > If you save your file your file with Unicode encoding, the file should be checked into [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual SourceSafe as a binary file because Visual SourceSafe does not support merging, comparing, and showing differences between files that are saved as Unicode.  
   
 If you are using Visual SourceSafe to store files with ANSI, UTF8, or Unicode, be aware of the following limitations for each:  
   

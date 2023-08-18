@@ -1,21 +1,17 @@
 ---
 title: "Natively compiled stored procedures - data access applications"
 description: Find guidance for calling natively compiled stored procedures from data access applications, with an example that uses the SQL Server Native Client ODBC driver.
-ms.custom: seo-dt-2019
-ms.date: "03/16/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: in-memory-oltp
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.date: 11/10/2022
+ms.service: sql
+ms.subservice: in-memory-oltp
 ms.topic: conceptual
-ms.assetid: 9cf6c5ff-4548-401a-b3ec-084f47ff0eb8
-author: markingmyname
-ms.author: maghan
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Calling Natively Compiled Stored Procedures from Data Access Applications
 
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 This topic discusses guidance on calling natively compiled stored procedures from data access applications.
 
@@ -34,10 +30,12 @@ This topic discusses guidance on calling natively compiled stored procedures fro
 - SqlClient does not support the retrieval of schema-only information (metadata discovery) about the result sets returned by a natively compiled stored procedure (`CommandType.SchemaOnly`).
   - Instead, use [sp_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md).
 
-### SQL Server Native Client
+### Microsoft ODBC Driver for SQL Server (MSODBCSQL)  
 
 - Versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client prior to [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] do not support the retrieval of schema-only information (metadata discovery) about the result sets returned by a natively compiled stored procedure.
 - Instead, use [sp_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md).
+- This sample was originally written for the SQL Server Native Client (sqlncli.h) but has been updated to use the Microsoft ODBC Driver for SQL Server (MSODBCSQL). [!INCLUDE[snac-removed-oledb-and-odbc](../../includes/snac-removed-oledb-and-odbc.md)]
+
 
 ### ODBC
 
@@ -186,7 +184,7 @@ The following is the C code listing.
 #include <windows.h>  
 #include "sql.h"  
 #include "sqlext.h"  
-#include "sqlncli.h"  
+#include "msodbcsql.h"  
   
 // cardinality of order item related array variables
 #define ITEM_ARRAY_SIZE 20  

@@ -1,19 +1,16 @@
 ---
+title: "Monitor Running Packages and Other Operations"
 description: "Monitor Running Packages and Other Operations"
-title: "Monitor Running Packages and Other Operations | Microsoft Docs"
-ms.custom: supportability
-ms.date: 06/04/2018
-ms.prod: sql
-ms.prod_service: "integration-services"
-ms.reviewer: ""
-ms.technology: integration-services
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.ssis.ssms.isoperations.executions.f1"
-  - "sql13.ssis.ssms.isoperations.general.f1"
-ms.assetid: cbbcd79f-ab9b-46ec-84cb-4821c1d16b99
 author: chugugrace
 ms.author: chugu
+ms.date: 06/04/2018
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+ms.custom: supportability
+f1_keywords:
+  - "sql13.ssis.ssms.isoperations.executions.f1"
+  - "sql13.ssis.ssms.isoperations.general.f1"
 ---
 # Monitor Running Packages and Other Operations
 
@@ -24,7 +21,7 @@ ms.author: chugu
   
 -   Logs  
   
-     For more information, see [Integration Services &#40;SSIS&#41; Logging](../../integration-services/performance/integration-services-ssis-logging.md).  
+     For more information, see [Integration Services \(SSIS\) Logging](../../integration-services/performance/integration-services-ssis-logging.md).  
   
 -   Reports  
   
@@ -32,7 +29,7 @@ ms.author: chugu
   
 -   Views  
   
-     For more information, see [Views &#40;Integration Services Catalog&#41;](../../integration-services/system-views/views-integration-services-catalog.md).  
+     For more information, see [Views \(Integration Services Catalog\)](../../integration-services/system-views/views-integration-services-catalog.md).  
   
 -   Performance counters  
   
@@ -46,18 +43,18 @@ ms.author: chugu
 > Although you can also run SSIS packages on Linux, no monitoring tools are provided on Linux. For more info, see [Extract, transform, and load data on Linux with SSIS](../../linux/sql-server-linux-migrate-ssis.md).
 
 ## Operation Types  
- Several different types of operations are monitored in the **SSISDB** catalog, on the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server. Each operation can have multiple messages associated with it. Each message can be classified into one of several different types. For example, a message can be of type Information, Warning, or Error. For the full list of message types, see the documentation for the Transact-SQL [catalog.operation_messages &#40;SSISDB Database&#41;](../../integration-services/system-views/catalog-operation-messages-ssisdb-database.md) view. For a full list of the operations types, see [catalog.operations &#40;SSISDB Database&#41;](../../integration-services/system-views/catalog-operations-ssisdb-database.md).  
+ Several different types of operations are monitored in the **SSISDB** catalog, on the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server. Each operation can have multiple messages associated with it. Each message can be classified into one of several different types. For example, a message can be of type Information, Warning, or Error. For the full list of message types, see the documentation for the Transact-SQL [catalog.operation_messages \(SSISDB Database\)](../../integration-services/system-views/catalog-operation-messages-ssisdb-database.md) view. For a full list of the operations types, see [catalog.operations \(SSISDB Database\)](../../integration-services/system-views/catalog-operations-ssisdb-database.md).  
   
- Nine different status types are used to indicate the status of an operation. For a full list of the status types, see the [catalog.operations &#40;SSISDB Database&#41;](../../integration-services/system-views/catalog-operations-ssisdb-database.md) view.  
+ Nine different status types are used to indicate the status of an operation. For a full list of the status types, see the [catalog.operations \(SSISDB Database\)](../../integration-services/system-views/catalog-operations-ssisdb-database.md) view.  
 
 ## <a name="active_ops"></a> Active Operations Dialog Box
   Use the **Active Operations** dialog box to view the status of currently running [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] operations on the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server, such as deployment, validation, and package execution. This data is stored in the SSISDB catalog.  
   
- For more information about related [!INCLUDE[tsql](../../includes/tsql-md.md)] views, see [catalog.operations &#40;SSISDB Database&#41;](../../integration-services/system-views/catalog-operations-ssisdb-database.md), [catalog.validations &#40;SSISDB Database&#41;](../../integration-services/system-views/catalog-validations-ssisdb-database.md), and [catalog.executions &#40;SSISDB Database&#41;](../../integration-services/system-views/catalog-executions-ssisdb-database.md)  
+ For more information about related [!INCLUDE[tsql](../../includes/tsql-md.md)] views, see [catalog.operations \(SSISDB Database\)](../../integration-services/system-views/catalog-operations-ssisdb-database.md), [catalog.validations \(SSISDB Database\)](../../integration-services/system-views/catalog-validations-ssisdb-database.md), and [catalog.executions \(SSISDB Database\)](../../integration-services/system-views/catalog-executions-ssisdb-database.md)  
   
 ###  <a name="open_dialog"></a> Open the Active Operations Dialog Box  
   
-1.  Open [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
+1.  Open [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
 2.  Connect Microsoft SQL Server Database Engine  
   
@@ -95,7 +92,7 @@ ms.author: chugu
  For information about the other methods that you can use to view the list of running packages, see the following topics.  
   
  [!INCLUDE[tsql](../../includes/tsql-md.md)] access  
- To view the list of packages that are running on the server, query the view, [catalog.executions &#40;SSISDB Database&#41;](../../integration-services/system-views/catalog-executions-ssisdb-database.md) for packages that have a status of 2.  
+ To view the list of packages that are running on the server, query the view, [catalog.executions \(SSISDB Database\)](../../integration-services/system-views/catalog-executions-ssisdb-database.md) for packages that have a status of 2.  
   
  Programmatic access through the managed API  
  See the <xref:Microsoft.SqlServer.Management.IntegrationServices> namespace and its classes.  
@@ -106,7 +103,7 @@ ms.author: chugu
  For information about the other methods that you can use to stop a running package, see the following topics.  
   
  [!INCLUDE[tsql](../../includes/tsql-md.md)] access  
- To stop a package that is running on the server, call the stored procedure, [catalog.stop_operation &#40;SSISDB Database&#41;](../../integration-services/system-stored-procedures/catalog-stop-operation-ssisdb-database.md).  
+ To stop a package that is running on the server, call the stored procedure, [catalog.stop_operation \(SSISDB Database\)](../../integration-services/system-stored-procedures/catalog-stop-operation-ssisdb-database.md).  
   
  Programmatic access through the managed API  
  See the <xref:Microsoft.SqlServer.Management.IntegrationServices> namespace and its classes.  
@@ -117,13 +114,13 @@ ms.author: chugu
  For information about the other methods that you can use to view the history of running packages, see the following topics.  
   
  [!INCLUDE[tsql](../../includes/tsql-md.md)] access  
- To view information about packages that have run, query the view, [catalog.executions &#40;SSISDB Database&#41;](../../integration-services/system-views/catalog-executions-ssisdb-database.md).  
+ To view information about packages that have run, query the view, [catalog.executions \(SSISDB Database\)](../../integration-services/system-views/catalog-executions-ssisdb-database.md).  
   
  Programmatic access through the managed API  
  See the <xref:Microsoft.SqlServer.Management.IntegrationServices> namespace and its classes.  
 
 ## <a name="reports"></a> Reports for the Integration Services Server
-  In the current release of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], standard reports are available in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] to help you monitor [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] projects that have been deployed to the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server. These reports help you to view package status and history, and, if necessary, identify the cause of package execution failures.  
+  In the current release of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], standard reports are available in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] to help you monitor [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] projects that have been deployed to the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server. These reports help you to view package status and history, and, if necessary, identify the cause of package execution failures.  
   
  At the top of each report page, the back icon takes you to the previous page you viewed, the refresh icon refreshes the information displayed on the page, and the print icon allows you to print the current page.  
   
@@ -182,7 +179,7 @@ ms.author: chugu
  For instructions on how to create and add a custom report, see [Add a Custom Report to Management Studio](../../ssms/object/add-a-custom-report-to-management-studio.md).  
 
 ## View Reports for the Integration Services Server
-  In the current release of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], standard reports are available in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] to help you monitor [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] projects that have been deployed to the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server.  For more information about the reports, see [Reports for the Integration Services Server](#reports).  
+  In the current release of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], standard reports are available in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] to help you monitor [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] projects that have been deployed to the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server.  For more information about the reports, see [Reports for the Integration Services Server](#reports).  
   
 ### To view reports for the Integration Services server  
   

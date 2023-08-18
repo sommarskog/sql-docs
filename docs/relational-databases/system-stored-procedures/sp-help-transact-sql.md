@@ -1,32 +1,28 @@
 ---
+title: "sp_help (Transact-SQL)"
 description: "sp_help (Transact-SQL)"
-title: "sp_help (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/24/2016"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_help"
-  - "sp_help_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_help"
-ms.assetid: 913cd5d4-39a3-4a4b-a926-75ed32878884
 author: markingmyname
 ms.author: maghan
+ms.date: "10/24/2016"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_help"
+  - "sp_help_TSQL"
+helpviewer_keywords:
+  - "sp_help"
+dev_langs:
+  - "TSQL"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_help (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Reports information about a database object (any object listed in the **sys.sysobjects** compatibility view), a user-defined data type, or a data type.  
   
  
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -37,7 +33,7 @@ sp_help [ [ @objname = ] 'name' ]
   
 ## Arguments  
 `[ @objname = ] 'name'`
- Is the name of any object, in **sysobjects** or any user-defined data type in the **systypes** table. *name* is **nvarchar(**776**)**, with a default of NULL. Database names are not acceptable.  Two or three part names must be delimited, such as 'Person.AddressType' or [Person.AddressType].   
+ Is the name of any object, in **sysobjects** or any user-defined data type in the **systypes** table. *name* is **nvarchar(**776**)**, with a default of NULL. Database names are not acceptable.  Two or three part names may be delimited, such as 'Person.AddressType' or '[Person].[AddressType]'.   
    
   
 ## Return Code Values  
@@ -180,7 +176,7 @@ GO
  The following example displays information about the `Person` table.  
   
 ```  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 EXEC sp_help 'Person.Person';  
 GO  

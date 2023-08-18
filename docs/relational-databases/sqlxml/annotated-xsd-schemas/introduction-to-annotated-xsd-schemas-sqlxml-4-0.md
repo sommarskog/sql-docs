@@ -1,13 +1,13 @@
 ---
 title: "Introduction to Annotated XSD Schemas (SQLXML)"
 description: Learn about creating XML views of relational data using the XML Schema Definition (XSD) language (SQLXML 4.0).
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: 01/11/2019
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: xml
+ms.service: sql
+ms.subservice: xml
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "namespaces [SQLXML], annotated XSD schemas"
   - "mapping schema [SQLXML], about mapping schema"
   - "views [SQLXML]"
@@ -18,10 +18,6 @@ helpviewer_keywords:
   - "minimum XSD schema"
   - "annotated XSD schemas, examples"
   - "XML views [SQLXML]"
-ms.assetid: 15282db1-65c4-43be-bdb7-e9ef49cb33a2
-author: rothja
-ms.author: jroth
-ms.custom: "seo-lt-2019"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Introduction to Annotated XSD Schemas (SQLXML 4.0)
@@ -105,7 +101,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 </xsd:schema>  
 ```  
   
- In the mapping schema, the **\<Contact>** element is mapped to the Person.Contact table in the sample AdventureWorks database by using the **sql:relation** annotation. The attributes ConID, FName, and LName are mapped to the ContactID, FirstName, and LastName columns in the Person.Contact table by using the **sql:field** annotations.  
+ In the mapping schema, the **\<Contact>** element is mapped to the Person.Contact table in the sample [!INCLUDE [sssampledbobject-md](../../../includes/sssampledbobject-md.md)] database by using the **sql:relation** annotation. The attributes ConID, FName, and LName are mapped to the ContactID, FirstName, and LastName columns in the Person.Contact table by using the **sql:field** annotations.  
   
  This annotated XSD schema provides the XML view of the relational data. This XML view can be queried using the XPath language. An XPath query returns an XML document as a result, instead of the rowset that is returned by SQL queries.  
   

@@ -1,37 +1,33 @@
 ---
+title: "NEXT VALUE FOR (Transact-SQL)"
 description: "NEXT VALUE FOR (Transact-SQL)"
-title: "NEXT VALUE FOR (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "07/19/2016"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "NEXT_VALUE_TSQL"
   - "NEXT"
   - "NEXT VALUE"
   - "NEXT VALUE FOR"
   - "NEXT_TSQL"
   - "NEXT_VALUE_FOR_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "NEXT VALUE FOR function"
   - "sequence number object, NEXT VALUE FOR function"
-ms.assetid: 92632ed5-9f32-48eb-be28-a5e477ef9076
-author: julieMSFT
-ms.author: jrasnick
+dev_langs:
+  - "TSQL"
 ---
 # NEXT VALUE FOR (Transact-SQL)
-[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Generates a sequence number from the specified sequence object.  
   
  For a complete discussion of both creating and using sequences, see [Sequence Numbers](../../relational-databases/sequence-numbers/sequence-numbers.md). Use [sp_sequence_get_range](../../relational-databases/system-stored-procedures/sp-sequence-get-range-transact-sql.md) to generate reserve a range of sequence numbers.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -168,7 +164,7 @@ NEXT VALUE FOR [ database_name . ] [ schema_name . ]  sequence_name
  The following examples use a sequence named `CountBy1` in a schema named `Test`. Execute the following statement to create the `Test.CountBy1` sequence. Examples C and E use the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database, so the `CountBy1` sequence is created in that database.  
   
 ```sql  
-USE AdventureWorks2012 ;  
+USE AdventureWorks2022;  
 GO  
   
 CREATE SCHEMA Test;  
@@ -214,7 +210,7 @@ GO
 ### C. Using a sequence with a ranking window function  
   
 ```sql  
-USE AdventureWorks2012 ;  
+USE AdventureWorks2022;  
 GO  
   
 SELECT NEXT VALUE FOR Test.CountBy1 OVER (ORDER BY LastName) AS ListNumber,  
@@ -276,7 +272,7 @@ GO
  The following example uses the `SELECT ... INTO` statement to create a table named `Production.NewLocation` and uses the `NEXT VALUE FOR` function to number each row.  
   
 ```sql  
-USE AdventureWorks2012 ;   
+USE AdventureWorks2022;   
 GO  
   
 SELECT NEXT VALUE FOR Test.CountBy1 AS LocNumber, Name   

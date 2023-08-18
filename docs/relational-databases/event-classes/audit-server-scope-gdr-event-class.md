@@ -1,21 +1,18 @@
 ---
+title: "Audit Server Scope GDR Event Class"
 description: "Audit Server Scope GDR Event Class"
-title: "Audit Server Scope GDR Event Class | Microsoft Docs"
-ms.custom: ""
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: supportability
+ms.service: sql
+ms.subservice: supportability
 ms.topic: reference
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Audit Server Scope GDR event class"
-ms.assetid: d3b1e47f-2ba2-49af-b404-1aa231d4e4a0
-author: "stevestein"
-ms.author: "sstein"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Audit Server Scope GDR Event Class
-[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
   The **Audit Server Scope GDR** event class occurs when a GRANT, REVOKE, or DENY is issued for permissions in the server scope, such as creating a login.  
   
 ## Audit Server Scope GDR Event Class Data Columns  

@@ -1,23 +1,22 @@
 ---
-title: "Reporting Services in SQL Server Data Tools (SSDT) | Microsoft Docs"
+title: "Reporting Services in SQL Server Data Tools (SSDT)"
 description: Learn how to use the SQL Server Data Tools Report Designer authoring environment in Microsoft Visual Studio to create solutions for Reporting Services.
-ms.date: 05/30/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: tools
-
-
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "Business Intelligence Development Studio, Reporting Services in"
-ms.assetid: 0903c7b2-ac59-45f1-b7d0-922ecd9d76f8
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 05/30/2017
+ms.service: reporting-services
+ms.subservice: tools
+ms.topic: conceptual
+ms.custom: updatefrequency5
+helpviewer_keywords:
+  - "Business Intelligence Development Studio, Reporting Services in"
 ---
 
 # Reporting Services in SQL Server Data Tools (SSDT)
 
-  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] is a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] environment for creating business intelligence solutions. SSDT features the Report Designer authoring environment, where you can open, modify, preview, save, and deploy [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] paginated report definitions, shared data sources, shared datasets, and report parts. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] is not included with SQL Server. Download [SQL Server Data Tools](../../ssdt/download-sql-server-data-tools-ssdt.md). 
+[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] is a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] environment for creating business intelligence solutions. SSDT features the Report Designer authoring environment, where you can open, modify, preview, save, and deploy [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] paginated report definitions, shared data sources, shared datasets, and report parts. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] is not included with SQL Server. Download [SQL Server Data Tools](../../ssdt/download-sql-server-data-tools-ssdt.md). 
+
+[!INCLUDE [ssrs-report-parts-deprecated](../../includes/ssrs-report-parts-deprecated.md)]
   
  This topic describes [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] solutions, projects, project templates, and configurations used for [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], and the views, menus, toolbars, and shortcuts that you can use in Report Designer.  
   
@@ -311,4 +310,4 @@ ms.author: maggies
 [Report Definition Language](../../reporting-services/reports/report-definition-language-ssrs.md)   
 [Deployment and Version Support in SQL Server Data Tools](../../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md)  
 
-More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)
+More questions? [Try asking the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user)

@@ -1,32 +1,28 @@
 ---
 title: "Limit CPU load: Use resource governor for backup compression"
 description: You can classify the sessions of a SQL Server user by mapping them to a Resource Governor workload group that limits CPU usage for backing up with compression.
-ms.custom: seo-lt-2019
+author: MashaMSFT
+ms.author: mathoma
 ms.date: "12/17/2019"
-ms.prod: sql
-ms.prod_service: backup-restore
-ms.reviewer: ""
-ms.technology: backup-restore
+ms.service: sql
+ms.subservice: backup-restore
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "backup compression [SQL Server], Resource Governor"
   - "backup compression [SQL Server], CPU usage"
   - "compression [SQL Server], backup compression"
   - "backups [SQL Server], compression"
   - "Resource Governor, backup compression"
-ms.assetid: 01796551-578d-4425-9b9e-d87210f7ba72
-author: cawrites
-ms.author: chadam
 ---
 # Use Resource Governor to Limit CPU Usage by Backup Compression (Transact-SQL)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  By default, backing up using compression significantly increases CPU usage, and the additional CPU consumed by the compression process can adversely impact concurrent operations. Therefore, you might want to create a low-priority compressed backup in a session whose CPU usage is limited by[Resource Governor](../../relational-databases/resource-governor/resource-governor.md) when CPU contention occurs. This topic presents a scenario that classifies the sessions of a particular [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] user by mapping them to a Resource Governor workload group that limits CPU usage in such cases.  
+  By default, backing up using compression significantly increases CPU usage, and the additional CPU consumed by the compression process can adversely impact concurrent operations. Therefore, you might want to create a low-priority compressed backup in a session whose CPU usage is limited by [Resource Governor](../../relational-databases/resource-governor/resource-governor.md) when CPU contention occurs. This topic presents a scenario that classifies the sessions of a particular [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] user by mapping them to a Resource Governor workload group that limits CPU usage in such cases.  
   
 > [!IMPORTANT]  
 >  In a given Resource Governor scenario, session classification might be based on a user name, an application name, or anything else that can differentiate a connection. For more information, see [Resource Governor Classifier Function](../../relational-databases/resource-governor/resource-governor-classifier-function.md) and [Resource Governor Workload Group](../../relational-databases/resource-governor/resource-governor-workload-group.md).  
   
-##  <a name="Top"></a> This topic contains the following set of scenarios, which are presented in sequence:  
+<a name="Top"></a> This topic contains the following set of scenarios, which are presented in sequence:  
   
 1.  [Setting Up a Login and User for Low-Priority Operations](#setup_login_and_user)  
   
@@ -87,8 +83,8 @@ USE master;
 CREATE LOGIN [domain_name\MAX_CPU] FROM WINDOWS;  
 GRANT VIEW SERVER STATE TO [domain_name\MAX_CPU];  
 GO  
--- Create a SQL Server user in AdventureWorks2012 for this login  
-USE AdventureWorks2012;  
+-- Create a SQL Server user in AdventureWorks2022 for this login  
+USE AdventureWorks2022;  
 CREATE USER [domain_name\MAX_CPU] FOR LOGIN [domain_name\MAX_CPU];  
 EXEC sp_addrolemember 'db_backupoperator', 'domain_name\MAX_CPU';  
 GO  
@@ -131,7 +127,7 @@ GO
 1.  Issue a [CREATE RESOURCE POOL](../../t-sql/statements/create-resource-pool-transact-sql.md) statement to create a resource pool. The example for this procedure uses the following syntax:  
   
     ```sql  
-    CREATE RESOURCE POOL <pool_name> WITH ( MAX_CPU_PERCENT = <value> );
+    CREATE RESOURCE POOL [<pool_name>] WITH ( MAX_CPU_PERCENT = /*replace 10 with the actual value*/10 );
     ```  
   
     *Value* is an integer from 1 to 100 that indicates the percentage of maximum average CPU bandwidth. The appropriate value depends on your environment. For the purpose of illustration, the example in this topic uses 20%  percent (MAX_CPU_PERCENT = 20.)  
@@ -139,17 +135,17 @@ GO
 2.  Issue a [CREATE WORKLOAD GROUP](../../t-sql/statements/create-workload-group-transact-sql.md) statement to create a workload group for low-priority operations whose CPU usage you want to govern. The example for this procedure uses the following syntax:  
   
     ```sql  
-    CREATE WORKLOAD GROUP <group_name> USING <pool_name>;
+    CREATE WORKLOAD GROUP [<group_name>] USING [<pool_name>];
     ```
   
 3.  Issue a [CREATE FUNCTION](../../t-sql/statements/create-function-transact-sql.md) statement to create a classifier function that maps the workload group created in the preceding step to the user of the low-priority login. The example for this procedure uses the following syntax:  
   
     ```sql 
-    CREATE FUNCTION <schema_name>.<function_name>() RETURNS sysname  
+    CREATE FUNCTION [<schema_name>].[<function_name>]() RETURNS sysname  
     WITH SCHEMABINDING  
     AS  
     BEGIN  
-        DECLARE @workload_group_name AS <sysname>  
+        DECLARE @workload_group_name AS [<sysname>]  
         IF (SUSER_NAME() = '<user_of_low_priority_login>')  
         SET @workload_group_name = '<workload_group_name>'  
         RETURN @workload_group_name  
@@ -170,7 +166,7 @@ GO
 4.  Issue an [ALTER RESOURCE GOVERNOR](../../t-sql/statements/alter-resource-governor-transact-sql.md) statement to register the classifier function with Resource Governor. The example for this procedure uses the following syntax:  
   
     ```sql  
-    ALTER RESOURCE GOVERNOR WITH (CLASSIFIER_FUNCTION = <schema_name>.<function_name>);
+    ALTER RESOURCE GOVERNOR WITH (CLASSIFIER_FUNCTION = [<schema_name>].[<function_name>]);
     ```  
   
 5.  Issue a second ALTER RESOURCE GOVERNOR statement to apply the changes to the Resource Governor in-memory configuration, as follows:  
@@ -263,11 +259,11 @@ GO
   
 ```sql  
 --Run backup statement in the gBackup session.  
-BACKUP DATABASE AdventureWorks2012 TO DISK='Z:\SQLServerBackups\AdvWorksData.bak'   
+BACKUP DATABASE AdventureWorks2022 TO DISK='Z:\SQLServerBackups\AdvWorksData.bak'   
 WITH   
    FORMAT,   
-   MEDIADESCRIPTION='AdventureWorks2012 Compressed Data Backups'  
-   DESCRIPTION='First database backup on AdventureWorks2012 Compressed Data Backups media set'  
+   MEDIADESCRIPTION='AdventureWorks2022 Compressed Data Backups',
+   DESCRIPTION='First database backup on AdventureWorks2022 Compressed Data Backups media set',
    COMPRESSION;  
 GO  
 ```  

@@ -1,26 +1,22 @@
 ---
+title: "STIntersection (geography Data Type)"
 description: "STIntersection (geography Data Type)"
-title: "STIntersection (geography Data Type) | Microsoft Docs"
-ms.custom: ""
+author: MladjoA
+ms.author: mlandzic
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "STIntersection_TSQL"
   - "STIntersection (geography Data Type)"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "STIntersection method"
-ms.assetid: 7e09468f-499f-4a38-ba4b-bb30b8821e3b
-author: MladjoA
-ms.author: mlandzic 
+dev_langs:
+  - "TSQL"
 ---
 # STIntersection (geography Data Type)
-[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Returns an object that represents the points where a **geography** instance intersects another **geography** instance.  
   
@@ -56,7 +52,7 @@ ms.author: mlandzic
 ### A. Computing the intersection of a Polygon and a LineString  
  The following example uses `STIntersection()` to compute the intersection of a `Polygon` and a `LineString`.  
   
-```  
+```sql
 DECLARE @g geography;  
 DECLARE @h geography;  
 SET @g = geography::STGeomFromText('POLYGON((-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653))', 4326);  
@@ -67,7 +63,7 @@ SELECT @g.STIntersection(@h).ToString();
 ### B. Computing the intersection of a Polygon and a CurvePolygon  
  The following example returns an instance that contains a circular arc segment.  
   
-```  
+```sql
 DECLARE @g geography;  
 DECLARE @h geography;  
 SET @g = geography::STGeomFromText('POLYGON((-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653))', 4326);  
@@ -78,7 +74,7 @@ SELECT @g.STIntersection(@h).ToString();
 ### C. Computing the symmetric difference with FullGlobe  
  The following example compares the symmetric difference of a `Polygon` with `FullGlobe`.  
   
-```  
+```sql
 DECLARE @g geography = 'POLYGON((-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653))';  
 SELECT @g.STIntersection('FULLGLOBE').ToString();  
 ```  

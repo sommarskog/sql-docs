@@ -1,15 +1,13 @@
 ---
-title: "Tutorial: Format Text (Report Builder) | Microsoft Docs"
+title: "Tutorial: Format Text (Report Builder)"
 description: Learn how to format text in various ways in a Reporting Services paginated report. For example, you can experiment with different formats.
-ms.date: 05/30/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: reporting-services
-
-ms.topic: conceptual
-ms.assetid: 67d8513e-8a70-464b-b87f-e91d010cfd82
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 05/30/2017
+ms.service: reporting-services
+ms.subservice: reporting-services
+ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 
 # Tutorial: Format Text (Report Builder)
@@ -56,7 +54,7 @@ For information about requirements, see [Prerequisites for Tutorials &#40;Report
     > [!NOTE]  
     > The expression `<servername>`, for example Report001, specifies a computer on which an instance of the SQL Server Database Engine is installed. This tutorial does not need specific data; it just needs a connection to a SQL Server database. If you already have a data source connection listed under **Data Source Connections**, you can select it and go to the next procedure, "To create a dataset." For more information, see [Alternative Ways to Get a Data Connection &#40;Report Builder&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
   
-5.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
+5.  Select **OK**.
   
 ### To create a dataset  
   
@@ -112,9 +110,9 @@ For information about requirements, see [Prerequisites for Tutorials &#40;Report
   
     The query results are the data available to display in your report.  
   
-8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]
+8.  Select **OK**.
 
-9.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
+9.  Select **OK**.
   
 ## <a name="AddField"></a>Add a Field to the Report Design Surface  
 If you want a field from your dataset to appear in a report, your first impulse may be to drag it directly to the design surface. This exercise points out why that doesn't work and what to do instead.  
@@ -358,4 +356,4 @@ There are many ways to format text in Report Builder. [Tutorial: Creating a Free
 [Formatting Report Items](../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)  
 [Report Builder in SQL Server](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
 
-More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)
+More questions? [Try asking the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user)

@@ -1,27 +1,23 @@
 ---
+title: "CONCAT_WS (Transact-SQL)"
 description: "CONCAT_WS (Transact-SQL)"
-title: "CONCAT_WS (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/25/2018"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
-ms.topic: conceptual
-f1_keywords: 
+author: markingmyname
+ms.author: maghan
+ms.date: "09/14/2021"
+ms.service: sql
+ms.subservice: t-sql
+ms.topic: reference
+f1_keywords:
   - "CONCAT_WS"
   - "CONCAT_WS_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "CONCAT_WS function"
-ms.assetid: f1375fd7-a2fd-48bf-922a-4f778f0deb1f
-author: cawrites
-ms.author: chadam
-monikerRange: "=azuresqldb-current||>=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest"
+dev_langs:
+  - "TSQL"
+monikerRange: "= azuresqldb-current || >= sql-server-2017 || >= sql-server-linux-2017 || = azuresqldb-mi-current || = azure-sqldw-latest||=fabric"
 ---
 # CONCAT_WS (Transact-SQL)
-[!INCLUDE [sqlserver2017-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2017-asdb-asdbmi-asa.md)]
+[!INCLUDE [sqlserver2017-asdb-asdbmi-asa-fabricse-fabricdw](../../includes/applies-to-version/sqlserver2017-asdb-asdbmi-asa-fabricse-fabricdw.md)]
 
 This function returns a string resulting from the concatenation, or joining, of two or more string values in an end-to-end manner. It separates those concatenated string values with the delimiter specified in the first function argument. (`CONCAT_WS` indicates *concatenate with separator*.)
 
@@ -92,7 +88,7 @@ Address
 1 Microsoft Way,Redmond,WA,98052
 ```
 
-### C.  Generating CSV file from table
+### C.  Generating CSV-formatted data from table
 This example uses a comma `,` as the separator value, and adds the carriage return character `char(13)` in the column separated values format of the result set.
 
 ```sql

@@ -1,28 +1,26 @@
 ---
+title: "Data Mining Query Transformation"
 description: "Data Mining Query Transformation"
-title: "Data Mining Query Transformation | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/04/2017"
-ms.prod: sql
-ms.prod_service: "integration-services"
-ms.reviewer: ""
-ms.technology: integration-services
+ms.service: sql
+ms.subservice: integration-services
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.dts.designer.dataminingquerytrans.f1"
   - "sql13.dts.designer.dmquerytransformation.miningmodel.f1"
   - "sql13.dts.designer.dmquerytransformation.query.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Data Mining Query transformation"
   - "prediction queries [Integration Services]"
-ms.assetid: 7960133b-a3e1-48af-ba43-55ed78c38e71
-author: chugugrace
-ms.author: chugu
 ---
 # Data Mining Query Transformation
 
 [!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
+> [!IMPORTANT]
+> Data mining was deprecated in SQL Server 2017 Analysis Services and now discontinued in SQL Server 2022 Analysis Services. Documentation is not updated for deprecated and discontinued features. To learn more, see [Analysis Services backward compatibility](/analysis-services/analysis-services-backward-compatibility).
 
   The Data Mining Query transformation performs prediction queries against data mining models. This transformation contains a query builder for creating Data Mining Extensions (DMX) queries. The query builder lets you create custom statements for evaluating the transformation input data against an existing mining model using the DMX language. For more information, see [Data Mining Extensions &#40;DMX&#41; Reference](../../../dmx/data-mining-extensions-dmx-reference.md).  
   

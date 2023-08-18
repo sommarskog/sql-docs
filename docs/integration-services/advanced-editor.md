@@ -1,29 +1,25 @@
 ---
+title: "Advanced Editor"
 description: "Advanced Editor"
-title: "Advanced Editor | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/01/2017"
-ms.prod: sql
-ms.prod_service: "integration-services"
-ms.reviewer: ""
-ms.technology: integration-services
+ms.service: sql
+ms.subservice: integration-services
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.dts.designer.advancededitor.columnproperties.f1"
   - "sql13.dts.designer.advancededitor.componentproperties.f1"
   - "sql13.dts.designer.advancededitor.inputcolumns.f1"
   - "sql13.dts.designer.advancededitor.connections.f1"
   - "sql13.dts.designer.advancededitor.columnmappings.f1"
-ms.assetid: 5ad0ac71-fa8b-4c26-bd42-e6ef00c87571
-author: chugugrace
-ms.author: chugu
 ---
 # Advanced Editor
 
 [!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
-  Use the **Advanced Editor** dialog box to configure to configure properties for the selected [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] object.  
+  Use the **Advanced Editor** dialog box to configure properties for the selected [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] object.  
   
  The **Advanced Editor** is available for most [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] objects that have configurable properties. It is the only editor available for those objects that do not expose a custom user interface.  
   

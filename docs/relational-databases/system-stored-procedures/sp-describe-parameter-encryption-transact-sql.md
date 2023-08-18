@@ -1,23 +1,22 @@
 ---
+title: "sp_describe_parameter_encryption (Transact-SQL)"
 description: "sp_describe_parameter_encryption (Transact-SQL)"
-title: "sp_describe_parameter_encryption (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/27/2016"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
+author: jaszymas
+ms.author: jaszymas
 ms.reviewer: "vanto"
-ms.technology: system-objects
+ms.date: "07/27/2016"
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sp_describe_parameter_encryption"
   - "sp_describe_parameter_encryption_TSQL"
   - "sys.sp_describe_parameter_encryption"
   - "sys.sp_describe_parameter_encryption_TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sp_describe_parameter_encryption"
-ms.assetid: 706ed441-2881-4934-8d5e-fb357ee067ce
-author: jaszymas
-ms.author: jaszymas
+dev_langs:
+  - "TSQL"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_describe_parameter_encryption (Transact-SQL)
@@ -75,7 +74,7 @@ sp_describe_parameter_encryption
 |**parameter_ordinal**|**int**|Id of the row in the result set.|  
 |**parameter_name**|**sysname**|Name of one of the parameters specified in the *\@params* argument.|  
 |**column_encryption_algorithm**|**tinyint**|Code indicating the encryption algorithm configured for the column, the parameter corresponds to. The currently supported values are: 2 for **AEAD_AES_256_CBC_HMAC_SHA_256**.|  
-|**column_encryption_type**|**tinyint**|Code indicating the encryption type configured for the column, the parameter corresponds to. The supported values are:<br /><br /> 0 - plaintext (the column is not encrypted)<br /><br /> 1 - randomized encryption<br /><br /> 2 - deterministic encryption.|  
+|**column_encryption_type**|**tinyint**|Code indicating the encryption type configured for the column, the parameter corresponds to. The supported values are:<br /><br /> 0 - plaintext (the column is not encrypted)<br /><br /> 1 - deterministic encryption<br /><br /> 2 - randomized encryption.|  
 |**column_encryption_key_ordinal**|**int**|Code of the row in the first result set. The referenced row describes the column encryption key configured for the column, the parameter corresponds to.|  
 |**column_encryption_normalization_rule_version**|**tinyint**|Version number of the type normalization algorithm.|  
   

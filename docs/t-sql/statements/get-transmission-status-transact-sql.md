@@ -1,38 +1,34 @@
 ---
-description: "GET_TRANSMISSION_STATUS (Transact-SQL)"
-title: "GET_TRANSMISSION_STATUS (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "GET_TRANSMISSION_STATUS (Transact-SQL)"
+description: GET_TRANSMISSION_STATUS (Transact-SQL)
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "07/26/2017"
-ms.prod: sql
-ms.prod_service: "sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "STATUS_TSQL"
   - "TRANSMISSION"
   - "TRANSMISSION_TSQL"
   - "GET_TRANSMISSION_STATUS"
   - "STATUS"
   - "GET_TRANSMISSION_STATUS_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "conversations [Service Broker], transmission status"
   - "Service Broker errors, transmission status"
   - "transmission status information"
   - "status information [SQL Server], conversations"
   - "GET_TRANSMISSION_STATUS statement"
-ms.assetid: 621805d5-49ed-4764-b3cb-2ae4a3bf797e
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+dev_langs:
+  - "TSQL"
 ---
 # GET_TRANSMISSION_STATUS (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Returns the status for the last transmission for one side of a conversation.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

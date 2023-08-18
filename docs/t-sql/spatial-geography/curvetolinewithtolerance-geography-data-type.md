@@ -1,26 +1,22 @@
 ---
+title: "CurveToLineWithTolerance (geography Data Type)"
 description: "CurveToLineWithTolerance (geography Data Type)"
-title: "CurveToLineWithTolerance (geography Data Type) | Microsoft Docs"
-ms.custom: ""
+author: MladjoA
+ms.author: mlandzic
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "CurveToLineWithTolerance_TSQL"
   - "CurveToLineWithTolerance"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "CurveToLineWithTolerance method (geography)"
-ms.assetid: 74369c76-2cf6-42ae-b9cc-e7a051db2767
-author: MladjoA
-ms.author: mlandzic 
+dev_langs:
+  - "TSQL"
 ---
 # CurveToLineWithTolerance (geography Data Type)
-[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 Returns a polygonal approximation of a **geography** instance that contains circular arc segments.  
   
@@ -58,7 +54,7 @@ This method allows for an error tolerance amount to be specified for the resulta
 ### A. Using different tolerance values on a CircularString instance  
 The following example shows how setting the tolerance affects the `LineString`instance returned from a `CircularString` instance:  
   
-```
+```sql
 DECLARE @g geography;  
 SET @g = geography::Parse('CIRCULARSTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653)');  
 SELECT @g.CurveToLineWithTolerance(0.1,0).STNumPoints(), @g.CurveToLineWithTolerance(0.01, 0).STNumPoints();
@@ -67,7 +63,7 @@ SELECT @g.CurveToLineWithTolerance(0.1,0).STNumPoints(), @g.CurveToLineWithToler
 ### B. Using the method on a MultiLineString instance containing one LineString  
 The following example shows what is returned from a `MultiLineString` instance that only contains one `LineString` instance:  
   
-```
+```sql
 DECLARE @g geography;  
 SET @g = geography::Parse('MULTILINESTRING((-122.358 47.653, -122.348 47.649))');  
 SELECT @g.CurveToLineWithTolerance(0.1,0).ToString();
@@ -76,7 +72,7 @@ SELECT @g.CurveToLineWithTolerance(0.1,0).ToString();
 ### C. Using the method on a MultiLineString instance containing multiple LineStrings  
 The following example shows what is returned from a `MultiLineString` instance that contains more than one `LineString` instance:  
   
-```
+```sql
 DECLARE @g geography;  
 SET @g = geography::Parse('MULTILINESTRING((-122.358 47.653, -122.348 47.649),(-123.358 47.653, -123.348 47.649))');  
 SELECT @g.CurveToLineWithTolerance(0.1,0).ToString();
@@ -85,7 +81,7 @@ SELECT @g.CurveToLineWithTolerance(0.1,0).ToString();
 ### D. Setting relative to true for an invoking CurvePolygon instance  
 The following example uses a `CurvePolygon` instance to call `CurveToLineWithTolerance()` with *relative* set to true:  
   
-```
+```sql
 DECLARE @g geography = 'CURVEPOLYGON(COMPOUNDCURVE(CIRCULARSTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658), (-122.348 47.658, -122.358 47.658, -122.358 47.653)))';  
 SELECT @g.CurveToLineWithTolerance(.5,1).ToString();
 ```  

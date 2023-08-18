@@ -1,10 +1,13 @@
 ---
 title: "Manage the Editor and View Mode"
-description: "Learn how to select either of two view modes of SQL Server Management Studio: Tabbed Documents mode and Multiple Document Interface mode. Learn also about split views, word wrap, Virtual Space mode, displaying line numbers, Full Screen mode, and Auto Hide All." 
-ms.prod: sql
-ms.technology: ssms
+description: "Learn how to select either of two view modes of SQL Server Management Studio: Tabbed Documents mode and Multiple Document Interface mode. Learn also about split views, word wrap, Virtual Space mode, displaying line numbers, Full Screen mode, and Auto Hide All."
+author: markingmyname
+ms.author: maghan
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Query Editor [SQL Server Management Studio], managing window behavior"
   - "workbench view modes [SQL Server Management Studio]"
   - "full screen mode [SQL Server Management Studio]"
@@ -14,24 +17,18 @@ helpviewer_keywords:
   - "splitting document views"
   - "displaying line numbers"
   - "view modes [SQL Server Management Studio]"
-ms.assetid: 25c58a14-9f94-4296-9770-7d84c6bc3969
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
-ms.custom: seo-lt-2019
-ms.date: "03/01/2017"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 
 # Manage the Editor and View Mode
 
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 The Editor gives you a number of ways to control the view of your code.  
 
 ## Changing the View Mode  
 
-[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] features a view mode called **Tabbed Documents**, which allows you to open multiple editors and documents simultaneously and access them through tabs at the top of the Editor. You can alternatively open the [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] environment in Multiple Document Interface (MDI) mode, which joins windows without the tabs, and allows each window to be tiled, minimized, and so on.  
+SQL Server Management Studio features a view mode called **Tabbed Documents**, which allows you to open multiple editors and documents simultaneously and access them through tabs at the top of the Editor. You can alternatively open the [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] environment in Multiple Document Interface (MDI) mode, which joins windows without the tabs, and allows each window to be tiled, minimized, and so on.  
   
 #### To switch between view modes  
   
@@ -42,7 +39,7 @@ The Editor gives you a number of ways to control the view of your code.
 3.  Click **Tabbed documents** or **MDI environment**.  
   
     > [!NOTE]  
-    >  The changes will not take effect until [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] is restarted.  
+    >  The changes will not take effect until SQL Server Management Studio is restarted.  
   
 ## Splitting the View  
  An Editor window can be split into two separate parts for easier editing.  

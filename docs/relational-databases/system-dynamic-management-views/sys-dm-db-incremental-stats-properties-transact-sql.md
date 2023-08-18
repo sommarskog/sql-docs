@@ -1,24 +1,21 @@
 ---
-description: "sys.dm_db_incremental_stats_properties (Transact-SQL)"
-title: "sys.dm_db_incremental_stats_properties (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.dm_db_incremental_stats_properties (Transact-SQL)"
+description: sys.dm_db_incremental_stats_properties (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "12/18/2017"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.dm_db_incremental_stats_properties"
   - "sys.dm_db_incremental_stats_properties_TSQL"
   - "dm_db_incremental_stats_properties"
   - "dm_db_incremental_stats_properties_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.dm_db_incremental_stats_properties"
-ms.assetid: aa0db893-34d1-419c-b008-224852e71307
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+dev_langs:
+  - "TSQL"
 ---
 # sys.dm_db_incremental_stats_properties (Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]

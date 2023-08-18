@@ -1,26 +1,22 @@
 ---
-description: "Custom Reports in Management Studio"
 title: "Custom Reports in Management Studio"
-ms.prod: sql
-ms.prod_service: "sql-tools"
-ms.reviewer: ""
-ms.technology: ssms
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.swb.summary.new.custom.report.f1"
-  - "sql13.swb.summary.render.custom.report.f1"
-helpviewer_keywords: 
-  - "SQL Server Management Studio [SQL Server], custom reports"
-ms.assetid: 1ba3f758-f39b-4f5f-91ca-516cedc78979
+description: "Custom Reports in Management Studio"
 author: "markingmyname"
 ms.author: "maghan"
-ms.custom: seo-lt-2019
 ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: ssms
+ms.topic: conceptual
+f1_keywords:
+  - "sql13.swb.summary.new.custom.report.f1"
+  - "sql13.swb.summary.render.custom.report.f1"
+helpviewer_keywords:
+  - "SQL Server Management Studio [SQL Server], custom reports"
 ---
 
 # Custom Reports in Management Studio
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], many Object Explorer nodes display a set of standard reports that are created by [!INCLUDE[msCoName](../../includes/msconame_md.md)]. These reports summarize typically requested server information. Starting with [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2, administrators can run custom reports that were created in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull_md.md)] from [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], many Object Explorer nodes display a set of standard reports that are created by [!INCLUDE[msCoName](../../includes/msconame-md.md)]. These reports summarize typically requested server information. Starting with [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2, administrators can run custom reports that were created in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] from [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
 ## Implementation  
 Custom reports are stored as report definition (.rdl) files and are created by using Report Definition Language (RDL). RDL contains data retrieval and layout information for a report in an XML format. RDL is an open schema. Developers can extend RDL with additional attributes and elements. Reports can execute any valid [!INCLUDE[tsql](../../includes/tsql-md.md)] statement within the report.  
@@ -63,7 +59,7 @@ Custom reports run by using the permissions of the current user. To prevent a ma
   
 Both the user and the account that is used by the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service require read access to the file system folder that contains the report files.  
   
-Any valid [!INCLUDE[dnprdnshort](../../includes/dnprdnshort_md.md)] command can be embedded in a report, but the command will not be executed.  
+Any valid [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] command can be embedded in a report, but the command will not be executed.  
   
 > [!CAUTION]  
 > Any valid [!INCLUDE[tsql](../../includes/tsql-md.md)] statement can be embedded in and executed from a report. Running a report under a high-privileged user account makes it possible for any of these embedded instructions to execute without challenge.  

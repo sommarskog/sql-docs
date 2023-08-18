@@ -1,22 +1,19 @@
 ---
 title: "Common Language Runtime (CLR) build database objects"
 description: Build database objects using the SQL Server integration with the .NET Framework common language runtime (CLR).
-ms.custom: "seo-lt-2019"
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/17/2017"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: clr
+ms.service: sql
+ms.subservice: clr
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "routines [CLR integration]"
   - "database objects [CLR integration], building"
   - "common language runtime [SQL Server], building database objects"
   - "managed code [SQL Server], database objects"
   - "building database objects [CLR integration]"
   - ".NET Framework routines [SQL Server]"
-ms.assetid: ce34132c-bfa3-447b-9131-b6e17c672efe
-author: "rothja"
-ms.author: "jroth"
 ---
 # Building Database Objects with Common Language Runtime (CLR) Integration
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -35,7 +32,7 @@ ms.author: "jroth"
  Each type of .NET Framework routine has a [!INCLUDE[tsql](../../../includes/tsql-md.md)] declaration and can be used anywhere in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] that the [!INCLUDE[tsql](../../../includes/tsql-md.md)] equivalent can be used. For instance, scalar UDFs can be used in any scalar expression. A TVF can be used in any FROM clause. A procedure can be invoked in an EXEC statement or invoked from a client application.  
   
 > [!NOTE]  
->  Execution of a CLR object (user-defined function, user-defined type, or trigger) on the common language runtime can take place on multiple threads (parallel plan), if the query optimizer decides it is beneficial. However, if a user-defined function accesses data, execution will be  on a serial plan. When executed on a server version prior to [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)], if a user-defined function contains LOB parameters or return values, execution also must be on a serial plan.  
+>  Execution of a CLR object (user-defined function, user-defined type, or trigger) on the common language runtime can take place on multiple threads (parallel plan), if the query optimizer decides it is beneficial. However, if a user-defined function accesses data, execution will be  on a serial plan. When executed on a server version prior to [!INCLUDE[sql2008-md](../../../includes/sql2008-md.md)], if a user-defined function contains LOB parameters or return values, execution also must be on a serial plan.  
   
  The following table lists the topics covered in this section.  
   

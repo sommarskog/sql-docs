@@ -1,36 +1,32 @@
 ---
-description: "REVERT (Transact-SQL)"
-title: "REVERT (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "REVERT (Transact-SQL)"
+description: REVERT (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "07/26/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "REVERT_TSQL"
   - "REVERT"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "REVERT statement"
   - "context switching [SQL Server], reverting"
   - "reverting execution context"
   - "REVERT WITH COOKIE statement"
   - "execution context [SQL Server]"
   - "COOKIE clause"
-ms.assetid: 4688b17a-dfd1-4f03-8db4-273a401f879f
-author: VanMSFT
-ms.author: vanto
-monikerRange: "= azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017||=azure-sqldw-latest"
+dev_langs:
+  - "TSQL"
+monikerRange: "=azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest"
 ---
 # REVERT (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]   
 
   Switches the execution context back to the caller of the last EXECUTE AS statement.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -87,7 +83,7 @@ EXECUTE dbo.usp_myproc;
  The following example creates a context execution stack by using multiple principals. The REVERT statement is then used to reset the execution context to the previous caller. The REVERT statement is executed multiple times moving up the stack until the execution context is set to the original caller.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 -- Create two temporary principals.  
 CREATE LOGIN login1 WITH PASSWORD = 'J345#$)thb';  

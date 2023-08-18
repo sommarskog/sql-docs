@@ -1,27 +1,25 @@
 ---
-description: "sys.time_zone_info (Transact-SQL)"
-title: "sys.time_zone_info (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.time_zone_info (Transact-SQL)"
+description: sys.time_zone_info (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "08/06/2018"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.time_zone_info"
   - "sys.time_zone_info_TSQL"
   - "time_zone_info"
   - "time_zone_info_TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.time_zone_info system table"
-ms.assetid: 3f51a9a4-75f8-4a11-9552-8bf6118b68da
-author: WilliamDAssafMSFT
-ms.author: wiassaf
-monikerRange: "=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+dev_langs:
+  - "TSQL"
+monikerRange: "=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=fabric"
 ---
 # sys.time_zone_info (Transact-SQL)
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa-fabricse-fabricdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-fabricse-fabricdw.md)]
 
   Returns information about supported time zones. All time zones installed on the computer are stored in the following registry hive:  
 `KEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Time Zones`.  

@@ -2,18 +2,19 @@
 title: Mount ADLS Gen2 for HDFS tiering
 titleSuffix: How to mount ADLS Gen2
 description: This article provide an example of how to configure HDFS tiering with an Azure Data Lake Storage Gen2 data source.
-author: MikeRayMSFT
-ms.author: mikeray
-ms.reviewer: mikeray
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: 06/29/2020
+ms.service: sql
+ms.subservice: big-data-cluster
 ms.topic: conceptual
-ms.prod: sql
-ms.technology: big-data-cluster
 ---
 
 # How to mount ADLS Gen2 for HDFS tiering in a big data cluster
 
 The following sections provide an example of how to configure HDFS tiering with an Azure Data Lake Storage Gen2 data source.
+
+[!INCLUDE[big-data-clusters-banner-retirement](../includes/bdc-banner-retirement.md)]
 
 ## Prerequisites
 
@@ -154,4 +155,4 @@ azdata bdc hdfs mount delete --mount-path <mount-path-in-hdfs>
 
 ## Next steps
 
-For more information about [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)], see [What are [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]?](big-data-cluster-overview.md).
+For more information about [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)], see [Introducing [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]](big-data-cluster-overview.md).

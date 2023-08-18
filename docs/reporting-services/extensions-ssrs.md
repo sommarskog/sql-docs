@@ -3,18 +3,16 @@ title: Extensions
 description: Learn about the extensions that are readily available in Reporting Services, and how it uses extensions to modularize the types of input or output it accepts.
 author: maggiesMSFT
 ms.author: maggies
-ms.reviewer: ""
-ms.prod: reporting-services
-ms.prod_service: reporting-services-native
-ms.technology: reporting-services
-ms.topic: conceptual
-ms.custom: seodec18
 ms.date: 12/14/2018
+ms.service: reporting-services
+ms.subservice: reporting-services
+ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 
 # Extensions for SQL Server Reporting Services (SSRS)
 
-  The report server in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] uses extensions to modularize the types of input or output it accepts for authentication, data processing, report rendering, and report delivery. This makes it easy for existing [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] installations to utilize new software standards in the industry, such as a new authentication scheme, or a custom data source type. The report server supports custom authentication extensions, data processing extensions, report processing extensions, rendering extensions, and delivery extensions, and the extensions that are available to the users are configurable in the RSReportServer.config configuration file. For example, you can limit the export formats the report viewer is allowed to use. A report server requires at least one authentication extension, data processing extension, and rendering extension. Delivery and report processing extensions are optional, but necessary if you want to support report distribution or custom controls.  
+  The report server in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] uses extensions to modularize the types of input or output it accepts for authentication, data processing, report rendering, and report delivery. This makes it easy for existing [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] installations to utilize new software standards in the industry, such as a new authentication scheme, or a custom data source type. The report server supports custom authentication extensions, data processing extensions, report processing extensions, rendering extensions, and delivery extensions, and the extensions that are available to the users are configurable in the RSReportServer.config configuration file. For example, you can limit the export formats the report viewer is allowed to use. A report server requires at least one authentication extension, data processing extension, and rendering extension. Delivery and report processing extensions are optional, but necessary if you want to support report distribution or custom controls.  
   
  This topic describes the extensions that are readily available in [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
   
@@ -54,7 +52,7 @@ Some extensions can also perform the following tasks:
 
  Rendering extensions transform data and layout information from the Report Processor into a device-specific format. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] includes seven rendering extensions: HTML, Excel, CSV, XML, Image, PDF, and [!INCLUDE[msCoName](../includes/msconame-md.md)] Word.  
   
-- **HTML Rendering Extension** When you request a report from a report server through a Web browser, the report server uses the HTML rendering extension to render the report. The HTML rendering extension generates all HTML using UTF-8 encoding. For more information, see [Rendering to HTML &#40;Report Builder and SSRS&#41;](../reporting-services/report-builder/rendering-to-html-report-builder-and-ssrs.md) and [Browser Support for Reporting Services and Power View](../reporting-services/browser-support-for-reporting-services-and-power-view.md).  
+- **HTML Rendering Extension** When you request a report from a report server through a Web browser, the report server uses the HTML rendering extension to render the report. The HTML rendering extension generates all HTML using UTF-8 encoding. For more information, see [Rendering to HTML &#40;Report Builder and SSRS&#41;](../reporting-services/report-builder/rendering-to-html-report-builder-and-ssrs.md) and [Browser Support for Reporting Services](../reporting-services/browser-support-for-reporting-services-and-power-view.md).  
   
 - **Excel Rendering Extension** The Excel rendering extension renders reports that can be viewed and modified in [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] 97 or later. This rendering extension creates files in Binary Interchange File Format (BIFF). BIFF is the native file format for Excel data. Reports that are rendered in [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] support all of the features available for any spreadsheet. For more information, see [Exporting to Microsoft Excel &#40;Report Builder and SSRS&#41;](../reporting-services/report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md).  
   
