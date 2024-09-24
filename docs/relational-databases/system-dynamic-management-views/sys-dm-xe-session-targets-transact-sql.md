@@ -21,13 +21,13 @@ dev_langs:
 # sys.dm_xe_session_targets (Transact-SQL)
 [!INCLUDE [SQL Server SQL Managed Instance](../../includes/applies-to-version/sql-asdbmi.md)]
 
-Returns information about *active* server-scoped session targets.
+Returns information about *active* server-scoped session targets of [Extended Events](../extended-events/extended-events.md) sessions.
 
 Azure SQL Database supports only database-scoped sessions. See [sys.dm_xe_database_session_targets](sys-dm-xe-database-session-targets-azure-sql-database.md).
-  
+
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
-| `event_session_address` |**varbinary(8)**|The memory address of the event session. Has a many-to-one relationship with `sys.dm_xe_sessions.address`. Is not nullable.|  
+| `event_session_address` |**varbinary(8)**|The memory address of the event session. Has a many-to-one relationship with `sys.dm_xe_sessions`.`address`. Is not nullable.|  
 | `target_name` |**nvarchar(60)**|The name of the target within a session. Is not nullable.|  
 | `target_package_guid` |**uniqueidentifier**|The GUID of the package that contains the target. Is not nullable.|  
 | `execution_count` |**bigint**|The number of times the target has been executed for the session. Is not nullable.|  
@@ -47,7 +47,11 @@ Requires VIEW SERVER PERFORMANCE STATE permission on the server.
   
 |From|To|Relationship|  
 |----------|--------|------------------|  
-| `sys.dm_xe_session_targets.event_session_address` | `sys.dm_xe_sessions.address` |Many-to-one|
+| `sys.dm_xe_session_targets`.`event_session_address` | `sys.dm_xe_sessions`.`address` |Many-to-one|
+
+## Remarks
+
+Executing `sys.dm_xe_session_targets` forces a flush of the collected session data to disk. This can be a useful for reading collected event data from sessions using infinite or very large dispatch latencies.
 
 ## Related content
 
