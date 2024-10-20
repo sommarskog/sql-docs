@@ -25,8 +25,8 @@ This how-to guide outlines the steps to create an [Azure SQL Managed Instance](s
 
 ## Prerequisites
 
-- To provision a SQL Managed Instance with a user-assigned managed identity, the [SQL Managed Instance Contributor](/azure/role-based-access-control/built-in-roles#sql-managed-instance-contributor) role (or a role with greater permissions), along with an Azure RBAC role containing the following action is required:
-  - Microsoft.ManagedIdentity/userAssignedIdentities/*/assign/action - For example, the [Managed Identity Operator](/azure/role-based-access-control/built-in-roles#managed-identity-operator) has this action.
+- To provision a SQL Managed Instance with a user-assigned managed identity in the general case, the [SQL Managed Instance Contributor](/azure/role-based-access-control/built-in-roles#sql-managed-instance-contributor) role and an Azure RBAC role with the permission Microsoft.ManagedIdentity/userAssignedIdentities/\*/assign/action (for example, [Managed Identity Operator](/azure/role-based-access-control/built-in-roles#managed-identity-operator) role has it) are required on the subscription. By contrast, if you are provisioning in a subnet that is already delegated to Azure SQL Managed Instance, only Microsoft.Sql/managedInstances/write and ManagedIdentity/userAssignedIdentities/\*/assign/action are required on that subscription.
+
 - Create a user-assigned managed identity and assign it the necessary permission to be a server or managed instance identity. For more information, see [Manage user-assigned managed identities](/azure/active-directory/managed-identities-azure-resources/how-manage-user-assigned-managed-identities) and [user-assigned managed identity permissions for Azure SQL](../database/authentication-azure-ad-user-assigned-managed-identity.md#permissions).
 - [Az.Sql module 3.4](https://www.powershellgallery.com/packages/Az.Sql/3.4.0) or higher is required when using PowerShell for user-assigned managed identities.
 - [The Azure CLI 2.26.0](/cli/azure/install-azure-cli) or higher is required to use the Azure CLI with user-assigned managed identities.
