@@ -20,8 +20,9 @@ This quickstart focuses on the process of deploying a Bicep file to create an Az
 ## Prerequisites
 
 - An Azure subscription. If you don't have an Azure subscription, [create a free account](https://azure.microsoft.com/free/)
-- To provision a managed instance in the general case, your user needs to have the role [SQL Managed Instance Contributor](/azure/role-based-access-control/built-in-roles#sql-managed-instance-contributor) assigned on the subscription scope. By contrast, if you are provisioning in a subnet that has already been delegated to Azure SQL Managed Instance, only the Microsoft.Sql/managedInstances/write permission is required on that subscription.
-
+- In the general case, your user needs to have the role [SQL Managed Instance Contributor](/azure/role-based-access-control/built-in-roles#sql-managed-instance-contributor) assigned at subscription scope.
+- If provisioning in a subnet that is already delegated to Azure SQL Managed Instance, your user only needs the Microsoft.Sql/managedInstances/write permission assigned at subscription scope.
+- 
 ## Review the Bicep file
 
 The Bicep file used in this quickstart is from [Azure Quickstart Templates](https://azure.microsoft.com/resources/templates/sqlmi-new-vnet/).
