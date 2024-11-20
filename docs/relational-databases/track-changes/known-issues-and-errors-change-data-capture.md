@@ -74,7 +74,6 @@ When enabling CDC, we recommend using the Resumable index option. Resumable inde
 
 [Online DDL statements](../../t-sql/statements/alter-table-transact-sql.md#with--online--on--off-as-applies-to-altering-a-column) are unsupported when change change data capture is enabled on a database. 
 
-
 ## Enabling CDC fails if schema or user named `cdc` already exists
 
 When you enable CDC on a database, it creates a new schema and user named `cdc`. So manually creating a custom schema or user named `cdc` isn't recommended, as it's reserved for system use.  
@@ -99,13 +98,17 @@ Changing the size of columns of a CDC-enabled table using DDL statements can cau
 
 If the `sys.dm_cdc_errors` indicate that scans are failing due to the **error 2628** or **error 8115** for change tables, you should first consume the change data in the affected change tables. After that, you need to [disable and then reenable CDC](enable-and-disable-change-data-capture-sql-server.md) on the table to resolve the problem effectively.
 
+## Enabling CDC fails when 'CREATE OBJECT' triggers exist
+
+When you enable CDC, a `cdc user` is created to manage the CDC creation process. The `cdc user` runs a number of stored procedures to enable CDC, and some of these stored procedures create objects which fire existing `CREATE OBJECT` triggers. Since the `cdc user` does not have permission to write to the `master` database, these CDC stored procedures fail with error 22830.
+
+Disable any `CREATE OBJECT` triggers before enabling CDC on a database. Reenable these triggers after CDC is configured.
+
 ## Import database using data-tier Import/Export and Extract/Publish operations
 
 For CDC enabled SQL databases, when you use SqlPackage, SSDT, or other SQL tools to Import/Export or Extract/Publish, the `cdc` schema and user get excluded in the new database. Other CDC objects not included in Import/Export and Extract/Deploy operations include the tables marked as `is_ms_shipped=1` in sys.objects.
 
 Even if CDC isn't enabled and you've defined a custom schema or user named `cdc` in your database that will also be excluded in Import/Export and Extract/Deploy operations to import/setup a new database.
-
-
 
 ## Partition switching with variables
 
@@ -141,7 +144,7 @@ These are the different troubleshooting categories included in this section:
 
 #### Error 1202 - Database principal doesn't exist, or user isn't a member
 
-* **Cause**: The error might occur when CDC user has been dropped. For CDC to function properly, you shouldn't manually modify any CDC metadata such as `CDC schema`, change tables, CDC system stored procedures, default `cdc user` permissions ([sys.database_principals](../system-catalog-views/sys-database-principals-transact-sql.md)) or rename the `cdc user`.
+* **Cause**: The error might occur when `cdc user` has been dropped. For CDC to function properly, you shouldn't manually modify any CDC metadata such as `CDC schema`, change tables, CDC system stored procedures, default `cdc user` permissions ([`sys.database_principals`](../system-catalog-views/sys-database-principals-transact-sql.md)) or rename the `cdc user`.
 
 * **Recommendation**: Ensure the `cdc` user exists in your database, and also has the `db_owner` role assigned. To create the `cdc` user, see the example [Create cdc user and assign role](#create-user-and-assign-role).
 
@@ -159,9 +162,16 @@ These are the different troubleshooting categories included in this section:
 
 #### Error 21050 - Only members of the sysadmin or db_owner fixed server role can perform this operation
 
-* **Cause**: The `cdc` user has been removed from the `db_owner` database role, or from the `sysadmin` server role.
+* **Cause**: The `cdc user` has been removed from the `db_owner` database role, or from the `sysadmin` server role.
 
-* **Recommendation**: Ensure the `cdc` user has the `db_owner` role assigned. To create the `cdc` user, see the example [Create cdc user and assign role](#create-user-and-assign-role).
+* **Recommendation**: Ensure the `cdc user` has the `db_owner` role assigned. To create the `cdc` user, see the example [Create cdc user and assign role](#create-user-and-assign-role).
+
+#### Error 22830 - Could not update the metadata that indicates database `<database name>` is enabled for Change Data Capture. The failure occurred when executing the command `<CDC stored procedure name>`. 
+
+* **Cause**: This error occurs when a 'CREATE OBJECT' trigger exists in the database or on the server. When you enable CDC, a `cdc user` is created to manage the CDC creation process. The `cdc user` runs a number of stored procedures to enable CDC, and some of these stored procedures create objects which fire existing `CREATE OBJECT` triggers. Since the `cdc user` does not have permission to write to the `master` database, these CDC stored procedures fail with error 22830.
+
+* **Recommendation**: Before you enable CDC on a database, disable any `CREATE OBJECT` triggers. Reenable these triggers again after CDC is configured.
+
 
 ### Database Space Management
 

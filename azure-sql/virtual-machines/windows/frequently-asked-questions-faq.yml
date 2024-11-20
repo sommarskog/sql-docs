@@ -39,7 +39,7 @@ sections:
           
       - question: |
           Are existing SQL Server virtual machine gallery images updated?
-        answer:    SQL Server images in the virtual machine gallery are updated with the latest OS and SQL Server updates regularly, typically once a month.  After deployment, keeping the OS and SQL Server up to date can be done manually or automated through [Azure Update Manager](../azure-update-manager-sql-vm.md)
+        answer:    SQL Server images in the virtual machine gallery are updated with the latest OS and SQL Server updates regularly, typically once a month.  After deployment, keeping the OS and SQL Server up to date can be done manually or automated through [Azure Update Manager](../azure-update-manager-sql-vm.md).
 
       - question: |
           Can SQL Server virtual machine images get removed from the gallery?
@@ -253,9 +253,9 @@ sections:
              For SQL Server VMs deployed through Azure Marketplace, the installation media is located at `C:\SQLServerFull`. You can run `Setup.exe` from that location to add new SQL Server instances or to change other installed features of SQL Server on the machine. You can also copy this setup media to other virtual machines to install, or upgrade, that same version, and edition of SQL Server.  Customers who have [Software Assurance](https://www.microsoft.com/licensing/licensing-programs/software-assurance-default) can obtain their installation media from the [Volume Licensing Center](https://www.microsoft.com/Licensing/servicecenter/default.aspx). 
              
       - question: |
-          How do I install SQL Server for PAYG licensing to an existing Azure VM? 
+          How do I install SQL Server for pay-as-you-go licensing to an existing Azure VM? 
         answer: |             
-             To install SQL Server with pay-as-you-go licensing to an existing Azure VM, use installation media from an existing SQL Server VM that has the desired edition. Deploy a new SQL Server VM from the Azure Marketplace if you don't already have a SQL Server VM with the desired edition. Copy the folder `C:\SQLServerFull` from the existing VM to your target VM, then install SQL Server from the copied folder to avoid potential issues related to product license keys. After SQL Server is installed, [Register with the SQL IaaS Agent extension](sql-agent-extension-manually-register-single-vm.md#register-with-extension) and [validate the edition](change-sql-server-edition.md#change-edition-property-for-billing) of SQL Server used for billing in the Azure portal. Be sure to delete the SQL Server VM that was used to copy the installation media to avoid billing for the unused VM.
+             To install SQL Server with pay-as-you-go (PAYG) licensing to an existing Azure VM, use installation media from an existing SQL Server VM that has the desired edition. Deploy a new SQL Server VM from the Azure Marketplace if you don't already have a SQL Server VM with the desired edition. Copy the folder `C:\SQLServerFull` from the existing VM to your target VM, then install SQL Server from the copied folder to avoid potential issues related to product license keys. After SQL Server is installed, [Register with the SQL IaaS Agent extension](sql-agent-extension-manually-register-single-vm.md#register-with-extension) and [validate the edition](change-sql-server-edition.md#change-edition-property-for-billing) of SQL Server used for billing in the Azure portal. Be sure to delete the SQL Server VM that was used to copy the installation media to avoid billing for the unused VM.
 
       - question: |
           How are updates and service packs applied on a SQL Server VM?
