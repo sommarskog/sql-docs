@@ -61,7 +61,7 @@ A collation specifies the bit patterns that represent each character in a datase
 
 The options associated with a collation are case sensitivity, accent sensitivity, kana sensitivity, width sensitivity, and variation-selector sensitivity. [!INCLUDE [sql-server-2019](../../includes/sssql19-md.md)] introduces an additional option for [UTF-8](https://www.wikipedia.org/wiki/UTF-8) encoding.
 
-You can specify these options by appending them to the collation name. For example, the collation **Japanese_Bushu_Kakusu_100_CS_AS_KS_WS_UTF8** is case-sensitive, accent-sensitive, kana-sensitive, width-sensitive, and UTF-8 encoded. As another example, the collation **Japanese_Bushu_Kakusu_140_CI_AI_KS_WS_VSS** is case-insensitive, accent-insensitive, kana-sensitive, width-sensitive, variation-selector-sensitive, and it uses non-Unicode encoding.
+You can specify these options by appending them to the collation name. For example, the collation **Japanese_Bushu_Kakusu_100_CS_AS_KS_WS_SC_UTF8** is case-sensitive, accent-sensitive, kana-sensitive, width-sensitive, and UTF-8 encoded. As another example, the collation **Japanese_Bushu_Kakusu_140_CI_AI_KS_WS_VSS** is case-insensitive, accent-insensitive, kana-sensitive, width-sensitive, variation-selector-sensitive, and it uses a legacy code page for varchar.
 
 The behavior associated with these various options is described in the following table:
 
