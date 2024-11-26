@@ -175,5 +175,3 @@ Learn more about table partitioning and related concepts in the following articl
 - [Modify a Partition Scheme](../../relational-databases/partitions/modify-a-partition-scheme.md)
 - [sys.partition_functions (Transact-SQL)](../../relational-databases/system-catalog-views/sys-partition-functions-transact-sql.md)
 - [sys.partition_schemes (Transact-SQL)](../../relational-databases/system-catalog-views/sys-partition-schemes-transact-sql.md)
-- 
-- [sys.partition_schemes (Transact-SQL)](../../relational-databases/system-catalog-views/sys-partition-schemes-transact-sql.md)
