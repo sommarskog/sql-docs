@@ -25,7 +25,7 @@ This article reviews the vCore purchasing model for [Azure SQL Managed Instance]
 The virtual core (vCore) purchasing model used by Azure SQL Managed Instance provides the following benefits: 
 
 - Control over hardware configuration to better match the compute and memory requirements of the workload.
-- Pricing discounts for [Azure Hybrid Benefit (AHB)](../azure-hybrid-benefit.md) and [Reserved Instance (RI)](../database/reserved-capacity-overview.md).
+- Pricing discounts for [Azure Hybrid Benefit (AHB)](../azure-hybrid-benefit.md) and [Reserved Instance (RI)](../database/reservations-discount-overview.md).
 - Greater transparency in the hardware details that power compute, helping facilitate planning for migrations from on-premises deployments.
 - Higher scaling granularity with multiple compute sizes available.
 
