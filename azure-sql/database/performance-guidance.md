@@ -62,23 +62,6 @@ Although Azure SQL Database service tiers are designed to improve performance st
 
     To prevent deadlocks from reoccurring in Azure SQL Database, see [Analyze and prevent deadlocks in Azure SQL Database and Fabric SQL database](analyze-prevent-deadlocks.md).
 
-
-### Optimize connectivity and connection pooling
-
-To reduce the overhead of creating frequent application connections in Azure SQL Database, connection pooling is available in libraries such as ADO.NET or JDBC. Connection pooling is enabled in ADO.NET by default, for example. Connection pooling allows an application to reuse connections and minimize the overhead of establishing new ones. 
-
-Connection pooling can improve throughput, reduce latency, and enhance the overall performance of your database workloads. Keep in mind these best practices:
-
-- Configure connection pool settings, such as maximum connections, connection timeouts, or connection lifetime, based on your workload's concurrency and latency requirements. For more information, refer to data provider documentation.
-   - [ADO.NET connection pooling](/sql/connect/ado-net/connection-pooling?view=azuresqldb-current&preserve-view=true)
-   - [ODBC connection pooling](/sql/odbc/reference/develop-app/driver-manager-connection-pooling?view=azuresqldb-current&preserve-view=true)
-   - [JDBC connection pooling](/sql/connect/jdbc/using-connection-pooling?view=azuresqldb-current&preserve-view=true)
-   - [PHP connection pooling](/sql/connect/php/connection-pooling-microsoft-drivers-for-php-for-sql-server?view=azuresqldb-current&preserve-view=true)
-
-- All cloud applications must implement [retry logic](develop-overview.md#resiliency) with exponential backoff to handle transient connectivity failures gracefully. Learn more about how to design [retry logic for transient errors](troubleshoot-common-connectivity-issues.md#retry-logic-for-transient-errors). 
-
-- [Monitor Azure SQL Database](monitoring-sql-database-azure-monitor.md) connection performance and resource usage to identify bottlenecks, such as excessive idle connections or insufficient pool limits, and adjust configurations accordingly. Consider using [database watcher](../database-watcher-overview.md) or [Azure Monitor](monitoring-metrics-alerts.md).
-
 ## Tune your database
 
 In this section, we look at some techniques that you can use to tune database to gain the best performance for your application and run it at the lowest possible compute size. Some of these techniques match traditional SQL Server tuning best practices, but others are specific to Azure SQL Database. In some cases, you can examine the consumed resources for a database to find areas to further tune and extend traditional SQL Server techniques to work in Azure SQL Database.
@@ -265,6 +248,22 @@ ORDER BY start_time DESC
 You can examine `sys.resource_stats` to determine whether the resource for a test uses more or fewer resources than another test. When you compare data, separate the timing of tests so that they are not in the same 5-minute window in the `sys.resource_stats` view. The goal of the exercise is to minimize the total amount of resources used, and not to minimize the peak resources. Generally, optimizing a piece of code for latency also reduces resource consumption. Make sure that the changes you make to an application are necessary, and that the changes don't negatively affect the customer experience for someone who might be using query hints in the application.
 
 If a workload has a set of repeating queries, often it makes sense to capture and validate the optimality of your plan choices because it drives the minimum resource size unit required to host the database. After you validate it, occasionally reexamine the plans to help you make sure that they haven't degraded. You can learn more about [query hints (Transact-SQL)](/sql/t-sql/queries/hints-transact-sql-query).
+
+## Optimize connectivity and connection pooling
+
+To reduce the overhead of creating frequent application connections in Azure SQL Database, connection pooling is available in data providers. Connection pooling is enabled in ADO.NET by default, for example. Connection pooling allows an application to reuse connections and minimize the overhead of establishing new ones. 
+
+Connection pooling can improve throughput, reduce latency, and enhance the overall performance of your database workloads. Keep in mind these best practices:
+
+- Configure connection pool settings, such as maximum connections, connection timeouts, or connection lifetime, based on your workload's concurrency and latency requirements. For more information, refer to data provider documentation.
+   - [ADO.NET connection pooling](/sql/connect/ado-net/connection-pooling?view=azuresqldb-current&preserve-view=true)
+   - [ODBC connection pooling](/sql/odbc/reference/develop-app/driver-manager-connection-pooling?view=azuresqldb-current&preserve-view=true)
+   - [JDBC connection pooling](/sql/connect/jdbc/using-connection-pooling?view=azuresqldb-current&preserve-view=true)
+   - [PHP connection pooling](/sql/connect/php/connection-pooling-microsoft-drivers-for-php-for-sql-server?view=azuresqldb-current&preserve-view=true)
+
+- All cloud applications must implement [retry logic](develop-overview.md#resiliency) with exponential backoff to handle transient connectivity failures gracefully. Learn more about how to design [retry logic for transient errors](troubleshoot-common-connectivity-issues.md#retry-logic-for-transient-errors). 
+
+- [Monitor Azure SQL Database](monitoring-sql-database-azure-monitor.md) connection performance and resource usage to identify bottlenecks, such as excessive idle connections or insufficient pool limits, and adjust configurations accordingly. Consider using [database watcher](../database-watcher-overview.md) or [Azure Monitor](monitoring-metrics-alerts.md).
 
 ## Best practices for very large database architectures in Azure SQL Database
 
