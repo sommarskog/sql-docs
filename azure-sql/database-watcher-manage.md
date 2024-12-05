@@ -5,7 +5,7 @@ description: Setup and configuration details for database watcher
 author: dimitri-furman
 ms.author: dfurman
 ms.reviewer: wiassaf
-ms.date: 11/06/2024
+ms.date: 12/05/2024
 ms.service: azure-sql
 ms.subservice: monitoring
 ms.topic: how-to
@@ -569,10 +569,16 @@ The free Azure Data Explorer cluster has certain [capacity limits](/azure/data-e
 
 If you reach storage capacity, new monitoring data isn't ingested, but existing data remains accessible on database watcher [dashboards](database-watcher-overview.md#dashboards) and can be [analyzed](database-watcher-analyze.md) using KQL or SQL queries.
 
-If you find that the specifications of the free cluster are insufficient for your requirements, you can [upgrade to a full Azure Data Explorer cluster](/azure/data-explorer/start-for-free-upgrade) and retain all collected data. Because there might be a period of downtime during the upgrade, you might need to stop and restart your watcher to resume data collection once the upgrade is complete.
+If you find that the specifications of the free cluster are insufficient for your requirements, you can upgrade to a full Azure Data Explorer cluster. The upgrade retains all collected data.
+
+To ensure that your watcher continues to work after the upgrade, you must follow these steps:
+
+1. [Stop](#start-and-stop-a-watcher) the watcher.
+1. Follow the steps to [upgrade to a full Azure Data Explorer cluster](/azure/data-explorer/start-for-free-upgrade) and wait for the upgrade to be complete.
+1. [Change](#change-the-data-store-for-a-watcher) the data store for the watcher, selecting the upgraded Azure Data Explorer cluster and database.
+1. [Start](#start-and-stop-a-watcher) the watcher.
 
 To continue using the free Azure Data Explorer cluster, [manage data retention](#manage-data-retention) to delete the older data automatically and free up space for new data. Once storage space is available, you might need to [stop and restart](#start-and-stop-a-watcher) your watcher to resume data collection.
-
 
 ### Manage data retention
 
