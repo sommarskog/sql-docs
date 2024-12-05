@@ -3,7 +3,7 @@ title: "Database Engine events and errors (28000 to 30999)"
 description: "Consult this SQL Server error code list (between 28000 and 30999) to find explanations for error messages for SQL Server database engine events."
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 10/10/2024
+ms.date: 12/12/2024
 ms.service: sql
 ms.subservice: supportability
 ms.topic: reference
