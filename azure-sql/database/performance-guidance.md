@@ -60,7 +60,12 @@ Although Azure SQL Database service tiers are designed to improve performance st
 
    Applications that have inherent data access concurrency issues, for example deadlocking, might not benefit from a higher compute size. Consider reducing round trips against the database by caching data on the client side with the Azure Caching service or another caching technology. See [Application tier caching](#application-tier-caching).
 
-    To prevent deadlocks from reoccurring in Azure SQL Database, see [Analyze and prevent deadlocks in Azure SQL Database](analyze-prevent-deadlocks.md). 
+    To prevent deadlocks from reoccurring in Azure SQL Database, see [Analyze and prevent deadlocks in Azure SQL Database](analyze-prevent-deadlocks.md).
+
+
+### Best Practices for Tuning and Optimizing Connections
+
+To optimize connections in Azure SQL Database, use connection pooling libraries such as ADO.NET or JDBC to reuse connections and minimize the overhead of establishing new ones. Always use a singleton or long-lived database client instance in your application to maximize connection reuse. Configure connection pool settings, such as maximum connections and connection timeouts, based on your workload's concurrency and latency requirements. Implement retry logic with exponential backoff to handle transient failures gracefully, which are common in cloud environments. Monitor connection performance and resource usage using Azure Monitor and database diagnostic tools to identify bottlenecks, such as excessive idle connections or insufficient pool limits, and adjust configurations accordingly. Following these practices can improve throughput, reduce latency, and enhance the overall performance of your database workloads.
 
 ## Tune your database
 
