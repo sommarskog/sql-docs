@@ -1,11 +1,11 @@
 ---
-title: Performance tuning guidance for applications and databases
+title: Performance Tuning Guidance for Applications and Databases
 titleSuffix: Azure SQL Database
 description: Learn about tuning database applications and databases for performance in Azure SQL Database.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: wiassaf, mathoma
-ms.date: 09/12/2024
+ms.date: 12/05/2024
 ms.service: azure-sql-database
 ms.subservice: performance
 ms.topic: conceptual
@@ -60,18 +60,32 @@ Although Azure SQL Database service tiers are designed to improve performance st
 
    Applications that have inherent data access concurrency issues, for example deadlocking, might not benefit from a higher compute size. Consider reducing round trips against the database by caching data on the client side with the Azure Caching service or another caching technology. See [Application tier caching](#application-tier-caching).
 
-    To prevent deadlocks from reoccurring in Azure SQL Database, see [Analyze and prevent deadlocks in Azure SQL Database](analyze-prevent-deadlocks.md).
+    To prevent deadlocks from reoccurring in Azure SQL Database, see [Analyze and prevent deadlocks in Azure SQL Database and Fabric SQL database](analyze-prevent-deadlocks.md).
 
 
-### Best Practices for Tuning and Optimizing Connections
+### Optimize connectivity and connection pooling
 
-To optimize connections in Azure SQL Database, use connection pooling libraries such as ADO.NET or JDBC to reuse connections and minimize the overhead of establishing new ones. Always use a singleton or long-lived database client instance in your application to maximize connection reuse. Configure connection pool settings, such as maximum connections and connection timeouts, based on your workload's concurrency and latency requirements. Implement retry logic with exponential backoff to handle transient failures gracefully, which are common in cloud environments. Monitor connection performance and resource usage using Azure Monitor and database diagnostic tools to identify bottlenecks, such as excessive idle connections or insufficient pool limits, and adjust configurations accordingly. Following these practices can improve throughput, reduce latency, and enhance the overall performance of your database workloads.
+To reduce the overhead of creating frequent application connections in Azure SQL Database, connection pooling is available in libraries such as ADO.NET or JDBC. Connection pooling is enabled in ADO.NET by default, for example. Connection pooling allows an application to reuse connections and minimize the overhead of establishing new ones. 
+
+Connection pooling can improve throughput, reduce latency, and enhance the overall performance of your database workloads. Keep in mind these best practices:
+
+- Configure connection pool settings, such as maximum connections, connection timeouts, or connection lifetime, based on your workload's concurrency and latency requirements. For more information, refer to data provider documentation.
+   - [ADO.NET connection pooling](/sql/connect/ado-net/connection-pooling?view=azuresqldb-current&preserve-view=true)
+   - [ODBC connection pooling](/sql/odbc/reference/develop-app/driver-manager-connection-pooling?view=azuresqldb-current&preserve-view=true)
+   - [JDBC connection pooling](/sql/connect/jdbc/using-connection-pooling?view=azuresqldb-current&preserve-view=true)
+   - [PHP connection pooling](/sql/connect/php/connection-pooling-microsoft-drivers-for-php-for-sql-server?view=azuresqldb-current&preserve-view=true)
+
+- All cloud applications must implement [retry logic](develop-overview.md#resiliency) with exponential backoff to handle transient connectivity failures gracefully. Learn more about how to design [retry logic for transient errors](troubleshoot-common-connectivity-issues.md#retry-logic-for-transient-errors). 
+
+- [Monitor Azure SQL Database](monitoring-sql-database-azure-monitor.md) connection performance and resource usage to identify bottlenecks, such as excessive idle connections or insufficient pool limits, and adjust configurations accordingly. Consider using [database watcher](../database-watcher-overview.md) or [Azure Monitor](monitoring-metrics-alerts.md).
 
 ## Tune your database
 
 In this section, we look at some techniques that you can use to tune database to gain the best performance for your application and run it at the lowest possible compute size. Some of these techniques match traditional SQL Server tuning best practices, but others are specific to Azure SQL Database. In some cases, you can examine the consumed resources for a database to find areas to further tune and extend traditional SQL Server techniques to work in Azure SQL Database.
 
-### <a id="identifying-and-adding-missing-indexes"></a> Identify and add missing indexes
+<a id="identifying-and-adding-missing-indexes"></a>
+
+### Identify and add missing indexes
 
 A common problem in OLTP database performance relates to the physical database design. Often, database schemas are designed and shipped without testing at scale (either in load or in data volume). Unfortunately, the performance of a query plan might be acceptable on a small scale but degrade substantially under production-level data volumes. The most common source of this issue is the lack of appropriate indexes to satisfy filters or other restrictions in a query. Often, missing indexes manifests as a table scan when an index seek could suffice.
 
@@ -254,7 +268,7 @@ If a workload has a set of repeating queries, often it makes sense to capture an
 
 ## Best practices for very large database architectures in Azure SQL Database
 
-Before the release of [Hyperscale](service-tier-hyperscale.md) service tier for single databases in Azure SQL Database, customers could run into [capacity limits for individual databases](service-tiers-sql-database-vcore.md?view=azuresql-db&preserve-view=true#resource-limits). While [Hyperscale elastic pools](./hyperscale-elastic-pool-overview.md) offer significantly higher storage limits, elastic pools and pooled databases in other service tiers might still be constrained by those storage capacity limits in the non-Hyperscale service tiers.
+Before the release of the [Hyperscale service tier](service-tier-hyperscale.md) for single databases in Azure SQL Database, customers could run into [capacity limits for individual databases](service-tiers-sql-database-vcore.md?view=azuresql-db&preserve-view=true#resource-limits). While [Hyperscale elastic pools](hyperscale-elastic-pool-overview.md) offer significantly higher storage limits, elastic pools and pooled databases in other service tiers might still be constrained by those storage capacity limits in the non-Hyperscale service tiers.
 
 The following two sections discuss two options for solving problems with very large databases in Azure SQL Database when you can't use the Hyperscale service tier.
 
@@ -298,12 +312,9 @@ To keep up to date with the latest features and updates to Azure SQL Database, s
 
 ## Related content
 
-- Learn about the [DTU-based purchasing model](service-tiers-dtu.md)
-- Learn more about the [vCore-based purchasing model](service-tiers-vcore.md)
-- Read [What is an Azure elastic pool?](elastic-pool-overview.md)
-- Discover [When to consider an elastic pool](elastic-pool-overview.md)
-- Read about [Monitoring performance using dynamic management views](monitoring-with-dmvs.md)
-- Learn to [Diagnose and troubleshoot high CPU on Azure SQL Database](high-cpu-diagnose-troubleshoot.md)
+- [Monitor Azure SQL Database](monitoring-sql-database-azure-monitor.md)
+- [Query Performance Insight for Azure SQL Database](query-performance-insight-use.md)
+- [Monitoring performance using dynamic management views](monitoring-with-dmvs.md)
+- [Diagnose and troubleshoot high CPU on Azure SQL Database](high-cpu-diagnose-troubleshoot.md)
 - [Tune nonclustered indexes with missing index suggestions](/sql/relational-databases/indexes/tune-nonclustered-missing-index-suggestions)
 - Video: [Data Loading Best Practices on Azure SQL Database](/shows/data-exposed/data-loading-best-practices-on-azure-sql-database?WT.mc_id=dataexposed-c9-niner)
-- [Monitor Azure SQL Database with Azure Monitor](monitoring-sql-database-azure-monitor.md)
