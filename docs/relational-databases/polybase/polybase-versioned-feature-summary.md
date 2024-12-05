@@ -65,6 +65,8 @@ PolyBase has the following limitations:
 
 - PolyBase scale-out groups are not supported with Always On availability groups.
 
+- Server name length is bound by 15-character NetBIOS name length limitation. If you change the server name after creating it to be 16 characters or longer, PolyBase Data Movement service won't start.
+
 <!--SQL Server 2016-->
 ::: moniker range="= sql-server-2016 "
 
