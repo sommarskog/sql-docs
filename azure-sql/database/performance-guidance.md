@@ -314,6 +314,7 @@ To keep up to date with the latest features and updates to Azure SQL Database, s
 - [Monitor Azure SQL Database](monitoring-sql-database-azure-monitor.md)
 - [Query Performance Insight for Azure SQL Database](query-performance-insight-use.md)
 - [Monitoring performance using dynamic management views](monitoring-with-dmvs.md)
+- [Database watcher](../database-watcher-overview.md)
 - [Diagnose and troubleshoot high CPU on Azure SQL Database](high-cpu-diagnose-troubleshoot.md)
 - [Tune nonclustered indexes with missing index suggestions](/sql/relational-databases/indexes/tune-nonclustered-missing-index-suggestions)
 - Video: [Data Loading Best Practices on Azure SQL Database](/shows/data-exposed/data-loading-best-practices-on-azure-sql-database?WT.mc_id=dataexposed-c9-niner)
