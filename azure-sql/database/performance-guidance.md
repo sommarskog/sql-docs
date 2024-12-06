@@ -261,7 +261,7 @@ Connection pooling can improve throughput, reduce latency, and enhance the overa
    - [JDBC connection pooling](/sql/connect/jdbc/using-connection-pooling?view=azuresqldb-current&preserve-view=true)
    - [PHP connection pooling](/sql/connect/php/connection-pooling-microsoft-drivers-for-php-for-sql-server?view=azuresqldb-current&preserve-view=true)
 
-- All cloud applications must implement [retry logic](develop-overview.md#resiliency) with exponential backoff to handle transient connectivity failures gracefully. Learn more about how to design [retry logic for transient errors](troubleshoot-common-connectivity-issues.md#retry-logic-for-transient-errors). 
+- Cloud applications should implement [retry logic](develop-overview.md#resiliency) to handle transient connectivity failures gracefully. Learn more about how to design [retry logic for transient errors](troubleshoot-common-connectivity-issues.md#retry-logic-for-transient-errors). 
 
 - [Monitor Azure SQL Database](monitoring-sql-database-azure-monitor.md) connection performance and resource usage to identify bottlenecks, such as excessive idle connections or insufficient pool limits, and adjust configurations accordingly. Consider using [database watcher](../database-watcher-overview.md) or [Azure Monitor](monitoring-metrics-alerts.md).
 
