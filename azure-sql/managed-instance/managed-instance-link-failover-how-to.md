@@ -308,14 +308,14 @@ SELECT
    rs.role_desc [Link role] 
 FROM
    sys.availability_groups ag 
-   join sys.dm_hadr_availability_replica_states rs 
-   on ag.group_id = rs.group_id 
+   JOIN sys.dm_hadr_availability_replica_states rs 
+   ON ag.group_id = rs.group_id 
 WHERE 
-   rs.is_local = 1 and ag.name = @link_name 
+   rs.is_local = 1 AND ag.is_distributed = 1 AND ag.name = @link_name 
 GO
 ```
 
-If both instances list a different **Primary** in the **Link role** column, you're in a split-brain scenario.
+If both instances list the *same* value in the **Link role** column (that is, both replicas are in **PRIMARY** or **SECONDARY** role), you're in a split-brain scenario.
 
 To resolve the split brain state, first take a backup on whichever replica was the original primary. If the original primary was SQL Server, then take a [tail log backup](/sql/relational-databases/backup-restore/tail-log-backups-sql-server). If the original primary was SQL Managed Instance, then take a [copy-only full backup](/sql/relational-databases/backup-restore/copy-only-backups-sql-server). After the backup completes, set the distributed availability group to the secondary role for the replica that used to be the original primary but will now be the new secondary.
  
