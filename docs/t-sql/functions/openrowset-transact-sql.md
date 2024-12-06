@@ -617,6 +617,8 @@ SELECT * FROM OPENROWSET(
 
 ### K. Use a managed identity for an external source
 
+**Applies to:** [!INCLUDE[ssazuremi-md](../../includes/ssazuremi-md.md)] and [!INCLUDE[ssazure-sqldb](../../includes/ssazure-sqldb.md)]
+
 The following example creates a credential by using a managed identity, creates an external source and then loads data from a CSV hosted on the external source.
 
 First, create the credential and specify blob storage as the external source:
