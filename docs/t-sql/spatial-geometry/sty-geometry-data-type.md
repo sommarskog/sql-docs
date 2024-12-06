@@ -1,6 +1,6 @@
 ---
 title: "STY (geometry Data Type)"
-description: "STY provides the Y-coordinate property of a **Point** instance.
+description: "STY provides the Y-coordinate property of a Point instance."
 author: MladjoA
 ms.author: mlandzic
 ms.date: "12/06/2024"
