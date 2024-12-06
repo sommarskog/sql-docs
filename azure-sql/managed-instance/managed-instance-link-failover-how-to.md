@@ -295,7 +295,7 @@ Following a forced failover, you might encounter a split-brain scenario where bo
 
 First, confirm you're in a split-brain scenario. You can do so by using SQL Server Management Studio (SSMS) or Transact-SQL (T-SQL).
 
-Connect to both SQL Server and SQL managed instance in SSMS, and then in **Object Explorer**, expand **Availability replicas** under the **Availability group** node in **Always On High Availability**.  If two different replicas are listed as **(Primary)**, you're in a split-brain scenario. 
+Connect to both SQL Server and SQL managed instance in SSMS, and then in **Object Explorer**, expand **Availability replicas** under the **Availability group** node in **Always On High Availability**. If two different replicas are listed as **(Primary)**, you're in a split-brain scenario. 
 
 Alternatively, you can run the following T-SQL script on *both* SQL Server and SQL Managed Instance to check the role of the replicas:
 
@@ -315,7 +315,7 @@ WHERE
 GO
 ```
 
-If both instances list the *same* value in the **Link role** column (that is, both replicas are in **PRIMARY** or **SECONDARY** role), you're in a split-brain scenario.
+If both instances list **PRIMARY** in **Link role** column, you're in a split-brain scenario.
 
 To resolve the split brain state, first take a backup on whichever replica was the original primary. If the original primary was SQL Server, then take a [tail log backup](/sql/relational-databases/backup-restore/tail-log-backups-sql-server). If the original primary was SQL Managed Instance, then take a [copy-only full backup](/sql/relational-databases/backup-restore/copy-only-backups-sql-server). After the backup completes, set the distributed availability group to the secondary role for the replica that used to be the original primary but will now be the new secondary.
  
