@@ -1,9 +1,9 @@
 ---
 title: "STY (geometry Data Type)"
-description: "STY (geometry Data Type)"
+description: "STY provides the Y-coordinate property of a Point instance."
 author: MladjoA
 ms.author: mlandzic
-ms.date: "08/03/2017"
+ms.date: "12/06/2024"
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -25,8 +25,7 @@ The Y-coordinate property of a **Point** instance.
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 .STY  
 ```  
   
@@ -36,9 +35,10 @@ The Y-coordinate property of a **Point** instance.
  CLR type: **SqlDouble**  
   
 ## Remarks  
- The value of this property will be null if the **geometry** instance is a point. This property is read-only.  
-  
-## Examples  
+ 
+ The value of this property will be null if the geometry instance is NOT a point. This property is read-only.
+ 
+## Examples
  The following example creates a `Point` instance and uses `STY` to retrieve the Y-coordinate of the instance.  
   
 ```sql
@@ -47,7 +47,7 @@ SET @g = geometry::STGeomFromText('POINT(3 8)', 0);
 SELECT @g.STY;  
 ```  
   
-## See Also  
+## Related content
  [STX &#40;geometry Data Type&#41;](../../t-sql/spatial-geometry/stx-geometry-data-type.md)   
  [STSrid &#40;geometry Data Type&#41;](../../t-sql/spatial-geometry/stsrid-geometry-data-type.md)   
  [OGC Methods on Geometry Instances](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
