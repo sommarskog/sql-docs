@@ -1,21 +1,23 @@
 ---
 title: Intelligent applications
-description: "Use AI options such as OpenAI and vectors to build intelligent applications with Azure SQL Database."
-author: damauri
-ms.author: damauri
+description: "Use AI options such as OpenAI and vectors to build intelligent applications with Azure SQL Database and Fabric SQL database."
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.reviewer: damauri, josephsack, randolphwest, mathoma
-ms.date: 08/01/2024
+ms.date: 11/05/2024
 ms.service: azure-sql-database
 ms.topic: conceptual
-ms.collection: ce-skilling-ai-copilot
-monikerRange: "=azuresql||=azuresql-db"
+ms.collection:
+  - ce-skilling-ai-copilot
+ms.custom:
+  - ignite-2024
+monikerRange: "=azuresql || =azuresql-db || =fabricsql"
 ---
+# Intelligent applications
 
-# Intelligent applications with Azure SQL Database
+[!INCLUDE [asdb-fabricsqldb](../includes/appliesto-sqldb-fabricsqldb.md)]
 
-[!INCLUDE [asdb](../includes/appliesto-sqldb.md)]
-
-This article provides an overview of using artificial intelligence (AI) options, such as OpenAI and vectors, to build intelligent applications with Azure SQL Database.
+This article provides an overview of using artificial intelligence (AI) options, such as OpenAI and vectors, to build intelligent applications with Azure SQL Database and [Fabric SQL database](/fabric/database/sql/overview), which shares many of these features of Azure SQL Database.
 
 For samples and examples, please visit the [SQL AI Samples repository](https://aka.ms/sqlaisamples).
 
@@ -26,27 +28,30 @@ Watch this video in the [Azure SQL Database essentials series](/shows/azure-sql-
 
 Large language models (LLMs) enable developers to create AI-powered applications with a familiar user experience.
 
-Using LLMs in applications brings greater value and an improved user experience when the models can access the right data, at the right time, from your application's database. This process is known as Retrieval Augmented Generation (RAG) and Azure SQL Database has many features that support this new pattern, making it a great database to build intelligent applications.
+Using LLMs in applications brings greater value and an improved user experience when the models can access the right data, at the right time, from your application's database. This process is known as Retrieval Augmented Generation (RAG) and Azure SQL Database and Fabric SQL database have many features that support this new pattern, making it a great database to build intelligent applications.
 
-The following links provide sample code of various Azure SQL Database options to build intelligent applications:
+The following links provide sample code of various options to build intelligent applications:
 
 | AI Option | Description |
 | --- | --- |
 | **[Azure OpenAI](#azure-openai)** | Generate embeddings for RAG and integrate with any model supported by Azure OpenAI. |
-| **[Vectors](#vectors)** | Learn how to store and query vectors in Azure SQL Database. |
-| **[Azure AI Search](#azure-ai-search)** | Use Azure SQL Database together with Azure AI Search to train LLM on your data. |
+| **[Vectors](#vectors)** | Learn how to store and query vectors the database. |
+| **[Azure AI Search](#azure-ai-search)** | Use your database together with Azure AI Search to train LLM on your data. |
 | **[Intelligent applications](#intelligent-applications)** | Learn how to create an end-to-end solution using a common pattern that can be replicated in any scenario. |
 | **[Copilot skills in Azure SQL Database](#microsoft-copilot-skills-in-azure-sql-database)** | Learn about the set of AI-assisted experiences designed to streamline the design, operation, optimization, and health of Azure SQL Database-driven applications. |
+| **[Copilot skills in Fabric SQL database](#microsoft-copilot-skills-in-fabric-sql-database-preview)** | Learn about the set of AI-assisted experiences designed to streamline the design, operation, optimization, and health of Fabric SQL database-driven applications. |
 
-## Key concepts for implementing RAG with Azure SQL Database and Azure OpenAI
+<a id="key-concepts-for-implementing-rag-with-azure-sql-database-and-azure-openai"></a>
 
-This section includes key concepts that are critical for implementing RAG with Azure SQL Database and Azure OpenAI.
+## Key concepts for implementing RAG with Azure OpenAI
+
+This section includes key concepts that are critical for implementing RAG with Azure OpenAI in Azure SQL Database or Fabric SQL database.
 
 ### <a id="retrieval-augmented-generation"></a> Retrieval Augmented Generation (RAG)
 
 RAG is a technique that enhances the LLM's ability to produce relevant and informative responses by retrieving additional data from external sources. For example, RAG can query articles or documents that contain domain-specific knowledge related to the user's question or prompt. The LLM can then use this retrieved data as a reference when generating its response. For example, a simple RAG pattern using Azure SQL Database could be:
 
-1. Insert data into an Azure SQL Database table.
+1. Insert data into a table.
 1. Link Azure SQL Database to Azure AI Search.
 1. Create an Azure OpenAI GPT4 model and connect it to Azure AI Search.
 1. Chat and ask questions about your data using the trained Azure OpenAI model from your application and from Azure SQL Database.
@@ -75,7 +80,7 @@ In Azure OpenAI, input text provided to the API is turned into tokens (tokenized
 
 ### Vectors
 
-Vectors are ordered arrays of numbers (typically floats) that can represent information about some data. For example, an image can be represented as a vector of pixel values, or a string of text can be represented as a vector or ASCII values. The process to turn data into a vector is called *vectorization*.
+Vectors are ordered arrays of numbers (typically floats) that can represent information about some data. For example, an image can be represented as a vector of pixel values, or a string of text can be represented as a vector or ASCII values. The process to turn data into a vector is called *vectorization*. For more information, see [Vectors](#vectors-1).
 
 ### Embeddings
 
@@ -89,7 +94,7 @@ Vector search refers to the process of finding all vectors in a dataset that are
 
 Consider a scenario where you run a query over millions of document to find the most similar documents in your data. You can create embeddings for your data and query documents using Azure OpenAI. Then, you can perform a vector search to find the most similar documents from your dataset. However, performing a vector search across a few examples is trivial. Performing this same search across thousands, or millions, of data points becomes challenging. There are also trade-offs between exhaustive search and approximate nearest neighbor (ANN) search methods including latency, throughput, accuracy, and cost, all of which depends on the requirements of your application.
 
-Since Azure SQL Database embeddings can be efficiently stored and queried using to columnstore index support, allowing exact nearest neighbor search with great performance, you don't have to decide between accuracy and speed: you can have both. Storing vector embeddings alongside the data in an integrated solution minimizes the need to manage data synchronization and accelerates your time-to-market for AI application development.
+Vectors in Azure SQL Database can be efficiently stored and queried, as described in the next sections, allowing exact nearest neighbor search with great performance. You don't have to decide between accuracy and speed: you can have both. Storing vector embeddings alongside the data in an integrated solution minimizes the need to manage data synchronization and accelerates your time-to-market for AI application development.
 
 ## Azure OpenAI
 
@@ -123,7 +128,33 @@ For additional examples on using SQL Database and OpenAI, see the following arti
 
 ## Vectors
 
-Although Azure SQL Database doesn't have a native **vector** type, a vector is nothing more than an ordered tuple, and relational databases are great at managing tuples. You can think of a tuple as the formal term for a row in a table.
+### Vector data type
+
+In November 2024, the new **vector** data type was introduced in Azure SQL Database.
+
+The dedicated **vector** type allows for efficient and optimized storing of vector data, and comes with a set of functions to help developers streamline vector and similarity search implementation. Calculating distance between two vectors can be done in one line of code using the new `VECTOR_DISTANCE` function. For more information on the [**vector** data type](/sql/t-sql/data-types/vector-data-type) and related functions, see [Overview of vectors in the SQL Database Engine](/sql/relational-databases/vectors/vectors-sql-server).
+
+For example:
+
+```sql
+CREATE TABLE [dbo].[wikipedia_articles_embeddings_titles_vector]
+(
+    [article_id] [int] NOT NULL,
+    [embedding] [vector](1536) NOT NULL,    
+)
+GO
+
+SELECT TOP(10) 
+    * 
+FROM 
+    [dbo].[wikipedia_articles_embeddings_titles_vector]
+ORDER BY
+    VECTOR_DISTANCE('cosine', @my_reference_vector, embedding)
+```
+
+### Vectors in older versions of SQL Server
+
+While older versions of SQL Server engine, up to and including SQL Server 2022, doesn't have a native **vector** type, a vector is nothing more than an ordered tuple, and relational databases are great at managing tuples. You can think of a tuple as the formal term for a row in a table.
 
 Azure SQL Database also supports columnstore indexes and [batch mode execution](/sql/relational-databases/query-processing-architecture-guide#batch-mode-execution). A vector-based approach is used for batch mode processing, which means that each column in a batch has its own memory location where it's stored as a vector. This allows for faster and more efficient processing of data in batches.
 
@@ -169,16 +200,18 @@ For an end-to-end sample to build a AI-enabled application using sessions abstra
 
 ### LangChain integration
 
-LangChain is a well-known framework for developing applications powered by language models.
+LangChain is a well-known framework for developing applications powered by language models. For examples that show how LangChain can be used to create a Chatbot on your own data, see:
 
-For an example that shows how LangChain can be used to create a Chatbot on your own data, see [Building your own DB Copilot for Azure SQL with Azure OpenAI GPT-4](https://devblogs.microsoft.com/azure-sql/building-your-own-db-copilot-for-azure-sql-with-azure-openai-gpt-4/).
+- [Build a chatbot on your own data in 1 hour with Azure SQL, Langchain and Chainlit](https://devblogs.microsoft.com/azure-sql/build-a-chatbot-on-your-own-data-in-1-hour-with-azure-sql-langchain-and-chainlit/): Build a chatbot using the RAG pattern on your own data using Langchain for orchestrating LLM calls and Chainlit for the UI.
+- [Building your own DB Copilot for Azure SQL with Azure OpenAI GPT-4](https://devblogs.microsoft.com/azure-sql/building-your-own-db-copilot-for-azure-sql-with-azure-openai-gpt-4/): Build a copilot-like experience to query your databases using natural language.
 
 ### Semantic Kernel integration
 
 [Semantic Kernel is an open-source SDK](/semantic-kernel/overview/) that lets you easily build agents that can call your existing code. As a highly extensible SDK, you can use Semantic Kernel with models from OpenAI, Azure OpenAI, Hugging Face, and more! By combining your existing C#, Python, and Java code with these models, you can build agents that answer questions and automate processes.
 
-- [Semantic Kernel & Kernel Memory - SQL Connector](https://github.com/kbeaugrand/SemanticKernel.Connectors.Memory.SqlServer) - Provides a connection to a SQL database for the Semantic Kernel for the memories.
+- [The ultimate chatbot?](https://devblogs.microsoft.com/azure-sql/the-ultimate-chatbot/): Build a chatbot on your own data using both NL2SQL and RAG patterns for the ultimate user experience. 
 - [OpenAI Embeddings Sample](https://github.com/marcominerva/OpenAIEmbeddingSample): An example that shows how to use Semantic Kernel and Kernel Memory to work with embeddings in a .NET application using SQL Server as Vector Database.
+- [Semantic Kernel & Kernel Memory - SQL Connector](https://github.com/kbeaugrand/SemanticKernel.Connectors.Memory.SqlServer) - Provides a connection to a SQL database for the Semantic Kernel for the memories.
 
 ## Microsoft Copilot skills in Azure SQL Database
 
@@ -200,6 +233,26 @@ The preview of Copilot for Azure SQL Database includes two Azure portal experien
 | **Microsoft Copilot for Azure** | [Azure Copilot integration](../copilot/copilot-azure-sql-overview.md?view=azuresql-db&preserve-view=true#microsoft-copilot-in-azure-enhanced-scenarios): This experience adds Azure SQL skills into [Microsoft Copilot for Azure](/azure/copilot/overview), providing customers with self-guided assistance, empowering them to manage their databases and solve issues independently.|
 
 For more information, see [Frequently asked questions about Microsoft Copilot skills in Azure SQL Database (preview)](../copilot/copilot-azure-sql-faq.yml).
+
+## Microsoft Copilot skills in Fabric SQL database (preview)
+
+[Copilot for SQL database in Microsoft Fabric (preview)](/fabric/database/sql/copilot) includes integrated AI assistance with the following features:
+
+- [**Code completion**](/fabric/database/sql/copilot-code-completion): Start writing T-SQL in the SQL query editor and Copilot will automatically generate a code suggestion to help complete your query. The **Tab** key accepts the code suggestion or keeps typing to ignore the suggestion. 
+
+- **[Quick actions](/fabric/database/sql/copilot-quick-actions)**: In the ribbon of the SQL query editor, the **Fix** and **Explain** options are quick actions. Highlight a SQL query of your choice and select one of the quick action buttons to perform the selected action on your query.
+
+  - **Fix:** Copilot can fix errors in your code as error messages arise. Error scenarios can include incorrect/unsupported T-SQL code, wrong spellings, and more. Copilot will also provide comments that explain the changes and suggest SQL best practices.
+  
+  - **Explain:** Copilot can provide natural language explanations of your SQL query and database schema in comments format.
+  
+- **[Chat pane](/fabric/database/sql/copilot-chat-pane)**: Use the chat pane to ask questions to Copilot through natural language. Copilot responds with a generated SQL query or natural language based on the question asked.
+
+  - **Natural Language to SQL**: Generate T-SQL code from plain text requests, and get suggestions of questions to ask to accelerate your workflow.
+    
+  - **Document-based Q&A**: Ask Copilot questions about general SQL database capabilities, and it responds in natural language. Copilot also helps find documentation related to your request.
+
+Copilot for SQL database utilizes table and view names, column names, primary key, and foreign key metadata to generate T-SQL code. Copilot for SQL database does not use data in tables to generate T-SQL suggestions.
 
 ## Related content
 

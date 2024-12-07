@@ -8,6 +8,8 @@ ms.date: 04/23/2019
 ms.service: sql
 ms.subservice: performance
 ms.topic: conceptual
+ms.custom:
+  - ignite-2024
 helpviewer_keywords:
   - "query plans [SQL Server]"
   - "execution plans [SQL Server]"
@@ -15,9 +17,10 @@ helpviewer_keywords:
   - "lightweight query profiling"
   - "lightweight profiling"
   - "lwp"
+monikerRange: "=azuresqldb-current || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric"
 ---
 # Query Profiling Infrastructure
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance FabricSQLDB](../../includes/applies-to-version/sql-asdb-asdbmi-fabricsqldb.md)]
 
 The [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] provides the ability to access runtime information on query execution plans. One of the most important actions when a performance issue occurs, is to get precise understanding on the workload that is executing and how resource usage is being driven. For this, access to the [actual execution plan](../../relational-databases/performance/display-an-actual-execution-plan.md) is important.
 
@@ -169,10 +172,10 @@ The following table summarizes the actions to enable either standard profiling o
 
 |Scope|Standard Profiling|Lightweight Profiling|
 |---------------|---------------|---------------|
-|Global|xEvent session with the `query_post_execution_showplan` XE; Starting with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|Trace Flag 7412; Starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP1|
-|Global|SQL Trace and SQL Server Profiler with the `Showplan XML` trace event; Starting with SQL Server 2000|xEvent session with the `query_thread_profile` XE; Starting with [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2|
-|Global|-|xEvent session with the `query_post_execution_plan_profile` XE; Starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU14 and [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]|
-|Session|Use `SET STATISTICS XML ON`; Starting with SQL Server 2000|Use the `QUERY_PLAN_PROFILE` query hint together with an xEvent session with the `query_plan_profile` XE; Starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP2 CU3 and [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU11|
+|Global|XEvent session with the `query_post_execution_showplan` XE; Starting with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|Trace Flag 7412; Starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP1|
+|Global|SQL Trace and SQL Server Profiler with the `Showplan XML` trace event; Starting with SQL Server 2000|XEvent session with the `query_thread_profile` XE; Starting with [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2|
+|Global|-|XEvent session with the `query_post_execution_plan_profile` XE; Starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU14 and [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]|
+|Session|Use `SET STATISTICS XML ON`; Starting with SQL Server 2000|Use the `QUERY_PLAN_PROFILE` query hint together with an XEvent session with the `query_plan_profile` XE; Starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP2 CU3 and [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU11|
 |Session|Use `SET STATISTICS PROFILE ON`; Starting with SQL Server 2000|-|
 |Session|Click the [Live Query Statistics](../../relational-databases/performance/live-query-statistics.md) button in SSMS; Starting with [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2|-|
 

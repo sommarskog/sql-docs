@@ -4,7 +4,7 @@ description: A list of hardware, software, and operating system requirements for
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: randolphwest, jopilov, rdorr
-ms.date: 11/28/2023
+ms.date: 11/21/2024
 ms.service: sql
 ms.subservice: release-landing
 ms.topic: conceptual
@@ -82,7 +82,7 @@ The following requirements apply to all installations:
 | Component | Requirement |
 | --- | --- |
 | Operating system | Windows 10 1607 or greater<br /><br />Windows Server 2016 or greater. |
-| .NET Framework | Minimum operating systems include minimum .NET framework. |
+| .NET Framework | [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] requires .NET Framework 4.7.2. |
 | Network Software | Supported operating systems for [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] have built-in network software. Named and default instances of a stand-alone installation support the following network protocols: Shared memory, Named Pipes, and TCP/IP. |
 
 [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Setup installs the following software components required by the product:
@@ -100,6 +100,10 @@ The following table shows which editions of [!INCLUDE [sssql22-md](../../include
 
 | [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] edition: | Enterprise | Developer | Standard | Web | Express |
 | :--- | :--- | :--- | :--- | :-- | :--- |
+| Windows Server 2025 Datacenter | Yes | Yes | Yes | Yes | Yes |
+| Windows Server 2025 Datacenter: Azure Edition | Yes | Yes | Yes | Yes | Yes |
+| Windows Server 2025 Standard | Yes | Yes | Yes | Yes | Yes |
+| Windows Server 2025 Essentials | Yes | Yes | Yes | Yes | Yes |
 | Windows Server 2022 Datacenter | Yes | Yes | Yes | Yes | Yes |
 | Windows Server 2022 Datacenter: Azure Edition | Yes | Yes | Yes | Yes | Yes |
 | Windows Server 2022 Standard | Yes | Yes | Yes | Yes | Yes |
@@ -123,6 +127,7 @@ The following table shows which editions of [!INCLUDE [sssql22-md](../../include
 
 Installing [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] on Server Core mode is supported by the following editions of Windows Server:
 
+- Windows Server 2025 Core
 - Windows Server 2022 Core
 - Windows Server 2019 Core
 - Windows Server 2016 Core

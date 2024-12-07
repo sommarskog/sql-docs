@@ -8,12 +8,14 @@ ms.date: 01/08/2024
 ms.service: sql
 ms.subservice: performance
 ms.topic: conceptual
-monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+ms.custom:
+  - ignite-2024
+monikerRange: "=azuresqldb-current || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric"
 ---
 
 # Intelligent query processing features in detail
 
-[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance FabricSQLDB](../../includes/applies-to-version/sql-asdb-asdbmi-fabricsqldb.md)]
 
 This article contains in-depth descriptions of various [intelligent query processing (IQP)](intelligent-query-processing.md) features, release notes, and more detail. The intelligent query processing (IQP) feature family includes features with broad impact that improve the performance of existing workloads with minimal implementation effort to adopt. 
 
@@ -23,7 +25,7 @@ You can make workloads automatically eligible for intelligent query processing b
 ALTER DATABASE [WideWorldImportersDW] SET COMPATIBILITY_LEVEL = 160;
 ```
 
-All [IQP features](intelligent-query-processing.md) are available in [!INCLUDE [ssazuremi-md](../../includes/ssazuremi-md.md)] and [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], sometimes depending on each database's compatibility mode. For more information on changes introduced with new versions, see:
+For more information on changes introduced with new versions, see:
 
 - [What's new in SQL Server 2017](../../sql-server/what-s-new-in-sql-server-2017.md)
 - [What's new in SQL Server 2019](../../sql-server/what-s-new-in-sql-server-2019.md)
@@ -101,7 +103,7 @@ You can see usage attributes in the actual query execution plan:
 
 You can also track interleaved execution occurrences via the following extended events:
 
-| xEvent | Description |
+| XEvent | Description |
 | ---- | --- |
 | `interleaved_exec_status` | This event fires when interleaved execution is occurring. |
 | `interleaved_exec_stats_update` | This event describes the cardinality estimates updated by interleaved execution. |

@@ -9,16 +9,19 @@ ms.date: 01/05/2024
 ms.service: azure-sql-database
 ms.subservice: high-availability
 ms.topic: conceptual
-ms.custom: azure-sql-split, ignite-2023
+ms.custom:
+  - azure-sql-split
+  - ignite-2023
+  - ignite-2024
 keywords:
   - "business continuity"
   - "cloud business continuity"
   - "database disaster recovery"
   - "database recovery"
-monikerRange: "= azuresql || = azuresql-db "
+monikerRange: "=azuresql || =azuresql-db || =fabricsql"
 ---
 # Overview of business continuity with Azure SQL Database
-[!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
+[!INCLUDE [appliesto-sqldb-fabricsqldb](../includes/appliesto-sqldb-fabricsqldb.md)]
 
 > [!div class="op_single_selector"]
 > * [Azure SQL Database](business-continuity-high-availability-disaster-recover-hadr-overview.md?view=azuresql-db&preserve-view=true)

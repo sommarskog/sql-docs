@@ -7,13 +7,15 @@ ms.date: 05/03/2023
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
+ms.custom:
+  - ignite-2024
 dev_langs:
   - "TSQL"
-monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = fabric"
+monikerRange: ">=aps-pdw-2016 || =azure-sqldw-latest || =fabric"
 ---
 # Transactions (Azure Synapse Analytics and Microsoft Fabric)
 
-[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw-fabricdw.md)]
+[!INCLUDE [applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw-fabricdw.md)]
 
   A transaction is a group of one or more database statements that are either wholly committed or wholly rolled back. Each transaction is atomic, consistent, isolated, and durable (ACID). If the transaction succeeds, all statements within it are committed. If the transaction fails, that is at least one of the statements in the group fails, then the entire group is rolled back.  
   

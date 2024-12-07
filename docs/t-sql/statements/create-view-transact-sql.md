@@ -3,10 +3,12 @@ title: CREATE VIEW (Transact-SQL)
 description: CREATE VIEW (Transact-SQL)
 author: markingmyname
 ms.author: maghan
-ms.date: 09/08/2021
+ms.date: 10/23/2024
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
+ms.custom:
+  - ignite-2024
 f1_keywords:
   - "CREATE VIEW"
   - "VIEW_TSQL"
@@ -33,12 +35,12 @@ helpviewer_keywords:
   - "maximum number of columns per view"
 dev_langs:
   - "TSQL"
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=fabric"
+monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric"
 ---
 
 # CREATE VIEW (Transact-SQL)
 
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw-fabricsqldb.md)]
 
   Creates a virtual table whose contents (columns and rows) are defined by a query. Use this statement to create a view of the data in one or more tables in the database. For example, a view can be used for the following purposes:  
   
@@ -52,9 +54,9 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```syntaxsql
--- Syntax for SQL Server and Azure SQL Database  
+Syntax for SQL Server and Azure SQL Database.
   
+```syntaxsql
 CREATE [ OR ALTER ] VIEW [ schema_name . ] view_name [ (column [ ,...n ] ) ]
 [ WITH <view_attribute> [ ,...n ] ]
 AS select_statement
@@ -68,10 +70,10 @@ AS select_statement
     [ VIEW_METADATA ]
 }
 ```  
-  
-```syntaxsql
--- Syntax for Azure Synapse Analytics and Parallel Data Warehouse
-  
+
+Syntax for Azure Synapse Analytics and Parallel Data Warehouse.
+
+```syntaxsql  
 CREATE VIEW [ schema_name . ] view_name [  ( column_name [ ,...n ] ) ]   
 AS <select_statement>   
 [;]  
@@ -81,12 +83,17 @@ AS <select_statement>
     SELECT <select_criteria>  
 ```  
 
+Syntax for Microsoft Fabric warehouse and SQL analytics endpoint.
+
 ```syntaxsql
--- Syntax for [!INCLUDE [fabric](../../includes/fabric.md)]
-  
 CREATE [ OR ALTER ] VIEW [ schema_name . ] view_name [  ( column_name [ ,...n ] ) ]   
-AS <select_statement>   
-[;]  
+[ WITH <view_attribute> [ ,...n ] ] AS <select_statement>   
+[;]
+
+<view_attribute> ::=
+{  
+    [ SCHEMABINDING ]  
+}
   
 <select_statement> ::=  
     [ WITH <common_table_expression> [ ,...n ] ]  
@@ -181,11 +188,12 @@ AS <select_statement>
  A query that uses an index on a view defined with **numeric** or **float** expressions may have a result that is different from a similar query that does not use the index on the view. This difference may be caused by rounding errors during INSERT, DELETE, or UPDATE actions on underlying tables.  
   
  The [!INCLUDE[ssDE](../../includes/ssde-md.md)] saves the settings of SET QUOTED_IDENTIFIER and SET ANSI_NULLS when a view is created. These original settings are used to parse the view when the view is used. Therefore, any client-session settings for SET QUOTED_IDENTIFIER and SET ANSI_NULLS do not affect the view definition when the view is accessed.  
+
+ In Fabric SQL database, views can be created, but they are not [mirrored into the Fabric OneLake](/fabric/database/sql/mirroring-overview). For more information, see [Limitations of Fabric SQL database mirroring](/fabric/database/sql/mirroring-limitations).
   
 ## Updatable Views
 
-> [!NOTE] 
-> In Azure Synapse Analytics, currently updatable views, DML triggers (of either type AFTER or INSTEAD OF), and partitioned views are not supported. For more information, see [T-SQL views with dedicated SQL pool and serverless SQL pool in Azure Synapse Analytics](/azure/synapse-analytics/sql/develop-views#limitations).
+In Azure Synapse Analytics, currently updatable views, DML triggers (of either type AFTER or INSTEAD OF), and partitioned views are not supported. For more information, see [T-SQL views with dedicated SQL pool and serverless SQL pool in Azure Synapse Analytics](/azure/synapse-analytics/sql/develop-views#limitations).
 
 You can modify the data of an underlying base table through a view, as long as the following conditions are true:  
   
@@ -523,4 +531,3 @@ ON (fis.SalesTerritoryKey=dst.SalesTerritoryKey);
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   
   
-

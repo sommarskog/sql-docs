@@ -14,6 +14,7 @@ ms.custom:
   - build-2023-dataai
   - ignite-2023
   - build-2024
+  - ignite-2024
 ---
 
 # What is Azure SQL Managed Instance?
@@ -167,6 +168,18 @@ Azure SQL Managed Instance doesn't have the Business Intelligence suite natively
 SQL Managed Instance enables system administrators to spend less time on administrative tasks because the service either performs them for you or greatly simplifies those tasks. For example, [OS/RDBMS installation and patching](../database/high-availability-sla-local-zone-redundancy.md), [dynamic instance resizing and configuration](../database/single-database-scale.md), [backups](automated-backups-overview.md), [database replication](replication-between-two-instances-configure-tutorial.md) (including system databases), [high availability configuration](high-availability-sla-local-zone-redundancy.md), and configuration of health and [performance monitoring](/azure/azure-monitor/insights/azure-sql) data streams.
 
 For more information, see [a list of supported and unsupported SQL Managed Instance features](../database/features-comparison.md), and [T-SQL differences between SQL Managed Instance and SQL Server](transact-sql-tsql-differences-sql-server.md).
+
+## Save on costs
+
+As with any Azure service, when you use Azure SQL Managed Instance, you are billed for the compute, storage, and license your product uses. 
+
+SQL Managed Instance offers several ways to save on costs:
+
+- **Azure Hybrid Benefit**: If you have Software Assurance, you can use the [Azure Hybrid Benefit](https://azure.microsoft.com/pricing/hybrid-benefit/) to save up to 55% on licensing costs. The Azure Hybrid Benefit for SQL Server allows you to use your on-premises SQL Server licenses to run Azure SQL Managed Instance at a reduced rate.
+- **Reserved capacity**: You can save up to 80% on costs by purchasing [reserved capacity](../database/reserved-capacity-overview.md) for SQL Managed Instance. 
+- **Instance pools**: If you have multiple managed instances, you can save on costs by using [instance pools](instance-pools-overview.md), which also support [reserved capacity](instance-pools-overview.md#reserved-capacity-pricing).
+- **Instance stop and start**: You can [stop and start](instance-stop-start-how-to.md) your managed instance to save on costs. When you stop your instance, you only pay for storage, and you can restart it at any time.
+- **Free DR replica**: You can save on licensing costs by designating a secondary replica for [disaster recovery (DR) only](business-continuity-high-availability-disaster-recover-hadr-overview.md#license-free-dr-replicas). 
 
 ## vCore-based purchasing model
 

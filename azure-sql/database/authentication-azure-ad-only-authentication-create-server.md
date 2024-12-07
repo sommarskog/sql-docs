@@ -2,8 +2,8 @@
 title: Create server with Microsoft Entra-only authentication enabled
 titleSuffix: Azure SQL Database & Azure SQL Managed Instance
 description: This article guides you through creating an Azure SQL logical server or managed instance with Microsoft Entra-only authentication enabled, which disables connectivity using SQL authentication.
-author: nofield
-ms.author: nofield
+author: VanMSFT
+ms.author: vanto
 ms.reviewer: wiassaf, vanto, mathoma
 ms.date: 09/17/2024
 ms.service: azure-sql
@@ -199,7 +199,7 @@ Login-AzAccount -tenantId $tenantId
 
 $result = Get-MsalToken -RedirectUri $uri -ClientId $clientId -TenantId $tenantId -Scopes "https://management.core.windows.net/.default"
 
-#Authetication header
+#Authentication header
 $authHeader = @{
 'Content-Type'='application\json; '
 'Authorization'=$result.CreateAuthorizationHeader()

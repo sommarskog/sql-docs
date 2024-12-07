@@ -11,7 +11,8 @@ ms.subservice: service-overview
 ms.topic: conceptual
 ms.custom:
   - build-2024
-monikerRange: "=azuresql||=azuresql-db||=azuresql-mi"
+  - ignite-2024
+monikerRange: "=azuresql || =azuresql-db || =azuresql-mi"
 ---
 
 # Features comparison: Azure SQL Database and Azure SQL Managed Instance
@@ -58,7 +59,7 @@ The following table lists the major features of SQL Server and provides informat
 | [Cross-database transactions](/sql/relational-databases/linked-servers/linked-servers-database-engine) | No | Yes, within the instance. See [Linked server differences](../managed-instance/transact-sql-tsql-differences-sql-server.md#linked-servers) for cross-instance queries. |
 | [Database mail - DbMail](/sql/relational-databases/database-mail/database-mail) | No | Yes |
 | [Database mirroring](/sql/database-engine/database-mirroring/database-mirroring-sql-server) (deprecated) | No | No |
-| [Database mirroring in Microsoft Fabric](/fabric/database/mirrored-database/overview) | Yes, in preview | No |
+| [Database mirroring in Microsoft Fabric](/fabric/database/mirrored-database/overview) | Yes | No |
 | [Database snapshots](/sql/relational-databases/databases/database-snapshots-sql-server) | No | No |
 | [Database virtualization](../managed-instance/data-virtualization-overview.md) | No | Yes |
 | [DBCC statements](/sql/t-sql/database-console-commands/dbcc-transact-sql) | Most, see individual statements | Yes, see [DBCC differences](../managed-instance/transact-sql-tsql-differences-sql-server.md#dbcc) |
@@ -111,7 +112,7 @@ The following table lists the major features of SQL Server and provides informat
 | [SQL Server Agent](/sql/ssms/agent/sql-server-agent) | No, see [Elastic jobs](elastic-jobs-overview.md) | Yes, see [SQL Server Agent differences](../managed-instance/transact-sql-tsql-differences-sql-server.md#sql-server-agent) |
 | [SQL Server Auditing](/sql/relational-databases/security/auditing/sql-server-audit-database-engine) | No, see [Auditing for Azure SQL Database](auditing-overview.md) | Yes, see [Auditing differences](../managed-instance/transact-sql-tsql-differences-sql-server.md#auditing) |
 | [Synapse Link for SQL](/azure/synapse-analytics/synapse-link/sql-synapse-link-overview) | Yes | No |
-| [System stored functions](/sql/relational-databases/system-functions/system-functions-for-transact-sql) | Most, see individual functions | Yes, see [Stored procedures, functions, triggers differences](../managed-instance/transact-sql-tsql-differences-sql-server.md#stored-procedures-functions-and-triggers) |
+| [System functions](/sql/relational-databases/system-functions/system-functions-for-transact-sql) | Most, see individual functions | Yes, see [Stored procedures, functions, triggers differences](../managed-instance/transact-sql-tsql-differences-sql-server.md#stored-procedures-functions-and-triggers) |
 | [System stored procedures](/sql/relational-databases/system-stored-procedures/system-stored-procedures-transact-sql) | Some, see individual stored procedures | Yes, see [Stored procedures, functions, triggers differences](../managed-instance/transact-sql-tsql-differences-sql-server.md#stored-procedures-functions-and-triggers) |
 | [System tables](/sql/relational-databases/system-tables/system-tables-transact-sql) | Some, see individual tables | Yes, see [T-SQL differences](../managed-instance/transact-sql-tsql-differences-sql-server.md) |
 | [System catalog views](/sql/relational-databases/system-catalog-views/catalog-views-transact-sql) | Some, see individual views | Yes, see [T-SQL differences](../managed-instance/transact-sql-tsql-differences-sql-server.md) |
@@ -138,7 +139,7 @@ The Azure platform provides a number of PaaS capabilities that are added as an a
 | **Auto-scale** | Yes, but only in [serverless model](serverless-tier-overview.md?view=azuresql-db&preserve-view=true). In the non-serverless model, the change of service tier (change of vCore, storage, or DTU) is fast and online. The service tier change requires minimal or no downtime. | No, you need to choose reserved compute and storage. The change of service tier (vCore or max storage) is online and requires minimal or no downtime. |
 | **Automatic backups** | Yes, see [automated backups in Azure SQL Database](automated-backups-overview.md?view=azuresql-db&preserve-view=true). Full backups are taken every 7 days, differential 12 hours, and log backups every 5-10 min. | Yes, see [automated backups in Azure SQL Managed Instance](../managed-instance/automated-backups-overview.md?view=azuresql-mi&preserve-view=true). Full backups are taken every 7 days, differential 12 hours, and log backups every 5-10 min. |
 | **Automatic tuning (indexes)**| Yes, see [Automatic tuning](automatic-tuning-overview.md?view=azuresql-db&preserve-view=true)| No |
-| [Availability Zones](/azure/availability-zones/az-overview) | Yes | Yes, in preview, currently for the Business Critical tier only |
+| [Availability Zones](/azure/reliability/availability-zones-overview) | Yes | Yes, in preview, currently for the Business Critical tier only |
 | [Azure Resource Health](/azure/service-health/resource-health-overview) | Yes | Yes |
 | **Short-term backup retention** | Yes, see [short-term retention](automated-backups-overview.md?view=azuresql-db&preserve-view=true#short-term-retention). 7 days default, max 35 days. | Yes, see [short-term retention](../managed-instance/automated-backups-overview.md?view=azuresql-mi&preserve-view=true#short-term-retention). 1-35 days, 7 days default.  |
 | [Azure Database Migration Service (DMS)](/azure/dms/dms-overview) | Yes | Yes |
@@ -173,7 +174,7 @@ The following table compares the maximum resource limits available for Azure SQL
 | **Category** | **Azure SQL Database** | **Azure SQL Managed Instance** |
 |:--|:--|:--|
 | **Compute size**| Up to 128 vCores  | Up to 128 vCores| 
-| **Storage size** | 1 GB - 100 TB | 16 TB | 
+| **Storage size** | 1 GB - 128 TB | 16 TB | 
 | **Tempdb size** | [32 GB per vCore](resource-limits-vcore-single-databases.md?view=azuresql-db&preserve-view=true), up to 2,560 GB |Up to 4 TB - [limited by reserved storage size](../managed-instance/resource-limits.md?view=azuresql-mi&preserve-view=true#service-tier-characteristics) |
 | **Log write throughput** | Up to 100mb/sec | [4.5 MB/s per vCore (max 192 MB/s)](../managed-instance/resource-limits.md?view=azuresql-mi&preserve-view=true#service-tier-characteristics) |
 | **Availability** | [Default SLA](https://azure.microsoft.com/support/legal/sla/azure-sql-database/) <br> 99.995% SLA with [zone redundancy](high-availability-sla-local-zone-redundancy.md?view=azuresql-db&preserve-view=true#zone-redundant-availability) | [Default SLA](https://azure.microsoft.com/support/legal/sla/azure-sql-sql-managed-instance/)|

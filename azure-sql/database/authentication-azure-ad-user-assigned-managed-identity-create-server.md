@@ -2,8 +2,8 @@
 title: Create a logical server using a user-assigned managed identity
 titleSuffix: Azure SQL Database
 description: This article guides you through creating an Azure SQL logical server using a user-assigned managed identity.
-author: nofield
-ms.author: nofield
+author: VanMSFT
+ms.author: vanto
 ms.reviewer: vanto, mathoma
 ms.date: 10/24/2023
 ms.service: azure-sql-database
@@ -233,7 +233,7 @@ Login-AzAccount -tenantId $tenantId
 
 $result = Get-MsalToken -RedirectUri $uri -ClientId $clientId -TenantId $tenantId -Scopes "https://management.core.windows.net/.default"
 
-#Authetication header
+#Authentication header
 $authHeader = @{
 'Content-Type'='application\json; '
 'Authorization'=$result.CreateAuthorizationHeader()

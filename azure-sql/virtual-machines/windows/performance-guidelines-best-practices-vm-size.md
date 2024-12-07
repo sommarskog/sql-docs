@@ -1,13 +1,15 @@
 ---
 title: "VM size: Performance best practices & guidelines"
 description: Provides VM size guidelines and best practices to optimize the performance of your SQL Server on Azure Virtual Machine (VM).
-author: bluefooted
-ms.author: pamela
-ms.reviewer: pamela, randolphwest, mathoma
-ms.date: 03/29/2023
-ms.service: virtual-machines-sql
+author: dplessMSFT
+ms.author: dpless
+ms.reviewer: dpless, randolphwest, mathoma
+ms.date: 11/19/2024
+ms.service: azure-vm-sql-server
 ms.subservice: performance
 ms.topic: conceptual
+ms.custom:
+  - ignite-2024
 tags: azure-service-management
 ---
 # VM size: Performance best practices for SQL Server on Azure VMs
@@ -30,31 +32,60 @@ To compare the VM size checklist with the others, see the comprehensive [Perform
 
 ## Overview
 
-When you're creating a SQL Server on Azure VM, carefully consider the type of workload necessary. If you're migrating an existing environment, [collect a performance baseline](performance-guidelines-best-practices-collect-baseline.md) to determine your SQL Server on Azure VM requirements. If this is a new VM, then create your new SQL Server VM based on your vendor requirements.
+When you're creating a SQL Server on Azure VM, carefully consider the type of workload necessary. If you're migrating an existing environment, [collect a performance baseline](performance-guidelines-best-practices-collect-baseline.md) to determine your SQL Server on Azure VM requirements. Use the vCPU and memory configuration from your source machine as a baseline for migrating a current on-premises SQL Server database to SQL Server on Azure VMs. If you have Software Assurance, take advantage of the [Azure Hybrid Benefit](https://azure.microsoft.com/pricing/hybrid-benefit/) to bring your licenses to Azure and save on SQL Server licensing costs.
 
-If you're creating a new SQL Server VM with a new application built for the cloud, you can easily size your SQL Server VM as your data and usage requirements evolve.
-Start the development environments with the lower-tier D-Series, B-Series, or Av2-series and grow your environment over time.
+If this is a new VM, then create your new SQL Server VM based on your application requirements. If you're creating a new SQL Server VM for a new application built for the cloud, you can easily scale your SQL Server VM as your data and usage requirements evolve. Start development environments with the lower-tier D-Series, B-Series, or Av2-series and grow your environment over time.
 
-Use the SQL Server VM marketplace images with the storage configuration in the portal. This makes it easier to properly create the storage pools necessary to get the size, IOPS, and throughput necessary for your workloads. It is important to choose SQL Server VMs that support premium storage and premium storage caching. See the [storage](performance-guidelines-best-practices-storage.md) article to learn more.
+Consider the following VM series based on your SQL Server workloads:
+- **Highest memory allocation for mission critical workloads**: The [Mbsv3 and Mbdsv3-series VMs](#mbsv3-and-mbdsv3-series) offers the highest memory allocation in Azure, with the best storage performance.
+- **High I/O throughput-to-vCore ratio**: The [Mbsv3 and Mbdsv3-series VMs](#mbsv3-and-mbdsv3-series) offer the highest throughput-to-vCore ratio of any VM series in any cloud. The [Ebdsv5-series VMs](/azure/virtual-machines/ebdsv5-ebsv5-series#ebdsv5-series) offer the second highest throughput-to-vCore ratio in Azure. If you don't know the I/O requirements for your SQL Server workload, the [Ebdsv5-series VMs](/azure/virtual-machines/ebdsv5-ebsv5-series#ebdsv5-series) is the one most likely to meet your needs. See the [storage](performance-guidelines-best-practices-storage.md) article to learn more.
+- **Parallel processing for larger machines**: The [Msv3 and Mdsv3 series VMs](#msv3-and-mdsv3-series) offer parallel processing, making them good options for larger data warehouse environments.
 
-Currently, the [Ebdsv5-series](/azure/virtual-machines/ebdsv5-ebsv5-series#ebdsv5-series) provides the highest I/O throughput-to-vCore ratio available in Azure. If you don't know the I/O requirements for your SQL Server workload, this series is the one most likely to meet your needs. See the [storage](performance-guidelines-best-practices-storage.md) article to learn more.
+SQL Server data warehouse and mission critical environments will often need to scale beyond the 8:1 memory-to-vCore ratio. For medium environments, you may want to choose a 16:1 memory-to-vCore ratio, and a 32:1 memory-to-vCore ratio for larger data warehouse environments.
 
-> [!NOTE]  
-> The larger [Ebdsv5-series](/azure/virtual-machines/ebdsv5-ebsv5-series#ebdsv5-series) sizes (48 vCPUs and larger) offer support for NVMe enabled storage access. In order to take advantage of this high I/O performance, you must deploy your virtual machine [using NVMe](/azure/virtual-machines/enable-nvme-interface). NVMe support for SQL Server marketplace images will be coming soon, but for now you must self-install SQL Server in order to take advantage of NVMe.
+Use the SQL Server VM marketplace images with the storage configuration in the portal. This makes it easier to properly create the storage pools necessary to get the size, IOPS, and throughput necessary for your workloads. It's important to choose SQL Server VMs that support premium storage performance. See the [storage](performance-guidelines-best-practices-storage.md) article to learn more.
 
-SQL Server data warehouse and mission critical environments will often need to scale beyond the 8 memory-to-vCore ratio. For medium environments, you may want to choose a 16 memory-to-vCore ratio, and a 32 memory-to-vCore ratio for larger data warehouse environments.
+## Memory optimized M-series VMs
 
-SQL Server data warehouse environments often benefit from the parallel processing of larger machines. For this reason, the M-series and the Mv2-series are good options for larger data warehouse environments.
+The [M-series](/azure/virtual-machines/m-series) offers vCore counts and memory for some of the largest SQL Server workloads.
 
-Use the vCPU and memory configuration from your source machine as a baseline for migrating a current on-premises SQL Server database to SQL Server on Azure VMs. If you have Software Assurance, take advantage of [Azure Hybrid Benefit](https://azure.microsoft.com/pricing/hybrid-benefit/) to bring your licenses to Azure and save on SQL Server licensing costs.
+The following lists the capabilities of the M-series VMs:
+- Support [premium storage](/azure/virtual-machines/premium-storage-performance), [premium storage caching](/azure/virtual-machines/premium-storage-performance#disk-caching), [ultra disks](/azure/virtual-machines/disks-enable-ultra-ssd), [write acceleration](/azure/virtual-machines/how-to-enable-write-accelerator), and accelerated networking.
+- Are suitable for SQL Server workloads that require high computing capabilities with large memory footprints and less emphasis on storage performance. 
 
-## Memory optimized
+### Mbsv3 and Mbdsv3 series
 
-The [memory optimized virtual machine sizes](/azure/virtual-machines/sizes-memory) are a primary target for SQL Server VMs and the recommended choice by Microsoft. The memory optimized virtual machines offer stronger memory-to-CPU ratios and medium-to-large cache options.
+The Mbsv3 and Mbdsv3 series are memory optimized VMs designed for large in-memory databases and workloads with high memory-to-CPU ratio needs. The VMs in this series are built on the 4th generation Intel® Xeon® Scalable and offer a range of memory sizes and vCPU counts to meet the needs of your SQL Server workloads. The Mbsv3 and Mbdsv3 series VMs are recommended for mission critical and data warehouse workloads.
+
+The Mbsv3 and Mbdsv3 series VMs support support large in-memory databases and workloads with a high memory-to-CPU ratio perfect for relational database servers, data warehousing, heavy reporting, large caches, and in-memory analytics.
+
+
+The following are characteristics of VMs in this series: 
+- [Mbsv3-series](/azure/virtual-machines/sizes/memory-optimized/mbsv3-series) offer up to 176 vCores, and 1,536 GiB of memory, with a consistent 8:1 memory-to-vCore ratio, 650,000 IOPS, and 6,000 MBps of storage throughput. 
+- [Mbdsv3-series](/azure/virtual-machines/sizes/memory-optimized/mbdsv3-series) offer up to 176 vCores and 4 TiB of memory, 650,000 IOPS, and 10,000 MBps of storage throughput. This VM series offers over a 50% improvement in IOPS and throughput to the top-performing Ebdsv5 series - making the Mbdsv3 one of the highest-performing VM options available in any cloud. The Mbdsv3 VM series shares similar performance characteristics with the Mbsv3 VM series but includes strong local and ephemeral storage, making it perfect for tempdb performance optimization, reporting, mission critical OLAP, and data warehousing workloads.
+
+### Msv3 and Mdsv3 series
+
+The Msv3 and Mdsv3 virtual machines are designed with computing power and memory capabilities at *medium*, *high* and *very high* memory levels.  These VMs provide improved performance, scalability, and resilience to failures compared to the previous generation Mv2 VMs. 
+
+The following lists the VMs in this series: 
+- [Msv3 and Mdsv3 Medium Memory VMs](/azure/virtual-machines/msv3-mdsv3-medium-series): powered by 4th generation Intel® Xeon® Scalable processors, and offers VM sizes of up to 4 TiB of memory, 416 vCPUs,  130,000 IOPS, and 4,000 MBps of remote storage throughput with the NVMe interface.
+- [Msv3 and Mdsv3 High Memory VMs](/azure/virtual-machines/sizes/memory-optimized/msv3-mdsv3-high-memory-series): are designed for high memory workloads with memory ranging from 6 TiB to 16 TiB, up to 832 vCPUs, up to 260,000 IOPS and 8,000-MBps throughput to remote storage with the NVMe interface.
+- [Mdsv3 Very High Memory Series](/azure/virtual-machines/sizes/memory-optimized/mdsv3-very-high-memory-series): powered by 4th generation Intel® Xeon® Platinum 8490H (Sapphire Rapids) processors, and have the largest memory footprint of any of the M-series based virtual machines offering up to 32 TiB of memory, 1,792 vCPUs, up to 200,000 IOPS and 8,000 MBps of remote storage throughput.
+
+> [!CAUTION]
+> [Disable SMT](/sql/sql-server/compute-capacity-limits-by-edition-of-sql-server#disable-smt-in-an-azure-virtual-machine) to use SQL Server on Azure VMs that exceed 64 vCores per NUMA node. 
+
+## Memory-optimized E-series VMs
+
+The [E-series](/azure/virtual-machines/sizes/memory-optimized/e-family) VMs are designed for memory-intensive workloads, such as large databases, big data analytics, and enterprise applications that require significant amounts of RAM to maintain high performance. 
 
 ### Ebdsv5-series
 
-The [Ebdsv5-series](/azure/virtual-machines/ebdsv5-ebsv5-series#ebdsv5-series) is a new memory-optimized series of VMs that offer the highest remote storage throughput available in Azure. These VMs have a memory-to-vCore ratio of 8 which, together with the high I/O throughput, makes them ideal for SQL Server workloads. The Ebdsv5-series VMs offer the best price-performance for SQL Server workloads running on Azure virtual machines and we strongly recommend them for most of your production SQL Server workloads.
+The [Ebdsv5-series](/azure/virtual-machines/ebdsv5-ebsv5-series#ebdsv5-series) is a memory-optimized series of VMs that offer the highest remote storage throughput available in Azure. These VMs have a memory-to-vCore ratio of 8:1 which, together with the high I/O throughput, makes them ideal for most SQL Server workloads. The Ebdsv5-series VMs offer the best price-performance for SQL Server workloads running on Azure virtual machines and we strongly recommend them for most of your production SQL Server workloads.
+
+> [!NOTE] 
+> The larger [Ebdsv5-series](/azure/virtual-machines/ebdsv5-ebsv5-series#ebdsv5-series) sizes (48 vCPUs and larger) offer support for NVMe enabled storage access. In order to take advantage of this high I/O performance, you must deploy your virtual machine [using NVMe](/azure/virtual-machines/enable-nvme-interface).
 
 ### Edsv5-series
 
@@ -68,16 +99,8 @@ The Edsv5-series virtual machines support [premium storage](/azure/virtual-machi
 
 The [ECadsv5-series](/azure/virtual-machines/ecasv5-ecadsv5-series) virtual machine sizes are **memory-optimized Azure confidential VMs** with a temporary disk. Review [confidential VMs](security-considerations-best-practices.md#confidential-vms) for information about the security benefits of Azure confidential VMs.
 
-As the security features of Azure confidential VMs may introduce performance overheads, test your workload and select a VM size that meets your performance requirements.
-
-### M and Mv2 series
-
-The [M-series](/azure/virtual-machines/m-series) offers vCore counts and memory for some of the largest SQL Server workloads.
-
-The [Mv2-series](/azure/virtual-machines/mv2-series) has the highest vCore counts and memory and is recommended for mission critical and data warehouse workloads. Mv2-series instances are memory optimized VM sizes providing unparalleled computational performance to support large in-memory databases and workloads with a high memory-to-CPU ratio that is perfect for relational database servers, large caches, and in-memory analytics.
-
-Some of the features of the M and Mv2-series attractive for SQL Server performance include [premium storage](/azure/virtual-machines/premium-storage-performance) and [premium storage caching](/azure/virtual-machines/premium-storage-performance#disk-caching) support, [ultra-disk](/azure/virtual-machines/disks-enable-ultra-ssd) support, and [write acceleration](/azure/virtual-machines/how-to-enable-write-accelerator).
-
+As the security features of Azure confidential VMs might introduce performance overheads, test your workload and select a VM size that meets your performance requirements.
+ 
 ## General Purpose
 
 The [General Purpose virtual machine sizes](/azure/virtual-machines/sizes-general) are designed to provide balanced memory-to-vCore ratios for smaller entry level workloads such as development and test, web servers, and smaller database servers.
@@ -98,20 +121,20 @@ For this reason, it's recommended to use the D8ds_v5 as the starter virtual mach
 
 The [Ddsv5-series](/azure/virtual-machines/ddv5-ddsv5-series#ddsv5-series) virtual machines support [premium storage](/azure/virtual-machines/premium-storage-performance) and [premium storage caching](/azure/virtual-machines/premium-storage-performance#disk-caching).
 
-> [!NOTE]  
+> [!NOTE] 
 > The [Ddsv5-series](/azure/virtual-machines/ddv5-ddsv5-series#ddsv5-series) does not have the memory-to-vCore ratio of 8 that is recommended for SQL Server workloads. As such, consider using these virtual machines for small applications and development workloads only.
 
 ### DCadsv5-series
 
 The [DCadsv5-series](/azure/virtual-machines/dcasv5-dcadsv5-series) virtual machine sizes are **general purpose Azure confidential VMs** with temporary disk. Review [confidential VMs](security-considerations-best-practices.md#confidential-vms) for information about the security benefits of Azure confidential VMs.
 
-As the security features of Azure confidential VMs may introduce performance overheads, test your workload and select a VM size that meets your performance requirements.
+As the security features of Azure confidential VMs can introduce performance overheads, test your workload and select a VM size that meets your performance requirements.
 
 ### B-series
 
 The [burstable B-series](/azure/virtual-machines/sizes-b-series-burstable) virtual machine sizes are ideal for workloads that don't need consistent performance such as proof of concept and very small application and development servers.
 
-Most of the [burstable B-series](/azure/virtual-machines/sizes-b-series-burstable) virtual machine sizes have a memory-to-vCore ratio of 4. The largest of these machines is the [Standard_B20ms](/azure/virtual-machines/sizes-b-series-burstable) with 20 vCores and 80 GiB of memory.
+Most of the [burstable B-series](/azure/virtual-machines/sizes-b-series-burstable) virtual machine sizes have a memory-to-vCore ratio of 4. The largest burstable B-series is the [Standard_B20ms](/azure/virtual-machines/sizes-b-series-burstable) with 20 vCores and 80 GiB of memory.
 
 This series is unique as the apps have the ability to **burst** during business hours with burstable credits varying based on machine size.
 
@@ -121,7 +144,7 @@ The benefit of the B-series is the compute savings you could achieve compared to
 
 This series supports [premium storage](/azure/virtual-machines/premium-storage-performance), but **does not support** [premium storage caching](/azure/virtual-machines/premium-storage-performance#disk-caching).
 
-> [!NOTE]  
+> [!NOTE] 
 > The [burstable B-series](/azure/virtual-machines/sizes-b-series-burstable) does not have the memory-to-vCore ratio of 8 that is recommended for SQL Server workloads. As such, consider using these virtual machines for smaller applications, web servers, and development workloads only.
 
 ### Av2-series
@@ -132,9 +155,9 @@ Only the [Standard_A2m_v2](/azure/virtual-machines/av2-series) (2 vCores and 16G
 
 These virtual machines are both good options for smaller development and test SQL Server machines.
 
-The 8 vCore [Standard_A8m_v2](/azure/virtual-machines/av2-series) may also be a good option for small application and web servers.
+The 8 vCore [Standard_A8m_v2](/azure/virtual-machines/av2-series) can also be a good option for small application and web servers.
 
-> [!NOTE]  
+> [!NOTE] 
 > The Av2 series does not support premium storage and as such, is not recommended for production SQL Server workloads even with the virtual machines that have a memory-to-vCore ratio of 8.
 
 ## Storage optimized
@@ -147,20 +170,20 @@ The [Lsv2-series](/azure/virtual-machines/lsv2-series) features high throughput,
 
 These virtual machines are strong options for big data, data warehouse, reporting, and ETL workloads. The high throughput and IOPS of the local NVMe storage is a good use case for processing files that will be loaded into your database and other scenarios where the data can be recreated from the source system or other repositories such as Azure Blob storage or Azure Data Lake. [Lsv2-series](/azure/virtual-machines/lsv2-series) VMs can also burst their disk performance for up to 30 minutes at a time.
 
-These virtual machines size from 8 to 80 vCPU with 8 GiB of memory per vCPU and for every 8 vCPUs there is 1.92 TB of NVMe SSD. This means for the largest VM of this series, the [L80s_v2](/azure/virtual-machines/lsv2-series), there is 80 vCPU and 640 BiB of memory with 10x1.92TB of NVMe storage.  There's a consistent memory-to-vCore ratio of 8 across all of these virtual machines.
+These virtual machines size from 8 to 80 vCPU with 8 GiB of memory per vCPU and for every 8 vCPUs there's 1.92 TiB of NVMe SSD. This means for the largest VM of this series, the [L80s_v2](/azure/virtual-machines/lsv2-series), there's 80 vCPU and 640 BiB of memory with 10x1.92 TiB of NVMe storage. There's a consistent memory-to-vCore ratio of 8 across all of these virtual machines.
 
 The NVMe storage is ephemeral meaning that data will be lost on these disks if you deallocate your virtual machine, or if it's moved to a different host for service healing.
 
-The Lsv2 and Ls series support [premium storage](/azure/virtual-machines/premium-storage-performance), but not premium storage caching. The creation of a local cache to increase IOPs is not supported.
+The Lsv2 and Ls series support [premium storage](/azure/virtual-machines/premium-storage-performance), but not premium storage caching. The creation of a local cache to increase IOPs isn't supported.
 
-> [!WARNING]  
+> [!WARNING] 
 > Storing your data files on the ephemeral NVMe storage could result in data loss when the VM is deallocated.
 
 ## Constrained vCores
 
 High performing SQL Server workloads often need larger amounts of memory, IOPS, and throughput without the higher vCore counts.
 
-Most OLTP workloads are application databases driven by large numbers of smaller transactions. With OLTP workloads, only a small amount of the data is read or modified, but the volumes of transactions driven by user counts are much higher. It is important to have the SQL Server memory available to cache plans, store recently accessed data for performance, and ensure physical reads can be read into memory quickly.
+Most OLTP workloads are application databases driven by large numbers of smaller transactions. With OLTP workloads, only a small amount of the data is read or modified, but the volumes of transactions driven by user counts are much higher. It's important to have the SQL Server memory available to cache plans, store recently accessed data for performance, and ensure physical reads can be read into memory quickly.
 
 These OLTP environments need higher amounts of memory, fast storage, and the I/O bandwidth necessary to perform optimally.
 
@@ -174,8 +197,8 @@ These new VM sizes have a suffix that specifies the number of active vCPUs to ma
 
 For example, the [M64-32ms](/azure/virtual-machines/constrained-vcpu) requires licensing only 32 SQL Server vCores with the memory, I/O, and throughput of the [M64ms](/azure/virtual-machines/m-series) and the [M64-16ms](/azure/virtual-machines/constrained-vcpu) requires licensing only 16 vCores. Though while the [M64-16ms](/azure/virtual-machines/constrained-vcpu) has a quarter of the SQL Server licensing cost of the M64ms, the compute cost of the virtual machines is the same.
 
-> [!NOTE]  
->  
+> [!NOTE] 
+> 
 > - Medium to large data warehouse workloads may still benefit from [constrained vCore VMs](/azure/virtual-machines/constrained-vcpu), but data warehouse workloads are commonly characterized by fewer users and processes addressing larger amounts of data through query plans that run in parallel.
 > - The compute cost, which includes operating system licensing, will remain the same as the parent virtual machine.
 
