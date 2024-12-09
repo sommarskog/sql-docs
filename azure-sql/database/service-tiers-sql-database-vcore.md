@@ -40,7 +40,7 @@ The vCore purchasing model used by Azure SQL Database provides several benefits 
 - [Reserved instance pricing](reserved-capacity-overview.md) is only available for vCore purchasing model. 
 - Higher scaling granularity with multiple compute sizes available.
 
-For help with choosing between the vCore and DTU purchasing models, see the [differences between the vCore and DTU-based purchasing models](purchasing-models.md)
+For help with choosing between the vCore and DTU purchasing models, see the [differences between the vCore and DTU-based purchasing models](purchasing-models.md).
 
 ## Compute
 
