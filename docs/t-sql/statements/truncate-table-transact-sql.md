@@ -1,10 +1,10 @@
 ---
 title: "TRUNCATE TABLE (Transact-SQL)"
-description: TRUNCATE TABLE (Transact-SQL)
+description: TRUNCATE TABLE removes all rows from a table or specified partitions of a table.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: randolphwest
-ms.date: 08/07/2024
+ms.date: 12/09/2024
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -110,7 +110,7 @@ If the table contains an identity column, the counter for that column is reset t
 
 A `TRUNCATE TABLE` operation can be rolled back within a transaction.
 
-In Fabric SQL database, truncating a table will delete all mirrored data from Fabric OneLake for that table.
+In Fabric SQL database, truncating a table deletes all mirrored data from Fabric OneLake for that table.
 
 ## Limitations
 
@@ -142,7 +142,7 @@ In [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INC
 
 ## Permissions
 
-The minimum permission required is `ALTER` on *table_name*. `TRUNCATE TABLE` permissions default to the table owner, members of the **sysadmin** fixed server role, and the `db_owner` and **db_ddladmin** fixed database roles, and aren't transferable. However, you can incorporate the `TRUNCATE TABLE` statement within a module, such as a stored procedure, and grant appropriate permissions to the module using the `EXECUTE AS` clause.
+The minimum permission required is `ALTER` on *table_name*. `TRUNCATE TABLE` permissions default to the table owner, members of the sysadmin fixed server role, and the db_owner and db_ddladmin fixed database roles, and aren't transferable. However, you can incorporate the `TRUNCATE TABLE` statement within a module, such as a stored procedure, and grant appropriate permissions to the module using the `EXECUTE AS` clause.
 
 ## Examples
 
