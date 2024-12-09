@@ -11849,6 +11849,20 @@ items:
           href: relational-databases/errors-events/mssqlserver-42108-database-engine-error.md
         - name: 42109
           href: relational-databases/errors-events/mssqlserver-42109-database-engine-error.md
+        - name: 41962
+          href: relational-databases/errors-events/mssqlserver-41962-database-engine-error.md
+        - name: 41973
+          href: relational-databases/errors-events/mssqlserver-41973-database-engine-error.md
+        - name: 41974
+          href: relational-databases/errors-events/mssqlserver-41974-database-engine-error.md
+        - name: 41976
+          href: relational-databases/errors-events/mssqlserver-41976-database-engine-error.md
+        - name: 41977
+          href: relational-databases/errors-events/mssqlserver-41977-database-engine-error.md
+        - name: 41986
+          href: relational-databases/errors-events/mssqlserver-41986-database-engine-error.md
+        - name: 47521
+          href: relational-databases/errors-events/mssqlserver-47521-database-engine-error.md
       - name: Native client error 50,000
         href: relational-databases/errors-events/sql-server-native-client-error-mssqlserver-50000.md
   - name: Event classes

@@ -1539,6 +1539,8 @@
         href: managed-instance/managed-instance-link-disaster-recovery.md
       - name: Best practices
         href: managed-instance/managed-instance-link-best-practices.md
+      - name: Troubleshoot
+        href: managed-instance/managed-instance-link-troubleshoot-how-to.md
 
     - name: Manage business continuity
       items:
