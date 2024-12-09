@@ -226,6 +226,7 @@ To use the link:
 - [Fail over the link](managed-instance-link-failover-how-to.md)
 - [Migrate with the link](managed-instance-link-migrate.md)
 - [Best practices for maintaining the link](managed-instance-link-best-practices.md)
+- [Troubleshoot issues with the link](managed-instance-link-troubleshoot-how-to.md)
 
 To learn more about the link: 
 - [Disaster recovery with Managed Instance link](managed-instance-link-disaster-recovery.md)

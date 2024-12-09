@@ -950,7 +950,7 @@ GO
 
 ## Troubleshoot 
 
-If you encounter an error message when you create the link, review the error message in the query output window for more information.
+If you encounter an error message when you create the link, review the error message in the query output window for more information. For more information, review [troubleshoot issues with the link](managed-instance-link-troubleshoot-how-to.md). 
 
 ## Related content
 
@@ -960,12 +960,12 @@ To use the link:
 - [Fail over the link](managed-instance-link-failover-how-to.md)
 - [Migrate with the link](managed-instance-link-migrate.md)
 - [Best practices for maintaining the link](managed-instance-link-best-practices.md)
+- [Troubleshoot issues with the link](managed-instance-link-troubleshoot-how-to.md)
 
 To learn more about the link: 
 - [Managed Instance link overview](managed-instance-link-feature-overview.md)
 - [Disaster recovery with Managed Instance link](managed-instance-link-disaster-recovery.md)
 
 For other replication and migration scenarios, consider:
-
 - [Transactional replication with SQL Managed Instance](replication-transactional-overview.md)
 - [Log Replay Service (LRS)](log-replay-service-overview.md)
