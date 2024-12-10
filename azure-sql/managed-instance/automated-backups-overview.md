@@ -146,9 +146,7 @@ To perform a restore, see [Restore a database from backups](recovery-using-backu
 Azure SQL Managed Instance automatically manages backups by creating full, differential, and transaction log backups. This process is governed by an internal schedule.
 
 ### Initial backup
-- **New databases**: Immediately after a database is created, restored, or undergoes backup redundancy changes, the first full backup is initiated. This backup typically completes within 30 minutes, though it may take longer for larger databases.
-
-- **Restored databases**: The duration of the initial backup for restored databases varies and depends on the database size. Restored databases or database copies, which are often larger, may require more time for the initial backup.
+Immediately after a database is created, restored, or undergoes backup redundancy changes, the first full backup is initiated. This backup typically completes within 30 minutes, though it may take longer. The duration of the initial backup for restored databases varies and depends on the database size. Larger restored databases or database copies, may require more time for the initial backup.
 
 > [!IMPORTANT]
 > The first full backup for a *new* database takes priority over other database backups, so it's the first backup taken during the first full backup window. If the full backup window is already active and other databases are being backed up, the first full backup for the new database is taken immediately after the full back up of another database completes.
