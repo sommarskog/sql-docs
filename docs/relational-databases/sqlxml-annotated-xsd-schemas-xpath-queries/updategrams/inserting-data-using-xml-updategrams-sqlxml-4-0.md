@@ -181,7 +181,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
  In [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], table names can include a space, such as the Order Details table in the Northwind database. However, this is not valid in XML characters that are valid [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] identifiers but not valid XML identifiers can be encoded using '__xHHHH\_\_' as the encoding value, where HHHH stands for the four-digit hexadecimal UCS-2 code for the character in the most significant bit-first order.  
   
 > [!NOTE]  
->  This example uses the Northwind database. You can install the Northwind database by using an SQL script available for download from this [Microsoft Web site](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/northwind-pubs).  
+>  This example uses the Northwind database. You can install the Northwind database by using a SQL script available for download from this [Microsoft Web site](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/northwind-pubs).  
   
  Also, the element name must be enclosed within brackets ([ ]). Because the characters [and] are not valid in XML, you must encode them as _x005B\_ and _x005D\_, respectively. (If you use a mapping schema, you can provide element names that do not contain characters that are not valid, such as white spaces. The mapping schema does the necessary mapping; therefore, you do not need to encode for these characters).  
   
@@ -636,7 +636,7 @@ CustOrder(OrderID, EmployeeID, OrderType)
       <p1:ProductPhotoID>118</p1:ProductPhotoID>  
    </p1:Picture>  
    <p1:Specifications> These are the product specifications.  
-     <Material>Almuminum Alloy</Material>  
+     <Material>Aluminum Alloy</Material>  
      <Color>Available in most colors</Color>  
      <ProductLine>Mountain bike</ProductLine>  
      <Style>Unisex</Style>  

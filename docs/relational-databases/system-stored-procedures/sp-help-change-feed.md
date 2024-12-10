@@ -3,11 +3,13 @@ title: "sys.sp_help_change_feed (Transact-SQL)"
 description: "The sys.sp_help_change_feed system stored procedure monitors the current configuration of Azure Synapse Link or Fabric Mirrored Database."
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: wiassaf, randolphwest
-ms.date: 03/12/2024
+ms.reviewer: imotiwala, randolphwest, anagha-todalbagi
+ms.date: 11/05/2024
 ms.service: fabric
 ms.subservice: system-objects
 ms.topic: "reference"
+ms.custom:
+  - ignite-2024
 f1_keywords:
   - "sys.sp_help_change_feed_TSQL"
   - "sys.sp_help_change_feed"
@@ -21,14 +23,15 @@ monikerRange: ">=sql-server-ver16 || =azuresqldb-current || =fabric || =azure-sq
 ---
 # sys.sp_help_change_feed (Transact-SQL)
 
-[!INCLUDE [sqlserver2022-asdb-asa-fabric](../../includes/applies-to-version/sqlserver2022-asdb-asa-fabric.md)]
+[!INCLUDE [sqlserver2022-asdb-asa-fabricmirroredsqldb-fabricsqldb](../../includes/applies-to-version/sqlserver2022-asdb-asa-fabricmirroredsqldb-fabricsqldb.md)]
 
 Monitors the current configuration of the change feed.
 
 This system stored procedure is used for:
 
 - The Azure Synapse Link feature for SQL Server instances and Azure SQL Database. For more information, see [Manage Azure Synapse Link for SQL Server and Azure SQL Database](../../sql-server/synapse-link/synapse-link-sql-server-change-feed-manage.md).
-- The Fabric Mirrored Database feature for Azure SQL Database. For more information, see [What is Mirroring in Fabric?](/fabric/database/mirrored-database/overview)
+- The Fabric Mirrored Database feature for Azure SQL Database. For more information, see [Microsoft Fabric mirrored databases](/fabric/database/mirrored-database/overview).
+- SQL database in Microsoft Fabric. For more information, see [SQL database in Microsoft Fabric](/fabric/database/sql/overview).
 
 ## Syntax
 
@@ -52,9 +55,9 @@ EXECUTE sys.sp_help_change_feed;
 | `table_name` | **sysname** | The name of the change feed table. |
 | `table_id` | **uniqueidentifier** | The unique identifier for the change feed table. Generated during change feed setup workflow. |
 | `table_object_id` | **int** | The object ID of the change feed table. |
-| `state` | **tinyint** | The state of the change feed table. |
+| `state` | **tinyint** | The state of the change feed table. Valid state values: `1` - Enabled. `2` - Exporting. `3` - Exported. `4` - Active. `5` - Disabled. `6` - Pending Disablement. |
 | `version` | **binary(10)** | The version of the change feed table. |
-| `snapshot_phase` | **tinyint** | Phase of the current snapshot. |
+| `snapshot_phase` | **tinyint** | Phase of the current snapshot which progresses from one to six. <br/>`1` - ABORT_PRIOR_SNAPSHOT_IF_ANY<br/>`2` - SET_TABLEVERSIONLSN<br/>`3` - EXPORT_SCHEMA_FILE<br/>`4` - EMIT_SNAPSHOT_BEGINENTRY<br/>`5` - EXPORT_DATA_FILE<br/>`6` - EMIT_SNAPSHOT_ENDENTRY|
 | `snapshot_current_phase_time` | **datetime** | Time when the current snapshot phase started. |
 | `snapshot_retry_count` | **int** | Number of times snapshot has attempted to retry. |
 | `snapshot_start_time` | **datetime** | Start time of snapshot phase |
@@ -82,16 +85,3 @@ EXEC sp_help_change_feed;
 - [sys.sp_change_feed_configure_parameters (Transact-SQL)](sp-change-feed-configure-parameters.md)
 - [sys.dm_change_feed_log_scan_sessions (Transact-SQL)](../system-dynamic-management-views/sys-dm-change-feed-log-scan-sessions.md)
 - [sys.dm_change_feed_errors (Transact-SQL)](../system-dynamic-management-views/sys-dm-change-feed-errors.md)
-
-**For Microsoft Fabric mirrored databases**:
-
-- [What is Mirroring in Fabric?](/fabric/database/mirrored-database/overview)
-- [Monitor Fabric mirrored database replication](/fabric/database/mirrored-database/monitor)
-- [Explore data in your Mirrored database using Microsoft Fabric](/fabric/database/mirrored-database/explore)
-
-**For Azure Synapse Link**:
-
-- [What is Azure Synapse Link for SQL?](/azure/synapse-analytics/synapse-link/sql-synapse-link-overview)
-- [Azure Synapse Link for SQL change feed](../../sql-server/synapse-link/synapse-link-sql-server-change-feed.md)
-- [Manage Azure Synapse Link for SQL Server and Azure SQL Database](../../sql-server/synapse-link/synapse-link-sql-server-change-feed-manage.md)
-- [Troubleshoot: Azure Synapse Link for SQL initial snapshot issues](/azure/synapse-analytics/synapse-link/troubleshoot/troubleshoot-sql-snapshot-issues)

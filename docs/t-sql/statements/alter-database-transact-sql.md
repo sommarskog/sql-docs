@@ -174,7 +174,7 @@ To decrease the size of a database, use [DBCC SHRINKDATABASE](../database-consol
 
 The `ALTER DATABASE` statement must run in auto-commit mode (the default transaction management mode) and isn't allowed in an explicit or implicit transaction.
 
-The state of a database file (for example, online or offline), is maintained independently from the state of the database. For more information, see [File States](../../relational-databases/databases/file-states.md). The state of the files within a filegroup determines the availability of the whole filegroup. For a filegroup to be available, all files within the filegroup must be online. If a filegroup is offline, any attempt to access the filegroup by an SQL statement fails with an error. When you build query plans for SELECT statements, the query optimizer avoids nonclustered indexes and indexed views that reside in offline filegroups. This enables these statements to succeed. However, if the offline filegroup contains the heap or clustered index of the target table, the SELECT statements fail. Additionally, any `INSERT`, `UPDATE`, or `DELETE` statement that modifies a table with any index in an offline filegroup fails.
+The state of a database file (for example, online or offline), is maintained independently from the state of the database. For more information, see [File States](../../relational-databases/databases/file-states.md). The state of the files within a filegroup determines the availability of the whole filegroup. For a filegroup to be available, all files within the filegroup must be online. If a filegroup is offline, any attempt to access the filegroup by a SQL statement fails with an error. When you build query plans for SELECT statements, the query optimizer avoids nonclustered indexes and indexed views that reside in offline filegroups. This enables these statements to succeed. However, if the offline filegroup contains the heap or clustered index of the target table, the SELECT statements fail. Additionally, any `INSERT`, `UPDATE`, or `DELETE` statement that modifies a table with any index in an offline filegroup fails.
 
 When a database is in the RESTORING state, most `ALTER DATABASE` statements fail. The exception is setting database mirroring options. A database might be in the RESTORING state during an active restore operation or when a restore operation of a database or log file fails because of a corrupted backup file.
 
@@ -450,7 +450,7 @@ To enforce data residency when you're creating a database by using T-SQL, use `L
 Specifies the maximum size of the database. The maximum size must comply with the valid set of values for the EDITION property of the database. Changing the maximum size of the database can cause the database EDITION to be changed.
 
 > [!NOTE]
-> The **MAXSIZE** argument does not apply to single databases in the Hyperscale service tier. Hyperscale service tier databases grow as needed, up to 100 TB. The SQL Database service adds storage automatically - you do not need to set a maximum size.
+> The **MAXSIZE** argument does not apply to single databases in the Hyperscale service tier. Single Hyperscale service tier databases grow as needed, up to 128 TB. The SQL Database service adds storage automatically - you do not need to set a maximum size.
 
 **DTU model**
 

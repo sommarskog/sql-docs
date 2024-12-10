@@ -4,10 +4,12 @@ description: FROM clause plus JOIN, APPLY, PIVOT (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: randolphwest
-ms.date: 09/04/2024
+ms.date: 09/25/2024
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
+ms.custom:
+  - ignite-2024
 f1_keywords:
   - "JOIN"
   - "FROM_TSQL"
@@ -33,11 +35,11 @@ helpviewer_keywords:
   - "derived tables"
 dev_langs:
   - "TSQL"
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=fabric"
+monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric"
 ---
 # FROM clause plus JOIN, APPLY, PIVOT (Transact-SQL)
 
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw-fabricse-fabricdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw-fabricse-fabricdw.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw-fabricse-fabricdw-fabricsqldb](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw-fabricse-fabricdw-fabricsqldb.md)]
 
 In Transact-SQL, the FROM clause is available on the following statements:
 
@@ -57,7 +59,7 @@ This article also discusses the following keywords that can be used on the FROM 
 
 ## Syntax
 
-Syntax for SQL Server and Azure SQL Database:
+Syntax for SQL Server, Azure SQL Database, and Fabric SQL database:
 
 ```syntaxsql
 [ FROM { <table_source> } [ , ...n ] ]
@@ -130,7 +132,7 @@ Syntax for SQL Server and Azure SQL Database:
         <date_time_literal> | @date_time_variable
 ```
 
-Syntax for Parallel Data Warehouse, Azure Synapse Analytics, and Microsoft Fabric:
+Syntax for Parallel Data Warehouse, Azure Synapse Analytics:
 
 ```syntaxsql
 FROM { <table_source> [ , ...n ] }
@@ -145,6 +147,39 @@ FROM { <table_source> [ , ...n ] }
 
 <tablesample_clause> ::=
     TABLESAMPLE ( sample_number [ PERCENT ] ) -- Azure Synapse Analytics Dedicated SQL pool only
+
+<joined_table> ::=
+{
+    <table_source> <join_type> <table_source> ON search_condition
+    | <table_source> CROSS JOIN <table_source>
+    | left_table_source { CROSS | OUTER } APPLY right_table_source
+    | [ ( ] <joined_table> [ ) ]
+}
+
+<join_type> ::=
+    [ INNER ] [ <join hint> ] JOIN
+    | LEFT  [ OUTER ] JOIN
+    | RIGHT [ OUTER ] JOIN
+    | FULL  [ OUTER ] JOIN
+
+<join_hint> ::=
+    REDUCE
+    | REPLICATE
+    | REDISTRIBUTE
+```
+
+Syntax for Microsoft Fabric:
+
+
+```syntaxsql
+FROM { <table_source> [ , ...n ] }
+
+<table_source> ::=
+{
+    [ database_name . [ schema_name ] . | schema_name . ] table_or_view_name [ AS ] table_or_view_alias
+    | derived_table [ AS ] table_alias [ ( column_alias [ , ...n ] ) ]
+    | <joined_table>
+}
 
 <joined_table> ::=
 {

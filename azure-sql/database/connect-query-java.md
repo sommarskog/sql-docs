@@ -41,7 +41,7 @@ AZ_RESOURCE_GROUP=database-workshop
 AZ_DATABASE_NAME=<YOUR_DATABASE_NAME>
 AZ_LOCATION=<YOUR_AZURE_REGION>
 AZ_SQL_SERVER_USERNAME=demo
-AZ_SQL_SERVER_PASSWORD=<YOUR_AZURE_SQL_PASSWORD>
+AZ_SQL_SERVER_PASSWORD=<password>
 AZ_LOCAL_IP_ADDRESS=<YOUR_LOCAL_IP_ADDRESS>
 ```
 
@@ -156,7 +156,7 @@ password=$AZ_SQL_SERVER_PASSWORD
 - Replace the two `$AZ_DATABASE_NAME` variables with the value that you configured at the beginning of this article.
 - Replace the `$AZ_SQL_SERVER_PASSWORD` variable with the value that you configured at the beginning of this article.
 
-### Create an SQL file to generate the database schema
+### Create a SQL file to generate the database schema
 
 We will use a *src/main/resources/`schema.sql`* file in order to create a database schema. Create that file, with the following content:
 

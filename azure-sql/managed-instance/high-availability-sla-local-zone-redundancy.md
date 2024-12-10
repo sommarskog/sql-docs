@@ -34,9 +34,9 @@ By default, Azure SQL Managed Instance achieves *availability* through local red
 - Customer initiated [management operations](management-operations-overview.md) that result in a brief downtime
 - Service maintenance operations
 - Issues and datacenter outages with the:
-    - rack where the machines that power your service are running
-    - physical machine that hosts the VM that runs the SQL database engine
-    - virtual machine that runs the SQL database engine
+    - Rack where the machines that power your service are running.
+    - Physical machine that hosts the VM that runs the SQL database engine.
+    - Virtual machine that runs the SQL database engine
 - Other problems with the SQL database engine
 - Other potential unplanned local outages
 
@@ -95,7 +95,7 @@ As an extra benefit, the local storage availability model includes the ability t
 
 Zone-redundant availability is based on placing replicas across three Azure availability zones in the primary region. Each availability zone is a separate physical location with independent power, cooling, and networking.
 
-By default, the cluster of nodes for the local storage availability model are created in the same datacenter. With the introduction of [Azure Availability Zones](/azure/availability-zones/az-overview), SQL Managed Instance places different replicas in different availability zones in the same region. To eliminate a single point of failure, the control ring is also duplicated across multiple zones. The control plane traffic is then routed to a load balancer that is also deployed across availability zones. Traffic routing from the control plane to the load balancer is controlled by [Azure Traffic Manager (ATM)](/azure/traffic-manager/traffic-manager-overview). 
+By default, the cluster of nodes for the local storage availability model are created in the same datacenter. With the introduction of [Azure Availability Zones](/azure/reliability/availability-zones-overview), SQL Managed Instance places different replicas in different availability zones in the same region. To eliminate a single point of failure, the control ring is also duplicated across multiple zones. The control plane traffic is then routed to a load balancer that is also deployed across availability zones. Traffic routing from the control plane to the load balancer is controlled by [Azure Traffic Manager (ATM)](/azure/traffic-manager/traffic-manager-overview). 
 
 By using a zone-redundant configuration, you can make your Business Critical or General Purpose instances resilient to a much larger set of failures, including catastrophic datacenter outages, without any changes to the application logic. You can convert any existing Business Critical or General Purpose instances to the zone-redundant configuration.
 
@@ -124,13 +124,13 @@ The following diagram demonstrates the zone redundancy architecture for the Busi
 
 ## <a id="testing-application-fault-resiliency"></a> Test application fault resiliency
 
-Availability is a fundamental part of the SQL Managed Instance platform that works transparently for your database application. However, we recognize that you might want to test how the automatic failover operations initiated during planned or unplanned events would impact an application before you deploy it to production. You can manually trigger a failover by calling a special API to restart a managed instance. Because the restart operation is intrusive and a large number of them could stress the platform, only one failover call is allowed every 15 minutes for each managed instance.
+Availability is a fundamental part of the SQL Managed Instance platform that works transparently for your database application. However, we recognize that you might want to test how the automatic failover operations initiated during planned or unplanned events would impact an application before you deploy it to production. You can manually trigger a failover by calling a special API to [restart a managed instance](user-initiated-failover.md). Because the restart operation is intrusive and a large number of them could stress the platform, only one failover call is allowed every 15 minutes for each managed instance.
 
 During a true failover, connections to the instance fail while the SQL service becomes primary on a different node. To simulate a failover, invoke the command that restarts the SQL process to simulate starting the service as if there was a failover. However, connections may fail for a longer period during a true failover compared to a simulated failover, since during a true failover, the SQL process becomes the primary on another virtual machine within the cluster (either locally, or in another zone if zone-redundancy is enabled) and during a simulated failover, the SQL process is restarted on the existing virtual machine.  
 
-The manual failover command in this section behaves the same way in both locally redundant, and zone-redundant configurations - it only restarts the SQL process locally, and does not initiate a failover to another node. This local failover is different to a failover that occurs for a failover group. 
+The manual failover command in this section typically behaves the same way in both locally redundant, and zone-redundant configurations - it only restarts the SQL process locally, and does not initiate a failover to another node, though [a few exceptions apply](user-initiated-failover.md#when-to-use-manual-failover). This local failover is different to a failover that occurs for a failover group. 
 
-A local failover can be initiated using PowerShell, REST API, or Azure CLI:
+A local failover can be initiated by using PowerShell, REST API, or Azure CLI:
 
 | PowerShell | REST API | Azure CLI |
 | :--- | :--- | :--- |
@@ -144,7 +144,7 @@ Azure SQL Managed Instance features a built-in high availability solution that i
 ## Next steps
 
 - [Enable zone redundancy](instance-zone-redundancy-configure.md) for Azure SQL Managed Instance. 
-- Learn about [Azure Availability Zones](/azure/availability-zones/az-overview)
+- Learn about [Azure Availability Zones](/azure/reliability/availability-zones-overview)
 - Learn about [Service Fabric](/azure/service-fabric/service-fabric-overview)
 - Learn about [Azure Traffic Manager](/azure/traffic-manager/traffic-manager-overview)
 - Learn [How to initiate a manual failover on SQL Managed Instance](user-initiated-failover.md)

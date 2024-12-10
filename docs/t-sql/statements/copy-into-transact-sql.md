@@ -264,6 +264,8 @@ The COPY command autodetects the compression type based on the file extension wh
 - .snappy – **Snappy**
 - .deflate - **DefaultCodec**  (Parquet and ORC only)
 
+The COPY command requires that gzip files do not contain any trailing garbage to operate normally. The gzip format strictly requires that files be composed of valid members without any additional information before, between, or after them. Any deviation from this format, such as the presence of trailing non-gzip data, will result in the failure of the COPY command. Make sure to verify there's no trailing garbage at the end of gzip files to ensure COPY can successfully process these files.
+
 #### *FIELDQUOTE = 'field_quote'*
 
 *FIELDQUOTE* applies to CSV and specifies a single character that is used as the quote character (string delimiter) in the CSV file. If not specified, the quote character (") is used as the quote character as defined in the RFC 4180 standard. Hexadecimal notation is also supported for FIELDQUOTE. Extended ASCII and multi-byte characters aren't supported with UTF-8 for FIELDQUOTE.
@@ -584,6 +586,7 @@ WITH
  [ , FIELDTERMINATOR =  'field_terminator' ]
  [ , ROWTERMINATOR = 'row_terminator' ]
  [ , FIRSTROW = first_row ]
+ [ , DATEFORMAT = 'date_format' ]
  [ , ENCODING = { 'UTF8' | 'UTF16' } ]
  [ , PARSER_VERSION = { '1.0' | '2.0' } ]
 )
@@ -731,6 +734,8 @@ The COPY command autodetects the compression type based on the file extension wh
 
 Loading compressed files is currently only supported with *PARSER_VERSION* 1.0. 
 
+The COPY command requires that gzip files do not contain any trailing garbage to operate normally. The gzip format strictly requires that files be composed of valid members without any additional information before, between, or after them. Any deviation from this format, such as the presence of trailing non-gzip data, will result in the failure of the COPY command. Make sure to verify there's no trailing garbage at the end of gzip files to ensure COPY can successfully process these files.
+
 #### *FIELDQUOTE = 'field_quote'*
 
 *FIELDQUOTE* only applies to CSV. Specifies a single character that is used as the quote character (string delimiter) in the CSV file. If not specified, the quote character (") is used as the quote character as defined in the RFC 4180 standard. Hexadecimal notation is also supported for FIELDQUOTE. Extended ASCII and multi-byte characters aren't supported with UTF-8 for FIELDQUOTE.
@@ -753,6 +758,10 @@ Extended ASCII and multi-byte characters aren't supported with UTF-8 for ROWTERM
 #### *FIRSTROW = First_row_int*
 
 *FIRSTROW* only applies to CSV. Specifies the row number that is read first in all files for the COPY command. Values start from 1, which is the default value. If the value is set to two, the first row in every file (header row) is skipped when the data is loaded. Rows are skipped based on the existence of row terminators.
+
+#### *DATEFORMAT = { 'mdy' | 'dmy' | 'ymd' | 'ydm' | 'myd' | 'dym' }*
+
+DATEFORMAT only applies to CSV and specifies the date format of the date mapping to SQL Server date formats. For an overview of all Transact-SQL date and time data types and functions, see [Date and Time Data Types and Functions (Transact-SQL)](../functions/date-and-time-data-types-and-functions-transact-sql.md). DATEFORMAT within the COPY command takes precedence over [DATEFORMAT configured at the session level](set-dateformat-transact-sql.md).
 
 #### *ENCODING = 'UTF8' | 'UTF16'*
 
@@ -777,9 +786,7 @@ Parser version 1.0 is available for backward compatibility only, and should be u
 
 ## Remarks
 
-COPY INTO in [!INCLUDE [fabricdw](../../includes/fabric-dw.md)] doesn't allow setting a date format for interpreting date character strings. By default, all dates are considered to have the month-day-year format. To ingest a CSV file with a different date format, use *SET DATEFORMAT* to specify the desired date format at the session level. For more information, see [SET DATEFORMAT (Transact-SQL)](set-dateformat-transact-sql.md).
-
-Additionally, the COPY statement accepts only UTF-8 and UTF-16 valid characters for row data and command parameters. Source files or parameters (such as ROW TERMINATOR or FIELD TERMINATOR) that use invalid characters may be interpreted incorrectly by the COPY statement and cause unexpected results such as data corruption, or other failures. Make sure your source files and parameters are UTF-8 or UTF-16 compliant before you invoke the COPY statement.  
+The COPY statement accepts only UTF-8 and UTF-16 valid characters for row data and command parameters. Source files or parameters (such as ROW TERMINATOR or FIELD TERMINATOR) that use invalid characters may be interpreted incorrectly by the COPY statement and cause unexpected results such as data corruption, or other failures. Make sure your source files and parameters are UTF-8 or UTF-16 compliant before you invoke the COPY statement.  
 
 ## Examples
 

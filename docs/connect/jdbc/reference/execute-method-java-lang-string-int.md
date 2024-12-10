@@ -8,7 +8,7 @@ ms.service: sql
 ms.subservice: connectivity
 ms.topic: reference
 apilocation: "sqljdbc.jar"
-apiname: "SQLServerStatement.execute (javal.lang.String.int[])"
+apiname: "SQLServerStatement.execute (java.lang.String.int[])"
 apitype: "Assembly"
 ---
 # execute Method (java.lang.String, int[])
@@ -26,7 +26,7 @@ public final boolean execute(
 #### Parameters
 *sql*
 
-A **String** that contains an SQL statement.
+A **String** that contains a SQL statement.
 
 *columnIndexes*
 

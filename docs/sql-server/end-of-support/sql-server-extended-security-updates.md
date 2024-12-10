@@ -76,7 +76,7 @@ The following table shows the differences between the two options:
 
 | Option | How to purchase | Key features |
 | --- | --- | --- |
-| **ESU plan** | Volume licensing center | - Supports [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instances both connected and not connected to Azure Arc<br />- Each year of coverage must be purchased separately, must be paid in full, and is differently priced<br />- Requires registration on Azure portal<br />- Supports manual installation of patches |
+| **ESU plan** | Volume licensing center | - Supports [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instances not connected to Azure Arc<br />- Each year of coverage must be purchased separately, must be paid in full, and is differently priced<br />- Requires registration on Azure portal<br />- Supports manual installation of patches |
 | **ESU subscription** | Microsoft Azure | - The covered [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instances must be connected to Azure Arc<br />- Continuous coverage until canceled<br />- Billed by Azure on an hourly basis<br />- Can be manually canceled at any time<br />- Automatic cancellation when migrated to Azure or upgraded to a supported version<br />- Supports automatic and manual installation of patches |
 
 > [!NOTE]  
@@ -142,9 +142,7 @@ You can either register a [single SQL Server instance](#single-sql-server-instan
 
    :::image type="content" source="media/sql-server-extended-security-updates/extended-security-updates-add-connected-or-registered.png" alt-text="Screenshot of the two options for adding connected or registered servers." lightbox="media/sql-server-extended-security-updates/extended-security-updates-add-connected-or-registered.png":::
 
-1. On the next screen, you can choose to add a single or multiple [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instances. The option for **Single SQL Instance** is selected by default.
-
-   :::image type="content" source="media/sql-server-extended-security-updates/extended-security-updates-add-sql-registration-options.png" alt-text="Screenshot of the Add SQL Registrations options." lightbox="media/sql-server-extended-security-updates/extended-security-updates-add-sql-registration-options.png":::
+1. Specify **Single SQL Instance**. This is the default value.
 
 1. Choose the **Subscription** and **Resource group** for your registered [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instance.
 
@@ -174,9 +172,7 @@ Multiple [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] instances ca
 
    :::image type="content" source="media/sql-server-extended-security-updates/extended-security-updates-add-connected-or-registered.png" alt-text="Screenshot of the two options for adding connected or registered servers." lightbox="media/sql-server-extended-security-updates/extended-security-updates-add-connected-or-registered.png":::
 
-1. On this screen, you can choose to add a single or multiple [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instances. Select the option for **Multiple SQL Instances**.
-
-   :::image type="content" source="media/sql-server-extended-security-updates/extended-security-updates-multiple-sql-instances.png" alt-text="Screenshot of the Multiple SQL Instances option." lightbox="media/sql-server-extended-security-updates/extended-security-updates-multiple-sql-instances.png":::
+1. Select the option for **Multiple SQL Instances**.
 
 1. Select the Browse icon to upload the CSV file containing multiple disconnected [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instances.
 

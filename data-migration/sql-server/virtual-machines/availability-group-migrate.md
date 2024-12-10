@@ -6,7 +6,7 @@ author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: mathoma
 ms.date: 06/26/2024
-ms.service: virtual-machines-sql
+ms.service: azure-vm-sql-server
 ms.subservice: migration-guide
 ms.topic: how-to
 ms.collection:
@@ -195,7 +195,7 @@ To create the load balancer, follow these steps:
 | `LoadBalancerName` | Mandatory | Specify the name of the load balancer to be created. |
 
 ```powershell
-./Create-ClusterLoadBalancer.ps1 -ConfigFilePath ./cluster-config.csv -ResourceGroupName $resoucegroupname -VNetName $vnetname -subnetName $subnetname -VnetResourceGroupName $vnetresourcegroupname -Location "eastus" -LoadBalancerName $loadbalancername
+./Create-ClusterLoadBalancer.ps1 -ConfigFilePath ./cluster-config.csv -ResourceGroupName $resourcegroupname -VNetName $vnetname -subnetName $subnetname -VnetResourceGroupName $vnetresourcegroupname -Location "eastus" -LoadBalancerName $loadbalancername
 ```
 
 ## Replicate machines

@@ -189,7 +189,7 @@ The following table lists the `DefaultAzureCredential` credential chain for each
 | 12.6 | [azure-identity 1.11.1](https://azuresdkdocs.blob.core.windows.net/$web/java/azure-identity/1.11.1/index.html#defaultazurecredential) | Environment<br/>Workload Identity<br/>Managed Identity<br/>Azure Developer CLI<br/>IntelliJ<br/>Azure CLI<br/>Azure PowerShell |
 | 12.8 | [azure-identity 1.12.2](https://azuresdkdocs.blob.core.windows.net/$web/java/azure-identity/1.12.2/index.html#defaultazurecredential) | Environment<br/>Workload Identity<br/>Managed Identity<br/>Azure Developer CLI<br/>IntelliJ<br/>Azure CLI<br/>Azure PowerShell |
 
-There are many variables that can be set to configure the `Environment` credential. For details on configuring the `DefaulAzureCredential` chain, including the `Environment` credential, see the relevant version of the azure-identity docs linked in the previous table.
+There are many variables that can be set to configure the `Environment` credential. For details on configuring the `DefaultAzureCredential` chain, including the `Environment` credential, see the relevant version of the azure-identity docs linked in the previous table.
 
 To use the `IntellijCredential` on Windows, set the environment variable `INTELLIJ_KEEPASS_PATH` to the location of your `keepass` file. For example, `INTELLIJ_KEEPASS_PATH=C:\user\your\path\to\the\keepass\file`.
 
@@ -636,8 +636,6 @@ To build and run the example:
     9. In the **Essentials** box, find the **Application (client) ID** and copy it. You need this value later to configure your application.
     10. Select **Certificates & secrets** from the navigation pane. On the **Client secrets (0)** tab, select **New client secret**. Enter a description for the secret and select an expiration (the default is fine). Select **Add** at the bottom. **Important** before leaving this page, copy the generated **Value** for your client secret. This value can't be viewed after leaving the page. This value is the client secret.
     11. Return to the [App registrations](https://ms.portal.azure.com/#view/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/~/RegisteredApps) pane for Microsoft Entra ID and find the **Endpoints** tab. Copy the URL under `OAuth 2.0 token endpoint`. This URL is your STS URL.
-
-    ![Azure Portal App Registration End Point - STS URL](media/jdbc_aad_token.png)
 
 1. Connect to your database as a Microsoft Entra admin and use a T-SQL command to provision a contained database user for your application principal. For more information on how to create a Microsoft Entra admin and a contained database user, see the [Connecting by using Microsoft Entra authentication](/azure/azure-sql/database/authentication-aad-overview).
 

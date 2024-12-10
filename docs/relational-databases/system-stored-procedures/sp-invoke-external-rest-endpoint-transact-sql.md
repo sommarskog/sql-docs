@@ -7,6 +7,8 @@ ms.reviewer: randolphwest
 ms.date: 09/10/2024
 ms.service: sql
 ms.topic: "reference"
+ms.custom:
+  - ignite-2024
 f1_keywords:
   - "sp_invoke_external_rest_endpoint_TSQL"
   - "sys.sp_invoke_external_rest_endpoint"
@@ -16,11 +18,11 @@ helpviewer_keywords:
   - "sp_invoke_external_rest_endpoint"
 dev_langs:
   - "TSQL"
-monikerRange: "azuresqldb-current"
+monikerRange: "=fabric"
 ---
 # sp_invoke_external_rest_endpoint (Transact-SQL)
 
-[!INCLUDE [asdb](../../includes/applies-to-version/asdb.md)]
+[!INCLUDE [asdb-fabricsqldb](../../includes/applies-to-version/asdb-fabricsqldb.md)]
 
 The `sp_invoke_external_rest_endpoint` stored procedure invokes an HTTPS REST endpoint provided as an input argument to the procedure.
 

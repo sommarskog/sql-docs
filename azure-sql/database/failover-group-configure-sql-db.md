@@ -5,7 +5,7 @@ description: Learn how to configure a failover group for a single or pooled data
 author: rajeshsetlem
 ms.author: rsetlem
 ms.reviewer: wiassaf, mathoma, randolphwest
-ms.date: 08/10/2024
+ms.date: 09/27/2024
 ms.service: azure-sql-database
 ms.subservice: high-availability
 ms.topic: how-to
@@ -379,7 +379,7 @@ Using a private link allows you to associate a logical server to a specific priv
 
 To use a private link with your failover group, do the following:
 
-1. Ensure your primary and secondary servers are in a [paired region](/azure/availability-zones/cross-region-replication-azure).
+1. Ensure your primary and secondary servers are in a [paired region](/azure/reliability/cross-region-replication-azure).
 1. Create the virtual network and subnet in each region to host private endpoints for primary and secondary servers such that they have nonoverlapping IP address spaces. For example, the primary virtual network address range of 10.0.0.0/16 and the secondary virtual network address range of 10.0.0.1/16 overlaps. For more information about virtual network address ranges, see the blog [designing Azure virtual networks](https://devblogs.microsoft.com/premier-developer/understanding-cidr-notation-when-designing-azure-virtual-networks-and-subnets/).
 1. Create a [private endpoint and Azure Private DNS zone for the primary server](/azure/private-link/create-private-endpoint-portal#create-a-private-endpoint).
 1. Create a private endpoint for the secondary server as well, but this time choose to reuse the same Private DNS zone that was created for the primary server.
@@ -406,6 +406,11 @@ This sequence is recommended specifically to avoid the problem where the geo-sec
 > [!NOTE]  
 > If you created a geo-secondary as part of the failover group configuration, it's not recommended to scale down the geo-secondary. This is to ensure your data tier has sufficient capacity to process your regular workload after a geo-failover.
 You might not be able to scale a geo-secondary after an unplanned failover when the former geo-primary is unavailable due to outage. This is a known limitation.
+
+The primary database in a failover group can't scale to a higher service tier (edition) unless the secondary database is first scaled to the higher tier. For example, if you want to scale up the primary from General Purpose to Business Critical, you have to first scale the geo-secondary to Business Critical. If you try to scale the primary or geo-secondary in a way that violates this rule, you will receive the following error:  
+
+`The source database 'Primaryserver.DBName' cannot have higher edition than the target database 'Secondaryserver.DBName'. Upgrade the edition on the target before upgrading the source.`
+
 
 ## <a name="preventing-the-loss-of-critical-data"></a> Prevent loss of critical data
 

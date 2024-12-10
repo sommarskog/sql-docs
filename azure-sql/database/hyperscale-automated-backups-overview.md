@@ -121,7 +121,7 @@ The following screenshot shows an example cost analysis.
 
 Hyperscale supports configurable storage redundancy. When you're creating a Hyperscale database, you can choose your preferred storage type:  read-access geo-zone-redundant storage (RA-GZRS), read-access geo-redundant storage (RA-GRS), zone-redundant storage (ZRS), or locally redundant storage (LRS).
 
-- **Geo-zone-redundant storage**: Copies your backups synchronously across three Azure availability zones in the primary region. similar to zone-redundant storage(ZRS). In addition, it copies your data asynchronously to a single physical location in the [paired](/azure/availability-zones/cross-region-replication-azure#azure-cross-region-replication-pairings-for-all-geographies) secondary region. It's currently available in only [certain regions](/azure/storage/common/storage-redundancy#geo-zone-redundant-storage).
+- **Geo-zone-redundant storage**: Copies your backups synchronously across three Azure availability zones in the primary region. similar to zone-redundant storage(ZRS). In addition, it copies your data asynchronously to a single physical location in the [paired](/azure/reliability/cross-region-replication-azure#azure-cross-region-replication-pairings-for-all-geographies) secondary region. It's currently available in only [certain regions](/azure/storage/common/storage-redundancy#geo-zone-redundant-storage).
 
 For more information about how the backups are replicated for other storage types, see [backup storage redundancy](automated-backups-overview.md#backup-storage-redundancy).
 
@@ -151,7 +151,7 @@ You might need to restore your Hyperscale database to a region that's different 
 >  
 > If the target is in the paired region, data transfer will be within a region. That transfer will be significantly faster than a cross-region data transfer. But it will still be a size-of-data operation.
 
-If you prefer, you can copy the database to a different region. Use this method if geo-restore isn't available because it's not supported with the selected storage redundancy type. For details, see [Database copy for Hyperscale](database-copy.md#database-copy-for-azure-sql-hyperscale).
+If you prefer, you can copy the database to a different region. Use this method if geo-restore isn't available because it's not supported with the selected storage redundancy type. For details, see [Database copy for Hyperscale](database-copy.md#database-copy-for-hyperscale-databases).
 
 ## Related content
 

@@ -8,7 +8,9 @@ ms.date: 03/12/2021
 ms.service: sql
 ms.subservice: performance
 ms.topic: troubleshooting
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+ms.custom:
+  - ignite-2024
+monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric"
 ---
 
 # Diagnose and resolve latch contention on SQL Server
@@ -304,7 +306,7 @@ The following table summarizes the major factors observed with this type of latc
 
 ### Latch contention on small tables with a non-clustered index and random inserts (queue table)
 
-This scenario is typically seen when an SQL table is used as a temporary queue (for example, in an asynchronous messaging system).
+This scenario is typically seen when a SQL table is used as a temporary queue (for example, in an asynchronous messaging system).
 
 In this scenario exclusive (EX) and shared (SH) latch contention can occur under the following conditions:
 

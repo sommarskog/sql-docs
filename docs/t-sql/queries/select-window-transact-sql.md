@@ -8,6 +8,8 @@ ms.date: 07/26/2024
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
+ms.custom:
+  - ignite-2024
 f1_keywords:
   - "WINDOW"
 helpviewer_keywords:
@@ -20,12 +22,12 @@ helpviewer_keywords:
   - "summary values [SQL Server]"
 dev_langs:
   - "TSQL"
-monikerRange: ">=sql-server-ver16 || >=sql-server-linux-ver16"
+monikerRange: "=azuresqldb-current || >=sql-server-ver16 || =azuresqldb-mi-current || >=sql-server-linux-ver16 || =fabric"
 ---
 
 # SELECT - WINDOW clause (Transact-SQL)
 
-[!INCLUDE [sqlserver2022](../../includes/applies-to-version/sqlserver2022-asdb-asmi.md)]
+[!INCLUDE [sqlserver2022-asdb-asmi-fabricsqldb](../../includes/applies-to-version/sqlserver2022-asdb-asmi-fabricsqldb.md)]
 
 The named window definition in the `WINDOW` clause determines the partitioning and ordering of a rowset before the window function, which uses the window in an `OVER` clause.
 
@@ -123,9 +125,11 @@ INNER JOIN Person.Person AS p
 INNER JOIN Person.Address AS a
     ON a.AddressID = p.BusinessEntityID
 WHERE TerritoryID IS NOT NULL
-    AND SalesYTD <> 0 WINDOW win AS (
+    AND SalesYTD <> 0
+WINDOW win AS
+    (
         PARTITION BY PostalCode ORDER BY SalesYTD DESC
-        )
+    )
 ORDER BY PostalCode;
 GO
 ```
@@ -193,7 +197,8 @@ SELECT SalesOrderID,
     MIN(OrderQty) OVER win AS [Min],
     MAX(OrderQty) OVER win AS [Max]
 FROM Sales.SalesOrderDetail
-WHERE SalesOrderID IN (43659, 43664) WINDOW win AS (PARTITION BY SalesOrderID);
+WHERE SalesOrderID IN (43659, 43664)
+WINDOW win AS (PARTITION BY SalesOrderID);
 GO
 ```
 
@@ -264,7 +269,8 @@ SELECT SalesOrderID AS OrderNumber,
         ) AS Count
 FROM Sales.SalesOrderDetail
 WHERE SalesOrderID IN (43659, 43664)
-    AND ProductID LIKE '71%' WINDOW win AS
+    AND ProductID LIKE '71%'
+WINDOW win AS
     (
         ORDER BY SalesOrderID, ProductID
     );

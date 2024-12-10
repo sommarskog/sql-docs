@@ -7,6 +7,8 @@ ms.date: 08/02/2024
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
+ms.custom:
+  - ignite-2024
 f1_keywords:
   - "databases"
   - "databases_TSQL"
@@ -16,11 +18,11 @@ helpviewer_keywords:
   - "sys.databases catalog view"
 dev_langs:
   - "TSQL"
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=fabric"
+monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric"
 ---
 # sys.databases (Transact-SQL)
 
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw-fabricsqldb.md)]
 
 Contains one row per database in the instance of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)].
 
@@ -72,7 +74,7 @@ If a database isn't `ONLINE`, or `AUTO_CLOSE` is set to `ON` and the database is
 | `is_db_chaining_on` | **bit** | `1` = Cross-database ownership chaining is ON<br />`0` = Cross-database ownership chaining is OFF |
 | `is_parameterization_forced` | **bit** | `1` = Parameterization is FORCED<br />`0` = Parameterization is SIMPLE |
 | `is_master_key_encrypted_by_server` | **bit** | `1` = Database has an encrypted master key<br />`0` = Database doesn't have an encrypted master key |
-| `is_query_store_on` | **bit** | `1` = The query store is enabled for this database. Check [sys.database_query_store_options](sys-database-query-store-options-transact-sql.md) to view the query store status.<br />`0` = The query store isn't enabled<br /><br />**Applies to**: [!INCLUDE [sssql16-md](../../includes/sssql16-md.md)] and later versions. |
+| `is_query_store_on` | **bit** | `1` = The Query Store is enabled for this database. Check [sys.database_query_store_options](sys-database-query-store-options-transact-sql.md) to view the Query Store status.<br />`0` = The Query Store isn't enabled<br /><br />**Applies to**: [!INCLUDE [sssql16-md](../../includes/sssql16-md.md)] and later versions. |
 | `is_published` | **bit** | `1` = Database is a publication database in a transactional or snapshot replication topology<br />`0` = Isn't a publication database |
 | `is_subscribed` | **bit** | This column isn't used. It will always return `0`, regardless of the subscriber status of the database. |
 | `is_merge_published` | **bit** | `1` = Database is a publication database in a merge replication topology<br />`0` = Isn't a publication database in a merge replication topology |

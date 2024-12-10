@@ -4,7 +4,7 @@ description: Describes prerequisites required for SQL Server enabled by Azure Ar
 author: anosov1960
 ms.author: sashan
 ms.reviewer: mikeray, randolphwest
-ms.date: 01/24/2024
+ms.date: 09/23/2024
 ms.topic: conceptual
 ms.custom: references_regions
 ---
@@ -62,9 +62,38 @@ Users can be assigned to built-in roles that have these permissions, for example
 
 For more information, see [Assign Azure roles using the Azure portal](/azure/role-based-access-control/role-assignments-portal).
 
+### Verify state of user databases
+
+When a SQL Server instance is enabled by Azure Arc, the connection sets some database permissions so that you can manage databases from Azure. For details about the permissions set at a database level, review [SQL permissions](configure-windows-accounts-agent.md#sql-permissions).
+
+Only databases that are online and updateable are included.
+
+Verify the state of any databases you plan to manage from Azure.
+
+This query lists all databases, their status, and if they are updateable:
+
+```sql
+SELECT 
+    name AS DatabaseName,
+    CASE 
+        WHEN state_desc = 'ONLINE' THEN 'Online'
+        WHEN state_desc = 'OFFLINE' THEN 'Offline'
+        ELSE 'Unknown'
+    END AS Status,
+    CASE 
+        WHEN is_read_only = 0 THEN 'READ_WRITE'
+        ELSE 'READ_ONLY'
+    END AS UpdateableStatus
+FROM sys.databases;
+```
+
+Run that query on any instance that you enable.
+
 ### Service account permissions
 
-The SQL Server service account must be a member of the sysadmin fixed server role on each SQL Server instance.
+The SQL Server service account must be a member of the `sysadmin` fixed server role on each SQL Server instance. By default, the SQL Server service account is a member of the `sysadmin` fixed server role. 
+
+For more information about this requirement, review [SQL Server service account](configure-least-privilege.md#sql-server-service-account).
 
 ### Set proxy exclusions
 
@@ -144,3 +173,4 @@ For VMware clusters, review [Support on VMware](#support-on-vmware).
 ## Related content
 
 - [SQL Server enabled by Azure Arc](overview.md)
+- [Known issues: SQL Server enabled by Azure Arc](known-issues.md)

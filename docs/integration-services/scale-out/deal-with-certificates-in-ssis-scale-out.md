@@ -23,8 +23,6 @@ In most cases, the Scale Out Master certificate is configured during the install
 
 In the **Integration Services Scale Out Configuration - Master Node** page of the SQL Server Installation wizard, you can choose to create a new self-signed TLS/SSL certificate or use an existing TLS/SSL certificate.
 
-![Master Config](media/master-config.PNG)
-
 **New certificate**. If you don't have special requirements for certificates, you can choose to create a new self-signed TLS/SSL certificate. You can further specify the CNs in the certificate. Make sure the host name of the master endpoint to be used later by Scale Out Workers is included in the CNs. By default, the computer name and IP address of the master node are included. 
 
 **Existing certificate**. If you choose to use an existing certificate, click **Browse** to select a TLS/SSL certificate from the **Root** certificate store of the local computer.
@@ -69,7 +67,7 @@ For example:
 
 ```dos
 netsh http delete sslcert ipport=0.0.0.0:8391
-netsh http add sslcert ipport=0.0.0.0:8391 certhash=0011001100110011001100110011001100110011 certstorename=Root appid={11111111-2222-3333-4444-555555555555}
+netsh http add sslcert ipport=0.0.0.0:8391 certhash=0011001100110011001100110011001100110011 certstorename=Root appid={00001111-aaaa-2222-bbbb-3333cccc4444}
 ```
 
 #### 3. Update the Scale Out Master service configuration file

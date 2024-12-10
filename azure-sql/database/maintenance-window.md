@@ -155,7 +155,7 @@ The following table is for [zone-redundant](high-availability-sla-local-zone-red
 | North Europe |  Yes | Yes | Yes |
 | South Central US  | | | Yes |
 | Southeast Asia | | |  Yes |
-| UK South | | | Yes |
+| UK South | Yes | Yes | Yes |
 | West Europe |  Yes | Yes | Yes |
 | West US 2 | | | Yes |
 | West US 3 | Yes | Yes | Yes |

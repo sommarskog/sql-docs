@@ -4,7 +4,7 @@ description: Create database syntax for SQL Server, Azure SQL Database, Azure Sy
 author: markingmyname
 ms.author: maghan
 ms.reviewer: wiassaf
-ms.date: 08/26/2024
+ms.date: 11/22/2024
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -101,7 +101,7 @@ CREATE DATABASE database_name
     | TWO_DIGIT_YEAR_CUTOFF = <two_digit_year_cutoff>
     | DB_CHAINING { OFF | ON }
     | TRUSTWORTHY { OFF | ON }
-    | PERSISTENT_LOG_BUFFER=ON ( DIRECTORY_NAME='<Filepath to folder on DAX formatted volume>' )
+    | PERSISTENT_LOG_BUFFER=ON ( DIRECTORY_NAME='path-to-directory-on-a-DAX-volume' )
     | LEDGER = {ON | OFF }
 }
 
@@ -286,7 +286,9 @@ The following options are allowable only when CONTAINMENT has been set to PARTIA
 
 #### PERSISTENT_LOG_BUFFER=ON ( DIRECTORY_NAME='' )
 
-  When this option is specified, the transaction log buffer is created on a volume that is located on a disk device backed by Storage Class Memory (NVDIMM-N nonvolatile storage), also known as a persistent log buffer. For more information, see [Transaction Commit latency acceleration using Storage Class Memory](/archive/blogs/sqlserverstorageengine/transaction-commit-latency-acceleration-using-storage-class-memory-in-windows-server-2016sql-server-2016-sp1). **Applies to**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] and newer.
+**Applies to**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] and later.
+
+When this option is specified, the transaction log buffer is created on a volume that is located on a disk device backed by Storage Class Memory (NVDIMM-N nonvolatile storage), also known as a persistent log buffer. For more information, see [Transaction Commit latency acceleration using Storage Class Memory](/archive/blogs/sqlserverstorageengine/transaction-commit-latency-acceleration-using-storage-class-memory-in-windows-server-2016sql-server-2016-sp1) and [Add persistent log buffer to a database](../../relational-databases/databases/add-persisted-log-buffer.md).
 
 #### LEDGER = {ON | OFF }
 
@@ -1080,7 +1082,7 @@ Specifies the maximum size of the database. MAXSIZE must be valid for the specif
 Following are the supported MAXSIZE values and defaults (D) for the service tiers.
 
 > [!NOTE]
-> The **MAXSIZE** argument does not apply to single databases in the Hyperscale service tier. Hyperscale tier databases grow as needed, up to 100 TB. The SQL Database service adds storage automatically - you do not need to set a maximum size.
+> The **MAXSIZE** argument does not apply to single databases in the Hyperscale service tier. Single Hyperscale tier databases grow as needed, up to 128 TB. The SQL Database service adds storage automatically - you do not need to set a maximum size.
 
 **DTU model for single and pooled databases on a SQL Database server**
 

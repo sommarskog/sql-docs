@@ -1164,6 +1164,8 @@ items:
             href: relational-databases/databases/database-properties-filegroups-page.md
           - name: Options page
             href: relational-databases/databases/database-properties-options-page.md
+          - name: Configurations page
+            href: relational-databases/databases/database-properties-configurations-page.md
           - name: Change Tracking page
             href: relational-databases/databases/database-properties-changetracking-page.md
           - name: Transaction log shipping page
@@ -2201,6 +2203,8 @@ items:
         href: relational-databases/xml/xml-system-stored-procedures.md
       - name: Use the value() & nodes() Methods with OPENXML
         href: relational-databases/xml/use-the-value-and-nodes-methods-with-openxml.md
+  - name: Vectors in the SQL Database Engine
+    href: relational-databases/vectors/vectors-sql-server.md
 - name: Development
   items:
   - name: Code a client program > 
@@ -2619,6 +2623,8 @@ items:
         href: relational-databases/json/how-for-json-escapes-special-characters-and-control-characters-sql-server.md
       - name: Use output
         href: relational-databases/json/use-for-json-output-in-sql-server-and-in-client-apps-sql-server.md
+  - name: Vectors
+    href: relational-databases/vectors/vectors-sql-server.md
   - name: Language Extensions
     items:
     - name: Overview
@@ -3364,7 +3370,7 @@ items:
         href: relational-databases/native-client-odbc-queries/executing-statements/procedures.md
       - name: Allocating a Statement Handle
         href: relational-databases/native-client-odbc-queries/allocating-a-statement-handle.md
-      - name: Constructing an SQL Statement
+      - name: Constructing a SQL Statement
         href: relational-databases/native-client-odbc-queries/constructing-an-sql-statement-odbc.md
       - name: Constructing SQL Statements for Cursors
         href: relational-databases/native-client-odbc-queries/constructing-sql-statements-for-cursors.md
@@ -4425,8 +4431,6 @@ items:
       href: database-engine/install-windows/supported-version-and-edition-upgrades-2017.md
     - name: Supported Version & Edition Upgrades SQL Server 2016
       href: database-engine/install-windows/supported-version-and-edition-upgrades.md?view=sql-server-2016&preserve-view=true
-    - name: Prepare for upgrade by running Data Migration Assistant
-      href: database-engine/install-windows/prepare-for-upgrade-by-running-data-migration-assistant.md
     - name: Analysis Services
       href: database-engine/install-windows/upgrade-analysis-services.md
     - name: Data Quality Services
@@ -4497,7 +4501,7 @@ items:
       href: database-engine/configure-windows/hybrid-buffer-pool.md
     - name: Persistent memory (PMEM)
       href: database-engine/configure-windows/configure-persistent-memory.md
-    - name: Add persisted log buffer
+    - name: Add persistent log buffer
       href: relational-databases/databases/add-persisted-log-buffer.md
     - name: Change Server Authentication Mode
       href: database-engine/configure-windows/change-server-authentication-mode.md
@@ -4527,6 +4531,8 @@ items:
         href: database-engine/configure-windows/ad-hoc-distributed-queries-server-configuration-option.md
       - name: ADR cleaner retry timeout
         href: database-engine/configure-windows/adr-cleaner-retry-timeout-configuration-option.md
+      - name: ADR Cleaner Thread Count
+        href: database-engine/configure-windows/adr-cleaner-thread-count-configuration-option.md
       - name: ADR Preallocation Factor
         href: database-engine/configure-windows/adr-preallocation-factor-server-configuration-option.md
       - name: affinity Input-Output mask
@@ -7259,6 +7265,12 @@ items:
       href: sql-server/synapse-link/synapse-link-sql-server-change-feed.md
     - name: Azure Synapse Link for SQL change feed management
       href: sql-server/synapse-link/synapse-link-sql-server-change-feed-manage.md
+  - name: Fabric Databases
+    items:
+    - name: Microsoft Fabric Mirroring
+      href: sql-server/fabric-database/fabric-mirrored-databases.md
+    - name: SQL database in Microsoft Fabric
+      href: sql-server/fabric-database/sql-database-in-fabric.md
   - name: Machine Learning Services > 
     href: machine-learning/
   - name: Analytics Platform System > 
@@ -7833,6 +7845,8 @@ items:
           items:
           - name: Wizard
             href: relational-databases/security/encryption/always-encrypted-wizard.md
+          - name: Wizard (SSMS 21)
+            href: relational-databases/security/encryption/always-encrypted-wizard-ssms-21.md
           - name: PowerShell
             href: relational-databases/security/encryption/configure-column-encryption-using-powershell.md
           - name: DAC package
@@ -8125,7 +8139,7 @@ items:
     items:
     - name: Permissions or Securables page
       href: relational-databases/security/permissions-or-securables-page.md
-    - name: Resumable add table contraints
+    - name: Resumable add table constraints
       href: relational-databases/security/resumable-add-table-constraints.md
 - name: Tools
   items:
@@ -8644,6 +8658,52 @@ items:
       href: ssdt/ssis-vs2022-troubleshooting-guide.md
   - name: SQL Server Management Studio (SSMS)
     items:
+    - name: SQL Server Management Studio 21 Preview
+      items:
+      - name: Frequently asked questions
+        href: ssms/ssms-21/faq.yml
+      - name: Release notes for SQL Server Managemement Studio 21 Preview
+        href: ssms/ssms-21/release-notes-21.md
+      - name: System requirements for SQL Server Managemement Studio 21 Preview
+        href: ssms/ssms-21/system-requirements.md
+      - name: Known issues for SQL Server Managemement Studio 21 Preview
+        href: ssms/ssms-21/known-issues.md
+      - name: Installation
+        items:
+        - name: Download and install SQL Server Managemement Studio 21 Preview
+          href: ssms/install/install.md
+        - name: Select installation location
+          href: ssms/install/select-install-location.md
+        - name: Install with command-line parameters
+          href: ssms/install/command-line-parameters.md
+        - name: Create an offline installation
+          href: ssms/install/create-offline.md
+        - name: Install local help documentation
+          href: ssms/install/local-help-content.md
+        - name: Install versions side-by-side
+          href: ssms/install/side-by-side.md
+        - name: Update SQL Server Managemement Studio 21 Preview
+          href: ssms/install/update.md
+        - name: Modify SQL Server Managemement Studio 21 Preview
+          href: ssms/install/modify.md
+        - name: Repair SQL Server Managemement Studio 21 Preview
+          href: ssms/install/repair.md
+        - name: Troubleshoot installation
+          href: ssms/install/troubleshoot.md
+        - name: Uninstall SQL Server Managemement Studio 21 Preview
+          href: ssms/install/uninstall.md
+        - name: Channels for SQL Server Managemement Studio 21 Preview
+          href: ssms/install/channels-release.md
+      - name: User permissions
+        href: ssms/ssms-21/user-permissions.md
+      - name: Sign in or switch user accounts
+        href: ssms/ssms-21/sign-in.md
+      - name: Access multiple accounts
+        href: ssms/ssms-21/sign-in-access-multiple-accounts.md
+      - name: Release history
+        href: ssms/ssms-21/release-history.md
+      - name: Product roadmap
+        href: ssms/ssms-21/roadmap.md
     - name: Download SSMS
       href: ssms/download-sql-server-management-studio-ssms.md
     - name: Release notes
@@ -9952,24 +10012,22 @@ items:
     items: 
     - name: Extended features and tools
       href: tools/download-sql-feature-packs.md
-  - name: Visual Studio Code 
+  - name: Visual Studio Code extensions
     items:
-    - name: Overview
-      href: tools/visual-studio-code/mssql-extensions.md
-    - name: Connect and Query Tutorial
-      href: tools/visual-studio-code/sql-server-develop-use-vscode.md
-    - name: Query History
-      href: tools/visual-studio-code/mssql-query-history.md
-    - name: SQL Database Projects
-      href: /azure-data-studio/extensions/sql-database-project-extension
-    - name: SQL Bindings for Azure Functions
+    - name: MSSQL extension
       items: 
       - name: Overview
-        href: tools/visual-studio-code/create-azure-function-with-mssql.md
-      - name: From Object Explorer Tutorial
-        href: tools/visual-studio-code/create-azure-function-with-mssql-object-explorer.md
-      - name: From Command Palette Tutorial
-        href: tools/visual-studio-code/create-azure-function-with-mssql-command-palette.md
+        href: tools/visual-studio-code-extensions/mssql/mssql-extension-visual-studio-code.md
+      - name: Connect and Query
+        href: tools/visual-studio-code-extensions/mssql/connect-database-visual-studio-code.md
+    - name: SQL bindings for Azure Functions
+      items: 
+      - name: Overview
+        href: tools/visual-studio-code-extensions/sql-bindings/create-azure-function.md
+      - name: Object Explorer
+        href: tools/visual-studio-code-extensions/sql-bindings/create-azure-function-object-explorer.md
+      - name: Command Palette
+        href: tools/visual-studio-code-extensions/sql-bindings/create-azure-function-command-palette.md
 - name: Tutorials
   items:
   - name: SQL Server
@@ -10162,7 +10220,7 @@ items:
       - name: Connectivity libraries
         href: linux/sql-server-linux-develop-connectivity-libraries.md
       - name: Use Visual Studio Code
-        href: ./tools/visual-studio-code/sql-server-develop-use-vscode.md
+        href: tools/visual-studio-code-extensions/mssql/connect-database-visual-studio-code.md
       - name: Use SSDT
         href: linux/sql-server-linux-develop-use-ssdt.md
     - name: Manage
@@ -10456,6 +10514,8 @@ items:
           href: sql-server/azure-arc/troubleshoot-telemetry-endpoint.md
         - name: Troubleshoot best practices assessment
           href: sql-server/azure-arc/troubleshoot-assessment.md
+        - name: Known issues
+          href: sql-server/azure-arc/known-issues.md
     - name: Azure Arc-enabled data services >
       href: /azure/azure-arc/data/overview
 
@@ -11781,14 +11841,28 @@ items:
           href: relational-databases/errors-events/mssqlserver-41396-database-engine-error.md
         - name: 41399
           href: relational-databases/errors-events/mssqlserver-41399-database-engine-error.md
-      - name: Errors 41,400 to 42,999
+      - name: Errors 41,400 to 49,999
         items:
         - name: Overview
-          href: relational-databases/errors-events/database-engine-events-and-errors-41400-to-42999.md
+          href: relational-databases/errors-events/database-engine-events-and-errors-41400-to-49999.md
         - name: 42108
           href: relational-databases/errors-events/mssqlserver-42108-database-engine-error.md
         - name: 42109
           href: relational-databases/errors-events/mssqlserver-42109-database-engine-error.md
+        - name: 41962
+          href: relational-databases/errors-events/mssqlserver-41962-database-engine-error.md
+        - name: 41973
+          href: relational-databases/errors-events/mssqlserver-41973-database-engine-error.md
+        - name: 41974
+          href: relational-databases/errors-events/mssqlserver-41974-database-engine-error.md
+        - name: 41976
+          href: relational-databases/errors-events/mssqlserver-41976-database-engine-error.md
+        - name: 41977
+          href: relational-databases/errors-events/mssqlserver-41977-database-engine-error.md
+        - name: 41986
+          href: relational-databases/errors-events/mssqlserver-41986-database-engine-error.md
+        - name: 47521
+          href: relational-databases/errors-events/mssqlserver-47521-database-engine-error.md
       - name: Native client error 50,000
         href: relational-databases/errors-events/sql-server-native-client-error-mssqlserver-50000.md
   - name: Event classes
@@ -12243,6 +12317,8 @@ items:
         href: relational-databases/system-catalog-views/sys-database-usage-azure-sql-database.md
       - name: sys.dm_elastic_pool_resource_stats
         href: relational-databases/system-dynamic-management-views/sys-dm-elastic-pool-resource-stats-azure-sql-database.md
+      - name: sys.dm_hs_database_log_rate
+        href: relational-databases/system-dynamic-management-views/sys-dm-hs-database-log-rate.md
       - name: sys.elastic_pool_resource_stats
         href: relational-databases/system-catalog-views/sys-elastic-pool-resource-stats-azure-sql-database.md
       - name: sys.event_log
@@ -12338,8 +12414,8 @@ items:
         href: relational-databases/system-catalog-views/sys-database-recovery-status-transact-sql.md
       - name: sys.database_scoped_configurations
         href: relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md
-      - name: sys.database_automatic_tuning_configuration
-        href: relational-databases/system-catalog-views/sys-database-automatic-tuning-configuration-transact-sql.md
+      - name: sys.database_automatic_tuning_configurations
+        href: relational-databases/system-catalog-views/sys-database-automatic-tuning-configurations-transact-sql.md
       - name: sys.database_automatic_tuning_options
         href: relational-databases/system-catalog-views/sys-database-automatic-tuning-options-transact-sql.md
       - name: sys.database_automatic_tuning_mode
@@ -13584,6 +13660,8 @@ items:
         href: relational-databases/system-dynamic-management-views/sys-dm-os-memory-cache-hash-tables-transact-sql.md
       - name: sys.dm_os_memory_clerks
         href: relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md
+      - name: sys.dm_os_memory_health_history
+        href: relational-databases/system-dynamic-management-views/sys-dm-os-memory-health-history.md
       - name: sys.dm_os_memory_nodes
         href: relational-databases/system-dynamic-management-views/sys-dm-os-memory-nodes-transact-sql.md
       - name: sys.dm_os_memory_objects
@@ -15913,8 +15991,9 @@ items:
     href: t-sql/language-reference.md
     items:
     - name: Date & time
-      href: t-sql/data-types/date-and-time-types.md
       items:
+      - name: Overview
+        href: t-sql/data-types/date-and-time-types.md
       - name: date
         href: t-sql/data-types/date-transact-sql.md
       - name: datetime
@@ -15979,6 +16058,10 @@ items:
         href: t-sql/data-types/nchar-and-nvarchar-transact-sql.md
       - name: ntext, text, & image
         href: t-sql/data-types/ntext-text-and-image-transact-sql.md
+    - name: Vectors
+      items:
+      - name: vector
+        href: t-sql/data-types/vector-data-type.md 
     - name: Spatial geography & instances (geography Data Type)
       href: t-sql/spatial-geography/spatial-types-geography.md
       items:
@@ -16382,6 +16465,8 @@ items:
         href: t-sql/data-types/table-transact-sql.md
       - name: uniqueidentifier
         href: t-sql/data-types/uniqueidentifier-transact-sql.md
+    - name: Vectors
+      href: t-sql/functions/vector-functions-transact-sql.md
     - name: XML
       href: t-sql/xml/xml-transact-sql.md
       items:
@@ -17192,6 +17277,15 @@ items:
           href: t-sql/functions/trigger-nestlevel-transact-sql.md
         - name: UPDATE()
           href: t-sql/functions/update-trigger-functions-transact-sql.md
+      - name: Vectors
+        href: t-sql/functions/vector-functions-transact-sql.md
+        items:
+        - name: VECTOR_DISTANCE
+          href: t-sql/functions/vector-distance-transact-sql.md
+        - name: VECTOR_NORM
+          href: t-sql/functions/vector-norm-transact-sql.md
+        - name: VECTOR_NORMALIZE
+          href: t-sql/functions/vector-normalize-transact-sql.md
     - name: Language elements
       href: t-sql/language-elements/language-elements-transact-sql.md
       items:
@@ -17490,6 +17584,8 @@ items:
           href: t-sql/queries/updatetext-transact-sql.md
         - name: WITH common_table_expression
           href: t-sql/queries/with-common-table-expression-transact-sql.md
+        - name: Nested common table expressions in Fabric Warehouse
+          href: t-sql/queries/nested-common-table-expression.md
         - name: WRITETEXT
           href: t-sql/queries/writetext-transact-sql.md
       - name: SELECT

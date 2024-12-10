@@ -3,17 +3,18 @@ title: Download ODBC Driver for SQL Server
 description: Download the Microsoft ODBC Driver for SQL Server to develop native-code applications that connect to SQL Server and Azure SQL Database.
 author: David-Engel
 ms.author: davidengel
-ms.reviewer: v-chojas
-ms.date: 07/31/2024
+ms.date: 09/24/2024
 ms.service: sql
 ms.subservice: connectivity
-ms.custom: linux-related-content
 ms.topic: conceptual
+ms.custom:
+  - linux-related-content
+  - ignite-2024
 ---
 
 # Download ODBC Driver for SQL Server
 
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw-fabricsqldb](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw-fabricsqldb.md)]
 
 Microsoft ODBC Driver for SQL Server is a single dynamic-link library (DLL) containing run-time support for applications using native-code APIs to connect to SQL Server. Use Microsoft ODBC Driver 18 for SQL Server to create new applications or enhance existing applications that need to take advantage of newer SQL Server features.
 
@@ -121,6 +122,7 @@ If you need to download the packages for offline installation, all versions are 
 
 ### Red Hat
 
+- [Red Hat 9 .rpm packages](https://packages.microsoft.com/rhel/9/prod/)
 - [Red Hat 8 .rpm packages](https://packages.microsoft.com/rhel/8/prod/)
 - [Red Hat 7 .rpm packages](https://packages.microsoft.com/rhel/7/prod/)
 - [Red Hat 6 .rpm packages](https://packages.microsoft.com/rhel/6/prod/)
