@@ -124,7 +124,7 @@ EXECUTE sys.sp_configure_automatic_tuning
     @option = 'FORCE_LAST_GOOD_PLAN',
     @type = 'QUERY',
     @type_value = 42,
-    @option_value = 'OFF';
+    @option_value = 'ON';
 ```
 
 Check if the setting is applied.
