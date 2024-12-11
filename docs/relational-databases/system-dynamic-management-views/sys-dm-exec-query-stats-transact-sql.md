@@ -34,8 +34,8 @@ Returns aggregate performance statistics for cached query plans in [!INCLUDE[ssN
 |**statement_end_offset**|**int**|Indicates, in bytes, starting with 0, the ending position of the query that the row describes within the text of its batch or persisted object. For versions before [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], a value of -1 indicates the end of the batch. Trailing comments are no longer included.|  
 |**plan_generation_num**|**bigint**|A sequence number that can be used to distinguish between instances of plans after a recompile.|  
 |**plan_handle**|**varbinary(64)**|Is a token that uniquely identifies a query execution plan for a batch that has executed and its plan resides in the plan cache, or is currently executing. This value can be passed to the [sys.dm_exec_query_plan](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md) dynamic management function to obtain the query plan.<br /><br /> Will always be 0x000 when a natively compiled stored procedure queries a memory-optimized table.|  
-|**creation_time**|**datetime**|Time at which the plan was compiled.|  
-|**last_execution_time**|**datetime**|Last time at which the plan started executing.|  
+|**creation_time**|**datetime**|Time at which the plan was compiled. The time is recorded in the CURRENT_TIMEZONE(). |  
+|**last_execution_time**|**datetime**|Last time at which the plan started executing. The time is recorded in the CURRENT_TIMEZONE(). |  
 |**execution_count**|**bigint**|Number of times that the plan has been executed since it was last compiled.|  
 |**total_worker_time**|**bigint**|Total amount of CPU time, reported in microseconds (but only accurate to milliseconds), that was consumed by executions of this plan since it was compiled.<br /><br /> For natively compiled stored procedures, **total_worker_time** may not be accurate if many executions take less than 1 millisecond.|  
 |**last_worker_time**|**bigint**|CPU time, reported in microseconds (but only accurate to milliseconds), that was consumed the last time the plan was executed. <sup>1</sup>|  
