@@ -1,8 +1,8 @@
 ---
 title: Welcome to Wingtips app
 description: Learn about database tenancy models, and about the sample Wingtips SaaS application, for Azure SQL Database in the cloud environment.
-author: bgavrilMS
-ms.author: bogavril
+author: bgavrilovicMS
+ms.author: bgavrilovic
 ms.reviewer: mathoma, wiassaf
 ms.date: 01/25/2019
 ms.service: azure-sql-database
