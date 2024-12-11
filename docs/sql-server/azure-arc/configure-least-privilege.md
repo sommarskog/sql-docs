@@ -125,7 +125,7 @@ To complete the steps in this article, you need the following tools:
 
 To verify that your SQL Server enabled by Azure Arc is configured to run with least privilege:
 
-1. In the Windows services, locate **Microsoft SQL Server Extension Service** service. Verify that the service is running under the as the service account `NT Service\SqlServerExtension`.  
+1. In the Windows services, locate **Microsoft SQL Server Extension Service** service. Verify that the service is running as the service account `NT Service\SqlServerExtension`.  
 
 1. Open task scheduler in the server and check that an event driven task with name `SqlServerExtensionPermissionProvider` is created under `Microsoft\SqlServerExtension`.
 
