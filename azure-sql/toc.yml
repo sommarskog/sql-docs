@@ -179,7 +179,8 @@
           items: 
           - name: Microsoft Entra authentication
             href: database/authentication-aad-configure.md
-          - name: Conditional Access
+          - name: Conditional access
+            href: database/conditional-access-configure.md
           - name: Directory Readers role for groups
             href: database/authentication-aad-directory-readers-role-tutorial.md
         - name: Create
@@ -1510,8 +1511,7 @@
         href: managed-instance/vnet-subnet-move-instance.md
       - name: Resolve private domain names
         href: managed-instance/resolve-private-domain-names.md
-      - name: Find management endpoint IP address
-        href: managed-instance/management-endpoint-find-ip-address.md
+
 
     - name: Migrate
       items:
