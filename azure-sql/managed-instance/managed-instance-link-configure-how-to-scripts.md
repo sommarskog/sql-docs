@@ -761,7 +761,7 @@ To simplify the process, sign in to the Azure portal and run the following scrip
 - `<SQLServerIP>` with the IP address of your SQL Server. The provided IP address must be accessible by managed instance.
  
 > [!NOTE]
-> If you want establish a link to an availability group that already exists, then provide the IP address of the listener when supplying the `<SQLServerIP>` parameter.
+> If you want establish a link to an availability group that already exists, then provide the IP address of the listener when supplying the `<SQLServerIP>` parameter. Please ensure that trust has been established between all availability group nodes and SQL Managed Instance (see [Establish trust between instances](#establish-trust-between-instances) section).
 
 
 ```powershell-interactive
@@ -799,8 +799,8 @@ $SourceIP = "TCP://" + $SQLServerIP + ":<EndpointPort>"
 
 # Create link on managed instance. Join distributed availability group on SQL Server.
 New-AzSqlInstanceLink -ResourceGroupName $ResourceGroup -InstanceName $ManagedInstanceName -Name $DAGName |
--PrimaryAvailabilityGroupName $AGNameOnSQLServer -SecondaryAvailabilityGroupName $AGNameOnSQLMI |
--TargetDatabase $DatabaseName -SourceEndpoint $SourceIP
+-PartnerAvailabilityGroupName $AGNameOnSQLServer -InstanceAvailabilityGroupName $AGNameOnSQLMI |
+-Database @($DatabaseName) -PartnerEndpoint $SourceIP -InstanceLinkRole Secondary
 ```
 
 
@@ -851,37 +851,10 @@ $ResourceGroup = (Get-AzSqlInstance -InstanceName $ManagedInstanceName).Resource
 # Build properly formatted connection endpoint 
 $DestinationIP = "TCP://" + $SQLServerIP + ":<EndpointPort>"  
 
-# Create Azure REST API request header 
-$azProfile = [Microsoft.Azure.Commands.Common.Authentication.Abstractions.AzureRmProfileProvider]::Instance.Profile 
-$currentAzureContext = Get-AzContext 
-$profileClient = New-Object Microsoft.Azure.Commands.ResourceManager.Common.RMProfileClient($azProfile) 
-$token = $profileClient.AcquireAccessToken($currentAzureContext.Tenant.TenantId) 
-$authToken = $token.AccessToken 
-$headers = @{ } 
-$headers.Add('Authorization', 'Bearer ' + $authToken)  
-
-# Build Azure REST API URI 
-$uri = "https://management.azure.com/subscriptions/"+$SubscriptionID+"/resourceGroups/"+$ResourceGroup+"/providers/Microsoft.Sql/managedInstances/"+$ManagedInstanceName+"/distributedAvailabilityGroups/"+$DAGName+"?api-version=2023-05-01-preview" 
-
-# Build Azure REST API request body 
-$body = "{ 
-'properties': { 
-    'Databases': [{ 
-            'databaseName': '$DatabaseName' 
-        } 
-    ], 
-    'PartnerEndpoint': '$DestinationIP', 
-    'InstanceAvailabilityGroupName': '$AGNameOnSQLMI', 
-    'PartnerAvailabilityGroupName': '$AGNameOnSQLServer', 
-    'FailoverMode': 'Manual', 
-    'SeedingMode': 'Automatic', 
-    'InstanceLinkRole': 'Primary' 
-
-}}" 
-
- 
-# Send link creation request to Azure REST API 
-Invoke-RestMethod -Method PUT -Headers $headers -Uri $uri -ContentType 'application/json' -Body $body 
+# Create link on managed instance. Join distributed availability group on SQL Server.
+New-AzSqlInstanceLink -ResourceGroupName $ResourceGroup -InstanceName $ManagedInstanceName -Name $DAGName |
+-PartnerAvailabilityGroupName $AGNameOnSQLServer -InstanceAvailabilityGroupName $AGNameOnSQLMI |
+-Database @($DatabaseName) -PartnerEndpoint $DestinationIP -InstanceLinkRole Primary
 ```
 
 ---
