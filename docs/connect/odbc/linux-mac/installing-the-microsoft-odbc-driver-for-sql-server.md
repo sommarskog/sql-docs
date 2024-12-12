@@ -3,7 +3,7 @@ title: Install the Microsoft ODBC driver for SQL Server (Linux)
 description: Learn how to install the Microsoft ODBC Driver for SQL Server on Linux clients to enable database connectivity.
 author: David-Engel
 ms.author: davidengel
-ms.date: 07/31/2024
+ms.date: 12/11/2024
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: conceptual
@@ -525,11 +525,16 @@ The following sections explain how to install the Microsoft ODBC driver 11 on Li
 ### Installation steps
 
 > [!IMPORTANT]  
-> These instructions refer to `msodbcsql-11.0.2270.0.tar.gz`, which is installation file for Red Hat Linux. If you install the Preview for SUSE Linux, the file name is `msodbcsql-11.0.2260.0.tar.gz`.
+> These instructions refer to `msodbcsql-11.0.2270.0.tar.gz`, which is installation file for Red Hat Linux. If you install for SUSE Linux, the file name is `msodbcsql-11.0.2260.0.tar.gz`.
 
 To install the driver:
 
 1. Make sure that you have root permission.
+
+1. Download the driver.  
+   Red Hat 5 - [msodbcsql-11.0.2270.0.tar.gz](https://go.microsoft.com/fwlink/?linkid=2299904) [SHA256: 178280daf01a49b8322cd902b6440979adacd594c01cd2a1f081dda23dbfb343](https://go.microsoft.com/fwlink/?linkid=2299695)  
+   Red Hat 6 - [msodbcsql-11.0.2270.0.tar.gz](https://go.microsoft.com/fwlink/?linkid=2300003) [SHA256: e9b6bd33d174c7753b3a3f2d541713fbc156b46254484a169caa3f459dd828f7](https://go.microsoft.com/fwlink/?linkid=2299903)  
+   SUSE Linux - [msodbcsql-11.0.2260.0.tar.gz](https://go.microsoft.com/fwlink/?linkid=2300002) (SHA256: 86d1c5842be4f0095234a9455e18a04fdf4cc7960ec0255b37258112e2391ef5)
 
 1. Change to the directory where the download placed the file `msodbcsql-11.0.2270.0.tar.gz`. Make sure that you have the \*.tar.gz file that matches your version of Linux. To extract the files, execute the following command, `tar xvzf msodbcsql-11.0.2270.0.tar.gz`.
 

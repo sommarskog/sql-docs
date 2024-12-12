@@ -3,7 +3,7 @@ title: Release notes
 description: This article lists the releases of the Microsoft JDBC Driver for SQL Server. For each release version, the changes are named and described.
 author: David-Engel
 ms.author: davidengel
-ms.date: 08/29/2024
+ms.date: 12/11/2024
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: conceptual
@@ -1364,12 +1364,31 @@ The driver uses a new connection property to facilitate flexibility with Kerbero
 
 ## 4.1
 
+:::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Microsoft JDBC Driver 4.1 for SQL Server (self-extracting exe)](https://go.microsoft.com/fwlink/?linkid=2299365)**  
+:::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Microsoft JDBC Driver 4.1 for SQL Server (tar.gz)](https://go.microsoft.com/fwlink/?linkid=2299693)**  
+
 Version number: 4.1.8112  
 Released: December 12, 2014
+
+If you need to download the driver in a language other than the one detected for you, you can use these direct links.  
+For the driver in a self-extracting exe file: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2299365&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2299365&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2299365&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2299365&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2299365&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2299365&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2299365&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2299365&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2299365&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2299365&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2299365&clcid=0x40a)  
+For the driver in a tar.gz file: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2299693&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2299693&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2299693&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2299693&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2299693&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2299693&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2299693&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2299693&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2299693&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2299693&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2299693&clcid=0x40a)
 
 ### Support for JDK 7
 
 The driver supports JDK version 7.0 in addition to JDK 6.0 and 5.0.
+
+## 4.0
+
+:::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Microsoft JDBC Driver 4.0 for SQL Server (self-extracting exe)](https://go.microsoft.com/fwlink/?linkid=2299366)**  
+:::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Microsoft JDBC Driver 4.0 for SQL Server (tar.gz)](https://go.microsoft.com/fwlink/?linkid=2299694)**  
+
+Version number: 4.0.2206  
+Released: March 6, 2012
+
+If you need to download the driver in a language other than the one detected for you, you can use these direct links.  
+For the driver in a self-extracting exe file: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2299366&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2299366&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2299366&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2299366&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2299366&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2299366&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2299366&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2299366&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2299366&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2299366&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2299366&clcid=0x40a)  
+For the driver in a tar.gz file: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2299694&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2299694&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2299694&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2299694&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2299694&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2299694&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2299694&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2299694&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2299694&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2299694&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2299694&clcid=0x40a)
 
 ## Itanium not supported for JDBC Driver applications
 
