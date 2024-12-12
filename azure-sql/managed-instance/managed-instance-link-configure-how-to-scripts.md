@@ -44,7 +44,7 @@ To replicate your databases, you need the following prerequisites:
 - An active Azure subscription. If you don't have one, [create a free account](https://azure.microsoft.com/free/).
 - [Supported version of SQL Server](managed-instance-link-feature-overview.md#prerequisites) with the required service update installed.
 - Azure SQL Managed Instance. [Get started](instance-create-quickstart.md) if you don't have it. 
-- PowerShell module [Az.SQL 3.9.0 or higher](https://www.powershellgallery.com/packages/Az.Sql), or [Azure CLI 2.47.0 or higher](/cli/azure/install-azure-cli). Or preferably, use [Azure Cloud Shell](/azure/cloud-shell/overview) online from the web browser to run the commands, because it's always updated with the latest module versions.
+- PowerShell module [Az.SQL 6.0.0 or higher](https://www.powershellgallery.com/packages/Az.Sql), or [Azure CLI 2.67.0 or higher](/cli/azure/install-azure-cli). Or preferably, use [Azure Cloud Shell](/azure/cloud-shell/overview) online from the web browser to run the commands, because it's always updated with the latest module versions.
 - A properly [prepared environment](managed-instance-link-preparation.md).
 
 Consider the following:
@@ -813,7 +813,6 @@ To simplify the process, sign in to the Azure portal and run the following scrip
 - `<DAGName>` with the name of the distributed availability group created on SQL Server. 
 - `<DatabaseName>` with the database replicated in the availability group on SQL Server. 
 - `<SQLServerIP>` with the IP address of your SQL Server. The provided IP address must be accessible by managed instance.
-
 
 ```powershell-interactive
 #  Run in Azure Cloud Shell (select PowerShell console) 
