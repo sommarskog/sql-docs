@@ -60,7 +60,7 @@ FROM sys.dm_hadr_physical_seeding_stats
 
 If the query returns no results, then the seeding process hasn't started or has already completed.
 
-Use the following T-SQL query to check the health of the link once data synchronization begins:
+Use the following T-SQL query on the *primary* instance to check the health of the link once data synchronization begins:
 
 ```sql
 DECLARE @link_name varchar(max) = '<DAGname>'
@@ -71,12 +71,13 @@ FROM
    join sys.dm_hadr_availability_replica_states rs 
    on ag.group_id = rs.group_id 
 WHERE 
-   rs.is_local = 1 and ag.is_distributed = 1 and ag.name = @link_name 
+   rs.is_local = 0 AND rs.role = 2 AND ag.is_distributed = 1 AND ag.name = @link_name 
 GO
 ```
 
 The query returns the following possible values: 
 
+- no result: The query was executed on the secondary instance.
 - `HEALTHY`: The link is healthy, and data is being synchronized between the replicas.
 - `NOT_HEALTHY`: The link is unhealthy, and data is not synchronizing between the replicas.
 
@@ -178,10 +179,9 @@ For example, in the event of a true disaster, assuming you've forced a failover 
 
 ```sql
 --Execute on SQL Server 
-USE MASTER
-
-ALTER availability group [<DAGName>] 
-SET (role = secondary) 
+USE master
+ALTER AVAILABILITY GROUP [<DAGName>] 
+SET (ROLE = SECONDARY) 
 GO 
 ```
 
@@ -189,9 +189,8 @@ Next, execute a planned manual failover from SQL Managed Instance to SQL Server 
 
 ```sql
 --Execute on SQL Managed Instance 
-USE MASTER
-
-ALTER availability group [<DAGName>] FAILOVER 
+USE master
+ALTER AVAILABILITY GROUP [<DAGName>] FAILOVER 
 GO 
 ```
 
