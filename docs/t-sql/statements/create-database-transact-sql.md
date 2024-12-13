@@ -4,7 +4,7 @@ description: Create database syntax for SQL Server, Azure SQL Database, Azure Sy
 author: markingmyname
 ms.author: maghan
 ms.reviewer: wiassaf
-ms.date: 11/22/2024
+ms.date: 12/12/2024
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -1000,6 +1000,7 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
       | 'GP_S_Gen5_n' 
       | 'HS_DC_n'
       | 'HS_Gen5_n'
+      | 'HS_S_Gen5_n'
       | 'HS_MOPRMS_n' 
       | 'HS_PRMS_n' 
       | { ELASTIC_POOL(name = <elastic_pool_name>) } })
@@ -1020,6 +1021,7 @@ CREATE DATABASE database_name
       | 'BC_Gen5_n'
       | 'BC_M_n'
       | 'HS_Gen5_n'
+      | 'HS_S_Gen5_n'
       | 'HS_PRMS_n'
       | 'HS_MOPRMS_n'
       | { ELASTIC_POOL(name = <elastic_pool_name>) } })
@@ -1135,9 +1137,10 @@ Specifies the compute size and service objective.
 - For DTU purchasing model: `S0`, `S1`, `S2`, `S3`, `S4`, `S6`, `S7`, `S9`, `S12`, `P1`, `P2`, `P4`, `P6`, `P11`, `P15`
 - For the latest vCore purchasing model, choose the tier and provide the number of vCores from a preset list of values, where the number of vCores is `n`. Refer to the [resource limits for single databases](/azure/azure-sql/database/resource-limits-vcore-single-databases) or [resource limits for elastic pools](/azure/azure-sql/database/resource-limits-vcore-elastic-pools).
     - For example: 
-    - `GP_Gen5_8` for General Purpose Standard-series (Gen5) compute, 8 vCores.
-    - `GP_S_Gen5_8` for General Purpose Serverless Standard-series (Gen5) compute, 8 vCores.
-    - `HS_Gen5_8` for Hyperscale - provisioned compute - standard-series (Gen5), 8 vCores.
+    - `GP_Gen5_8` for General Purpose, provisioned compute, Standard-series (Gen5), 8 vCores.
+    - `GP_S_Gen5_8` for General Purpose, serverless compute, Standard-series (Gen5), 8 vCores.
+    - `HS_Gen5_8` for Hyperscale, provisioned compute, Standard-series (Gen5), 8 vCores.
+    - `HS_S_Gen5_8` for Hyperscale, serverless compute, Standard-series (Gen5), 8 vCores.
 
 For service objective descriptions and more information about the size, editions, and the service objectives combinations, see [Azure SQL Database Service Tiers](/azure/sql-database/sql-database-service-tiers). If the specified SERVICE_OBJECTIVE is not supported by the EDITION, you receive an error. To change the SERVICE_OBJECTIVE value from one tier to another (for example from S1 to P1), you must also change the EDITION value. Support for PRS service objectives has been removed.
 
