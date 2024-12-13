@@ -4,7 +4,7 @@ description: ALTER DATABASE (Transact-SQL) syntax for SQL Server, Azure SQL Data
 author: markingmyname
 ms.author: maghan
 ms.reviewer: wiassaf
-ms.date: 08/26/2024
+ms.date: 12/12/2024
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -380,6 +380,7 @@ ALTER DATABASE { database_name | CURRENT }
       | 'GP_S_Gen5_n' 
       | 'HS_DC_n'
       | 'HS_Gen5_n'
+      | 'HS_S_Gen5_n'
       | 'HS_MOPRMS_n' 
       | 'HS_PRMS_n' 
       | { ELASTIC_POOL(name = <elastic_pool_name>) }
@@ -502,9 +503,10 @@ Specifies the compute size (also known as service level objective, or SLO).
 - For DTU purchasing model: `S0`, `S1`, `S2`, `S3`, `S4`, `S6`, `S7`, `S9`, `S12`, `P1`, `P2`, `P4`, `P6`, `P11`, `P15`. Refer to the [resource limits for DTU single databases](/azure/azure-sql/database/resource-limits-dtu-single-databases) or [resource limits for DTU elastic pools](/azure/azure-sql/database/resource-limits-dtu-elastic-pools) to find the number of DTU assigned to each compute size.
 - For the vCore purchasing model, choose the tier and provide the number of vCores from a preset list of values, where the number of vCores is `n`. Refer to the [resource limits for vCore single databases](/azure/azure-sql/database/resource-limits-vcore-single-databases) or [resource limits for vCore elastic pools](/azure/azure-sql/database/resource-limits-vcore-elastic-pools).
   - For example: 
-  - `GP_Gen5_8` for General Purpose Standard-series (Gen5) compute, 8 vCores.
-  - `GP_S_Gen5_8` for General Purpose Serverless Standard-series (Gen5) compute, 8 vCores.
-  - `HS_Gen5_8` for Hyperscale - provisioned compute - standard-series (Gen5), 8 vCores.
+  - `GP_Gen5_8` for General Purpose, provisioned compute, Standard-series (Gen5), 8 vCores.
+  - `GP_S_Gen5_8` for General Purpose, serverless compute, Standard-series (Gen5), 8 vCores.
+  - `HS_Gen5_8` for Hyperscale, provisioned compute, Standard-series (Gen5), 8 vCores.
+  - `HS_S_Gen5_8` for Hyperscale, serverless compute, Standard-series (Gen5), 8 vCores.
 
 For example, the following sample changes service objective of a Premium tier database in the DTU purchasing model to `P6`:
 
