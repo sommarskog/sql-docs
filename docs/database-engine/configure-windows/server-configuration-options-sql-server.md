@@ -145,7 +145,7 @@ The following table lists all available configuration options, the range of poss
 | [index create memory (KB)](configure-the-index-create-memory-server-configuration-option.md) (A, SC) | **Minimum**: `704`<br />**Maximum**: `2147483647`<br />**Default**: `0` | Yes | Yes |
 | [lightweight pooling](lightweight-pooling-server-configuration-option.md) (A, RR) | **Minimum**: `0`<br />**Maximum**: `1`<br />**Default**: `0` | Yes | No |
 | [locks](configure-the-locks-server-configuration-option.md) (A, RR, SC) | **Minimum**: `5000`<br />**Maximum**: `2147483647`<br />**Default**: `0` | Yes | No |
-| [max degree of parallelism](configure-the-max-degree-of-parallelism-server-configuration-option.md) (A) | **Minimum**: `0`<br />**Maximum**: `32767`<br />**Default**: `0` | Yes | No |
+| [max degree of parallelism](configure-the-max-degree-of-parallelism-server-configuration-option.md) (A) | **Minimum**: `0`<br />**Maximum**: `32767`<br />**Default**: `0` | Yes | Yes |
 | [max full-text crawl range](max-full-text-crawl-range-server-configuration-option.md) (A) | **Minimum**: `0`<br />**Maximum**: `256`<br />**Default**: `4` | Yes | Yes |
 | max RPC request params (KB) (A) | **Minimum**: `0`<br />**Maximum**: `2147483647`<br />**Default**: `0` | [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] CU 26 and later versions, and [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] CU 13 and later versions | No |
 | [max server memory (MB)](server-memory-server-configuration-options.md) (A, SC) | **Minimum**: `16`<br />**Maximum**: `2147483647`<br />**Default**: `2147483647` | Yes | Yes |
