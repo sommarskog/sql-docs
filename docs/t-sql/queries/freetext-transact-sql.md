@@ -97,7 +97,7 @@ WHERE FREETEXT(Description, @SearchWord);
   
  If documents of different languages are stored together as binary large objects (BLOBs) in a single column, the locale identifier (LCID) of a given document determines what language is used to index its content. When querying such a column, specifying LANGUAGE *language_term* can increase the probability of a good match.  
   
- When specified as a string, *language_term* corresponds to the **alias** column value in he [sys.syslanguages &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) compatibility view.  The string must be enclosed in single quotation marks, as in '*language_term*'. When specified as an integer, *language_term* is the actual LCID that identifies the language. When specified as a hexadecimal value, *language_term* is 0x followed by the hexadecimal value of the LCID. The hexadecimal value must not exceed eight digits, including leading zeros.  
+ When specified as a string, *language_term* corresponds to the **alias** column value in the [sys.syslanguages](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) compatibility view.  The string must be enclosed in single quotation marks, as in '*language_term*'. When specified as an integer, *language_term* is the actual LCID that identifies the language. When specified as a hexadecimal value, *language_term* is 0x followed by the hexadecimal value of the LCID. The hexadecimal value must not exceed eight digits, including leading zeros.  
   
  If the value is in double-byte character set (DBCS) format, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] will convert it to Unicode.  
   

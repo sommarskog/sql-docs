@@ -30,7 +30,7 @@ helpviewer_keywords:
   
      where *webserver* is the name of the Web server where the RDS server components are installed.  
   
-3.  You can then try various scenarios in the Address Book sample application, such as searching for a person based on his or her e-mail name, listing all people with the title "Program Manager," or editing existing records. Click **Find** to fill the data grid with all the available names.  
+3.  You can then try various scenarios in the Address Book sample application, such as searching for a person based on their e-mail name, listing all people with the title "Program Manager," or editing existing records. Click **Find** to fill the data grid with all the available names.  
   
 ## See Also  
  [Address Book Data-Binding Object](./address-book-data-binding-object.md)
