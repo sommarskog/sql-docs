@@ -453,7 +453,7 @@ Sets [!INCLUDE [tsql](../../includes/tsql-md.md)] and query processing behaviors
 
 #### EXEC_QUERY_STATS_FOR_SCALAR_FUNCTIONS = { ON | OFF }
 
-**Applies to:** [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [ssazuremi](../../includes/ssazuremi-md.md)]
+**Applies to:** [!INCLUDE [sql-server-2022](../../includes/sssql22-md.md)] and later versions, [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], and [!INCLUDE [ssazuremi](../../includes/ssazuremi-md.md)]
 
 Allows you to control whether execution statistics for scalar user-defined functions (UDF) appear in the [sys.dm_exec_function_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-function-stats-transact-sql.md) system view. For some intensive workloads that are scalar UDF-heavy, collecting function execution statistics might cause a noticeable performance overhead. This can be avoided by setting the `EXEC_QUERY_STATS_FOR_SCALAR_FUNCTIONS` database-scoped configuration to `OFF`.  The default is **ON**. 
 
