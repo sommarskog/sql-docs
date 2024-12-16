@@ -46,7 +46,7 @@ Public Sub Main()
     rstTitles.Open strSQLTitles, Cnxn, adOpenKeyset, adLockBatchOptimistic, adCmdTable  
   
     rstTitles.MoveFirst  
-    ' Loop through recordset and ask user if she wants  
+    ' Loop through recordset and ask user if they want  
     ' to change the type for a specified title.  
     Do Until rstTitles.EOF  
         If Trim(rstTitles!Type) = "psychology" Then  
@@ -62,7 +62,7 @@ Public Sub Main()
         rstTitles.MoveNext  
     Loop  
   
-    ' Ask the user if she wants to commit to all the  
+    ' Ask the user if they want to commit to all the  
     ' changes made above.  
     If MsgBox("Save all changes?", vbYesNo) = vbYes Then  
         rstTitles.UpdateBatch  

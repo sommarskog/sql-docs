@@ -86,7 +86,7 @@ void UpdateBatchX() {
       TESTHR(picRs->BindToRecordset(&titlers));  
       pRstTitles->MoveFirst();  
   
-      // Loop through recordset and ask user if she wants,  
+      // Loop through recordset and ask user if they want  
       // to change the type for a specified title.  
       while (!(pRstTitles->EndOfFile)) {  
          // Compare type with psychology  
