@@ -72,7 +72,7 @@ The query ID from Query Store that the configuration should be applied to. *@typ
 
 #### [ @option_value = ] '*option_value*'
 
-The desired state of the configuration setting. *@option_value* is **varchar(60)** with no defaults. Possible values are `ON` or `OFF`.
+The desired state of the configuration setting. *@option_value* is **varchar(60)** with no defaults. Possible values are `ON` or `OFF`. For the `FORCE_LAST_GOOD_PLAN` option, setting the value to `ON` causes APC to ignore a `query_id` in the Query Store from being monitored by the system for query plan regressions.
 
 ## Return code values
 
