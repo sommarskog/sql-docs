@@ -59,7 +59,6 @@ Creates a new table in the database.
 > For reference to [!INCLUDE [fabricdw](../../includes/fabric-dw.md)] in [!INCLUDE [fabric](../../includes/fabric.md)], visit [CREATE TABLE (Fabric Data Warehouse)](create-table-azure-sql-data-warehouse.md?view=fabric&preserve-view=true).
 > For reference to [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], visit [CREATE TABLE (Azure Synapse Analytics)](create-table-azure-sql-data-warehouse.md?view=azure-sqldw-latest&preserve-view=true).
 
-
 :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## Syntax options
@@ -109,7 +108,7 @@ column_name <data_type>
     [ SPARSE ]
     [ MASKED WITH ( FUNCTION = 'mask_function' ) ]
     [ [ CONSTRAINT constraint_name ] DEFAULT constant_expression ]
-    [ IDENTITY [ ( seed , increment ) ]
+    [ IDENTITY [ ( seed , increment ) ] ]
     [ NOT FOR REPLICATION ]
     [ GENERATED ALWAYS AS { ROW | TRANSACTION_ID | SEQUENCE_NUMBER } { START | END } [ HIDDEN ] ]
     [ [ CONSTRAINT constraint_name ] {NULL | NOT NULL} ]
@@ -253,7 +252,7 @@ column_set_name XML COLUMN_SET FOR ALL_SPARSE_COLUMNS
           { (
              FILTER_COLUMN = column_name,
              RETENTION_PERIOD = { INFINITE | number { DAY | DAYS | WEEK | WEEKS
-                              | MONTH | MONTHS | YEAR | YEARS }
+                              | MONTH | MONTHS | YEAR | YEARS } }
         ) }
     ]
     [ LEDGER = ON [ ( <ledger_option> [ ,... n ] ) ]
