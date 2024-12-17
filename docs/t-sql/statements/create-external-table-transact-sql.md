@@ -769,15 +769,15 @@ You can create multiple external tables that each reference different external d
 
    In the following example, if `External.Orders` is an external table and `Customer` is a local table, the query copies the entire external table locally because the predicate needed isn't known at compile time.
 
-  ```sql
-  SELECT Orders.OrderId, Orders.OrderTotal
-  FROM External.Orders
-  WHERE CustomerId IN (
+    ```sql
+    SELECT Orders.OrderId, Orders.OrderTotal
+    FROM External.Orders
+    WHERE CustomerId IN (
         SELECT TOP 1 CustomerId
         FROM Customer
         WHERE CustomerName = 'MyCompany'
-  );
-  ```
+    );
+    ```
 
 - **No parallelism**: Use of external tables prevents use of parallelism in the query plan.
 
