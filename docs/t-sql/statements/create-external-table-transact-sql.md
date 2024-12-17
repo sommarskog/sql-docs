@@ -765,7 +765,7 @@ You can create multiple external tables that each reference different external d
   - [Dynamic Data Masking](../../relational-databases/security/dynamic-data-masking.md) on external table columns.
   - Cursors are not supported for external tables in Azure SQL Database.
 
-- **Only literal predicates** Only literal predicates defined in a query can be pushed down to the external data source. This is unlike linked servers and accessing where predicates determined during query execution can be used, that is, when used in conjunction with a nested loop in a query plan. This will often lead to the whole external table being copied locally and then joined.
+- **Only literal predicates**: Only literal predicates defined in a query can be pushed down to the external data source. This is unlike linked servers and accessing where predicates determined during query execution can be used, that is, when used in conjunction with a nested loop in a query plan. This will often lead to the whole external table being copied locally and then joined.
 
    In the following example, if `External.Orders` is an external table and `Customer` is a local table, the query copies the entire external table locally because the predicate needed isn't known at compile time.
 
@@ -783,7 +783,7 @@ You can create multiple external tables that each reference different external d
 
 - **Executed as remote query**: External tables are implemented as remote query, so the estimated number of rows returned is generally 1000. There are other rules based on the type of predicate used to filter the external table. They are rules-based estimates rather than estimates based on the actual data in the external table. The optimizer doesn't access the remote data source to obtain a more accurate estimate.
 
-- **Not supported for priave endpoint**: External table queries are not supported when connection to remote table is a private endpoint.
+- **Not supported for private endpoint**: External table queries are not supported when connection to remote table is a private endpoint.
 
 ### Data type limitations
 
