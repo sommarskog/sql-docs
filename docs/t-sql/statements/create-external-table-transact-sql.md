@@ -754,7 +754,7 @@ You can create many external tables that reference the same or different externa
 
 You can create multiple external tables that each reference different external data sources.
 
-## Limitations and restrictions
+## Limitations
 
 - **Isolation semantics**: Access to data via an external table doesn't adhere to the isolation semantics within SQL Server. This means that querying an external table doesn't impose any locking or snapshot isolation. Therefore data return can change if the data in the external data source is changing. The same query can return different results each time it runs against an external table. Similarly, a query might fail if the external data is moved or removed.
 
