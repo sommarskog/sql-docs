@@ -22,7 +22,7 @@ This article describes how to remove a server from Registered Servers in [!INCLU
 
 ## To remove a registered server
 
-1. Select **View** > **Registered Servers**
+1. Select **View** > **Registered Servers**.
 
 1. In the Registered Servers Object Explorer pane, right-click a server, and then select **Delete**.
 
