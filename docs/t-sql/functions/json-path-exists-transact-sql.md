@@ -4,7 +4,7 @@ description: JSON_PATH_EXISTS tests whether a specified SQL/JSON path exists in 
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: randolphwest, umajay, jovanpop
-ms.date: 11/04/2024
+ms.date: 12/16/2024
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -16,7 +16,8 @@ dev_langs:
 monikerRange: "=azuresqldb-current || >=sql-server-ver16 || >=sql-server-linux-ver16 || =azuresqldb-mi-current || =fabric"
 ---
 # JSON_PATH_EXISTS (Transact-SQL)
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asa-fabricse-fabricdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-fabricse-fabricdw.md)]
+
+[!INCLUDE [sqlserver2022-asdb-asmi-asa-fabricse-fabricdw](../../includes/applies-to-version/sqlserver2022-asdb-asmi-asa-fabricse-fabricdw.md)]
 
 Tests whether a specified SQL/JSON path exists in the input JSON string.
 
@@ -25,7 +26,7 @@ Tests whether a specified SQL/JSON path exists in the input JSON string.
 ## Syntax
 
 ```syntaxsql
-JSON_PATH_EXISTS( value_expression, sql_json_path )
+JSON_PATH_EXISTS( value_expression , sql_json_path )
 ```
 
 ## Arguments
@@ -51,11 +52,17 @@ The `JSON_PATH_EXISTS` function doesn't return errors.
 The following example returns 1 since the input JSON string contains the specified SQL/JSON path.
 
 ```sql
-DECLARE @jsonInfo NVARCHAR(MAX)
+DECLARE @jsonInfo AS NVARCHAR (MAX);
 
-SET @jsonInfo=N'{"info":{"address":[{"town":"Paris"},{"town":"London"}]}}';
+SET @jsonInfo = N'{"info":{"address":[{"town":"Paris"},{"town":"London"}]}}';
 
-SELECT JSON_PATH_EXISTS(@jsonInfo,'$.info.address'); -- 1
+SELECT JSON_PATH_EXISTS(@jsonInfo, '$.info.address');
+```
+
+[!INCLUDE [ssresult-md](../../includes/ssresult-md.md)]
+
+```output
+1
 ```
 
 ### Example 2
@@ -63,11 +70,17 @@ SELECT JSON_PATH_EXISTS(@jsonInfo,'$.info.address'); -- 1
 The following example returns 0 since the input JSON string doesn't contain the specified SQL/JSON path.
 
 ```sql
-DECLARE @jsonInfo NVARCHAR(MAX)
+DECLARE @jsonInfo AS NVARCHAR (MAX);
 
-SET @jsonInfo=N'{"info":{"address":[{"town":"Paris"},{"town":"London"}]}}';
+SET @jsonInfo = N'{"info":{"address":[{"town":"Paris"},{"town":"London"}]}}';
 
-SELECT JSON_PATH_EXISTS(@jsonInfo,'$.info.addresses'); -- 0
+SELECT JSON_PATH_EXISTS(@jsonInfo, '$.info.addresses');
+```
+
+[!INCLUDE [ssresult-md](../../includes/ssresult-md.md)]
+
+```output
+0
 ```
 
 ## Related content
