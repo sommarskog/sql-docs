@@ -155,7 +155,8 @@ USE [master];
 GO
 
 SELECT DISTINCT (encrypt_option)
-FROM sys.dm_exec_connections;
+FROM sys.dm_exec_connections
+WHERE net_transport <> 'Shared memory';
 GO
 ```
 
