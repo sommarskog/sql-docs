@@ -72,7 +72,7 @@ The query ID from Query Store that the configuration should be applied to. *@typ
 
 #### [ @option_value = ] '*option_value*'
 
-The desired state of the configuration setting. *@option_value* is **varchar(60)** with no defaults. Possible values are `ON` or `OFF`. For the `FORCE_LAST_GOOD_PLAN` option, setting the value to `ON` causes APC to ignore a `query_id` in the Query Store from being monitored by the system for query plan regressions.
+The desired state of the configuration setting. *@option_value* is **varchar(60)** with no defaults. Possible values are `ON` or `OFF`. For the `FORCE_LAST_GOOD_PLAN` option, setting the value to `OFF` causes APC to ignore a `query_id` in the Query Store from being monitored by the system for query plan regressions.
 
 ## Return code values
 
@@ -97,7 +97,7 @@ For [!INCLUDE [ssSQL22](../../includes/sssql22-md.md)] CU 4 and later versions, 
 The following example shows how to configure automatic tuning to ignore a query if it's eligible for automatic plan forcing. This example uses a value of `422` as the `query_id` that was selected from the Query Store.
 
 ```sql
-EXECUTE sys.sp_configure_automatic_tuning 'FORCE_LAST_GOOD_PLAN', 'QUERY', 422, 'ON';
+EXECUTE sys.sp_configure_automatic_tuning 'FORCE_LAST_GOOD_PLAN', 'QUERY', 422, 'OFF';
 ```
 
 ### B. Configure the Automatic Tuning (Force Last Good Plan option) to ignore a specific query using named parameters
@@ -124,7 +124,7 @@ EXECUTE sys.sp_configure_automatic_tuning
     @option = 'FORCE_LAST_GOOD_PLAN',
     @type = 'QUERY',
     @type_value = 42,
-    @option_value = 'ON';
+    @option_value = 'OFF';
 ```
 
 Check if the setting is applied.
