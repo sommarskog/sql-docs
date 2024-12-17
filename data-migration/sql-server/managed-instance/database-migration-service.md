@@ -415,6 +415,12 @@ Migrating to Azure SQL Managed Instance by using the Azure SQL extension for Azu
 
 - A single LRS job (created by DMS) can run for a maximum of 30 days. When this period expires, the job is automatically canceled thus your target database gets automatically deleted.
 
+- If you're migrating to a SQL Managed Instance in the **Business Critical** service tier, account for the delay in bringing the databases online on the primary replica while they're seeded to the secondary replicas. This is especially true for larger databases. If it's important that databases are available as soon as cutover completes, then consider the following workarounds:
+
+  1. Migrate to the General Purpose service tier first, and then upgrade to the **Business Critical** service tier. Upgrading your service tier is an online operation that keeps your databases online until a short failover as the final step of the upgrade operation. 
+
+  1. Use the [Managed Instance link](/azure/azure-sql/managed-instance/managed-instance-link-migrate) for an online migration to a **Business Critical** instance without having to wait for databases to be available after the cutover.
+  
 - If you received the following error: `Memory-optimized filegroup must be empty in order to be restored on General Purpose tier of SQL Database Managed Instance`, this issue is by design. In-Memory OLTP isn't supported on the General Purpose tier of Azure SQL Managed Instance. To continue migration, one way is to upgrade to Business Critical tier, which supports In-Memory OLTP. Another way is to make sure the source database isn't using it while the Azure SQL Managed Instance is General Purpose.
 
 ## Related content

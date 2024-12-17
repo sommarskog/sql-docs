@@ -97,7 +97,7 @@ The following table lists the acceptable data types for the *value* argument tog
 The following example returns a simple date formatted for different cultures.
 
 ```sql
-DECLARE @d AS DATE = '11/22/2020';
+DECLARE @d AS DATE = '08/09/2024';
 
 SELECT FORMAT(@d, 'd', 'en-US') AS 'US English',
        FORMAT(@d, 'd', 'en-gb') AS 'British English',

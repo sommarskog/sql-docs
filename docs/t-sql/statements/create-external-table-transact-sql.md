@@ -752,43 +752,38 @@ In contrast, in the import scenario, such as SELECT INTO FROM EXTERNAL TABLE, SQ
 
 You can create many external tables that reference the same or different external data sources.
 
-## Limitations and restrictions
-
-Access to data via an external table doesn't adhere to the isolation semantics within SQL Server. This means that querying an external doesn't impose any locking or snapshot isolation and thus data return can change if the data in the external data source is changing.  The same query can return different results each time it runs against an external table. Similarly, a query might fail if the external data is moved or removed.
-
 You can create multiple external tables that each reference different external data sources.
 
-Only these Data Definition Language (DDL) statements are allowed on external tables:
+## Limitations
 
-- CREATE TABLE and DROP TABLE.
-- CREATE VIEW and DROP VIEW.
+- **Isolation semantics**: Access to data via an external table doesn't adhere to the isolation semantics within SQL Server. This means that querying an external table doesn't impose any locking or snapshot isolation. Therefore data return can change if the data in the external data source is changing. The same query can return different results each time it runs against an external table. Similarly, a query might fail if the external data is moved or removed.
 
-Constructs and operations not supported:
+- **Constructs and operations not supported**:
 
-- The DEFAULT constraint on external table columns.
-- Data Manipulation Language (DML) operations of delete, insert, and update.
-- [Dynamic Data Masking](../../relational-databases/security/dynamic-data-masking.md) on external table columns.
-- Cursors are not supported for external tables in Azure SQL Database.
+  - The DEFAULT constraint on external table columns.
+  - Data Manipulation Language (DML) operations of delete, insert, and update.
+  - [Dynamic Data Masking](../../relational-databases/security/dynamic-data-masking.md) on external table columns.
+  - Cursors are not supported for external tables in Azure SQL Database.
 
-Only literal predicates defined in a query can be pushed down to the external data source. This is unlike linked servers and accessing where predicates determined during query execution can be used, that is, when used in conjunction with a nested loop in a query plan. This will often lead to the whole external table being copied locally and then joined to.
+- **Only literal predicates**: Only literal predicates defined in a query can be pushed down to the external data source. This is unlike linked servers and accessing where predicates determined during query execution can be used, that is, when used in conjunction with a nested loop in a query plan. This will often lead to the whole external table being copied locally and then joined.
 
-```sql
--- Assuming External.Orders is an external table and Customer is a local table.
--- This query  will copy the whole of the external locally as the predicate needed
--- to filter isn't known at compile time. Its only known during execution of the query
+   In the following example, if `External.Orders` is an external table and `Customer` is a local table, the query copies the entire external table locally because the predicate needed isn't known at compile time.
 
-SELECT Orders.OrderId, Orders.OrderTotal
-FROM External.Orders
-WHERE CustomerId IN (
+    ```sql
+    SELECT Orders.OrderId, Orders.OrderTotal
+    FROM External.Orders
+    WHERE CustomerId IN (
         SELECT TOP 1 CustomerId
         FROM Customer
         WHERE CustomerName = 'MyCompany'
-);
-```
+    );
+    ```
 
-Use of external tables prevents use of parallelism in the query plan.
+- **No parallelism**: Use of external tables prevents use of parallelism in the query plan.
 
-External tables are implemented as Remote Query and as such the estimated number of rows returned is generally 1000, there are other rules based on the type of predicate used to filter the external table. They are rules-based estimates rather than estimates based on the actual data in the external table. The optimizer doesn't access the remote data source to obtain a more accurate estimate.
+- **Executed as remote query**: External tables are implemented as remote query, so the estimated number of rows returned is generally 1000. There are other rules based on the type of predicate used to filter the external table. They are rules-based estimates rather than estimates based on the actual data in the external table. The optimizer doesn't access the remote data source to obtain a more accurate estimate.
+
+- **Not supported for private endpoint**: External table queries are not supported when connection to remote table is a private endpoint.
 
 ### Data type limitations
 
