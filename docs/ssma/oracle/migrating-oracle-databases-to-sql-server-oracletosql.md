@@ -17,14 +17,6 @@ ms.custom:
 
 [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) for Oracle is a comprehensive environment that helps you quickly migrate Oracle databases to [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)], Azure SQL Database, or Azure Synapse Analytics. By using SSMA for Oracle, you can review database objects and data, assess databases for migration, migrate database objects to [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)], Azure SQL Database, or Azure Synapse Analytics, and then migrate data to [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)], Azure SQL Database, or Azure Synapse Analytics. You can't migrate SYS and SYSTEM Oracle schemas.
 
-## Database Migration Assessment for Oracle extension
-
-Try the [Database Migration Assessment for Oracle extension](/azure-data-studio/extensions/database-migration-assessment-for-oracle-extension) for Oracle to SQL pre-assessment and workload categorization. This extension is useful:
-
-- if you're in the early phase of Oracle to SQL migration and need to do a high level workload assessment
-- if you're interested in sizing an Azure SQL target for your Oracle workload
-- if you're looking to understand feature migration parity
-
 For detailed code assessment and conversion, continue with SSMA for Oracle.
 
 ## Recommended migration process
