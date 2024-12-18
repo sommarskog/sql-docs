@@ -4,7 +4,7 @@ description: sys.dm_hs_database_log_rate (Transact-SQL)
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: dfurman, atsingh
-ms.date: 12/03/2024
+ms.date: 12/18/2024
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -72,7 +72,7 @@ The built-in function [DB_ID](../../t-sql/functions/db-id-transact-sql.md) can
 
 ## Remarks
 
-In the Hyperscale service tier of Azure SQL Database, the log service ensures that the distributed components don't get far behind in applying transaction log. This is required to maintain the overall system health and stability. When components are behind and their catch-up rate is less than current log generation rate, the log service reduces the log generation rate on the primary. The `sys.dm_database_hs_log_rate()` DMF can be used to understand which component is causing the reduction in log rate and to what extent, and for how long the reduction of log rate might last.
+In the Hyperscale service tier of Azure SQL Database, the log service ensures that the distributed components don't get far behind in applying transaction log. This is required to maintain the overall system health and stability. When components are behind and their catch-up rate is less than current log generation rate, the log service reduces the log generation rate on the primary. The `sys.dm_hs_database_log_rate()` DMF can be used to understand which component is causing the reduction in log rate and to what extent, and for how long the reduction of log rate might last.
 
 For more context about log rate reduction, see [Performance diagnostics in Hyperscale](/azure/azure-sql/database/hyperscale-performance-diagnostics?view=azuresql-db&preserve-view=true).
 

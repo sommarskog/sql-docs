@@ -19,14 +19,6 @@ SQL Server Migration Assistant (SSMA) for Oracle is a tool for migrating Oracle 
 
 This documentation introduces you to SSMA for Oracle and provides step-by-step instructions for migrating Oracle databases to [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)]. The following table shows articles to help you learn more:
 
-## Database Migration Assessment for Oracle extension
-
-Try the [Database Migration Assessment for Oracle extension](/azure-data-studio/extensions/database-migration-assessment-for-oracle-extension) for Oracle to SQL pre-assessment and workload categorization. This extension is useful if:
-
-- you're in the early phase of Oracle to SQL migration, and need to do a high level workload assessment,
-- you're interested in sizing an Azure SQL target for your Oracle workload,
-- you're looking to understand feature migration parity.
-
 For detailed code assessment and conversion, continue with SSMA for Oracle.
 
 ## Contents

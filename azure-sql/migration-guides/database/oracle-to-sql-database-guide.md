@@ -20,13 +20,6 @@ This guide teaches you [to migrate](https://azure.microsoft.com/migration/migrat
 
 For other migration guides, see [Azure Database Migration Guides](/data-migration).
 
-> [!IMPORTANT]  
-> Try the [Database Migration Assessment for Oracle extension](/azure-data-studio/extensions/database-migration-assessment-for-oracle-extension) > for Oracle to Azure SQL pre-assessment and workload categorization. This extension is useful:
->
-> - if you're in the early phase of Oracle to Azure SQL migration and need to do a high level workload assessment
-> - if you're interested in sizing your Azure SQL target for the Oracle workload
-> - if you want to understand feature migration parity
-
 For detailed code assessment and conversion, continue with SSMA for Oracle.
 
 ## Prerequisites
