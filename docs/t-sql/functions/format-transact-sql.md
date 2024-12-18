@@ -250,7 +250,7 @@ SELECT FORMAT(1234567.89, 'N0') AS FormattedNumber;
 
 This example uses the `N` format specifier. The `N` specifier is used for numeric values, and the number of decimal places can be adjusted by changing the format string (for example, `N2` for two decimal places).
 
-```sql
+```syntaxsql
 FORMAT ( value, format_string [, culture ] )
 ```
 
