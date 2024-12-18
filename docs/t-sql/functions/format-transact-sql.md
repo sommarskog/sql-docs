@@ -256,9 +256,9 @@ FORMAT ( value, format_string [, culture ] )
 
 #### Parameters
 
-- **value**: The value to format.
-- **format_string**: A string that specifies the format to apply.
-- **culture**: (Optional) A string that specifies the culture to use for formatting.
+- `value`: The value to format.
+- `format_string`: A string that specifies the format to apply.
+- `culture`: (Optional) A string that specifies the culture to use for formatting.
 
 ```sql
 SELECT FORMAT(1234567.89, 'N0') AS FormattedNumber; 
