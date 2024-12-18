@@ -234,7 +234,7 @@ Format returns the specified time in 24-hour format.
 SELECT FORMAT(CAST('2018-01-01 14:00' AS DATETIME2), N'HH:mm'); --> returns 14:00
 ```
 
-### E Format with comma separators for large numbers
+### E. Format with comma separators for large numbers
 
 The following example shows how to format large numbers with comma separators.
 
