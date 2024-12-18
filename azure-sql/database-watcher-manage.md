@@ -5,7 +5,7 @@ description: Setup and configuration details for database watcher
 author: dimitri-furman
 ms.author: dfurman
 ms.reviewer: wiassaf
-ms.date: 12/05/2024
+ms.date: 12/18/2024
 ms.service: azure-sql
 ms.subservice: monitoring
 ms.topic: how-to
@@ -270,7 +270,7 @@ Shortly after identity changes are saved, the watcher reconnects to SQL targets,
 
 ### Delete a watcher
 
-If there is a delete or a read-only [lock](/azure/azure-resource-manager/management/lock-resources) on the watcher, its resource group, or its subscription, remove the lock. You can add the lock again after the watcher is deleted successfully.
+If there is a delete or a read-only [lock](/azure/azure-resource-manager/management/lock-resources) on the watcher, its resource group, or its subscription, remove the lock. Similarly, if there is a lock on the resource, resource group, or subscription of the resource for which you [created a managed private endpoint](#create-a-managed-private-endpoint), remove the lock. You can add the locks again after the watcher is deleted successfully.
 
 When you delete a watcher that has its system assigned managed identity enabled, the identity is also deleted. This removes any access you granted to this identity. If you recreate the watcher later, you need to grant access to the system assigned managed identity of the new watcher to authenticate to each resource. This includes:
 
