@@ -4,7 +4,7 @@ description: Release notes for SQL Server Management Studio 21 Preview (SSMS).
 author: erinstellato-ms
 ms.author: erinstellato
 ms.reviewer: maghan, randolphwest
-ms.date: 12/10/2024
+ms.date: 12/18/2024
 ms.service: sql
 ms.subservice: ssms
 ms.topic: whats-new
@@ -23,6 +23,18 @@ This article details updates, improvements, and bug fixes for the current and pr
 **[Download SQL Server Management Studio 21 Preview](https://aka.ms/ssms/21/preview/vs_SSMS.exe)**
 
 [!INCLUDE [ssms-21-md](../includes/ssms-21-md.md)] is the latest preview release of SSMS. If you need a previous version of SSMS, see [previous SSMS releases](../release-notes-ssms.md#previous-ssms-releases).
+
+### 21.0 Preview 2.1
+
+- Release number: 21.0 Preview 2.1
+- Build number: 21.0.73
+- Release date: December 18, 2024
+
+#### What's new in 21.0 Preview 2.1
+
+| Feature | Details |
+| --- | --- |
+| Visual Studio | Updated to Visual Studio 17.13 Preview 2.1. |
 
 ### 21.0 Preview 2
 
@@ -45,6 +57,7 @@ This article details updates, improvements, and bug fixes for the current and pr
 | Settings | Removed the **Preview** entry from the **Tools** > **Options Experience (requires restart)** menu, as SSMS doesn't currently support Preview Unified settings. |
 | Theming | Added dark theme support to tabs and icons in the Results pane of the Query Editor, and to the script splitter bar. |
 | Theming | Added dark theme support to the query and plan panes within Query Store reports. |
+| Visual Studio | Updated to Visual Studio 17.13 Preview 2. |
 
 #### Bug fixes in 21.0 Preview 2
 
@@ -87,7 +100,7 @@ This article details updates, improvements, and bug fixes for the current and pr
 | --- | --- |
 | 64-bit | SSMS 21 is a Visual Studio 2022-based application that supports 64-bit, ensuring smoother operations and reducing out-of-memory errors. |
 | Always Encrypted | An assessment for Always Encrypted is available in the wizard. It can be found under the **Always Encrypted Wizard** menu (formerly named **Encrypt Columns...**) after right-clicking a database and selecting **Tasks**. For more information, see [Always Encrypted Assessment in SQL Server Management Studio 21](https://techcommunity.microsoft.com/blog/azuresqlblog/always-encrypted-assessment-in-sql-server-management-studio-21/4286148). |
-| Azure Authentication | Azure Authentication encompasses a subset of dialogs where authentication to Azure is required.  Examples of these dialogs include adding an Azure firewall rule, configuring the Service Level Objective (SLO) when creating an Azure database, and the Azure storage browser. |
+| Azure Authentication | Azure Authentication encompasses a subset of dialogs where authentication to Azure is required. Examples of these dialogs include adding an Azure firewall rule, configuring the Service Level Objective (SLO) when creating an Azure database, and the Azure storage browser. |
 | Azure SQL Database | Introduced UI support for creating logins and database users. |
 | Dark theme | SSMS 21 supports dark theme for selected dialogs, including Object Explorer, Query Editor, Results pane, and Template Explorer. |
 | Database Properties | Added a page to list Database Scoped Configuration values on the **Database Properties** dialog. |
@@ -127,3 +140,4 @@ See [Known issues in SQL Server Management Studio 21 Preview](known-issues.md) f
 
 - [Install SQL Server Management Studio 21 Preview](../install/install.md)
 - [SQL Server Management Studio 21 Preview FAQ](faq.yml)
+- [Visual Studio 2022 Preview release notes](/visualstudio/releases/2022/release-notes-preview)
