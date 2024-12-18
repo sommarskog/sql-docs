@@ -248,7 +248,7 @@ SELECT FORMAT(1234567.89, 'N0') AS FormattedNumber;
 1,234,568
 ```
 
-This example uses the `N` format specifier. The `N` specifier is used for numeric values, and the number of decimal places can be adjusted by changing the format string (e.g., `N2` for two decimal places).
+This example uses the `N` format specifier. The `N` specifier is used for numeric values, and the number of decimal places can be adjusted by changing the format string (for example, `N2` for two decimal places).
 
 ```sql
 FORMAT ( value, format_string [, culture ] )
