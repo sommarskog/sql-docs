@@ -481,12 +481,12 @@ sections:
         answer: |
           You can save costs with the Azure SQL benefits in the following ways:
           -    Maximize existing investments in on-premises licenses and save up to 55 percent with [Azure Hybrid Benefit](../azure-hybrid-benefit.md?tabs=azure-powershell). 
-          -    Commit to a reservation for compute resources and save up to 33 percent with [Reserved Instance Benefit](../database/reserved-capacity-overview.md). Combine this with Azure Hybrid benefit for savings up to 82 percent. 
+          -    Commit to a reservation for compute resources and save up to 33 percent with [Azure Reservations](../database/reservations-discount-overview.md) benefit. Combine this with Azure Hybrid benefit for savings up to 82 percent. 
           -    Save up to 55 percent versus list prices with [Azure Dev/Test Pricing Benefit](https://azure.microsoft.com/pricing/dev-test/) that offers discounted rates for your ongoing development and testing workloads.
 
       - question: Who is eligible for Reserved Instance benefit?
         answer: |
-          To be eligible for reserved Instance benefit, your subscription type must be an enterprise agreement (offer numbers: MS-AZR-0017P or MS-AZR-0148P) or an individual agreement with pay-as-you-go pricing (offer numbers: MS-AZR-0003P or MS-AZR-0023P). For more information about reservations, see [Reserved Instance Benefit](../database/reserved-capacity-overview.md).
+          To be eligible for reserved Instance benefit, your subscription type must be an enterprise agreement (offer numbers: MS-AZR-0017P or MS-AZR-0148P) or an individual agreement with pay-as-you-go pricing (offer numbers: MS-AZR-0003P or MS-AZR-0023P). For more information about reservations, see [Azure Reservations](../database/reservations-discount-overview.md).
 
       - question: Is it possible to cancel, exchange, or refund reservations?
         answer: |
