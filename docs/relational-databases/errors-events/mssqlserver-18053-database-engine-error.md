@@ -46,4 +46,4 @@ Another reason this error might be raised, though rarely, is if a critical syste
 
 Examine the error and see if it's wrapped in an outer error. If so, focus on the outer error as a troubleshooting, but keep in mind that the cause for the outer error could be low memory.
 
-Focus on eliminating memory pressure inside or outside SQL Server. This error is printed rarely, but when it's, commonly it's due to severe memory pressure. For more information, see [Troubleshoot out of memory or low memory issues in SQL Server](/troubleshoot/sql/database-engine/performance/troubleshoot-memory-issues).
+Focus on eliminating memory pressure inside or outside SQL Server. This error is encountered rarely, but when it is, commonly it's due to severe memory pressure. For more information, see [Troubleshoot out of memory or low memory issues in SQL Server](/troubleshoot/sql/database-engine/performance/troubleshoot-memory-issues).
