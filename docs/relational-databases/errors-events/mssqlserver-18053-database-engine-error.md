@@ -28,7 +28,7 @@ helpviewer_keywords:
 
 ## Explanation
 
-You might receive error 18053 in the SQL Server Error Log or at run time. Here are examples of how you can see this error:
+You might receive error 18053 in the SQL Server Error Log or at run time. Here is an example of how you can see this error:
 
 ```output
 Error: 17300, Severity: 16, State: 1. (Params:). The error is printed in terse mode because there was error during formatting. Tracing, ETW, notifications etc are skipped.

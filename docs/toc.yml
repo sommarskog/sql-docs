@@ -11711,6 +11711,8 @@ items:
         items:
         - name: Overview
           href: relational-databases/errors-events/database-engine-events-and-errors-18000-to-18999.md
+        - name: 18053
+          href: relational-databases/errors-events/mssqlserver-18053-database-engine-error.md
         - name: 18210
           href: relational-databases/errors-events/mssqlserver-18210-database-engine-error.md
         - name: 18264
