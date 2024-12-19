@@ -1407,7 +1407,7 @@ The following are `CREATE DATABASE` limitations:
 To create a database, a login must be one of the following:
 
 - The server-level principal login
-- The Microsoft Entra administrator for the for the [logical server in Azure](/azure/azure-sql/database/logical-servers)
+- The Microsoft Entra administrator for the [logical server in Azure](/azure/azure-sql/database/logical-servers)
 - A login that is a member of the `dbcreator` database role
 
 ## Examples
