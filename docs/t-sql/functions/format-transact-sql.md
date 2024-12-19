@@ -234,7 +234,7 @@ Format returns the specified time in 24-hour format.
 SELECT FORMAT(CAST('2018-01-01 14:00' AS DATETIME2), N'HH:mm'); --> returns 14:00
 ```
 
-### E Format with comma separators for large numbers
+### E. Format with comma separators for large numbers
 
 The following example shows how to format large numbers with comma separators.
 
@@ -248,17 +248,17 @@ SELECT FORMAT(1234567.89, 'N0') AS FormattedNumber;
 1,234,568
 ```
 
-This example uses the `N` format specifier. The `N` specifier is used for numeric values, and the number of decimal places can be adjusted by changing the format string (e.g., `N2` for two decimal places).
+This example uses the `N` format specifier. The `N` specifier is used for numeric values, and the number of decimal places can be adjusted by changing the format string (for example, `N2` for two decimal places).
 
-```sql
+```syntaxsql
 FORMAT ( value, format_string [, culture ] )
 ```
 
 #### Parameters
 
-- **value**: The value to format.
-- **format_string**: A string that specifies the format to apply.
-- **culture**: (Optional) A string that specifies the culture to use for formatting.
+- `value`: The value to format.
+- `format_string`: A string that specifies the format to apply.
+- `culture`: (Optional) A string that specifies the culture to use for formatting.
 
 ```sql
 SELECT FORMAT(1234567.89, 'N0') AS FormattedNumber; 
