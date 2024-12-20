@@ -27,13 +27,15 @@ monikerRange: "=azuresqldb-current"
 
 The escape sequence for a Unicode character can be specified in the form of `\xxxx` or `\+xxxxxx`, where `xxxx` is a valid UTF-16 codepoint value, and `xxxxxx` is a valid Unicode codepoint value. You can look up Unicode codepoint values in the [Unicode Code Charts](https://www.unicode.org/charts).
 
-Compared to functions like NCHAR, UNISTR provides a more flexible and comprehensive way to handle Unicode characters. For example, while NCHAR can convert a single Unicode value to a character, UNISTR can handle multiple Unicode values and escape sequences, making it easier to work with complex strings that include various Unicode characters.
+Compared to functions like `NCHAR`, `UNISTR` provides a more flexible and comprehensive way to handle Unicode characters. For example, while `NCHAR` can convert a single Unicode value to a character, `UNISTR` handles multiple Unicode values and escape sequences, making it easier to work with complex strings that include various Unicode characters.
 
-Here are key benefits of using UNISTR:
+Here are key benefits of using `UNISTR`:
 
-- Support for Unicode Escape Sequences: UNISTR allows you to specify Unicode characters using escape sequences 
-- Flexibility with Input Types: It supports various character types such as char, nchar, varchar, and nvarchar. For char and varchar data types, the collation should be a valid UTF-8 collation1.
-- Custom Escape Characters: You can define a custom escape character to perform the necessary conversion of Unicode values into a string character set1.
+- **Support for Unicode escape sequences**: `UNISTR` allows you to specify Unicode characters using escape sequences
+
+- **Flexibility with input types**: `UNISTR` supports various character types such as **char**, **nchar**, **varchar**, and **nvarchar**. For **char** and **varchar** data types, the collation should be a valid UTF-8 collation.
+
+- **Custom escape characters**: You can define a custom escape character to perform the necessary conversion of Unicode values into a string character set.
 
 :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
@@ -47,7 +49,7 @@ UNISTR ( 'character_expression' [ , 'unicode_escape_character' ] )
 
 #### '*character_expression*'
 
-An expression of any character type, such as **char**, **nchar**, **varchar**, or **nvarchar**. For **char** and **varchar** data types, the collation should be a valid UTF-8 collation. You can specify either string literals or Unicode or UTF-16 code point values or both. The character_expression supports length as large as VARCHAR(MAX) and NVARCHAR(MAX). 
+An expression of any character type, such as **char**, **nchar**, **varchar**, or **nvarchar**. For **char** and **varchar** data types, the collation should be a valid UTF-8 collation. You can specify either string literals or Unicode or UTF-16 code point values or both. `character_expression` supports a length as large as **varchar(max)** and **nvarchar(max)**. 
 
 #### N'*unicode_escape_character*'
 
@@ -102,7 +104,7 @@ ABCÀƁƇ
 
 ### C. Use UNISTR function by combining string literals and Unicode code points
 
-In the following example, the UNISTR function is used with a user-defined escape character ($) and a VARCHAR data type with UTF-8 collation. It combines string literals with a Unicode codepoint value:
+In the following example, `UNISTR` is used with a user-defined escape character (`$`) and a **varchar** data type with UTF-8 collation. It combines string literals with a Unicode codepoint value:
 
 ```sql
 SELECT UNISTR ('I $2665 Azure SQL.' COLLATE Latin1_General_100_CI_AS_KS_SC_UTF8, '$');
@@ -117,10 +119,10 @@ I ♥ Azure SQL.
 
 ### D. Use UNISTR function for characters beyond the UTF-8 limit
 
-If you'd like to use a character set beyond the UTF-8, you need to convert the character sequence to UTF-8 using the COLLATE clause. Here is an example
+If you need to use a character set beyond UTF-8, you must convert the character sequence to UTF-8 using the `COLLATE` clause. Here's an example:
 
 ```sql
-SELECT UNISTR ('\306F\3044' collate Latin1_General_100_BIN2_UTF8) AS Yes_in_Japanese_Hiragana
+SELECT UNISTR ('\306F\3044' COLLATE Latin1_General_100_BIN2_UTF8) AS Yes_in_Japanese_Hiragana;
 ```
 
 [!INCLUDE [ssResult](../../includes/ssresult-md.md)]
@@ -130,8 +132,6 @@ Yes_in_Japanese_Hiragana
 ------------------------
 はい
 ```
-
-
 
 ## Related content
 
