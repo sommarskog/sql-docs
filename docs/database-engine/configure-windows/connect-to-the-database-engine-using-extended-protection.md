@@ -8,6 +8,7 @@ ms.date: 12/23/2024
 ms.service: sql
 ms.subservice: configuration
 ms.topic: conceptual
+ai-usage: ai-assisted 
 helpviewer_keywords:
   - "spoofing attacks"
   - "service binding"
