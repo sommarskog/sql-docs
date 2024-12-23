@@ -26,11 +26,13 @@ helpviewer_keywords:
 
 **Extended Protection** helps prevent authentication relay attacks by ensuring the client knows the service it connects to.
 
-**Extended Protection** is a feature of the network components implemented by the operating system. **Extended Protection** is supported in Windows 7 and Windows Server 2008 R2. **Extended Protection** is included in service packs for older [!INCLUDE [msCoName](../../includes/msconame-md.md)] operating systems.  SQL Server is more secure when connections are made using **Extended Protection**.
+**Extended Protection** is a feature of the network components implemented by the operating system. **Extended Protection** is supported in Windows 7 and Windows Server 2008 R2. **Extended Protection** is included in service packs for older [!INCLUDE [msCoName](../../includes/msconame-md.md)] operating systems.
+
+SQL Server is more secure when connections are made using **Extended Protection**.
 
 ## Description of Extended Protection
 
-**Extended Protection** uses service binding and channel binding to help prevent an authentication relay attack. In an authentication relay attack, a client that can perform NTLM authentication (for example, Windows Explorer, [!INCLUDE [msCoName](../../includes/msconame-md.md)] Outlook, a .NET SqlClient application, etc.), connects to an attacker (for example, a malicious CIFS file server). The attacker uses the client's credentials to masquerade as the client and authenticate to a service (for example, an instance of the [!INCLUDE [ssDE](../../includes/ssde-md.md)] service).
+**Extended Protection** uses service binding and channel binding to help prevent an authentication relay attack. In an authentication relay attack, a client that can perform NTLM authentication (for example, Windows Explorer, [!INCLUDE [msCoName](../../includes/msconame-md.md)] Outlook, a .NET SqlClient application, etc.), connects to an attacker (for example, a malicious CIFS file server). The attacker uses the client's credentials to masquerade as the client and authenticate to a service (for example, an instance of the  Database Engine.
 
 There are two variations of this attack:
 
@@ -42,11 +44,11 @@ There are two variations of this attack:
 
 ### Service binding
 
-Service binding addresses luring attacks by requiring a client to send a signed service principal name (SPN) of the  SQL Server service that the client intends to connect to. As part of the authentication response, the service validates that the SPN received in the packet matches its own SPN. If a client is lured to connect to an attacker, the client includes the attacker's signed SPN. The attacker can't relay the packet to authenticate to the real  SQL Server service as the client because it would include the SPN of the attacker. Service binding incurs a one-time, negligible cost but doesn't address spoofing attacks. Service Binding occurs when a client application doesn't use encryption to connect to the  SQL Server .
+Service binding addresses luring attacks by requiring a client to send a signed service principal name (SPN) of the  SQL Server service that the client intends to connect to. As part of the authentication response, the service validates that the SPN received in the packet matches its own SPN. If a client is lured to connect to an attacker, the client includes the attacker's signed SPN. The attacker can't relay the packet to authenticate to the real  SQL Server service as the client because it would include the SPN of the attacker. Service binding incurs a one-time, negligible cost but doesn't address spoofing attacks. Service Binding occurs when a client application doesn't use encryption to connect to the  SQL Server.
 
 ### Channel binding
 
-Channel binding establishes a secure channel (Schannel) between a client and an instance of the  SQL Server service. The service verifies the client's authenticity by comparing the client's channel binding token (CBT) specific to that channel with its own CBT. Channel binding addresses both luring and spoofing attacks. However, it incurs a larger runtime cost because it requires Transport Layer Security (TLS) encryption of all the session traffic. Channel Binding occurs when a client application uses encryption to connect to the  SQL Server , regardless of whether encryption is enforced by the client or by the server.
+Channel binding establishes a secure channel (Schannel) between a client and an instance of the  SQL Server service. The service verifies the client's authenticity by comparing the client's channel binding token (CBT) specific to that channel with its own CBT. Channel binding addresses both luring and spoofing attacks. However, it incurs a larger runtime cost because it requires Transport Layer Security (TLS) encryption of all the session traffic. Channel Binding occurs when a client application uses encryption to connect to the  SQL Server, regardless of whether encryption is enforced by the client or by the server.
 
 > [!WARNING]  
 > SQL Server and  Microsoft  data providers for SQL Server support TLS 1.0 and SSL 3.0. If you enforce a different protocol (such as TLS 1.1 or TLS 1.2) by making changes in the operating system SChannel layer, your connections to SQL Server might fail. Make sure that you have the latest build of SQL Server to Support TLS 1.1 or TLS 1.2. For more information, see <https://support.microsoft.com/topic/kb3135244-tls-1-2-support-for-microsoft-sql-server-e4472ef8-90a9-13c1-e4d8-44aad198cdbe>.
@@ -75,7 +77,7 @@ When set to **Off**, **Extended Protection** is disabled. The instance of  SQL S
 
 When set to **Allowed**, **Extended Protection** is required for connections from operating systems that support **Extended Protection**. **Extended Protection** is ignored for connections from operating systems that don't support **Extended Protection**. Connections from unprotected client applications running on protected client operating systems are rejected. This setting is more secure than **Off**, but it isn't the most secure. Use this setting in mixed environments; some operating systems support **Extended Protection**, and others don't.
 
-When set to **Required**, only connections from protected applications on protected operating systems are accepted. This setting is the most secure, but connections from operating systems or applications that don't support **Extended Protection** won't be able to connect to  SQL Server .
+When set to **Required**, only connections from protected applications on protected operating systems are accepted. This setting is the most secure, but connections from operating systems or applications that don't support **Extended Protection** won't be able to connect to  SQL Server.
 
 ### Accepted NTLM SPNs
 
