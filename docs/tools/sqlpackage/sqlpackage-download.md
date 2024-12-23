@@ -29,7 +29,7 @@ SqlPackage is developed and released for both .NET 8 and .NET Framework. Install
 
 ## Installation, cross-platform
 
-Installing SqlPackage as a [dotnet tool](/dotnet/core/tools/global-tools) requires the [.NET SDK](https://dotnet.microsoft.com/download/dotnet/8.0) to be installed on your machine. Installing SqlPackage as a global tool makes it available on your path as `sqlpackage` and is the recommended method to install SqlPackage for Windows, macOS, and Linux. SqlPackage is available as a dotnet tool for .NET 8 and later.
+Installing SqlPackage as a [dotnet tool](/dotnet/core/tools/global-tools) requires the [.NET SDK](https://dotnet.microsoft.com/download/dotnet/8.0) to be installed on your machine. Installing SqlPackage as a global tool makes it available on your path as `sqlpackage` and is the recommended method to install SqlPackage for Windows, macOS, and Linux. SqlPackage is available as a dotnet tool for .NET 8 and later versions.
 
 To install SqlPackage as a global .NET tool, run the following command:
 
