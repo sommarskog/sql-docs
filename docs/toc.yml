@@ -10113,6 +10113,8 @@ items:
       href: linux/quickstart-install-connect-suse.md
     - name: Install and connect (Ubuntu)
       href: linux/quickstart-install-connect-ubuntu.md
+    - name: Install and connect (WSL2)
+      href: linux/quickstart-install-connect-wsl-2.md
     - name: Run and connect (containers)
       href: linux/quickstart-install-connect-docker.md
     - name: Deploy SQL Server container cluster
