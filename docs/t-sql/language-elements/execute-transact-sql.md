@@ -546,7 +546,7 @@ GO
 
 ### B. Use multiple parameters
 
-The following example executes the `spGetWhereUsedProductID` stored procedure in the [!INCLUDE [ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database. It passes two parameters: the first parameter is a product ID (`819`) and the second parameter, `@CheckDate,` is a `datetime` value.
+The following example executes the `spGetWhereUsedProductID` stored procedure in the [!INCLUDE [ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database. It passes two parameters: the first parameter is a product ID (`819`) and the second parameter `@CheckDate` is a **datetime** value.
 
 ```sql
 DECLARE @CheckDate AS DATETIME;
