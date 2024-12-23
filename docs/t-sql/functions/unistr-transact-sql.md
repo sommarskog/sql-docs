@@ -39,6 +39,24 @@ Here are key benefits of using `UNISTR`:
 
 :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
+> [!NOTE]  
+>The UNISTR function is not compatible with legacy code pages, meaning it does not support collations that use non-Unicode character sets. These collations with legacy code pages can be identified using the query below or be found listed here [Appendix G DBCS/Unicode Mapping Tables](/previous-versions/cc194886(v=msdn.10)) and [Appendix H Code Pages](/previous-versions/cc195051(v=msdn.10)):
+
+
+> ```sql
+>SELECT DISTINCT p.language,
+>                p.codepage
+>FROM   sys.Fn_helpcollations() AS c
+>       CROSS apply (VALUES(LEFT(c.NAME, Charindex('_', c.NAME) - 1),
+>                   Collationproperty(c.NAME, 'codepage'))) AS p(language,
+>                   codepage)
+>WHERE  p.codepage NOT IN ( 0 /* Unicode Only collation */, 65001
+>                         /* UTF-8 code page */ ); 
+>```
+
+
+
+
 ## Syntax
 
 ```syntaxsql
