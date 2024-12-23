@@ -41,8 +41,8 @@ Here are key benefits of using `UNISTR`:
 
 > [!NOTE]  
 >The UNISTR function is not compatible with legacy code pages, meaning it does not support collations that use non-Unicode character sets. These collations with legacy code pages can be identified using the query below or be found listed here [Appendix G DBCS/Unicode Mapping Tables](/previous-versions/cc194886(v=msdn.10)) and [Appendix H Code Pages](/previous-versions/cc195051(v=msdn.10)):
-
-
+>
+>
 > ```sql
 >SELECT DISTINCT p.language,
 >                p.codepage
