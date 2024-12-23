@@ -42,7 +42,7 @@ The value to be returned. *scalar_expression* can be a column, subquery, or othe
 
 #### [ IGNORE NULLS | RESPECT NULLS ]
 
-**Applies to**: [!INCLUDE [sssql22](../../includes/sssql22-md.md)] and later versions, Azure SQL Database, Azure SQL Managed Instance, [!INCLUDE [ssazurede-md](../../includes/ssazurede-md.md)]
+**Applies to**: [!INCLUDE [sssql22](../../includes/sssql22-md.md)] and later versions, Azure SQL Database, Azure SQL Managed Instance, and [!INCLUDE [ssazurede-md](../../includes/ssazurede-md.md)]
 
 `IGNORE NULLS` - Ignore null values in the dataset when computing the first value over a partition.
 
