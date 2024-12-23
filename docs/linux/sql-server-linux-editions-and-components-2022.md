@@ -28,7 +28,7 @@ helpviewer_keywords:
   - "editions [SQL Server], about edition options"
   - "Setup [SQL Server]"
 ---
-# Editions and supported features of [!INCLUDE [sssql22](../includes/sssql22-md.md)] on Linux
+# Editions and supported features of SQL Server 2022 on Linux
 
 [!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
