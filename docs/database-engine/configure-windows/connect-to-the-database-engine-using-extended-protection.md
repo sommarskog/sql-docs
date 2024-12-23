@@ -18,7 +18,7 @@ helpviewer_keywords:
   - "Extended Protection"
 ---
 
-# Connect to the Database Engine with Extended Protection
+# Connect to the database engine with Extended Protection
 
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
@@ -26,13 +26,7 @@ helpviewer_keywords:
 
 **Extended Protection** helps prevent authentication relay attacks by ensuring the client knows the service it connects to.
 
-**Extended Protection for Authentication** is a feature of the network components implemented by the operating system. **Extended Protection** is supported in Windows 7 and Windows Server 2008 R2. **Extended Protection** is included in service packs for older [!INCLUDE [msCoName](../../includes/msconame-md.md)] operating systems. [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] is more secure when connections are made using **Extended Protection**.
-
-## Settings clarification
-
-While **Extended Protection** and **NTLMv2** are enabled by default in all supported versions of Windows, **Extended Protection** isn't enabled by default for SQL Server connections. Users must manually enable it in [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md).
-
-To enable **Extended Protection** for SQL Server connections, administrators must configure the settings in [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md). This includes options for service binding and channel binding to mitigate various types of authentication relay attacks. For detailed instructions, refer to the SQL Server documentation on configuring Extended Protection."
+**Extended Protection** is a feature of the network components implemented by the operating system. **Extended Protection** is supported in Windows 7 and Windows Server 2008 R2. **Extended Protection** is included in service packs for older [!INCLUDE [msCoName](../../includes/msconame-md.md)] operating systems. [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] is more secure when connections are made using **Extended Protection**.
 
 ## Description of Extended Protection
 
@@ -46,15 +40,15 @@ There are two variations of this attack:
 
 [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] supports service binding and channel binding to help reduce these attacks on [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] instances.
 
-### Service Binding
+### Service binding
 
 Service binding addresses luring attacks by requiring a client to send a signed service principal name (SPN) of the [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] service that the client intends to connect to. As part of the authentication response, the service validates that the SPN received in the packet matches its own SPN. If a client is lured to connect to an attacker, the client includes the attacker's signed SPN. The attacker can't relay the packet to authenticate to the real [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] service as the client because it would include the SPN of the attacker. Service binding incurs a one-time, negligible cost but doesn't address spoofing attacks. Service Binding occurs when a client application doesn't use encryption to connect to the [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)].
 
-### Channel Binding
+### Channel binding
 
 Channel binding establishes a secure channel (Schannel) between a client and an instance of the [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] service. The service verifies the client's authenticity by comparing the client's channel binding token (CBT) specific to that channel with its own CBT. Channel binding addresses both luring and spoofing attacks. However, it incurs a larger runtime cost because it requires Transport Layer Security (TLS) encryption of all the session traffic. Channel Binding occurs when a client application uses encryption to connect to the [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)], regardless of whether encryption is enforced by the client or by the server.
 
-### Operating System Support
+### Operating system support
 
 The following links provide more information about how Windows supports **Extended Protection**:
 
@@ -65,6 +59,11 @@ The following links provide more information about how Windows supports **Extend
 ## Settings
 
 There are three [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] connection settings that affect service binding and channel binding. The settings can be configured using the [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager or WMI and viewed using the **Server Protocol Settings** facet of Policy Based Management.
+
+> [!NOTE]
+> While **Extended Protection** and **NTLMv2** are enabled by default in all supported versions of Windows, **Extended Protection** isn't enabled by default for SQL Server connections. Users must manually enable it in [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md).
+>
+> To enable **Extended Protection** for SQL Server connections, administrators must configure the settings in [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md). This includes options for service binding and channel binding to mitigate various types of authentication relay attacks. For detailed instructions, refer to the SQL Server documentation on configuring Extended Protection."
 
 - **Force Encryption**
 
@@ -84,7 +83,7 @@ There are three [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] conne
 
  The **Accepted NTLM SPNs** variable is needed when more than one SPN knows a server. When a client attempts to connect to the server using a valid SPN that the server doesn't know, service binding fails. To avoid this problem, users can specify several SPNs representing the server using the **Accepted NTLM SPNs**. **Accepted NTLM SPNs** is a series of SPNs separated by semicolons. For example, to allow the SPNs **MSSQLSvc/ HostName1.Contoso.com** and **MSSQLSvc/ HostName2.Contoso.com**, type **MSSQLSvc/HostName1.Contoso.com;MSSQLSvc/HostName2.Contoso.com** in the **Accepted NTLM SPNs** box. The variable has a maximum length of 2,048 characters. **Accepted NTLM SPNs** is on the **Protocols for MSSQLSERVER Properties (Advanced Tab)** in [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager.
 
-## Enabling Extended Protection for the Database Engine
+## Enabling Extended Protection for the database engine
 
 To use **Extended Protection**, both the server and the client must have an operating system that supports **Extended Protection** and must be enabled on the operating system. For more information about how to enable **Extended Protection** for the operating system, see [Extended Protection for Authentication](/dotnet/framework/WCF/feature-details/extended-protection-for-authentication-overview).
 
@@ -102,7 +101,7 @@ To use **Extended Protection**, both the server and the client must have an oper
 
 1. Restart the [!INCLUDE [ssDE](../../includes/ssde-md.md)] service.
 
-## Configuring Other SQL Server Components
+## Configuring other SQL Server components
 
 For more information about how to configure [!INCLUDE [ssRSnoversion](../../includes/ssrsnoversion-md.md)], see [Extended Protection for Authentication with Reporting Services](../../reporting-services/security/extended-protection-for-authentication-with-reporting-services.md).
 
